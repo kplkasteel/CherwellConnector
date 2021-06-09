@@ -88,8 +88,7 @@ namespace CherwellConnector.Api
         /// <returns>TrebuchetWebApiDataContractsBusinessObjectBatchDeleteResponse</returns>
         public TrebuchetWebApiDataContractsBusinessObjectBatchDeleteResponse BusinessObjectDeleteBusinessObjectBatchV1 (TrebuchetWebApiDataContractsBusinessObjectBatchDeleteRequest request, string lang = null, string locale = null)
         {
-             var localVarResponse = BusinessObjectDeleteBusinessObjectBatchV1WithHttpInfo(request, lang, locale);
-             return localVarResponse.Data;
+             return BusinessObjectDeleteBusinessObjectBatchV1WithHttpInfo(request, lang, locale).Data;
         }
 
         /// <summary>
@@ -113,16 +112,8 @@ namespace CherwellConnector.Api
             var localVarFormParams = new Dictionary<string, string>();
             var localVarFileParams = new Dictionary<string, FileParameter>();
             object localVarPostBody;
-
-            // to determine the Content-Type header
-            var localVarHttpContentTypes = new[] {
-                "application/json", 
-                "text/json", 
-                "application/xml", 
-                "text/xml", 
-                "application/x-www-form-urlencoded"
-            };
-            var localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            
+            var localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(LocalVarHttpContentTypes);
             
             var localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -176,8 +167,7 @@ namespace CherwellConnector.Api
         /// <returns>TrebuchetWebApiDataContractsBusinessObjectDeleteResponse</returns>
         public TrebuchetWebApiDataContractsBusinessObjectDeleteResponse BusinessObjectDeleteBusinessObjectByPublicIdV1 (string busobid, string publicid, string lang = null, string locale = null)
         {
-             var localVarResponse = BusinessObjectDeleteBusinessObjectByPublicIdV1WithHttpInfo(busobid, publicid, lang, locale);
-             return localVarResponse.Data;
+             return BusinessObjectDeleteBusinessObjectByPublicIdV1WithHttpInfo(busobid, publicid, lang, locale).Data;
         }
 
         /// <summary>
@@ -208,7 +198,6 @@ namespace CherwellConnector.Api
             // to determine the Content-Type header
             var localVarHttpContentTypes = Array.Empty<string>();
             var localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
             
             var localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -256,8 +245,7 @@ namespace CherwellConnector.Api
         /// <returns>TrebuchetWebApiDataContractsBusinessObjectDeleteResponse</returns>
         public TrebuchetWebApiDataContractsBusinessObjectDeleteResponse BusinessObjectDeleteBusinessObjectByRecIdV1 (string busobid, string busobrecid, string lang = null, string locale = null)
         {
-             var localVarResponse = BusinessObjectDeleteBusinessObjectByRecIdV1WithHttpInfo(busobid, busobrecid, lang, locale);
-             return localVarResponse.Data;
+             return BusinessObjectDeleteBusinessObjectByRecIdV1WithHttpInfo(busobid, busobrecid, lang, locale).Data;
         }
 
         /// <summary>
@@ -286,8 +274,7 @@ namespace CherwellConnector.Api
             var localVarFileParams = new Dictionary<string, FileParameter>();
 
             // to determine the Content-Type header
-            var localVarHttpContentTypes = new string[] {
-            };
+            var localVarHttpContentTypes = Array.Empty<string>();
             var localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
             
             var localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
@@ -342,8 +329,7 @@ namespace CherwellConnector.Api
         /// <returns>TrebuchetWebApiDataContractsSearchesRelatedBusinessObjectResponse</returns>
         public TrebuchetWebApiDataContractsSearchesRelatedBusinessObjectResponse BusinessObjectDeleteRelatedBusinessObjectByPublicIdV1 (string parentbusobid, string parentbusobrecid, string relationshipid, string publicid, string lang = null, string locale = null)
         {
-             var localVarResponse = BusinessObjectDeleteRelatedBusinessObjectByPublicIdV1WithHttpInfo(parentbusobid, parentbusobrecid, relationshipid, publicid, lang, locale);
-             return localVarResponse.Data;
+             return BusinessObjectDeleteRelatedBusinessObjectByPublicIdV1WithHttpInfo(parentbusobid, parentbusobrecid, relationshipid, publicid, lang, locale).Data;
         }
 
         /// <summary>
@@ -433,8 +419,7 @@ namespace CherwellConnector.Api
         /// <returns>TrebuchetWebApiDataContractsSearchesRelatedBusinessObjectResponse</returns>
         public TrebuchetWebApiDataContractsSearchesRelatedBusinessObjectResponse BusinessObjectDeleteRelatedBusinessObjectByRecIdV1 (string parentbusobid, string parentbusobrecid, string relationshipid, string busobrecid, string lang = null, string locale = null)
         {
-             var localVarResponse = BusinessObjectDeleteRelatedBusinessObjectByRecIdV1WithHttpInfo(parentbusobid, parentbusobrecid, relationshipid, busobrecid, lang, locale);
-             return localVarResponse.Data;
+             return BusinessObjectDeleteRelatedBusinessObjectByRecIdV1WithHttpInfo(parentbusobid, parentbusobrecid, relationshipid, busobrecid, lang, locale).Data;
         }
 
         /// <summary>
@@ -521,8 +506,7 @@ namespace CherwellConnector.Api
         /// <returns>TrebuchetWebApiDataContractsBusinessObjectFieldValuesLookupResponse</returns>
         public TrebuchetWebApiDataContractsBusinessObjectFieldValuesLookupResponse BusinessObjectFieldValuesLookupV1 (TrebuchetWebApiDataContractsBusinessObjectFieldValuesLookupRequest request, string lang = null, string locale = null)
         {
-             var localVarResponse = BusinessObjectFieldValuesLookupV1WithHttpInfo(request, lang, locale);
-             return localVarResponse.Data;
+             return BusinessObjectFieldValuesLookupV1WithHttpInfo(request, lang, locale).Data;
         }
 
         /// <summary>
@@ -546,18 +530,9 @@ namespace CherwellConnector.Api
             var localVarFormParams = new Dictionary<string, string>();
             var localVarFileParams = new Dictionary<string, FileParameter>();
             object localVarPostBody;
-
-            // to determine the Content-Type header
-            var localVarHttpContentTypes = new[] {
-                "application/json", 
-                "text/json", 
-                "application/xml", 
-                "text/xml", 
-                "application/x-www-form-urlencoded"
-            };
-            var localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-           
+            
+            var localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(LocalVarHttpContentTypes);
+            
             var localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
@@ -614,8 +589,7 @@ namespace CherwellConnector.Api
         /// <returns>List&lt;TrebuchetWebApiDataContractsBusinessObjectBusObActivity&gt;</returns>
         public List<TrebuchetWebApiDataContractsBusinessObjectBusObActivity> BusinessObjectGetActivitiesV1 (string busobid, string busobrecid, int? pageSize, int? pageNumber = null, string activityType = null, string lang = null, string locale = null)
         {
-             var localVarResponse = BusinessObjectGetActivitiesV1WithHttpInfo(busobid, busobrecid, pageSize, pageNumber, activityType, lang, locale);
-             return localVarResponse.Data;
+             return BusinessObjectGetActivitiesV1WithHttpInfo(busobid, busobrecid, pageSize, pageNumber, activityType, lang, locale).Data;
         }
 
         /// <summary>
@@ -652,8 +626,7 @@ namespace CherwellConnector.Api
             // to determine the Content-Type header
             var localVarHttpContentTypes = Array.Empty<string>();
             var localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-           
+            
             var localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
@@ -704,8 +677,8 @@ namespace CherwellConnector.Api
         /// <returns>byte[]</returns>
         public byte[] BusinessObjectGetBusinessObjectAttachmentByAttachmentIdV1 (string attachmentid, string busobid, string busobrecid, string lang = null, string locale = null)
         {
-             var localVarResponse = BusinessObjectGetBusinessObjectAttachmentByAttachmentIdV1WithHttpInfo(attachmentid, busobid, busobrecid, lang, locale);
-             return localVarResponse.Data;
+             return BusinessObjectGetBusinessObjectAttachmentByAttachmentIdV1WithHttpInfo(attachmentid, busobid, busobrecid, lang, locale).Data;
+            
         }
 
         /// <summary>
@@ -795,8 +768,7 @@ namespace CherwellConnector.Api
         /// <returns>TrebuchetWebApiDataContractsBusinessObjectAttachmentsResponse</returns>
         public TrebuchetWebApiDataContractsBusinessObjectAttachmentsResponse BusinessObjectGetBusinessObjectAttachmentsByIdAndPublicIdV1 (string busobid, string publicid, string type, string attachmenttype, bool? includelinks = null, string lang = null, string locale = null)
         {
-             var localVarResponse = BusinessObjectGetBusinessObjectAttachmentsByIdAndPublicIdV1WithHttpInfo(busobid, publicid, type, attachmenttype, includelinks, lang, locale);
-             return localVarResponse.Data;
+             return BusinessObjectGetBusinessObjectAttachmentsByIdAndPublicIdV1WithHttpInfo(busobid, publicid, type, attachmenttype, includelinks, lang, locale).Data;
         }
 
         /// <summary>
@@ -905,7 +877,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsBusinessObjectAttachmentsResponse</returns>
-        public ApiResponse< TrebuchetWebApiDataContractsBusinessObjectAttachmentsResponse > BusinessObjectGetBusinessObjectAttachmentsByIdAndRecIdV1WithHttpInfo (string busobid, string busobrecid, string type, string attachmenttype, bool? includelinks = null, string lang = null, string locale = null)
+        private ApiResponse< TrebuchetWebApiDataContractsBusinessObjectAttachmentsResponse > BusinessObjectGetBusinessObjectAttachmentsByIdAndRecIdV1WithHttpInfo (string busobid, string busobrecid, string type, string attachmenttype, bool? includelinks = null, string lang = null, string locale = null)
         {
             // verify the required parameter 'busobid' is set
             if (busobid == null)
@@ -1192,16 +1164,8 @@ namespace CherwellConnector.Api
             var localVarFormParams = new Dictionary<string, string>();
             var localVarFileParams = new Dictionary<string, FileParameter>();
             object localVarPostBody;
-
-            // to determine the Content-Type header
-            var localVarHttpContentTypes = new[] {
-                "application/json", 
-                "text/json", 
-                "application/xml", 
-                "text/xml", 
-                "application/x-www-form-urlencoded"
-            };
-            var localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            
+            var localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(LocalVarHttpContentTypes);
 
            
             var localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
@@ -1279,18 +1243,9 @@ namespace CherwellConnector.Api
             var localVarFormParams = new Dictionary<string, string>();
             var localVarFileParams = new Dictionary<string, FileParameter>();
             object localVarPostBody;
-
-            // to determine the Content-Type header
-            var localVarHttpContentTypes = new[] {
-                "application/json", 
-                "text/json", 
-                "application/xml", 
-                "text/xml", 
-                "application/x-www-form-urlencoded"
-            };
-            var localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-          
+            
+            var localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(LocalVarHttpContentTypes);
+            
             var localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
@@ -1345,10 +1300,7 @@ namespace CherwellConnector.Api
         {
              return BusinessObjectGetBusinessObjectByPublicIdV1WithHttpInfo(busobid, publicid, lang, locale).Data;
         }
-
-     
-
-
+        
         /// <summary>
         /// Get a Business Object record Operation that returns a Business Object record that includes a list of fields and their record IDs, names, and set values.
         /// </summary>
@@ -1480,9 +1432,7 @@ namespace CherwellConnector.Api
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value?.ToString()),
                 (TrebuchetWebApiDataContractsBusinessObjectReadResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsBusinessObjectReadResponse)));
         }
-
-            
-
+        
         #endregion
 
         #region BusinessObjectGetBusinessObjectByScanCodeBusObIdV1
@@ -1970,18 +1920,9 @@ namespace CherwellConnector.Api
             var localVarFormParams = new Dictionary<string, string>();
             var localVarFileParams = new Dictionary<string, FileParameter>();
             object localVarPostBody;
-
-            // to determine the Content-Type header
-            var localVarHttpContentTypes = new[] {
-                "application/json", 
-                "text/json", 
-                "application/xml", 
-                "text/xml", 
-                "application/x-www-form-urlencoded"
-            };
-            var localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-           
+            
+            var localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(LocalVarHttpContentTypes);
+            
             var localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
@@ -2060,15 +2001,8 @@ namespace CherwellConnector.Api
             var localVarFileParams = new Dictionary<string, FileParameter>();
             object localVarPostBody;
 
-            // to determine the Content-Type header
-            var localVarHttpContentTypes = new[] {
-                "application/json", 
-                "text/json", 
-                "application/xml", 
-                "text/xml", 
-                "application/x-www-form-urlencoded"
-            };
-            var localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+           
+            var localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(LocalVarHttpContentTypes);
 
           
             var localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
@@ -2517,9 +2451,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns></returns>
-        public void BusinessObjectRemoveBusinessObjectAttachmentByIdAndPublicIdV1 (string attachmentid, string busobid, string publicid, string lang = null, string locale = null)
+        public object BusinessObjectRemoveBusinessObjectAttachmentByIdAndPublicIdV1 (string attachmentid, string busobid, string publicid, string lang = null, string locale = null)
         {
-             BusinessObjectRemoveBusinessObjectAttachmentByIdAndPublicIdV1WithHttpInfo(attachmentid, busobid, publicid, lang, locale);
+             return BusinessObjectRemoveBusinessObjectAttachmentByIdAndPublicIdV1WithHttpInfo(attachmentid, busobid, publicid, lang, locale);
         }
 
         /// <summary>
@@ -2603,9 +2537,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns></returns>
-        public void BusinessObjectRemoveBusinessObjectAttachmentByIdAndRecIdV1 (string attachmentid, string busobid, string busobrecid, string lang = null, string locale = null)
+        public object BusinessObjectRemoveBusinessObjectAttachmentByIdAndRecIdV1 (string attachmentid, string busobid, string busobrecid, string lang = null, string locale = null)
         {
-             BusinessObjectRemoveBusinessObjectAttachmentByIdAndRecIdV1WithHttpInfo(attachmentid, busobid, busobrecid, lang, locale);
+             return BusinessObjectRemoveBusinessObjectAttachmentByIdAndRecIdV1WithHttpInfo(attachmentid, busobid, busobrecid, lang, locale);
         }
 
         /// <summary>
@@ -2689,9 +2623,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns></returns>
-        public void BusinessObjectRemoveBusinessObjectAttachmentByNameAndPublicIdV1 (string attachmentid, string busobname, string publicid, string lang = null, string locale = null)
+        public object BusinessObjectRemoveBusinessObjectAttachmentByNameAndPublicIdV1 (string attachmentid, string busobname, string publicid, string lang = null, string locale = null)
         {
-             BusinessObjectRemoveBusinessObjectAttachmentByNameAndPublicIdV1WithHttpInfo(attachmentid, busobname, publicid, lang, locale);
+             return BusinessObjectRemoveBusinessObjectAttachmentByNameAndPublicIdV1WithHttpInfo(attachmentid, busobname, publicid, lang, locale);
         }
 
         /// <summary>
@@ -2704,7 +2638,8 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        private ApiResponse<object> BusinessObjectRemoveBusinessObjectAttachmentByNameAndPublicIdV1WithHttpInfo (string attachmentid, string busobname, string publicid, string lang = null, string locale = null)
+        private ApiResponse<object> BusinessObjectRemoveBusinessObjectAttachmentByNameAndPublicIdV1WithHttpInfo(string attachmentid,
+            string busobname, string publicid, string lang = null, string locale = null)
         {
             // verify the required parameter 'attachmentid' is set
             if (attachmentid == null)
@@ -2756,7 +2691,7 @@ namespace CherwellConnector.Api
             var exception = ExceptionFactory?.Invoke("BusinessObjectRemoveBusinessObjectAttachmentByNameAndPublicIdV1", localVarResponse);
             if (exception != null) throw exception;
 
-            return new ApiResponse<object>(localVarStatusCode,
+           return new ApiResponse<object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value?.ToString()),
                 null);
         }
@@ -2775,9 +2710,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns></returns>
-        public void BusinessObjectRemoveBusinessObjectAttachmentByNameAndRecIdV1 (string attachmentid, string busobname, string busobrecid, string lang = null, string locale = null)
+        public object BusinessObjectRemoveBusinessObjectAttachmentByNameAndRecIdV1 (string attachmentid, string busobname, string busobrecid, string lang = null, string locale = null)
         {
-             BusinessObjectRemoveBusinessObjectAttachmentByNameAndRecIdV1WithHttpInfo(attachmentid, busobname, busobrecid, lang, locale);
+             return BusinessObjectRemoveBusinessObjectAttachmentByNameAndRecIdV1WithHttpInfo(attachmentid, busobname, busobrecid, lang, locale);
         }
 
         /// <summary>
@@ -2885,16 +2820,8 @@ namespace CherwellConnector.Api
             var localVarFormParams = new Dictionary<string, string>();
             var localVarFileParams = new Dictionary<string, FileParameter>();
             object localVarPostBody;
-
-            // to determine the Content-Type header
-            var localVarHttpContentTypes = new[] {
-                "application/json", 
-                "text/json", 
-                "application/xml", 
-                "text/xml", 
-                "application/x-www-form-urlencoded"
-            };
-            var localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            
+            var localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(LocalVarHttpContentTypes);
 
            
             var localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
@@ -2973,16 +2900,8 @@ namespace CherwellConnector.Api
             var localVarFormParams = new Dictionary<string, string>();
             var localVarFileParams = new Dictionary<string, FileParameter>();
             object localVarPostBody;
-
-            // to determine the Content-Type header
-            var localVarHttpContentTypes = new[] {
-                "application/json", 
-                "text/json", 
-                "application/xml", 
-                "text/xml", 
-                "application/x-www-form-urlencoded"
-            };
-            var localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            
+            var localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(LocalVarHttpContentTypes);
             
             var localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -3037,7 +2956,7 @@ namespace CherwellConnector.Api
         {
              return BusinessObjectSaveBusinessObjectAttachmentUrlV1WithHttpInfo(request, lang, locale).Data;
         }
-        
+           
         /// <summary>
         /// Attach a URL path Operation to attach a URL path to a Business Object.
         /// </summary>
@@ -3059,16 +2978,8 @@ namespace CherwellConnector.Api
             var localVarFormParams = new Dictionary<string, string>();
             var localVarFileParams = new Dictionary<string, FileParameter>();
             object localVarPostBody;
-
-            // to determine the Content-Type header
-            var localVarHttpContentTypes = new[] {
-                "application/json", 
-                "text/json", 
-                "application/xml", 
-                "text/xml", 
-                "application/x-www-form-urlencoded"
-            };
-            var localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            
+            var localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(LocalVarHttpContentTypes);
 
            
             var localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
@@ -3147,16 +3058,8 @@ namespace CherwellConnector.Api
             var localVarFormParams = new Dictionary<string, string>();
             var localVarFileParams = new Dictionary<string, FileParameter>();
             object localVarPostBody;
-
-            // to determine the Content-Type header
-            var localVarHttpContentTypes = new[] {
-                "application/json", 
-                "text/json", 
-                "application/xml", 
-                "text/xml", 
-                "application/x-www-form-urlencoded"
-            };
-            var localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            
+            var localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(LocalVarHttpContentTypes);
             
             var localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -3233,17 +3136,8 @@ namespace CherwellConnector.Api
             var localVarFormParams = new Dictionary<string, string>();
             var localVarFileParams = new Dictionary<string, FileParameter>();
             object localVarPostBody;
-
-            // to determine the Content-Type header
-            var localVarHttpContentTypes = new[] {
-                "application/json", 
-                "text/json", 
-                "application/xml", 
-                "text/xml", 
-                "application/x-www-form-urlencoded"
-            };
-            var localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
+            
+            var localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(LocalVarHttpContentTypes);
             
             var localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -3418,7 +3312,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > BusinessObjectUploadBusinessObjectAttachmentByIdAndPublicIdV1WithHttpInfo (byte[] body, string filename, string busobid, string publicid, int? offset, int? totalsize, string attachmentid = null, string displaytext = null, string lang = null, string locale = null)
+        private ApiResponse< string > BusinessObjectUploadBusinessObjectAttachmentByIdAndPublicIdV1WithHttpInfo (byte[] body, string filename, string busobid, string publicid, int? offset, int? totalsize, string attachmentid = null, string displaytext = null, string lang = null, string locale = null)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -3616,12 +3510,8 @@ namespace CherwellConnector.Api
         }
 
         #endregion
-       
-        
-        
-        
-        
 
+        #region BusinessObjectUploadBusinessObjectAttachmentByNameAndPublicIdV1
         
         /// <summary>
         /// Upload an attachment by Business Object name and public ID Operation to upload an attachment to a Business Object record using a Business Object name and public ID. The body of the request is the byte array of the file part being uploaded.
@@ -3640,8 +3530,8 @@ namespace CherwellConnector.Api
         /// <returns>string</returns>
         public string BusinessObjectUploadBusinessObjectAttachmentByNameAndPublicIdV1 (byte[] body, string filename, string busobname, string publicid, int? offset, int? totalsize, string attachmentid = null, string displaytext = null, string lang = null, string locale = null)
         {
-             var localVarResponse = BusinessObjectUploadBusinessObjectAttachmentByNameAndPublicIdV1WithHttpInfo(body, filename, busobname, publicid, offset, totalsize, attachmentid, displaytext, lang, locale);
-             return localVarResponse.Data;
+             return BusinessObjectUploadBusinessObjectAttachmentByNameAndPublicIdV1WithHttpInfo(body, filename, busobname, publicid, offset, totalsize, attachmentid, displaytext, lang, locale).Data;
+            
         }
 
         /// <summary>
@@ -3659,7 +3549,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > BusinessObjectUploadBusinessObjectAttachmentByNameAndPublicIdV1WithHttpInfo (byte[] body, string filename, string busobname, string publicid, int? offset, int? totalsize, string attachmentid = null, string displaytext = null, string lang = null, string locale = null)
+        private ApiResponse< string > BusinessObjectUploadBusinessObjectAttachmentByNameAndPublicIdV1WithHttpInfo (byte[] body, string filename, string busobname, string publicid, int? offset, int? totalsize, string attachmentid = null, string displaytext = null, string lang = null, string locale = null)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -3686,35 +3576,29 @@ namespace CherwellConnector.Api
             var localVarHeaderParams = new Dictionary<string, string>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<string, string>();
             var localVarFileParams = new Dictionary<string, FileParameter>();
-            object localVarPostBody = null;
+            object localVarPostBody;
 
             // to determine the Content-Type header
-            var localVarHttpContentTypes = new string[] {
+            var localVarHttpContentTypes = new[] {
                 "application/octet-stream"
             };
             var localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
-            // to determine the Accept header
-            var localVarHttpHeaderAccepts = new string[] {
-                "application/json",
-                "text/json",
-                "application/xml",
-                "text/xml"
-            };
-            var localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            
+            var localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (filename != null) localVarPathParams.Add("filename", Configuration.ApiClient.ParameterToString(filename)); // path parameter
-            if (busobname != null) localVarPathParams.Add("busobname", Configuration.ApiClient.ParameterToString(busobname)); // path parameter
-            if (publicid != null) localVarPathParams.Add("publicid", Configuration.ApiClient.ParameterToString(publicid)); // path parameter
-            if (offset != null) localVarPathParams.Add("offset", Configuration.ApiClient.ParameterToString(offset)); // path parameter
-            if (totalsize != null) localVarPathParams.Add("totalsize", Configuration.ApiClient.ParameterToString(totalsize)); // path parameter
+            localVarPathParams.Add("filename", Configuration.ApiClient.ParameterToString(filename)); // path parameter
+            localVarPathParams.Add("busobname", Configuration.ApiClient.ParameterToString(busobname)); // path parameter
+            localVarPathParams.Add("publicid", Configuration.ApiClient.ParameterToString(publicid)); // path parameter
+            localVarPathParams.Add("offset", Configuration.ApiClient.ParameterToString(offset)); // path parameter
+            localVarPathParams.Add("totalsize", Configuration.ApiClient.ParameterToString(totalsize)); // path parameter
             if (attachmentid != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "attachmentid", attachmentid)); // query parameter
             if (displaytext != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "displaytext", displaytext)); // query parameter
             if (lang != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "lang", lang)); // query parameter
             if (locale != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "locale", locale)); // query parameter
-            if (body != null && body.GetType() != typeof(byte[]))
+            if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
             }
@@ -3737,18 +3621,20 @@ namespace CherwellConnector.Api
 
             var localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            if (ExceptionFactory != null)
-            {
-                var exception = ExceptionFactory("BusinessObjectUploadBusinessObjectAttachmentByNameAndPublicIdV1", localVarResponse);
-                if (exception != null) throw exception;
-            }
+            var exception = ExceptionFactory?.Invoke("BusinessObjectUploadBusinessObjectAttachmentByNameAndPublicIdV1", localVarResponse);
+            if (exception != null) throw exception;
 
             return new ApiResponse<string>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value?.ToString()),
                 (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
         }
         
-        /// <summary>
+
+        #endregion
+
+        #region BusinessObjectUploadBusinessObjectAttachmentByNameAndRecIdV1
+
+                /// <summary>
         /// Upload an attachment by Business Object name and record ID Operation to upload an attachment to a Business Object record using a Business Object name and record ID. The body of the request is the byte array of the file part being uploaded.
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
@@ -3765,8 +3651,7 @@ namespace CherwellConnector.Api
         /// <returns>string</returns>
         public string BusinessObjectUploadBusinessObjectAttachmentByNameAndRecIdV1 (byte[] body, string filename, string busobname, string busobrecid, int? offset, int? totalsize, string attachmentid = null, string displaytext = null, string lang = null, string locale = null)
         {
-             var localVarResponse = BusinessObjectUploadBusinessObjectAttachmentByNameAndRecIdV1WithHttpInfo(body, filename, busobname, busobrecid, offset, totalsize, attachmentid, displaytext, lang, locale);
-             return localVarResponse.Data;
+             return BusinessObjectUploadBusinessObjectAttachmentByNameAndRecIdV1WithHttpInfo(body, filename, busobname, busobrecid, offset, totalsize, attachmentid, displaytext, lang, locale).Data;
         }
 
         /// <summary>
@@ -3784,7 +3669,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > BusinessObjectUploadBusinessObjectAttachmentByNameAndRecIdV1WithHttpInfo (byte[] body, string filename, string busobname, string busobrecid, int? offset, int? totalsize, string attachmentid = null, string displaytext = null, string lang = null, string locale = null)
+        private ApiResponse< string > BusinessObjectUploadBusinessObjectAttachmentByNameAndRecIdV1WithHttpInfo (byte[] body, string filename, string busobname, string busobrecid, int? offset, int? totalsize, string attachmentid = null, string displaytext = null, string lang = null, string locale = null)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -3811,35 +3696,29 @@ namespace CherwellConnector.Api
             var localVarHeaderParams = new Dictionary<string, string>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<string, string>();
             var localVarFileParams = new Dictionary<string, FileParameter>();
-            object localVarPostBody = null;
+            object localVarPostBody;
 
             // to determine the Content-Type header
-            var localVarHttpContentTypes = new string[] {
+            var localVarHttpContentTypes = new[] {
                 "application/octet-stream"
             };
             var localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
-            // to determine the Accept header
-            var localVarHttpHeaderAccepts = new string[] {
-                "application/json",
-                "text/json",
-                "application/xml",
-                "text/xml"
-            };
-            var localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            
+            var localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (filename != null) localVarPathParams.Add("filename", Configuration.ApiClient.ParameterToString(filename)); // path parameter
-            if (busobname != null) localVarPathParams.Add("busobname", Configuration.ApiClient.ParameterToString(busobname)); // path parameter
-            if (busobrecid != null) localVarPathParams.Add("busobrecid", Configuration.ApiClient.ParameterToString(busobrecid)); // path parameter
-            if (offset != null) localVarPathParams.Add("offset", Configuration.ApiClient.ParameterToString(offset)); // path parameter
-            if (totalsize != null) localVarPathParams.Add("totalsize", Configuration.ApiClient.ParameterToString(totalsize)); // path parameter
+            localVarPathParams.Add("filename", Configuration.ApiClient.ParameterToString(filename)); // path parameter
+            localVarPathParams.Add("busobname", Configuration.ApiClient.ParameterToString(busobname)); // path parameter
+            localVarPathParams.Add("busobrecid", Configuration.ApiClient.ParameterToString(busobrecid)); // path parameter
+            localVarPathParams.Add("offset", Configuration.ApiClient.ParameterToString(offset)); // path parameter
+            localVarPathParams.Add("totalsize", Configuration.ApiClient.ParameterToString(totalsize)); // path parameter
             if (attachmentid != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "attachmentid", attachmentid)); // query parameter
             if (displaytext != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "displaytext", displaytext)); // query parameter
             if (lang != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "lang", lang)); // query parameter
             if (locale != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "locale", locale)); // query parameter
-            if (body != null && body.GetType() != typeof(byte[]))
+            if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
             }
@@ -3862,15 +3741,82 @@ namespace CherwellConnector.Api
 
             var localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            if (ExceptionFactory != null)
-            {
-                var exception = ExceptionFactory("BusinessObjectUploadBusinessObjectAttachmentByNameAndRecIdV1", localVarResponse);
-                if (exception != null) throw exception;
-            }
+            var exception = ExceptionFactory?.Invoke("BusinessObjectUploadBusinessObjectAttachmentByNameAndRecIdV1", localVarResponse);
+            if (exception != null) throw exception;
 
             return new ApiResponse<string>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value?.ToString()),
                 (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
         }
+
+        #endregion
+        
+        public TrebuchetWebApiDataContractsBusinessObjectBatchSaveResponse BusinessObjectSaveBusinessObjectBatchV1(
+            TrebuchetWebApiDataContractsBusinessObjectBatchSaveRequest request, string lang = null, string locale = null)
+        {
+            return  BusinessObjectSaveBusinessObjectBatchV1WithHttpInfo(request, lang, locale).Data;
+        }
+        
+        /// <summary>
+        /// Create or update a batch of Business Objects Operation that creates or updates an array of Business Objects in a batch. To update, specify record ID or public ID. To create, leave record ID and public ID empty.
+        /// </summary>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Specify the array of Business Object templates. </param>
+        /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
+        /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
+        /// <returns>ApiResponse of TrebuchetWebApiDataContractsBusinessObjectBatchSaveResponse</returns>
+        private ApiResponse< TrebuchetWebApiDataContractsBusinessObjectBatchSaveResponse > BusinessObjectSaveBusinessObjectBatchV1WithHttpInfo (TrebuchetWebApiDataContractsBusinessObjectBatchSaveRequest request, string lang = null, string locale = null)
+        {
+            // verify the required parameter 'request' is set
+            if (request == null)
+                throw new ApiException(400, "Missing required parameter 'request' when calling BusinessObjectApi->BusinessObjectSaveBusinessObjectBatchV1");
+
+            const string varPath = "/api/V1/savebusinessobjectbatch";
+            var localVarPathParams = new Dictionary<string, string>();
+            var localVarQueryParams = new List<KeyValuePair<string, string>>();
+            var localVarHeaderParams = new Dictionary<string, string>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<string, string>();
+            var localVarFileParams = new Dictionary<string, FileParameter>();
+            object localVarPostBody;
+            
+            var localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(LocalVarHttpContentTypes);
+            
+            var localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (lang != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "lang", lang)); // query parameter
+            if (locale != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "locale", locale)); // query parameter
+            if (request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = request; // byte array
+            }
+
+            // authentication (oauth2) required
+            // oauth required
+            if (!string.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            var localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(varPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            var localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            var exception = ExceptionFactory?.Invoke("BusinessObjectSaveBusinessObjectBatchV1", localVarResponse);
+            if (exception != null) throw exception;
+
+            return new ApiResponse<TrebuchetWebApiDataContractsBusinessObjectBatchSaveResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value?.ToString()),
+                (TrebuchetWebApiDataContractsBusinessObjectBatchSaveResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsBusinessObjectBatchSaveResponse)));
+        }
+        
     }
 }

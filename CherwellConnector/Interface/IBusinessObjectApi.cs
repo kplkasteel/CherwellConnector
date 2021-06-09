@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using CherwellConnector.Client;
 using CherwellConnector.Model;
-using Object = System.Object;
+
 
 namespace CherwellConnector.Interface
 {
@@ -444,7 +444,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns></returns>
-        void BusinessObjectRemoveBusinessObjectAttachmentByIdAndPublicIdV1 (string attachmentid, string busobid, string publicid, string lang = null, string locale = null);
+        object BusinessObjectRemoveBusinessObjectAttachmentByIdAndPublicIdV1 (string attachmentid, string busobid, string publicid, string lang = null, string locale = null);
 
         /// <summary>
         /// Remove an attachment by Business Object ID and record ID
@@ -452,14 +452,14 @@ namespace CherwellConnector.Interface
         /// <remarks>
         /// Operation to remove an attachment from a Business Object using the attachment record ID, Business Object ID, and Business Object record ID.
         /// </remarks>
-        /// <exception cref="ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="ApiException">Thrown when fails to make API call</exception>   
         /// <param name="attachmentid">Specify the internal ID of the attachment record.</param>
         /// <param name="busobid">Specify the Business Object ID.</param>
         /// <param name="busobrecid">Specify the Business Object record ID.</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns></returns>
-        void BusinessObjectRemoveBusinessObjectAttachmentByIdAndRecIdV1 (string attachmentid, string busobid, string busobrecid, string lang = null, string locale = null);
+        object BusinessObjectRemoveBusinessObjectAttachmentByIdAndRecIdV1 (string attachmentid, string busobid, string busobrecid, string lang = null, string locale = null);
 
         /// <summary>
         /// Remove an attachment by Business Object name and public ID
@@ -474,7 +474,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns></returns>
-        void BusinessObjectRemoveBusinessObjectAttachmentByNameAndPublicIdV1 (string attachmentid, string busobname, string publicid, string lang = null, string locale = null);
+        object BusinessObjectRemoveBusinessObjectAttachmentByNameAndPublicIdV1 (string attachmentid, string busobname, string publicid, string lang = null, string locale = null);
         
         /// <summary>
         /// Remove an attachment by Business Object name and record ID
@@ -489,7 +489,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns></returns>
-        void BusinessObjectRemoveBusinessObjectAttachmentByNameAndRecIdV1 (string attachmentid, string busobname, string busobrecid, string lang = null, string locale = null);
+        object BusinessObjectRemoveBusinessObjectAttachmentByNameAndRecIdV1 (string attachmentid, string busobname, string busobrecid, string lang = null, string locale = null);
 
         /// <summary>
         /// Attach a Business Object to a Business Object

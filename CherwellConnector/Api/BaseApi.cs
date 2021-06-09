@@ -44,5 +44,14 @@ namespace CherwellConnector.Api
             "application/xml",
             "text/xml"
         };
+        
+        protected readonly string[] LocalVarHttpContentTypes = {
+            "application/json", 
+            "text/json", 
+            "application/xml", 
+            "text/xml", 
+            "application/x-www-form-urlencoded"
+        };
+        
     }
 }
