@@ -31,16 +31,16 @@ namespace CherwellConnector.Model
         /// <param name="scopeOwnerId">scopeOwnerId.</param>
         /// <param name="searchId">searchId.</param>
         /// <param name="searchName">searchName.</param>
-        public TrebuchetWebApiDataContractsSearchesStoredSearchRequest(string associationId = default(string), string associationName = default(string), string gridId = default(string), bool? includeSchema = default(bool?), string scope = default(string), string scopeOwnerId = default(string), string searchId = default(string), string searchName = default(string))
+        public TrebuchetWebApiDataContractsSearchesStoredSearchRequest(string associationId = default, string associationName = default, string gridId = default, bool? includeSchema = default, string scope = default, string scopeOwnerId = default, string searchId = default, string searchName = default)
         {
-            this.AssociationId = associationId;
-            this.AssociationName = associationName;
-            this.GridId = gridId;
-            this.IncludeSchema = includeSchema;
-            this.Scope = scope;
-            this.ScopeOwnerId = scopeOwnerId;
-            this.SearchId = searchId;
-            this.SearchName = searchName;
+            AssociationId = associationId;
+            AssociationName = associationName;
+            GridId = gridId;
+            IncludeSchema = includeSchema;
+            Scope = scope;
+            ScopeOwnerId = scopeOwnerId;
+            SearchId = searchId;
+            SearchName = searchName;
         }
         
         /// <summary>
@@ -99,14 +99,14 @@ namespace CherwellConnector.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrebuchetWebApiDataContractsSearchesStoredSearchRequest {\n");
-            sb.Append("  AssociationId: ").Append(this.AssociationId).Append("\n");
-            sb.Append("  AssociationName: ").Append(this.AssociationName).Append("\n");
-            sb.Append("  GridId: ").Append(this.GridId).Append("\n");
-            sb.Append("  IncludeSchema: ").Append(this.IncludeSchema).Append("\n");
-            sb.Append("  Scope: ").Append(this.Scope).Append("\n");
-            sb.Append("  ScopeOwnerId: ").Append(this.ScopeOwnerId).Append("\n");
-            sb.Append("  SearchId: ").Append(this.SearchId).Append("\n");
-            sb.Append("  SearchName: ").Append(this.SearchName).Append("\n");
+            sb.Append("  AssociationId: ").Append(AssociationId).Append("\n");
+            sb.Append("  AssociationName: ").Append(AssociationName).Append("\n");
+            sb.Append("  GridId: ").Append(GridId).Append("\n");
+            sb.Append("  IncludeSchema: ").Append(IncludeSchema).Append("\n");
+            sb.Append("  Scope: ").Append(Scope).Append("\n");
+            sb.Append("  ScopeOwnerId: ").Append(ScopeOwnerId).Append("\n");
+            sb.Append("  SearchId: ").Append(SearchId).Append("\n");
+            sb.Append("  SearchName: ").Append(SearchName).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -127,7 +127,7 @@ namespace CherwellConnector.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as TrebuchetWebApiDataContractsSearchesStoredSearchRequest);
+            return Equals(input as TrebuchetWebApiDataContractsSearchesStoredSearchRequest);
         }
 
         /// <summary>
@@ -142,44 +142,44 @@ namespace CherwellConnector.Model
 
             return 
                 (
-                    this.AssociationId == input.AssociationId ||
-                    (this.AssociationId != null &&
-                    this.AssociationId.Equals(input.AssociationId))
+                    AssociationId == input.AssociationId ||
+                    (AssociationId != null &&
+                    AssociationId.Equals(input.AssociationId))
                 ) && 
                 (
-                    this.AssociationName == input.AssociationName ||
-                    (this.AssociationName != null &&
-                    this.AssociationName.Equals(input.AssociationName))
+                    AssociationName == input.AssociationName ||
+                    (AssociationName != null &&
+                    AssociationName.Equals(input.AssociationName))
                 ) && 
                 (
-                    this.GridId == input.GridId ||
-                    (this.GridId != null &&
-                    this.GridId.Equals(input.GridId))
+                    GridId == input.GridId ||
+                    (GridId != null &&
+                    GridId.Equals(input.GridId))
                 ) && 
                 (
-                    this.IncludeSchema == input.IncludeSchema ||
-                    (this.IncludeSchema != null &&
-                    this.IncludeSchema.Equals(input.IncludeSchema))
+                    IncludeSchema == input.IncludeSchema ||
+                    (IncludeSchema != null &&
+                    IncludeSchema.Equals(input.IncludeSchema))
                 ) && 
                 (
-                    this.Scope == input.Scope ||
-                    (this.Scope != null &&
-                    this.Scope.Equals(input.Scope))
+                    Scope == input.Scope ||
+                    (Scope != null &&
+                    Scope.Equals(input.Scope))
                 ) && 
                 (
-                    this.ScopeOwnerId == input.ScopeOwnerId ||
-                    (this.ScopeOwnerId != null &&
-                    this.ScopeOwnerId.Equals(input.ScopeOwnerId))
+                    ScopeOwnerId == input.ScopeOwnerId ||
+                    (ScopeOwnerId != null &&
+                    ScopeOwnerId.Equals(input.ScopeOwnerId))
                 ) && 
                 (
-                    this.SearchId == input.SearchId ||
-                    (this.SearchId != null &&
-                    this.SearchId.Equals(input.SearchId))
+                    SearchId == input.SearchId ||
+                    (SearchId != null &&
+                    SearchId.Equals(input.SearchId))
                 ) && 
                 (
-                    this.SearchName == input.SearchName ||
-                    (this.SearchName != null &&
-                    this.SearchName.Equals(input.SearchName))
+                    SearchName == input.SearchName ||
+                    (SearchName != null &&
+                    SearchName.Equals(input.SearchName))
                 );
         }
 
@@ -191,23 +191,23 @@ namespace CherwellConnector.Model
         {
             unchecked // Overflow is fine, just wrap
             {
-                int hashCode = 41;
-                if (this.AssociationId != null)
-                    hashCode = hashCode * 59 + this.AssociationId.GetHashCode();
-                if (this.AssociationName != null)
-                    hashCode = hashCode * 59 + this.AssociationName.GetHashCode();
-                if (this.GridId != null)
-                    hashCode = hashCode * 59 + this.GridId.GetHashCode();
-                if (this.IncludeSchema != null)
-                    hashCode = hashCode * 59 + this.IncludeSchema.GetHashCode();
-                if (this.Scope != null)
-                    hashCode = hashCode * 59 + this.Scope.GetHashCode();
-                if (this.ScopeOwnerId != null)
-                    hashCode = hashCode * 59 + this.ScopeOwnerId.GetHashCode();
-                if (this.SearchId != null)
-                    hashCode = hashCode * 59 + this.SearchId.GetHashCode();
-                if (this.SearchName != null)
-                    hashCode = hashCode * 59 + this.SearchName.GetHashCode();
+                var hashCode = 41;
+                if (AssociationId != null)
+                    hashCode = hashCode * 59 + AssociationId.GetHashCode();
+                if (AssociationName != null)
+                    hashCode = hashCode * 59 + AssociationName.GetHashCode();
+                if (GridId != null)
+                    hashCode = hashCode * 59 + GridId.GetHashCode();
+                if (IncludeSchema != null)
+                    hashCode = hashCode * 59 + IncludeSchema.GetHashCode();
+                if (Scope != null)
+                    hashCode = hashCode * 59 + Scope.GetHashCode();
+                if (ScopeOwnerId != null)
+                    hashCode = hashCode * 59 + ScopeOwnerId.GetHashCode();
+                if (SearchId != null)
+                    hashCode = hashCode * 59 + SearchId.GetHashCode();
+                if (SearchName != null)
+                    hashCode = hashCode * 59 + SearchName.GetHashCode();
                 return hashCode;
             }
         }
@@ -217,7 +217,7 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

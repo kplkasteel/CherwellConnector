@@ -35,19 +35,19 @@ namespace CherwellConnector.Model
         /// <param name="subTitle">subTitle.</param>
         /// <param name="text">text.</param>
         /// <param name="title">title.</param>
-        public TrebuchetWebApiDataContractsSearchesSimpleResultsListItem(string busObId = default(string), string busObRecId = default(string), string docRepositoryItemId = default(string), string galleryImage = default(string), List<TrebuchetWebApiDataContractsCoreLink> links = default(List<TrebuchetWebApiDataContractsCoreLink>), string publicId = default(string), string scope = default(string), string scopeOwner = default(string), string subTitle = default(string), string text = default(string), string title = default(string))
+        public TrebuchetWebApiDataContractsSearchesSimpleResultsListItem(string busObId = default, string busObRecId = default, string docRepositoryItemId = default, string galleryImage = default, List<TrebuchetWebApiDataContractsCoreLink> links = default, string publicId = default, string scope = default, string scopeOwner = default, string subTitle = default, string text = default, string title = default)
         {
-            this.BusObId = busObId;
-            this.BusObRecId = busObRecId;
-            this.DocRepositoryItemId = docRepositoryItemId;
-            this.GalleryImage = galleryImage;
-            this.Links = links;
-            this.PublicId = publicId;
-            this.Scope = scope;
-            this.ScopeOwner = scopeOwner;
-            this.SubTitle = subTitle;
-            this.Text = text;
-            this.Title = title;
+            BusObId = busObId;
+            BusObRecId = busObRecId;
+            DocRepositoryItemId = docRepositoryItemId;
+            GalleryImage = galleryImage;
+            Links = links;
+            PublicId = publicId;
+            Scope = scope;
+            ScopeOwner = scopeOwner;
+            SubTitle = subTitle;
+            Text = text;
+            Title = title;
         }
         
         /// <summary>
@@ -124,17 +124,17 @@ namespace CherwellConnector.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrebuchetWebApiDataContractsSearchesSimpleResultsListItem {\n");
-            sb.Append("  BusObId: ").Append(this.BusObId).Append("\n");
-            sb.Append("  BusObRecId: ").Append(this.BusObRecId).Append("\n");
-            sb.Append("  DocRepositoryItemId: ").Append(this.DocRepositoryItemId).Append("\n");
-            sb.Append("  GalleryImage: ").Append(this.GalleryImage).Append("\n");
-            sb.Append("  Links: ").Append(this.Links).Append("\n");
-            sb.Append("  PublicId: ").Append(this.PublicId).Append("\n");
-            sb.Append("  Scope: ").Append(this.Scope).Append("\n");
-            sb.Append("  ScopeOwner: ").Append(this.ScopeOwner).Append("\n");
-            sb.Append("  SubTitle: ").Append(this.SubTitle).Append("\n");
-            sb.Append("  Text: ").Append(this.Text).Append("\n");
-            sb.Append("  Title: ").Append(this.Title).Append("\n");
+            sb.Append("  BusObId: ").Append(BusObId).Append("\n");
+            sb.Append("  BusObRecId: ").Append(BusObRecId).Append("\n");
+            sb.Append("  DocRepositoryItemId: ").Append(DocRepositoryItemId).Append("\n");
+            sb.Append("  GalleryImage: ").Append(GalleryImage).Append("\n");
+            sb.Append("  Links: ").Append(Links).Append("\n");
+            sb.Append("  PublicId: ").Append(PublicId).Append("\n");
+            sb.Append("  Scope: ").Append(Scope).Append("\n");
+            sb.Append("  ScopeOwner: ").Append(ScopeOwner).Append("\n");
+            sb.Append("  SubTitle: ").Append(SubTitle).Append("\n");
+            sb.Append("  Text: ").Append(Text).Append("\n");
+            sb.Append("  Title: ").Append(Title).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -155,7 +155,7 @@ namespace CherwellConnector.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as TrebuchetWebApiDataContractsSearchesSimpleResultsListItem);
+            return Equals(input as TrebuchetWebApiDataContractsSearchesSimpleResultsListItem);
         }
 
         /// <summary>
@@ -170,59 +170,59 @@ namespace CherwellConnector.Model
 
             return 
                 (
-                    this.BusObId == input.BusObId ||
-                    (this.BusObId != null &&
-                    this.BusObId.Equals(input.BusObId))
+                    BusObId == input.BusObId ||
+                    (BusObId != null &&
+                    BusObId.Equals(input.BusObId))
                 ) && 
                 (
-                    this.BusObRecId == input.BusObRecId ||
-                    (this.BusObRecId != null &&
-                    this.BusObRecId.Equals(input.BusObRecId))
+                    BusObRecId == input.BusObRecId ||
+                    (BusObRecId != null &&
+                    BusObRecId.Equals(input.BusObRecId))
                 ) && 
                 (
-                    this.DocRepositoryItemId == input.DocRepositoryItemId ||
-                    (this.DocRepositoryItemId != null &&
-                    this.DocRepositoryItemId.Equals(input.DocRepositoryItemId))
+                    DocRepositoryItemId == input.DocRepositoryItemId ||
+                    (DocRepositoryItemId != null &&
+                    DocRepositoryItemId.Equals(input.DocRepositoryItemId))
                 ) && 
                 (
-                    this.GalleryImage == input.GalleryImage ||
-                    (this.GalleryImage != null &&
-                    this.GalleryImage.Equals(input.GalleryImage))
+                    GalleryImage == input.GalleryImage ||
+                    (GalleryImage != null &&
+                    GalleryImage.Equals(input.GalleryImage))
                 ) && 
                 (
-                    this.Links == input.Links ||
-                    this.Links != null &&
-                    this.Links.SequenceEqual(input.Links)
+                    Links == input.Links ||
+                    Links != null &&
+                    Links.SequenceEqual(input.Links)
                 ) && 
                 (
-                    this.PublicId == input.PublicId ||
-                    (this.PublicId != null &&
-                    this.PublicId.Equals(input.PublicId))
+                    PublicId == input.PublicId ||
+                    (PublicId != null &&
+                    PublicId.Equals(input.PublicId))
                 ) && 
                 (
-                    this.Scope == input.Scope ||
-                    (this.Scope != null &&
-                    this.Scope.Equals(input.Scope))
+                    Scope == input.Scope ||
+                    (Scope != null &&
+                    Scope.Equals(input.Scope))
                 ) && 
                 (
-                    this.ScopeOwner == input.ScopeOwner ||
-                    (this.ScopeOwner != null &&
-                    this.ScopeOwner.Equals(input.ScopeOwner))
+                    ScopeOwner == input.ScopeOwner ||
+                    (ScopeOwner != null &&
+                    ScopeOwner.Equals(input.ScopeOwner))
                 ) && 
                 (
-                    this.SubTitle == input.SubTitle ||
-                    (this.SubTitle != null &&
-                    this.SubTitle.Equals(input.SubTitle))
+                    SubTitle == input.SubTitle ||
+                    (SubTitle != null &&
+                    SubTitle.Equals(input.SubTitle))
                 ) && 
                 (
-                    this.Text == input.Text ||
-                    (this.Text != null &&
-                    this.Text.Equals(input.Text))
+                    Text == input.Text ||
+                    (Text != null &&
+                    Text.Equals(input.Text))
                 ) && 
                 (
-                    this.Title == input.Title ||
-                    (this.Title != null &&
-                    this.Title.Equals(input.Title))
+                    Title == input.Title ||
+                    (Title != null &&
+                    Title.Equals(input.Title))
                 );
         }
 
@@ -234,29 +234,29 @@ namespace CherwellConnector.Model
         {
             unchecked // Overflow is fine, just wrap
             {
-                int hashCode = 41;
-                if (this.BusObId != null)
-                    hashCode = hashCode * 59 + this.BusObId.GetHashCode();
-                if (this.BusObRecId != null)
-                    hashCode = hashCode * 59 + this.BusObRecId.GetHashCode();
-                if (this.DocRepositoryItemId != null)
-                    hashCode = hashCode * 59 + this.DocRepositoryItemId.GetHashCode();
-                if (this.GalleryImage != null)
-                    hashCode = hashCode * 59 + this.GalleryImage.GetHashCode();
-                if (this.Links != null)
-                    hashCode = hashCode * 59 + this.Links.GetHashCode();
-                if (this.PublicId != null)
-                    hashCode = hashCode * 59 + this.PublicId.GetHashCode();
-                if (this.Scope != null)
-                    hashCode = hashCode * 59 + this.Scope.GetHashCode();
-                if (this.ScopeOwner != null)
-                    hashCode = hashCode * 59 + this.ScopeOwner.GetHashCode();
-                if (this.SubTitle != null)
-                    hashCode = hashCode * 59 + this.SubTitle.GetHashCode();
-                if (this.Text != null)
-                    hashCode = hashCode * 59 + this.Text.GetHashCode();
-                if (this.Title != null)
-                    hashCode = hashCode * 59 + this.Title.GetHashCode();
+                var hashCode = 41;
+                if (BusObId != null)
+                    hashCode = hashCode * 59 + BusObId.GetHashCode();
+                if (BusObRecId != null)
+                    hashCode = hashCode * 59 + BusObRecId.GetHashCode();
+                if (DocRepositoryItemId != null)
+                    hashCode = hashCode * 59 + DocRepositoryItemId.GetHashCode();
+                if (GalleryImage != null)
+                    hashCode = hashCode * 59 + GalleryImage.GetHashCode();
+                if (Links != null)
+                    hashCode = hashCode * 59 + Links.GetHashCode();
+                if (PublicId != null)
+                    hashCode = hashCode * 59 + PublicId.GetHashCode();
+                if (Scope != null)
+                    hashCode = hashCode * 59 + Scope.GetHashCode();
+                if (ScopeOwner != null)
+                    hashCode = hashCode * 59 + ScopeOwner.GetHashCode();
+                if (SubTitle != null)
+                    hashCode = hashCode * 59 + SubTitle.GetHashCode();
+                if (Text != null)
+                    hashCode = hashCode * 59 + Text.GetHashCode();
+                if (Title != null)
+                    hashCode = hashCode * 59 + Title.GetHashCode();
                 return hashCode;
             }
         }
@@ -266,7 +266,7 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

@@ -34,18 +34,18 @@ namespace CherwellConnector.Model
         /// <param name="parentId">parentId.</param>
         /// <param name="scope">scope.</param>
         /// <param name="scopeOwner">scopeOwner.</param>
-        public TrebuchetWebApiDataContractsCoreManagerFolder(string association = default(string), List<TrebuchetWebApiDataContractsCoreManagerFolder> childFolders = default(List<TrebuchetWebApiDataContractsCoreManagerFolder>), List<TrebuchetWebApiDataContractsCoreManagerItem> childItems = default(List<TrebuchetWebApiDataContractsCoreManagerItem>), string id = default(string), List<TrebuchetWebApiDataContractsCoreLink> links = default(List<TrebuchetWebApiDataContractsCoreLink>), string localizedScopeName = default(string), string name = default(string), string parentId = default(string), string scope = default(string), string scopeOwner = default(string))
+        public TrebuchetWebApiDataContractsCoreManagerFolder(string association = default, List<TrebuchetWebApiDataContractsCoreManagerFolder> childFolders = default, List<TrebuchetWebApiDataContractsCoreManagerItem> childItems = default, string id = default, List<TrebuchetWebApiDataContractsCoreLink> links = default, string localizedScopeName = default, string name = default, string parentId = default, string scope = default, string scopeOwner = default)
         {
-            this.Association = association;
-            this.ChildFolders = childFolders;
-            this.ChildItems = childItems;
-            this.Id = id;
-            this.Links = links;
-            this.LocalizedScopeName = localizedScopeName;
-            this.Name = name;
-            this.ParentId = parentId;
-            this.Scope = scope;
-            this.ScopeOwner = scopeOwner;
+            Association = association;
+            ChildFolders = childFolders;
+            ChildItems = childItems;
+            Id = id;
+            Links = links;
+            LocalizedScopeName = localizedScopeName;
+            Name = name;
+            ParentId = parentId;
+            Scope = scope;
+            ScopeOwner = scopeOwner;
         }
         
         /// <summary>
@@ -116,16 +116,16 @@ namespace CherwellConnector.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrebuchetWebApiDataContractsCoreManagerFolder {\n");
-            sb.Append("  Association: ").Append(this.Association).Append("\n");
-            sb.Append("  ChildFolders: ").Append(this.ChildFolders).Append("\n");
-            sb.Append("  ChildItems: ").Append(this.ChildItems).Append("\n");
-            sb.Append("  Id: ").Append(this.Id).Append("\n");
-            sb.Append("  Links: ").Append(this.Links).Append("\n");
-            sb.Append("  LocalizedScopeName: ").Append(this.LocalizedScopeName).Append("\n");
-            sb.Append("  Name: ").Append(this.Name).Append("\n");
-            sb.Append("  ParentId: ").Append(this.ParentId).Append("\n");
-            sb.Append("  Scope: ").Append(this.Scope).Append("\n");
-            sb.Append("  ScopeOwner: ").Append(this.ScopeOwner).Append("\n");
+            sb.Append("  Association: ").Append(Association).Append("\n");
+            sb.Append("  ChildFolders: ").Append(ChildFolders).Append("\n");
+            sb.Append("  ChildItems: ").Append(ChildItems).Append("\n");
+            sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  Links: ").Append(Links).Append("\n");
+            sb.Append("  LocalizedScopeName: ").Append(LocalizedScopeName).Append("\n");
+            sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  ParentId: ").Append(ParentId).Append("\n");
+            sb.Append("  Scope: ").Append(Scope).Append("\n");
+            sb.Append("  ScopeOwner: ").Append(ScopeOwner).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -146,7 +146,7 @@ namespace CherwellConnector.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as TrebuchetWebApiDataContractsCoreManagerFolder);
+            return Equals(input as TrebuchetWebApiDataContractsCoreManagerFolder);
         }
 
         /// <summary>
@@ -161,54 +161,54 @@ namespace CherwellConnector.Model
 
             return 
                 (
-                    this.Association == input.Association ||
-                    (this.Association != null &&
-                    this.Association.Equals(input.Association))
+                    Association == input.Association ||
+                    (Association != null &&
+                    Association.Equals(input.Association))
                 ) && 
                 (
-                    this.ChildFolders == input.ChildFolders ||
-                    this.ChildFolders != null &&
-                    this.ChildFolders.SequenceEqual(input.ChildFolders)
+                    ChildFolders == input.ChildFolders ||
+                    ChildFolders != null &&
+                    ChildFolders.SequenceEqual(input.ChildFolders)
                 ) && 
                 (
-                    this.ChildItems == input.ChildItems ||
-                    this.ChildItems != null &&
-                    this.ChildItems.SequenceEqual(input.ChildItems)
+                    ChildItems == input.ChildItems ||
+                    ChildItems != null &&
+                    ChildItems.SequenceEqual(input.ChildItems)
                 ) && 
                 (
-                    this.Id == input.Id ||
-                    (this.Id != null &&
-                    this.Id.Equals(input.Id))
+                    Id == input.Id ||
+                    (Id != null &&
+                    Id.Equals(input.Id))
                 ) && 
                 (
-                    this.Links == input.Links ||
-                    this.Links != null &&
-                    this.Links.SequenceEqual(input.Links)
+                    Links == input.Links ||
+                    Links != null &&
+                    Links.SequenceEqual(input.Links)
                 ) && 
                 (
-                    this.LocalizedScopeName == input.LocalizedScopeName ||
-                    (this.LocalizedScopeName != null &&
-                    this.LocalizedScopeName.Equals(input.LocalizedScopeName))
+                    LocalizedScopeName == input.LocalizedScopeName ||
+                    (LocalizedScopeName != null &&
+                    LocalizedScopeName.Equals(input.LocalizedScopeName))
                 ) && 
                 (
-                    this.Name == input.Name ||
-                    (this.Name != null &&
-                    this.Name.Equals(input.Name))
+                    Name == input.Name ||
+                    (Name != null &&
+                    Name.Equals(input.Name))
                 ) && 
                 (
-                    this.ParentId == input.ParentId ||
-                    (this.ParentId != null &&
-                    this.ParentId.Equals(input.ParentId))
+                    ParentId == input.ParentId ||
+                    (ParentId != null &&
+                    ParentId.Equals(input.ParentId))
                 ) && 
                 (
-                    this.Scope == input.Scope ||
-                    (this.Scope != null &&
-                    this.Scope.Equals(input.Scope))
+                    Scope == input.Scope ||
+                    (Scope != null &&
+                    Scope.Equals(input.Scope))
                 ) && 
                 (
-                    this.ScopeOwner == input.ScopeOwner ||
-                    (this.ScopeOwner != null &&
-                    this.ScopeOwner.Equals(input.ScopeOwner))
+                    ScopeOwner == input.ScopeOwner ||
+                    (ScopeOwner != null &&
+                    ScopeOwner.Equals(input.ScopeOwner))
                 );
         }
 
@@ -220,27 +220,27 @@ namespace CherwellConnector.Model
         {
             unchecked // Overflow is fine, just wrap
             {
-                int hashCode = 41;
-                if (this.Association != null)
-                    hashCode = hashCode * 59 + this.Association.GetHashCode();
-                if (this.ChildFolders != null)
-                    hashCode = hashCode * 59 + this.ChildFolders.GetHashCode();
-                if (this.ChildItems != null)
-                    hashCode = hashCode * 59 + this.ChildItems.GetHashCode();
-                if (this.Id != null)
-                    hashCode = hashCode * 59 + this.Id.GetHashCode();
-                if (this.Links != null)
-                    hashCode = hashCode * 59 + this.Links.GetHashCode();
-                if (this.LocalizedScopeName != null)
-                    hashCode = hashCode * 59 + this.LocalizedScopeName.GetHashCode();
-                if (this.Name != null)
-                    hashCode = hashCode * 59 + this.Name.GetHashCode();
-                if (this.ParentId != null)
-                    hashCode = hashCode * 59 + this.ParentId.GetHashCode();
-                if (this.Scope != null)
-                    hashCode = hashCode * 59 + this.Scope.GetHashCode();
-                if (this.ScopeOwner != null)
-                    hashCode = hashCode * 59 + this.ScopeOwner.GetHashCode();
+                var hashCode = 41;
+                if (Association != null)
+                    hashCode = hashCode * 59 + Association.GetHashCode();
+                if (ChildFolders != null)
+                    hashCode = hashCode * 59 + ChildFolders.GetHashCode();
+                if (ChildItems != null)
+                    hashCode = hashCode * 59 + ChildItems.GetHashCode();
+                if (Id != null)
+                    hashCode = hashCode * 59 + Id.GetHashCode();
+                if (Links != null)
+                    hashCode = hashCode * 59 + Links.GetHashCode();
+                if (LocalizedScopeName != null)
+                    hashCode = hashCode * 59 + LocalizedScopeName.GetHashCode();
+                if (Name != null)
+                    hashCode = hashCode * 59 + Name.GetHashCode();
+                if (ParentId != null)
+                    hashCode = hashCode * 59 + ParentId.GetHashCode();
+                if (Scope != null)
+                    hashCode = hashCode * 59 + Scope.GetHashCode();
+                if (ScopeOwner != null)
+                    hashCode = hashCode * 59 + ScopeOwner.GetHashCode();
                 return hashCode;
             }
         }
@@ -250,7 +250,7 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

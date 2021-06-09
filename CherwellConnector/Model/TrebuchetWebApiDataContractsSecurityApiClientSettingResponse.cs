@@ -332,21 +332,21 @@ namespace CherwellConnector.Model
         /// <param name="errorMessage">errorMessage.</param>
         /// <param name="hasError">hasError.</param>
         /// <param name="httpStatusCode">httpStatusCode.</param>
-        public TrebuchetWebApiDataContractsSecurityApiClientSettingResponse(string name = default(string), string description = default(string), string culture = default(string), string clientKey = default(string), int? tokenLifespanMinutes = default(int?), int? refreshTokenLifespanMinutes = default(int?), bool? apiAccessIsEnabled = default(bool?), bool? allowAnonymousAccess = default(bool?), string standInKey = default(string), string errorCode = default(string), string errorMessage = default(string), bool? hasError = default(bool?), HttpStatusCodeEnum? httpStatusCode = default(HttpStatusCodeEnum?))
+        public TrebuchetWebApiDataContractsSecurityApiClientSettingResponse(string name = default, string description = default, string culture = default, string clientKey = default, int? tokenLifespanMinutes = default, int? refreshTokenLifespanMinutes = default, bool? apiAccessIsEnabled = default, bool? allowAnonymousAccess = default, string standInKey = default, string errorCode = default, string errorMessage = default, bool? hasError = default, HttpStatusCodeEnum? httpStatusCode = default)
         {
-            this.Name = name;
-            this.Description = description;
-            this.Culture = culture;
-            this.ClientKey = clientKey;
-            this.TokenLifespanMinutes = tokenLifespanMinutes;
-            this.RefreshTokenLifespanMinutes = refreshTokenLifespanMinutes;
-            this.ApiAccessIsEnabled = apiAccessIsEnabled;
-            this.AllowAnonymousAccess = allowAnonymousAccess;
-            this.StandInKey = standInKey;
-            this.ErrorCode = errorCode;
-            this.ErrorMessage = errorMessage;
-            this.HasError = hasError;
-            this.HttpStatusCode = httpStatusCode;
+            Name = name;
+            Description = description;
+            Culture = culture;
+            ClientKey = clientKey;
+            TokenLifespanMinutes = tokenLifespanMinutes;
+            RefreshTokenLifespanMinutes = refreshTokenLifespanMinutes;
+            ApiAccessIsEnabled = apiAccessIsEnabled;
+            AllowAnonymousAccess = allowAnonymousAccess;
+            StandInKey = standInKey;
+            ErrorCode = errorCode;
+            ErrorMessage = errorMessage;
+            HasError = hasError;
+            HttpStatusCode = httpStatusCode;
         }
         
         /// <summary>
@@ -430,19 +430,19 @@ namespace CherwellConnector.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrebuchetWebApiDataContractsSecurityApiClientSettingResponse {\n");
-            sb.Append("  Name: ").Append(this.Name).Append("\n");
-            sb.Append("  Description: ").Append(this.Description).Append("\n");
-            sb.Append("  Culture: ").Append(this.Culture).Append("\n");
-            sb.Append("  ClientKey: ").Append(this.ClientKey).Append("\n");
-            sb.Append("  TokenLifespanMinutes: ").Append(this.TokenLifespanMinutes).Append("\n");
-            sb.Append("  RefreshTokenLifespanMinutes: ").Append(this.RefreshTokenLifespanMinutes).Append("\n");
-            sb.Append("  ApiAccessIsEnabled: ").Append(this.ApiAccessIsEnabled).Append("\n");
-            sb.Append("  AllowAnonymousAccess: ").Append(this.AllowAnonymousAccess).Append("\n");
-            sb.Append("  StandInKey: ").Append(this.StandInKey).Append("\n");
-            sb.Append("  ErrorCode: ").Append(this.ErrorCode).Append("\n");
-            sb.Append("  ErrorMessage: ").Append(this.ErrorMessage).Append("\n");
-            sb.Append("  HasError: ").Append(this.HasError).Append("\n");
-            sb.Append("  HttpStatusCode: ").Append(this.HttpStatusCode).Append("\n");
+            sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  Description: ").Append(Description).Append("\n");
+            sb.Append("  Culture: ").Append(Culture).Append("\n");
+            sb.Append("  ClientKey: ").Append(ClientKey).Append("\n");
+            sb.Append("  TokenLifespanMinutes: ").Append(TokenLifespanMinutes).Append("\n");
+            sb.Append("  RefreshTokenLifespanMinutes: ").Append(RefreshTokenLifespanMinutes).Append("\n");
+            sb.Append("  ApiAccessIsEnabled: ").Append(ApiAccessIsEnabled).Append("\n");
+            sb.Append("  AllowAnonymousAccess: ").Append(AllowAnonymousAccess).Append("\n");
+            sb.Append("  StandInKey: ").Append(StandInKey).Append("\n");
+            sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
+            sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append("\n");
+            sb.Append("  HasError: ").Append(HasError).Append("\n");
+            sb.Append("  HttpStatusCode: ").Append(HttpStatusCode).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -463,7 +463,7 @@ namespace CherwellConnector.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as TrebuchetWebApiDataContractsSecurityApiClientSettingResponse);
+            return Equals(input as TrebuchetWebApiDataContractsSecurityApiClientSettingResponse);
         }
 
         /// <summary>
@@ -478,69 +478,69 @@ namespace CherwellConnector.Model
 
             return 
                 (
-                    this.Name == input.Name ||
-                    (this.Name != null &&
-                    this.Name.Equals(input.Name))
+                    Name == input.Name ||
+                    (Name != null &&
+                    Name.Equals(input.Name))
                 ) && 
                 (
-                    this.Description == input.Description ||
-                    (this.Description != null &&
-                    this.Description.Equals(input.Description))
+                    Description == input.Description ||
+                    (Description != null &&
+                    Description.Equals(input.Description))
                 ) && 
                 (
-                    this.Culture == input.Culture ||
-                    (this.Culture != null &&
-                    this.Culture.Equals(input.Culture))
+                    Culture == input.Culture ||
+                    (Culture != null &&
+                    Culture.Equals(input.Culture))
                 ) && 
                 (
-                    this.ClientKey == input.ClientKey ||
-                    (this.ClientKey != null &&
-                    this.ClientKey.Equals(input.ClientKey))
+                    ClientKey == input.ClientKey ||
+                    (ClientKey != null &&
+                    ClientKey.Equals(input.ClientKey))
                 ) && 
                 (
-                    this.TokenLifespanMinutes == input.TokenLifespanMinutes ||
-                    (this.TokenLifespanMinutes != null &&
-                    this.TokenLifespanMinutes.Equals(input.TokenLifespanMinutes))
+                    TokenLifespanMinutes == input.TokenLifespanMinutes ||
+                    (TokenLifespanMinutes != null &&
+                    TokenLifespanMinutes.Equals(input.TokenLifespanMinutes))
                 ) && 
                 (
-                    this.RefreshTokenLifespanMinutes == input.RefreshTokenLifespanMinutes ||
-                    (this.RefreshTokenLifespanMinutes != null &&
-                    this.RefreshTokenLifespanMinutes.Equals(input.RefreshTokenLifespanMinutes))
+                    RefreshTokenLifespanMinutes == input.RefreshTokenLifespanMinutes ||
+                    (RefreshTokenLifespanMinutes != null &&
+                    RefreshTokenLifespanMinutes.Equals(input.RefreshTokenLifespanMinutes))
                 ) && 
                 (
-                    this.ApiAccessIsEnabled == input.ApiAccessIsEnabled ||
-                    (this.ApiAccessIsEnabled != null &&
-                    this.ApiAccessIsEnabled.Equals(input.ApiAccessIsEnabled))
+                    ApiAccessIsEnabled == input.ApiAccessIsEnabled ||
+                    (ApiAccessIsEnabled != null &&
+                    ApiAccessIsEnabled.Equals(input.ApiAccessIsEnabled))
                 ) && 
                 (
-                    this.AllowAnonymousAccess == input.AllowAnonymousAccess ||
-                    (this.AllowAnonymousAccess != null &&
-                    this.AllowAnonymousAccess.Equals(input.AllowAnonymousAccess))
+                    AllowAnonymousAccess == input.AllowAnonymousAccess ||
+                    (AllowAnonymousAccess != null &&
+                    AllowAnonymousAccess.Equals(input.AllowAnonymousAccess))
                 ) && 
                 (
-                    this.StandInKey == input.StandInKey ||
-                    (this.StandInKey != null &&
-                    this.StandInKey.Equals(input.StandInKey))
+                    StandInKey == input.StandInKey ||
+                    (StandInKey != null &&
+                    StandInKey.Equals(input.StandInKey))
                 ) && 
                 (
-                    this.ErrorCode == input.ErrorCode ||
-                    (this.ErrorCode != null &&
-                    this.ErrorCode.Equals(input.ErrorCode))
+                    ErrorCode == input.ErrorCode ||
+                    (ErrorCode != null &&
+                    ErrorCode.Equals(input.ErrorCode))
                 ) && 
                 (
-                    this.ErrorMessage == input.ErrorMessage ||
-                    (this.ErrorMessage != null &&
-                    this.ErrorMessage.Equals(input.ErrorMessage))
+                    ErrorMessage == input.ErrorMessage ||
+                    (ErrorMessage != null &&
+                    ErrorMessage.Equals(input.ErrorMessage))
                 ) && 
                 (
-                    this.HasError == input.HasError ||
-                    (this.HasError != null &&
-                    this.HasError.Equals(input.HasError))
+                    HasError == input.HasError ||
+                    (HasError != null &&
+                    HasError.Equals(input.HasError))
                 ) && 
                 (
-                    this.HttpStatusCode == input.HttpStatusCode ||
-                    (this.HttpStatusCode != null &&
-                    this.HttpStatusCode.Equals(input.HttpStatusCode))
+                    HttpStatusCode == input.HttpStatusCode ||
+                    (HttpStatusCode != null &&
+                    HttpStatusCode.Equals(input.HttpStatusCode))
                 );
         }
 
@@ -552,33 +552,33 @@ namespace CherwellConnector.Model
         {
             unchecked // Overflow is fine, just wrap
             {
-                int hashCode = 41;
-                if (this.Name != null)
-                    hashCode = hashCode * 59 + this.Name.GetHashCode();
-                if (this.Description != null)
-                    hashCode = hashCode * 59 + this.Description.GetHashCode();
-                if (this.Culture != null)
-                    hashCode = hashCode * 59 + this.Culture.GetHashCode();
-                if (this.ClientKey != null)
-                    hashCode = hashCode * 59 + this.ClientKey.GetHashCode();
-                if (this.TokenLifespanMinutes != null)
-                    hashCode = hashCode * 59 + this.TokenLifespanMinutes.GetHashCode();
-                if (this.RefreshTokenLifespanMinutes != null)
-                    hashCode = hashCode * 59 + this.RefreshTokenLifespanMinutes.GetHashCode();
-                if (this.ApiAccessIsEnabled != null)
-                    hashCode = hashCode * 59 + this.ApiAccessIsEnabled.GetHashCode();
-                if (this.AllowAnonymousAccess != null)
-                    hashCode = hashCode * 59 + this.AllowAnonymousAccess.GetHashCode();
-                if (this.StandInKey != null)
-                    hashCode = hashCode * 59 + this.StandInKey.GetHashCode();
-                if (this.ErrorCode != null)
-                    hashCode = hashCode * 59 + this.ErrorCode.GetHashCode();
-                if (this.ErrorMessage != null)
-                    hashCode = hashCode * 59 + this.ErrorMessage.GetHashCode();
-                if (this.HasError != null)
-                    hashCode = hashCode * 59 + this.HasError.GetHashCode();
-                if (this.HttpStatusCode != null)
-                    hashCode = hashCode * 59 + this.HttpStatusCode.GetHashCode();
+                var hashCode = 41;
+                if (Name != null)
+                    hashCode = hashCode * 59 + Name.GetHashCode();
+                if (Description != null)
+                    hashCode = hashCode * 59 + Description.GetHashCode();
+                if (Culture != null)
+                    hashCode = hashCode * 59 + Culture.GetHashCode();
+                if (ClientKey != null)
+                    hashCode = hashCode * 59 + ClientKey.GetHashCode();
+                if (TokenLifespanMinutes != null)
+                    hashCode = hashCode * 59 + TokenLifespanMinutes.GetHashCode();
+                if (RefreshTokenLifespanMinutes != null)
+                    hashCode = hashCode * 59 + RefreshTokenLifespanMinutes.GetHashCode();
+                if (ApiAccessIsEnabled != null)
+                    hashCode = hashCode * 59 + ApiAccessIsEnabled.GetHashCode();
+                if (AllowAnonymousAccess != null)
+                    hashCode = hashCode * 59 + AllowAnonymousAccess.GetHashCode();
+                if (StandInKey != null)
+                    hashCode = hashCode * 59 + StandInKey.GetHashCode();
+                if (ErrorCode != null)
+                    hashCode = hashCode * 59 + ErrorCode.GetHashCode();
+                if (ErrorMessage != null)
+                    hashCode = hashCode * 59 + ErrorMessage.GetHashCode();
+                if (HasError != null)
+                    hashCode = hashCode * 59 + HasError.GetHashCode();
+                if (HttpStatusCode != null)
+                    hashCode = hashCode * 59 + HttpStatusCode.GetHashCode();
                 return hashCode;
             }
         }
@@ -588,7 +588,7 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

@@ -27,12 +27,12 @@ namespace CherwellConnector.Model
         /// <param name="ldapLoginAllowed">ldapLoginAllowed.</param>
         /// <param name="samlLoginAllowed">samlLoginAllowed.</param>
         /// <param name="windowsLoginAllowed">windowsLoginAllowed.</param>
-        public TrebuchetWebApiDataContractsSecurityClientSecuritySettingsResponse(bool? internalLoginAllowed = default(bool?), bool? ldapLoginAllowed = default(bool?), bool? samlLoginAllowed = default(bool?), bool? windowsLoginAllowed = default(bool?))
+        public TrebuchetWebApiDataContractsSecurityClientSecuritySettingsResponse(bool? internalLoginAllowed = default, bool? ldapLoginAllowed = default, bool? samlLoginAllowed = default, bool? windowsLoginAllowed = default)
         {
-            this.InternalLoginAllowed = internalLoginAllowed;
-            this.LdapLoginAllowed = ldapLoginAllowed;
-            this.SamlLoginAllowed = samlLoginAllowed;
-            this.WindowsLoginAllowed = windowsLoginAllowed;
+            InternalLoginAllowed = internalLoginAllowed;
+            LdapLoginAllowed = ldapLoginAllowed;
+            SamlLoginAllowed = samlLoginAllowed;
+            WindowsLoginAllowed = windowsLoginAllowed;
         }
         
         /// <summary>
@@ -67,10 +67,10 @@ namespace CherwellConnector.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrebuchetWebApiDataContractsSecurityClientSecuritySettingsResponse {\n");
-            sb.Append("  InternalLoginAllowed: ").Append(this.InternalLoginAllowed).Append("\n");
-            sb.Append("  LdapLoginAllowed: ").Append(this.LdapLoginAllowed).Append("\n");
-            sb.Append("  SamlLoginAllowed: ").Append(this.SamlLoginAllowed).Append("\n");
-            sb.Append("  WindowsLoginAllowed: ").Append(this.WindowsLoginAllowed).Append("\n");
+            sb.Append("  InternalLoginAllowed: ").Append(InternalLoginAllowed).Append("\n");
+            sb.Append("  LdapLoginAllowed: ").Append(LdapLoginAllowed).Append("\n");
+            sb.Append("  SamlLoginAllowed: ").Append(SamlLoginAllowed).Append("\n");
+            sb.Append("  WindowsLoginAllowed: ").Append(WindowsLoginAllowed).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -91,7 +91,7 @@ namespace CherwellConnector.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as TrebuchetWebApiDataContractsSecurityClientSecuritySettingsResponse);
+            return Equals(input as TrebuchetWebApiDataContractsSecurityClientSecuritySettingsResponse);
         }
 
         /// <summary>
@@ -106,24 +106,24 @@ namespace CherwellConnector.Model
 
             return 
                 (
-                    this.InternalLoginAllowed == input.InternalLoginAllowed ||
-                    (this.InternalLoginAllowed != null &&
-                    this.InternalLoginAllowed.Equals(input.InternalLoginAllowed))
+                    InternalLoginAllowed == input.InternalLoginAllowed ||
+                    (InternalLoginAllowed != null &&
+                    InternalLoginAllowed.Equals(input.InternalLoginAllowed))
                 ) && 
                 (
-                    this.LdapLoginAllowed == input.LdapLoginAllowed ||
-                    (this.LdapLoginAllowed != null &&
-                    this.LdapLoginAllowed.Equals(input.LdapLoginAllowed))
+                    LdapLoginAllowed == input.LdapLoginAllowed ||
+                    (LdapLoginAllowed != null &&
+                    LdapLoginAllowed.Equals(input.LdapLoginAllowed))
                 ) && 
                 (
-                    this.SamlLoginAllowed == input.SamlLoginAllowed ||
-                    (this.SamlLoginAllowed != null &&
-                    this.SamlLoginAllowed.Equals(input.SamlLoginAllowed))
+                    SamlLoginAllowed == input.SamlLoginAllowed ||
+                    (SamlLoginAllowed != null &&
+                    SamlLoginAllowed.Equals(input.SamlLoginAllowed))
                 ) && 
                 (
-                    this.WindowsLoginAllowed == input.WindowsLoginAllowed ||
-                    (this.WindowsLoginAllowed != null &&
-                    this.WindowsLoginAllowed.Equals(input.WindowsLoginAllowed))
+                    WindowsLoginAllowed == input.WindowsLoginAllowed ||
+                    (WindowsLoginAllowed != null &&
+                    WindowsLoginAllowed.Equals(input.WindowsLoginAllowed))
                 );
         }
 
@@ -135,15 +135,15 @@ namespace CherwellConnector.Model
         {
             unchecked // Overflow is fine, just wrap
             {
-                int hashCode = 41;
-                if (this.InternalLoginAllowed != null)
-                    hashCode = hashCode * 59 + this.InternalLoginAllowed.GetHashCode();
-                if (this.LdapLoginAllowed != null)
-                    hashCode = hashCode * 59 + this.LdapLoginAllowed.GetHashCode();
-                if (this.SamlLoginAllowed != null)
-                    hashCode = hashCode * 59 + this.SamlLoginAllowed.GetHashCode();
-                if (this.WindowsLoginAllowed != null)
-                    hashCode = hashCode * 59 + this.WindowsLoginAllowed.GetHashCode();
+                var hashCode = 41;
+                if (InternalLoginAllowed != null)
+                    hashCode = hashCode * 59 + InternalLoginAllowed.GetHashCode();
+                if (LdapLoginAllowed != null)
+                    hashCode = hashCode * 59 + LdapLoginAllowed.GetHashCode();
+                if (SamlLoginAllowed != null)
+                    hashCode = hashCode * 59 + SamlLoginAllowed.GetHashCode();
+                if (WindowsLoginAllowed != null)
+                    hashCode = hashCode * 59 + WindowsLoginAllowed.GetHashCode();
                 return hashCode;
             }
         }
@@ -153,7 +153,7 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

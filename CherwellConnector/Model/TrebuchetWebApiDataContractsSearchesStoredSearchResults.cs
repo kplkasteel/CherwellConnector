@@ -25,9 +25,9 @@ namespace CherwellConnector.Model
         /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsSearchesStoredSearchResults" /> class.
         /// </summary>
         /// <param name="columns">columns.</param>
-        public TrebuchetWebApiDataContractsSearchesStoredSearchResults(List<TrebuchetWebApiDataContractsSearchesColumnSchema> columns = default(List<TrebuchetWebApiDataContractsSearchesColumnSchema>))
+        public TrebuchetWebApiDataContractsSearchesStoredSearchResults(List<TrebuchetWebApiDataContractsSearchesColumnSchema> columns = default)
         {
-            this.Columns = columns;
+            Columns = columns;
         }
         
         /// <summary>
@@ -50,8 +50,8 @@ namespace CherwellConnector.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrebuchetWebApiDataContractsSearchesStoredSearchResults {\n");
-            sb.Append("  Columns: ").Append(this.Columns).Append("\n");
-            sb.Append("  Rows: ").Append(this.Rows).Append("\n");
+            sb.Append("  Columns: ").Append(Columns).Append("\n");
+            sb.Append("  Rows: ").Append(Rows).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -72,7 +72,7 @@ namespace CherwellConnector.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as TrebuchetWebApiDataContractsSearchesStoredSearchResults);
+            return Equals(input as TrebuchetWebApiDataContractsSearchesStoredSearchResults);
         }
 
         /// <summary>
@@ -87,14 +87,14 @@ namespace CherwellConnector.Model
 
             return 
                 (
-                    this.Columns == input.Columns ||
-                    this.Columns != null &&
-                    this.Columns.SequenceEqual(input.Columns)
+                    Columns == input.Columns ||
+                    Columns != null &&
+                    Columns.SequenceEqual(input.Columns)
                 ) && 
                 (
-                    this.Rows == input.Rows ||
-                    this.Rows != null &&
-                    this.Rows.SequenceEqual(input.Rows)
+                    Rows == input.Rows ||
+                    Rows != null &&
+                    Rows.SequenceEqual(input.Rows)
                 );
         }
 
@@ -106,11 +106,11 @@ namespace CherwellConnector.Model
         {
             unchecked // Overflow is fine, just wrap
             {
-                int hashCode = 41;
-                if (this.Columns != null)
-                    hashCode = hashCode * 59 + this.Columns.GetHashCode();
-                if (this.Rows != null)
-                    hashCode = hashCode * 59 + this.Rows.GetHashCode();
+                var hashCode = 41;
+                if (Columns != null)
+                    hashCode = hashCode * 59 + Columns.GetHashCode();
+                if (Rows != null)
+                    hashCode = hashCode * 59 + Rows.GetHashCode();
                 return hashCode;
             }
         }
@@ -120,7 +120,7 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

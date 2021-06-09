@@ -29,14 +29,14 @@ namespace CherwellConnector.Model
         /// <param name="systemDateTime">systemDateTime.</param>
         /// <param name="timeZone">timeZone.</param>
         /// <param name="systemUtcOffset">systemUtcOffset.</param>
-        public TrebuchetWebApiDataContractsCoreServiceInfoResponse(string apiVersion = default(string), string csmCulture = default(string), string csmVersion = default(string), DateTime? systemDateTime = default(DateTime?), Object timeZone = default(Object), string systemUtcOffset = default(string))
+        public TrebuchetWebApiDataContractsCoreServiceInfoResponse(string apiVersion = default, string csmCulture = default, string csmVersion = default, DateTime? systemDateTime = default, Object timeZone = default, string systemUtcOffset = default)
         {
-            this.ApiVersion = apiVersion;
-            this.CsmCulture = csmCulture;
-            this.CsmVersion = csmVersion;
-            this.SystemDateTime = systemDateTime;
-            this.TimeZone = timeZone;
-            this.SystemUtcOffset = systemUtcOffset;
+            ApiVersion = apiVersion;
+            CsmCulture = csmCulture;
+            CsmVersion = csmVersion;
+            SystemDateTime = systemDateTime;
+            TimeZone = timeZone;
+            SystemUtcOffset = systemUtcOffset;
         }
         
         /// <summary>
@@ -83,12 +83,12 @@ namespace CherwellConnector.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrebuchetWebApiDataContractsCoreServiceInfoResponse {\n");
-            sb.Append("  ApiVersion: ").Append(this.ApiVersion).Append("\n");
-            sb.Append("  CsmCulture: ").Append(this.CsmCulture).Append("\n");
-            sb.Append("  CsmVersion: ").Append(this.CsmVersion).Append("\n");
-            sb.Append("  SystemDateTime: ").Append(this.SystemDateTime).Append("\n");
-            sb.Append("  TimeZone: ").Append(this.TimeZone).Append("\n");
-            sb.Append("  SystemUtcOffset: ").Append(this.SystemUtcOffset).Append("\n");
+            sb.Append("  ApiVersion: ").Append(ApiVersion).Append("\n");
+            sb.Append("  CsmCulture: ").Append(CsmCulture).Append("\n");
+            sb.Append("  CsmVersion: ").Append(CsmVersion).Append("\n");
+            sb.Append("  SystemDateTime: ").Append(SystemDateTime).Append("\n");
+            sb.Append("  TimeZone: ").Append(TimeZone).Append("\n");
+            sb.Append("  SystemUtcOffset: ").Append(SystemUtcOffset).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -109,7 +109,7 @@ namespace CherwellConnector.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as TrebuchetWebApiDataContractsCoreServiceInfoResponse);
+            return Equals(input as TrebuchetWebApiDataContractsCoreServiceInfoResponse);
         }
 
         /// <summary>
@@ -124,34 +124,34 @@ namespace CherwellConnector.Model
 
             return 
                 (
-                    this.ApiVersion == input.ApiVersion ||
-                    (this.ApiVersion != null &&
-                    this.ApiVersion.Equals(input.ApiVersion))
+                    ApiVersion == input.ApiVersion ||
+                    (ApiVersion != null &&
+                    ApiVersion.Equals(input.ApiVersion))
                 ) && 
                 (
-                    this.CsmCulture == input.CsmCulture ||
-                    (this.CsmCulture != null &&
-                    this.CsmCulture.Equals(input.CsmCulture))
+                    CsmCulture == input.CsmCulture ||
+                    (CsmCulture != null &&
+                    CsmCulture.Equals(input.CsmCulture))
                 ) && 
                 (
-                    this.CsmVersion == input.CsmVersion ||
-                    (this.CsmVersion != null &&
-                    this.CsmVersion.Equals(input.CsmVersion))
+                    CsmVersion == input.CsmVersion ||
+                    (CsmVersion != null &&
+                    CsmVersion.Equals(input.CsmVersion))
                 ) && 
                 (
-                    this.SystemDateTime == input.SystemDateTime ||
-                    (this.SystemDateTime != null &&
-                    this.SystemDateTime.Equals(input.SystemDateTime))
+                    SystemDateTime == input.SystemDateTime ||
+                    (SystemDateTime != null &&
+                    SystemDateTime.Equals(input.SystemDateTime))
                 ) && 
                 (
-                    this.TimeZone == input.TimeZone ||
-                    (this.TimeZone != null &&
-                    this.TimeZone.Equals(input.TimeZone))
+                    TimeZone == input.TimeZone ||
+                    (TimeZone != null &&
+                    TimeZone.Equals(input.TimeZone))
                 ) && 
                 (
-                    this.SystemUtcOffset == input.SystemUtcOffset ||
-                    (this.SystemUtcOffset != null &&
-                    this.SystemUtcOffset.Equals(input.SystemUtcOffset))
+                    SystemUtcOffset == input.SystemUtcOffset ||
+                    (SystemUtcOffset != null &&
+                    SystemUtcOffset.Equals(input.SystemUtcOffset))
                 );
         }
 
@@ -163,19 +163,19 @@ namespace CherwellConnector.Model
         {
             unchecked // Overflow is fine, just wrap
             {
-                int hashCode = 41;
-                if (this.ApiVersion != null)
-                    hashCode = hashCode * 59 + this.ApiVersion.GetHashCode();
-                if (this.CsmCulture != null)
-                    hashCode = hashCode * 59 + this.CsmCulture.GetHashCode();
-                if (this.CsmVersion != null)
-                    hashCode = hashCode * 59 + this.CsmVersion.GetHashCode();
-                if (this.SystemDateTime != null)
-                    hashCode = hashCode * 59 + this.SystemDateTime.GetHashCode();
-                if (this.TimeZone != null)
-                    hashCode = hashCode * 59 + this.TimeZone.GetHashCode();
-                if (this.SystemUtcOffset != null)
-                    hashCode = hashCode * 59 + this.SystemUtcOffset.GetHashCode();
+                var hashCode = 41;
+                if (ApiVersion != null)
+                    hashCode = hashCode * 59 + ApiVersion.GetHashCode();
+                if (CsmCulture != null)
+                    hashCode = hashCode * 59 + CsmCulture.GetHashCode();
+                if (CsmVersion != null)
+                    hashCode = hashCode * 59 + CsmVersion.GetHashCode();
+                if (SystemDateTime != null)
+                    hashCode = hashCode * 59 + SystemDateTime.GetHashCode();
+                if (TimeZone != null)
+                    hashCode = hashCode * 59 + TimeZone.GetHashCode();
+                if (SystemUtcOffset != null)
+                    hashCode = hashCode * 59 + SystemUtcOffset.GetHashCode();
                 return hashCode;
             }
         }
@@ -185,7 +185,7 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

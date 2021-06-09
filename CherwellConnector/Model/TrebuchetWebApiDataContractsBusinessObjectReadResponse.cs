@@ -329,17 +329,17 @@ namespace CherwellConnector.Model
         /// <param name="errorMessage">errorMessage.</param>
         /// <param name="hasError">hasError.</param>
         /// <param name="httpStatusCode">httpStatusCode.</param>
-        public TrebuchetWebApiDataContractsBusinessObjectReadResponse(string busObId = default(string), string busObPublicId = default(string), string busObRecId = default(string), List<TrebuchetWebApiDataContractsBusinessObjectFieldTemplateItem> fields = default(List<TrebuchetWebApiDataContractsBusinessObjectFieldTemplateItem>), List<TrebuchetWebApiDataContractsCoreLink> links = default(List<TrebuchetWebApiDataContractsCoreLink>), string errorCode = default(string), string errorMessage = default(string), bool? hasError = default(bool?), HttpStatusCodeEnum? httpStatusCode = default(HttpStatusCodeEnum?))
+        public TrebuchetWebApiDataContractsBusinessObjectReadResponse(string busObId = default, string busObPublicId = default, string busObRecId = default, List<FieldTemplateItem> fields = default, List<TrebuchetWebApiDataContractsCoreLink> links = default, string errorCode = default, string errorMessage = default, bool? hasError = default, HttpStatusCodeEnum? httpStatusCode = default)
         {
-            this.BusObId = busObId;
-            this.BusObPublicId = busObPublicId;
-            this.BusObRecId = busObRecId;
-            this.Fields = fields;
-            this.Links = links;
-            this.ErrorCode = errorCode;
-            this.ErrorMessage = errorMessage;
-            this.HasError = hasError;
-            this.HttpStatusCode = httpStatusCode;
+            BusObId = busObId;
+            BusObPublicId = busObPublicId;
+            BusObRecId = busObRecId;
+            Fields = fields;
+            Links = links;
+            ErrorCode = errorCode;
+            ErrorMessage = errorMessage;
+            HasError = hasError;
+            HttpStatusCode = httpStatusCode;
         }
         
         /// <summary>
@@ -364,7 +364,7 @@ namespace CherwellConnector.Model
         /// Gets or Sets Fields
         /// </summary>
         [DataMember(Name="fields", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsBusinessObjectFieldTemplateItem> Fields { get; set; }
+        public List<FieldTemplateItem> Fields { get; set; }
 
         /// <summary>
         /// Gets or Sets Links
@@ -399,15 +399,15 @@ namespace CherwellConnector.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrebuchetWebApiDataContractsBusinessObjectReadResponse {\n");
-            sb.Append("  BusObId: ").Append(this.BusObId).Append("\n");
-            sb.Append("  BusObPublicId: ").Append(this.BusObPublicId).Append("\n");
-            sb.Append("  BusObRecId: ").Append(this.BusObRecId).Append("\n");
-            sb.Append("  Fields: ").Append(this.Fields).Append("\n");
-            sb.Append("  Links: ").Append(this.Links).Append("\n");
-            sb.Append("  ErrorCode: ").Append(this.ErrorCode).Append("\n");
-            sb.Append("  ErrorMessage: ").Append(this.ErrorMessage).Append("\n");
-            sb.Append("  HasError: ").Append(this.HasError).Append("\n");
-            sb.Append("  HttpStatusCode: ").Append(this.HttpStatusCode).Append("\n");
+            sb.Append("  BusObId: ").Append(BusObId).Append("\n");
+            sb.Append("  BusObPublicId: ").Append(BusObPublicId).Append("\n");
+            sb.Append("  BusObRecId: ").Append(BusObRecId).Append("\n");
+            sb.Append("  Fields: ").Append(Fields).Append("\n");
+            sb.Append("  Links: ").Append(Links).Append("\n");
+            sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
+            sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append("\n");
+            sb.Append("  HasError: ").Append(HasError).Append("\n");
+            sb.Append("  HttpStatusCode: ").Append(HttpStatusCode).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -428,7 +428,7 @@ namespace CherwellConnector.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as TrebuchetWebApiDataContractsBusinessObjectReadResponse);
+            return Equals(input as TrebuchetWebApiDataContractsBusinessObjectReadResponse);
         }
 
         /// <summary>
@@ -443,49 +443,49 @@ namespace CherwellConnector.Model
 
             return 
                 (
-                    this.BusObId == input.BusObId ||
-                    (this.BusObId != null &&
-                    this.BusObId.Equals(input.BusObId))
+                    BusObId == input.BusObId ||
+                    (BusObId != null &&
+                    BusObId.Equals(input.BusObId))
                 ) && 
                 (
-                    this.BusObPublicId == input.BusObPublicId ||
-                    (this.BusObPublicId != null &&
-                    this.BusObPublicId.Equals(input.BusObPublicId))
+                    BusObPublicId == input.BusObPublicId ||
+                    (BusObPublicId != null &&
+                    BusObPublicId.Equals(input.BusObPublicId))
                 ) && 
                 (
-                    this.BusObRecId == input.BusObRecId ||
-                    (this.BusObRecId != null &&
-                    this.BusObRecId.Equals(input.BusObRecId))
+                    BusObRecId == input.BusObRecId ||
+                    (BusObRecId != null &&
+                    BusObRecId.Equals(input.BusObRecId))
                 ) && 
                 (
-                    this.Fields == input.Fields ||
-                    this.Fields != null &&
-                    this.Fields.SequenceEqual(input.Fields)
+                    Fields == input.Fields ||
+                    Fields != null &&
+                    Fields.SequenceEqual(input.Fields)
                 ) && 
                 (
-                    this.Links == input.Links ||
-                    this.Links != null &&
-                    this.Links.SequenceEqual(input.Links)
+                    Links == input.Links ||
+                    Links != null &&
+                    Links.SequenceEqual(input.Links)
                 ) && 
                 (
-                    this.ErrorCode == input.ErrorCode ||
-                    (this.ErrorCode != null &&
-                    this.ErrorCode.Equals(input.ErrorCode))
+                    ErrorCode == input.ErrorCode ||
+                    (ErrorCode != null &&
+                    ErrorCode.Equals(input.ErrorCode))
                 ) && 
                 (
-                    this.ErrorMessage == input.ErrorMessage ||
-                    (this.ErrorMessage != null &&
-                    this.ErrorMessage.Equals(input.ErrorMessage))
+                    ErrorMessage == input.ErrorMessage ||
+                    (ErrorMessage != null &&
+                    ErrorMessage.Equals(input.ErrorMessage))
                 ) && 
                 (
-                    this.HasError == input.HasError ||
-                    (this.HasError != null &&
-                    this.HasError.Equals(input.HasError))
+                    HasError == input.HasError ||
+                    (HasError != null &&
+                    HasError.Equals(input.HasError))
                 ) && 
                 (
-                    this.HttpStatusCode == input.HttpStatusCode ||
-                    (this.HttpStatusCode != null &&
-                    this.HttpStatusCode.Equals(input.HttpStatusCode))
+                    HttpStatusCode == input.HttpStatusCode ||
+                    (HttpStatusCode != null &&
+                    HttpStatusCode.Equals(input.HttpStatusCode))
                 );
         }
 
@@ -497,25 +497,25 @@ namespace CherwellConnector.Model
         {
             unchecked // Overflow is fine, just wrap
             {
-                int hashCode = 41;
-                if (this.BusObId != null)
-                    hashCode = hashCode * 59 + this.BusObId.GetHashCode();
-                if (this.BusObPublicId != null)
-                    hashCode = hashCode * 59 + this.BusObPublicId.GetHashCode();
-                if (this.BusObRecId != null)
-                    hashCode = hashCode * 59 + this.BusObRecId.GetHashCode();
-                if (this.Fields != null)
-                    hashCode = hashCode * 59 + this.Fields.GetHashCode();
-                if (this.Links != null)
-                    hashCode = hashCode * 59 + this.Links.GetHashCode();
-                if (this.ErrorCode != null)
-                    hashCode = hashCode * 59 + this.ErrorCode.GetHashCode();
-                if (this.ErrorMessage != null)
-                    hashCode = hashCode * 59 + this.ErrorMessage.GetHashCode();
-                if (this.HasError != null)
-                    hashCode = hashCode * 59 + this.HasError.GetHashCode();
-                if (this.HttpStatusCode != null)
-                    hashCode = hashCode * 59 + this.HttpStatusCode.GetHashCode();
+                var hashCode = 41;
+                if (BusObId != null)
+                    hashCode = hashCode * 59 + BusObId.GetHashCode();
+                if (BusObPublicId != null)
+                    hashCode = hashCode * 59 + BusObPublicId.GetHashCode();
+                if (BusObRecId != null)
+                    hashCode = hashCode * 59 + BusObRecId.GetHashCode();
+                if (Fields != null)
+                    hashCode = hashCode * 59 + Fields.GetHashCode();
+                if (Links != null)
+                    hashCode = hashCode * 59 + Links.GetHashCode();
+                if (ErrorCode != null)
+                    hashCode = hashCode * 59 + ErrorCode.GetHashCode();
+                if (ErrorMessage != null)
+                    hashCode = hashCode * 59 + ErrorMessage.GetHashCode();
+                if (HasError != null)
+                    hashCode = hashCode * 59 + HasError.GetHashCode();
+                if (HttpStatusCode != null)
+                    hashCode = hashCode * 59 + HttpStatusCode.GetHashCode();
                 return hashCode;
             }
         }
@@ -525,7 +525,7 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

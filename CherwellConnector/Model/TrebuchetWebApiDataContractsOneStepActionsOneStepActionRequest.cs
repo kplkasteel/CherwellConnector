@@ -29,13 +29,13 @@ namespace CherwellConnector.Model
         /// <param name="busObRecId">busObRecId.</param>
         /// <param name="oneStepActionStandInKey">oneStepActionStandInKey.</param>
         /// <param name="promptValues">promptValues.</param>
-        public TrebuchetWebApiDataContractsOneStepActionsOneStepActionRequest(bool? acquireLicense = default(bool?), string busObId = default(string), string busObRecId = default(string), string oneStepActionStandInKey = default(string), List<TrebuchetWebApiDataContractsCoreSimplePromptValue> promptValues = default(List<TrebuchetWebApiDataContractsCoreSimplePromptValue>))
+        public TrebuchetWebApiDataContractsOneStepActionsOneStepActionRequest(bool? acquireLicense = default, string busObId = default, string busObRecId = default, string oneStepActionStandInKey = default, List<TrebuchetWebApiDataContractsCoreSimplePromptValue> promptValues = default)
         {
-            this.AcquireLicense = acquireLicense;
-            this.BusObId = busObId;
-            this.BusObRecId = busObRecId;
-            this.OneStepActionStandInKey = oneStepActionStandInKey;
-            this.PromptValues = promptValues;
+            AcquireLicense = acquireLicense;
+            BusObId = busObId;
+            BusObRecId = busObRecId;
+            OneStepActionStandInKey = oneStepActionStandInKey;
+            PromptValues = promptValues;
         }
         
         /// <summary>
@@ -76,11 +76,11 @@ namespace CherwellConnector.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrebuchetWebApiDataContractsOneStepActionsOneStepActionRequest {\n");
-            sb.Append("  AcquireLicense: ").Append(this.AcquireLicense).Append("\n");
-            sb.Append("  BusObId: ").Append(this.BusObId).Append("\n");
-            sb.Append("  BusObRecId: ").Append(this.BusObRecId).Append("\n");
-            sb.Append("  OneStepActionStandInKey: ").Append(this.OneStepActionStandInKey).Append("\n");
-            sb.Append("  PromptValues: ").Append(this.PromptValues).Append("\n");
+            sb.Append("  AcquireLicense: ").Append(AcquireLicense).Append("\n");
+            sb.Append("  BusObId: ").Append(BusObId).Append("\n");
+            sb.Append("  BusObRecId: ").Append(BusObRecId).Append("\n");
+            sb.Append("  OneStepActionStandInKey: ").Append(OneStepActionStandInKey).Append("\n");
+            sb.Append("  PromptValues: ").Append(PromptValues).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -101,7 +101,7 @@ namespace CherwellConnector.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as TrebuchetWebApiDataContractsOneStepActionsOneStepActionRequest);
+            return Equals(input as TrebuchetWebApiDataContractsOneStepActionsOneStepActionRequest);
         }
 
         /// <summary>
@@ -116,29 +116,29 @@ namespace CherwellConnector.Model
 
             return 
                 (
-                    this.AcquireLicense == input.AcquireLicense ||
-                    (this.AcquireLicense != null &&
-                    this.AcquireLicense.Equals(input.AcquireLicense))
+                    AcquireLicense == input.AcquireLicense ||
+                    (AcquireLicense != null &&
+                    AcquireLicense.Equals(input.AcquireLicense))
                 ) && 
                 (
-                    this.BusObId == input.BusObId ||
-                    (this.BusObId != null &&
-                    this.BusObId.Equals(input.BusObId))
+                    BusObId == input.BusObId ||
+                    (BusObId != null &&
+                    BusObId.Equals(input.BusObId))
                 ) && 
                 (
-                    this.BusObRecId == input.BusObRecId ||
-                    (this.BusObRecId != null &&
-                    this.BusObRecId.Equals(input.BusObRecId))
+                    BusObRecId == input.BusObRecId ||
+                    (BusObRecId != null &&
+                    BusObRecId.Equals(input.BusObRecId))
                 ) && 
                 (
-                    this.OneStepActionStandInKey == input.OneStepActionStandInKey ||
-                    (this.OneStepActionStandInKey != null &&
-                    this.OneStepActionStandInKey.Equals(input.OneStepActionStandInKey))
+                    OneStepActionStandInKey == input.OneStepActionStandInKey ||
+                    (OneStepActionStandInKey != null &&
+                    OneStepActionStandInKey.Equals(input.OneStepActionStandInKey))
                 ) && 
                 (
-                    this.PromptValues == input.PromptValues ||
-                    this.PromptValues != null &&
-                    this.PromptValues.SequenceEqual(input.PromptValues)
+                    PromptValues == input.PromptValues ||
+                    PromptValues != null &&
+                    PromptValues.SequenceEqual(input.PromptValues)
                 );
         }
 
@@ -150,17 +150,17 @@ namespace CherwellConnector.Model
         {
             unchecked // Overflow is fine, just wrap
             {
-                int hashCode = 41;
-                if (this.AcquireLicense != null)
-                    hashCode = hashCode * 59 + this.AcquireLicense.GetHashCode();
-                if (this.BusObId != null)
-                    hashCode = hashCode * 59 + this.BusObId.GetHashCode();
-                if (this.BusObRecId != null)
-                    hashCode = hashCode * 59 + this.BusObRecId.GetHashCode();
-                if (this.OneStepActionStandInKey != null)
-                    hashCode = hashCode * 59 + this.OneStepActionStandInKey.GetHashCode();
-                if (this.PromptValues != null)
-                    hashCode = hashCode * 59 + this.PromptValues.GetHashCode();
+                var hashCode = 41;
+                if (AcquireLicense != null)
+                    hashCode = hashCode * 59 + AcquireLicense.GetHashCode();
+                if (BusObId != null)
+                    hashCode = hashCode * 59 + BusObId.GetHashCode();
+                if (BusObRecId != null)
+                    hashCode = hashCode * 59 + BusObRecId.GetHashCode();
+                if (OneStepActionStandInKey != null)
+                    hashCode = hashCode * 59 + OneStepActionStandInKey.GetHashCode();
+                if (PromptValues != null)
+                    hashCode = hashCode * 59 + PromptValues.GetHashCode();
                 return hashCode;
             }
         }
@@ -170,7 +170,7 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

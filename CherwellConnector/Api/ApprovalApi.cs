@@ -156,7 +156,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsApprovalApprovalReadResponse</returns>
-        public TrebuchetWebApiDataContractsApprovalApprovalReadResponse ApprovalGetApprovalByRecIdV1(string approvalRecId, string lang = null, string locale = null)
+        public ApprovalReadResponse ApprovalGetApprovalByRecIdV1(string approvalRecId, string lang = null, string locale = null)
         {
             return ApprovalGetApprovalByRecIdV1WithHttpInfo(approvalRecId, lang, locale).Data;
         }
@@ -169,7 +169,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsApprovalApprovalReadResponse</returns>
-        private ApiResponse<TrebuchetWebApiDataContractsApprovalApprovalReadResponse> ApprovalGetApprovalByRecIdV1WithHttpInfo(string approvalRecId, string lang = null, string locale = null)
+        private ApiResponse<ApprovalReadResponse> ApprovalGetApprovalByRecIdV1WithHttpInfo(string approvalRecId, string lang = null, string locale = null)
         {
             // verify the required parameter 'approvalRecId' is set
             if (approvalRecId == null)
@@ -212,9 +212,9 @@ namespace CherwellConnector.Api
             var exception = ExceptionFactory?.Invoke("ApprovalGetApprovalByRecIdV1", localVarResponse);
             if (exception != null) throw exception;
 
-            return new ApiResponse<TrebuchetWebApiDataContractsApprovalApprovalReadResponse>(localVarStatusCode,
+            return new ApiResponse<ApprovalReadResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value?.ToString()),
-                (TrebuchetWebApiDataContractsApprovalApprovalReadResponse)Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsApprovalApprovalReadResponse)));
+                (ApprovalReadResponse)Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApprovalReadResponse)));
         }
         
 
@@ -229,7 +229,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsApprovalGetApprovalsResponse</returns>
-        public TrebuchetWebApiDataContractsApprovalGetApprovalsResponse ApprovalGetMyApprovalsV1(string lang = null, string locale = null)
+        public ApprovalsResponse ApprovalGetMyApprovalsV1(string lang = null, string locale = null)
         {
             return ApprovalGetMyApprovalsV1WithHttpInfo(lang, locale).Data;
         }
@@ -241,7 +241,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsApprovalGetApprovalsResponse</returns>
-        private ApiResponse<TrebuchetWebApiDataContractsApprovalGetApprovalsResponse> ApprovalGetMyApprovalsV1WithHttpInfo(string lang = null, string locale = null)
+        private ApiResponse<ApprovalsResponse> ApprovalGetMyApprovalsV1WithHttpInfo(string lang = null, string locale = null)
         {
             const string varPath = "/api/V1/getmyapprovals";
             var localVarPathParams = new Dictionary<string, string>();
@@ -278,9 +278,9 @@ namespace CherwellConnector.Api
             var exception = ExceptionFactory?.Invoke("ApprovalGetMyApprovalsV1", localVarResponse);
             if (exception != null) throw exception;
 
-            return new ApiResponse<TrebuchetWebApiDataContractsApprovalGetApprovalsResponse>(localVarStatusCode,
+            return new ApiResponse<ApprovalsResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value?.ToString()),
-                (TrebuchetWebApiDataContractsApprovalGetApprovalsResponse)Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsApprovalGetApprovalsResponse)));
+                (ApprovalsResponse)Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApprovalsResponse)));
         }
 
         #endregion ApprovalGetMyApprovalsV1
@@ -294,7 +294,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsApprovalGetApprovalsResponse</returns>
-        public TrebuchetWebApiDataContractsApprovalGetApprovalsResponse ApprovalGetMyPendingApprovalsV1(string lang = null, string locale = null)
+        public ApprovalsResponse ApprovalGetMyPendingApprovalsV1(string lang = null, string locale = null)
         {
             return ApprovalGetMyPendingApprovalsV1WithHttpInfo(lang, locale).Data;
         }
@@ -306,7 +306,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsApprovalGetApprovalsResponse</returns>
-        private ApiResponse<TrebuchetWebApiDataContractsApprovalGetApprovalsResponse> ApprovalGetMyPendingApprovalsV1WithHttpInfo(string lang = null, string locale = null)
+        private ApiResponse<ApprovalsResponse> ApprovalGetMyPendingApprovalsV1WithHttpInfo(string lang = null, string locale = null)
         {
             const string varPath = "/api/V1/getmypendingapprovals";
             var localVarPathParams = new Dictionary<string, string>();
@@ -344,9 +344,9 @@ namespace CherwellConnector.Api
             var exception = ExceptionFactory?.Invoke("ApprovalGetMyPendingApprovalsV1", localVarResponse);
             if (exception != null) throw exception;
 
-            return new ApiResponse<TrebuchetWebApiDataContractsApprovalGetApprovalsResponse>(localVarStatusCode,
+            return new ApiResponse<ApprovalsResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value?.ToString()),
-                (TrebuchetWebApiDataContractsApprovalGetApprovalsResponse)Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsApprovalGetApprovalsResponse)));
+                (ApprovalsResponse)Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApprovalsResponse)));
         }
 
         #endregion ApprovalGetMyPendingApprovalsV1

@@ -26,11 +26,11 @@ namespace CherwellConnector.Model
         /// <param name="promptDefId">promptDefId.</param>
         /// <param name="promptName">promptName.</param>
         /// <param name="value">value.</param>
-        public TrebuchetWebApiDataContractsCoreSimplePromptValue(string promptDefId = default(string), string promptName = default(string), string value = default(string))
+        public TrebuchetWebApiDataContractsCoreSimplePromptValue(string promptDefId = default, string promptName = default, string value = default)
         {
-            this.PromptDefId = promptDefId;
-            this.PromptName = promptName;
-            this.Value = value;
+            PromptDefId = promptDefId;
+            PromptName = promptName;
+            Value = value;
         }
         
         /// <summary>
@@ -59,9 +59,9 @@ namespace CherwellConnector.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrebuchetWebApiDataContractsCoreSimplePromptValue {\n");
-            sb.Append("  PromptDefId: ").Append(this.PromptDefId).Append("\n");
-            sb.Append("  PromptName: ").Append(this.PromptName).Append("\n");
-            sb.Append("  Value: ").Append(this.Value).Append("\n");
+            sb.Append("  PromptDefId: ").Append(PromptDefId).Append("\n");
+            sb.Append("  PromptName: ").Append(PromptName).Append("\n");
+            sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -82,7 +82,7 @@ namespace CherwellConnector.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as TrebuchetWebApiDataContractsCoreSimplePromptValue);
+            return Equals(input as TrebuchetWebApiDataContractsCoreSimplePromptValue);
         }
 
         /// <summary>
@@ -97,19 +97,19 @@ namespace CherwellConnector.Model
 
             return 
                 (
-                    this.PromptDefId == input.PromptDefId ||
-                    (this.PromptDefId != null &&
-                    this.PromptDefId.Equals(input.PromptDefId))
+                    PromptDefId == input.PromptDefId ||
+                    (PromptDefId != null &&
+                    PromptDefId.Equals(input.PromptDefId))
                 ) && 
                 (
-                    this.PromptName == input.PromptName ||
-                    (this.PromptName != null &&
-                    this.PromptName.Equals(input.PromptName))
+                    PromptName == input.PromptName ||
+                    (PromptName != null &&
+                    PromptName.Equals(input.PromptName))
                 ) && 
                 (
-                    this.Value == input.Value ||
-                    (this.Value != null &&
-                    this.Value.Equals(input.Value))
+                    Value == input.Value ||
+                    (Value != null &&
+                    Value.Equals(input.Value))
                 );
         }
 
@@ -121,13 +121,13 @@ namespace CherwellConnector.Model
         {
             unchecked // Overflow is fine, just wrap
             {
-                int hashCode = 41;
-                if (this.PromptDefId != null)
-                    hashCode = hashCode * 59 + this.PromptDefId.GetHashCode();
-                if (this.PromptName != null)
-                    hashCode = hashCode * 59 + this.PromptName.GetHashCode();
-                if (this.Value != null)
-                    hashCode = hashCode * 59 + this.Value.GetHashCode();
+                var hashCode = 41;
+                if (PromptDefId != null)
+                    hashCode = hashCode * 59 + PromptDefId.GetHashCode();
+                if (PromptName != null)
+                    hashCode = hashCode * 59 + PromptName.GetHashCode();
+                if (Value != null)
+                    hashCode = hashCode * 59 + Value.GetHashCode();
                 return hashCode;
             }
         }
@@ -137,7 +137,7 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

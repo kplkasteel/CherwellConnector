@@ -28,12 +28,12 @@ namespace CherwellConnector.Model
         /// <param name="errorCode">errorCode.</param>
         /// <param name="hasError">hasError.</param>
         /// <param name="users">users.</param>
-        public TrebuchetWebApiDataContractsUsersUserDeleteResponse(string error = default(string), string errorCode = default(string), bool? hasError = default(bool?), List<TrebuchetWebApiDataContractsUsersUser> users = default(List<TrebuchetWebApiDataContractsUsersUser>))
+        public TrebuchetWebApiDataContractsUsersUserDeleteResponse(string error = default, string errorCode = default, bool? hasError = default, List<TrebuchetWebApiDataContractsUsersUser> users = default)
         {
-            this.Error = error;
-            this.ErrorCode = errorCode;
-            this.HasError = hasError;
-            this.Users = users;
+            Error = error;
+            ErrorCode = errorCode;
+            HasError = hasError;
+            Users = users;
         }
         
         /// <summary>
@@ -68,10 +68,10 @@ namespace CherwellConnector.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrebuchetWebApiDataContractsUsersUserDeleteResponse {\n");
-            sb.Append("  Error: ").Append(this.Error).Append("\n");
-            sb.Append("  ErrorCode: ").Append(this.ErrorCode).Append("\n");
-            sb.Append("  HasError: ").Append(this.HasError).Append("\n");
-            sb.Append("  Users: ").Append(this.Users).Append("\n");
+            sb.Append("  Error: ").Append(Error).Append("\n");
+            sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
+            sb.Append("  HasError: ").Append(HasError).Append("\n");
+            sb.Append("  Users: ").Append(Users).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -92,7 +92,7 @@ namespace CherwellConnector.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as TrebuchetWebApiDataContractsUsersUserDeleteResponse);
+            return Equals(input as TrebuchetWebApiDataContractsUsersUserDeleteResponse);
         }
 
         /// <summary>
@@ -107,24 +107,24 @@ namespace CherwellConnector.Model
 
             return 
                 (
-                    this.Error == input.Error ||
-                    (this.Error != null &&
-                    this.Error.Equals(input.Error))
+                    Error == input.Error ||
+                    (Error != null &&
+                    Error.Equals(input.Error))
                 ) && 
                 (
-                    this.ErrorCode == input.ErrorCode ||
-                    (this.ErrorCode != null &&
-                    this.ErrorCode.Equals(input.ErrorCode))
+                    ErrorCode == input.ErrorCode ||
+                    (ErrorCode != null &&
+                    ErrorCode.Equals(input.ErrorCode))
                 ) && 
                 (
-                    this.HasError == input.HasError ||
-                    (this.HasError != null &&
-                    this.HasError.Equals(input.HasError))
+                    HasError == input.HasError ||
+                    (HasError != null &&
+                    HasError.Equals(input.HasError))
                 ) && 
                 (
-                    this.Users == input.Users ||
-                    this.Users != null &&
-                    this.Users.SequenceEqual(input.Users)
+                    Users == input.Users ||
+                    Users != null &&
+                    Users.SequenceEqual(input.Users)
                 );
         }
 
@@ -136,15 +136,15 @@ namespace CherwellConnector.Model
         {
             unchecked // Overflow is fine, just wrap
             {
-                int hashCode = 41;
-                if (this.Error != null)
-                    hashCode = hashCode * 59 + this.Error.GetHashCode();
-                if (this.ErrorCode != null)
-                    hashCode = hashCode * 59 + this.ErrorCode.GetHashCode();
-                if (this.HasError != null)
-                    hashCode = hashCode * 59 + this.HasError.GetHashCode();
-                if (this.Users != null)
-                    hashCode = hashCode * 59 + this.Users.GetHashCode();
+                var hashCode = 41;
+                if (Error != null)
+                    hashCode = hashCode * 59 + Error.GetHashCode();
+                if (ErrorCode != null)
+                    hashCode = hashCode * 59 + ErrorCode.GetHashCode();
+                if (HasError != null)
+                    hashCode = hashCode * 59 + HasError.GetHashCode();
+                if (Users != null)
+                    hashCode = hashCode * 59 + Users.GetHashCode();
                 return hashCode;
             }
         }
@@ -154,7 +154,7 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

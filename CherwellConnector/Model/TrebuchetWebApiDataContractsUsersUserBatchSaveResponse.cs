@@ -25,9 +25,9 @@ namespace CherwellConnector.Model
         /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsUsersUserBatchSaveResponse" /> class.
         /// </summary>
         /// <param name="responses">responses.</param>
-        public TrebuchetWebApiDataContractsUsersUserBatchSaveResponse(List<TrebuchetWebApiDataContractsUsersUserSaveResponse> responses = default(List<TrebuchetWebApiDataContractsUsersUserSaveResponse>))
+        public TrebuchetWebApiDataContractsUsersUserBatchSaveResponse(List<TrebuchetWebApiDataContractsUsersUserSaveResponse> responses = default)
         {
-            this.Responses = responses;
+            Responses = responses;
         }
         
         /// <summary>
@@ -44,7 +44,7 @@ namespace CherwellConnector.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrebuchetWebApiDataContractsUsersUserBatchSaveResponse {\n");
-            sb.Append("  Responses: ").Append(this.Responses).Append("\n");
+            sb.Append("  Responses: ").Append(Responses).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -65,7 +65,7 @@ namespace CherwellConnector.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as TrebuchetWebApiDataContractsUsersUserBatchSaveResponse);
+            return Equals(input as TrebuchetWebApiDataContractsUsersUserBatchSaveResponse);
         }
 
         /// <summary>
@@ -80,9 +80,9 @@ namespace CherwellConnector.Model
 
             return 
                 (
-                    this.Responses == input.Responses ||
-                    this.Responses != null &&
-                    this.Responses.SequenceEqual(input.Responses)
+                    Responses == input.Responses ||
+                    Responses != null &&
+                    Responses.SequenceEqual(input.Responses)
                 );
         }
 
@@ -94,9 +94,9 @@ namespace CherwellConnector.Model
         {
             unchecked // Overflow is fine, just wrap
             {
-                int hashCode = 41;
-                if (this.Responses != null)
-                    hashCode = hashCode * 59 + this.Responses.GetHashCode();
+                var hashCode = 41;
+                if (Responses != null)
+                    hashCode = hashCode * 59 + Responses.GetHashCode();
                 return hashCode;
             }
         }
@@ -106,7 +106,7 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

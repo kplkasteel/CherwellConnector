@@ -25,10 +25,10 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="securityGroupName">securityGroupName.</param>
         /// <param name="sourceSecurityGroupNameOrId">sourceSecurityGroupNameOrId.</param>
-        public TrebuchetWebApiDataContractsSecurityCloneSecurityGroupRequest(string securityGroupName = default(string), string sourceSecurityGroupNameOrId = default(string))
+        public TrebuchetWebApiDataContractsSecurityCloneSecurityGroupRequest(string securityGroupName = default, string sourceSecurityGroupNameOrId = default)
         {
-            this.SecurityGroupName = securityGroupName;
-            this.SourceSecurityGroupNameOrId = sourceSecurityGroupNameOrId;
+            SecurityGroupName = securityGroupName;
+            SourceSecurityGroupNameOrId = sourceSecurityGroupNameOrId;
         }
         
         /// <summary>
@@ -51,8 +51,8 @@ namespace CherwellConnector.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrebuchetWebApiDataContractsSecurityCloneSecurityGroupRequest {\n");
-            sb.Append("  SecurityGroupName: ").Append(this.SecurityGroupName).Append("\n");
-            sb.Append("  SourceSecurityGroupNameOrId: ").Append(this.SourceSecurityGroupNameOrId).Append("\n");
+            sb.Append("  SecurityGroupName: ").Append(SecurityGroupName).Append("\n");
+            sb.Append("  SourceSecurityGroupNameOrId: ").Append(SourceSecurityGroupNameOrId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -73,7 +73,7 @@ namespace CherwellConnector.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as TrebuchetWebApiDataContractsSecurityCloneSecurityGroupRequest);
+            return Equals(input as TrebuchetWebApiDataContractsSecurityCloneSecurityGroupRequest);
         }
 
         /// <summary>
@@ -88,14 +88,14 @@ namespace CherwellConnector.Model
 
             return 
                 (
-                    this.SecurityGroupName == input.SecurityGroupName ||
-                    (this.SecurityGroupName != null &&
-                    this.SecurityGroupName.Equals(input.SecurityGroupName))
+                    SecurityGroupName == input.SecurityGroupName ||
+                    (SecurityGroupName != null &&
+                    SecurityGroupName.Equals(input.SecurityGroupName))
                 ) && 
                 (
-                    this.SourceSecurityGroupNameOrId == input.SourceSecurityGroupNameOrId ||
-                    (this.SourceSecurityGroupNameOrId != null &&
-                    this.SourceSecurityGroupNameOrId.Equals(input.SourceSecurityGroupNameOrId))
+                    SourceSecurityGroupNameOrId == input.SourceSecurityGroupNameOrId ||
+                    (SourceSecurityGroupNameOrId != null &&
+                    SourceSecurityGroupNameOrId.Equals(input.SourceSecurityGroupNameOrId))
                 );
         }
 
@@ -107,11 +107,11 @@ namespace CherwellConnector.Model
         {
             unchecked // Overflow is fine, just wrap
             {
-                int hashCode = 41;
-                if (this.SecurityGroupName != null)
-                    hashCode = hashCode * 59 + this.SecurityGroupName.GetHashCode();
-                if (this.SourceSecurityGroupNameOrId != null)
-                    hashCode = hashCode * 59 + this.SourceSecurityGroupNameOrId.GetHashCode();
+                var hashCode = 41;
+                if (SecurityGroupName != null)
+                    hashCode = hashCode * 59 + SecurityGroupName.GetHashCode();
+                if (SourceSecurityGroupNameOrId != null)
+                    hashCode = hashCode * 59 + SourceSecurityGroupNameOrId.GetHashCode();
                 return hashCode;
             }
         }
@@ -121,7 +121,7 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

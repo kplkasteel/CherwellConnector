@@ -25,9 +25,9 @@ namespace CherwellConnector.Model
         /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsSecuritySecurityGroupResponse" /> class.
         /// </summary>
         /// <param name="securityGroups">securityGroups.</param>
-        public TrebuchetWebApiDataContractsSecuritySecurityGroupResponse(List<TrebuchetWebApiDataContractsSecuritySecurityGroup> securityGroups = default(List<TrebuchetWebApiDataContractsSecuritySecurityGroup>))
+        public TrebuchetWebApiDataContractsSecuritySecurityGroupResponse(List<TrebuchetWebApiDataContractsSecuritySecurityGroup> securityGroups = default)
         {
-            this.SecurityGroups = securityGroups;
+            SecurityGroups = securityGroups;
         }
         
         /// <summary>
@@ -44,7 +44,7 @@ namespace CherwellConnector.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrebuchetWebApiDataContractsSecuritySecurityGroupResponse {\n");
-            sb.Append("  SecurityGroups: ").Append(this.SecurityGroups).Append("\n");
+            sb.Append("  SecurityGroups: ").Append(SecurityGroups).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -65,7 +65,7 @@ namespace CherwellConnector.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as TrebuchetWebApiDataContractsSecuritySecurityGroupResponse);
+            return Equals(input as TrebuchetWebApiDataContractsSecuritySecurityGroupResponse);
         }
 
         /// <summary>
@@ -80,9 +80,9 @@ namespace CherwellConnector.Model
 
             return 
                 (
-                    this.SecurityGroups == input.SecurityGroups ||
-                    this.SecurityGroups != null &&
-                    this.SecurityGroups.SequenceEqual(input.SecurityGroups)
+                    SecurityGroups == input.SecurityGroups ||
+                    SecurityGroups != null &&
+                    SecurityGroups.SequenceEqual(input.SecurityGroups)
                 );
         }
 
@@ -94,9 +94,9 @@ namespace CherwellConnector.Model
         {
             unchecked // Overflow is fine, just wrap
             {
-                int hashCode = 41;
-                if (this.SecurityGroups != null)
-                    hashCode = hashCode * 59 + this.SecurityGroups.GetHashCode();
+                var hashCode = 41;
+                if (SecurityGroups != null)
+                    hashCode = hashCode * 59 + SecurityGroups.GetHashCode();
                 return hashCode;
             }
         }
@@ -106,7 +106,7 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

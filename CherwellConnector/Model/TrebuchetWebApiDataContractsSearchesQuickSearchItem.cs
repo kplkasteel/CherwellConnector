@@ -289,25 +289,25 @@ namespace CherwellConnector.Model
         /// <param name="sortByFields">sortByFields.</param>
         /// <param name="sortByOption">sortByOption.</param>
         /// <param name="watermarkText">watermarkText.</param>
-        public TrebuchetWebApiDataContractsSearchesQuickSearchItem(bool? ascending = default(bool?), List<TrebuchetWebApiDataContractsSearchesChangedLimit> changedLimits = default(List<TrebuchetWebApiDataContractsSearchesChangedLimit>), ChangedOptionEnum? changedOption = default(ChangedOptionEnum?), string displayName = default(string), string galleryImage = default(string), bool? hasAnyOptions = default(bool?), NonFinalStateOptionEnum? nonFinalStateOption = default(NonFinalStateOptionEnum?), SearchAnyWordsOptionEnum? searchAnyWordsOption = default(SearchAnyWordsOptionEnum?), SearchAttachmentsOptionEnum? searchAttachmentsOption = default(SearchAttachmentsOptionEnum?), SearchRelatedOptionEnum? searchRelatedOption = default(SearchRelatedOptionEnum?), string searchTargetId = default(string), SearchTargetTypeEnum? searchTargetType = default(SearchTargetTypeEnum?), TrebuchetWebApiDataContractsSearchesChangedLimit selectedChangedLimit = default(TrebuchetWebApiDataContractsSearchesChangedLimit), string selectedSortByFieldId = default(string), Dictionary<string, string> sortByFields = default(Dictionary<string, string>), SortByOptionEnum? sortByOption = default(SortByOptionEnum?), string watermarkText = default(string))
+        public TrebuchetWebApiDataContractsSearchesQuickSearchItem(bool? ascending = default, List<TrebuchetWebApiDataContractsSearchesChangedLimit> changedLimits = default, ChangedOptionEnum? changedOption = default, string displayName = default, string galleryImage = default, bool? hasAnyOptions = default, NonFinalStateOptionEnum? nonFinalStateOption = default, SearchAnyWordsOptionEnum? searchAnyWordsOption = default, SearchAttachmentsOptionEnum? searchAttachmentsOption = default, SearchRelatedOptionEnum? searchRelatedOption = default, string searchTargetId = default, SearchTargetTypeEnum? searchTargetType = default, TrebuchetWebApiDataContractsSearchesChangedLimit selectedChangedLimit = default, string selectedSortByFieldId = default, Dictionary<string, string> sortByFields = default, SortByOptionEnum? sortByOption = default, string watermarkText = default)
         {
-            this.Ascending = ascending;
-            this.ChangedLimits = changedLimits;
-            this.ChangedOption = changedOption;
-            this.DisplayName = displayName;
-            this.GalleryImage = galleryImage;
-            this.HasAnyOptions = hasAnyOptions;
-            this.NonFinalStateOption = nonFinalStateOption;
-            this.SearchAnyWordsOption = searchAnyWordsOption;
-            this.SearchAttachmentsOption = searchAttachmentsOption;
-            this.SearchRelatedOption = searchRelatedOption;
-            this.SearchTargetId = searchTargetId;
-            this.SearchTargetType = searchTargetType;
-            this.SelectedChangedLimit = selectedChangedLimit;
-            this.SelectedSortByFieldId = selectedSortByFieldId;
-            this.SortByFields = sortByFields;
-            this.SortByOption = sortByOption;
-            this.WatermarkText = watermarkText;
+            Ascending = ascending;
+            ChangedLimits = changedLimits;
+            ChangedOption = changedOption;
+            DisplayName = displayName;
+            GalleryImage = galleryImage;
+            HasAnyOptions = hasAnyOptions;
+            NonFinalStateOption = nonFinalStateOption;
+            SearchAnyWordsOption = searchAnyWordsOption;
+            SearchAttachmentsOption = searchAttachmentsOption;
+            SearchRelatedOption = searchRelatedOption;
+            SearchTargetId = searchTargetId;
+            SearchTargetType = searchTargetType;
+            SelectedChangedLimit = selectedChangedLimit;
+            SelectedSortByFieldId = selectedSortByFieldId;
+            SortByFields = sortByFields;
+            SortByOption = sortByOption;
+            WatermarkText = watermarkText;
         }
         
         /// <summary>
@@ -385,23 +385,23 @@ namespace CherwellConnector.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrebuchetWebApiDataContractsSearchesQuickSearchItem {\n");
-            sb.Append("  Ascending: ").Append(this.Ascending).Append("\n");
-            sb.Append("  ChangedLimits: ").Append(this.ChangedLimits).Append("\n");
-            sb.Append("  ChangedOption: ").Append(this.ChangedOption).Append("\n");
-            sb.Append("  DisplayName: ").Append(this.DisplayName).Append("\n");
-            sb.Append("  GalleryImage: ").Append(this.GalleryImage).Append("\n");
-            sb.Append("  HasAnyOptions: ").Append(this.HasAnyOptions).Append("\n");
-            sb.Append("  NonFinalStateOption: ").Append(this.NonFinalStateOption).Append("\n");
-            sb.Append("  SearchAnyWordsOption: ").Append(this.SearchAnyWordsOption).Append("\n");
-            sb.Append("  SearchAttachmentsOption: ").Append(this.SearchAttachmentsOption).Append("\n");
-            sb.Append("  SearchRelatedOption: ").Append(this.SearchRelatedOption).Append("\n");
-            sb.Append("  SearchTargetId: ").Append(this.SearchTargetId).Append("\n");
-            sb.Append("  SearchTargetType: ").Append(this.SearchTargetType).Append("\n");
-            sb.Append("  SelectedChangedLimit: ").Append(this.SelectedChangedLimit).Append("\n");
-            sb.Append("  SelectedSortByFieldId: ").Append(this.SelectedSortByFieldId).Append("\n");
-            sb.Append("  SortByFields: ").Append(this.SortByFields).Append("\n");
-            sb.Append("  SortByOption: ").Append(this.SortByOption).Append("\n");
-            sb.Append("  WatermarkText: ").Append(this.WatermarkText).Append("\n");
+            sb.Append("  Ascending: ").Append(Ascending).Append("\n");
+            sb.Append("  ChangedLimits: ").Append(ChangedLimits).Append("\n");
+            sb.Append("  ChangedOption: ").Append(ChangedOption).Append("\n");
+            sb.Append("  DisplayName: ").Append(DisplayName).Append("\n");
+            sb.Append("  GalleryImage: ").Append(GalleryImage).Append("\n");
+            sb.Append("  HasAnyOptions: ").Append(HasAnyOptions).Append("\n");
+            sb.Append("  NonFinalStateOption: ").Append(NonFinalStateOption).Append("\n");
+            sb.Append("  SearchAnyWordsOption: ").Append(SearchAnyWordsOption).Append("\n");
+            sb.Append("  SearchAttachmentsOption: ").Append(SearchAttachmentsOption).Append("\n");
+            sb.Append("  SearchRelatedOption: ").Append(SearchRelatedOption).Append("\n");
+            sb.Append("  SearchTargetId: ").Append(SearchTargetId).Append("\n");
+            sb.Append("  SearchTargetType: ").Append(SearchTargetType).Append("\n");
+            sb.Append("  SelectedChangedLimit: ").Append(SelectedChangedLimit).Append("\n");
+            sb.Append("  SelectedSortByFieldId: ").Append(SelectedSortByFieldId).Append("\n");
+            sb.Append("  SortByFields: ").Append(SortByFields).Append("\n");
+            sb.Append("  SortByOption: ").Append(SortByOption).Append("\n");
+            sb.Append("  WatermarkText: ").Append(WatermarkText).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -422,7 +422,7 @@ namespace CherwellConnector.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as TrebuchetWebApiDataContractsSearchesQuickSearchItem);
+            return Equals(input as TrebuchetWebApiDataContractsSearchesQuickSearchItem);
         }
 
         /// <summary>
@@ -437,89 +437,89 @@ namespace CherwellConnector.Model
 
             return 
                 (
-                    this.Ascending == input.Ascending ||
-                    (this.Ascending != null &&
-                    this.Ascending.Equals(input.Ascending))
+                    Ascending == input.Ascending ||
+                    (Ascending != null &&
+                    Ascending.Equals(input.Ascending))
                 ) && 
                 (
-                    this.ChangedLimits == input.ChangedLimits ||
-                    this.ChangedLimits != null &&
-                    this.ChangedLimits.SequenceEqual(input.ChangedLimits)
+                    ChangedLimits == input.ChangedLimits ||
+                    ChangedLimits != null &&
+                    ChangedLimits.SequenceEqual(input.ChangedLimits)
                 ) && 
                 (
-                    this.ChangedOption == input.ChangedOption ||
-                    (this.ChangedOption != null &&
-                    this.ChangedOption.Equals(input.ChangedOption))
+                    ChangedOption == input.ChangedOption ||
+                    (ChangedOption != null &&
+                    ChangedOption.Equals(input.ChangedOption))
                 ) && 
                 (
-                    this.DisplayName == input.DisplayName ||
-                    (this.DisplayName != null &&
-                    this.DisplayName.Equals(input.DisplayName))
+                    DisplayName == input.DisplayName ||
+                    (DisplayName != null &&
+                    DisplayName.Equals(input.DisplayName))
                 ) && 
                 (
-                    this.GalleryImage == input.GalleryImage ||
-                    (this.GalleryImage != null &&
-                    this.GalleryImage.Equals(input.GalleryImage))
+                    GalleryImage == input.GalleryImage ||
+                    (GalleryImage != null &&
+                    GalleryImage.Equals(input.GalleryImage))
                 ) && 
                 (
-                    this.HasAnyOptions == input.HasAnyOptions ||
-                    (this.HasAnyOptions != null &&
-                    this.HasAnyOptions.Equals(input.HasAnyOptions))
+                    HasAnyOptions == input.HasAnyOptions ||
+                    (HasAnyOptions != null &&
+                    HasAnyOptions.Equals(input.HasAnyOptions))
                 ) && 
                 (
-                    this.NonFinalStateOption == input.NonFinalStateOption ||
-                    (this.NonFinalStateOption != null &&
-                    this.NonFinalStateOption.Equals(input.NonFinalStateOption))
+                    NonFinalStateOption == input.NonFinalStateOption ||
+                    (NonFinalStateOption != null &&
+                    NonFinalStateOption.Equals(input.NonFinalStateOption))
                 ) && 
                 (
-                    this.SearchAnyWordsOption == input.SearchAnyWordsOption ||
-                    (this.SearchAnyWordsOption != null &&
-                    this.SearchAnyWordsOption.Equals(input.SearchAnyWordsOption))
+                    SearchAnyWordsOption == input.SearchAnyWordsOption ||
+                    (SearchAnyWordsOption != null &&
+                    SearchAnyWordsOption.Equals(input.SearchAnyWordsOption))
                 ) && 
                 (
-                    this.SearchAttachmentsOption == input.SearchAttachmentsOption ||
-                    (this.SearchAttachmentsOption != null &&
-                    this.SearchAttachmentsOption.Equals(input.SearchAttachmentsOption))
+                    SearchAttachmentsOption == input.SearchAttachmentsOption ||
+                    (SearchAttachmentsOption != null &&
+                    SearchAttachmentsOption.Equals(input.SearchAttachmentsOption))
                 ) && 
                 (
-                    this.SearchRelatedOption == input.SearchRelatedOption ||
-                    (this.SearchRelatedOption != null &&
-                    this.SearchRelatedOption.Equals(input.SearchRelatedOption))
+                    SearchRelatedOption == input.SearchRelatedOption ||
+                    (SearchRelatedOption != null &&
+                    SearchRelatedOption.Equals(input.SearchRelatedOption))
                 ) && 
                 (
-                    this.SearchTargetId == input.SearchTargetId ||
-                    (this.SearchTargetId != null &&
-                    this.SearchTargetId.Equals(input.SearchTargetId))
+                    SearchTargetId == input.SearchTargetId ||
+                    (SearchTargetId != null &&
+                    SearchTargetId.Equals(input.SearchTargetId))
                 ) && 
                 (
-                    this.SearchTargetType == input.SearchTargetType ||
-                    (this.SearchTargetType != null &&
-                    this.SearchTargetType.Equals(input.SearchTargetType))
+                    SearchTargetType == input.SearchTargetType ||
+                    (SearchTargetType != null &&
+                    SearchTargetType.Equals(input.SearchTargetType))
                 ) && 
                 (
-                    this.SelectedChangedLimit == input.SelectedChangedLimit ||
-                    (this.SelectedChangedLimit != null &&
-                    this.SelectedChangedLimit.Equals(input.SelectedChangedLimit))
+                    SelectedChangedLimit == input.SelectedChangedLimit ||
+                    (SelectedChangedLimit != null &&
+                    SelectedChangedLimit.Equals(input.SelectedChangedLimit))
                 ) && 
                 (
-                    this.SelectedSortByFieldId == input.SelectedSortByFieldId ||
-                    (this.SelectedSortByFieldId != null &&
-                    this.SelectedSortByFieldId.Equals(input.SelectedSortByFieldId))
+                    SelectedSortByFieldId == input.SelectedSortByFieldId ||
+                    (SelectedSortByFieldId != null &&
+                    SelectedSortByFieldId.Equals(input.SelectedSortByFieldId))
                 ) && 
                 (
-                    this.SortByFields == input.SortByFields ||
-                    this.SortByFields != null &&
-                    this.SortByFields.SequenceEqual(input.SortByFields)
+                    SortByFields == input.SortByFields ||
+                    SortByFields != null &&
+                    SortByFields.SequenceEqual(input.SortByFields)
                 ) && 
                 (
-                    this.SortByOption == input.SortByOption ||
-                    (this.SortByOption != null &&
-                    this.SortByOption.Equals(input.SortByOption))
+                    SortByOption == input.SortByOption ||
+                    (SortByOption != null &&
+                    SortByOption.Equals(input.SortByOption))
                 ) && 
                 (
-                    this.WatermarkText == input.WatermarkText ||
-                    (this.WatermarkText != null &&
-                    this.WatermarkText.Equals(input.WatermarkText))
+                    WatermarkText == input.WatermarkText ||
+                    (WatermarkText != null &&
+                    WatermarkText.Equals(input.WatermarkText))
                 );
         }
 
@@ -531,41 +531,41 @@ namespace CherwellConnector.Model
         {
             unchecked // Overflow is fine, just wrap
             {
-                int hashCode = 41;
-                if (this.Ascending != null)
-                    hashCode = hashCode * 59 + this.Ascending.GetHashCode();
-                if (this.ChangedLimits != null)
-                    hashCode = hashCode * 59 + this.ChangedLimits.GetHashCode();
-                if (this.ChangedOption != null)
-                    hashCode = hashCode * 59 + this.ChangedOption.GetHashCode();
-                if (this.DisplayName != null)
-                    hashCode = hashCode * 59 + this.DisplayName.GetHashCode();
-                if (this.GalleryImage != null)
-                    hashCode = hashCode * 59 + this.GalleryImage.GetHashCode();
-                if (this.HasAnyOptions != null)
-                    hashCode = hashCode * 59 + this.HasAnyOptions.GetHashCode();
-                if (this.NonFinalStateOption != null)
-                    hashCode = hashCode * 59 + this.NonFinalStateOption.GetHashCode();
-                if (this.SearchAnyWordsOption != null)
-                    hashCode = hashCode * 59 + this.SearchAnyWordsOption.GetHashCode();
-                if (this.SearchAttachmentsOption != null)
-                    hashCode = hashCode * 59 + this.SearchAttachmentsOption.GetHashCode();
-                if (this.SearchRelatedOption != null)
-                    hashCode = hashCode * 59 + this.SearchRelatedOption.GetHashCode();
-                if (this.SearchTargetId != null)
-                    hashCode = hashCode * 59 + this.SearchTargetId.GetHashCode();
-                if (this.SearchTargetType != null)
-                    hashCode = hashCode * 59 + this.SearchTargetType.GetHashCode();
-                if (this.SelectedChangedLimit != null)
-                    hashCode = hashCode * 59 + this.SelectedChangedLimit.GetHashCode();
-                if (this.SelectedSortByFieldId != null)
-                    hashCode = hashCode * 59 + this.SelectedSortByFieldId.GetHashCode();
-                if (this.SortByFields != null)
-                    hashCode = hashCode * 59 + this.SortByFields.GetHashCode();
-                if (this.SortByOption != null)
-                    hashCode = hashCode * 59 + this.SortByOption.GetHashCode();
-                if (this.WatermarkText != null)
-                    hashCode = hashCode * 59 + this.WatermarkText.GetHashCode();
+                var hashCode = 41;
+                if (Ascending != null)
+                    hashCode = hashCode * 59 + Ascending.GetHashCode();
+                if (ChangedLimits != null)
+                    hashCode = hashCode * 59 + ChangedLimits.GetHashCode();
+                if (ChangedOption != null)
+                    hashCode = hashCode * 59 + ChangedOption.GetHashCode();
+                if (DisplayName != null)
+                    hashCode = hashCode * 59 + DisplayName.GetHashCode();
+                if (GalleryImage != null)
+                    hashCode = hashCode * 59 + GalleryImage.GetHashCode();
+                if (HasAnyOptions != null)
+                    hashCode = hashCode * 59 + HasAnyOptions.GetHashCode();
+                if (NonFinalStateOption != null)
+                    hashCode = hashCode * 59 + NonFinalStateOption.GetHashCode();
+                if (SearchAnyWordsOption != null)
+                    hashCode = hashCode * 59 + SearchAnyWordsOption.GetHashCode();
+                if (SearchAttachmentsOption != null)
+                    hashCode = hashCode * 59 + SearchAttachmentsOption.GetHashCode();
+                if (SearchRelatedOption != null)
+                    hashCode = hashCode * 59 + SearchRelatedOption.GetHashCode();
+                if (SearchTargetId != null)
+                    hashCode = hashCode * 59 + SearchTargetId.GetHashCode();
+                if (SearchTargetType != null)
+                    hashCode = hashCode * 59 + SearchTargetType.GetHashCode();
+                if (SelectedChangedLimit != null)
+                    hashCode = hashCode * 59 + SelectedChangedLimit.GetHashCode();
+                if (SelectedSortByFieldId != null)
+                    hashCode = hashCode * 59 + SelectedSortByFieldId.GetHashCode();
+                if (SortByFields != null)
+                    hashCode = hashCode * 59 + SortByFields.GetHashCode();
+                if (SortByOption != null)
+                    hashCode = hashCode * 59 + SortByOption.GetHashCode();
+                if (WatermarkText != null)
+                    hashCode = hashCode * 59 + WatermarkText.GetHashCode();
                 return hashCode;
             }
         }
@@ -575,7 +575,7 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

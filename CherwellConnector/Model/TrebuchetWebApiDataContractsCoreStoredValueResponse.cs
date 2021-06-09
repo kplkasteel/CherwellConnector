@@ -399,21 +399,21 @@ namespace CherwellConnector.Model
         /// <param name="errorMessage">errorMessage.</param>
         /// <param name="hasError">hasError.</param>
         /// <param name="httpStatusCode">httpStatusCode.</param>
-        public TrebuchetWebApiDataContractsCoreStoredValueResponse(string description = default(string), string folder = default(string), string id = default(string), string name = default(string), string scope = default(string), string scopeOwner = default(string), string standInKey = default(string), StoredValueTypeEnum? storedValueType = default(StoredValueTypeEnum?), string value = default(string), string errorCode = default(string), string errorMessage = default(string), bool? hasError = default(bool?), HttpStatusCodeEnum? httpStatusCode = default(HttpStatusCodeEnum?))
+        public TrebuchetWebApiDataContractsCoreStoredValueResponse(string description = default, string folder = default, string id = default, string name = default, string scope = default, string scopeOwner = default, string standInKey = default, StoredValueTypeEnum? storedValueType = default, string value = default, string errorCode = default, string errorMessage = default, bool? hasError = default, HttpStatusCodeEnum? httpStatusCode = default)
         {
-            this.Description = description;
-            this.Folder = folder;
-            this.Id = id;
-            this.Name = name;
-            this.Scope = scope;
-            this.ScopeOwner = scopeOwner;
-            this.StandInKey = standInKey;
-            this.StoredValueType = storedValueType;
-            this.Value = value;
-            this.ErrorCode = errorCode;
-            this.ErrorMessage = errorMessage;
-            this.HasError = hasError;
-            this.HttpStatusCode = httpStatusCode;
+            Description = description;
+            Folder = folder;
+            Id = id;
+            Name = name;
+            Scope = scope;
+            ScopeOwner = scopeOwner;
+            StandInKey = standInKey;
+            StoredValueType = storedValueType;
+            Value = value;
+            ErrorCode = errorCode;
+            ErrorMessage = errorMessage;
+            HasError = hasError;
+            HttpStatusCode = httpStatusCode;
         }
         
         /// <summary>
@@ -492,19 +492,19 @@ namespace CherwellConnector.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrebuchetWebApiDataContractsCoreStoredValueResponse {\n");
-            sb.Append("  Description: ").Append(this.Description).Append("\n");
-            sb.Append("  Folder: ").Append(this.Folder).Append("\n");
-            sb.Append("  Id: ").Append(this.Id).Append("\n");
-            sb.Append("  Name: ").Append(this.Name).Append("\n");
-            sb.Append("  Scope: ").Append(this.Scope).Append("\n");
-            sb.Append("  ScopeOwner: ").Append(this.ScopeOwner).Append("\n");
-            sb.Append("  StandInKey: ").Append(this.StandInKey).Append("\n");
-            sb.Append("  StoredValueType: ").Append(this.StoredValueType).Append("\n");
-            sb.Append("  Value: ").Append(this.Value).Append("\n");
-            sb.Append("  ErrorCode: ").Append(this.ErrorCode).Append("\n");
-            sb.Append("  ErrorMessage: ").Append(this.ErrorMessage).Append("\n");
-            sb.Append("  HasError: ").Append(this.HasError).Append("\n");
-            sb.Append("  HttpStatusCode: ").Append(this.HttpStatusCode).Append("\n");
+            sb.Append("  Description: ").Append(Description).Append("\n");
+            sb.Append("  Folder: ").Append(Folder).Append("\n");
+            sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  Scope: ").Append(Scope).Append("\n");
+            sb.Append("  ScopeOwner: ").Append(ScopeOwner).Append("\n");
+            sb.Append("  StandInKey: ").Append(StandInKey).Append("\n");
+            sb.Append("  StoredValueType: ").Append(StoredValueType).Append("\n");
+            sb.Append("  Value: ").Append(Value).Append("\n");
+            sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
+            sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append("\n");
+            sb.Append("  HasError: ").Append(HasError).Append("\n");
+            sb.Append("  HttpStatusCode: ").Append(HttpStatusCode).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -525,7 +525,7 @@ namespace CherwellConnector.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as TrebuchetWebApiDataContractsCoreStoredValueResponse);
+            return Equals(input as TrebuchetWebApiDataContractsCoreStoredValueResponse);
         }
 
         /// <summary>
@@ -540,69 +540,69 @@ namespace CherwellConnector.Model
 
             return 
                 (
-                    this.Description == input.Description ||
-                    (this.Description != null &&
-                    this.Description.Equals(input.Description))
+                    Description == input.Description ||
+                    (Description != null &&
+                    Description.Equals(input.Description))
                 ) && 
                 (
-                    this.Folder == input.Folder ||
-                    (this.Folder != null &&
-                    this.Folder.Equals(input.Folder))
+                    Folder == input.Folder ||
+                    (Folder != null &&
+                    Folder.Equals(input.Folder))
                 ) && 
                 (
-                    this.Id == input.Id ||
-                    (this.Id != null &&
-                    this.Id.Equals(input.Id))
+                    Id == input.Id ||
+                    (Id != null &&
+                    Id.Equals(input.Id))
                 ) && 
                 (
-                    this.Name == input.Name ||
-                    (this.Name != null &&
-                    this.Name.Equals(input.Name))
+                    Name == input.Name ||
+                    (Name != null &&
+                    Name.Equals(input.Name))
                 ) && 
                 (
-                    this.Scope == input.Scope ||
-                    (this.Scope != null &&
-                    this.Scope.Equals(input.Scope))
+                    Scope == input.Scope ||
+                    (Scope != null &&
+                    Scope.Equals(input.Scope))
                 ) && 
                 (
-                    this.ScopeOwner == input.ScopeOwner ||
-                    (this.ScopeOwner != null &&
-                    this.ScopeOwner.Equals(input.ScopeOwner))
+                    ScopeOwner == input.ScopeOwner ||
+                    (ScopeOwner != null &&
+                    ScopeOwner.Equals(input.ScopeOwner))
                 ) && 
                 (
-                    this.StandInKey == input.StandInKey ||
-                    (this.StandInKey != null &&
-                    this.StandInKey.Equals(input.StandInKey))
+                    StandInKey == input.StandInKey ||
+                    (StandInKey != null &&
+                    StandInKey.Equals(input.StandInKey))
                 ) && 
                 (
-                    this.StoredValueType == input.StoredValueType ||
-                    (this.StoredValueType != null &&
-                    this.StoredValueType.Equals(input.StoredValueType))
+                    StoredValueType == input.StoredValueType ||
+                    (StoredValueType != null &&
+                    StoredValueType.Equals(input.StoredValueType))
                 ) && 
                 (
-                    this.Value == input.Value ||
-                    (this.Value != null &&
-                    this.Value.Equals(input.Value))
+                    Value == input.Value ||
+                    (Value != null &&
+                    Value.Equals(input.Value))
                 ) && 
                 (
-                    this.ErrorCode == input.ErrorCode ||
-                    (this.ErrorCode != null &&
-                    this.ErrorCode.Equals(input.ErrorCode))
+                    ErrorCode == input.ErrorCode ||
+                    (ErrorCode != null &&
+                    ErrorCode.Equals(input.ErrorCode))
                 ) && 
                 (
-                    this.ErrorMessage == input.ErrorMessage ||
-                    (this.ErrorMessage != null &&
-                    this.ErrorMessage.Equals(input.ErrorMessage))
+                    ErrorMessage == input.ErrorMessage ||
+                    (ErrorMessage != null &&
+                    ErrorMessage.Equals(input.ErrorMessage))
                 ) && 
                 (
-                    this.HasError == input.HasError ||
-                    (this.HasError != null &&
-                    this.HasError.Equals(input.HasError))
+                    HasError == input.HasError ||
+                    (HasError != null &&
+                    HasError.Equals(input.HasError))
                 ) && 
                 (
-                    this.HttpStatusCode == input.HttpStatusCode ||
-                    (this.HttpStatusCode != null &&
-                    this.HttpStatusCode.Equals(input.HttpStatusCode))
+                    HttpStatusCode == input.HttpStatusCode ||
+                    (HttpStatusCode != null &&
+                    HttpStatusCode.Equals(input.HttpStatusCode))
                 );
         }
 
@@ -614,33 +614,33 @@ namespace CherwellConnector.Model
         {
             unchecked // Overflow is fine, just wrap
             {
-                int hashCode = 41;
-                if (this.Description != null)
-                    hashCode = hashCode * 59 + this.Description.GetHashCode();
-                if (this.Folder != null)
-                    hashCode = hashCode * 59 + this.Folder.GetHashCode();
-                if (this.Id != null)
-                    hashCode = hashCode * 59 + this.Id.GetHashCode();
-                if (this.Name != null)
-                    hashCode = hashCode * 59 + this.Name.GetHashCode();
-                if (this.Scope != null)
-                    hashCode = hashCode * 59 + this.Scope.GetHashCode();
-                if (this.ScopeOwner != null)
-                    hashCode = hashCode * 59 + this.ScopeOwner.GetHashCode();
-                if (this.StandInKey != null)
-                    hashCode = hashCode * 59 + this.StandInKey.GetHashCode();
-                if (this.StoredValueType != null)
-                    hashCode = hashCode * 59 + this.StoredValueType.GetHashCode();
-                if (this.Value != null)
-                    hashCode = hashCode * 59 + this.Value.GetHashCode();
-                if (this.ErrorCode != null)
-                    hashCode = hashCode * 59 + this.ErrorCode.GetHashCode();
-                if (this.ErrorMessage != null)
-                    hashCode = hashCode * 59 + this.ErrorMessage.GetHashCode();
-                if (this.HasError != null)
-                    hashCode = hashCode * 59 + this.HasError.GetHashCode();
-                if (this.HttpStatusCode != null)
-                    hashCode = hashCode * 59 + this.HttpStatusCode.GetHashCode();
+                var hashCode = 41;
+                if (Description != null)
+                    hashCode = hashCode * 59 + Description.GetHashCode();
+                if (Folder != null)
+                    hashCode = hashCode * 59 + Folder.GetHashCode();
+                if (Id != null)
+                    hashCode = hashCode * 59 + Id.GetHashCode();
+                if (Name != null)
+                    hashCode = hashCode * 59 + Name.GetHashCode();
+                if (Scope != null)
+                    hashCode = hashCode * 59 + Scope.GetHashCode();
+                if (ScopeOwner != null)
+                    hashCode = hashCode * 59 + ScopeOwner.GetHashCode();
+                if (StandInKey != null)
+                    hashCode = hashCode * 59 + StandInKey.GetHashCode();
+                if (StoredValueType != null)
+                    hashCode = hashCode * 59 + StoredValueType.GetHashCode();
+                if (Value != null)
+                    hashCode = hashCode * 59 + Value.GetHashCode();
+                if (ErrorCode != null)
+                    hashCode = hashCode * 59 + ErrorCode.GetHashCode();
+                if (ErrorMessage != null)
+                    hashCode = hashCode * 59 + ErrorMessage.GetHashCode();
+                if (HasError != null)
+                    hashCode = hashCode * 59 + HasError.GetHashCode();
+                if (HttpStatusCode != null)
+                    hashCode = hashCode * 59 + HttpStatusCode.GetHashCode();
                 return hashCode;
             }
         }
@@ -650,7 +650,7 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

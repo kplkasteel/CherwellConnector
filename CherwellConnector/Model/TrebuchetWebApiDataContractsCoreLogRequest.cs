@@ -77,11 +77,11 @@ namespace CherwellConnector.Model
         /// <param name="keyValueProperties">keyValueProperties.</param>
         /// <param name="level">level.</param>
         /// <param name="message">message.</param>
-        public TrebuchetWebApiDataContractsCoreLogRequest(List<Object> keyValueProperties = default(List<Object>), LevelEnum? level = default(LevelEnum?), string message = default(string))
+        public TrebuchetWebApiDataContractsCoreLogRequest(List<Object> keyValueProperties = default, LevelEnum? level = default, string message = default)
         {
-            this.KeyValueProperties = keyValueProperties;
-            this.Level = level;
-            this.Message = message;
+            KeyValueProperties = keyValueProperties;
+            Level = level;
+            Message = message;
         }
         
         /// <summary>
@@ -105,9 +105,9 @@ namespace CherwellConnector.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrebuchetWebApiDataContractsCoreLogRequest {\n");
-            sb.Append("  KeyValueProperties: ").Append(this.KeyValueProperties).Append("\n");
-            sb.Append("  Level: ").Append(this.Level).Append("\n");
-            sb.Append("  Message: ").Append(this.Message).Append("\n");
+            sb.Append("  KeyValueProperties: ").Append(KeyValueProperties).Append("\n");
+            sb.Append("  Level: ").Append(Level).Append("\n");
+            sb.Append("  Message: ").Append(Message).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -128,7 +128,7 @@ namespace CherwellConnector.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as TrebuchetWebApiDataContractsCoreLogRequest);
+            return Equals(input as TrebuchetWebApiDataContractsCoreLogRequest);
         }
 
         /// <summary>
@@ -143,19 +143,19 @@ namespace CherwellConnector.Model
 
             return 
                 (
-                    this.KeyValueProperties == input.KeyValueProperties ||
-                    this.KeyValueProperties != null &&
-                    this.KeyValueProperties.SequenceEqual(input.KeyValueProperties)
+                    KeyValueProperties == input.KeyValueProperties ||
+                    KeyValueProperties != null &&
+                    KeyValueProperties.SequenceEqual(input.KeyValueProperties)
                 ) && 
                 (
-                    this.Level == input.Level ||
-                    (this.Level != null &&
-                    this.Level.Equals(input.Level))
+                    Level == input.Level ||
+                    (Level != null &&
+                    Level.Equals(input.Level))
                 ) && 
                 (
-                    this.Message == input.Message ||
-                    (this.Message != null &&
-                    this.Message.Equals(input.Message))
+                    Message == input.Message ||
+                    (Message != null &&
+                    Message.Equals(input.Message))
                 );
         }
 
@@ -167,13 +167,13 @@ namespace CherwellConnector.Model
         {
             unchecked // Overflow is fine, just wrap
             {
-                int hashCode = 41;
-                if (this.KeyValueProperties != null)
-                    hashCode = hashCode * 59 + this.KeyValueProperties.GetHashCode();
-                if (this.Level != null)
-                    hashCode = hashCode * 59 + this.Level.GetHashCode();
-                if (this.Message != null)
-                    hashCode = hashCode * 59 + this.Message.GetHashCode();
+                var hashCode = 41;
+                if (KeyValueProperties != null)
+                    hashCode = hashCode * 59 + KeyValueProperties.GetHashCode();
+                if (Level != null)
+                    hashCode = hashCode * 59 + Level.GetHashCode();
+                if (Message != null)
+                    hashCode = hashCode * 59 + Message.GetHashCode();
                 return hashCode;
             }
         }
@@ -183,7 +183,7 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

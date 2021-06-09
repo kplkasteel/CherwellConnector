@@ -39,23 +39,23 @@ namespace CherwellConnector.Model
         /// <param name="teamManagerOfOwnerView">teamManagerOfOwnerView.</param>
         /// <param name="teamView">teamView.</param>
         /// <param name="view">view.</param>
-        public TrebuchetWebApiDataContractsSecurityBusinessObjectPermission(string busObId = default(string), string busObName = default(string), bool? departmentMemberEdit = default(bool?), bool? departmentMemberView = default(bool?), bool? edit = default(bool?), List<TrebuchetWebApiDataContractsSecurityFieldPermission> fieldPermissions = default(List<TrebuchetWebApiDataContractsSecurityFieldPermission>), bool? managerOfOwnerEdit = default(bool?), bool? managerOfOwnerView = default(bool?), bool? ownerEdit = default(bool?), bool? ownerView = default(bool?), bool? teamEdit = default(bool?), bool? teamManagerOfOwnerEdit = default(bool?), bool? teamManagerOfOwnerView = default(bool?), bool? teamView = default(bool?), bool? view = default(bool?))
+        public TrebuchetWebApiDataContractsSecurityBusinessObjectPermission(string busObId = default, string busObName = default, bool? departmentMemberEdit = default, bool? departmentMemberView = default, bool? edit = default, List<TrebuchetWebApiDataContractsSecurityFieldPermission> fieldPermissions = default, bool? managerOfOwnerEdit = default, bool? managerOfOwnerView = default, bool? ownerEdit = default, bool? ownerView = default, bool? teamEdit = default, bool? teamManagerOfOwnerEdit = default, bool? teamManagerOfOwnerView = default, bool? teamView = default, bool? view = default)
         {
-            this.BusObId = busObId;
-            this.BusObName = busObName;
-            this.DepartmentMemberEdit = departmentMemberEdit;
-            this.DepartmentMemberView = departmentMemberView;
-            this.Edit = edit;
-            this.FieldPermissions = fieldPermissions;
-            this.ManagerOfOwnerEdit = managerOfOwnerEdit;
-            this.ManagerOfOwnerView = managerOfOwnerView;
-            this.OwnerEdit = ownerEdit;
-            this.OwnerView = ownerView;
-            this.TeamEdit = teamEdit;
-            this.TeamManagerOfOwnerEdit = teamManagerOfOwnerEdit;
-            this.TeamManagerOfOwnerView = teamManagerOfOwnerView;
-            this.TeamView = teamView;
-            this.View = view;
+            BusObId = busObId;
+            BusObName = busObName;
+            DepartmentMemberEdit = departmentMemberEdit;
+            DepartmentMemberView = departmentMemberView;
+            Edit = edit;
+            FieldPermissions = fieldPermissions;
+            ManagerOfOwnerEdit = managerOfOwnerEdit;
+            ManagerOfOwnerView = managerOfOwnerView;
+            OwnerEdit = ownerEdit;
+            OwnerView = ownerView;
+            TeamEdit = teamEdit;
+            TeamManagerOfOwnerEdit = teamManagerOfOwnerEdit;
+            TeamManagerOfOwnerView = teamManagerOfOwnerView;
+            TeamView = teamView;
+            View = view;
         }
         
         /// <summary>
@@ -156,21 +156,21 @@ namespace CherwellConnector.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrebuchetWebApiDataContractsSecurityBusinessObjectPermission {\n");
-            sb.Append("  BusObId: ").Append(this.BusObId).Append("\n");
-            sb.Append("  BusObName: ").Append(this.BusObName).Append("\n");
-            sb.Append("  DepartmentMemberEdit: ").Append(this.DepartmentMemberEdit).Append("\n");
-            sb.Append("  DepartmentMemberView: ").Append(this.DepartmentMemberView).Append("\n");
-            sb.Append("  Edit: ").Append(this.Edit).Append("\n");
-            sb.Append("  FieldPermissions: ").Append(this.FieldPermissions).Append("\n");
-            sb.Append("  ManagerOfOwnerEdit: ").Append(this.ManagerOfOwnerEdit).Append("\n");
-            sb.Append("  ManagerOfOwnerView: ").Append(this.ManagerOfOwnerView).Append("\n");
-            sb.Append("  OwnerEdit: ").Append(this.OwnerEdit).Append("\n");
-            sb.Append("  OwnerView: ").Append(this.OwnerView).Append("\n");
-            sb.Append("  TeamEdit: ").Append(this.TeamEdit).Append("\n");
-            sb.Append("  TeamManagerOfOwnerEdit: ").Append(this.TeamManagerOfOwnerEdit).Append("\n");
-            sb.Append("  TeamManagerOfOwnerView: ").Append(this.TeamManagerOfOwnerView).Append("\n");
-            sb.Append("  TeamView: ").Append(this.TeamView).Append("\n");
-            sb.Append("  View: ").Append(this.View).Append("\n");
+            sb.Append("  BusObId: ").Append(BusObId).Append("\n");
+            sb.Append("  BusObName: ").Append(BusObName).Append("\n");
+            sb.Append("  DepartmentMemberEdit: ").Append(DepartmentMemberEdit).Append("\n");
+            sb.Append("  DepartmentMemberView: ").Append(DepartmentMemberView).Append("\n");
+            sb.Append("  Edit: ").Append(Edit).Append("\n");
+            sb.Append("  FieldPermissions: ").Append(FieldPermissions).Append("\n");
+            sb.Append("  ManagerOfOwnerEdit: ").Append(ManagerOfOwnerEdit).Append("\n");
+            sb.Append("  ManagerOfOwnerView: ").Append(ManagerOfOwnerView).Append("\n");
+            sb.Append("  OwnerEdit: ").Append(OwnerEdit).Append("\n");
+            sb.Append("  OwnerView: ").Append(OwnerView).Append("\n");
+            sb.Append("  TeamEdit: ").Append(TeamEdit).Append("\n");
+            sb.Append("  TeamManagerOfOwnerEdit: ").Append(TeamManagerOfOwnerEdit).Append("\n");
+            sb.Append("  TeamManagerOfOwnerView: ").Append(TeamManagerOfOwnerView).Append("\n");
+            sb.Append("  TeamView: ").Append(TeamView).Append("\n");
+            sb.Append("  View: ").Append(View).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -191,7 +191,7 @@ namespace CherwellConnector.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as TrebuchetWebApiDataContractsSecurityBusinessObjectPermission);
+            return Equals(input as TrebuchetWebApiDataContractsSecurityBusinessObjectPermission);
         }
 
         /// <summary>
@@ -206,79 +206,79 @@ namespace CherwellConnector.Model
 
             return 
                 (
-                    this.BusObId == input.BusObId ||
-                    (this.BusObId != null &&
-                    this.BusObId.Equals(input.BusObId))
+                    BusObId == input.BusObId ||
+                    (BusObId != null &&
+                    BusObId.Equals(input.BusObId))
                 ) && 
                 (
-                    this.BusObName == input.BusObName ||
-                    (this.BusObName != null &&
-                    this.BusObName.Equals(input.BusObName))
+                    BusObName == input.BusObName ||
+                    (BusObName != null &&
+                    BusObName.Equals(input.BusObName))
                 ) && 
                 (
-                    this.DepartmentMemberEdit == input.DepartmentMemberEdit ||
-                    (this.DepartmentMemberEdit != null &&
-                    this.DepartmentMemberEdit.Equals(input.DepartmentMemberEdit))
+                    DepartmentMemberEdit == input.DepartmentMemberEdit ||
+                    (DepartmentMemberEdit != null &&
+                    DepartmentMemberEdit.Equals(input.DepartmentMemberEdit))
                 ) && 
                 (
-                    this.DepartmentMemberView == input.DepartmentMemberView ||
-                    (this.DepartmentMemberView != null &&
-                    this.DepartmentMemberView.Equals(input.DepartmentMemberView))
+                    DepartmentMemberView == input.DepartmentMemberView ||
+                    (DepartmentMemberView != null &&
+                    DepartmentMemberView.Equals(input.DepartmentMemberView))
                 ) && 
                 (
-                    this.Edit == input.Edit ||
-                    (this.Edit != null &&
-                    this.Edit.Equals(input.Edit))
+                    Edit == input.Edit ||
+                    (Edit != null &&
+                    Edit.Equals(input.Edit))
                 ) && 
                 (
-                    this.FieldPermissions == input.FieldPermissions ||
-                    this.FieldPermissions != null &&
-                    this.FieldPermissions.SequenceEqual(input.FieldPermissions)
+                    FieldPermissions == input.FieldPermissions ||
+                    FieldPermissions != null &&
+                    FieldPermissions.SequenceEqual(input.FieldPermissions)
                 ) && 
                 (
-                    this.ManagerOfOwnerEdit == input.ManagerOfOwnerEdit ||
-                    (this.ManagerOfOwnerEdit != null &&
-                    this.ManagerOfOwnerEdit.Equals(input.ManagerOfOwnerEdit))
+                    ManagerOfOwnerEdit == input.ManagerOfOwnerEdit ||
+                    (ManagerOfOwnerEdit != null &&
+                    ManagerOfOwnerEdit.Equals(input.ManagerOfOwnerEdit))
                 ) && 
                 (
-                    this.ManagerOfOwnerView == input.ManagerOfOwnerView ||
-                    (this.ManagerOfOwnerView != null &&
-                    this.ManagerOfOwnerView.Equals(input.ManagerOfOwnerView))
+                    ManagerOfOwnerView == input.ManagerOfOwnerView ||
+                    (ManagerOfOwnerView != null &&
+                    ManagerOfOwnerView.Equals(input.ManagerOfOwnerView))
                 ) && 
                 (
-                    this.OwnerEdit == input.OwnerEdit ||
-                    (this.OwnerEdit != null &&
-                    this.OwnerEdit.Equals(input.OwnerEdit))
+                    OwnerEdit == input.OwnerEdit ||
+                    (OwnerEdit != null &&
+                    OwnerEdit.Equals(input.OwnerEdit))
                 ) && 
                 (
-                    this.OwnerView == input.OwnerView ||
-                    (this.OwnerView != null &&
-                    this.OwnerView.Equals(input.OwnerView))
+                    OwnerView == input.OwnerView ||
+                    (OwnerView != null &&
+                    OwnerView.Equals(input.OwnerView))
                 ) && 
                 (
-                    this.TeamEdit == input.TeamEdit ||
-                    (this.TeamEdit != null &&
-                    this.TeamEdit.Equals(input.TeamEdit))
+                    TeamEdit == input.TeamEdit ||
+                    (TeamEdit != null &&
+                    TeamEdit.Equals(input.TeamEdit))
                 ) && 
                 (
-                    this.TeamManagerOfOwnerEdit == input.TeamManagerOfOwnerEdit ||
-                    (this.TeamManagerOfOwnerEdit != null &&
-                    this.TeamManagerOfOwnerEdit.Equals(input.TeamManagerOfOwnerEdit))
+                    TeamManagerOfOwnerEdit == input.TeamManagerOfOwnerEdit ||
+                    (TeamManagerOfOwnerEdit != null &&
+                    TeamManagerOfOwnerEdit.Equals(input.TeamManagerOfOwnerEdit))
                 ) && 
                 (
-                    this.TeamManagerOfOwnerView == input.TeamManagerOfOwnerView ||
-                    (this.TeamManagerOfOwnerView != null &&
-                    this.TeamManagerOfOwnerView.Equals(input.TeamManagerOfOwnerView))
+                    TeamManagerOfOwnerView == input.TeamManagerOfOwnerView ||
+                    (TeamManagerOfOwnerView != null &&
+                    TeamManagerOfOwnerView.Equals(input.TeamManagerOfOwnerView))
                 ) && 
                 (
-                    this.TeamView == input.TeamView ||
-                    (this.TeamView != null &&
-                    this.TeamView.Equals(input.TeamView))
+                    TeamView == input.TeamView ||
+                    (TeamView != null &&
+                    TeamView.Equals(input.TeamView))
                 ) && 
                 (
-                    this.View == input.View ||
-                    (this.View != null &&
-                    this.View.Equals(input.View))
+                    View == input.View ||
+                    (View != null &&
+                    View.Equals(input.View))
                 );
         }
 
@@ -290,37 +290,37 @@ namespace CherwellConnector.Model
         {
             unchecked // Overflow is fine, just wrap
             {
-                int hashCode = 41;
-                if (this.BusObId != null)
-                    hashCode = hashCode * 59 + this.BusObId.GetHashCode();
-                if (this.BusObName != null)
-                    hashCode = hashCode * 59 + this.BusObName.GetHashCode();
-                if (this.DepartmentMemberEdit != null)
-                    hashCode = hashCode * 59 + this.DepartmentMemberEdit.GetHashCode();
-                if (this.DepartmentMemberView != null)
-                    hashCode = hashCode * 59 + this.DepartmentMemberView.GetHashCode();
-                if (this.Edit != null)
-                    hashCode = hashCode * 59 + this.Edit.GetHashCode();
-                if (this.FieldPermissions != null)
-                    hashCode = hashCode * 59 + this.FieldPermissions.GetHashCode();
-                if (this.ManagerOfOwnerEdit != null)
-                    hashCode = hashCode * 59 + this.ManagerOfOwnerEdit.GetHashCode();
-                if (this.ManagerOfOwnerView != null)
-                    hashCode = hashCode * 59 + this.ManagerOfOwnerView.GetHashCode();
-                if (this.OwnerEdit != null)
-                    hashCode = hashCode * 59 + this.OwnerEdit.GetHashCode();
-                if (this.OwnerView != null)
-                    hashCode = hashCode * 59 + this.OwnerView.GetHashCode();
-                if (this.TeamEdit != null)
-                    hashCode = hashCode * 59 + this.TeamEdit.GetHashCode();
-                if (this.TeamManagerOfOwnerEdit != null)
-                    hashCode = hashCode * 59 + this.TeamManagerOfOwnerEdit.GetHashCode();
-                if (this.TeamManagerOfOwnerView != null)
-                    hashCode = hashCode * 59 + this.TeamManagerOfOwnerView.GetHashCode();
-                if (this.TeamView != null)
-                    hashCode = hashCode * 59 + this.TeamView.GetHashCode();
-                if (this.View != null)
-                    hashCode = hashCode * 59 + this.View.GetHashCode();
+                var hashCode = 41;
+                if (BusObId != null)
+                    hashCode = hashCode * 59 + BusObId.GetHashCode();
+                if (BusObName != null)
+                    hashCode = hashCode * 59 + BusObName.GetHashCode();
+                if (DepartmentMemberEdit != null)
+                    hashCode = hashCode * 59 + DepartmentMemberEdit.GetHashCode();
+                if (DepartmentMemberView != null)
+                    hashCode = hashCode * 59 + DepartmentMemberView.GetHashCode();
+                if (Edit != null)
+                    hashCode = hashCode * 59 + Edit.GetHashCode();
+                if (FieldPermissions != null)
+                    hashCode = hashCode * 59 + FieldPermissions.GetHashCode();
+                if (ManagerOfOwnerEdit != null)
+                    hashCode = hashCode * 59 + ManagerOfOwnerEdit.GetHashCode();
+                if (ManagerOfOwnerView != null)
+                    hashCode = hashCode * 59 + ManagerOfOwnerView.GetHashCode();
+                if (OwnerEdit != null)
+                    hashCode = hashCode * 59 + OwnerEdit.GetHashCode();
+                if (OwnerView != null)
+                    hashCode = hashCode * 59 + OwnerView.GetHashCode();
+                if (TeamEdit != null)
+                    hashCode = hashCode * 59 + TeamEdit.GetHashCode();
+                if (TeamManagerOfOwnerEdit != null)
+                    hashCode = hashCode * 59 + TeamManagerOfOwnerEdit.GetHashCode();
+                if (TeamManagerOfOwnerView != null)
+                    hashCode = hashCode * 59 + TeamManagerOfOwnerView.GetHashCode();
+                if (TeamView != null)
+                    hashCode = hashCode * 59 + TeamView.GetHashCode();
+                if (View != null)
+                    hashCode = hashCode * 59 + View.GetHashCode();
                 return hashCode;
             }
         }
@@ -330,7 +330,7 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

@@ -39,24 +39,24 @@ namespace CherwellConnector.Model
         /// <param name="rightName">rightName.</param>
         /// <param name="standardRightName">standardRightName.</param>
         /// <param name="viewRunOpen">viewRunOpen.</param>
-        public TrebuchetWebApiDataContractsSecurityRight(bool? add = default(bool?), bool? allow = default(bool?), string categoryDescription = default(string), string categoryId = default(string), string categoryName = default(string), bool? delete = default(bool?), bool? edit = default(bool?), bool? isYesNoRight = default(bool?), bool? nonScopeOwnerAdd = default(bool?), bool? nonScopeOwnerDelete = default(bool?), bool? nonScopeOwnerEdit = default(bool?), bool? nonScopeOwnerView = default(bool?), string rightId = default(string), string rightName = default(string), string standardRightName = default(string), bool? viewRunOpen = default(bool?))
+        public TrebuchetWebApiDataContractsSecurityRight(bool? add = default, bool? allow = default, string categoryDescription = default, string categoryId = default, string categoryName = default, bool? delete = default, bool? edit = default, bool? isYesNoRight = default, bool? nonScopeOwnerAdd = default, bool? nonScopeOwnerDelete = default, bool? nonScopeOwnerEdit = default, bool? nonScopeOwnerView = default, string rightId = default, string rightName = default, string standardRightName = default, bool? viewRunOpen = default)
         {
-            this.Add = add;
-            this.Allow = allow;
-            this.CategoryDescription = categoryDescription;
-            this.CategoryId = categoryId;
-            this.CategoryName = categoryName;
-            this.Delete = delete;
-            this.Edit = edit;
-            this.IsYesNoRight = isYesNoRight;
-            this.NonScopeOwnerAdd = nonScopeOwnerAdd;
-            this.NonScopeOwnerDelete = nonScopeOwnerDelete;
-            this.NonScopeOwnerEdit = nonScopeOwnerEdit;
-            this.NonScopeOwnerView = nonScopeOwnerView;
-            this.RightId = rightId;
-            this.RightName = rightName;
-            this.StandardRightName = standardRightName;
-            this.ViewRunOpen = viewRunOpen;
+            Add = add;
+            Allow = allow;
+            CategoryDescription = categoryDescription;
+            CategoryId = categoryId;
+            CategoryName = categoryName;
+            Delete = delete;
+            Edit = edit;
+            IsYesNoRight = isYesNoRight;
+            NonScopeOwnerAdd = nonScopeOwnerAdd;
+            NonScopeOwnerDelete = nonScopeOwnerDelete;
+            NonScopeOwnerEdit = nonScopeOwnerEdit;
+            NonScopeOwnerView = nonScopeOwnerView;
+            RightId = rightId;
+            RightName = rightName;
+            StandardRightName = standardRightName;
+            ViewRunOpen = viewRunOpen;
         }
         
         /// <summary>
@@ -163,22 +163,22 @@ namespace CherwellConnector.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrebuchetWebApiDataContractsSecurityRight {\n");
-            sb.Append("  Add: ").Append(this.Add).Append("\n");
-            sb.Append("  Allow: ").Append(this.Allow).Append("\n");
-            sb.Append("  CategoryDescription: ").Append(this.CategoryDescription).Append("\n");
-            sb.Append("  CategoryId: ").Append(this.CategoryId).Append("\n");
-            sb.Append("  CategoryName: ").Append(this.CategoryName).Append("\n");
-            sb.Append("  Delete: ").Append(this.Delete).Append("\n");
-            sb.Append("  Edit: ").Append(this.Edit).Append("\n");
-            sb.Append("  IsYesNoRight: ").Append(this.IsYesNoRight).Append("\n");
-            sb.Append("  NonScopeOwnerAdd: ").Append(this.NonScopeOwnerAdd).Append("\n");
-            sb.Append("  NonScopeOwnerDelete: ").Append(this.NonScopeOwnerDelete).Append("\n");
-            sb.Append("  NonScopeOwnerEdit: ").Append(this.NonScopeOwnerEdit).Append("\n");
-            sb.Append("  NonScopeOwnerView: ").Append(this.NonScopeOwnerView).Append("\n");
-            sb.Append("  RightId: ").Append(this.RightId).Append("\n");
-            sb.Append("  RightName: ").Append(this.RightName).Append("\n");
-            sb.Append("  StandardRightName: ").Append(this.StandardRightName).Append("\n");
-            sb.Append("  ViewRunOpen: ").Append(this.ViewRunOpen).Append("\n");
+            sb.Append("  Add: ").Append(Add).Append("\n");
+            sb.Append("  Allow: ").Append(Allow).Append("\n");
+            sb.Append("  CategoryDescription: ").Append(CategoryDescription).Append("\n");
+            sb.Append("  CategoryId: ").Append(CategoryId).Append("\n");
+            sb.Append("  CategoryName: ").Append(CategoryName).Append("\n");
+            sb.Append("  Delete: ").Append(Delete).Append("\n");
+            sb.Append("  Edit: ").Append(Edit).Append("\n");
+            sb.Append("  IsYesNoRight: ").Append(IsYesNoRight).Append("\n");
+            sb.Append("  NonScopeOwnerAdd: ").Append(NonScopeOwnerAdd).Append("\n");
+            sb.Append("  NonScopeOwnerDelete: ").Append(NonScopeOwnerDelete).Append("\n");
+            sb.Append("  NonScopeOwnerEdit: ").Append(NonScopeOwnerEdit).Append("\n");
+            sb.Append("  NonScopeOwnerView: ").Append(NonScopeOwnerView).Append("\n");
+            sb.Append("  RightId: ").Append(RightId).Append("\n");
+            sb.Append("  RightName: ").Append(RightName).Append("\n");
+            sb.Append("  StandardRightName: ").Append(StandardRightName).Append("\n");
+            sb.Append("  ViewRunOpen: ").Append(ViewRunOpen).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -199,7 +199,7 @@ namespace CherwellConnector.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as TrebuchetWebApiDataContractsSecurityRight);
+            return Equals(input as TrebuchetWebApiDataContractsSecurityRight);
         }
 
         /// <summary>
@@ -214,84 +214,84 @@ namespace CherwellConnector.Model
 
             return 
                 (
-                    this.Add == input.Add ||
-                    (this.Add != null &&
-                    this.Add.Equals(input.Add))
+                    Add == input.Add ||
+                    (Add != null &&
+                    Add.Equals(input.Add))
                 ) && 
                 (
-                    this.Allow == input.Allow ||
-                    (this.Allow != null &&
-                    this.Allow.Equals(input.Allow))
+                    Allow == input.Allow ||
+                    (Allow != null &&
+                    Allow.Equals(input.Allow))
                 ) && 
                 (
-                    this.CategoryDescription == input.CategoryDescription ||
-                    (this.CategoryDescription != null &&
-                    this.CategoryDescription.Equals(input.CategoryDescription))
+                    CategoryDescription == input.CategoryDescription ||
+                    (CategoryDescription != null &&
+                    CategoryDescription.Equals(input.CategoryDescription))
                 ) && 
                 (
-                    this.CategoryId == input.CategoryId ||
-                    (this.CategoryId != null &&
-                    this.CategoryId.Equals(input.CategoryId))
+                    CategoryId == input.CategoryId ||
+                    (CategoryId != null &&
+                    CategoryId.Equals(input.CategoryId))
                 ) && 
                 (
-                    this.CategoryName == input.CategoryName ||
-                    (this.CategoryName != null &&
-                    this.CategoryName.Equals(input.CategoryName))
+                    CategoryName == input.CategoryName ||
+                    (CategoryName != null &&
+                    CategoryName.Equals(input.CategoryName))
                 ) && 
                 (
-                    this.Delete == input.Delete ||
-                    (this.Delete != null &&
-                    this.Delete.Equals(input.Delete))
+                    Delete == input.Delete ||
+                    (Delete != null &&
+                    Delete.Equals(input.Delete))
                 ) && 
                 (
-                    this.Edit == input.Edit ||
-                    (this.Edit != null &&
-                    this.Edit.Equals(input.Edit))
+                    Edit == input.Edit ||
+                    (Edit != null &&
+                    Edit.Equals(input.Edit))
                 ) && 
                 (
-                    this.IsYesNoRight == input.IsYesNoRight ||
-                    (this.IsYesNoRight != null &&
-                    this.IsYesNoRight.Equals(input.IsYesNoRight))
+                    IsYesNoRight == input.IsYesNoRight ||
+                    (IsYesNoRight != null &&
+                    IsYesNoRight.Equals(input.IsYesNoRight))
                 ) && 
                 (
-                    this.NonScopeOwnerAdd == input.NonScopeOwnerAdd ||
-                    (this.NonScopeOwnerAdd != null &&
-                    this.NonScopeOwnerAdd.Equals(input.NonScopeOwnerAdd))
+                    NonScopeOwnerAdd == input.NonScopeOwnerAdd ||
+                    (NonScopeOwnerAdd != null &&
+                    NonScopeOwnerAdd.Equals(input.NonScopeOwnerAdd))
                 ) && 
                 (
-                    this.NonScopeOwnerDelete == input.NonScopeOwnerDelete ||
-                    (this.NonScopeOwnerDelete != null &&
-                    this.NonScopeOwnerDelete.Equals(input.NonScopeOwnerDelete))
+                    NonScopeOwnerDelete == input.NonScopeOwnerDelete ||
+                    (NonScopeOwnerDelete != null &&
+                    NonScopeOwnerDelete.Equals(input.NonScopeOwnerDelete))
                 ) && 
                 (
-                    this.NonScopeOwnerEdit == input.NonScopeOwnerEdit ||
-                    (this.NonScopeOwnerEdit != null &&
-                    this.NonScopeOwnerEdit.Equals(input.NonScopeOwnerEdit))
+                    NonScopeOwnerEdit == input.NonScopeOwnerEdit ||
+                    (NonScopeOwnerEdit != null &&
+                    NonScopeOwnerEdit.Equals(input.NonScopeOwnerEdit))
                 ) && 
                 (
-                    this.NonScopeOwnerView == input.NonScopeOwnerView ||
-                    (this.NonScopeOwnerView != null &&
-                    this.NonScopeOwnerView.Equals(input.NonScopeOwnerView))
+                    NonScopeOwnerView == input.NonScopeOwnerView ||
+                    (NonScopeOwnerView != null &&
+                    NonScopeOwnerView.Equals(input.NonScopeOwnerView))
                 ) && 
                 (
-                    this.RightId == input.RightId ||
-                    (this.RightId != null &&
-                    this.RightId.Equals(input.RightId))
+                    RightId == input.RightId ||
+                    (RightId != null &&
+                    RightId.Equals(input.RightId))
                 ) && 
                 (
-                    this.RightName == input.RightName ||
-                    (this.RightName != null &&
-                    this.RightName.Equals(input.RightName))
+                    RightName == input.RightName ||
+                    (RightName != null &&
+                    RightName.Equals(input.RightName))
                 ) && 
                 (
-                    this.StandardRightName == input.StandardRightName ||
-                    (this.StandardRightName != null &&
-                    this.StandardRightName.Equals(input.StandardRightName))
+                    StandardRightName == input.StandardRightName ||
+                    (StandardRightName != null &&
+                    StandardRightName.Equals(input.StandardRightName))
                 ) && 
                 (
-                    this.ViewRunOpen == input.ViewRunOpen ||
-                    (this.ViewRunOpen != null &&
-                    this.ViewRunOpen.Equals(input.ViewRunOpen))
+                    ViewRunOpen == input.ViewRunOpen ||
+                    (ViewRunOpen != null &&
+                    ViewRunOpen.Equals(input.ViewRunOpen))
                 );
         }
 
@@ -303,39 +303,39 @@ namespace CherwellConnector.Model
         {
             unchecked // Overflow is fine, just wrap
             {
-                int hashCode = 41;
-                if (this.Add != null)
-                    hashCode = hashCode * 59 + this.Add.GetHashCode();
-                if (this.Allow != null)
-                    hashCode = hashCode * 59 + this.Allow.GetHashCode();
-                if (this.CategoryDescription != null)
-                    hashCode = hashCode * 59 + this.CategoryDescription.GetHashCode();
-                if (this.CategoryId != null)
-                    hashCode = hashCode * 59 + this.CategoryId.GetHashCode();
-                if (this.CategoryName != null)
-                    hashCode = hashCode * 59 + this.CategoryName.GetHashCode();
-                if (this.Delete != null)
-                    hashCode = hashCode * 59 + this.Delete.GetHashCode();
-                if (this.Edit != null)
-                    hashCode = hashCode * 59 + this.Edit.GetHashCode();
-                if (this.IsYesNoRight != null)
-                    hashCode = hashCode * 59 + this.IsYesNoRight.GetHashCode();
-                if (this.NonScopeOwnerAdd != null)
-                    hashCode = hashCode * 59 + this.NonScopeOwnerAdd.GetHashCode();
-                if (this.NonScopeOwnerDelete != null)
-                    hashCode = hashCode * 59 + this.NonScopeOwnerDelete.GetHashCode();
-                if (this.NonScopeOwnerEdit != null)
-                    hashCode = hashCode * 59 + this.NonScopeOwnerEdit.GetHashCode();
-                if (this.NonScopeOwnerView != null)
-                    hashCode = hashCode * 59 + this.NonScopeOwnerView.GetHashCode();
-                if (this.RightId != null)
-                    hashCode = hashCode * 59 + this.RightId.GetHashCode();
-                if (this.RightName != null)
-                    hashCode = hashCode * 59 + this.RightName.GetHashCode();
-                if (this.StandardRightName != null)
-                    hashCode = hashCode * 59 + this.StandardRightName.GetHashCode();
-                if (this.ViewRunOpen != null)
-                    hashCode = hashCode * 59 + this.ViewRunOpen.GetHashCode();
+                var hashCode = 41;
+                if (Add != null)
+                    hashCode = hashCode * 59 + Add.GetHashCode();
+                if (Allow != null)
+                    hashCode = hashCode * 59 + Allow.GetHashCode();
+                if (CategoryDescription != null)
+                    hashCode = hashCode * 59 + CategoryDescription.GetHashCode();
+                if (CategoryId != null)
+                    hashCode = hashCode * 59 + CategoryId.GetHashCode();
+                if (CategoryName != null)
+                    hashCode = hashCode * 59 + CategoryName.GetHashCode();
+                if (Delete != null)
+                    hashCode = hashCode * 59 + Delete.GetHashCode();
+                if (Edit != null)
+                    hashCode = hashCode * 59 + Edit.GetHashCode();
+                if (IsYesNoRight != null)
+                    hashCode = hashCode * 59 + IsYesNoRight.GetHashCode();
+                if (NonScopeOwnerAdd != null)
+                    hashCode = hashCode * 59 + NonScopeOwnerAdd.GetHashCode();
+                if (NonScopeOwnerDelete != null)
+                    hashCode = hashCode * 59 + NonScopeOwnerDelete.GetHashCode();
+                if (NonScopeOwnerEdit != null)
+                    hashCode = hashCode * 59 + NonScopeOwnerEdit.GetHashCode();
+                if (NonScopeOwnerView != null)
+                    hashCode = hashCode * 59 + NonScopeOwnerView.GetHashCode();
+                if (RightId != null)
+                    hashCode = hashCode * 59 + RightId.GetHashCode();
+                if (RightName != null)
+                    hashCode = hashCode * 59 + RightName.GetHashCode();
+                if (StandardRightName != null)
+                    hashCode = hashCode * 59 + StandardRightName.GetHashCode();
+                if (ViewRunOpen != null)
+                    hashCode = hashCode * 59 + ViewRunOpen.GetHashCode();
                 return hashCode;
             }
         }
@@ -345,7 +345,7 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

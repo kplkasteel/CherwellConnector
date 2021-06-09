@@ -30,14 +30,14 @@ namespace CherwellConnector.Model
         /// <param name="label">label.</param>
         /// <param name="multiline">multiline.</param>
         /// <param name="value">value.</param>
-        public TrebuchetWebApiDataContractsFormsSectionField(List<Object> attributes = default(List<Object>), string fieldId = default(string), string fieldType = default(string), string label = default(string), bool? multiline = default(bool?), string value = default(string))
+        public TrebuchetWebApiDataContractsFormsSectionField(List<Object> attributes = default, string fieldId = default, string fieldType = default, string label = default, bool? multiline = default, string value = default)
         {
-            this.Attributes = attributes;
-            this.FieldId = fieldId;
-            this.FieldType = fieldType;
-            this.Label = label;
-            this.Multiline = multiline;
-            this.Value = value;
+            Attributes = attributes;
+            FieldId = fieldId;
+            FieldType = fieldType;
+            Label = label;
+            Multiline = multiline;
+            Value = value;
         }
         
         /// <summary>
@@ -84,12 +84,12 @@ namespace CherwellConnector.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrebuchetWebApiDataContractsFormsSectionField {\n");
-            sb.Append("  Attributes: ").Append(this.Attributes).Append("\n");
-            sb.Append("  FieldId: ").Append(this.FieldId).Append("\n");
-            sb.Append("  FieldType: ").Append(this.FieldType).Append("\n");
-            sb.Append("  Label: ").Append(this.Label).Append("\n");
-            sb.Append("  Multiline: ").Append(this.Multiline).Append("\n");
-            sb.Append("  Value: ").Append(this.Value).Append("\n");
+            sb.Append("  Attributes: ").Append(Attributes).Append("\n");
+            sb.Append("  FieldId: ").Append(FieldId).Append("\n");
+            sb.Append("  FieldType: ").Append(FieldType).Append("\n");
+            sb.Append("  Label: ").Append(Label).Append("\n");
+            sb.Append("  Multiline: ").Append(Multiline).Append("\n");
+            sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -110,7 +110,7 @@ namespace CherwellConnector.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as TrebuchetWebApiDataContractsFormsSectionField);
+            return Equals(input as TrebuchetWebApiDataContractsFormsSectionField);
         }
 
         /// <summary>
@@ -125,34 +125,34 @@ namespace CherwellConnector.Model
 
             return 
                 (
-                    this.Attributes == input.Attributes ||
-                    this.Attributes != null &&
-                    this.Attributes.SequenceEqual(input.Attributes)
+                    Attributes == input.Attributes ||
+                    Attributes != null &&
+                    Attributes.SequenceEqual(input.Attributes)
                 ) && 
                 (
-                    this.FieldId == input.FieldId ||
-                    (this.FieldId != null &&
-                    this.FieldId.Equals(input.FieldId))
+                    FieldId == input.FieldId ||
+                    (FieldId != null &&
+                    FieldId.Equals(input.FieldId))
                 ) && 
                 (
-                    this.FieldType == input.FieldType ||
-                    (this.FieldType != null &&
-                    this.FieldType.Equals(input.FieldType))
+                    FieldType == input.FieldType ||
+                    (FieldType != null &&
+                    FieldType.Equals(input.FieldType))
                 ) && 
                 (
-                    this.Label == input.Label ||
-                    (this.Label != null &&
-                    this.Label.Equals(input.Label))
+                    Label == input.Label ||
+                    (Label != null &&
+                    Label.Equals(input.Label))
                 ) && 
                 (
-                    this.Multiline == input.Multiline ||
-                    (this.Multiline != null &&
-                    this.Multiline.Equals(input.Multiline))
+                    Multiline == input.Multiline ||
+                    (Multiline != null &&
+                    Multiline.Equals(input.Multiline))
                 ) && 
                 (
-                    this.Value == input.Value ||
-                    (this.Value != null &&
-                    this.Value.Equals(input.Value))
+                    Value == input.Value ||
+                    (Value != null &&
+                    Value.Equals(input.Value))
                 );
         }
 
@@ -164,19 +164,19 @@ namespace CherwellConnector.Model
         {
             unchecked // Overflow is fine, just wrap
             {
-                int hashCode = 41;
-                if (this.Attributes != null)
-                    hashCode = hashCode * 59 + this.Attributes.GetHashCode();
-                if (this.FieldId != null)
-                    hashCode = hashCode * 59 + this.FieldId.GetHashCode();
-                if (this.FieldType != null)
-                    hashCode = hashCode * 59 + this.FieldType.GetHashCode();
-                if (this.Label != null)
-                    hashCode = hashCode * 59 + this.Label.GetHashCode();
-                if (this.Multiline != null)
-                    hashCode = hashCode * 59 + this.Multiline.GetHashCode();
-                if (this.Value != null)
-                    hashCode = hashCode * 59 + this.Value.GetHashCode();
+                var hashCode = 41;
+                if (Attributes != null)
+                    hashCode = hashCode * 59 + Attributes.GetHashCode();
+                if (FieldId != null)
+                    hashCode = hashCode * 59 + FieldId.GetHashCode();
+                if (FieldType != null)
+                    hashCode = hashCode * 59 + FieldType.GetHashCode();
+                if (Label != null)
+                    hashCode = hashCode * 59 + Label.GetHashCode();
+                if (Multiline != null)
+                    hashCode = hashCode * 59 + Multiline.GetHashCode();
+                if (Value != null)
+                    hashCode = hashCode * 59 + Value.GetHashCode();
                 return hashCode;
             }
         }
@@ -186,7 +186,7 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

@@ -32,17 +32,17 @@ namespace CherwellConnector.Model
         /// <param name="refreshTokenLifespanMinutes">refreshTokenLifespanMinutes.</param>
         /// <param name="standInKey">standInKey.</param>
         /// <param name="tokenLifespanMinutes">tokenLifespanMinutes.</param>
-        public TrebuchetWebApiDataContractsSecuritySaveApiClientSettingRequest(bool? allowAnonymousAccess = default(bool?), bool? apiAccessIsEnabled = default(bool?), bool? createNewClientKey = default(bool?), string culture = default(string), string description = default(string), string name = default(string), int? refreshTokenLifespanMinutes = default(int?), string standInKey = default(string), int? tokenLifespanMinutes = default(int?))
+        public TrebuchetWebApiDataContractsSecuritySaveApiClientSettingRequest(bool? allowAnonymousAccess = default, bool? apiAccessIsEnabled = default, bool? createNewClientKey = default, string culture = default, string description = default, string name = default, int? refreshTokenLifespanMinutes = default, string standInKey = default, int? tokenLifespanMinutes = default)
         {
-            this.AllowAnonymousAccess = allowAnonymousAccess;
-            this.ApiAccessIsEnabled = apiAccessIsEnabled;
-            this.CreateNewClientKey = createNewClientKey;
-            this.Culture = culture;
-            this.Description = description;
-            this.Name = name;
-            this.RefreshTokenLifespanMinutes = refreshTokenLifespanMinutes;
-            this.StandInKey = standInKey;
-            this.TokenLifespanMinutes = tokenLifespanMinutes;
+            AllowAnonymousAccess = allowAnonymousAccess;
+            ApiAccessIsEnabled = apiAccessIsEnabled;
+            CreateNewClientKey = createNewClientKey;
+            Culture = culture;
+            Description = description;
+            Name = name;
+            RefreshTokenLifespanMinutes = refreshTokenLifespanMinutes;
+            StandInKey = standInKey;
+            TokenLifespanMinutes = tokenLifespanMinutes;
         }
         
         /// <summary>
@@ -107,15 +107,15 @@ namespace CherwellConnector.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrebuchetWebApiDataContractsSecuritySaveApiClientSettingRequest {\n");
-            sb.Append("  AllowAnonymousAccess: ").Append(this.AllowAnonymousAccess).Append("\n");
-            sb.Append("  ApiAccessIsEnabled: ").Append(this.ApiAccessIsEnabled).Append("\n");
-            sb.Append("  CreateNewClientKey: ").Append(this.CreateNewClientKey).Append("\n");
-            sb.Append("  Culture: ").Append(this.Culture).Append("\n");
-            sb.Append("  Description: ").Append(this.Description).Append("\n");
-            sb.Append("  Name: ").Append(this.Name).Append("\n");
-            sb.Append("  RefreshTokenLifespanMinutes: ").Append(this.RefreshTokenLifespanMinutes).Append("\n");
-            sb.Append("  StandInKey: ").Append(this.StandInKey).Append("\n");
-            sb.Append("  TokenLifespanMinutes: ").Append(this.TokenLifespanMinutes).Append("\n");
+            sb.Append("  AllowAnonymousAccess: ").Append(AllowAnonymousAccess).Append("\n");
+            sb.Append("  ApiAccessIsEnabled: ").Append(ApiAccessIsEnabled).Append("\n");
+            sb.Append("  CreateNewClientKey: ").Append(CreateNewClientKey).Append("\n");
+            sb.Append("  Culture: ").Append(Culture).Append("\n");
+            sb.Append("  Description: ").Append(Description).Append("\n");
+            sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  RefreshTokenLifespanMinutes: ").Append(RefreshTokenLifespanMinutes).Append("\n");
+            sb.Append("  StandInKey: ").Append(StandInKey).Append("\n");
+            sb.Append("  TokenLifespanMinutes: ").Append(TokenLifespanMinutes).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -136,7 +136,7 @@ namespace CherwellConnector.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as TrebuchetWebApiDataContractsSecuritySaveApiClientSettingRequest);
+            return Equals(input as TrebuchetWebApiDataContractsSecuritySaveApiClientSettingRequest);
         }
 
         /// <summary>
@@ -151,49 +151,49 @@ namespace CherwellConnector.Model
 
             return 
                 (
-                    this.AllowAnonymousAccess == input.AllowAnonymousAccess ||
-                    (this.AllowAnonymousAccess != null &&
-                    this.AllowAnonymousAccess.Equals(input.AllowAnonymousAccess))
+                    AllowAnonymousAccess == input.AllowAnonymousAccess ||
+                    (AllowAnonymousAccess != null &&
+                    AllowAnonymousAccess.Equals(input.AllowAnonymousAccess))
                 ) && 
                 (
-                    this.ApiAccessIsEnabled == input.ApiAccessIsEnabled ||
-                    (this.ApiAccessIsEnabled != null &&
-                    this.ApiAccessIsEnabled.Equals(input.ApiAccessIsEnabled))
+                    ApiAccessIsEnabled == input.ApiAccessIsEnabled ||
+                    (ApiAccessIsEnabled != null &&
+                    ApiAccessIsEnabled.Equals(input.ApiAccessIsEnabled))
                 ) && 
                 (
-                    this.CreateNewClientKey == input.CreateNewClientKey ||
-                    (this.CreateNewClientKey != null &&
-                    this.CreateNewClientKey.Equals(input.CreateNewClientKey))
+                    CreateNewClientKey == input.CreateNewClientKey ||
+                    (CreateNewClientKey != null &&
+                    CreateNewClientKey.Equals(input.CreateNewClientKey))
                 ) && 
                 (
-                    this.Culture == input.Culture ||
-                    (this.Culture != null &&
-                    this.Culture.Equals(input.Culture))
+                    Culture == input.Culture ||
+                    (Culture != null &&
+                    Culture.Equals(input.Culture))
                 ) && 
                 (
-                    this.Description == input.Description ||
-                    (this.Description != null &&
-                    this.Description.Equals(input.Description))
+                    Description == input.Description ||
+                    (Description != null &&
+                    Description.Equals(input.Description))
                 ) && 
                 (
-                    this.Name == input.Name ||
-                    (this.Name != null &&
-                    this.Name.Equals(input.Name))
+                    Name == input.Name ||
+                    (Name != null &&
+                    Name.Equals(input.Name))
                 ) && 
                 (
-                    this.RefreshTokenLifespanMinutes == input.RefreshTokenLifespanMinutes ||
-                    (this.RefreshTokenLifespanMinutes != null &&
-                    this.RefreshTokenLifespanMinutes.Equals(input.RefreshTokenLifespanMinutes))
+                    RefreshTokenLifespanMinutes == input.RefreshTokenLifespanMinutes ||
+                    (RefreshTokenLifespanMinutes != null &&
+                    RefreshTokenLifespanMinutes.Equals(input.RefreshTokenLifespanMinutes))
                 ) && 
                 (
-                    this.StandInKey == input.StandInKey ||
-                    (this.StandInKey != null &&
-                    this.StandInKey.Equals(input.StandInKey))
+                    StandInKey == input.StandInKey ||
+                    (StandInKey != null &&
+                    StandInKey.Equals(input.StandInKey))
                 ) && 
                 (
-                    this.TokenLifespanMinutes == input.TokenLifespanMinutes ||
-                    (this.TokenLifespanMinutes != null &&
-                    this.TokenLifespanMinutes.Equals(input.TokenLifespanMinutes))
+                    TokenLifespanMinutes == input.TokenLifespanMinutes ||
+                    (TokenLifespanMinutes != null &&
+                    TokenLifespanMinutes.Equals(input.TokenLifespanMinutes))
                 );
         }
 
@@ -205,25 +205,25 @@ namespace CherwellConnector.Model
         {
             unchecked // Overflow is fine, just wrap
             {
-                int hashCode = 41;
-                if (this.AllowAnonymousAccess != null)
-                    hashCode = hashCode * 59 + this.AllowAnonymousAccess.GetHashCode();
-                if (this.ApiAccessIsEnabled != null)
-                    hashCode = hashCode * 59 + this.ApiAccessIsEnabled.GetHashCode();
-                if (this.CreateNewClientKey != null)
-                    hashCode = hashCode * 59 + this.CreateNewClientKey.GetHashCode();
-                if (this.Culture != null)
-                    hashCode = hashCode * 59 + this.Culture.GetHashCode();
-                if (this.Description != null)
-                    hashCode = hashCode * 59 + this.Description.GetHashCode();
-                if (this.Name != null)
-                    hashCode = hashCode * 59 + this.Name.GetHashCode();
-                if (this.RefreshTokenLifespanMinutes != null)
-                    hashCode = hashCode * 59 + this.RefreshTokenLifespanMinutes.GetHashCode();
-                if (this.StandInKey != null)
-                    hashCode = hashCode * 59 + this.StandInKey.GetHashCode();
-                if (this.TokenLifespanMinutes != null)
-                    hashCode = hashCode * 59 + this.TokenLifespanMinutes.GetHashCode();
+                var hashCode = 41;
+                if (AllowAnonymousAccess != null)
+                    hashCode = hashCode * 59 + AllowAnonymousAccess.GetHashCode();
+                if (ApiAccessIsEnabled != null)
+                    hashCode = hashCode * 59 + ApiAccessIsEnabled.GetHashCode();
+                if (CreateNewClientKey != null)
+                    hashCode = hashCode * 59 + CreateNewClientKey.GetHashCode();
+                if (Culture != null)
+                    hashCode = hashCode * 59 + Culture.GetHashCode();
+                if (Description != null)
+                    hashCode = hashCode * 59 + Description.GetHashCode();
+                if (Name != null)
+                    hashCode = hashCode * 59 + Name.GetHashCode();
+                if (RefreshTokenLifespanMinutes != null)
+                    hashCode = hashCode * 59 + RefreshTokenLifespanMinutes.GetHashCode();
+                if (StandInKey != null)
+                    hashCode = hashCode * 59 + StandInKey.GetHashCode();
+                if (TokenLifespanMinutes != null)
+                    hashCode = hashCode * 59 + TokenLifespanMinutes.GetHashCode();
                 return hashCode;
             }
         }
@@ -233,7 +233,7 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

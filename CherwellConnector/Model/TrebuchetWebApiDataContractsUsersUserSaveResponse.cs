@@ -28,13 +28,13 @@ namespace CherwellConnector.Model
         /// <param name="error">error.</param>
         /// <param name="errorCode">errorCode.</param>
         /// <param name="hasError">hasError.</param>
-        public TrebuchetWebApiDataContractsUsersUserSaveResponse(string busObPublicId = default(string), string busObRecId = default(string), string error = default(string), string errorCode = default(string), bool? hasError = default(bool?))
+        public TrebuchetWebApiDataContractsUsersUserSaveResponse(string busObPublicId = default, string busObRecId = default, string error = default, string errorCode = default, bool? hasError = default)
         {
-            this.BusObPublicId = busObPublicId;
-            this.BusObRecId = busObRecId;
-            this.Error = error;
-            this.ErrorCode = errorCode;
-            this.HasError = hasError;
+            BusObPublicId = busObPublicId;
+            BusObRecId = busObRecId;
+            Error = error;
+            ErrorCode = errorCode;
+            HasError = hasError;
         }
         
         /// <summary>
@@ -75,11 +75,11 @@ namespace CherwellConnector.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrebuchetWebApiDataContractsUsersUserSaveResponse {\n");
-            sb.Append("  BusObPublicId: ").Append(this.BusObPublicId).Append("\n");
-            sb.Append("  BusObRecId: ").Append(this.BusObRecId).Append("\n");
-            sb.Append("  Error: ").Append(this.Error).Append("\n");
-            sb.Append("  ErrorCode: ").Append(this.ErrorCode).Append("\n");
-            sb.Append("  HasError: ").Append(this.HasError).Append("\n");
+            sb.Append("  BusObPublicId: ").Append(BusObPublicId).Append("\n");
+            sb.Append("  BusObRecId: ").Append(BusObRecId).Append("\n");
+            sb.Append("  Error: ").Append(Error).Append("\n");
+            sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
+            sb.Append("  HasError: ").Append(HasError).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -100,7 +100,7 @@ namespace CherwellConnector.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as TrebuchetWebApiDataContractsUsersUserSaveResponse);
+            return Equals(input as TrebuchetWebApiDataContractsUsersUserSaveResponse);
         }
 
         /// <summary>
@@ -115,29 +115,29 @@ namespace CherwellConnector.Model
 
             return 
                 (
-                    this.BusObPublicId == input.BusObPublicId ||
-                    (this.BusObPublicId != null &&
-                    this.BusObPublicId.Equals(input.BusObPublicId))
+                    BusObPublicId == input.BusObPublicId ||
+                    (BusObPublicId != null &&
+                    BusObPublicId.Equals(input.BusObPublicId))
                 ) && 
                 (
-                    this.BusObRecId == input.BusObRecId ||
-                    (this.BusObRecId != null &&
-                    this.BusObRecId.Equals(input.BusObRecId))
+                    BusObRecId == input.BusObRecId ||
+                    (BusObRecId != null &&
+                    BusObRecId.Equals(input.BusObRecId))
                 ) && 
                 (
-                    this.Error == input.Error ||
-                    (this.Error != null &&
-                    this.Error.Equals(input.Error))
+                    Error == input.Error ||
+                    (Error != null &&
+                    Error.Equals(input.Error))
                 ) && 
                 (
-                    this.ErrorCode == input.ErrorCode ||
-                    (this.ErrorCode != null &&
-                    this.ErrorCode.Equals(input.ErrorCode))
+                    ErrorCode == input.ErrorCode ||
+                    (ErrorCode != null &&
+                    ErrorCode.Equals(input.ErrorCode))
                 ) && 
                 (
-                    this.HasError == input.HasError ||
-                    (this.HasError != null &&
-                    this.HasError.Equals(input.HasError))
+                    HasError == input.HasError ||
+                    (HasError != null &&
+                    HasError.Equals(input.HasError))
                 );
         }
 
@@ -149,17 +149,17 @@ namespace CherwellConnector.Model
         {
             unchecked // Overflow is fine, just wrap
             {
-                int hashCode = 41;
-                if (this.BusObPublicId != null)
-                    hashCode = hashCode * 59 + this.BusObPublicId.GetHashCode();
-                if (this.BusObRecId != null)
-                    hashCode = hashCode * 59 + this.BusObRecId.GetHashCode();
-                if (this.Error != null)
-                    hashCode = hashCode * 59 + this.Error.GetHashCode();
-                if (this.ErrorCode != null)
-                    hashCode = hashCode * 59 + this.ErrorCode.GetHashCode();
-                if (this.HasError != null)
-                    hashCode = hashCode * 59 + this.HasError.GetHashCode();
+                var hashCode = 41;
+                if (BusObPublicId != null)
+                    hashCode = hashCode * 59 + BusObPublicId.GetHashCode();
+                if (BusObRecId != null)
+                    hashCode = hashCode * 59 + BusObRecId.GetHashCode();
+                if (Error != null)
+                    hashCode = hashCode * 59 + Error.GetHashCode();
+                if (ErrorCode != null)
+                    hashCode = hashCode * 59 + ErrorCode.GetHashCode();
+                if (HasError != null)
+                    hashCode = hashCode * 59 + HasError.GetHashCode();
                 return hashCode;
             }
         }
@@ -169,7 +169,7 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

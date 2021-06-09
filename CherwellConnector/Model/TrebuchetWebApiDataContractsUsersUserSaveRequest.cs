@@ -42,26 +42,26 @@ namespace CherwellConnector.Model
         /// <param name="userInfoFields">userInfoFields.</param>
         /// <param name="userMustChangePasswordAtNextLogin">userMustChangePasswordAtNextLogin.</param>
         /// <param name="windowsUserId">windowsUserId.</param>
-        public TrebuchetWebApiDataContractsUsersUserSaveRequest(bool? accountLocked = default(bool?), string busObId = default(string), string busObPublicId = default(string), string busObRecId = default(string), string displayName = default(string), string error = default(string), string errorCode = default(string), bool? hasError = default(bool?), bool? ldapRequired = default(bool?), string loginId = default(string), DateTime? nextPasswordResetDate = default(DateTime?), string password = default(string), bool? passwordNeverExpires = default(bool?), string securityGroupId = default(string), bool? userCannotChangePassword = default(bool?), List<TrebuchetWebApiDataContractsBusinessObjectFieldTemplateItem> userInfoFields = default(List<TrebuchetWebApiDataContractsBusinessObjectFieldTemplateItem>), bool? userMustChangePasswordAtNextLogin = default(bool?), string windowsUserId = default(string))
+        public TrebuchetWebApiDataContractsUsersUserSaveRequest(bool? accountLocked = default, string busObId = default, string busObPublicId = default, string busObRecId = default, string displayName = default, string error = default, string errorCode = default, bool? hasError = default, bool? ldapRequired = default, string loginId = default, DateTime? nextPasswordResetDate = default, string password = default, bool? passwordNeverExpires = default, string securityGroupId = default, bool? userCannotChangePassword = default, List<FieldTemplateItem> userInfoFields = default, bool? userMustChangePasswordAtNextLogin = default, string windowsUserId = default)
         {
-            this.AccountLocked = accountLocked;
-            this.BusObId = busObId;
-            this.BusObPublicId = busObPublicId;
-            this.BusObRecId = busObRecId;
-            this.DisplayName = displayName;
-            this.Error = error;
-            this.ErrorCode = errorCode;
-            this.HasError = hasError;
-            this.LdapRequired = ldapRequired;
-            this.LoginId = loginId;
-            this.NextPasswordResetDate = nextPasswordResetDate;
-            this.Password = password;
-            this.PasswordNeverExpires = passwordNeverExpires;
-            this.SecurityGroupId = securityGroupId;
-            this.UserCannotChangePassword = userCannotChangePassword;
-            this.UserInfoFields = userInfoFields;
-            this.UserMustChangePasswordAtNextLogin = userMustChangePasswordAtNextLogin;
-            this.WindowsUserId = windowsUserId;
+            AccountLocked = accountLocked;
+            BusObId = busObId;
+            BusObPublicId = busObPublicId;
+            BusObRecId = busObRecId;
+            DisplayName = displayName;
+            Error = error;
+            ErrorCode = errorCode;
+            HasError = hasError;
+            LdapRequired = ldapRequired;
+            LoginId = loginId;
+            NextPasswordResetDate = nextPasswordResetDate;
+            Password = password;
+            PasswordNeverExpires = passwordNeverExpires;
+            SecurityGroupId = securityGroupId;
+            UserCannotChangePassword = userCannotChangePassword;
+            UserInfoFields = userInfoFields;
+            UserMustChangePasswordAtNextLogin = userMustChangePasswordAtNextLogin;
+            WindowsUserId = windowsUserId;
         }
         
         /// <summary>
@@ -158,7 +158,7 @@ namespace CherwellConnector.Model
         /// Gets or Sets UserInfoFields
         /// </summary>
         [DataMember(Name="userInfoFields", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsBusinessObjectFieldTemplateItem> UserInfoFields { get; set; }
+        public List<FieldTemplateItem> UserInfoFields { get; set; }
 
         /// <summary>
         /// Gets or Sets UserMustChangePasswordAtNextLogin
@@ -180,24 +180,24 @@ namespace CherwellConnector.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrebuchetWebApiDataContractsUsersUserSaveRequest {\n");
-            sb.Append("  AccountLocked: ").Append(this.AccountLocked).Append("\n");
-            sb.Append("  BusObId: ").Append(this.BusObId).Append("\n");
-            sb.Append("  BusObPublicId: ").Append(this.BusObPublicId).Append("\n");
-            sb.Append("  BusObRecId: ").Append(this.BusObRecId).Append("\n");
-            sb.Append("  DisplayName: ").Append(this.DisplayName).Append("\n");
-            sb.Append("  Error: ").Append(this.Error).Append("\n");
-            sb.Append("  ErrorCode: ").Append(this.ErrorCode).Append("\n");
-            sb.Append("  HasError: ").Append(this.HasError).Append("\n");
-            sb.Append("  LdapRequired: ").Append(this.LdapRequired).Append("\n");
-            sb.Append("  LoginId: ").Append(this.LoginId).Append("\n");
-            sb.Append("  NextPasswordResetDate: ").Append(this.NextPasswordResetDate).Append("\n");
-            sb.Append("  Password: ").Append(this.Password).Append("\n");
-            sb.Append("  PasswordNeverExpires: ").Append(this.PasswordNeverExpires).Append("\n");
-            sb.Append("  SecurityGroupId: ").Append(this.SecurityGroupId).Append("\n");
-            sb.Append("  UserCannotChangePassword: ").Append(this.UserCannotChangePassword).Append("\n");
-            sb.Append("  UserInfoFields: ").Append(this.UserInfoFields).Append("\n");
-            sb.Append("  UserMustChangePasswordAtNextLogin: ").Append(this.UserMustChangePasswordAtNextLogin).Append("\n");
-            sb.Append("  WindowsUserId: ").Append(this.WindowsUserId).Append("\n");
+            sb.Append("  AccountLocked: ").Append(AccountLocked).Append("\n");
+            sb.Append("  BusObId: ").Append(BusObId).Append("\n");
+            sb.Append("  BusObPublicId: ").Append(BusObPublicId).Append("\n");
+            sb.Append("  BusObRecId: ").Append(BusObRecId).Append("\n");
+            sb.Append("  DisplayName: ").Append(DisplayName).Append("\n");
+            sb.Append("  Error: ").Append(Error).Append("\n");
+            sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
+            sb.Append("  HasError: ").Append(HasError).Append("\n");
+            sb.Append("  LdapRequired: ").Append(LdapRequired).Append("\n");
+            sb.Append("  LoginId: ").Append(LoginId).Append("\n");
+            sb.Append("  NextPasswordResetDate: ").Append(NextPasswordResetDate).Append("\n");
+            sb.Append("  Password: ").Append(Password).Append("\n");
+            sb.Append("  PasswordNeverExpires: ").Append(PasswordNeverExpires).Append("\n");
+            sb.Append("  SecurityGroupId: ").Append(SecurityGroupId).Append("\n");
+            sb.Append("  UserCannotChangePassword: ").Append(UserCannotChangePassword).Append("\n");
+            sb.Append("  UserInfoFields: ").Append(UserInfoFields).Append("\n");
+            sb.Append("  UserMustChangePasswordAtNextLogin: ").Append(UserMustChangePasswordAtNextLogin).Append("\n");
+            sb.Append("  WindowsUserId: ").Append(WindowsUserId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -218,7 +218,7 @@ namespace CherwellConnector.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as TrebuchetWebApiDataContractsUsersUserSaveRequest);
+            return Equals(input as TrebuchetWebApiDataContractsUsersUserSaveRequest);
         }
 
         /// <summary>
@@ -233,94 +233,94 @@ namespace CherwellConnector.Model
 
             return 
                 (
-                    this.AccountLocked == input.AccountLocked ||
-                    (this.AccountLocked != null &&
-                    this.AccountLocked.Equals(input.AccountLocked))
+                    AccountLocked == input.AccountLocked ||
+                    (AccountLocked != null &&
+                    AccountLocked.Equals(input.AccountLocked))
                 ) && 
                 (
-                    this.BusObId == input.BusObId ||
-                    (this.BusObId != null &&
-                    this.BusObId.Equals(input.BusObId))
+                    BusObId == input.BusObId ||
+                    (BusObId != null &&
+                    BusObId.Equals(input.BusObId))
                 ) && 
                 (
-                    this.BusObPublicId == input.BusObPublicId ||
-                    (this.BusObPublicId != null &&
-                    this.BusObPublicId.Equals(input.BusObPublicId))
+                    BusObPublicId == input.BusObPublicId ||
+                    (BusObPublicId != null &&
+                    BusObPublicId.Equals(input.BusObPublicId))
                 ) && 
                 (
-                    this.BusObRecId == input.BusObRecId ||
-                    (this.BusObRecId != null &&
-                    this.BusObRecId.Equals(input.BusObRecId))
+                    BusObRecId == input.BusObRecId ||
+                    (BusObRecId != null &&
+                    BusObRecId.Equals(input.BusObRecId))
                 ) && 
                 (
-                    this.DisplayName == input.DisplayName ||
-                    (this.DisplayName != null &&
-                    this.DisplayName.Equals(input.DisplayName))
+                    DisplayName == input.DisplayName ||
+                    (DisplayName != null &&
+                    DisplayName.Equals(input.DisplayName))
                 ) && 
                 (
-                    this.Error == input.Error ||
-                    (this.Error != null &&
-                    this.Error.Equals(input.Error))
+                    Error == input.Error ||
+                    (Error != null &&
+                    Error.Equals(input.Error))
                 ) && 
                 (
-                    this.ErrorCode == input.ErrorCode ||
-                    (this.ErrorCode != null &&
-                    this.ErrorCode.Equals(input.ErrorCode))
+                    ErrorCode == input.ErrorCode ||
+                    (ErrorCode != null &&
+                    ErrorCode.Equals(input.ErrorCode))
                 ) && 
                 (
-                    this.HasError == input.HasError ||
-                    (this.HasError != null &&
-                    this.HasError.Equals(input.HasError))
+                    HasError == input.HasError ||
+                    (HasError != null &&
+                    HasError.Equals(input.HasError))
                 ) && 
                 (
-                    this.LdapRequired == input.LdapRequired ||
-                    (this.LdapRequired != null &&
-                    this.LdapRequired.Equals(input.LdapRequired))
+                    LdapRequired == input.LdapRequired ||
+                    (LdapRequired != null &&
+                    LdapRequired.Equals(input.LdapRequired))
                 ) && 
                 (
-                    this.LoginId == input.LoginId ||
-                    (this.LoginId != null &&
-                    this.LoginId.Equals(input.LoginId))
+                    LoginId == input.LoginId ||
+                    (LoginId != null &&
+                    LoginId.Equals(input.LoginId))
                 ) && 
                 (
-                    this.NextPasswordResetDate == input.NextPasswordResetDate ||
-                    (this.NextPasswordResetDate != null &&
-                    this.NextPasswordResetDate.Equals(input.NextPasswordResetDate))
+                    NextPasswordResetDate == input.NextPasswordResetDate ||
+                    (NextPasswordResetDate != null &&
+                    NextPasswordResetDate.Equals(input.NextPasswordResetDate))
                 ) && 
                 (
-                    this.Password == input.Password ||
-                    (this.Password != null &&
-                    this.Password.Equals(input.Password))
+                    Password == input.Password ||
+                    (Password != null &&
+                    Password.Equals(input.Password))
                 ) && 
                 (
-                    this.PasswordNeverExpires == input.PasswordNeverExpires ||
-                    (this.PasswordNeverExpires != null &&
-                    this.PasswordNeverExpires.Equals(input.PasswordNeverExpires))
+                    PasswordNeverExpires == input.PasswordNeverExpires ||
+                    (PasswordNeverExpires != null &&
+                    PasswordNeverExpires.Equals(input.PasswordNeverExpires))
                 ) && 
                 (
-                    this.SecurityGroupId == input.SecurityGroupId ||
-                    (this.SecurityGroupId != null &&
-                    this.SecurityGroupId.Equals(input.SecurityGroupId))
+                    SecurityGroupId == input.SecurityGroupId ||
+                    (SecurityGroupId != null &&
+                    SecurityGroupId.Equals(input.SecurityGroupId))
                 ) && 
                 (
-                    this.UserCannotChangePassword == input.UserCannotChangePassword ||
-                    (this.UserCannotChangePassword != null &&
-                    this.UserCannotChangePassword.Equals(input.UserCannotChangePassword))
+                    UserCannotChangePassword == input.UserCannotChangePassword ||
+                    (UserCannotChangePassword != null &&
+                    UserCannotChangePassword.Equals(input.UserCannotChangePassword))
                 ) && 
                 (
-                    this.UserInfoFields == input.UserInfoFields ||
-                    this.UserInfoFields != null &&
-                    this.UserInfoFields.SequenceEqual(input.UserInfoFields)
+                    UserInfoFields == input.UserInfoFields ||
+                    UserInfoFields != null &&
+                    UserInfoFields.SequenceEqual(input.UserInfoFields)
                 ) && 
                 (
-                    this.UserMustChangePasswordAtNextLogin == input.UserMustChangePasswordAtNextLogin ||
-                    (this.UserMustChangePasswordAtNextLogin != null &&
-                    this.UserMustChangePasswordAtNextLogin.Equals(input.UserMustChangePasswordAtNextLogin))
+                    UserMustChangePasswordAtNextLogin == input.UserMustChangePasswordAtNextLogin ||
+                    (UserMustChangePasswordAtNextLogin != null &&
+                    UserMustChangePasswordAtNextLogin.Equals(input.UserMustChangePasswordAtNextLogin))
                 ) && 
                 (
-                    this.WindowsUserId == input.WindowsUserId ||
-                    (this.WindowsUserId != null &&
-                    this.WindowsUserId.Equals(input.WindowsUserId))
+                    WindowsUserId == input.WindowsUserId ||
+                    (WindowsUserId != null &&
+                    WindowsUserId.Equals(input.WindowsUserId))
                 );
         }
 
@@ -332,43 +332,43 @@ namespace CherwellConnector.Model
         {
             unchecked // Overflow is fine, just wrap
             {
-                int hashCode = 41;
-                if (this.AccountLocked != null)
-                    hashCode = hashCode * 59 + this.AccountLocked.GetHashCode();
-                if (this.BusObId != null)
-                    hashCode = hashCode * 59 + this.BusObId.GetHashCode();
-                if (this.BusObPublicId != null)
-                    hashCode = hashCode * 59 + this.BusObPublicId.GetHashCode();
-                if (this.BusObRecId != null)
-                    hashCode = hashCode * 59 + this.BusObRecId.GetHashCode();
-                if (this.DisplayName != null)
-                    hashCode = hashCode * 59 + this.DisplayName.GetHashCode();
-                if (this.Error != null)
-                    hashCode = hashCode * 59 + this.Error.GetHashCode();
-                if (this.ErrorCode != null)
-                    hashCode = hashCode * 59 + this.ErrorCode.GetHashCode();
-                if (this.HasError != null)
-                    hashCode = hashCode * 59 + this.HasError.GetHashCode();
-                if (this.LdapRequired != null)
-                    hashCode = hashCode * 59 + this.LdapRequired.GetHashCode();
-                if (this.LoginId != null)
-                    hashCode = hashCode * 59 + this.LoginId.GetHashCode();
-                if (this.NextPasswordResetDate != null)
-                    hashCode = hashCode * 59 + this.NextPasswordResetDate.GetHashCode();
-                if (this.Password != null)
-                    hashCode = hashCode * 59 + this.Password.GetHashCode();
-                if (this.PasswordNeverExpires != null)
-                    hashCode = hashCode * 59 + this.PasswordNeverExpires.GetHashCode();
-                if (this.SecurityGroupId != null)
-                    hashCode = hashCode * 59 + this.SecurityGroupId.GetHashCode();
-                if (this.UserCannotChangePassword != null)
-                    hashCode = hashCode * 59 + this.UserCannotChangePassword.GetHashCode();
-                if (this.UserInfoFields != null)
-                    hashCode = hashCode * 59 + this.UserInfoFields.GetHashCode();
-                if (this.UserMustChangePasswordAtNextLogin != null)
-                    hashCode = hashCode * 59 + this.UserMustChangePasswordAtNextLogin.GetHashCode();
-                if (this.WindowsUserId != null)
-                    hashCode = hashCode * 59 + this.WindowsUserId.GetHashCode();
+                var hashCode = 41;
+                if (AccountLocked != null)
+                    hashCode = hashCode * 59 + AccountLocked.GetHashCode();
+                if (BusObId != null)
+                    hashCode = hashCode * 59 + BusObId.GetHashCode();
+                if (BusObPublicId != null)
+                    hashCode = hashCode * 59 + BusObPublicId.GetHashCode();
+                if (BusObRecId != null)
+                    hashCode = hashCode * 59 + BusObRecId.GetHashCode();
+                if (DisplayName != null)
+                    hashCode = hashCode * 59 + DisplayName.GetHashCode();
+                if (Error != null)
+                    hashCode = hashCode * 59 + Error.GetHashCode();
+                if (ErrorCode != null)
+                    hashCode = hashCode * 59 + ErrorCode.GetHashCode();
+                if (HasError != null)
+                    hashCode = hashCode * 59 + HasError.GetHashCode();
+                if (LdapRequired != null)
+                    hashCode = hashCode * 59 + LdapRequired.GetHashCode();
+                if (LoginId != null)
+                    hashCode = hashCode * 59 + LoginId.GetHashCode();
+                if (NextPasswordResetDate != null)
+                    hashCode = hashCode * 59 + NextPasswordResetDate.GetHashCode();
+                if (Password != null)
+                    hashCode = hashCode * 59 + Password.GetHashCode();
+                if (PasswordNeverExpires != null)
+                    hashCode = hashCode * 59 + PasswordNeverExpires.GetHashCode();
+                if (SecurityGroupId != null)
+                    hashCode = hashCode * 59 + SecurityGroupId.GetHashCode();
+                if (UserCannotChangePassword != null)
+                    hashCode = hashCode * 59 + UserCannotChangePassword.GetHashCode();
+                if (UserInfoFields != null)
+                    hashCode = hashCode * 59 + UserInfoFields.GetHashCode();
+                if (UserMustChangePasswordAtNextLogin != null)
+                    hashCode = hashCode * 59 + UserMustChangePasswordAtNextLogin.GetHashCode();
+                if (WindowsUserId != null)
+                    hashCode = hashCode * 59 + WindowsUserId.GetHashCode();
                 return hashCode;
             }
         }
@@ -378,7 +378,7 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

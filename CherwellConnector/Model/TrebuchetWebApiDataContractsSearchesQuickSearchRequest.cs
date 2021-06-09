@@ -26,10 +26,10 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="busObIds">busObIds.</param>
         /// <param name="searchText">searchText.</param>
-        public TrebuchetWebApiDataContractsSearchesQuickSearchRequest(List<string> busObIds = default(List<string>), string searchText = default(string))
+        public TrebuchetWebApiDataContractsSearchesQuickSearchRequest(List<string> busObIds = default, string searchText = default)
         {
-            this.BusObIds = busObIds;
-            this.SearchText = searchText;
+            BusObIds = busObIds;
+            SearchText = searchText;
         }
         
         /// <summary>
@@ -52,8 +52,8 @@ namespace CherwellConnector.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrebuchetWebApiDataContractsSearchesQuickSearchRequest {\n");
-            sb.Append("  BusObIds: ").Append(this.BusObIds).Append("\n");
-            sb.Append("  SearchText: ").Append(this.SearchText).Append("\n");
+            sb.Append("  BusObIds: ").Append(BusObIds).Append("\n");
+            sb.Append("  SearchText: ").Append(SearchText).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -74,7 +74,7 @@ namespace CherwellConnector.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as TrebuchetWebApiDataContractsSearchesQuickSearchRequest);
+            return Equals(input as TrebuchetWebApiDataContractsSearchesQuickSearchRequest);
         }
 
         /// <summary>
@@ -89,14 +89,14 @@ namespace CherwellConnector.Model
 
             return 
                 (
-                    this.BusObIds == input.BusObIds ||
-                    this.BusObIds != null &&
-                    this.BusObIds.SequenceEqual(input.BusObIds)
+                    BusObIds == input.BusObIds ||
+                    BusObIds != null &&
+                    BusObIds.SequenceEqual(input.BusObIds)
                 ) && 
                 (
-                    this.SearchText == input.SearchText ||
-                    (this.SearchText != null &&
-                    this.SearchText.Equals(input.SearchText))
+                    SearchText == input.SearchText ||
+                    (SearchText != null &&
+                    SearchText.Equals(input.SearchText))
                 );
         }
 
@@ -108,11 +108,11 @@ namespace CherwellConnector.Model
         {
             unchecked // Overflow is fine, just wrap
             {
-                int hashCode = 41;
-                if (this.BusObIds != null)
-                    hashCode = hashCode * 59 + this.BusObIds.GetHashCode();
-                if (this.SearchText != null)
-                    hashCode = hashCode * 59 + this.SearchText.GetHashCode();
+                var hashCode = 41;
+                if (BusObIds != null)
+                    hashCode = hashCode * 59 + BusObIds.GetHashCode();
+                if (SearchText != null)
+                    hashCode = hashCode * 59 + SearchText.GetHashCode();
                 return hashCode;
             }
         }
@@ -122,7 +122,7 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

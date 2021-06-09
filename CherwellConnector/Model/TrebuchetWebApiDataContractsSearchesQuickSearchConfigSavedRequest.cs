@@ -27,11 +27,11 @@ namespace CherwellConnector.Model
         /// <param name="standIn">standIn.</param>
         /// <param name="busObIds">busObIds.</param>
         /// <param name="isGeneral">isGeneral.</param>
-        public TrebuchetWebApiDataContractsSearchesQuickSearchConfigSavedRequest(string standIn = default(string), List<string> busObIds = default(List<string>), bool? isGeneral = default(bool?))
+        public TrebuchetWebApiDataContractsSearchesQuickSearchConfigSavedRequest(string standIn = default, List<string> busObIds = default, bool? isGeneral = default)
         {
-            this.StandIn = standIn;
-            this.BusObIds = busObIds;
-            this.IsGeneral = isGeneral;
+            StandIn = standIn;
+            BusObIds = busObIds;
+            IsGeneral = isGeneral;
         }
         
         /// <summary>
@@ -60,9 +60,9 @@ namespace CherwellConnector.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrebuchetWebApiDataContractsSearchesQuickSearchConfigSavedRequest {\n");
-            sb.Append("  StandIn: ").Append(this.StandIn).Append("\n");
-            sb.Append("  BusObIds: ").Append(this.BusObIds).Append("\n");
-            sb.Append("  IsGeneral: ").Append(this.IsGeneral).Append("\n");
+            sb.Append("  StandIn: ").Append(StandIn).Append("\n");
+            sb.Append("  BusObIds: ").Append(BusObIds).Append("\n");
+            sb.Append("  IsGeneral: ").Append(IsGeneral).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -83,7 +83,7 @@ namespace CherwellConnector.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as TrebuchetWebApiDataContractsSearchesQuickSearchConfigSavedRequest);
+            return Equals(input as TrebuchetWebApiDataContractsSearchesQuickSearchConfigSavedRequest);
         }
 
         /// <summary>
@@ -98,19 +98,19 @@ namespace CherwellConnector.Model
 
             return 
                 (
-                    this.StandIn == input.StandIn ||
-                    (this.StandIn != null &&
-                    this.StandIn.Equals(input.StandIn))
+                    StandIn == input.StandIn ||
+                    (StandIn != null &&
+                    StandIn.Equals(input.StandIn))
                 ) && 
                 (
-                    this.BusObIds == input.BusObIds ||
-                    this.BusObIds != null &&
-                    this.BusObIds.SequenceEqual(input.BusObIds)
+                    BusObIds == input.BusObIds ||
+                    BusObIds != null &&
+                    BusObIds.SequenceEqual(input.BusObIds)
                 ) && 
                 (
-                    this.IsGeneral == input.IsGeneral ||
-                    (this.IsGeneral != null &&
-                    this.IsGeneral.Equals(input.IsGeneral))
+                    IsGeneral == input.IsGeneral ||
+                    (IsGeneral != null &&
+                    IsGeneral.Equals(input.IsGeneral))
                 );
         }
 
@@ -122,13 +122,13 @@ namespace CherwellConnector.Model
         {
             unchecked // Overflow is fine, just wrap
             {
-                int hashCode = 41;
-                if (this.StandIn != null)
-                    hashCode = hashCode * 59 + this.StandIn.GetHashCode();
-                if (this.BusObIds != null)
-                    hashCode = hashCode * 59 + this.BusObIds.GetHashCode();
-                if (this.IsGeneral != null)
-                    hashCode = hashCode * 59 + this.IsGeneral.GetHashCode();
+                var hashCode = 41;
+                if (StandIn != null)
+                    hashCode = hashCode * 59 + StandIn.GetHashCode();
+                if (BusObIds != null)
+                    hashCode = hashCode * 59 + BusObIds.GetHashCode();
+                if (IsGeneral != null)
+                    hashCode = hashCode * 59 + IsGeneral.GetHashCode();
                 return hashCode;
             }
         }
@@ -138,7 +138,7 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

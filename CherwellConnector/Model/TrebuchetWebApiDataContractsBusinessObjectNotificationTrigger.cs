@@ -27,12 +27,12 @@ namespace CherwellConnector.Model
         /// <param name="sourceId">sourceId.</param>
         /// <param name="sourceChange">sourceChange.</param>
         /// <param name="key">key.</param>
-        public TrebuchetWebApiDataContractsBusinessObjectNotificationTrigger(string sourceType = default(string), string sourceId = default(string), string sourceChange = default(string), string key = default(string))
+        public TrebuchetWebApiDataContractsBusinessObjectNotificationTrigger(string sourceType = default, string sourceId = default, string sourceChange = default, string key = default)
         {
-            this.SourceType = sourceType;
-            this.SourceId = sourceId;
-            this.SourceChange = sourceChange;
-            this.Key = key;
+            SourceType = sourceType;
+            SourceId = sourceId;
+            SourceChange = sourceChange;
+            Key = key;
         }
         
         /// <summary>
@@ -67,10 +67,10 @@ namespace CherwellConnector.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrebuchetWebApiDataContractsBusinessObjectNotificationTrigger {\n");
-            sb.Append("  SourceType: ").Append(this.SourceType).Append("\n");
-            sb.Append("  SourceId: ").Append(this.SourceId).Append("\n");
-            sb.Append("  SourceChange: ").Append(this.SourceChange).Append("\n");
-            sb.Append("  Key: ").Append(this.Key).Append("\n");
+            sb.Append("  SourceType: ").Append(SourceType).Append("\n");
+            sb.Append("  SourceId: ").Append(SourceId).Append("\n");
+            sb.Append("  SourceChange: ").Append(SourceChange).Append("\n");
+            sb.Append("  Key: ").Append(Key).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -91,7 +91,7 @@ namespace CherwellConnector.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as TrebuchetWebApiDataContractsBusinessObjectNotificationTrigger);
+            return Equals(input as TrebuchetWebApiDataContractsBusinessObjectNotificationTrigger);
         }
 
         /// <summary>
@@ -106,24 +106,24 @@ namespace CherwellConnector.Model
 
             return 
                 (
-                    this.SourceType == input.SourceType ||
-                    (this.SourceType != null &&
-                    this.SourceType.Equals(input.SourceType))
+                    SourceType == input.SourceType ||
+                    (SourceType != null &&
+                    SourceType.Equals(input.SourceType))
                 ) && 
                 (
-                    this.SourceId == input.SourceId ||
-                    (this.SourceId != null &&
-                    this.SourceId.Equals(input.SourceId))
+                    SourceId == input.SourceId ||
+                    (SourceId != null &&
+                    SourceId.Equals(input.SourceId))
                 ) && 
                 (
-                    this.SourceChange == input.SourceChange ||
-                    (this.SourceChange != null &&
-                    this.SourceChange.Equals(input.SourceChange))
+                    SourceChange == input.SourceChange ||
+                    (SourceChange != null &&
+                    SourceChange.Equals(input.SourceChange))
                 ) && 
                 (
-                    this.Key == input.Key ||
-                    (this.Key != null &&
-                    this.Key.Equals(input.Key))
+                    Key == input.Key ||
+                    (Key != null &&
+                    Key.Equals(input.Key))
                 );
         }
 
@@ -135,15 +135,15 @@ namespace CherwellConnector.Model
         {
             unchecked // Overflow is fine, just wrap
             {
-                int hashCode = 41;
-                if (this.SourceType != null)
-                    hashCode = hashCode * 59 + this.SourceType.GetHashCode();
-                if (this.SourceId != null)
-                    hashCode = hashCode * 59 + this.SourceId.GetHashCode();
-                if (this.SourceChange != null)
-                    hashCode = hashCode * 59 + this.SourceChange.GetHashCode();
-                if (this.Key != null)
-                    hashCode = hashCode * 59 + this.Key.GetHashCode();
+                var hashCode = 41;
+                if (SourceType != null)
+                    hashCode = hashCode * 59 + SourceType.GetHashCode();
+                if (SourceId != null)
+                    hashCode = hashCode * 59 + SourceId.GetHashCode();
+                if (SourceChange != null)
+                    hashCode = hashCode * 59 + SourceChange.GetHashCode();
+                if (Key != null)
+                    hashCode = hashCode * 59 + Key.GetHashCode();
                 return hashCode;
             }
         }
@@ -153,7 +153,7 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

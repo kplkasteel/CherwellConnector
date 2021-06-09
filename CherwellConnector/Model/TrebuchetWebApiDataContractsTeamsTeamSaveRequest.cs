@@ -55,14 +55,14 @@ namespace CherwellConnector.Model
         /// <param name="teamId">teamId.</param>
         /// <param name="teamName">teamName.</param>
         /// <param name="teamType">teamType.</param>
-        public TrebuchetWebApiDataContractsTeamsTeamSaveRequest(string description = default(string), string emailAlias = default(string), string image = default(string), string teamId = default(string), string teamName = default(string), TeamTypeEnum? teamType = default(TeamTypeEnum?))
+        public TrebuchetWebApiDataContractsTeamsTeamSaveRequest(string description = default, string emailAlias = default, string image = default, string teamId = default, string teamName = default, TeamTypeEnum? teamType = default)
         {
-            this.Description = description;
-            this.EmailAlias = emailAlias;
-            this.Image = image;
-            this.TeamId = teamId;
-            this.TeamName = teamName;
-            this.TeamType = teamType;
+            Description = description;
+            EmailAlias = emailAlias;
+            Image = image;
+            TeamId = teamId;
+            TeamName = teamName;
+            TeamType = teamType;
         }
         
         /// <summary>
@@ -104,12 +104,12 @@ namespace CherwellConnector.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrebuchetWebApiDataContractsTeamsTeamSaveRequest {\n");
-            sb.Append("  Description: ").Append(this.Description).Append("\n");
-            sb.Append("  EmailAlias: ").Append(this.EmailAlias).Append("\n");
-            sb.Append("  Image: ").Append(this.Image).Append("\n");
-            sb.Append("  TeamId: ").Append(this.TeamId).Append("\n");
-            sb.Append("  TeamName: ").Append(this.TeamName).Append("\n");
-            sb.Append("  TeamType: ").Append(this.TeamType).Append("\n");
+            sb.Append("  Description: ").Append(Description).Append("\n");
+            sb.Append("  EmailAlias: ").Append(EmailAlias).Append("\n");
+            sb.Append("  Image: ").Append(Image).Append("\n");
+            sb.Append("  TeamId: ").Append(TeamId).Append("\n");
+            sb.Append("  TeamName: ").Append(TeamName).Append("\n");
+            sb.Append("  TeamType: ").Append(TeamType).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -130,7 +130,7 @@ namespace CherwellConnector.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as TrebuchetWebApiDataContractsTeamsTeamSaveRequest);
+            return Equals(input as TrebuchetWebApiDataContractsTeamsTeamSaveRequest);
         }
 
         /// <summary>
@@ -145,34 +145,34 @@ namespace CherwellConnector.Model
 
             return 
                 (
-                    this.Description == input.Description ||
-                    (this.Description != null &&
-                    this.Description.Equals(input.Description))
+                    Description == input.Description ||
+                    (Description != null &&
+                    Description.Equals(input.Description))
                 ) && 
                 (
-                    this.EmailAlias == input.EmailAlias ||
-                    (this.EmailAlias != null &&
-                    this.EmailAlias.Equals(input.EmailAlias))
+                    EmailAlias == input.EmailAlias ||
+                    (EmailAlias != null &&
+                    EmailAlias.Equals(input.EmailAlias))
                 ) && 
                 (
-                    this.Image == input.Image ||
-                    (this.Image != null &&
-                    this.Image.Equals(input.Image))
+                    Image == input.Image ||
+                    (Image != null &&
+                    Image.Equals(input.Image))
                 ) && 
                 (
-                    this.TeamId == input.TeamId ||
-                    (this.TeamId != null &&
-                    this.TeamId.Equals(input.TeamId))
+                    TeamId == input.TeamId ||
+                    (TeamId != null &&
+                    TeamId.Equals(input.TeamId))
                 ) && 
                 (
-                    this.TeamName == input.TeamName ||
-                    (this.TeamName != null &&
-                    this.TeamName.Equals(input.TeamName))
+                    TeamName == input.TeamName ||
+                    (TeamName != null &&
+                    TeamName.Equals(input.TeamName))
                 ) && 
                 (
-                    this.TeamType == input.TeamType ||
-                    (this.TeamType != null &&
-                    this.TeamType.Equals(input.TeamType))
+                    TeamType == input.TeamType ||
+                    (TeamType != null &&
+                    TeamType.Equals(input.TeamType))
                 );
         }
 
@@ -184,19 +184,19 @@ namespace CherwellConnector.Model
         {
             unchecked // Overflow is fine, just wrap
             {
-                int hashCode = 41;
-                if (this.Description != null)
-                    hashCode = hashCode * 59 + this.Description.GetHashCode();
-                if (this.EmailAlias != null)
-                    hashCode = hashCode * 59 + this.EmailAlias.GetHashCode();
-                if (this.Image != null)
-                    hashCode = hashCode * 59 + this.Image.GetHashCode();
-                if (this.TeamId != null)
-                    hashCode = hashCode * 59 + this.TeamId.GetHashCode();
-                if (this.TeamName != null)
-                    hashCode = hashCode * 59 + this.TeamName.GetHashCode();
-                if (this.TeamType != null)
-                    hashCode = hashCode * 59 + this.TeamType.GetHashCode();
+                var hashCode = 41;
+                if (Description != null)
+                    hashCode = hashCode * 59 + Description.GetHashCode();
+                if (EmailAlias != null)
+                    hashCode = hashCode * 59 + EmailAlias.GetHashCode();
+                if (Image != null)
+                    hashCode = hashCode * 59 + Image.GetHashCode();
+                if (TeamId != null)
+                    hashCode = hashCode * 59 + TeamId.GetHashCode();
+                if (TeamName != null)
+                    hashCode = hashCode * 59 + TeamName.GetHashCode();
+                if (TeamType != null)
+                    hashCode = hashCode * 59 + TeamType.GetHashCode();
                 return hashCode;
             }
         }
@@ -206,7 +206,7 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

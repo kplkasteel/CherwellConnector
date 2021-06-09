@@ -328,17 +328,17 @@ namespace CherwellConnector.Model
         /// <param name="errorMessage">errorMessage.</param>
         /// <param name="hasError">hasError.</param>
         /// <param name="httpStatusCode">httpStatusCode.</param>
-        public TrebuchetWebApiDataContractsOneStepActionsOneStepActionResponse(bool? completed = default(bool?), string currentPrimaryBusObId = default(string), string currentPrimaryBusObRecId = default(string), bool? hasNewAccessToken = default(bool?), string newAccessToken = default(string), string errorCode = default(string), string errorMessage = default(string), bool? hasError = default(bool?), HttpStatusCodeEnum? httpStatusCode = default(HttpStatusCodeEnum?))
+        public TrebuchetWebApiDataContractsOneStepActionsOneStepActionResponse(bool? completed = default, string currentPrimaryBusObId = default, string currentPrimaryBusObRecId = default, bool? hasNewAccessToken = default, string newAccessToken = default, string errorCode = default, string errorMessage = default, bool? hasError = default, HttpStatusCodeEnum? httpStatusCode = default)
         {
-            this.Completed = completed;
-            this.CurrentPrimaryBusObId = currentPrimaryBusObId;
-            this.CurrentPrimaryBusObRecId = currentPrimaryBusObRecId;
-            this.HasNewAccessToken = hasNewAccessToken;
-            this.NewAccessToken = newAccessToken;
-            this.ErrorCode = errorCode;
-            this.ErrorMessage = errorMessage;
-            this.HasError = hasError;
-            this.HttpStatusCode = httpStatusCode;
+            Completed = completed;
+            CurrentPrimaryBusObId = currentPrimaryBusObId;
+            CurrentPrimaryBusObRecId = currentPrimaryBusObRecId;
+            HasNewAccessToken = hasNewAccessToken;
+            NewAccessToken = newAccessToken;
+            ErrorCode = errorCode;
+            ErrorMessage = errorMessage;
+            HasError = hasError;
+            HttpStatusCode = httpStatusCode;
         }
         
         /// <summary>
@@ -398,15 +398,15 @@ namespace CherwellConnector.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrebuchetWebApiDataContractsOneStepActionsOneStepActionResponse {\n");
-            sb.Append("  Completed: ").Append(this.Completed).Append("\n");
-            sb.Append("  CurrentPrimaryBusObId: ").Append(this.CurrentPrimaryBusObId).Append("\n");
-            sb.Append("  CurrentPrimaryBusObRecId: ").Append(this.CurrentPrimaryBusObRecId).Append("\n");
-            sb.Append("  HasNewAccessToken: ").Append(this.HasNewAccessToken).Append("\n");
-            sb.Append("  NewAccessToken: ").Append(this.NewAccessToken).Append("\n");
-            sb.Append("  ErrorCode: ").Append(this.ErrorCode).Append("\n");
-            sb.Append("  ErrorMessage: ").Append(this.ErrorMessage).Append("\n");
-            sb.Append("  HasError: ").Append(this.HasError).Append("\n");
-            sb.Append("  HttpStatusCode: ").Append(this.HttpStatusCode).Append("\n");
+            sb.Append("  Completed: ").Append(Completed).Append("\n");
+            sb.Append("  CurrentPrimaryBusObId: ").Append(CurrentPrimaryBusObId).Append("\n");
+            sb.Append("  CurrentPrimaryBusObRecId: ").Append(CurrentPrimaryBusObRecId).Append("\n");
+            sb.Append("  HasNewAccessToken: ").Append(HasNewAccessToken).Append("\n");
+            sb.Append("  NewAccessToken: ").Append(NewAccessToken).Append("\n");
+            sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
+            sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append("\n");
+            sb.Append("  HasError: ").Append(HasError).Append("\n");
+            sb.Append("  HttpStatusCode: ").Append(HttpStatusCode).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -427,7 +427,7 @@ namespace CherwellConnector.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as TrebuchetWebApiDataContractsOneStepActionsOneStepActionResponse);
+            return Equals(input as TrebuchetWebApiDataContractsOneStepActionsOneStepActionResponse);
         }
 
         /// <summary>
@@ -442,49 +442,49 @@ namespace CherwellConnector.Model
 
             return 
                 (
-                    this.Completed == input.Completed ||
-                    (this.Completed != null &&
-                    this.Completed.Equals(input.Completed))
+                    Completed == input.Completed ||
+                    (Completed != null &&
+                    Completed.Equals(input.Completed))
                 ) && 
                 (
-                    this.CurrentPrimaryBusObId == input.CurrentPrimaryBusObId ||
-                    (this.CurrentPrimaryBusObId != null &&
-                    this.CurrentPrimaryBusObId.Equals(input.CurrentPrimaryBusObId))
+                    CurrentPrimaryBusObId == input.CurrentPrimaryBusObId ||
+                    (CurrentPrimaryBusObId != null &&
+                    CurrentPrimaryBusObId.Equals(input.CurrentPrimaryBusObId))
                 ) && 
                 (
-                    this.CurrentPrimaryBusObRecId == input.CurrentPrimaryBusObRecId ||
-                    (this.CurrentPrimaryBusObRecId != null &&
-                    this.CurrentPrimaryBusObRecId.Equals(input.CurrentPrimaryBusObRecId))
+                    CurrentPrimaryBusObRecId == input.CurrentPrimaryBusObRecId ||
+                    (CurrentPrimaryBusObRecId != null &&
+                    CurrentPrimaryBusObRecId.Equals(input.CurrentPrimaryBusObRecId))
                 ) && 
                 (
-                    this.HasNewAccessToken == input.HasNewAccessToken ||
-                    (this.HasNewAccessToken != null &&
-                    this.HasNewAccessToken.Equals(input.HasNewAccessToken))
+                    HasNewAccessToken == input.HasNewAccessToken ||
+                    (HasNewAccessToken != null &&
+                    HasNewAccessToken.Equals(input.HasNewAccessToken))
                 ) && 
                 (
-                    this.NewAccessToken == input.NewAccessToken ||
-                    (this.NewAccessToken != null &&
-                    this.NewAccessToken.Equals(input.NewAccessToken))
+                    NewAccessToken == input.NewAccessToken ||
+                    (NewAccessToken != null &&
+                    NewAccessToken.Equals(input.NewAccessToken))
                 ) && 
                 (
-                    this.ErrorCode == input.ErrorCode ||
-                    (this.ErrorCode != null &&
-                    this.ErrorCode.Equals(input.ErrorCode))
+                    ErrorCode == input.ErrorCode ||
+                    (ErrorCode != null &&
+                    ErrorCode.Equals(input.ErrorCode))
                 ) && 
                 (
-                    this.ErrorMessage == input.ErrorMessage ||
-                    (this.ErrorMessage != null &&
-                    this.ErrorMessage.Equals(input.ErrorMessage))
+                    ErrorMessage == input.ErrorMessage ||
+                    (ErrorMessage != null &&
+                    ErrorMessage.Equals(input.ErrorMessage))
                 ) && 
                 (
-                    this.HasError == input.HasError ||
-                    (this.HasError != null &&
-                    this.HasError.Equals(input.HasError))
+                    HasError == input.HasError ||
+                    (HasError != null &&
+                    HasError.Equals(input.HasError))
                 ) && 
                 (
-                    this.HttpStatusCode == input.HttpStatusCode ||
-                    (this.HttpStatusCode != null &&
-                    this.HttpStatusCode.Equals(input.HttpStatusCode))
+                    HttpStatusCode == input.HttpStatusCode ||
+                    (HttpStatusCode != null &&
+                    HttpStatusCode.Equals(input.HttpStatusCode))
                 );
         }
 
@@ -496,25 +496,25 @@ namespace CherwellConnector.Model
         {
             unchecked // Overflow is fine, just wrap
             {
-                int hashCode = 41;
-                if (this.Completed != null)
-                    hashCode = hashCode * 59 + this.Completed.GetHashCode();
-                if (this.CurrentPrimaryBusObId != null)
-                    hashCode = hashCode * 59 + this.CurrentPrimaryBusObId.GetHashCode();
-                if (this.CurrentPrimaryBusObRecId != null)
-                    hashCode = hashCode * 59 + this.CurrentPrimaryBusObRecId.GetHashCode();
-                if (this.HasNewAccessToken != null)
-                    hashCode = hashCode * 59 + this.HasNewAccessToken.GetHashCode();
-                if (this.NewAccessToken != null)
-                    hashCode = hashCode * 59 + this.NewAccessToken.GetHashCode();
-                if (this.ErrorCode != null)
-                    hashCode = hashCode * 59 + this.ErrorCode.GetHashCode();
-                if (this.ErrorMessage != null)
-                    hashCode = hashCode * 59 + this.ErrorMessage.GetHashCode();
-                if (this.HasError != null)
-                    hashCode = hashCode * 59 + this.HasError.GetHashCode();
-                if (this.HttpStatusCode != null)
-                    hashCode = hashCode * 59 + this.HttpStatusCode.GetHashCode();
+                var hashCode = 41;
+                if (Completed != null)
+                    hashCode = hashCode * 59 + Completed.GetHashCode();
+                if (CurrentPrimaryBusObId != null)
+                    hashCode = hashCode * 59 + CurrentPrimaryBusObId.GetHashCode();
+                if (CurrentPrimaryBusObRecId != null)
+                    hashCode = hashCode * 59 + CurrentPrimaryBusObRecId.GetHashCode();
+                if (HasNewAccessToken != null)
+                    hashCode = hashCode * 59 + HasNewAccessToken.GetHashCode();
+                if (NewAccessToken != null)
+                    hashCode = hashCode * 59 + NewAccessToken.GetHashCode();
+                if (ErrorCode != null)
+                    hashCode = hashCode * 59 + ErrorCode.GetHashCode();
+                if (ErrorMessage != null)
+                    hashCode = hashCode * 59 + ErrorMessage.GetHashCode();
+                if (HasError != null)
+                    hashCode = hashCode * 59 + HasError.GetHashCode();
+                if (HttpStatusCode != null)
+                    hashCode = hashCode * 59 + HttpStatusCode.GetHashCode();
                 return hashCode;
             }
         }
@@ -524,7 +524,7 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

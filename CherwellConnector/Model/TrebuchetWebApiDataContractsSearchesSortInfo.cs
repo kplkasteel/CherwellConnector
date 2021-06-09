@@ -25,10 +25,10 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="fieldId">fieldId.</param>
         /// <param name="sortDirection">sortDirection.</param>
-        public TrebuchetWebApiDataContractsSearchesSortInfo(string fieldId = default(string), int? sortDirection = default(int?))
+        public TrebuchetWebApiDataContractsSearchesSortInfo(string fieldId = default, int? sortDirection = default)
         {
-            this.FieldId = fieldId;
-            this.SortDirection = sortDirection;
+            FieldId = fieldId;
+            SortDirection = sortDirection;
         }
         
         /// <summary>
@@ -51,8 +51,8 @@ namespace CherwellConnector.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrebuchetWebApiDataContractsSearchesSortInfo {\n");
-            sb.Append("  FieldId: ").Append(this.FieldId).Append("\n");
-            sb.Append("  SortDirection: ").Append(this.SortDirection).Append("\n");
+            sb.Append("  FieldId: ").Append(FieldId).Append("\n");
+            sb.Append("  SortDirection: ").Append(SortDirection).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -73,7 +73,7 @@ namespace CherwellConnector.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as TrebuchetWebApiDataContractsSearchesSortInfo);
+            return Equals(input as TrebuchetWebApiDataContractsSearchesSortInfo);
         }
 
         /// <summary>
@@ -88,14 +88,14 @@ namespace CherwellConnector.Model
 
             return 
                 (
-                    this.FieldId == input.FieldId ||
-                    (this.FieldId != null &&
-                    this.FieldId.Equals(input.FieldId))
+                    FieldId == input.FieldId ||
+                    (FieldId != null &&
+                    FieldId.Equals(input.FieldId))
                 ) && 
                 (
-                    this.SortDirection == input.SortDirection ||
-                    (this.SortDirection != null &&
-                    this.SortDirection.Equals(input.SortDirection))
+                    SortDirection == input.SortDirection ||
+                    (SortDirection != null &&
+                    SortDirection.Equals(input.SortDirection))
                 );
         }
 
@@ -107,11 +107,11 @@ namespace CherwellConnector.Model
         {
             unchecked // Overflow is fine, just wrap
             {
-                int hashCode = 41;
-                if (this.FieldId != null)
-                    hashCode = hashCode * 59 + this.FieldId.GetHashCode();
-                if (this.SortDirection != null)
-                    hashCode = hashCode * 59 + this.SortDirection.GetHashCode();
+                var hashCode = 41;
+                if (FieldId != null)
+                    hashCode = hashCode * 59 + FieldId.GetHashCode();
+                if (SortDirection != null)
+                    hashCode = hashCode * 59 + SortDirection.GetHashCode();
                 return hashCode;
             }
         }
@@ -121,7 +121,7 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

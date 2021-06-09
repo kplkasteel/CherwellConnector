@@ -88,11 +88,11 @@ namespace CherwellConnector.Model
         /// <param name="name">name.</param>
         /// <param name="fieldId">fieldId.</param>
         /// <param name="type">type.</param>
-        public TrebuchetWebApiDataContractsSearchesColumnSchema(string name = default(string), string fieldId = default(string), TypeEnum? type = default(TypeEnum?))
+        public TrebuchetWebApiDataContractsSearchesColumnSchema(string name = default, string fieldId = default, TypeEnum? type = default)
         {
-            this.Name = name;
-            this.FieldId = fieldId;
-            this.Type = type;
+            Name = name;
+            FieldId = fieldId;
+            Type = type;
         }
         
         /// <summary>
@@ -116,9 +116,9 @@ namespace CherwellConnector.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrebuchetWebApiDataContractsSearchesColumnSchema {\n");
-            sb.Append("  Name: ").Append(this.Name).Append("\n");
-            sb.Append("  FieldId: ").Append(this.FieldId).Append("\n");
-            sb.Append("  Type: ").Append(this.Type).Append("\n");
+            sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  FieldId: ").Append(FieldId).Append("\n");
+            sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -139,7 +139,7 @@ namespace CherwellConnector.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as TrebuchetWebApiDataContractsSearchesColumnSchema);
+            return Equals(input as TrebuchetWebApiDataContractsSearchesColumnSchema);
         }
 
         /// <summary>
@@ -154,19 +154,19 @@ namespace CherwellConnector.Model
 
             return 
                 (
-                    this.Name == input.Name ||
-                    (this.Name != null &&
-                    this.Name.Equals(input.Name))
+                    Name == input.Name ||
+                    (Name != null &&
+                    Name.Equals(input.Name))
                 ) && 
                 (
-                    this.FieldId == input.FieldId ||
-                    (this.FieldId != null &&
-                    this.FieldId.Equals(input.FieldId))
+                    FieldId == input.FieldId ||
+                    (FieldId != null &&
+                    FieldId.Equals(input.FieldId))
                 ) && 
                 (
-                    this.Type == input.Type ||
-                    (this.Type != null &&
-                    this.Type.Equals(input.Type))
+                    Type == input.Type ||
+                    (Type != null &&
+                    Type.Equals(input.Type))
                 );
         }
 
@@ -178,13 +178,13 @@ namespace CherwellConnector.Model
         {
             unchecked // Overflow is fine, just wrap
             {
-                int hashCode = 41;
-                if (this.Name != null)
-                    hashCode = hashCode * 59 + this.Name.GetHashCode();
-                if (this.FieldId != null)
-                    hashCode = hashCode * 59 + this.FieldId.GetHashCode();
-                if (this.Type != null)
-                    hashCode = hashCode * 59 + this.Type.GetHashCode();
+                var hashCode = 41;
+                if (Name != null)
+                    hashCode = hashCode * 59 + Name.GetHashCode();
+                if (FieldId != null)
+                    hashCode = hashCode * 59 + FieldId.GetHashCode();
+                if (Type != null)
+                    hashCode = hashCode * 59 + Type.GetHashCode();
                 return hashCode;
             }
         }
@@ -194,7 +194,7 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

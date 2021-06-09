@@ -31,16 +31,16 @@ namespace CherwellConnector.Model
         /// <param name="promptId">promptId.</param>
         /// <param name="value">value.</param>
         /// <param name="valueIsRecId">valueIsRecId.</param>
-        public TrebuchetWebApiDataContractsCorePromptValue(string busObId = default(string), string collectionStoreEntireRow = default(string), string collectionValueField = default(string), string fieldId = default(string), string listReturnFieldId = default(string), string promptId = default(string), Object value = default(Object), bool? valueIsRecId = default(bool?))
+        public TrebuchetWebApiDataContractsCorePromptValue(string busObId = default, string collectionStoreEntireRow = default, string collectionValueField = default, string fieldId = default, string listReturnFieldId = default, string promptId = default, Object value = default, bool? valueIsRecId = default)
         {
-            this.BusObId = busObId;
-            this.CollectionStoreEntireRow = collectionStoreEntireRow;
-            this.CollectionValueField = collectionValueField;
-            this.FieldId = fieldId;
-            this.ListReturnFieldId = listReturnFieldId;
-            this.PromptId = promptId;
-            this.Value = value;
-            this.ValueIsRecId = valueIsRecId;
+            BusObId = busObId;
+            CollectionStoreEntireRow = collectionStoreEntireRow;
+            CollectionValueField = collectionValueField;
+            FieldId = fieldId;
+            ListReturnFieldId = listReturnFieldId;
+            PromptId = promptId;
+            Value = value;
+            ValueIsRecId = valueIsRecId;
         }
         
         /// <summary>
@@ -99,14 +99,14 @@ namespace CherwellConnector.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrebuchetWebApiDataContractsCorePromptValue {\n");
-            sb.Append("  BusObId: ").Append(this.BusObId).Append("\n");
-            sb.Append("  CollectionStoreEntireRow: ").Append(this.CollectionStoreEntireRow).Append("\n");
-            sb.Append("  CollectionValueField: ").Append(this.CollectionValueField).Append("\n");
-            sb.Append("  FieldId: ").Append(this.FieldId).Append("\n");
-            sb.Append("  ListReturnFieldId: ").Append(this.ListReturnFieldId).Append("\n");
-            sb.Append("  PromptId: ").Append(this.PromptId).Append("\n");
-            sb.Append("  Value: ").Append(this.Value).Append("\n");
-            sb.Append("  ValueIsRecId: ").Append(this.ValueIsRecId).Append("\n");
+            sb.Append("  BusObId: ").Append(BusObId).Append("\n");
+            sb.Append("  CollectionStoreEntireRow: ").Append(CollectionStoreEntireRow).Append("\n");
+            sb.Append("  CollectionValueField: ").Append(CollectionValueField).Append("\n");
+            sb.Append("  FieldId: ").Append(FieldId).Append("\n");
+            sb.Append("  ListReturnFieldId: ").Append(ListReturnFieldId).Append("\n");
+            sb.Append("  PromptId: ").Append(PromptId).Append("\n");
+            sb.Append("  Value: ").Append(Value).Append("\n");
+            sb.Append("  ValueIsRecId: ").Append(ValueIsRecId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -127,7 +127,7 @@ namespace CherwellConnector.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as TrebuchetWebApiDataContractsCorePromptValue);
+            return Equals(input as TrebuchetWebApiDataContractsCorePromptValue);
         }
 
         /// <summary>
@@ -142,44 +142,44 @@ namespace CherwellConnector.Model
 
             return 
                 (
-                    this.BusObId == input.BusObId ||
-                    (this.BusObId != null &&
-                    this.BusObId.Equals(input.BusObId))
+                    BusObId == input.BusObId ||
+                    (BusObId != null &&
+                    BusObId.Equals(input.BusObId))
                 ) && 
                 (
-                    this.CollectionStoreEntireRow == input.CollectionStoreEntireRow ||
-                    (this.CollectionStoreEntireRow != null &&
-                    this.CollectionStoreEntireRow.Equals(input.CollectionStoreEntireRow))
+                    CollectionStoreEntireRow == input.CollectionStoreEntireRow ||
+                    (CollectionStoreEntireRow != null &&
+                    CollectionStoreEntireRow.Equals(input.CollectionStoreEntireRow))
                 ) && 
                 (
-                    this.CollectionValueField == input.CollectionValueField ||
-                    (this.CollectionValueField != null &&
-                    this.CollectionValueField.Equals(input.CollectionValueField))
+                    CollectionValueField == input.CollectionValueField ||
+                    (CollectionValueField != null &&
+                    CollectionValueField.Equals(input.CollectionValueField))
                 ) && 
                 (
-                    this.FieldId == input.FieldId ||
-                    (this.FieldId != null &&
-                    this.FieldId.Equals(input.FieldId))
+                    FieldId == input.FieldId ||
+                    (FieldId != null &&
+                    FieldId.Equals(input.FieldId))
                 ) && 
                 (
-                    this.ListReturnFieldId == input.ListReturnFieldId ||
-                    (this.ListReturnFieldId != null &&
-                    this.ListReturnFieldId.Equals(input.ListReturnFieldId))
+                    ListReturnFieldId == input.ListReturnFieldId ||
+                    (ListReturnFieldId != null &&
+                    ListReturnFieldId.Equals(input.ListReturnFieldId))
                 ) && 
                 (
-                    this.PromptId == input.PromptId ||
-                    (this.PromptId != null &&
-                    this.PromptId.Equals(input.PromptId))
+                    PromptId == input.PromptId ||
+                    (PromptId != null &&
+                    PromptId.Equals(input.PromptId))
                 ) && 
                 (
-                    this.Value == input.Value ||
-                    (this.Value != null &&
-                    this.Value.Equals(input.Value))
+                    Value == input.Value ||
+                    (Value != null &&
+                    Value.Equals(input.Value))
                 ) && 
                 (
-                    this.ValueIsRecId == input.ValueIsRecId ||
-                    (this.ValueIsRecId != null &&
-                    this.ValueIsRecId.Equals(input.ValueIsRecId))
+                    ValueIsRecId == input.ValueIsRecId ||
+                    (ValueIsRecId != null &&
+                    ValueIsRecId.Equals(input.ValueIsRecId))
                 );
         }
 
@@ -191,23 +191,23 @@ namespace CherwellConnector.Model
         {
             unchecked // Overflow is fine, just wrap
             {
-                int hashCode = 41;
-                if (this.BusObId != null)
-                    hashCode = hashCode * 59 + this.BusObId.GetHashCode();
-                if (this.CollectionStoreEntireRow != null)
-                    hashCode = hashCode * 59 + this.CollectionStoreEntireRow.GetHashCode();
-                if (this.CollectionValueField != null)
-                    hashCode = hashCode * 59 + this.CollectionValueField.GetHashCode();
-                if (this.FieldId != null)
-                    hashCode = hashCode * 59 + this.FieldId.GetHashCode();
-                if (this.ListReturnFieldId != null)
-                    hashCode = hashCode * 59 + this.ListReturnFieldId.GetHashCode();
-                if (this.PromptId != null)
-                    hashCode = hashCode * 59 + this.PromptId.GetHashCode();
-                if (this.Value != null)
-                    hashCode = hashCode * 59 + this.Value.GetHashCode();
-                if (this.ValueIsRecId != null)
-                    hashCode = hashCode * 59 + this.ValueIsRecId.GetHashCode();
+                var hashCode = 41;
+                if (BusObId != null)
+                    hashCode = hashCode * 59 + BusObId.GetHashCode();
+                if (CollectionStoreEntireRow != null)
+                    hashCode = hashCode * 59 + CollectionStoreEntireRow.GetHashCode();
+                if (CollectionValueField != null)
+                    hashCode = hashCode * 59 + CollectionValueField.GetHashCode();
+                if (FieldId != null)
+                    hashCode = hashCode * 59 + FieldId.GetHashCode();
+                if (ListReturnFieldId != null)
+                    hashCode = hashCode * 59 + ListReturnFieldId.GetHashCode();
+                if (PromptId != null)
+                    hashCode = hashCode * 59 + PromptId.GetHashCode();
+                if (Value != null)
+                    hashCode = hashCode * 59 + Value.GetHashCode();
+                if (ValueIsRecId != null)
+                    hashCode = hashCode * 59 + ValueIsRecId.GetHashCode();
                 return hashCode;
             }
         }
@@ -217,7 +217,7 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

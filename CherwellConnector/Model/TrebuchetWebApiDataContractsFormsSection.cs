@@ -30,14 +30,14 @@ namespace CherwellConnector.Model
         /// <param name="relationshipId">relationshipId.</param>
         /// <param name="targetBusObId">targetBusObId.</param>
         /// <param name="targetBusObRecId">targetBusObRecId.</param>
-        public TrebuchetWebApiDataContractsFormsSection(List<TrebuchetWebApiDataContractsFormsSectionField> sectionFields = default(List<TrebuchetWebApiDataContractsFormsSectionField>), string galleryImage = default(string), string title = default(string), string relationshipId = default(string), string targetBusObId = default(string), string targetBusObRecId = default(string))
+        public TrebuchetWebApiDataContractsFormsSection(List<TrebuchetWebApiDataContractsFormsSectionField> sectionFields = default, string galleryImage = default, string title = default, string relationshipId = default, string targetBusObId = default, string targetBusObRecId = default)
         {
-            this.SectionFields = sectionFields;
-            this.GalleryImage = galleryImage;
-            this.Title = title;
-            this.RelationshipId = relationshipId;
-            this.TargetBusObId = targetBusObId;
-            this.TargetBusObRecId = targetBusObRecId;
+            SectionFields = sectionFields;
+            GalleryImage = galleryImage;
+            Title = title;
+            RelationshipId = relationshipId;
+            TargetBusObId = targetBusObId;
+            TargetBusObRecId = targetBusObRecId;
         }
         
         /// <summary>
@@ -84,12 +84,12 @@ namespace CherwellConnector.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrebuchetWebApiDataContractsFormsSection {\n");
-            sb.Append("  SectionFields: ").Append(this.SectionFields).Append("\n");
-            sb.Append("  GalleryImage: ").Append(this.GalleryImage).Append("\n");
-            sb.Append("  Title: ").Append(this.Title).Append("\n");
-            sb.Append("  RelationshipId: ").Append(this.RelationshipId).Append("\n");
-            sb.Append("  TargetBusObId: ").Append(this.TargetBusObId).Append("\n");
-            sb.Append("  TargetBusObRecId: ").Append(this.TargetBusObRecId).Append("\n");
+            sb.Append("  SectionFields: ").Append(SectionFields).Append("\n");
+            sb.Append("  GalleryImage: ").Append(GalleryImage).Append("\n");
+            sb.Append("  Title: ").Append(Title).Append("\n");
+            sb.Append("  RelationshipId: ").Append(RelationshipId).Append("\n");
+            sb.Append("  TargetBusObId: ").Append(TargetBusObId).Append("\n");
+            sb.Append("  TargetBusObRecId: ").Append(TargetBusObRecId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -110,7 +110,7 @@ namespace CherwellConnector.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as TrebuchetWebApiDataContractsFormsSection);
+            return Equals(input as TrebuchetWebApiDataContractsFormsSection);
         }
 
         /// <summary>
@@ -125,34 +125,34 @@ namespace CherwellConnector.Model
 
             return 
                 (
-                    this.SectionFields == input.SectionFields ||
-                    this.SectionFields != null &&
-                    this.SectionFields.SequenceEqual(input.SectionFields)
+                    SectionFields == input.SectionFields ||
+                    SectionFields != null &&
+                    SectionFields.SequenceEqual(input.SectionFields)
                 ) && 
                 (
-                    this.GalleryImage == input.GalleryImage ||
-                    (this.GalleryImage != null &&
-                    this.GalleryImage.Equals(input.GalleryImage))
+                    GalleryImage == input.GalleryImage ||
+                    (GalleryImage != null &&
+                    GalleryImage.Equals(input.GalleryImage))
                 ) && 
                 (
-                    this.Title == input.Title ||
-                    (this.Title != null &&
-                    this.Title.Equals(input.Title))
+                    Title == input.Title ||
+                    (Title != null &&
+                    Title.Equals(input.Title))
                 ) && 
                 (
-                    this.RelationshipId == input.RelationshipId ||
-                    (this.RelationshipId != null &&
-                    this.RelationshipId.Equals(input.RelationshipId))
+                    RelationshipId == input.RelationshipId ||
+                    (RelationshipId != null &&
+                    RelationshipId.Equals(input.RelationshipId))
                 ) && 
                 (
-                    this.TargetBusObId == input.TargetBusObId ||
-                    (this.TargetBusObId != null &&
-                    this.TargetBusObId.Equals(input.TargetBusObId))
+                    TargetBusObId == input.TargetBusObId ||
+                    (TargetBusObId != null &&
+                    TargetBusObId.Equals(input.TargetBusObId))
                 ) && 
                 (
-                    this.TargetBusObRecId == input.TargetBusObRecId ||
-                    (this.TargetBusObRecId != null &&
-                    this.TargetBusObRecId.Equals(input.TargetBusObRecId))
+                    TargetBusObRecId == input.TargetBusObRecId ||
+                    (TargetBusObRecId != null &&
+                    TargetBusObRecId.Equals(input.TargetBusObRecId))
                 );
         }
 
@@ -164,19 +164,19 @@ namespace CherwellConnector.Model
         {
             unchecked // Overflow is fine, just wrap
             {
-                int hashCode = 41;
-                if (this.SectionFields != null)
-                    hashCode = hashCode * 59 + this.SectionFields.GetHashCode();
-                if (this.GalleryImage != null)
-                    hashCode = hashCode * 59 + this.GalleryImage.GetHashCode();
-                if (this.Title != null)
-                    hashCode = hashCode * 59 + this.Title.GetHashCode();
-                if (this.RelationshipId != null)
-                    hashCode = hashCode * 59 + this.RelationshipId.GetHashCode();
-                if (this.TargetBusObId != null)
-                    hashCode = hashCode * 59 + this.TargetBusObId.GetHashCode();
-                if (this.TargetBusObRecId != null)
-                    hashCode = hashCode * 59 + this.TargetBusObRecId.GetHashCode();
+                var hashCode = 41;
+                if (SectionFields != null)
+                    hashCode = hashCode * 59 + SectionFields.GetHashCode();
+                if (GalleryImage != null)
+                    hashCode = hashCode * 59 + GalleryImage.GetHashCode();
+                if (Title != null)
+                    hashCode = hashCode * 59 + Title.GetHashCode();
+                if (RelationshipId != null)
+                    hashCode = hashCode * 59 + RelationshipId.GetHashCode();
+                if (TargetBusObId != null)
+                    hashCode = hashCode * 59 + TargetBusObId.GetHashCode();
+                if (TargetBusObRecId != null)
+                    hashCode = hashCode * 59 + TargetBusObRecId.GetHashCode();
                 return hashCode;
             }
         }
@@ -186,7 +186,7 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

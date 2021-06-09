@@ -356,19 +356,19 @@ namespace CherwellConnector.Model
         /// <param name="errorMessage">errorMessage.</param>
         /// <param name="hasError">hasError.</param>
         /// <param name="httpStatusCode">httpStatusCode.</param>
-        public TrebuchetWebApiDataContractsTeamsTeamResponse(string description = default(string), string emailAlias = default(string), List<TrebuchetWebApiDataContractsBusinessObjectFieldTemplateItem> fields = default(List<TrebuchetWebApiDataContractsBusinessObjectFieldTemplateItem>), string image = default(string), string name = default(string), string teamId = default(string), TeamTypeEnum? teamType = default(TeamTypeEnum?), string errorCode = default(string), string errorMessage = default(string), bool? hasError = default(bool?), HttpStatusCodeEnum? httpStatusCode = default(HttpStatusCodeEnum?))
+        public TrebuchetWebApiDataContractsTeamsTeamResponse(string description = default, string emailAlias = default, List<FieldTemplateItem> fields = default, string image = default, string name = default, string teamId = default, TeamTypeEnum? teamType = default, string errorCode = default, string errorMessage = default, bool? hasError = default, HttpStatusCodeEnum? httpStatusCode = default)
         {
-            this.Description = description;
-            this.EmailAlias = emailAlias;
-            this.Fields = fields;
-            this.Image = image;
-            this.Name = name;
-            this.TeamId = teamId;
-            this.TeamType = teamType;
-            this.ErrorCode = errorCode;
-            this.ErrorMessage = errorMessage;
-            this.HasError = hasError;
-            this.HttpStatusCode = httpStatusCode;
+            Description = description;
+            EmailAlias = emailAlias;
+            Fields = fields;
+            Image = image;
+            Name = name;
+            TeamId = teamId;
+            TeamType = teamType;
+            ErrorCode = errorCode;
+            ErrorMessage = errorMessage;
+            HasError = hasError;
+            HttpStatusCode = httpStatusCode;
         }
         
         /// <summary>
@@ -387,7 +387,7 @@ namespace CherwellConnector.Model
         /// Gets or Sets Fields
         /// </summary>
         [DataMember(Name="fields", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsBusinessObjectFieldTemplateItem> Fields { get; set; }
+        public List<FieldTemplateItem> Fields { get; set; }
 
         /// <summary>
         /// Gets or Sets Image
@@ -435,17 +435,17 @@ namespace CherwellConnector.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrebuchetWebApiDataContractsTeamsTeamResponse {\n");
-            sb.Append("  Description: ").Append(this.Description).Append("\n");
-            sb.Append("  EmailAlias: ").Append(this.EmailAlias).Append("\n");
-            sb.Append("  Fields: ").Append(this.Fields).Append("\n");
-            sb.Append("  Image: ").Append(this.Image).Append("\n");
-            sb.Append("  Name: ").Append(this.Name).Append("\n");
-            sb.Append("  TeamId: ").Append(this.TeamId).Append("\n");
-            sb.Append("  TeamType: ").Append(this.TeamType).Append("\n");
-            sb.Append("  ErrorCode: ").Append(this.ErrorCode).Append("\n");
-            sb.Append("  ErrorMessage: ").Append(this.ErrorMessage).Append("\n");
-            sb.Append("  HasError: ").Append(this.HasError).Append("\n");
-            sb.Append("  HttpStatusCode: ").Append(this.HttpStatusCode).Append("\n");
+            sb.Append("  Description: ").Append(Description).Append("\n");
+            sb.Append("  EmailAlias: ").Append(EmailAlias).Append("\n");
+            sb.Append("  Fields: ").Append(Fields).Append("\n");
+            sb.Append("  Image: ").Append(Image).Append("\n");
+            sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  TeamId: ").Append(TeamId).Append("\n");
+            sb.Append("  TeamType: ").Append(TeamType).Append("\n");
+            sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
+            sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append("\n");
+            sb.Append("  HasError: ").Append(HasError).Append("\n");
+            sb.Append("  HttpStatusCode: ").Append(HttpStatusCode).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -466,7 +466,7 @@ namespace CherwellConnector.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as TrebuchetWebApiDataContractsTeamsTeamResponse);
+            return Equals(input as TrebuchetWebApiDataContractsTeamsTeamResponse);
         }
 
         /// <summary>
@@ -481,59 +481,59 @@ namespace CherwellConnector.Model
 
             return 
                 (
-                    this.Description == input.Description ||
-                    (this.Description != null &&
-                    this.Description.Equals(input.Description))
+                    Description == input.Description ||
+                    (Description != null &&
+                    Description.Equals(input.Description))
                 ) && 
                 (
-                    this.EmailAlias == input.EmailAlias ||
-                    (this.EmailAlias != null &&
-                    this.EmailAlias.Equals(input.EmailAlias))
+                    EmailAlias == input.EmailAlias ||
+                    (EmailAlias != null &&
+                    EmailAlias.Equals(input.EmailAlias))
                 ) && 
                 (
-                    this.Fields == input.Fields ||
-                    this.Fields != null &&
-                    this.Fields.SequenceEqual(input.Fields)
+                    Fields == input.Fields ||
+                    Fields != null &&
+                    Fields.SequenceEqual(input.Fields)
                 ) && 
                 (
-                    this.Image == input.Image ||
-                    (this.Image != null &&
-                    this.Image.Equals(input.Image))
+                    Image == input.Image ||
+                    (Image != null &&
+                    Image.Equals(input.Image))
                 ) && 
                 (
-                    this.Name == input.Name ||
-                    (this.Name != null &&
-                    this.Name.Equals(input.Name))
+                    Name == input.Name ||
+                    (Name != null &&
+                    Name.Equals(input.Name))
                 ) && 
                 (
-                    this.TeamId == input.TeamId ||
-                    (this.TeamId != null &&
-                    this.TeamId.Equals(input.TeamId))
+                    TeamId == input.TeamId ||
+                    (TeamId != null &&
+                    TeamId.Equals(input.TeamId))
                 ) && 
                 (
-                    this.TeamType == input.TeamType ||
-                    (this.TeamType != null &&
-                    this.TeamType.Equals(input.TeamType))
+                    TeamType == input.TeamType ||
+                    (TeamType != null &&
+                    TeamType.Equals(input.TeamType))
                 ) && 
                 (
-                    this.ErrorCode == input.ErrorCode ||
-                    (this.ErrorCode != null &&
-                    this.ErrorCode.Equals(input.ErrorCode))
+                    ErrorCode == input.ErrorCode ||
+                    (ErrorCode != null &&
+                    ErrorCode.Equals(input.ErrorCode))
                 ) && 
                 (
-                    this.ErrorMessage == input.ErrorMessage ||
-                    (this.ErrorMessage != null &&
-                    this.ErrorMessage.Equals(input.ErrorMessage))
+                    ErrorMessage == input.ErrorMessage ||
+                    (ErrorMessage != null &&
+                    ErrorMessage.Equals(input.ErrorMessage))
                 ) && 
                 (
-                    this.HasError == input.HasError ||
-                    (this.HasError != null &&
-                    this.HasError.Equals(input.HasError))
+                    HasError == input.HasError ||
+                    (HasError != null &&
+                    HasError.Equals(input.HasError))
                 ) && 
                 (
-                    this.HttpStatusCode == input.HttpStatusCode ||
-                    (this.HttpStatusCode != null &&
-                    this.HttpStatusCode.Equals(input.HttpStatusCode))
+                    HttpStatusCode == input.HttpStatusCode ||
+                    (HttpStatusCode != null &&
+                    HttpStatusCode.Equals(input.HttpStatusCode))
                 );
         }
 
@@ -545,29 +545,29 @@ namespace CherwellConnector.Model
         {
             unchecked // Overflow is fine, just wrap
             {
-                int hashCode = 41;
-                if (this.Description != null)
-                    hashCode = hashCode * 59 + this.Description.GetHashCode();
-                if (this.EmailAlias != null)
-                    hashCode = hashCode * 59 + this.EmailAlias.GetHashCode();
-                if (this.Fields != null)
-                    hashCode = hashCode * 59 + this.Fields.GetHashCode();
-                if (this.Image != null)
-                    hashCode = hashCode * 59 + this.Image.GetHashCode();
-                if (this.Name != null)
-                    hashCode = hashCode * 59 + this.Name.GetHashCode();
-                if (this.TeamId != null)
-                    hashCode = hashCode * 59 + this.TeamId.GetHashCode();
-                if (this.TeamType != null)
-                    hashCode = hashCode * 59 + this.TeamType.GetHashCode();
-                if (this.ErrorCode != null)
-                    hashCode = hashCode * 59 + this.ErrorCode.GetHashCode();
-                if (this.ErrorMessage != null)
-                    hashCode = hashCode * 59 + this.ErrorMessage.GetHashCode();
-                if (this.HasError != null)
-                    hashCode = hashCode * 59 + this.HasError.GetHashCode();
-                if (this.HttpStatusCode != null)
-                    hashCode = hashCode * 59 + this.HttpStatusCode.GetHashCode();
+                var hashCode = 41;
+                if (Description != null)
+                    hashCode = hashCode * 59 + Description.GetHashCode();
+                if (EmailAlias != null)
+                    hashCode = hashCode * 59 + EmailAlias.GetHashCode();
+                if (Fields != null)
+                    hashCode = hashCode * 59 + Fields.GetHashCode();
+                if (Image != null)
+                    hashCode = hashCode * 59 + Image.GetHashCode();
+                if (Name != null)
+                    hashCode = hashCode * 59 + Name.GetHashCode();
+                if (TeamId != null)
+                    hashCode = hashCode * 59 + TeamId.GetHashCode();
+                if (TeamType != null)
+                    hashCode = hashCode * 59 + TeamType.GetHashCode();
+                if (ErrorCode != null)
+                    hashCode = hashCode * 59 + ErrorCode.GetHashCode();
+                if (ErrorMessage != null)
+                    hashCode = hashCode * 59 + ErrorMessage.GetHashCode();
+                if (HasError != null)
+                    hashCode = hashCode * 59 + HasError.GetHashCode();
+                if (HttpStatusCode != null)
+                    hashCode = hashCode * 59 + HttpStatusCode.GetHashCode();
                 return hashCode;
             }
         }
@@ -577,7 +577,7 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

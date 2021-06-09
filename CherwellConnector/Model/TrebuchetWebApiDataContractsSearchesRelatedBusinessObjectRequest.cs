@@ -35,19 +35,19 @@ namespace CherwellConnector.Model
         /// <param name="relationshipId">relationshipId.</param>
         /// <param name="sorting">sorting.</param>
         /// <param name="useDefaultGrid">useDefaultGrid.</param>
-        public TrebuchetWebApiDataContractsSearchesRelatedBusinessObjectRequest(bool? allFields = default(bool?), string customGridId = default(string), List<string> fieldsList = default(List<string>), List<TrebuchetWebApiDataContractsSearchesFilterInfo> filters = default(List<TrebuchetWebApiDataContractsSearchesFilterInfo>), int? pageNumber = default(int?), int? pageSize = default(int?), string parentBusObId = default(string), string parentBusObRecId = default(string), string relationshipId = default(string), List<TrebuchetWebApiDataContractsSearchesSortInfo> sorting = default(List<TrebuchetWebApiDataContractsSearchesSortInfo>), bool? useDefaultGrid = default(bool?))
+        public TrebuchetWebApiDataContractsSearchesRelatedBusinessObjectRequest(bool? allFields = default, string customGridId = default, List<string> fieldsList = default, List<TrebuchetWebApiDataContractsSearchesFilterInfo> filters = default, int? pageNumber = default, int? pageSize = default, string parentBusObId = default, string parentBusObRecId = default, string relationshipId = default, List<TrebuchetWebApiDataContractsSearchesSortInfo> sorting = default, bool? useDefaultGrid = default)
         {
-            this.AllFields = allFields;
-            this.CustomGridId = customGridId;
-            this.FieldsList = fieldsList;
-            this.Filters = filters;
-            this.PageNumber = pageNumber;
-            this.PageSize = pageSize;
-            this.ParentBusObId = parentBusObId;
-            this.ParentBusObRecId = parentBusObRecId;
-            this.RelationshipId = relationshipId;
-            this.Sorting = sorting;
-            this.UseDefaultGrid = useDefaultGrid;
+            AllFields = allFields;
+            CustomGridId = customGridId;
+            FieldsList = fieldsList;
+            Filters = filters;
+            PageNumber = pageNumber;
+            PageSize = pageSize;
+            ParentBusObId = parentBusObId;
+            ParentBusObRecId = parentBusObRecId;
+            RelationshipId = relationshipId;
+            Sorting = sorting;
+            UseDefaultGrid = useDefaultGrid;
         }
         
         /// <summary>
@@ -124,17 +124,17 @@ namespace CherwellConnector.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrebuchetWebApiDataContractsSearchesRelatedBusinessObjectRequest {\n");
-            sb.Append("  AllFields: ").Append(this.AllFields).Append("\n");
-            sb.Append("  CustomGridId: ").Append(this.CustomGridId).Append("\n");
-            sb.Append("  FieldsList: ").Append(this.FieldsList).Append("\n");
-            sb.Append("  Filters: ").Append(this.Filters).Append("\n");
-            sb.Append("  PageNumber: ").Append(this.PageNumber).Append("\n");
-            sb.Append("  PageSize: ").Append(this.PageSize).Append("\n");
-            sb.Append("  ParentBusObId: ").Append(this.ParentBusObId).Append("\n");
-            sb.Append("  ParentBusObRecId: ").Append(this.ParentBusObRecId).Append("\n");
-            sb.Append("  RelationshipId: ").Append(this.RelationshipId).Append("\n");
-            sb.Append("  Sorting: ").Append(this.Sorting).Append("\n");
-            sb.Append("  UseDefaultGrid: ").Append(this.UseDefaultGrid).Append("\n");
+            sb.Append("  AllFields: ").Append(AllFields).Append("\n");
+            sb.Append("  CustomGridId: ").Append(CustomGridId).Append("\n");
+            sb.Append("  FieldsList: ").Append(FieldsList).Append("\n");
+            sb.Append("  Filters: ").Append(Filters).Append("\n");
+            sb.Append("  PageNumber: ").Append(PageNumber).Append("\n");
+            sb.Append("  PageSize: ").Append(PageSize).Append("\n");
+            sb.Append("  ParentBusObId: ").Append(ParentBusObId).Append("\n");
+            sb.Append("  ParentBusObRecId: ").Append(ParentBusObRecId).Append("\n");
+            sb.Append("  RelationshipId: ").Append(RelationshipId).Append("\n");
+            sb.Append("  Sorting: ").Append(Sorting).Append("\n");
+            sb.Append("  UseDefaultGrid: ").Append(UseDefaultGrid).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -155,7 +155,7 @@ namespace CherwellConnector.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as TrebuchetWebApiDataContractsSearchesRelatedBusinessObjectRequest);
+            return Equals(input as TrebuchetWebApiDataContractsSearchesRelatedBusinessObjectRequest);
         }
 
         /// <summary>
@@ -170,59 +170,59 @@ namespace CherwellConnector.Model
 
             return 
                 (
-                    this.AllFields == input.AllFields ||
-                    (this.AllFields != null &&
-                    this.AllFields.Equals(input.AllFields))
+                    AllFields == input.AllFields ||
+                    (AllFields != null &&
+                    AllFields.Equals(input.AllFields))
                 ) && 
                 (
-                    this.CustomGridId == input.CustomGridId ||
-                    (this.CustomGridId != null &&
-                    this.CustomGridId.Equals(input.CustomGridId))
+                    CustomGridId == input.CustomGridId ||
+                    (CustomGridId != null &&
+                    CustomGridId.Equals(input.CustomGridId))
                 ) && 
                 (
-                    this.FieldsList == input.FieldsList ||
-                    this.FieldsList != null &&
-                    this.FieldsList.SequenceEqual(input.FieldsList)
+                    FieldsList == input.FieldsList ||
+                    FieldsList != null &&
+                    FieldsList.SequenceEqual(input.FieldsList)
                 ) && 
                 (
-                    this.Filters == input.Filters ||
-                    this.Filters != null &&
-                    this.Filters.SequenceEqual(input.Filters)
+                    Filters == input.Filters ||
+                    Filters != null &&
+                    Filters.SequenceEqual(input.Filters)
                 ) && 
                 (
-                    this.PageNumber == input.PageNumber ||
-                    (this.PageNumber != null &&
-                    this.PageNumber.Equals(input.PageNumber))
+                    PageNumber == input.PageNumber ||
+                    (PageNumber != null &&
+                    PageNumber.Equals(input.PageNumber))
                 ) && 
                 (
-                    this.PageSize == input.PageSize ||
-                    (this.PageSize != null &&
-                    this.PageSize.Equals(input.PageSize))
+                    PageSize == input.PageSize ||
+                    (PageSize != null &&
+                    PageSize.Equals(input.PageSize))
                 ) && 
                 (
-                    this.ParentBusObId == input.ParentBusObId ||
-                    (this.ParentBusObId != null &&
-                    this.ParentBusObId.Equals(input.ParentBusObId))
+                    ParentBusObId == input.ParentBusObId ||
+                    (ParentBusObId != null &&
+                    ParentBusObId.Equals(input.ParentBusObId))
                 ) && 
                 (
-                    this.ParentBusObRecId == input.ParentBusObRecId ||
-                    (this.ParentBusObRecId != null &&
-                    this.ParentBusObRecId.Equals(input.ParentBusObRecId))
+                    ParentBusObRecId == input.ParentBusObRecId ||
+                    (ParentBusObRecId != null &&
+                    ParentBusObRecId.Equals(input.ParentBusObRecId))
                 ) && 
                 (
-                    this.RelationshipId == input.RelationshipId ||
-                    (this.RelationshipId != null &&
-                    this.RelationshipId.Equals(input.RelationshipId))
+                    RelationshipId == input.RelationshipId ||
+                    (RelationshipId != null &&
+                    RelationshipId.Equals(input.RelationshipId))
                 ) && 
                 (
-                    this.Sorting == input.Sorting ||
-                    this.Sorting != null &&
-                    this.Sorting.SequenceEqual(input.Sorting)
+                    Sorting == input.Sorting ||
+                    Sorting != null &&
+                    Sorting.SequenceEqual(input.Sorting)
                 ) && 
                 (
-                    this.UseDefaultGrid == input.UseDefaultGrid ||
-                    (this.UseDefaultGrid != null &&
-                    this.UseDefaultGrid.Equals(input.UseDefaultGrid))
+                    UseDefaultGrid == input.UseDefaultGrid ||
+                    (UseDefaultGrid != null &&
+                    UseDefaultGrid.Equals(input.UseDefaultGrid))
                 );
         }
 
@@ -234,29 +234,29 @@ namespace CherwellConnector.Model
         {
             unchecked // Overflow is fine, just wrap
             {
-                int hashCode = 41;
-                if (this.AllFields != null)
-                    hashCode = hashCode * 59 + this.AllFields.GetHashCode();
-                if (this.CustomGridId != null)
-                    hashCode = hashCode * 59 + this.CustomGridId.GetHashCode();
-                if (this.FieldsList != null)
-                    hashCode = hashCode * 59 + this.FieldsList.GetHashCode();
-                if (this.Filters != null)
-                    hashCode = hashCode * 59 + this.Filters.GetHashCode();
-                if (this.PageNumber != null)
-                    hashCode = hashCode * 59 + this.PageNumber.GetHashCode();
-                if (this.PageSize != null)
-                    hashCode = hashCode * 59 + this.PageSize.GetHashCode();
-                if (this.ParentBusObId != null)
-                    hashCode = hashCode * 59 + this.ParentBusObId.GetHashCode();
-                if (this.ParentBusObRecId != null)
-                    hashCode = hashCode * 59 + this.ParentBusObRecId.GetHashCode();
-                if (this.RelationshipId != null)
-                    hashCode = hashCode * 59 + this.RelationshipId.GetHashCode();
-                if (this.Sorting != null)
-                    hashCode = hashCode * 59 + this.Sorting.GetHashCode();
-                if (this.UseDefaultGrid != null)
-                    hashCode = hashCode * 59 + this.UseDefaultGrid.GetHashCode();
+                var hashCode = 41;
+                if (AllFields != null)
+                    hashCode = hashCode * 59 + AllFields.GetHashCode();
+                if (CustomGridId != null)
+                    hashCode = hashCode * 59 + CustomGridId.GetHashCode();
+                if (FieldsList != null)
+                    hashCode = hashCode * 59 + FieldsList.GetHashCode();
+                if (Filters != null)
+                    hashCode = hashCode * 59 + Filters.GetHashCode();
+                if (PageNumber != null)
+                    hashCode = hashCode * 59 + PageNumber.GetHashCode();
+                if (PageSize != null)
+                    hashCode = hashCode * 59 + PageSize.GetHashCode();
+                if (ParentBusObId != null)
+                    hashCode = hashCode * 59 + ParentBusObId.GetHashCode();
+                if (ParentBusObRecId != null)
+                    hashCode = hashCode * 59 + ParentBusObRecId.GetHashCode();
+                if (RelationshipId != null)
+                    hashCode = hashCode * 59 + RelationshipId.GetHashCode();
+                if (Sorting != null)
+                    hashCode = hashCode * 59 + Sorting.GetHashCode();
+                if (UseDefaultGrid != null)
+                    hashCode = hashCode * 59 + UseDefaultGrid.GetHashCode();
                 return hashCode;
             }
         }
@@ -266,7 +266,7 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

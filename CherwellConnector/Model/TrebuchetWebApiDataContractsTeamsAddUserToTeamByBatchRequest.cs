@@ -26,10 +26,10 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="addUserToTeamRequests">addUserToTeamRequests.</param>
         /// <param name="stopOnError">stopOnError.</param>
-        public TrebuchetWebApiDataContractsTeamsAddUserToTeamByBatchRequest(List<TrebuchetWebApiDataContractsTeamsAddUserToTeamRequest> addUserToTeamRequests = default(List<TrebuchetWebApiDataContractsTeamsAddUserToTeamRequest>), bool? stopOnError = default(bool?))
+        public TrebuchetWebApiDataContractsTeamsAddUserToTeamByBatchRequest(List<TrebuchetWebApiDataContractsTeamsAddUserToTeamRequest> addUserToTeamRequests = default, bool? stopOnError = default)
         {
-            this.AddUserToTeamRequests = addUserToTeamRequests;
-            this.StopOnError = stopOnError;
+            AddUserToTeamRequests = addUserToTeamRequests;
+            StopOnError = stopOnError;
         }
         
         /// <summary>
@@ -52,8 +52,8 @@ namespace CherwellConnector.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrebuchetWebApiDataContractsTeamsAddUserToTeamByBatchRequest {\n");
-            sb.Append("  AddUserToTeamRequests: ").Append(this.AddUserToTeamRequests).Append("\n");
-            sb.Append("  StopOnError: ").Append(this.StopOnError).Append("\n");
+            sb.Append("  AddUserToTeamRequests: ").Append(AddUserToTeamRequests).Append("\n");
+            sb.Append("  StopOnError: ").Append(StopOnError).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -74,7 +74,7 @@ namespace CherwellConnector.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as TrebuchetWebApiDataContractsTeamsAddUserToTeamByBatchRequest);
+            return Equals(input as TrebuchetWebApiDataContractsTeamsAddUserToTeamByBatchRequest);
         }
 
         /// <summary>
@@ -89,14 +89,14 @@ namespace CherwellConnector.Model
 
             return 
                 (
-                    this.AddUserToTeamRequests == input.AddUserToTeamRequests ||
-                    this.AddUserToTeamRequests != null &&
-                    this.AddUserToTeamRequests.SequenceEqual(input.AddUserToTeamRequests)
+                    AddUserToTeamRequests == input.AddUserToTeamRequests ||
+                    AddUserToTeamRequests != null &&
+                    AddUserToTeamRequests.SequenceEqual(input.AddUserToTeamRequests)
                 ) && 
                 (
-                    this.StopOnError == input.StopOnError ||
-                    (this.StopOnError != null &&
-                    this.StopOnError.Equals(input.StopOnError))
+                    StopOnError == input.StopOnError ||
+                    (StopOnError != null &&
+                    StopOnError.Equals(input.StopOnError))
                 );
         }
 
@@ -108,11 +108,11 @@ namespace CherwellConnector.Model
         {
             unchecked // Overflow is fine, just wrap
             {
-                int hashCode = 41;
-                if (this.AddUserToTeamRequests != null)
-                    hashCode = hashCode * 59 + this.AddUserToTeamRequests.GetHashCode();
-                if (this.StopOnError != null)
-                    hashCode = hashCode * 59 + this.StopOnError.GetHashCode();
+                var hashCode = 41;
+                if (AddUserToTeamRequests != null)
+                    hashCode = hashCode * 59 + AddUserToTeamRequests.GetHashCode();
+                if (StopOnError != null)
+                    hashCode = hashCode * 59 + StopOnError.GetHashCode();
                 return hashCode;
             }
         }
@@ -122,7 +122,7 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

@@ -29,13 +29,13 @@ namespace CherwellConnector.Model
         /// <param name="fieldIds">fieldIds.</param>
         /// <param name="includeAll">includeAll.</param>
         /// <param name="includeRequired">includeRequired.</param>
-        public TrebuchetWebApiDataContractsBusinessObjectTemplateRequest(string busObId = default(string), List<string> fieldNames = default(List<string>), List<string> fieldIds = default(List<string>), bool? includeAll = default(bool?), bool? includeRequired = default(bool?))
+        public TrebuchetWebApiDataContractsBusinessObjectTemplateRequest(string busObId = default, List<string> fieldNames = default, List<string> fieldIds = default, bool? includeAll = default, bool? includeRequired = default)
         {
-            this.BusObId = busObId;
-            this.FieldNames = fieldNames;
-            this.FieldIds = fieldIds;
-            this.IncludeAll = includeAll;
-            this.IncludeRequired = includeRequired;
+            BusObId = busObId;
+            FieldNames = fieldNames;
+            FieldIds = fieldIds;
+            IncludeAll = includeAll;
+            IncludeRequired = includeRequired;
         }
         
         /// <summary>
@@ -76,11 +76,11 @@ namespace CherwellConnector.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrebuchetWebApiDataContractsBusinessObjectTemplateRequest {\n");
-            sb.Append("  BusObId: ").Append(this.BusObId).Append("\n");
-            sb.Append("  FieldNames: ").Append(this.FieldNames).Append("\n");
-            sb.Append("  FieldIds: ").Append(this.FieldIds).Append("\n");
-            sb.Append("  IncludeAll: ").Append(this.IncludeAll).Append("\n");
-            sb.Append("  IncludeRequired: ").Append(this.IncludeRequired).Append("\n");
+            sb.Append("  BusObId: ").Append(BusObId).Append("\n");
+            sb.Append("  FieldNames: ").Append(FieldNames).Append("\n");
+            sb.Append("  FieldIds: ").Append(FieldIds).Append("\n");
+            sb.Append("  IncludeAll: ").Append(IncludeAll).Append("\n");
+            sb.Append("  IncludeRequired: ").Append(IncludeRequired).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -101,7 +101,7 @@ namespace CherwellConnector.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as TrebuchetWebApiDataContractsBusinessObjectTemplateRequest);
+            return Equals(input as TrebuchetWebApiDataContractsBusinessObjectTemplateRequest);
         }
 
         /// <summary>
@@ -116,29 +116,29 @@ namespace CherwellConnector.Model
 
             return 
                 (
-                    this.BusObId == input.BusObId ||
-                    (this.BusObId != null &&
-                    this.BusObId.Equals(input.BusObId))
+                    BusObId == input.BusObId ||
+                    (BusObId != null &&
+                    BusObId.Equals(input.BusObId))
                 ) && 
                 (
-                    this.FieldNames == input.FieldNames ||
-                    this.FieldNames != null &&
-                    this.FieldNames.SequenceEqual(input.FieldNames)
+                    FieldNames == input.FieldNames ||
+                    FieldNames != null &&
+                    FieldNames.SequenceEqual(input.FieldNames)
                 ) && 
                 (
-                    this.FieldIds == input.FieldIds ||
-                    this.FieldIds != null &&
-                    this.FieldIds.SequenceEqual(input.FieldIds)
+                    FieldIds == input.FieldIds ||
+                    FieldIds != null &&
+                    FieldIds.SequenceEqual(input.FieldIds)
                 ) && 
                 (
-                    this.IncludeAll == input.IncludeAll ||
-                    (this.IncludeAll != null &&
-                    this.IncludeAll.Equals(input.IncludeAll))
+                    IncludeAll == input.IncludeAll ||
+                    (IncludeAll != null &&
+                    IncludeAll.Equals(input.IncludeAll))
                 ) && 
                 (
-                    this.IncludeRequired == input.IncludeRequired ||
-                    (this.IncludeRequired != null &&
-                    this.IncludeRequired.Equals(input.IncludeRequired))
+                    IncludeRequired == input.IncludeRequired ||
+                    (IncludeRequired != null &&
+                    IncludeRequired.Equals(input.IncludeRequired))
                 );
         }
 
@@ -150,17 +150,17 @@ namespace CherwellConnector.Model
         {
             unchecked // Overflow is fine, just wrap
             {
-                int hashCode = 41;
-                if (this.BusObId != null)
-                    hashCode = hashCode * 59 + this.BusObId.GetHashCode();
-                if (this.FieldNames != null)
-                    hashCode = hashCode * 59 + this.FieldNames.GetHashCode();
-                if (this.FieldIds != null)
-                    hashCode = hashCode * 59 + this.FieldIds.GetHashCode();
-                if (this.IncludeAll != null)
-                    hashCode = hashCode * 59 + this.IncludeAll.GetHashCode();
-                if (this.IncludeRequired != null)
-                    hashCode = hashCode * 59 + this.IncludeRequired.GetHashCode();
+                var hashCode = 41;
+                if (BusObId != null)
+                    hashCode = hashCode * 59 + BusObId.GetHashCode();
+                if (FieldNames != null)
+                    hashCode = hashCode * 59 + FieldNames.GetHashCode();
+                if (FieldIds != null)
+                    hashCode = hashCode * 59 + FieldIds.GetHashCode();
+                if (IncludeAll != null)
+                    hashCode = hashCode * 59 + IncludeAll.GetHashCode();
+                if (IncludeRequired != null)
+                    hashCode = hashCode * 59 + IncludeRequired.GetHashCode();
                 return hashCode;
             }
         }
@@ -170,7 +170,7 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

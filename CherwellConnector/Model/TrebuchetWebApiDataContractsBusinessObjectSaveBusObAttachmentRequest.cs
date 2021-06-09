@@ -33,18 +33,18 @@ namespace CherwellConnector.Model
         /// <param name="busObRecId">busObRecId.</param>
         /// <param name="comment">comment.</param>
         /// <param name="includeLinks">includeLinks.</param>
-        public TrebuchetWebApiDataContractsBusinessObjectSaveBusObAttachmentRequest(string attachBusObId = default(string), string attachBusObName = default(string), string attachBusObPublicId = default(string), string attachBusObRecId = default(string), string busObId = default(string), string busObName = default(string), string busObPublicId = default(string), string busObRecId = default(string), string comment = default(string), bool? includeLinks = default(bool?))
+        public TrebuchetWebApiDataContractsBusinessObjectSaveBusObAttachmentRequest(string attachBusObId = default, string attachBusObName = default, string attachBusObPublicId = default, string attachBusObRecId = default, string busObId = default, string busObName = default, string busObPublicId = default, string busObRecId = default, string comment = default, bool? includeLinks = default)
         {
-            this.AttachBusObId = attachBusObId;
-            this.AttachBusObName = attachBusObName;
-            this.AttachBusObPublicId = attachBusObPublicId;
-            this.AttachBusObRecId = attachBusObRecId;
-            this.BusObId = busObId;
-            this.BusObName = busObName;
-            this.BusObPublicId = busObPublicId;
-            this.BusObRecId = busObRecId;
-            this.Comment = comment;
-            this.IncludeLinks = includeLinks;
+            AttachBusObId = attachBusObId;
+            AttachBusObName = attachBusObName;
+            AttachBusObPublicId = attachBusObPublicId;
+            AttachBusObRecId = attachBusObRecId;
+            BusObId = busObId;
+            BusObName = busObName;
+            BusObPublicId = busObPublicId;
+            BusObRecId = busObRecId;
+            Comment = comment;
+            IncludeLinks = includeLinks;
         }
         
         /// <summary>
@@ -115,16 +115,16 @@ namespace CherwellConnector.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrebuchetWebApiDataContractsBusinessObjectSaveBusObAttachmentRequest {\n");
-            sb.Append("  AttachBusObId: ").Append(this.AttachBusObId).Append("\n");
-            sb.Append("  AttachBusObName: ").Append(this.AttachBusObName).Append("\n");
-            sb.Append("  AttachBusObPublicId: ").Append(this.AttachBusObPublicId).Append("\n");
-            sb.Append("  AttachBusObRecId: ").Append(this.AttachBusObRecId).Append("\n");
-            sb.Append("  BusObId: ").Append(this.BusObId).Append("\n");
-            sb.Append("  BusObName: ").Append(this.BusObName).Append("\n");
-            sb.Append("  BusObPublicId: ").Append(this.BusObPublicId).Append("\n");
-            sb.Append("  BusObRecId: ").Append(this.BusObRecId).Append("\n");
-            sb.Append("  Comment: ").Append(this.Comment).Append("\n");
-            sb.Append("  IncludeLinks: ").Append(this.IncludeLinks).Append("\n");
+            sb.Append("  AttachBusObId: ").Append(AttachBusObId).Append("\n");
+            sb.Append("  AttachBusObName: ").Append(AttachBusObName).Append("\n");
+            sb.Append("  AttachBusObPublicId: ").Append(AttachBusObPublicId).Append("\n");
+            sb.Append("  AttachBusObRecId: ").Append(AttachBusObRecId).Append("\n");
+            sb.Append("  BusObId: ").Append(BusObId).Append("\n");
+            sb.Append("  BusObName: ").Append(BusObName).Append("\n");
+            sb.Append("  BusObPublicId: ").Append(BusObPublicId).Append("\n");
+            sb.Append("  BusObRecId: ").Append(BusObRecId).Append("\n");
+            sb.Append("  Comment: ").Append(Comment).Append("\n");
+            sb.Append("  IncludeLinks: ").Append(IncludeLinks).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -145,7 +145,7 @@ namespace CherwellConnector.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as TrebuchetWebApiDataContractsBusinessObjectSaveBusObAttachmentRequest);
+            return Equals(input as TrebuchetWebApiDataContractsBusinessObjectSaveBusObAttachmentRequest);
         }
 
         /// <summary>
@@ -160,54 +160,54 @@ namespace CherwellConnector.Model
 
             return 
                 (
-                    this.AttachBusObId == input.AttachBusObId ||
-                    (this.AttachBusObId != null &&
-                    this.AttachBusObId.Equals(input.AttachBusObId))
+                    AttachBusObId == input.AttachBusObId ||
+                    (AttachBusObId != null &&
+                    AttachBusObId.Equals(input.AttachBusObId))
                 ) && 
                 (
-                    this.AttachBusObName == input.AttachBusObName ||
-                    (this.AttachBusObName != null &&
-                    this.AttachBusObName.Equals(input.AttachBusObName))
+                    AttachBusObName == input.AttachBusObName ||
+                    (AttachBusObName != null &&
+                    AttachBusObName.Equals(input.AttachBusObName))
                 ) && 
                 (
-                    this.AttachBusObPublicId == input.AttachBusObPublicId ||
-                    (this.AttachBusObPublicId != null &&
-                    this.AttachBusObPublicId.Equals(input.AttachBusObPublicId))
+                    AttachBusObPublicId == input.AttachBusObPublicId ||
+                    (AttachBusObPublicId != null &&
+                    AttachBusObPublicId.Equals(input.AttachBusObPublicId))
                 ) && 
                 (
-                    this.AttachBusObRecId == input.AttachBusObRecId ||
-                    (this.AttachBusObRecId != null &&
-                    this.AttachBusObRecId.Equals(input.AttachBusObRecId))
+                    AttachBusObRecId == input.AttachBusObRecId ||
+                    (AttachBusObRecId != null &&
+                    AttachBusObRecId.Equals(input.AttachBusObRecId))
                 ) && 
                 (
-                    this.BusObId == input.BusObId ||
-                    (this.BusObId != null &&
-                    this.BusObId.Equals(input.BusObId))
+                    BusObId == input.BusObId ||
+                    (BusObId != null &&
+                    BusObId.Equals(input.BusObId))
                 ) && 
                 (
-                    this.BusObName == input.BusObName ||
-                    (this.BusObName != null &&
-                    this.BusObName.Equals(input.BusObName))
+                    BusObName == input.BusObName ||
+                    (BusObName != null &&
+                    BusObName.Equals(input.BusObName))
                 ) && 
                 (
-                    this.BusObPublicId == input.BusObPublicId ||
-                    (this.BusObPublicId != null &&
-                    this.BusObPublicId.Equals(input.BusObPublicId))
+                    BusObPublicId == input.BusObPublicId ||
+                    (BusObPublicId != null &&
+                    BusObPublicId.Equals(input.BusObPublicId))
                 ) && 
                 (
-                    this.BusObRecId == input.BusObRecId ||
-                    (this.BusObRecId != null &&
-                    this.BusObRecId.Equals(input.BusObRecId))
+                    BusObRecId == input.BusObRecId ||
+                    (BusObRecId != null &&
+                    BusObRecId.Equals(input.BusObRecId))
                 ) && 
                 (
-                    this.Comment == input.Comment ||
-                    (this.Comment != null &&
-                    this.Comment.Equals(input.Comment))
+                    Comment == input.Comment ||
+                    (Comment != null &&
+                    Comment.Equals(input.Comment))
                 ) && 
                 (
-                    this.IncludeLinks == input.IncludeLinks ||
-                    (this.IncludeLinks != null &&
-                    this.IncludeLinks.Equals(input.IncludeLinks))
+                    IncludeLinks == input.IncludeLinks ||
+                    (IncludeLinks != null &&
+                    IncludeLinks.Equals(input.IncludeLinks))
                 );
         }
 
@@ -219,27 +219,27 @@ namespace CherwellConnector.Model
         {
             unchecked // Overflow is fine, just wrap
             {
-                int hashCode = 41;
-                if (this.AttachBusObId != null)
-                    hashCode = hashCode * 59 + this.AttachBusObId.GetHashCode();
-                if (this.AttachBusObName != null)
-                    hashCode = hashCode * 59 + this.AttachBusObName.GetHashCode();
-                if (this.AttachBusObPublicId != null)
-                    hashCode = hashCode * 59 + this.AttachBusObPublicId.GetHashCode();
-                if (this.AttachBusObRecId != null)
-                    hashCode = hashCode * 59 + this.AttachBusObRecId.GetHashCode();
-                if (this.BusObId != null)
-                    hashCode = hashCode * 59 + this.BusObId.GetHashCode();
-                if (this.BusObName != null)
-                    hashCode = hashCode * 59 + this.BusObName.GetHashCode();
-                if (this.BusObPublicId != null)
-                    hashCode = hashCode * 59 + this.BusObPublicId.GetHashCode();
-                if (this.BusObRecId != null)
-                    hashCode = hashCode * 59 + this.BusObRecId.GetHashCode();
-                if (this.Comment != null)
-                    hashCode = hashCode * 59 + this.Comment.GetHashCode();
-                if (this.IncludeLinks != null)
-                    hashCode = hashCode * 59 + this.IncludeLinks.GetHashCode();
+                var hashCode = 41;
+                if (AttachBusObId != null)
+                    hashCode = hashCode * 59 + AttachBusObId.GetHashCode();
+                if (AttachBusObName != null)
+                    hashCode = hashCode * 59 + AttachBusObName.GetHashCode();
+                if (AttachBusObPublicId != null)
+                    hashCode = hashCode * 59 + AttachBusObPublicId.GetHashCode();
+                if (AttachBusObRecId != null)
+                    hashCode = hashCode * 59 + AttachBusObRecId.GetHashCode();
+                if (BusObId != null)
+                    hashCode = hashCode * 59 + BusObId.GetHashCode();
+                if (BusObName != null)
+                    hashCode = hashCode * 59 + BusObName.GetHashCode();
+                if (BusObPublicId != null)
+                    hashCode = hashCode * 59 + BusObPublicId.GetHashCode();
+                if (BusObRecId != null)
+                    hashCode = hashCode * 59 + BusObRecId.GetHashCode();
+                if (Comment != null)
+                    hashCode = hashCode * 59 + Comment.GetHashCode();
+                if (IncludeLinks != null)
+                    hashCode = hashCode * 59 + IncludeLinks.GetHashCode();
                 return hashCode;
             }
         }
@@ -249,7 +249,7 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

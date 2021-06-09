@@ -25,9 +25,9 @@ namespace CherwellConnector.Model
         /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsCoreLogBatchRequest" /> class.
         /// </summary>
         /// <param name="logRequests">logRequests.</param>
-        public TrebuchetWebApiDataContractsCoreLogBatchRequest(List<TrebuchetWebApiDataContractsCoreLogRequest> logRequests = default(List<TrebuchetWebApiDataContractsCoreLogRequest>))
+        public TrebuchetWebApiDataContractsCoreLogBatchRequest(List<TrebuchetWebApiDataContractsCoreLogRequest> logRequests = default)
         {
-            this.LogRequests = logRequests;
+            LogRequests = logRequests;
         }
         
         /// <summary>
@@ -44,7 +44,7 @@ namespace CherwellConnector.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrebuchetWebApiDataContractsCoreLogBatchRequest {\n");
-            sb.Append("  LogRequests: ").Append(this.LogRequests).Append("\n");
+            sb.Append("  LogRequests: ").Append(LogRequests).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -65,7 +65,7 @@ namespace CherwellConnector.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as TrebuchetWebApiDataContractsCoreLogBatchRequest);
+            return Equals(input as TrebuchetWebApiDataContractsCoreLogBatchRequest);
         }
 
         /// <summary>
@@ -80,9 +80,9 @@ namespace CherwellConnector.Model
 
             return 
                 (
-                    this.LogRequests == input.LogRequests ||
-                    this.LogRequests != null &&
-                    this.LogRequests.SequenceEqual(input.LogRequests)
+                    LogRequests == input.LogRequests ||
+                    LogRequests != null &&
+                    LogRequests.SequenceEqual(input.LogRequests)
                 );
         }
 
@@ -94,9 +94,9 @@ namespace CherwellConnector.Model
         {
             unchecked // Overflow is fine, just wrap
             {
-                int hashCode = 41;
-                if (this.LogRequests != null)
-                    hashCode = hashCode * 59 + this.LogRequests.GetHashCode();
+                var hashCode = 41;
+                if (LogRequests != null)
+                    hashCode = hashCode * 59 + LogRequests.GetHashCode();
                 return hashCode;
             }
         }
@@ -106,7 +106,7 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

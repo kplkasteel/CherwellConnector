@@ -332,20 +332,20 @@ namespace CherwellConnector.Model
         /// <param name="errorMessage">errorMessage.</param>
         /// <param name="hasError">hasError.</param>
         /// <param name="httpStatusCode">httpStatusCode.</param>
-        public TrebuchetWebApiDataContractsSearchesSearchResultsResponse(List<TrebuchetWebApiDataContractsBusinessObjectReadResponse> businessObjects = default(List<TrebuchetWebApiDataContractsBusinessObjectReadResponse>), bool? hasPrompts = default(bool?), List<TrebuchetWebApiDataContractsCoreLink> links = default(List<TrebuchetWebApiDataContractsCoreLink>), List<TrebuchetWebApiDataContractsCorePrompt> prompts = default(List<TrebuchetWebApiDataContractsCorePrompt>), List<TrebuchetWebApiDataContractsSearchesField> searchResultsFields = default(List<TrebuchetWebApiDataContractsSearchesField>), TrebuchetWebApiDataContractsSearchesSimpleResultsList simpleResults = default(TrebuchetWebApiDataContractsSearchesSimpleResultsList), long? totalRows = default(long?), bool? hasMoreRecords = default(bool?), string errorCode = default(string), string errorMessage = default(string), bool? hasError = default(bool?), HttpStatusCodeEnum? httpStatusCode = default(HttpStatusCodeEnum?))
+        public TrebuchetWebApiDataContractsSearchesSearchResultsResponse(List<TrebuchetWebApiDataContractsBusinessObjectReadResponse> businessObjects = default, bool? hasPrompts = default, List<TrebuchetWebApiDataContractsCoreLink> links = default, List<TrebuchetWebApiDataContractsCorePrompt> prompts = default, List<TrebuchetWebApiDataContractsSearchesField> searchResultsFields = default, TrebuchetWebApiDataContractsSearchesSimpleResultsList simpleResults = default, long? totalRows = default, bool? hasMoreRecords = default, string errorCode = default, string errorMessage = default, bool? hasError = default, HttpStatusCodeEnum? httpStatusCode = default)
         {
-            this.BusinessObjects = businessObjects;
-            this.HasPrompts = hasPrompts;
-            this.Links = links;
-            this.Prompts = prompts;
-            this.SearchResultsFields = searchResultsFields;
-            this.SimpleResults = simpleResults;
-            this.TotalRows = totalRows;
-            this.HasMoreRecords = hasMoreRecords;
-            this.ErrorCode = errorCode;
-            this.ErrorMessage = errorMessage;
-            this.HasError = hasError;
-            this.HttpStatusCode = httpStatusCode;
+            BusinessObjects = businessObjects;
+            HasPrompts = hasPrompts;
+            Links = links;
+            Prompts = prompts;
+            SearchResultsFields = searchResultsFields;
+            SimpleResults = simpleResults;
+            TotalRows = totalRows;
+            HasMoreRecords = hasMoreRecords;
+            ErrorCode = errorCode;
+            ErrorMessage = errorMessage;
+            HasError = hasError;
+            HttpStatusCode = httpStatusCode;
         }
         
         /// <summary>
@@ -423,18 +423,18 @@ namespace CherwellConnector.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrebuchetWebApiDataContractsSearchesSearchResultsResponse {\n");
-            sb.Append("  BusinessObjects: ").Append(this.BusinessObjects).Append("\n");
-            sb.Append("  HasPrompts: ").Append(this.HasPrompts).Append("\n");
-            sb.Append("  Links: ").Append(this.Links).Append("\n");
-            sb.Append("  Prompts: ").Append(this.Prompts).Append("\n");
-            sb.Append("  SearchResultsFields: ").Append(this.SearchResultsFields).Append("\n");
-            sb.Append("  SimpleResults: ").Append(this.SimpleResults).Append("\n");
-            sb.Append("  TotalRows: ").Append(this.TotalRows).Append("\n");
-            sb.Append("  HasMoreRecords: ").Append(this.HasMoreRecords).Append("\n");
-            sb.Append("  ErrorCode: ").Append(this.ErrorCode).Append("\n");
-            sb.Append("  ErrorMessage: ").Append(this.ErrorMessage).Append("\n");
-            sb.Append("  HasError: ").Append(this.HasError).Append("\n");
-            sb.Append("  HttpStatusCode: ").Append(this.HttpStatusCode).Append("\n");
+            sb.Append("  BusinessObjects: ").Append(BusinessObjects).Append("\n");
+            sb.Append("  HasPrompts: ").Append(HasPrompts).Append("\n");
+            sb.Append("  Links: ").Append(Links).Append("\n");
+            sb.Append("  Prompts: ").Append(Prompts).Append("\n");
+            sb.Append("  SearchResultsFields: ").Append(SearchResultsFields).Append("\n");
+            sb.Append("  SimpleResults: ").Append(SimpleResults).Append("\n");
+            sb.Append("  TotalRows: ").Append(TotalRows).Append("\n");
+            sb.Append("  HasMoreRecords: ").Append(HasMoreRecords).Append("\n");
+            sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
+            sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append("\n");
+            sb.Append("  HasError: ").Append(HasError).Append("\n");
+            sb.Append("  HttpStatusCode: ").Append(HttpStatusCode).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -455,7 +455,7 @@ namespace CherwellConnector.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as TrebuchetWebApiDataContractsSearchesSearchResultsResponse);
+            return Equals(input as TrebuchetWebApiDataContractsSearchesSearchResultsResponse);
         }
 
         /// <summary>
@@ -470,64 +470,64 @@ namespace CherwellConnector.Model
 
             return 
                 (
-                    this.BusinessObjects == input.BusinessObjects ||
-                    this.BusinessObjects != null &&
-                    this.BusinessObjects.SequenceEqual(input.BusinessObjects)
+                    BusinessObjects == input.BusinessObjects ||
+                    BusinessObjects != null &&
+                    BusinessObjects.SequenceEqual(input.BusinessObjects)
                 ) && 
                 (
-                    this.HasPrompts == input.HasPrompts ||
-                    (this.HasPrompts != null &&
-                    this.HasPrompts.Equals(input.HasPrompts))
+                    HasPrompts == input.HasPrompts ||
+                    (HasPrompts != null &&
+                    HasPrompts.Equals(input.HasPrompts))
                 ) && 
                 (
-                    this.Links == input.Links ||
-                    this.Links != null &&
-                    this.Links.SequenceEqual(input.Links)
+                    Links == input.Links ||
+                    Links != null &&
+                    Links.SequenceEqual(input.Links)
                 ) && 
                 (
-                    this.Prompts == input.Prompts ||
-                    this.Prompts != null &&
-                    this.Prompts.SequenceEqual(input.Prompts)
+                    Prompts == input.Prompts ||
+                    Prompts != null &&
+                    Prompts.SequenceEqual(input.Prompts)
                 ) && 
                 (
-                    this.SearchResultsFields == input.SearchResultsFields ||
-                    this.SearchResultsFields != null &&
-                    this.SearchResultsFields.SequenceEqual(input.SearchResultsFields)
+                    SearchResultsFields == input.SearchResultsFields ||
+                    SearchResultsFields != null &&
+                    SearchResultsFields.SequenceEqual(input.SearchResultsFields)
                 ) && 
                 (
-                    this.SimpleResults == input.SimpleResults ||
-                    (this.SimpleResults != null &&
-                    this.SimpleResults.Equals(input.SimpleResults))
+                    SimpleResults == input.SimpleResults ||
+                    (SimpleResults != null &&
+                    SimpleResults.Equals(input.SimpleResults))
                 ) && 
                 (
-                    this.TotalRows == input.TotalRows ||
-                    (this.TotalRows != null &&
-                    this.TotalRows.Equals(input.TotalRows))
+                    TotalRows == input.TotalRows ||
+                    (TotalRows != null &&
+                    TotalRows.Equals(input.TotalRows))
                 ) && 
                 (
-                    this.HasMoreRecords == input.HasMoreRecords ||
-                    (this.HasMoreRecords != null &&
-                    this.HasMoreRecords.Equals(input.HasMoreRecords))
+                    HasMoreRecords == input.HasMoreRecords ||
+                    (HasMoreRecords != null &&
+                    HasMoreRecords.Equals(input.HasMoreRecords))
                 ) && 
                 (
-                    this.ErrorCode == input.ErrorCode ||
-                    (this.ErrorCode != null &&
-                    this.ErrorCode.Equals(input.ErrorCode))
+                    ErrorCode == input.ErrorCode ||
+                    (ErrorCode != null &&
+                    ErrorCode.Equals(input.ErrorCode))
                 ) && 
                 (
-                    this.ErrorMessage == input.ErrorMessage ||
-                    (this.ErrorMessage != null &&
-                    this.ErrorMessage.Equals(input.ErrorMessage))
+                    ErrorMessage == input.ErrorMessage ||
+                    (ErrorMessage != null &&
+                    ErrorMessage.Equals(input.ErrorMessage))
                 ) && 
                 (
-                    this.HasError == input.HasError ||
-                    (this.HasError != null &&
-                    this.HasError.Equals(input.HasError))
+                    HasError == input.HasError ||
+                    (HasError != null &&
+                    HasError.Equals(input.HasError))
                 ) && 
                 (
-                    this.HttpStatusCode == input.HttpStatusCode ||
-                    (this.HttpStatusCode != null &&
-                    this.HttpStatusCode.Equals(input.HttpStatusCode))
+                    HttpStatusCode == input.HttpStatusCode ||
+                    (HttpStatusCode != null &&
+                    HttpStatusCode.Equals(input.HttpStatusCode))
                 );
         }
 
@@ -539,31 +539,31 @@ namespace CherwellConnector.Model
         {
             unchecked // Overflow is fine, just wrap
             {
-                int hashCode = 41;
-                if (this.BusinessObjects != null)
-                    hashCode = hashCode * 59 + this.BusinessObjects.GetHashCode();
-                if (this.HasPrompts != null)
-                    hashCode = hashCode * 59 + this.HasPrompts.GetHashCode();
-                if (this.Links != null)
-                    hashCode = hashCode * 59 + this.Links.GetHashCode();
-                if (this.Prompts != null)
-                    hashCode = hashCode * 59 + this.Prompts.GetHashCode();
-                if (this.SearchResultsFields != null)
-                    hashCode = hashCode * 59 + this.SearchResultsFields.GetHashCode();
-                if (this.SimpleResults != null)
-                    hashCode = hashCode * 59 + this.SimpleResults.GetHashCode();
-                if (this.TotalRows != null)
-                    hashCode = hashCode * 59 + this.TotalRows.GetHashCode();
-                if (this.HasMoreRecords != null)
-                    hashCode = hashCode * 59 + this.HasMoreRecords.GetHashCode();
-                if (this.ErrorCode != null)
-                    hashCode = hashCode * 59 + this.ErrorCode.GetHashCode();
-                if (this.ErrorMessage != null)
-                    hashCode = hashCode * 59 + this.ErrorMessage.GetHashCode();
-                if (this.HasError != null)
-                    hashCode = hashCode * 59 + this.HasError.GetHashCode();
-                if (this.HttpStatusCode != null)
-                    hashCode = hashCode * 59 + this.HttpStatusCode.GetHashCode();
+                var hashCode = 41;
+                if (BusinessObjects != null)
+                    hashCode = hashCode * 59 + BusinessObjects.GetHashCode();
+                if (HasPrompts != null)
+                    hashCode = hashCode * 59 + HasPrompts.GetHashCode();
+                if (Links != null)
+                    hashCode = hashCode * 59 + Links.GetHashCode();
+                if (Prompts != null)
+                    hashCode = hashCode * 59 + Prompts.GetHashCode();
+                if (SearchResultsFields != null)
+                    hashCode = hashCode * 59 + SearchResultsFields.GetHashCode();
+                if (SimpleResults != null)
+                    hashCode = hashCode * 59 + SimpleResults.GetHashCode();
+                if (TotalRows != null)
+                    hashCode = hashCode * 59 + TotalRows.GetHashCode();
+                if (HasMoreRecords != null)
+                    hashCode = hashCode * 59 + HasMoreRecords.GetHashCode();
+                if (ErrorCode != null)
+                    hashCode = hashCode * 59 + ErrorCode.GetHashCode();
+                if (ErrorMessage != null)
+                    hashCode = hashCode * 59 + ErrorMessage.GetHashCode();
+                if (HasError != null)
+                    hashCode = hashCode * 59 + HasError.GetHashCode();
+                if (HttpStatusCode != null)
+                    hashCode = hashCode * 59 + HttpStatusCode.GetHashCode();
                 return hashCode;
             }
         }
@@ -573,7 +573,7 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

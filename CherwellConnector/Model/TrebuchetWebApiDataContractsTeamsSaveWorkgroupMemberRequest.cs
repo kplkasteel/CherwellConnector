@@ -26,11 +26,11 @@ namespace CherwellConnector.Model
         /// <param name="customerRecordId">customerRecordId.</param>
         /// <param name="workgroupId">workgroupId.</param>
         /// <param name="customerIsWorkgroupManager">customerIsWorkgroupManager.</param>
-        public TrebuchetWebApiDataContractsTeamsSaveWorkgroupMemberRequest(string customerRecordId = default(string), string workgroupId = default(string), bool? customerIsWorkgroupManager = default(bool?))
+        public TrebuchetWebApiDataContractsTeamsSaveWorkgroupMemberRequest(string customerRecordId = default, string workgroupId = default, bool? customerIsWorkgroupManager = default)
         {
-            this.CustomerRecordId = customerRecordId;
-            this.WorkgroupId = workgroupId;
-            this.CustomerIsWorkgroupManager = customerIsWorkgroupManager;
+            CustomerRecordId = customerRecordId;
+            WorkgroupId = workgroupId;
+            CustomerIsWorkgroupManager = customerIsWorkgroupManager;
         }
         
         /// <summary>
@@ -59,9 +59,9 @@ namespace CherwellConnector.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrebuchetWebApiDataContractsTeamsSaveWorkgroupMemberRequest {\n");
-            sb.Append("  CustomerRecordId: ").Append(this.CustomerRecordId).Append("\n");
-            sb.Append("  WorkgroupId: ").Append(this.WorkgroupId).Append("\n");
-            sb.Append("  CustomerIsWorkgroupManager: ").Append(this.CustomerIsWorkgroupManager).Append("\n");
+            sb.Append("  CustomerRecordId: ").Append(CustomerRecordId).Append("\n");
+            sb.Append("  WorkgroupId: ").Append(WorkgroupId).Append("\n");
+            sb.Append("  CustomerIsWorkgroupManager: ").Append(CustomerIsWorkgroupManager).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -82,7 +82,7 @@ namespace CherwellConnector.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as TrebuchetWebApiDataContractsTeamsSaveWorkgroupMemberRequest);
+            return Equals(input as TrebuchetWebApiDataContractsTeamsSaveWorkgroupMemberRequest);
         }
 
         /// <summary>
@@ -97,19 +97,19 @@ namespace CherwellConnector.Model
 
             return 
                 (
-                    this.CustomerRecordId == input.CustomerRecordId ||
-                    (this.CustomerRecordId != null &&
-                    this.CustomerRecordId.Equals(input.CustomerRecordId))
+                    CustomerRecordId == input.CustomerRecordId ||
+                    (CustomerRecordId != null &&
+                    CustomerRecordId.Equals(input.CustomerRecordId))
                 ) && 
                 (
-                    this.WorkgroupId == input.WorkgroupId ||
-                    (this.WorkgroupId != null &&
-                    this.WorkgroupId.Equals(input.WorkgroupId))
+                    WorkgroupId == input.WorkgroupId ||
+                    (WorkgroupId != null &&
+                    WorkgroupId.Equals(input.WorkgroupId))
                 ) && 
                 (
-                    this.CustomerIsWorkgroupManager == input.CustomerIsWorkgroupManager ||
-                    (this.CustomerIsWorkgroupManager != null &&
-                    this.CustomerIsWorkgroupManager.Equals(input.CustomerIsWorkgroupManager))
+                    CustomerIsWorkgroupManager == input.CustomerIsWorkgroupManager ||
+                    (CustomerIsWorkgroupManager != null &&
+                    CustomerIsWorkgroupManager.Equals(input.CustomerIsWorkgroupManager))
                 );
         }
 
@@ -121,13 +121,13 @@ namespace CherwellConnector.Model
         {
             unchecked // Overflow is fine, just wrap
             {
-                int hashCode = 41;
-                if (this.CustomerRecordId != null)
-                    hashCode = hashCode * 59 + this.CustomerRecordId.GetHashCode();
-                if (this.WorkgroupId != null)
-                    hashCode = hashCode * 59 + this.WorkgroupId.GetHashCode();
-                if (this.CustomerIsWorkgroupManager != null)
-                    hashCode = hashCode * 59 + this.CustomerIsWorkgroupManager.GetHashCode();
+                var hashCode = 41;
+                if (CustomerRecordId != null)
+                    hashCode = hashCode * 59 + CustomerRecordId.GetHashCode();
+                if (WorkgroupId != null)
+                    hashCode = hashCode * 59 + WorkgroupId.GetHashCode();
+                if (CustomerIsWorkgroupManager != null)
+                    hashCode = hashCode * 59 + CustomerIsWorkgroupManager.GetHashCode();
                 return hashCode;
             }
         }
@@ -137,7 +137,7 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

@@ -63,16 +63,16 @@ namespace CherwellConnector.Model
         /// <param name="scope">scope.</param>
         /// <param name="scopeOwner">scopeOwner.</param>
         /// <param name="standInKey">standInKey.</param>
-        public TrebuchetWebApiDataContractsCoreSaveGalleryImageRequest(string base64EncodedImageData = default(string), string description = default(string), string folder = default(string), ImageTypeEnum? imageType = default(ImageTypeEnum?), string name = default(string), string scope = default(string), string scopeOwner = default(string), string standInKey = default(string))
+        public TrebuchetWebApiDataContractsCoreSaveGalleryImageRequest(string base64EncodedImageData = default, string description = default, string folder = default, ImageTypeEnum? imageType = default, string name = default, string scope = default, string scopeOwner = default, string standInKey = default)
         {
-            this.Base64EncodedImageData = base64EncodedImageData;
-            this.Description = description;
-            this.Folder = folder;
-            this.ImageType = imageType;
-            this.Name = name;
-            this.Scope = scope;
-            this.ScopeOwner = scopeOwner;
-            this.StandInKey = standInKey;
+            Base64EncodedImageData = base64EncodedImageData;
+            Description = description;
+            Folder = folder;
+            ImageType = imageType;
+            Name = name;
+            Scope = scope;
+            ScopeOwner = scopeOwner;
+            StandInKey = standInKey;
         }
         
         /// <summary>
@@ -126,14 +126,14 @@ namespace CherwellConnector.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrebuchetWebApiDataContractsCoreSaveGalleryImageRequest {\n");
-            sb.Append("  Base64EncodedImageData: ").Append(this.Base64EncodedImageData).Append("\n");
-            sb.Append("  Description: ").Append(this.Description).Append("\n");
-            sb.Append("  Folder: ").Append(this.Folder).Append("\n");
-            sb.Append("  ImageType: ").Append(this.ImageType).Append("\n");
-            sb.Append("  Name: ").Append(this.Name).Append("\n");
-            sb.Append("  Scope: ").Append(this.Scope).Append("\n");
-            sb.Append("  ScopeOwner: ").Append(this.ScopeOwner).Append("\n");
-            sb.Append("  StandInKey: ").Append(this.StandInKey).Append("\n");
+            sb.Append("  Base64EncodedImageData: ").Append(Base64EncodedImageData).Append("\n");
+            sb.Append("  Description: ").Append(Description).Append("\n");
+            sb.Append("  Folder: ").Append(Folder).Append("\n");
+            sb.Append("  ImageType: ").Append(ImageType).Append("\n");
+            sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  Scope: ").Append(Scope).Append("\n");
+            sb.Append("  ScopeOwner: ").Append(ScopeOwner).Append("\n");
+            sb.Append("  StandInKey: ").Append(StandInKey).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -154,7 +154,7 @@ namespace CherwellConnector.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as TrebuchetWebApiDataContractsCoreSaveGalleryImageRequest);
+            return Equals(input as TrebuchetWebApiDataContractsCoreSaveGalleryImageRequest);
         }
 
         /// <summary>
@@ -169,44 +169,44 @@ namespace CherwellConnector.Model
 
             return 
                 (
-                    this.Base64EncodedImageData == input.Base64EncodedImageData ||
-                    (this.Base64EncodedImageData != null &&
-                    this.Base64EncodedImageData.Equals(input.Base64EncodedImageData))
+                    Base64EncodedImageData == input.Base64EncodedImageData ||
+                    (Base64EncodedImageData != null &&
+                    Base64EncodedImageData.Equals(input.Base64EncodedImageData))
                 ) && 
                 (
-                    this.Description == input.Description ||
-                    (this.Description != null &&
-                    this.Description.Equals(input.Description))
+                    Description == input.Description ||
+                    (Description != null &&
+                    Description.Equals(input.Description))
                 ) && 
                 (
-                    this.Folder == input.Folder ||
-                    (this.Folder != null &&
-                    this.Folder.Equals(input.Folder))
+                    Folder == input.Folder ||
+                    (Folder != null &&
+                    Folder.Equals(input.Folder))
                 ) && 
                 (
-                    this.ImageType == input.ImageType ||
-                    (this.ImageType != null &&
-                    this.ImageType.Equals(input.ImageType))
+                    ImageType == input.ImageType ||
+                    (ImageType != null &&
+                    ImageType.Equals(input.ImageType))
                 ) && 
                 (
-                    this.Name == input.Name ||
-                    (this.Name != null &&
-                    this.Name.Equals(input.Name))
+                    Name == input.Name ||
+                    (Name != null &&
+                    Name.Equals(input.Name))
                 ) && 
                 (
-                    this.Scope == input.Scope ||
-                    (this.Scope != null &&
-                    this.Scope.Equals(input.Scope))
+                    Scope == input.Scope ||
+                    (Scope != null &&
+                    Scope.Equals(input.Scope))
                 ) && 
                 (
-                    this.ScopeOwner == input.ScopeOwner ||
-                    (this.ScopeOwner != null &&
-                    this.ScopeOwner.Equals(input.ScopeOwner))
+                    ScopeOwner == input.ScopeOwner ||
+                    (ScopeOwner != null &&
+                    ScopeOwner.Equals(input.ScopeOwner))
                 ) && 
                 (
-                    this.StandInKey == input.StandInKey ||
-                    (this.StandInKey != null &&
-                    this.StandInKey.Equals(input.StandInKey))
+                    StandInKey == input.StandInKey ||
+                    (StandInKey != null &&
+                    StandInKey.Equals(input.StandInKey))
                 );
         }
 
@@ -218,23 +218,23 @@ namespace CherwellConnector.Model
         {
             unchecked // Overflow is fine, just wrap
             {
-                int hashCode = 41;
-                if (this.Base64EncodedImageData != null)
-                    hashCode = hashCode * 59 + this.Base64EncodedImageData.GetHashCode();
-                if (this.Description != null)
-                    hashCode = hashCode * 59 + this.Description.GetHashCode();
-                if (this.Folder != null)
-                    hashCode = hashCode * 59 + this.Folder.GetHashCode();
-                if (this.ImageType != null)
-                    hashCode = hashCode * 59 + this.ImageType.GetHashCode();
-                if (this.Name != null)
-                    hashCode = hashCode * 59 + this.Name.GetHashCode();
-                if (this.Scope != null)
-                    hashCode = hashCode * 59 + this.Scope.GetHashCode();
-                if (this.ScopeOwner != null)
-                    hashCode = hashCode * 59 + this.ScopeOwner.GetHashCode();
-                if (this.StandInKey != null)
-                    hashCode = hashCode * 59 + this.StandInKey.GetHashCode();
+                var hashCode = 41;
+                if (Base64EncodedImageData != null)
+                    hashCode = hashCode * 59 + Base64EncodedImageData.GetHashCode();
+                if (Description != null)
+                    hashCode = hashCode * 59 + Description.GetHashCode();
+                if (Folder != null)
+                    hashCode = hashCode * 59 + Folder.GetHashCode();
+                if (ImageType != null)
+                    hashCode = hashCode * 59 + ImageType.GetHashCode();
+                if (Name != null)
+                    hashCode = hashCode * 59 + Name.GetHashCode();
+                if (Scope != null)
+                    hashCode = hashCode * 59 + Scope.GetHashCode();
+                if (ScopeOwner != null)
+                    hashCode = hashCode * 59 + ScopeOwner.GetHashCode();
+                if (StandInKey != null)
+                    hashCode = hashCode * 59 + StandInKey.GetHashCode();
                 return hashCode;
             }
         }
@@ -244,7 +244,7 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

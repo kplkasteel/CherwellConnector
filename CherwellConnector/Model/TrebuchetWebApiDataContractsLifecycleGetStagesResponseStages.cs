@@ -26,11 +26,11 @@ namespace CherwellConnector.Model
         /// <param name="id">id.</param>
         /// <param name="isFinal">isFinal.</param>
         /// <param name="name">name.</param>
-        public TrebuchetWebApiDataContractsLifecycleGetStagesResponseStages(string id = default(string), bool? isFinal = default(bool?), string name = default(string))
+        public TrebuchetWebApiDataContractsLifecycleGetStagesResponseStages(string id = default, bool? isFinal = default, string name = default)
         {
-            this.Id = id;
-            this.IsFinal = isFinal;
-            this.Name = name;
+            Id = id;
+            IsFinal = isFinal;
+            Name = name;
         }
         
         /// <summary>
@@ -59,9 +59,9 @@ namespace CherwellConnector.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrebuchetWebApiDataContractsLifecycleGetStagesResponseStages {\n");
-            sb.Append("  Id: ").Append(this.Id).Append("\n");
-            sb.Append("  IsFinal: ").Append(this.IsFinal).Append("\n");
-            sb.Append("  Name: ").Append(this.Name).Append("\n");
+            sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  IsFinal: ").Append(IsFinal).Append("\n");
+            sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -82,7 +82,7 @@ namespace CherwellConnector.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as TrebuchetWebApiDataContractsLifecycleGetStagesResponseStages);
+            return Equals(input as TrebuchetWebApiDataContractsLifecycleGetStagesResponseStages);
         }
 
         /// <summary>
@@ -97,19 +97,19 @@ namespace CherwellConnector.Model
 
             return 
                 (
-                    this.Id == input.Id ||
-                    (this.Id != null &&
-                    this.Id.Equals(input.Id))
+                    Id == input.Id ||
+                    (Id != null &&
+                    Id.Equals(input.Id))
                 ) && 
                 (
-                    this.IsFinal == input.IsFinal ||
-                    (this.IsFinal != null &&
-                    this.IsFinal.Equals(input.IsFinal))
+                    IsFinal == input.IsFinal ||
+                    (IsFinal != null &&
+                    IsFinal.Equals(input.IsFinal))
                 ) && 
                 (
-                    this.Name == input.Name ||
-                    (this.Name != null &&
-                    this.Name.Equals(input.Name))
+                    Name == input.Name ||
+                    (Name != null &&
+                    Name.Equals(input.Name))
                 );
         }
 
@@ -121,13 +121,13 @@ namespace CherwellConnector.Model
         {
             unchecked // Overflow is fine, just wrap
             {
-                int hashCode = 41;
-                if (this.Id != null)
-                    hashCode = hashCode * 59 + this.Id.GetHashCode();
-                if (this.IsFinal != null)
-                    hashCode = hashCode * 59 + this.IsFinal.GetHashCode();
-                if (this.Name != null)
-                    hashCode = hashCode * 59 + this.Name.GetHashCode();
+                var hashCode = 41;
+                if (Id != null)
+                    hashCode = hashCode * 59 + Id.GetHashCode();
+                if (IsFinal != null)
+                    hashCode = hashCode * 59 + IsFinal.GetHashCode();
+                if (Name != null)
+                    hashCode = hashCode * 59 + Name.GetHashCode();
                 return hashCode;
             }
         }
@@ -137,7 +137,7 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

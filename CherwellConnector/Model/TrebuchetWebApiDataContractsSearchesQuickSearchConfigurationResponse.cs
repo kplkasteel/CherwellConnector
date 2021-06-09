@@ -340,28 +340,28 @@ namespace CherwellConnector.Model
         /// <param name="errorMessage">errorMessage.</param>
         /// <param name="hasError">hasError.</param>
         /// <param name="httpStatusCode">httpStatusCode.</param>
-        public TrebuchetWebApiDataContractsSearchesQuickSearchConfigurationResponse(bool? allowQuickSearch = default(bool?), bool? allowSpecificSearch = default(bool?), bool? defaultToQuickSearch = default(bool?), string displayName = default(string), string galleryImage = default(string), List<string> history = default(List<string>), bool? includeAvailableInSpecific = default(bool?), bool? includeQuickSearchInSpecific = default(bool?), string quickSearchId = default(string), List<TrebuchetWebApiDataContractsSearchesQuickSearchItem> quickSearchItems = default(List<TrebuchetWebApiDataContractsSearchesQuickSearchItem>), string quickSearchWatermark = default(string), bool? sortByRelevance = default(bool?), string resolvedQuickSearchWatermark = default(string), string scope = default(string), string scopeOwner = default(string), List<TrebuchetWebApiDataContractsSearchesQuickSearchItem> specificSearchItems = default(List<TrebuchetWebApiDataContractsSearchesQuickSearchItem>), string errorCode = default(string), string errorMessage = default(string), bool? hasError = default(bool?), HttpStatusCodeEnum? httpStatusCode = default(HttpStatusCodeEnum?))
+        public TrebuchetWebApiDataContractsSearchesQuickSearchConfigurationResponse(bool? allowQuickSearch = default, bool? allowSpecificSearch = default, bool? defaultToQuickSearch = default, string displayName = default, string galleryImage = default, List<string> history = default, bool? includeAvailableInSpecific = default, bool? includeQuickSearchInSpecific = default, string quickSearchId = default, List<TrebuchetWebApiDataContractsSearchesQuickSearchItem> quickSearchItems = default, string quickSearchWatermark = default, bool? sortByRelevance = default, string resolvedQuickSearchWatermark = default, string scope = default, string scopeOwner = default, List<TrebuchetWebApiDataContractsSearchesQuickSearchItem> specificSearchItems = default, string errorCode = default, string errorMessage = default, bool? hasError = default, HttpStatusCodeEnum? httpStatusCode = default)
         {
-            this.AllowQuickSearch = allowQuickSearch;
-            this.AllowSpecificSearch = allowSpecificSearch;
-            this.DefaultToQuickSearch = defaultToQuickSearch;
-            this.DisplayName = displayName;
-            this.GalleryImage = galleryImage;
-            this.History = history;
-            this.IncludeAvailableInSpecific = includeAvailableInSpecific;
-            this.IncludeQuickSearchInSpecific = includeQuickSearchInSpecific;
-            this.QuickSearchId = quickSearchId;
-            this.QuickSearchItems = quickSearchItems;
-            this.QuickSearchWatermark = quickSearchWatermark;
-            this.SortByRelevance = sortByRelevance;
-            this.ResolvedQuickSearchWatermark = resolvedQuickSearchWatermark;
-            this.Scope = scope;
-            this.ScopeOwner = scopeOwner;
-            this.SpecificSearchItems = specificSearchItems;
-            this.ErrorCode = errorCode;
-            this.ErrorMessage = errorMessage;
-            this.HasError = hasError;
-            this.HttpStatusCode = httpStatusCode;
+            AllowQuickSearch = allowQuickSearch;
+            AllowSpecificSearch = allowSpecificSearch;
+            DefaultToQuickSearch = defaultToQuickSearch;
+            DisplayName = displayName;
+            GalleryImage = galleryImage;
+            History = history;
+            IncludeAvailableInSpecific = includeAvailableInSpecific;
+            IncludeQuickSearchInSpecific = includeQuickSearchInSpecific;
+            QuickSearchId = quickSearchId;
+            QuickSearchItems = quickSearchItems;
+            QuickSearchWatermark = quickSearchWatermark;
+            SortByRelevance = sortByRelevance;
+            ResolvedQuickSearchWatermark = resolvedQuickSearchWatermark;
+            Scope = scope;
+            ScopeOwner = scopeOwner;
+            SpecificSearchItems = specificSearchItems;
+            ErrorCode = errorCode;
+            ErrorMessage = errorMessage;
+            HasError = hasError;
+            HttpStatusCode = httpStatusCode;
         }
         
         /// <summary>
@@ -487,26 +487,26 @@ namespace CherwellConnector.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrebuchetWebApiDataContractsSearchesQuickSearchConfigurationResponse {\n");
-            sb.Append("  AllowQuickSearch: ").Append(this.AllowQuickSearch).Append("\n");
-            sb.Append("  AllowSpecificSearch: ").Append(this.AllowSpecificSearch).Append("\n");
-            sb.Append("  DefaultToQuickSearch: ").Append(this.DefaultToQuickSearch).Append("\n");
-            sb.Append("  DisplayName: ").Append(this.DisplayName).Append("\n");
-            sb.Append("  GalleryImage: ").Append(this.GalleryImage).Append("\n");
-            sb.Append("  History: ").Append(this.History).Append("\n");
-            sb.Append("  IncludeAvailableInSpecific: ").Append(this.IncludeAvailableInSpecific).Append("\n");
-            sb.Append("  IncludeQuickSearchInSpecific: ").Append(this.IncludeQuickSearchInSpecific).Append("\n");
-            sb.Append("  QuickSearchId: ").Append(this.QuickSearchId).Append("\n");
-            sb.Append("  QuickSearchItems: ").Append(this.QuickSearchItems).Append("\n");
-            sb.Append("  QuickSearchWatermark: ").Append(this.QuickSearchWatermark).Append("\n");
-            sb.Append("  SortByRelevance: ").Append(this.SortByRelevance).Append("\n");
-            sb.Append("  ResolvedQuickSearchWatermark: ").Append(this.ResolvedQuickSearchWatermark).Append("\n");
-            sb.Append("  Scope: ").Append(this.Scope).Append("\n");
-            sb.Append("  ScopeOwner: ").Append(this.ScopeOwner).Append("\n");
-            sb.Append("  SpecificSearchItems: ").Append(this.SpecificSearchItems).Append("\n");
-            sb.Append("  ErrorCode: ").Append(this.ErrorCode).Append("\n");
-            sb.Append("  ErrorMessage: ").Append(this.ErrorMessage).Append("\n");
-            sb.Append("  HasError: ").Append(this.HasError).Append("\n");
-            sb.Append("  HttpStatusCode: ").Append(this.HttpStatusCode).Append("\n");
+            sb.Append("  AllowQuickSearch: ").Append(AllowQuickSearch).Append("\n");
+            sb.Append("  AllowSpecificSearch: ").Append(AllowSpecificSearch).Append("\n");
+            sb.Append("  DefaultToQuickSearch: ").Append(DefaultToQuickSearch).Append("\n");
+            sb.Append("  DisplayName: ").Append(DisplayName).Append("\n");
+            sb.Append("  GalleryImage: ").Append(GalleryImage).Append("\n");
+            sb.Append("  History: ").Append(History).Append("\n");
+            sb.Append("  IncludeAvailableInSpecific: ").Append(IncludeAvailableInSpecific).Append("\n");
+            sb.Append("  IncludeQuickSearchInSpecific: ").Append(IncludeQuickSearchInSpecific).Append("\n");
+            sb.Append("  QuickSearchId: ").Append(QuickSearchId).Append("\n");
+            sb.Append("  QuickSearchItems: ").Append(QuickSearchItems).Append("\n");
+            sb.Append("  QuickSearchWatermark: ").Append(QuickSearchWatermark).Append("\n");
+            sb.Append("  SortByRelevance: ").Append(SortByRelevance).Append("\n");
+            sb.Append("  ResolvedQuickSearchWatermark: ").Append(ResolvedQuickSearchWatermark).Append("\n");
+            sb.Append("  Scope: ").Append(Scope).Append("\n");
+            sb.Append("  ScopeOwner: ").Append(ScopeOwner).Append("\n");
+            sb.Append("  SpecificSearchItems: ").Append(SpecificSearchItems).Append("\n");
+            sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
+            sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append("\n");
+            sb.Append("  HasError: ").Append(HasError).Append("\n");
+            sb.Append("  HttpStatusCode: ").Append(HttpStatusCode).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -527,7 +527,7 @@ namespace CherwellConnector.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as TrebuchetWebApiDataContractsSearchesQuickSearchConfigurationResponse);
+            return Equals(input as TrebuchetWebApiDataContractsSearchesQuickSearchConfigurationResponse);
         }
 
         /// <summary>
@@ -542,104 +542,104 @@ namespace CherwellConnector.Model
 
             return 
                 (
-                    this.AllowQuickSearch == input.AllowQuickSearch ||
-                    (this.AllowQuickSearch != null &&
-                    this.AllowQuickSearch.Equals(input.AllowQuickSearch))
+                    AllowQuickSearch == input.AllowQuickSearch ||
+                    (AllowQuickSearch != null &&
+                    AllowQuickSearch.Equals(input.AllowQuickSearch))
                 ) && 
                 (
-                    this.AllowSpecificSearch == input.AllowSpecificSearch ||
-                    (this.AllowSpecificSearch != null &&
-                    this.AllowSpecificSearch.Equals(input.AllowSpecificSearch))
+                    AllowSpecificSearch == input.AllowSpecificSearch ||
+                    (AllowSpecificSearch != null &&
+                    AllowSpecificSearch.Equals(input.AllowSpecificSearch))
                 ) && 
                 (
-                    this.DefaultToQuickSearch == input.DefaultToQuickSearch ||
-                    (this.DefaultToQuickSearch != null &&
-                    this.DefaultToQuickSearch.Equals(input.DefaultToQuickSearch))
+                    DefaultToQuickSearch == input.DefaultToQuickSearch ||
+                    (DefaultToQuickSearch != null &&
+                    DefaultToQuickSearch.Equals(input.DefaultToQuickSearch))
                 ) && 
                 (
-                    this.DisplayName == input.DisplayName ||
-                    (this.DisplayName != null &&
-                    this.DisplayName.Equals(input.DisplayName))
+                    DisplayName == input.DisplayName ||
+                    (DisplayName != null &&
+                    DisplayName.Equals(input.DisplayName))
                 ) && 
                 (
-                    this.GalleryImage == input.GalleryImage ||
-                    (this.GalleryImage != null &&
-                    this.GalleryImage.Equals(input.GalleryImage))
+                    GalleryImage == input.GalleryImage ||
+                    (GalleryImage != null &&
+                    GalleryImage.Equals(input.GalleryImage))
                 ) && 
                 (
-                    this.History == input.History ||
-                    this.History != null &&
-                    this.History.SequenceEqual(input.History)
+                    History == input.History ||
+                    History != null &&
+                    History.SequenceEqual(input.History)
                 ) && 
                 (
-                    this.IncludeAvailableInSpecific == input.IncludeAvailableInSpecific ||
-                    (this.IncludeAvailableInSpecific != null &&
-                    this.IncludeAvailableInSpecific.Equals(input.IncludeAvailableInSpecific))
+                    IncludeAvailableInSpecific == input.IncludeAvailableInSpecific ||
+                    (IncludeAvailableInSpecific != null &&
+                    IncludeAvailableInSpecific.Equals(input.IncludeAvailableInSpecific))
                 ) && 
                 (
-                    this.IncludeQuickSearchInSpecific == input.IncludeQuickSearchInSpecific ||
-                    (this.IncludeQuickSearchInSpecific != null &&
-                    this.IncludeQuickSearchInSpecific.Equals(input.IncludeQuickSearchInSpecific))
+                    IncludeQuickSearchInSpecific == input.IncludeQuickSearchInSpecific ||
+                    (IncludeQuickSearchInSpecific != null &&
+                    IncludeQuickSearchInSpecific.Equals(input.IncludeQuickSearchInSpecific))
                 ) && 
                 (
-                    this.QuickSearchId == input.QuickSearchId ||
-                    (this.QuickSearchId != null &&
-                    this.QuickSearchId.Equals(input.QuickSearchId))
+                    QuickSearchId == input.QuickSearchId ||
+                    (QuickSearchId != null &&
+                    QuickSearchId.Equals(input.QuickSearchId))
                 ) && 
                 (
-                    this.QuickSearchItems == input.QuickSearchItems ||
-                    this.QuickSearchItems != null &&
-                    this.QuickSearchItems.SequenceEqual(input.QuickSearchItems)
+                    QuickSearchItems == input.QuickSearchItems ||
+                    QuickSearchItems != null &&
+                    QuickSearchItems.SequenceEqual(input.QuickSearchItems)
                 ) && 
                 (
-                    this.QuickSearchWatermark == input.QuickSearchWatermark ||
-                    (this.QuickSearchWatermark != null &&
-                    this.QuickSearchWatermark.Equals(input.QuickSearchWatermark))
+                    QuickSearchWatermark == input.QuickSearchWatermark ||
+                    (QuickSearchWatermark != null &&
+                    QuickSearchWatermark.Equals(input.QuickSearchWatermark))
                 ) && 
                 (
-                    this.SortByRelevance == input.SortByRelevance ||
-                    (this.SortByRelevance != null &&
-                    this.SortByRelevance.Equals(input.SortByRelevance))
+                    SortByRelevance == input.SortByRelevance ||
+                    (SortByRelevance != null &&
+                    SortByRelevance.Equals(input.SortByRelevance))
                 ) && 
                 (
-                    this.ResolvedQuickSearchWatermark == input.ResolvedQuickSearchWatermark ||
-                    (this.ResolvedQuickSearchWatermark != null &&
-                    this.ResolvedQuickSearchWatermark.Equals(input.ResolvedQuickSearchWatermark))
+                    ResolvedQuickSearchWatermark == input.ResolvedQuickSearchWatermark ||
+                    (ResolvedQuickSearchWatermark != null &&
+                    ResolvedQuickSearchWatermark.Equals(input.ResolvedQuickSearchWatermark))
                 ) && 
                 (
-                    this.Scope == input.Scope ||
-                    (this.Scope != null &&
-                    this.Scope.Equals(input.Scope))
+                    Scope == input.Scope ||
+                    (Scope != null &&
+                    Scope.Equals(input.Scope))
                 ) && 
                 (
-                    this.ScopeOwner == input.ScopeOwner ||
-                    (this.ScopeOwner != null &&
-                    this.ScopeOwner.Equals(input.ScopeOwner))
+                    ScopeOwner == input.ScopeOwner ||
+                    (ScopeOwner != null &&
+                    ScopeOwner.Equals(input.ScopeOwner))
                 ) && 
                 (
-                    this.SpecificSearchItems == input.SpecificSearchItems ||
-                    this.SpecificSearchItems != null &&
-                    this.SpecificSearchItems.SequenceEqual(input.SpecificSearchItems)
+                    SpecificSearchItems == input.SpecificSearchItems ||
+                    SpecificSearchItems != null &&
+                    SpecificSearchItems.SequenceEqual(input.SpecificSearchItems)
                 ) && 
                 (
-                    this.ErrorCode == input.ErrorCode ||
-                    (this.ErrorCode != null &&
-                    this.ErrorCode.Equals(input.ErrorCode))
+                    ErrorCode == input.ErrorCode ||
+                    (ErrorCode != null &&
+                    ErrorCode.Equals(input.ErrorCode))
                 ) && 
                 (
-                    this.ErrorMessage == input.ErrorMessage ||
-                    (this.ErrorMessage != null &&
-                    this.ErrorMessage.Equals(input.ErrorMessage))
+                    ErrorMessage == input.ErrorMessage ||
+                    (ErrorMessage != null &&
+                    ErrorMessage.Equals(input.ErrorMessage))
                 ) && 
                 (
-                    this.HasError == input.HasError ||
-                    (this.HasError != null &&
-                    this.HasError.Equals(input.HasError))
+                    HasError == input.HasError ||
+                    (HasError != null &&
+                    HasError.Equals(input.HasError))
                 ) && 
                 (
-                    this.HttpStatusCode == input.HttpStatusCode ||
-                    (this.HttpStatusCode != null &&
-                    this.HttpStatusCode.Equals(input.HttpStatusCode))
+                    HttpStatusCode == input.HttpStatusCode ||
+                    (HttpStatusCode != null &&
+                    HttpStatusCode.Equals(input.HttpStatusCode))
                 );
         }
 
@@ -651,47 +651,47 @@ namespace CherwellConnector.Model
         {
             unchecked // Overflow is fine, just wrap
             {
-                int hashCode = 41;
-                if (this.AllowQuickSearch != null)
-                    hashCode = hashCode * 59 + this.AllowQuickSearch.GetHashCode();
-                if (this.AllowSpecificSearch != null)
-                    hashCode = hashCode * 59 + this.AllowSpecificSearch.GetHashCode();
-                if (this.DefaultToQuickSearch != null)
-                    hashCode = hashCode * 59 + this.DefaultToQuickSearch.GetHashCode();
-                if (this.DisplayName != null)
-                    hashCode = hashCode * 59 + this.DisplayName.GetHashCode();
-                if (this.GalleryImage != null)
-                    hashCode = hashCode * 59 + this.GalleryImage.GetHashCode();
-                if (this.History != null)
-                    hashCode = hashCode * 59 + this.History.GetHashCode();
-                if (this.IncludeAvailableInSpecific != null)
-                    hashCode = hashCode * 59 + this.IncludeAvailableInSpecific.GetHashCode();
-                if (this.IncludeQuickSearchInSpecific != null)
-                    hashCode = hashCode * 59 + this.IncludeQuickSearchInSpecific.GetHashCode();
-                if (this.QuickSearchId != null)
-                    hashCode = hashCode * 59 + this.QuickSearchId.GetHashCode();
-                if (this.QuickSearchItems != null)
-                    hashCode = hashCode * 59 + this.QuickSearchItems.GetHashCode();
-                if (this.QuickSearchWatermark != null)
-                    hashCode = hashCode * 59 + this.QuickSearchWatermark.GetHashCode();
-                if (this.SortByRelevance != null)
-                    hashCode = hashCode * 59 + this.SortByRelevance.GetHashCode();
-                if (this.ResolvedQuickSearchWatermark != null)
-                    hashCode = hashCode * 59 + this.ResolvedQuickSearchWatermark.GetHashCode();
-                if (this.Scope != null)
-                    hashCode = hashCode * 59 + this.Scope.GetHashCode();
-                if (this.ScopeOwner != null)
-                    hashCode = hashCode * 59 + this.ScopeOwner.GetHashCode();
-                if (this.SpecificSearchItems != null)
-                    hashCode = hashCode * 59 + this.SpecificSearchItems.GetHashCode();
-                if (this.ErrorCode != null)
-                    hashCode = hashCode * 59 + this.ErrorCode.GetHashCode();
-                if (this.ErrorMessage != null)
-                    hashCode = hashCode * 59 + this.ErrorMessage.GetHashCode();
-                if (this.HasError != null)
-                    hashCode = hashCode * 59 + this.HasError.GetHashCode();
-                if (this.HttpStatusCode != null)
-                    hashCode = hashCode * 59 + this.HttpStatusCode.GetHashCode();
+                var hashCode = 41;
+                if (AllowQuickSearch != null)
+                    hashCode = hashCode * 59 + AllowQuickSearch.GetHashCode();
+                if (AllowSpecificSearch != null)
+                    hashCode = hashCode * 59 + AllowSpecificSearch.GetHashCode();
+                if (DefaultToQuickSearch != null)
+                    hashCode = hashCode * 59 + DefaultToQuickSearch.GetHashCode();
+                if (DisplayName != null)
+                    hashCode = hashCode * 59 + DisplayName.GetHashCode();
+                if (GalleryImage != null)
+                    hashCode = hashCode * 59 + GalleryImage.GetHashCode();
+                if (History != null)
+                    hashCode = hashCode * 59 + History.GetHashCode();
+                if (IncludeAvailableInSpecific != null)
+                    hashCode = hashCode * 59 + IncludeAvailableInSpecific.GetHashCode();
+                if (IncludeQuickSearchInSpecific != null)
+                    hashCode = hashCode * 59 + IncludeQuickSearchInSpecific.GetHashCode();
+                if (QuickSearchId != null)
+                    hashCode = hashCode * 59 + QuickSearchId.GetHashCode();
+                if (QuickSearchItems != null)
+                    hashCode = hashCode * 59 + QuickSearchItems.GetHashCode();
+                if (QuickSearchWatermark != null)
+                    hashCode = hashCode * 59 + QuickSearchWatermark.GetHashCode();
+                if (SortByRelevance != null)
+                    hashCode = hashCode * 59 + SortByRelevance.GetHashCode();
+                if (ResolvedQuickSearchWatermark != null)
+                    hashCode = hashCode * 59 + ResolvedQuickSearchWatermark.GetHashCode();
+                if (Scope != null)
+                    hashCode = hashCode * 59 + Scope.GetHashCode();
+                if (ScopeOwner != null)
+                    hashCode = hashCode * 59 + ScopeOwner.GetHashCode();
+                if (SpecificSearchItems != null)
+                    hashCode = hashCode * 59 + SpecificSearchItems.GetHashCode();
+                if (ErrorCode != null)
+                    hashCode = hashCode * 59 + ErrorCode.GetHashCode();
+                if (ErrorMessage != null)
+                    hashCode = hashCode * 59 + ErrorMessage.GetHashCode();
+                if (HasError != null)
+                    hashCode = hashCode * 59 + HasError.GetHashCode();
+                if (HttpStatusCode != null)
+                    hashCode = hashCode * 59 + HttpStatusCode.GetHashCode();
                 return hashCode;
             }
         }
@@ -701,7 +701,7 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

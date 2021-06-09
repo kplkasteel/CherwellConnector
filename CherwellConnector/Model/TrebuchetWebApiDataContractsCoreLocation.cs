@@ -28,13 +28,13 @@ namespace CherwellConnector.Model
         /// <param name="busObRecId">busObRecId.</param>
         /// <param name="latitude">latitude.</param>
         /// <param name="longitude">longitude.</param>
-        public TrebuchetWebApiDataContractsCoreLocation(double? altitude = default(double?), string busObId = default(string), string busObRecId = default(string), double? latitude = default(double?), double? longitude = default(double?))
+        public TrebuchetWebApiDataContractsCoreLocation(double? altitude = default, string busObId = default, string busObRecId = default, double? latitude = default, double? longitude = default)
         {
-            this.Altitude = altitude;
-            this.BusObId = busObId;
-            this.BusObRecId = busObRecId;
-            this.Latitude = latitude;
-            this.Longitude = longitude;
+            Altitude = altitude;
+            BusObId = busObId;
+            BusObRecId = busObRecId;
+            Latitude = latitude;
+            Longitude = longitude;
         }
         
         /// <summary>
@@ -75,11 +75,11 @@ namespace CherwellConnector.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrebuchetWebApiDataContractsCoreLocation {\n");
-            sb.Append("  Altitude: ").Append(this.Altitude).Append("\n");
-            sb.Append("  BusObId: ").Append(this.BusObId).Append("\n");
-            sb.Append("  BusObRecId: ").Append(this.BusObRecId).Append("\n");
-            sb.Append("  Latitude: ").Append(this.Latitude).Append("\n");
-            sb.Append("  Longitude: ").Append(this.Longitude).Append("\n");
+            sb.Append("  Altitude: ").Append(Altitude).Append("\n");
+            sb.Append("  BusObId: ").Append(BusObId).Append("\n");
+            sb.Append("  BusObRecId: ").Append(BusObRecId).Append("\n");
+            sb.Append("  Latitude: ").Append(Latitude).Append("\n");
+            sb.Append("  Longitude: ").Append(Longitude).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -100,7 +100,7 @@ namespace CherwellConnector.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as TrebuchetWebApiDataContractsCoreLocation);
+            return Equals(input as TrebuchetWebApiDataContractsCoreLocation);
         }
 
         /// <summary>
@@ -115,29 +115,29 @@ namespace CherwellConnector.Model
 
             return 
                 (
-                    this.Altitude == input.Altitude ||
-                    (this.Altitude != null &&
-                    this.Altitude.Equals(input.Altitude))
+                    Altitude == input.Altitude ||
+                    (Altitude != null &&
+                    Altitude.Equals(input.Altitude))
                 ) && 
                 (
-                    this.BusObId == input.BusObId ||
-                    (this.BusObId != null &&
-                    this.BusObId.Equals(input.BusObId))
+                    BusObId == input.BusObId ||
+                    (BusObId != null &&
+                    BusObId.Equals(input.BusObId))
                 ) && 
                 (
-                    this.BusObRecId == input.BusObRecId ||
-                    (this.BusObRecId != null &&
-                    this.BusObRecId.Equals(input.BusObRecId))
+                    BusObRecId == input.BusObRecId ||
+                    (BusObRecId != null &&
+                    BusObRecId.Equals(input.BusObRecId))
                 ) && 
                 (
-                    this.Latitude == input.Latitude ||
-                    (this.Latitude != null &&
-                    this.Latitude.Equals(input.Latitude))
+                    Latitude == input.Latitude ||
+                    (Latitude != null &&
+                    Latitude.Equals(input.Latitude))
                 ) && 
                 (
-                    this.Longitude == input.Longitude ||
-                    (this.Longitude != null &&
-                    this.Longitude.Equals(input.Longitude))
+                    Longitude == input.Longitude ||
+                    (Longitude != null &&
+                    Longitude.Equals(input.Longitude))
                 );
         }
 
@@ -149,17 +149,17 @@ namespace CherwellConnector.Model
         {
             unchecked // Overflow is fine, just wrap
             {
-                int hashCode = 41;
-                if (this.Altitude != null)
-                    hashCode = hashCode * 59 + this.Altitude.GetHashCode();
-                if (this.BusObId != null)
-                    hashCode = hashCode * 59 + this.BusObId.GetHashCode();
-                if (this.BusObRecId != null)
-                    hashCode = hashCode * 59 + this.BusObRecId.GetHashCode();
-                if (this.Latitude != null)
-                    hashCode = hashCode * 59 + this.Latitude.GetHashCode();
-                if (this.Longitude != null)
-                    hashCode = hashCode * 59 + this.Longitude.GetHashCode();
+                var hashCode = 41;
+                if (Altitude != null)
+                    hashCode = hashCode * 59 + Altitude.GetHashCode();
+                if (BusObId != null)
+                    hashCode = hashCode * 59 + BusObId.GetHashCode();
+                if (BusObRecId != null)
+                    hashCode = hashCode * 59 + BusObRecId.GetHashCode();
+                if (Latitude != null)
+                    hashCode = hashCode * 59 + Latitude.GetHashCode();
+                if (Longitude != null)
+                    hashCode = hashCode * 59 + Longitude.GetHashCode();
                 return hashCode;
             }
         }
@@ -169,7 +169,7 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

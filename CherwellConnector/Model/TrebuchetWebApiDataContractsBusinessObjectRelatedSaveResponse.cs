@@ -333,21 +333,21 @@ namespace CherwellConnector.Model
         /// <param name="errorMessage">errorMessage.</param>
         /// <param name="hasError">hasError.</param>
         /// <param name="httpStatusCode">httpStatusCode.</param>
-        public TrebuchetWebApiDataContractsBusinessObjectRelatedSaveResponse(string parentBusObId = default(string), string parentBusObPublicId = default(string), string parentBusObRecId = default(string), string relationshipId = default(string), string busObPublicId = default(string), string busObRecId = default(string), string cacheKey = default(string), List<TrebuchetWebApiDataContractsBusinessObjectFieldValidationError> fieldValidationErrors = default(List<TrebuchetWebApiDataContractsBusinessObjectFieldValidationError>), List<TrebuchetWebApiDataContractsBusinessObjectNotificationTrigger> notificationTriggers = default(List<TrebuchetWebApiDataContractsBusinessObjectNotificationTrigger>), string errorCode = default(string), string errorMessage = default(string), bool? hasError = default(bool?), HttpStatusCodeEnum? httpStatusCode = default(HttpStatusCodeEnum?))
+        public TrebuchetWebApiDataContractsBusinessObjectRelatedSaveResponse(string parentBusObId = default, string parentBusObPublicId = default, string parentBusObRecId = default, string relationshipId = default, string busObPublicId = default, string busObRecId = default, string cacheKey = default, List<FieldValidationError> fieldValidationErrors = default, List<TrebuchetWebApiDataContractsBusinessObjectNotificationTrigger> notificationTriggers = default, string errorCode = default, string errorMessage = default, bool? hasError = default, HttpStatusCodeEnum? httpStatusCode = default)
         {
-            this.ParentBusObId = parentBusObId;
-            this.ParentBusObPublicId = parentBusObPublicId;
-            this.ParentBusObRecId = parentBusObRecId;
-            this.RelationshipId = relationshipId;
-            this.BusObPublicId = busObPublicId;
-            this.BusObRecId = busObRecId;
-            this.CacheKey = cacheKey;
-            this.FieldValidationErrors = fieldValidationErrors;
-            this.NotificationTriggers = notificationTriggers;
-            this.ErrorCode = errorCode;
-            this.ErrorMessage = errorMessage;
-            this.HasError = hasError;
-            this.HttpStatusCode = httpStatusCode;
+            ParentBusObId = parentBusObId;
+            ParentBusObPublicId = parentBusObPublicId;
+            ParentBusObRecId = parentBusObRecId;
+            RelationshipId = relationshipId;
+            BusObPublicId = busObPublicId;
+            BusObRecId = busObRecId;
+            CacheKey = cacheKey;
+            FieldValidationErrors = fieldValidationErrors;
+            NotificationTriggers = notificationTriggers;
+            ErrorCode = errorCode;
+            ErrorMessage = errorMessage;
+            HasError = hasError;
+            HttpStatusCode = httpStatusCode;
         }
         
         /// <summary>
@@ -396,7 +396,7 @@ namespace CherwellConnector.Model
         /// Gets or Sets FieldValidationErrors
         /// </summary>
         [DataMember(Name="fieldValidationErrors", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsBusinessObjectFieldValidationError> FieldValidationErrors { get; set; }
+        public List<FieldValidationError> FieldValidationErrors { get; set; }
 
         /// <summary>
         /// Gets or Sets NotificationTriggers
@@ -431,19 +431,19 @@ namespace CherwellConnector.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrebuchetWebApiDataContractsBusinessObjectRelatedSaveResponse {\n");
-            sb.Append("  ParentBusObId: ").Append(this.ParentBusObId).Append("\n");
-            sb.Append("  ParentBusObPublicId: ").Append(this.ParentBusObPublicId).Append("\n");
-            sb.Append("  ParentBusObRecId: ").Append(this.ParentBusObRecId).Append("\n");
-            sb.Append("  RelationshipId: ").Append(this.RelationshipId).Append("\n");
-            sb.Append("  BusObPublicId: ").Append(this.BusObPublicId).Append("\n");
-            sb.Append("  BusObRecId: ").Append(this.BusObRecId).Append("\n");
-            sb.Append("  CacheKey: ").Append(this.CacheKey).Append("\n");
-            sb.Append("  FieldValidationErrors: ").Append(this.FieldValidationErrors).Append("\n");
-            sb.Append("  NotificationTriggers: ").Append(this.NotificationTriggers).Append("\n");
-            sb.Append("  ErrorCode: ").Append(this.ErrorCode).Append("\n");
-            sb.Append("  ErrorMessage: ").Append(this.ErrorMessage).Append("\n");
-            sb.Append("  HasError: ").Append(this.HasError).Append("\n");
-            sb.Append("  HttpStatusCode: ").Append(this.HttpStatusCode).Append("\n");
+            sb.Append("  ParentBusObId: ").Append(ParentBusObId).Append("\n");
+            sb.Append("  ParentBusObPublicId: ").Append(ParentBusObPublicId).Append("\n");
+            sb.Append("  ParentBusObRecId: ").Append(ParentBusObRecId).Append("\n");
+            sb.Append("  RelationshipId: ").Append(RelationshipId).Append("\n");
+            sb.Append("  BusObPublicId: ").Append(BusObPublicId).Append("\n");
+            sb.Append("  BusObRecId: ").Append(BusObRecId).Append("\n");
+            sb.Append("  CacheKey: ").Append(CacheKey).Append("\n");
+            sb.Append("  FieldValidationErrors: ").Append(FieldValidationErrors).Append("\n");
+            sb.Append("  NotificationTriggers: ").Append(NotificationTriggers).Append("\n");
+            sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
+            sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append("\n");
+            sb.Append("  HasError: ").Append(HasError).Append("\n");
+            sb.Append("  HttpStatusCode: ").Append(HttpStatusCode).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -464,7 +464,7 @@ namespace CherwellConnector.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as TrebuchetWebApiDataContractsBusinessObjectRelatedSaveResponse);
+            return Equals(input as TrebuchetWebApiDataContractsBusinessObjectRelatedSaveResponse);
         }
 
         /// <summary>
@@ -479,69 +479,69 @@ namespace CherwellConnector.Model
 
             return 
                 (
-                    this.ParentBusObId == input.ParentBusObId ||
-                    (this.ParentBusObId != null &&
-                    this.ParentBusObId.Equals(input.ParentBusObId))
+                    ParentBusObId == input.ParentBusObId ||
+                    (ParentBusObId != null &&
+                    ParentBusObId.Equals(input.ParentBusObId))
                 ) && 
                 (
-                    this.ParentBusObPublicId == input.ParentBusObPublicId ||
-                    (this.ParentBusObPublicId != null &&
-                    this.ParentBusObPublicId.Equals(input.ParentBusObPublicId))
+                    ParentBusObPublicId == input.ParentBusObPublicId ||
+                    (ParentBusObPublicId != null &&
+                    ParentBusObPublicId.Equals(input.ParentBusObPublicId))
                 ) && 
                 (
-                    this.ParentBusObRecId == input.ParentBusObRecId ||
-                    (this.ParentBusObRecId != null &&
-                    this.ParentBusObRecId.Equals(input.ParentBusObRecId))
+                    ParentBusObRecId == input.ParentBusObRecId ||
+                    (ParentBusObRecId != null &&
+                    ParentBusObRecId.Equals(input.ParentBusObRecId))
                 ) && 
                 (
-                    this.RelationshipId == input.RelationshipId ||
-                    (this.RelationshipId != null &&
-                    this.RelationshipId.Equals(input.RelationshipId))
+                    RelationshipId == input.RelationshipId ||
+                    (RelationshipId != null &&
+                    RelationshipId.Equals(input.RelationshipId))
                 ) && 
                 (
-                    this.BusObPublicId == input.BusObPublicId ||
-                    (this.BusObPublicId != null &&
-                    this.BusObPublicId.Equals(input.BusObPublicId))
+                    BusObPublicId == input.BusObPublicId ||
+                    (BusObPublicId != null &&
+                    BusObPublicId.Equals(input.BusObPublicId))
                 ) && 
                 (
-                    this.BusObRecId == input.BusObRecId ||
-                    (this.BusObRecId != null &&
-                    this.BusObRecId.Equals(input.BusObRecId))
+                    BusObRecId == input.BusObRecId ||
+                    (BusObRecId != null &&
+                    BusObRecId.Equals(input.BusObRecId))
                 ) && 
                 (
-                    this.CacheKey == input.CacheKey ||
-                    (this.CacheKey != null &&
-                    this.CacheKey.Equals(input.CacheKey))
+                    CacheKey == input.CacheKey ||
+                    (CacheKey != null &&
+                    CacheKey.Equals(input.CacheKey))
                 ) && 
                 (
-                    this.FieldValidationErrors == input.FieldValidationErrors ||
-                    this.FieldValidationErrors != null &&
-                    this.FieldValidationErrors.SequenceEqual(input.FieldValidationErrors)
+                    FieldValidationErrors == input.FieldValidationErrors ||
+                    FieldValidationErrors != null &&
+                    FieldValidationErrors.SequenceEqual(input.FieldValidationErrors)
                 ) && 
                 (
-                    this.NotificationTriggers == input.NotificationTriggers ||
-                    this.NotificationTriggers != null &&
-                    this.NotificationTriggers.SequenceEqual(input.NotificationTriggers)
+                    NotificationTriggers == input.NotificationTriggers ||
+                    NotificationTriggers != null &&
+                    NotificationTriggers.SequenceEqual(input.NotificationTriggers)
                 ) && 
                 (
-                    this.ErrorCode == input.ErrorCode ||
-                    (this.ErrorCode != null &&
-                    this.ErrorCode.Equals(input.ErrorCode))
+                    ErrorCode == input.ErrorCode ||
+                    (ErrorCode != null &&
+                    ErrorCode.Equals(input.ErrorCode))
                 ) && 
                 (
-                    this.ErrorMessage == input.ErrorMessage ||
-                    (this.ErrorMessage != null &&
-                    this.ErrorMessage.Equals(input.ErrorMessage))
+                    ErrorMessage == input.ErrorMessage ||
+                    (ErrorMessage != null &&
+                    ErrorMessage.Equals(input.ErrorMessage))
                 ) && 
                 (
-                    this.HasError == input.HasError ||
-                    (this.HasError != null &&
-                    this.HasError.Equals(input.HasError))
+                    HasError == input.HasError ||
+                    (HasError != null &&
+                    HasError.Equals(input.HasError))
                 ) && 
                 (
-                    this.HttpStatusCode == input.HttpStatusCode ||
-                    (this.HttpStatusCode != null &&
-                    this.HttpStatusCode.Equals(input.HttpStatusCode))
+                    HttpStatusCode == input.HttpStatusCode ||
+                    (HttpStatusCode != null &&
+                    HttpStatusCode.Equals(input.HttpStatusCode))
                 );
         }
 
@@ -553,33 +553,33 @@ namespace CherwellConnector.Model
         {
             unchecked // Overflow is fine, just wrap
             {
-                int hashCode = 41;
-                if (this.ParentBusObId != null)
-                    hashCode = hashCode * 59 + this.ParentBusObId.GetHashCode();
-                if (this.ParentBusObPublicId != null)
-                    hashCode = hashCode * 59 + this.ParentBusObPublicId.GetHashCode();
-                if (this.ParentBusObRecId != null)
-                    hashCode = hashCode * 59 + this.ParentBusObRecId.GetHashCode();
-                if (this.RelationshipId != null)
-                    hashCode = hashCode * 59 + this.RelationshipId.GetHashCode();
-                if (this.BusObPublicId != null)
-                    hashCode = hashCode * 59 + this.BusObPublicId.GetHashCode();
-                if (this.BusObRecId != null)
-                    hashCode = hashCode * 59 + this.BusObRecId.GetHashCode();
-                if (this.CacheKey != null)
-                    hashCode = hashCode * 59 + this.CacheKey.GetHashCode();
-                if (this.FieldValidationErrors != null)
-                    hashCode = hashCode * 59 + this.FieldValidationErrors.GetHashCode();
-                if (this.NotificationTriggers != null)
-                    hashCode = hashCode * 59 + this.NotificationTriggers.GetHashCode();
-                if (this.ErrorCode != null)
-                    hashCode = hashCode * 59 + this.ErrorCode.GetHashCode();
-                if (this.ErrorMessage != null)
-                    hashCode = hashCode * 59 + this.ErrorMessage.GetHashCode();
-                if (this.HasError != null)
-                    hashCode = hashCode * 59 + this.HasError.GetHashCode();
-                if (this.HttpStatusCode != null)
-                    hashCode = hashCode * 59 + this.HttpStatusCode.GetHashCode();
+                var hashCode = 41;
+                if (ParentBusObId != null)
+                    hashCode = hashCode * 59 + ParentBusObId.GetHashCode();
+                if (ParentBusObPublicId != null)
+                    hashCode = hashCode * 59 + ParentBusObPublicId.GetHashCode();
+                if (ParentBusObRecId != null)
+                    hashCode = hashCode * 59 + ParentBusObRecId.GetHashCode();
+                if (RelationshipId != null)
+                    hashCode = hashCode * 59 + RelationshipId.GetHashCode();
+                if (BusObPublicId != null)
+                    hashCode = hashCode * 59 + BusObPublicId.GetHashCode();
+                if (BusObRecId != null)
+                    hashCode = hashCode * 59 + BusObRecId.GetHashCode();
+                if (CacheKey != null)
+                    hashCode = hashCode * 59 + CacheKey.GetHashCode();
+                if (FieldValidationErrors != null)
+                    hashCode = hashCode * 59 + FieldValidationErrors.GetHashCode();
+                if (NotificationTriggers != null)
+                    hashCode = hashCode * 59 + NotificationTriggers.GetHashCode();
+                if (ErrorCode != null)
+                    hashCode = hashCode * 59 + ErrorCode.GetHashCode();
+                if (ErrorMessage != null)
+                    hashCode = hashCode * 59 + ErrorMessage.GetHashCode();
+                if (HasError != null)
+                    hashCode = hashCode * 59 + HasError.GetHashCode();
+                if (HttpStatusCode != null)
+                    hashCode = hashCode * 59 + HttpStatusCode.GetHashCode();
                 return hashCode;
             }
         }
@@ -589,7 +589,7 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

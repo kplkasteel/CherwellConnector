@@ -26,11 +26,11 @@ namespace CherwellConnector.Model
         /// <param name="gridId">gridId.</param>
         /// <param name="name">name.</param>
         /// <param name="displayName">displayName.</param>
-        public TrebuchetWebApiDataContractsBusinessObjectGridDefinition(string gridId = default(string), string name = default(string), string displayName = default(string))
+        public TrebuchetWebApiDataContractsBusinessObjectGridDefinition(string gridId = default, string name = default, string displayName = default)
         {
-            this.GridId = gridId;
-            this.Name = name;
-            this.DisplayName = displayName;
+            GridId = gridId;
+            Name = name;
+            DisplayName = displayName;
         }
         
         /// <summary>
@@ -59,9 +59,9 @@ namespace CherwellConnector.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrebuchetWebApiDataContractsBusinessObjectGridDefinition {\n");
-            sb.Append("  GridId: ").Append(this.GridId).Append("\n");
-            sb.Append("  Name: ").Append(this.Name).Append("\n");
-            sb.Append("  DisplayName: ").Append(this.DisplayName).Append("\n");
+            sb.Append("  GridId: ").Append(GridId).Append("\n");
+            sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  DisplayName: ").Append(DisplayName).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -82,7 +82,7 @@ namespace CherwellConnector.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as TrebuchetWebApiDataContractsBusinessObjectGridDefinition);
+            return Equals(input as TrebuchetWebApiDataContractsBusinessObjectGridDefinition);
         }
 
         /// <summary>
@@ -97,19 +97,19 @@ namespace CherwellConnector.Model
 
             return 
                 (
-                    this.GridId == input.GridId ||
-                    (this.GridId != null &&
-                    this.GridId.Equals(input.GridId))
+                    GridId == input.GridId ||
+                    (GridId != null &&
+                    GridId.Equals(input.GridId))
                 ) && 
                 (
-                    this.Name == input.Name ||
-                    (this.Name != null &&
-                    this.Name.Equals(input.Name))
+                    Name == input.Name ||
+                    (Name != null &&
+                    Name.Equals(input.Name))
                 ) && 
                 (
-                    this.DisplayName == input.DisplayName ||
-                    (this.DisplayName != null &&
-                    this.DisplayName.Equals(input.DisplayName))
+                    DisplayName == input.DisplayName ||
+                    (DisplayName != null &&
+                    DisplayName.Equals(input.DisplayName))
                 );
         }
 
@@ -121,13 +121,13 @@ namespace CherwellConnector.Model
         {
             unchecked // Overflow is fine, just wrap
             {
-                int hashCode = 41;
-                if (this.GridId != null)
-                    hashCode = hashCode * 59 + this.GridId.GetHashCode();
-                if (this.Name != null)
-                    hashCode = hashCode * 59 + this.Name.GetHashCode();
-                if (this.DisplayName != null)
-                    hashCode = hashCode * 59 + this.DisplayName.GetHashCode();
+                var hashCode = 41;
+                if (GridId != null)
+                    hashCode = hashCode * 59 + GridId.GetHashCode();
+                if (Name != null)
+                    hashCode = hashCode * 59 + Name.GetHashCode();
+                if (DisplayName != null)
+                    hashCode = hashCode * 59 + DisplayName.GetHashCode();
                 return hashCode;
             }
         }
@@ -137,7 +137,7 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

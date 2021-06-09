@@ -36,20 +36,20 @@ namespace CherwellConnector.Model
         /// <param name="relatedBusinessObjects">relatedBusinessObjects.</param>
         /// <param name="relationshipId">relationshipId.</param>
         /// <param name="totalRecords">totalRecords.</param>
-        public TrebuchetWebApiDataContractsSearchesRelatedBusinessObjectResponse(string errorCode = default(string), string errorMessage = default(string), bool? hasError = default(bool?), List<TrebuchetWebApiDataContractsCoreLink> links = default(List<TrebuchetWebApiDataContractsCoreLink>), int? pageNumber = default(int?), int? pageSize = default(int?), string parentBusObId = default(string), string parentBusObPublicId = default(string), string parentBusObRecId = default(string), List<TrebuchetWebApiDataContractsBusinessObjectReadResponse> relatedBusinessObjects = default(List<TrebuchetWebApiDataContractsBusinessObjectReadResponse>), string relationshipId = default(string), int? totalRecords = default(int?))
+        public TrebuchetWebApiDataContractsSearchesRelatedBusinessObjectResponse(string errorCode = default, string errorMessage = default, bool? hasError = default, List<TrebuchetWebApiDataContractsCoreLink> links = default, int? pageNumber = default, int? pageSize = default, string parentBusObId = default, string parentBusObPublicId = default, string parentBusObRecId = default, List<TrebuchetWebApiDataContractsBusinessObjectReadResponse> relatedBusinessObjects = default, string relationshipId = default, int? totalRecords = default)
         {
-            this.ErrorCode = errorCode;
-            this.ErrorMessage = errorMessage;
-            this.HasError = hasError;
-            this.Links = links;
-            this.PageNumber = pageNumber;
-            this.PageSize = pageSize;
-            this.ParentBusObId = parentBusObId;
-            this.ParentBusObPublicId = parentBusObPublicId;
-            this.ParentBusObRecId = parentBusObRecId;
-            this.RelatedBusinessObjects = relatedBusinessObjects;
-            this.RelationshipId = relationshipId;
-            this.TotalRecords = totalRecords;
+            ErrorCode = errorCode;
+            ErrorMessage = errorMessage;
+            HasError = hasError;
+            Links = links;
+            PageNumber = pageNumber;
+            PageSize = pageSize;
+            ParentBusObId = parentBusObId;
+            ParentBusObPublicId = parentBusObPublicId;
+            ParentBusObRecId = parentBusObRecId;
+            RelatedBusinessObjects = relatedBusinessObjects;
+            RelationshipId = relationshipId;
+            TotalRecords = totalRecords;
         }
         
         /// <summary>
@@ -132,18 +132,18 @@ namespace CherwellConnector.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrebuchetWebApiDataContractsSearchesRelatedBusinessObjectResponse {\n");
-            sb.Append("  ErrorCode: ").Append(this.ErrorCode).Append("\n");
-            sb.Append("  ErrorMessage: ").Append(this.ErrorMessage).Append("\n");
-            sb.Append("  HasError: ").Append(this.HasError).Append("\n");
-            sb.Append("  Links: ").Append(this.Links).Append("\n");
-            sb.Append("  PageNumber: ").Append(this.PageNumber).Append("\n");
-            sb.Append("  PageSize: ").Append(this.PageSize).Append("\n");
-            sb.Append("  ParentBusObId: ").Append(this.ParentBusObId).Append("\n");
-            sb.Append("  ParentBusObPublicId: ").Append(this.ParentBusObPublicId).Append("\n");
-            sb.Append("  ParentBusObRecId: ").Append(this.ParentBusObRecId).Append("\n");
-            sb.Append("  RelatedBusinessObjects: ").Append(this.RelatedBusinessObjects).Append("\n");
-            sb.Append("  RelationshipId: ").Append(this.RelationshipId).Append("\n");
-            sb.Append("  TotalRecords: ").Append(this.TotalRecords).Append("\n");
+            sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
+            sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append("\n");
+            sb.Append("  HasError: ").Append(HasError).Append("\n");
+            sb.Append("  Links: ").Append(Links).Append("\n");
+            sb.Append("  PageNumber: ").Append(PageNumber).Append("\n");
+            sb.Append("  PageSize: ").Append(PageSize).Append("\n");
+            sb.Append("  ParentBusObId: ").Append(ParentBusObId).Append("\n");
+            sb.Append("  ParentBusObPublicId: ").Append(ParentBusObPublicId).Append("\n");
+            sb.Append("  ParentBusObRecId: ").Append(ParentBusObRecId).Append("\n");
+            sb.Append("  RelatedBusinessObjects: ").Append(RelatedBusinessObjects).Append("\n");
+            sb.Append("  RelationshipId: ").Append(RelationshipId).Append("\n");
+            sb.Append("  TotalRecords: ").Append(TotalRecords).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -164,7 +164,7 @@ namespace CherwellConnector.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as TrebuchetWebApiDataContractsSearchesRelatedBusinessObjectResponse);
+            return Equals(input as TrebuchetWebApiDataContractsSearchesRelatedBusinessObjectResponse);
         }
 
         /// <summary>
@@ -179,64 +179,64 @@ namespace CherwellConnector.Model
 
             return 
                 (
-                    this.ErrorCode == input.ErrorCode ||
-                    (this.ErrorCode != null &&
-                    this.ErrorCode.Equals(input.ErrorCode))
+                    ErrorCode == input.ErrorCode ||
+                    (ErrorCode != null &&
+                    ErrorCode.Equals(input.ErrorCode))
                 ) && 
                 (
-                    this.ErrorMessage == input.ErrorMessage ||
-                    (this.ErrorMessage != null &&
-                    this.ErrorMessage.Equals(input.ErrorMessage))
+                    ErrorMessage == input.ErrorMessage ||
+                    (ErrorMessage != null &&
+                    ErrorMessage.Equals(input.ErrorMessage))
                 ) && 
                 (
-                    this.HasError == input.HasError ||
-                    (this.HasError != null &&
-                    this.HasError.Equals(input.HasError))
+                    HasError == input.HasError ||
+                    (HasError != null &&
+                    HasError.Equals(input.HasError))
                 ) && 
                 (
-                    this.Links == input.Links ||
-                    this.Links != null &&
-                    this.Links.SequenceEqual(input.Links)
+                    Links == input.Links ||
+                    Links != null &&
+                    Links.SequenceEqual(input.Links)
                 ) && 
                 (
-                    this.PageNumber == input.PageNumber ||
-                    (this.PageNumber != null &&
-                    this.PageNumber.Equals(input.PageNumber))
+                    PageNumber == input.PageNumber ||
+                    (PageNumber != null &&
+                    PageNumber.Equals(input.PageNumber))
                 ) && 
                 (
-                    this.PageSize == input.PageSize ||
-                    (this.PageSize != null &&
-                    this.PageSize.Equals(input.PageSize))
+                    PageSize == input.PageSize ||
+                    (PageSize != null &&
+                    PageSize.Equals(input.PageSize))
                 ) && 
                 (
-                    this.ParentBusObId == input.ParentBusObId ||
-                    (this.ParentBusObId != null &&
-                    this.ParentBusObId.Equals(input.ParentBusObId))
+                    ParentBusObId == input.ParentBusObId ||
+                    (ParentBusObId != null &&
+                    ParentBusObId.Equals(input.ParentBusObId))
                 ) && 
                 (
-                    this.ParentBusObPublicId == input.ParentBusObPublicId ||
-                    (this.ParentBusObPublicId != null &&
-                    this.ParentBusObPublicId.Equals(input.ParentBusObPublicId))
+                    ParentBusObPublicId == input.ParentBusObPublicId ||
+                    (ParentBusObPublicId != null &&
+                    ParentBusObPublicId.Equals(input.ParentBusObPublicId))
                 ) && 
                 (
-                    this.ParentBusObRecId == input.ParentBusObRecId ||
-                    (this.ParentBusObRecId != null &&
-                    this.ParentBusObRecId.Equals(input.ParentBusObRecId))
+                    ParentBusObRecId == input.ParentBusObRecId ||
+                    (ParentBusObRecId != null &&
+                    ParentBusObRecId.Equals(input.ParentBusObRecId))
                 ) && 
                 (
-                    this.RelatedBusinessObjects == input.RelatedBusinessObjects ||
-                    this.RelatedBusinessObjects != null &&
-                    this.RelatedBusinessObjects.SequenceEqual(input.RelatedBusinessObjects)
+                    RelatedBusinessObjects == input.RelatedBusinessObjects ||
+                    RelatedBusinessObjects != null &&
+                    RelatedBusinessObjects.SequenceEqual(input.RelatedBusinessObjects)
                 ) && 
                 (
-                    this.RelationshipId == input.RelationshipId ||
-                    (this.RelationshipId != null &&
-                    this.RelationshipId.Equals(input.RelationshipId))
+                    RelationshipId == input.RelationshipId ||
+                    (RelationshipId != null &&
+                    RelationshipId.Equals(input.RelationshipId))
                 ) && 
                 (
-                    this.TotalRecords == input.TotalRecords ||
-                    (this.TotalRecords != null &&
-                    this.TotalRecords.Equals(input.TotalRecords))
+                    TotalRecords == input.TotalRecords ||
+                    (TotalRecords != null &&
+                    TotalRecords.Equals(input.TotalRecords))
                 );
         }
 
@@ -248,31 +248,31 @@ namespace CherwellConnector.Model
         {
             unchecked // Overflow is fine, just wrap
             {
-                int hashCode = 41;
-                if (this.ErrorCode != null)
-                    hashCode = hashCode * 59 + this.ErrorCode.GetHashCode();
-                if (this.ErrorMessage != null)
-                    hashCode = hashCode * 59 + this.ErrorMessage.GetHashCode();
-                if (this.HasError != null)
-                    hashCode = hashCode * 59 + this.HasError.GetHashCode();
-                if (this.Links != null)
-                    hashCode = hashCode * 59 + this.Links.GetHashCode();
-                if (this.PageNumber != null)
-                    hashCode = hashCode * 59 + this.PageNumber.GetHashCode();
-                if (this.PageSize != null)
-                    hashCode = hashCode * 59 + this.PageSize.GetHashCode();
-                if (this.ParentBusObId != null)
-                    hashCode = hashCode * 59 + this.ParentBusObId.GetHashCode();
-                if (this.ParentBusObPublicId != null)
-                    hashCode = hashCode * 59 + this.ParentBusObPublicId.GetHashCode();
-                if (this.ParentBusObRecId != null)
-                    hashCode = hashCode * 59 + this.ParentBusObRecId.GetHashCode();
-                if (this.RelatedBusinessObjects != null)
-                    hashCode = hashCode * 59 + this.RelatedBusinessObjects.GetHashCode();
-                if (this.RelationshipId != null)
-                    hashCode = hashCode * 59 + this.RelationshipId.GetHashCode();
-                if (this.TotalRecords != null)
-                    hashCode = hashCode * 59 + this.TotalRecords.GetHashCode();
+                var hashCode = 41;
+                if (ErrorCode != null)
+                    hashCode = hashCode * 59 + ErrorCode.GetHashCode();
+                if (ErrorMessage != null)
+                    hashCode = hashCode * 59 + ErrorMessage.GetHashCode();
+                if (HasError != null)
+                    hashCode = hashCode * 59 + HasError.GetHashCode();
+                if (Links != null)
+                    hashCode = hashCode * 59 + Links.GetHashCode();
+                if (PageNumber != null)
+                    hashCode = hashCode * 59 + PageNumber.GetHashCode();
+                if (PageSize != null)
+                    hashCode = hashCode * 59 + PageSize.GetHashCode();
+                if (ParentBusObId != null)
+                    hashCode = hashCode * 59 + ParentBusObId.GetHashCode();
+                if (ParentBusObPublicId != null)
+                    hashCode = hashCode * 59 + ParentBusObPublicId.GetHashCode();
+                if (ParentBusObRecId != null)
+                    hashCode = hashCode * 59 + ParentBusObRecId.GetHashCode();
+                if (RelatedBusinessObjects != null)
+                    hashCode = hashCode * 59 + RelatedBusinessObjects.GetHashCode();
+                if (RelationshipId != null)
+                    hashCode = hashCode * 59 + RelationshipId.GetHashCode();
+                if (TotalRecords != null)
+                    hashCode = hashCode * 59 + TotalRecords.GetHashCode();
                 return hashCode;
             }
         }
@@ -282,7 +282,7 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

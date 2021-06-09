@@ -37,21 +37,21 @@ namespace CherwellConnector.Model
         /// <param name="scope">scope.</param>
         /// <param name="scopeOwner">scopeOwner.</param>
         /// <param name="standInKey">standInKey.</param>
-        public TrebuchetWebApiDataContractsCoreManagerItem(string association = default(string), string description = default(string), string displayName = default(string), string galleryImage = default(string), string id = default(string), List<TrebuchetWebApiDataContractsCoreLink> links = default(List<TrebuchetWebApiDataContractsCoreLink>), string localizedScopeName = default(string), string name = default(string), string parentFolder = default(string), bool? parentIsScopeFolder = default(bool?), string scope = default(string), string scopeOwner = default(string), string standInKey = default(string))
+        public TrebuchetWebApiDataContractsCoreManagerItem(string association = default, string description = default, string displayName = default, string galleryImage = default, string id = default, List<TrebuchetWebApiDataContractsCoreLink> links = default, string localizedScopeName = default, string name = default, string parentFolder = default, bool? parentIsScopeFolder = default, string scope = default, string scopeOwner = default, string standInKey = default)
         {
-            this.Association = association;
-            this.Description = description;
-            this.DisplayName = displayName;
-            this.GalleryImage = galleryImage;
-            this.Id = id;
-            this.Links = links;
-            this.LocalizedScopeName = localizedScopeName;
-            this.Name = name;
-            this.ParentFolder = parentFolder;
-            this.ParentIsScopeFolder = parentIsScopeFolder;
-            this.Scope = scope;
-            this.ScopeOwner = scopeOwner;
-            this.StandInKey = standInKey;
+            Association = association;
+            Description = description;
+            DisplayName = displayName;
+            GalleryImage = galleryImage;
+            Id = id;
+            Links = links;
+            LocalizedScopeName = localizedScopeName;
+            Name = name;
+            ParentFolder = parentFolder;
+            ParentIsScopeFolder = parentIsScopeFolder;
+            Scope = scope;
+            ScopeOwner = scopeOwner;
+            StandInKey = standInKey;
         }
         
         /// <summary>
@@ -140,19 +140,19 @@ namespace CherwellConnector.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrebuchetWebApiDataContractsCoreManagerItem {\n");
-            sb.Append("  Association: ").Append(this.Association).Append("\n");
-            sb.Append("  Description: ").Append(this.Description).Append("\n");
-            sb.Append("  DisplayName: ").Append(this.DisplayName).Append("\n");
-            sb.Append("  GalleryImage: ").Append(this.GalleryImage).Append("\n");
-            sb.Append("  Id: ").Append(this.Id).Append("\n");
-            sb.Append("  Links: ").Append(this.Links).Append("\n");
-            sb.Append("  LocalizedScopeName: ").Append(this.LocalizedScopeName).Append("\n");
-            sb.Append("  Name: ").Append(this.Name).Append("\n");
-            sb.Append("  ParentFolder: ").Append(this.ParentFolder).Append("\n");
-            sb.Append("  ParentIsScopeFolder: ").Append(this.ParentIsScopeFolder).Append("\n");
-            sb.Append("  Scope: ").Append(this.Scope).Append("\n");
-            sb.Append("  ScopeOwner: ").Append(this.ScopeOwner).Append("\n");
-            sb.Append("  StandInKey: ").Append(this.StandInKey).Append("\n");
+            sb.Append("  Association: ").Append(Association).Append("\n");
+            sb.Append("  Description: ").Append(Description).Append("\n");
+            sb.Append("  DisplayName: ").Append(DisplayName).Append("\n");
+            sb.Append("  GalleryImage: ").Append(GalleryImage).Append("\n");
+            sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  Links: ").Append(Links).Append("\n");
+            sb.Append("  LocalizedScopeName: ").Append(LocalizedScopeName).Append("\n");
+            sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  ParentFolder: ").Append(ParentFolder).Append("\n");
+            sb.Append("  ParentIsScopeFolder: ").Append(ParentIsScopeFolder).Append("\n");
+            sb.Append("  Scope: ").Append(Scope).Append("\n");
+            sb.Append("  ScopeOwner: ").Append(ScopeOwner).Append("\n");
+            sb.Append("  StandInKey: ").Append(StandInKey).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -173,7 +173,7 @@ namespace CherwellConnector.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as TrebuchetWebApiDataContractsCoreManagerItem);
+            return Equals(input as TrebuchetWebApiDataContractsCoreManagerItem);
         }
 
         /// <summary>
@@ -188,69 +188,69 @@ namespace CherwellConnector.Model
 
             return 
                 (
-                    this.Association == input.Association ||
-                    (this.Association != null &&
-                    this.Association.Equals(input.Association))
+                    Association == input.Association ||
+                    (Association != null &&
+                    Association.Equals(input.Association))
                 ) && 
                 (
-                    this.Description == input.Description ||
-                    (this.Description != null &&
-                    this.Description.Equals(input.Description))
+                    Description == input.Description ||
+                    (Description != null &&
+                    Description.Equals(input.Description))
                 ) && 
                 (
-                    this.DisplayName == input.DisplayName ||
-                    (this.DisplayName != null &&
-                    this.DisplayName.Equals(input.DisplayName))
+                    DisplayName == input.DisplayName ||
+                    (DisplayName != null &&
+                    DisplayName.Equals(input.DisplayName))
                 ) && 
                 (
-                    this.GalleryImage == input.GalleryImage ||
-                    (this.GalleryImage != null &&
-                    this.GalleryImage.Equals(input.GalleryImage))
+                    GalleryImage == input.GalleryImage ||
+                    (GalleryImage != null &&
+                    GalleryImage.Equals(input.GalleryImage))
                 ) && 
                 (
-                    this.Id == input.Id ||
-                    (this.Id != null &&
-                    this.Id.Equals(input.Id))
+                    Id == input.Id ||
+                    (Id != null &&
+                    Id.Equals(input.Id))
                 ) && 
                 (
-                    this.Links == input.Links ||
-                    this.Links != null &&
-                    this.Links.SequenceEqual(input.Links)
+                    Links == input.Links ||
+                    Links != null &&
+                    Links.SequenceEqual(input.Links)
                 ) && 
                 (
-                    this.LocalizedScopeName == input.LocalizedScopeName ||
-                    (this.LocalizedScopeName != null &&
-                    this.LocalizedScopeName.Equals(input.LocalizedScopeName))
+                    LocalizedScopeName == input.LocalizedScopeName ||
+                    (LocalizedScopeName != null &&
+                    LocalizedScopeName.Equals(input.LocalizedScopeName))
                 ) && 
                 (
-                    this.Name == input.Name ||
-                    (this.Name != null &&
-                    this.Name.Equals(input.Name))
+                    Name == input.Name ||
+                    (Name != null &&
+                    Name.Equals(input.Name))
                 ) && 
                 (
-                    this.ParentFolder == input.ParentFolder ||
-                    (this.ParentFolder != null &&
-                    this.ParentFolder.Equals(input.ParentFolder))
+                    ParentFolder == input.ParentFolder ||
+                    (ParentFolder != null &&
+                    ParentFolder.Equals(input.ParentFolder))
                 ) && 
                 (
-                    this.ParentIsScopeFolder == input.ParentIsScopeFolder ||
-                    (this.ParentIsScopeFolder != null &&
-                    this.ParentIsScopeFolder.Equals(input.ParentIsScopeFolder))
+                    ParentIsScopeFolder == input.ParentIsScopeFolder ||
+                    (ParentIsScopeFolder != null &&
+                    ParentIsScopeFolder.Equals(input.ParentIsScopeFolder))
                 ) && 
                 (
-                    this.Scope == input.Scope ||
-                    (this.Scope != null &&
-                    this.Scope.Equals(input.Scope))
+                    Scope == input.Scope ||
+                    (Scope != null &&
+                    Scope.Equals(input.Scope))
                 ) && 
                 (
-                    this.ScopeOwner == input.ScopeOwner ||
-                    (this.ScopeOwner != null &&
-                    this.ScopeOwner.Equals(input.ScopeOwner))
+                    ScopeOwner == input.ScopeOwner ||
+                    (ScopeOwner != null &&
+                    ScopeOwner.Equals(input.ScopeOwner))
                 ) && 
                 (
-                    this.StandInKey == input.StandInKey ||
-                    (this.StandInKey != null &&
-                    this.StandInKey.Equals(input.StandInKey))
+                    StandInKey == input.StandInKey ||
+                    (StandInKey != null &&
+                    StandInKey.Equals(input.StandInKey))
                 );
         }
 
@@ -262,33 +262,33 @@ namespace CherwellConnector.Model
         {
             unchecked // Overflow is fine, just wrap
             {
-                int hashCode = 41;
-                if (this.Association != null)
-                    hashCode = hashCode * 59 + this.Association.GetHashCode();
-                if (this.Description != null)
-                    hashCode = hashCode * 59 + this.Description.GetHashCode();
-                if (this.DisplayName != null)
-                    hashCode = hashCode * 59 + this.DisplayName.GetHashCode();
-                if (this.GalleryImage != null)
-                    hashCode = hashCode * 59 + this.GalleryImage.GetHashCode();
-                if (this.Id != null)
-                    hashCode = hashCode * 59 + this.Id.GetHashCode();
-                if (this.Links != null)
-                    hashCode = hashCode * 59 + this.Links.GetHashCode();
-                if (this.LocalizedScopeName != null)
-                    hashCode = hashCode * 59 + this.LocalizedScopeName.GetHashCode();
-                if (this.Name != null)
-                    hashCode = hashCode * 59 + this.Name.GetHashCode();
-                if (this.ParentFolder != null)
-                    hashCode = hashCode * 59 + this.ParentFolder.GetHashCode();
-                if (this.ParentIsScopeFolder != null)
-                    hashCode = hashCode * 59 + this.ParentIsScopeFolder.GetHashCode();
-                if (this.Scope != null)
-                    hashCode = hashCode * 59 + this.Scope.GetHashCode();
-                if (this.ScopeOwner != null)
-                    hashCode = hashCode * 59 + this.ScopeOwner.GetHashCode();
-                if (this.StandInKey != null)
-                    hashCode = hashCode * 59 + this.StandInKey.GetHashCode();
+                var hashCode = 41;
+                if (Association != null)
+                    hashCode = hashCode * 59 + Association.GetHashCode();
+                if (Description != null)
+                    hashCode = hashCode * 59 + Description.GetHashCode();
+                if (DisplayName != null)
+                    hashCode = hashCode * 59 + DisplayName.GetHashCode();
+                if (GalleryImage != null)
+                    hashCode = hashCode * 59 + GalleryImage.GetHashCode();
+                if (Id != null)
+                    hashCode = hashCode * 59 + Id.GetHashCode();
+                if (Links != null)
+                    hashCode = hashCode * 59 + Links.GetHashCode();
+                if (LocalizedScopeName != null)
+                    hashCode = hashCode * 59 + LocalizedScopeName.GetHashCode();
+                if (Name != null)
+                    hashCode = hashCode * 59 + Name.GetHashCode();
+                if (ParentFolder != null)
+                    hashCode = hashCode * 59 + ParentFolder.GetHashCode();
+                if (ParentIsScopeFolder != null)
+                    hashCode = hashCode * 59 + ParentIsScopeFolder.GetHashCode();
+                if (Scope != null)
+                    hashCode = hashCode * 59 + Scope.GetHashCode();
+                if (ScopeOwner != null)
+                    hashCode = hashCode * 59 + ScopeOwner.GetHashCode();
+                if (StandInKey != null)
+                    hashCode = hashCode * 59 + StandInKey.GetHashCode();
                 return hashCode;
             }
         }
@@ -298,7 +298,7 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

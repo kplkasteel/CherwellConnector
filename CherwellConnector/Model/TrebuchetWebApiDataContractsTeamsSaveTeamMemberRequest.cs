@@ -27,12 +27,12 @@ namespace CherwellConnector.Model
         /// <param name="setAsDefaultTeam">setAsDefaultTeam.</param>
         /// <param name="teamId">teamId.</param>
         /// <param name="userRecId">userRecId.</param>
-        public TrebuchetWebApiDataContractsTeamsSaveTeamMemberRequest(bool? isTeamManager = default(bool?), bool? setAsDefaultTeam = default(bool?), string teamId = default(string), string userRecId = default(string))
+        public TrebuchetWebApiDataContractsTeamsSaveTeamMemberRequest(bool? isTeamManager = default, bool? setAsDefaultTeam = default, string teamId = default, string userRecId = default)
         {
-            this.IsTeamManager = isTeamManager;
-            this.SetAsDefaultTeam = setAsDefaultTeam;
-            this.TeamId = teamId;
-            this.UserRecId = userRecId;
+            IsTeamManager = isTeamManager;
+            SetAsDefaultTeam = setAsDefaultTeam;
+            TeamId = teamId;
+            UserRecId = userRecId;
         }
         
         /// <summary>
@@ -67,10 +67,10 @@ namespace CherwellConnector.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrebuchetWebApiDataContractsTeamsSaveTeamMemberRequest {\n");
-            sb.Append("  IsTeamManager: ").Append(this.IsTeamManager).Append("\n");
-            sb.Append("  SetAsDefaultTeam: ").Append(this.SetAsDefaultTeam).Append("\n");
-            sb.Append("  TeamId: ").Append(this.TeamId).Append("\n");
-            sb.Append("  UserRecId: ").Append(this.UserRecId).Append("\n");
+            sb.Append("  IsTeamManager: ").Append(IsTeamManager).Append("\n");
+            sb.Append("  SetAsDefaultTeam: ").Append(SetAsDefaultTeam).Append("\n");
+            sb.Append("  TeamId: ").Append(TeamId).Append("\n");
+            sb.Append("  UserRecId: ").Append(UserRecId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -91,7 +91,7 @@ namespace CherwellConnector.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as TrebuchetWebApiDataContractsTeamsSaveTeamMemberRequest);
+            return Equals(input as TrebuchetWebApiDataContractsTeamsSaveTeamMemberRequest);
         }
 
         /// <summary>
@@ -106,24 +106,24 @@ namespace CherwellConnector.Model
 
             return 
                 (
-                    this.IsTeamManager == input.IsTeamManager ||
-                    (this.IsTeamManager != null &&
-                    this.IsTeamManager.Equals(input.IsTeamManager))
+                    IsTeamManager == input.IsTeamManager ||
+                    (IsTeamManager != null &&
+                    IsTeamManager.Equals(input.IsTeamManager))
                 ) && 
                 (
-                    this.SetAsDefaultTeam == input.SetAsDefaultTeam ||
-                    (this.SetAsDefaultTeam != null &&
-                    this.SetAsDefaultTeam.Equals(input.SetAsDefaultTeam))
+                    SetAsDefaultTeam == input.SetAsDefaultTeam ||
+                    (SetAsDefaultTeam != null &&
+                    SetAsDefaultTeam.Equals(input.SetAsDefaultTeam))
                 ) && 
                 (
-                    this.TeamId == input.TeamId ||
-                    (this.TeamId != null &&
-                    this.TeamId.Equals(input.TeamId))
+                    TeamId == input.TeamId ||
+                    (TeamId != null &&
+                    TeamId.Equals(input.TeamId))
                 ) && 
                 (
-                    this.UserRecId == input.UserRecId ||
-                    (this.UserRecId != null &&
-                    this.UserRecId.Equals(input.UserRecId))
+                    UserRecId == input.UserRecId ||
+                    (UserRecId != null &&
+                    UserRecId.Equals(input.UserRecId))
                 );
         }
 
@@ -135,15 +135,15 @@ namespace CherwellConnector.Model
         {
             unchecked // Overflow is fine, just wrap
             {
-                int hashCode = 41;
-                if (this.IsTeamManager != null)
-                    hashCode = hashCode * 59 + this.IsTeamManager.GetHashCode();
-                if (this.SetAsDefaultTeam != null)
-                    hashCode = hashCode * 59 + this.SetAsDefaultTeam.GetHashCode();
-                if (this.TeamId != null)
-                    hashCode = hashCode * 59 + this.TeamId.GetHashCode();
-                if (this.UserRecId != null)
-                    hashCode = hashCode * 59 + this.UserRecId.GetHashCode();
+                var hashCode = 41;
+                if (IsTeamManager != null)
+                    hashCode = hashCode * 59 + IsTeamManager.GetHashCode();
+                if (SetAsDefaultTeam != null)
+                    hashCode = hashCode * 59 + SetAsDefaultTeam.GetHashCode();
+                if (TeamId != null)
+                    hashCode = hashCode * 59 + TeamId.GetHashCode();
+                if (UserRecId != null)
+                    hashCode = hashCode * 59 + UserRecId.GetHashCode();
                 return hashCode;
             }
         }
@@ -153,7 +153,7 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

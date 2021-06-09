@@ -34,18 +34,18 @@ namespace CherwellConnector.Model
         /// <param name="major">major.</param>
         /// <param name="name">name.</param>
         /// <param name="supporting">supporting.</param>
-        public TrebuchetWebApiDataContractsBusinessObjectViewSummary(List<TrebuchetWebApiDataContractsBusinessObjectViewSummary> groupSummaries = default(List<TrebuchetWebApiDataContractsBusinessObjectViewSummary>), string image = default(string), bool? isPartOfView = default(bool?), string busObId = default(string), string displayName = default(string), bool? group = default(bool?), bool? lookup = default(bool?), bool? major = default(bool?), string name = default(string), bool? supporting = default(bool?))
+        public TrebuchetWebApiDataContractsBusinessObjectViewSummary(List<TrebuchetWebApiDataContractsBusinessObjectViewSummary> groupSummaries = default, string image = default, bool? isPartOfView = default, string busObId = default, string displayName = default, bool? group = default, bool? lookup = default, bool? major = default, string name = default, bool? supporting = default)
         {
-            this.GroupSummaries = groupSummaries;
-            this.Image = image;
-            this.IsPartOfView = isPartOfView;
-            this.BusObId = busObId;
-            this.DisplayName = displayName;
-            this.Group = group;
-            this.Lookup = lookup;
-            this.Major = major;
-            this.Name = name;
-            this.Supporting = supporting;
+            GroupSummaries = groupSummaries;
+            Image = image;
+            IsPartOfView = isPartOfView;
+            BusObId = busObId;
+            DisplayName = displayName;
+            Group = group;
+            Lookup = lookup;
+            Major = major;
+            Name = name;
+            Supporting = supporting;
         }
         
         /// <summary>
@@ -116,16 +116,16 @@ namespace CherwellConnector.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrebuchetWebApiDataContractsBusinessObjectViewSummary {\n");
-            sb.Append("  GroupSummaries: ").Append(this.GroupSummaries).Append("\n");
-            sb.Append("  Image: ").Append(this.Image).Append("\n");
-            sb.Append("  IsPartOfView: ").Append(this.IsPartOfView).Append("\n");
-            sb.Append("  BusObId: ").Append(this.BusObId).Append("\n");
-            sb.Append("  DisplayName: ").Append(this.DisplayName).Append("\n");
-            sb.Append("  Group: ").Append(this.Group).Append("\n");
-            sb.Append("  Lookup: ").Append(this.Lookup).Append("\n");
-            sb.Append("  Major: ").Append(this.Major).Append("\n");
-            sb.Append("  Name: ").Append(this.Name).Append("\n");
-            sb.Append("  Supporting: ").Append(this.Supporting).Append("\n");
+            sb.Append("  GroupSummaries: ").Append(GroupSummaries).Append("\n");
+            sb.Append("  Image: ").Append(Image).Append("\n");
+            sb.Append("  IsPartOfView: ").Append(IsPartOfView).Append("\n");
+            sb.Append("  BusObId: ").Append(BusObId).Append("\n");
+            sb.Append("  DisplayName: ").Append(DisplayName).Append("\n");
+            sb.Append("  Group: ").Append(Group).Append("\n");
+            sb.Append("  Lookup: ").Append(Lookup).Append("\n");
+            sb.Append("  Major: ").Append(Major).Append("\n");
+            sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  Supporting: ").Append(Supporting).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -146,7 +146,7 @@ namespace CherwellConnector.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as TrebuchetWebApiDataContractsBusinessObjectViewSummary);
+            return Equals(input as TrebuchetWebApiDataContractsBusinessObjectViewSummary);
         }
 
         /// <summary>
@@ -161,54 +161,54 @@ namespace CherwellConnector.Model
 
             return 
                 (
-                    this.GroupSummaries == input.GroupSummaries ||
-                    this.GroupSummaries != null &&
-                    this.GroupSummaries.SequenceEqual(input.GroupSummaries)
+                    GroupSummaries == input.GroupSummaries ||
+                    GroupSummaries != null &&
+                    GroupSummaries.SequenceEqual(input.GroupSummaries)
                 ) && 
                 (
-                    this.Image == input.Image ||
-                    (this.Image != null &&
-                    this.Image.Equals(input.Image))
+                    Image == input.Image ||
+                    (Image != null &&
+                    Image.Equals(input.Image))
                 ) && 
                 (
-                    this.IsPartOfView == input.IsPartOfView ||
-                    (this.IsPartOfView != null &&
-                    this.IsPartOfView.Equals(input.IsPartOfView))
+                    IsPartOfView == input.IsPartOfView ||
+                    (IsPartOfView != null &&
+                    IsPartOfView.Equals(input.IsPartOfView))
                 ) && 
                 (
-                    this.BusObId == input.BusObId ||
-                    (this.BusObId != null &&
-                    this.BusObId.Equals(input.BusObId))
+                    BusObId == input.BusObId ||
+                    (BusObId != null &&
+                    BusObId.Equals(input.BusObId))
                 ) && 
                 (
-                    this.DisplayName == input.DisplayName ||
-                    (this.DisplayName != null &&
-                    this.DisplayName.Equals(input.DisplayName))
+                    DisplayName == input.DisplayName ||
+                    (DisplayName != null &&
+                    DisplayName.Equals(input.DisplayName))
                 ) && 
                 (
-                    this.Group == input.Group ||
-                    (this.Group != null &&
-                    this.Group.Equals(input.Group))
+                    Group == input.Group ||
+                    (Group != null &&
+                    Group.Equals(input.Group))
                 ) && 
                 (
-                    this.Lookup == input.Lookup ||
-                    (this.Lookup != null &&
-                    this.Lookup.Equals(input.Lookup))
+                    Lookup == input.Lookup ||
+                    (Lookup != null &&
+                    Lookup.Equals(input.Lookup))
                 ) && 
                 (
-                    this.Major == input.Major ||
-                    (this.Major != null &&
-                    this.Major.Equals(input.Major))
+                    Major == input.Major ||
+                    (Major != null &&
+                    Major.Equals(input.Major))
                 ) && 
                 (
-                    this.Name == input.Name ||
-                    (this.Name != null &&
-                    this.Name.Equals(input.Name))
+                    Name == input.Name ||
+                    (Name != null &&
+                    Name.Equals(input.Name))
                 ) && 
                 (
-                    this.Supporting == input.Supporting ||
-                    (this.Supporting != null &&
-                    this.Supporting.Equals(input.Supporting))
+                    Supporting == input.Supporting ||
+                    (Supporting != null &&
+                    Supporting.Equals(input.Supporting))
                 );
         }
 
@@ -220,27 +220,27 @@ namespace CherwellConnector.Model
         {
             unchecked // Overflow is fine, just wrap
             {
-                int hashCode = 41;
-                if (this.GroupSummaries != null)
-                    hashCode = hashCode * 59 + this.GroupSummaries.GetHashCode();
-                if (this.Image != null)
-                    hashCode = hashCode * 59 + this.Image.GetHashCode();
-                if (this.IsPartOfView != null)
-                    hashCode = hashCode * 59 + this.IsPartOfView.GetHashCode();
-                if (this.BusObId != null)
-                    hashCode = hashCode * 59 + this.BusObId.GetHashCode();
-                if (this.DisplayName != null)
-                    hashCode = hashCode * 59 + this.DisplayName.GetHashCode();
-                if (this.Group != null)
-                    hashCode = hashCode * 59 + this.Group.GetHashCode();
-                if (this.Lookup != null)
-                    hashCode = hashCode * 59 + this.Lookup.GetHashCode();
-                if (this.Major != null)
-                    hashCode = hashCode * 59 + this.Major.GetHashCode();
-                if (this.Name != null)
-                    hashCode = hashCode * 59 + this.Name.GetHashCode();
-                if (this.Supporting != null)
-                    hashCode = hashCode * 59 + this.Supporting.GetHashCode();
+                var hashCode = 41;
+                if (GroupSummaries != null)
+                    hashCode = hashCode * 59 + GroupSummaries.GetHashCode();
+                if (Image != null)
+                    hashCode = hashCode * 59 + Image.GetHashCode();
+                if (IsPartOfView != null)
+                    hashCode = hashCode * 59 + IsPartOfView.GetHashCode();
+                if (BusObId != null)
+                    hashCode = hashCode * 59 + BusObId.GetHashCode();
+                if (DisplayName != null)
+                    hashCode = hashCode * 59 + DisplayName.GetHashCode();
+                if (Group != null)
+                    hashCode = hashCode * 59 + Group.GetHashCode();
+                if (Lookup != null)
+                    hashCode = hashCode * 59 + Lookup.GetHashCode();
+                if (Major != null)
+                    hashCode = hashCode * 59 + Major.GetHashCode();
+                if (Name != null)
+                    hashCode = hashCode * 59 + Name.GetHashCode();
+                if (Supporting != null)
+                    hashCode = hashCode * 59 + Supporting.GetHashCode();
                 return hashCode;
             }
         }
@@ -250,7 +250,7 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

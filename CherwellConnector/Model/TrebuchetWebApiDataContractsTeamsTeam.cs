@@ -25,10 +25,10 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="teamId">teamId.</param>
         /// <param name="teamName">teamName.</param>
-        public TrebuchetWebApiDataContractsTeamsTeam(string teamId = default(string), string teamName = default(string))
+        public TrebuchetWebApiDataContractsTeamsTeam(string teamId = default, string teamName = default)
         {
-            this.TeamId = teamId;
-            this.TeamName = teamName;
+            TeamId = teamId;
+            TeamName = teamName;
         }
         
         /// <summary>
@@ -51,8 +51,8 @@ namespace CherwellConnector.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrebuchetWebApiDataContractsTeamsTeam {\n");
-            sb.Append("  TeamId: ").Append(this.TeamId).Append("\n");
-            sb.Append("  TeamName: ").Append(this.TeamName).Append("\n");
+            sb.Append("  TeamId: ").Append(TeamId).Append("\n");
+            sb.Append("  TeamName: ").Append(TeamName).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -73,7 +73,7 @@ namespace CherwellConnector.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as TrebuchetWebApiDataContractsTeamsTeam);
+            return Equals(input as TrebuchetWebApiDataContractsTeamsTeam);
         }
 
         /// <summary>
@@ -88,14 +88,14 @@ namespace CherwellConnector.Model
 
             return 
                 (
-                    this.TeamId == input.TeamId ||
-                    (this.TeamId != null &&
-                    this.TeamId.Equals(input.TeamId))
+                    TeamId == input.TeamId ||
+                    (TeamId != null &&
+                    TeamId.Equals(input.TeamId))
                 ) && 
                 (
-                    this.TeamName == input.TeamName ||
-                    (this.TeamName != null &&
-                    this.TeamName.Equals(input.TeamName))
+                    TeamName == input.TeamName ||
+                    (TeamName != null &&
+                    TeamName.Equals(input.TeamName))
                 );
         }
 
@@ -107,11 +107,11 @@ namespace CherwellConnector.Model
         {
             unchecked // Overflow is fine, just wrap
             {
-                int hashCode = 41;
-                if (this.TeamId != null)
-                    hashCode = hashCode * 59 + this.TeamId.GetHashCode();
-                if (this.TeamName != null)
-                    hashCode = hashCode * 59 + this.TeamName.GetHashCode();
+                var hashCode = 41;
+                if (TeamId != null)
+                    hashCode = hashCode * 59 + TeamId.GetHashCode();
+                if (TeamName != null)
+                    hashCode = hashCode * 59 + TeamName.GetHashCode();
                 return hashCode;
             }
         }
@@ -121,7 +121,7 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

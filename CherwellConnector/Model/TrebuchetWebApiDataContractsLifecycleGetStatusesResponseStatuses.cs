@@ -27,12 +27,12 @@ namespace CherwellConnector.Model
         /// <param name="isInitial">isInitial.</param>
         /// <param name="name">name.</param>
         /// <param name="stageId">stageId.</param>
-        public TrebuchetWebApiDataContractsLifecycleGetStatusesResponseStatuses(string id = default(string), bool? isInitial = default(bool?), string name = default(string), string stageId = default(string))
+        public TrebuchetWebApiDataContractsLifecycleGetStatusesResponseStatuses(string id = default, bool? isInitial = default, string name = default, string stageId = default)
         {
-            this.Id = id;
-            this.IsInitial = isInitial;
-            this.Name = name;
-            this.StageId = stageId;
+            Id = id;
+            IsInitial = isInitial;
+            Name = name;
+            StageId = stageId;
         }
         
         /// <summary>
@@ -67,10 +67,10 @@ namespace CherwellConnector.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrebuchetWebApiDataContractsLifecycleGetStatusesResponseStatuses {\n");
-            sb.Append("  Id: ").Append(this.Id).Append("\n");
-            sb.Append("  IsInitial: ").Append(this.IsInitial).Append("\n");
-            sb.Append("  Name: ").Append(this.Name).Append("\n");
-            sb.Append("  StageId: ").Append(this.StageId).Append("\n");
+            sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  IsInitial: ").Append(IsInitial).Append("\n");
+            sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  StageId: ").Append(StageId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -91,7 +91,7 @@ namespace CherwellConnector.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as TrebuchetWebApiDataContractsLifecycleGetStatusesResponseStatuses);
+            return Equals(input as TrebuchetWebApiDataContractsLifecycleGetStatusesResponseStatuses);
         }
 
         /// <summary>
@@ -106,24 +106,24 @@ namespace CherwellConnector.Model
 
             return 
                 (
-                    this.Id == input.Id ||
-                    (this.Id != null &&
-                    this.Id.Equals(input.Id))
+                    Id == input.Id ||
+                    (Id != null &&
+                    Id.Equals(input.Id))
                 ) && 
                 (
-                    this.IsInitial == input.IsInitial ||
-                    (this.IsInitial != null &&
-                    this.IsInitial.Equals(input.IsInitial))
+                    IsInitial == input.IsInitial ||
+                    (IsInitial != null &&
+                    IsInitial.Equals(input.IsInitial))
                 ) && 
                 (
-                    this.Name == input.Name ||
-                    (this.Name != null &&
-                    this.Name.Equals(input.Name))
+                    Name == input.Name ||
+                    (Name != null &&
+                    Name.Equals(input.Name))
                 ) && 
                 (
-                    this.StageId == input.StageId ||
-                    (this.StageId != null &&
-                    this.StageId.Equals(input.StageId))
+                    StageId == input.StageId ||
+                    (StageId != null &&
+                    StageId.Equals(input.StageId))
                 );
         }
 
@@ -135,15 +135,15 @@ namespace CherwellConnector.Model
         {
             unchecked // Overflow is fine, just wrap
             {
-                int hashCode = 41;
-                if (this.Id != null)
-                    hashCode = hashCode * 59 + this.Id.GetHashCode();
-                if (this.IsInitial != null)
-                    hashCode = hashCode * 59 + this.IsInitial.GetHashCode();
-                if (this.Name != null)
-                    hashCode = hashCode * 59 + this.Name.GetHashCode();
-                if (this.StageId != null)
-                    hashCode = hashCode * 59 + this.StageId.GetHashCode();
+                var hashCode = 41;
+                if (Id != null)
+                    hashCode = hashCode * 59 + Id.GetHashCode();
+                if (IsInitial != null)
+                    hashCode = hashCode * 59 + IsInitial.GetHashCode();
+                if (Name != null)
+                    hashCode = hashCode * 59 + Name.GetHashCode();
+                if (StageId != null)
+                    hashCode = hashCode * 59 + StageId.GetHashCode();
                 return hashCode;
             }
         }
@@ -153,7 +153,7 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

@@ -27,12 +27,12 @@ namespace CherwellConnector.Model
         /// <param name="name">name.</param>
         /// <param name="fromStatusId">fromStatusId.</param>
         /// <param name="toStatusId">toStatusId.</param>
-        public TrebuchetWebApiDataContractsLifecycleGetTransitionsResponseTransition(string id = default(string), string name = default(string), string fromStatusId = default(string), string toStatusId = default(string))
+        public TrebuchetWebApiDataContractsLifecycleGetTransitionsResponseTransition(string id = default, string name = default, string fromStatusId = default, string toStatusId = default)
         {
-            this.Id = id;
-            this.Name = name;
-            this.FromStatusId = fromStatusId;
-            this.ToStatusId = toStatusId;
+            Id = id;
+            Name = name;
+            FromStatusId = fromStatusId;
+            ToStatusId = toStatusId;
         }
         
         /// <summary>
@@ -67,10 +67,10 @@ namespace CherwellConnector.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrebuchetWebApiDataContractsLifecycleGetTransitionsResponseTransition {\n");
-            sb.Append("  Id: ").Append(this.Id).Append("\n");
-            sb.Append("  Name: ").Append(this.Name).Append("\n");
-            sb.Append("  FromStatusId: ").Append(this.FromStatusId).Append("\n");
-            sb.Append("  ToStatusId: ").Append(this.ToStatusId).Append("\n");
+            sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  FromStatusId: ").Append(FromStatusId).Append("\n");
+            sb.Append("  ToStatusId: ").Append(ToStatusId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -91,7 +91,7 @@ namespace CherwellConnector.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as TrebuchetWebApiDataContractsLifecycleGetTransitionsResponseTransition);
+            return Equals(input as TrebuchetWebApiDataContractsLifecycleGetTransitionsResponseTransition);
         }
 
         /// <summary>
@@ -106,24 +106,24 @@ namespace CherwellConnector.Model
 
             return 
                 (
-                    this.Id == input.Id ||
-                    (this.Id != null &&
-                    this.Id.Equals(input.Id))
+                    Id == input.Id ||
+                    (Id != null &&
+                    Id.Equals(input.Id))
                 ) && 
                 (
-                    this.Name == input.Name ||
-                    (this.Name != null &&
-                    this.Name.Equals(input.Name))
+                    Name == input.Name ||
+                    (Name != null &&
+                    Name.Equals(input.Name))
                 ) && 
                 (
-                    this.FromStatusId == input.FromStatusId ||
-                    (this.FromStatusId != null &&
-                    this.FromStatusId.Equals(input.FromStatusId))
+                    FromStatusId == input.FromStatusId ||
+                    (FromStatusId != null &&
+                    FromStatusId.Equals(input.FromStatusId))
                 ) && 
                 (
-                    this.ToStatusId == input.ToStatusId ||
-                    (this.ToStatusId != null &&
-                    this.ToStatusId.Equals(input.ToStatusId))
+                    ToStatusId == input.ToStatusId ||
+                    (ToStatusId != null &&
+                    ToStatusId.Equals(input.ToStatusId))
                 );
         }
 
@@ -135,15 +135,15 @@ namespace CherwellConnector.Model
         {
             unchecked // Overflow is fine, just wrap
             {
-                int hashCode = 41;
-                if (this.Id != null)
-                    hashCode = hashCode * 59 + this.Id.GetHashCode();
-                if (this.Name != null)
-                    hashCode = hashCode * 59 + this.Name.GetHashCode();
-                if (this.FromStatusId != null)
-                    hashCode = hashCode * 59 + this.FromStatusId.GetHashCode();
-                if (this.ToStatusId != null)
-                    hashCode = hashCode * 59 + this.ToStatusId.GetHashCode();
+                var hashCode = 41;
+                if (Id != null)
+                    hashCode = hashCode * 59 + Id.GetHashCode();
+                if (Name != null)
+                    hashCode = hashCode * 59 + Name.GetHashCode();
+                if (FromStatusId != null)
+                    hashCode = hashCode * 59 + FromStatusId.GetHashCode();
+                if (ToStatusId != null)
+                    hashCode = hashCode * 59 + ToStatusId.GetHashCode();
                 return hashCode;
             }
         }
@@ -153,7 +153,7 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

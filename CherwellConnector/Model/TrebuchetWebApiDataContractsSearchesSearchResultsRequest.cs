@@ -43,27 +43,27 @@ namespace CherwellConnector.Model
         /// <param name="searchText">searchText.</param>
         /// <param name="sorting">sorting.</param>
         /// <param name="promptValues">promptValues.</param>
-        public TrebuchetWebApiDataContractsSearchesSearchResultsRequest(string association = default(string), string associationName = default(string), string busObId = default(string), string customGridDefId = default(string), string dateTimeFormatting = default(string), string fieldId = default(string), List<string> fields = default(List<string>), List<TrebuchetWebApiDataContractsSearchesFilterInfo> filters = default(List<TrebuchetWebApiDataContractsSearchesFilterInfo>), bool? includeAllFields = default(bool?), bool? includeSchema = default(bool?), int? pageNumber = default(int?), int? pageSize = default(int?), string scope = default(string), string scopeOwner = default(string), string searchId = default(string), string searchName = default(string), string searchText = default(string), List<TrebuchetWebApiDataContractsSearchesSortInfo> sorting = default(List<TrebuchetWebApiDataContractsSearchesSortInfo>), List<TrebuchetWebApiDataContractsCorePromptValue> promptValues = default(List<TrebuchetWebApiDataContractsCorePromptValue>))
+        public TrebuchetWebApiDataContractsSearchesSearchResultsRequest(string association = default, string associationName = default, string busObId = default, string customGridDefId = default, string dateTimeFormatting = default, string fieldId = default, List<string> fields = default, List<TrebuchetWebApiDataContractsSearchesFilterInfo> filters = default, bool? includeAllFields = default, bool? includeSchema = default, int? pageNumber = default, int? pageSize = default, string scope = default, string scopeOwner = default, string searchId = default, string searchName = default, string searchText = default, List<TrebuchetWebApiDataContractsSearchesSortInfo> sorting = default, List<TrebuchetWebApiDataContractsCorePromptValue> promptValues = default)
         {
-            this.Association = association;
-            this.AssociationName = associationName;
-            this.BusObId = busObId;
-            this.CustomGridDefId = customGridDefId;
-            this.DateTimeFormatting = dateTimeFormatting;
-            this.FieldId = fieldId;
-            this.Fields = fields;
-            this.Filters = filters;
-            this.IncludeAllFields = includeAllFields;
-            this.IncludeSchema = includeSchema;
-            this.PageNumber = pageNumber;
-            this.PageSize = pageSize;
-            this.Scope = scope;
-            this.ScopeOwner = scopeOwner;
-            this.SearchId = searchId;
-            this.SearchName = searchName;
-            this.SearchText = searchText;
-            this.Sorting = sorting;
-            this.PromptValues = promptValues;
+            Association = association;
+            AssociationName = associationName;
+            BusObId = busObId;
+            CustomGridDefId = customGridDefId;
+            DateTimeFormatting = dateTimeFormatting;
+            FieldId = fieldId;
+            Fields = fields;
+            Filters = filters;
+            IncludeAllFields = includeAllFields;
+            IncludeSchema = includeSchema;
+            PageNumber = pageNumber;
+            PageSize = pageSize;
+            Scope = scope;
+            ScopeOwner = scopeOwner;
+            SearchId = searchId;
+            SearchName = searchName;
+            SearchText = searchText;
+            Sorting = sorting;
+            PromptValues = promptValues;
         }
         
         /// <summary>
@@ -188,25 +188,25 @@ namespace CherwellConnector.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrebuchetWebApiDataContractsSearchesSearchResultsRequest {\n");
-            sb.Append("  Association: ").Append(this.Association).Append("\n");
-            sb.Append("  AssociationName: ").Append(this.AssociationName).Append("\n");
-            sb.Append("  BusObId: ").Append(this.BusObId).Append("\n");
-            sb.Append("  CustomGridDefId: ").Append(this.CustomGridDefId).Append("\n");
-            sb.Append("  DateTimeFormatting: ").Append(this.DateTimeFormatting).Append("\n");
-            sb.Append("  FieldId: ").Append(this.FieldId).Append("\n");
-            sb.Append("  Fields: ").Append(this.Fields).Append("\n");
-            sb.Append("  Filters: ").Append(this.Filters).Append("\n");
-            sb.Append("  IncludeAllFields: ").Append(this.IncludeAllFields).Append("\n");
-            sb.Append("  IncludeSchema: ").Append(this.IncludeSchema).Append("\n");
-            sb.Append("  PageNumber: ").Append(this.PageNumber).Append("\n");
-            sb.Append("  PageSize: ").Append(this.PageSize).Append("\n");
-            sb.Append("  Scope: ").Append(this.Scope).Append("\n");
-            sb.Append("  ScopeOwner: ").Append(this.ScopeOwner).Append("\n");
-            sb.Append("  SearchId: ").Append(this.SearchId).Append("\n");
-            sb.Append("  SearchName: ").Append(this.SearchName).Append("\n");
-            sb.Append("  SearchText: ").Append(this.SearchText).Append("\n");
-            sb.Append("  Sorting: ").Append(this.Sorting).Append("\n");
-            sb.Append("  PromptValues: ").Append(this.PromptValues).Append("\n");
+            sb.Append("  Association: ").Append(Association).Append("\n");
+            sb.Append("  AssociationName: ").Append(AssociationName).Append("\n");
+            sb.Append("  BusObId: ").Append(BusObId).Append("\n");
+            sb.Append("  CustomGridDefId: ").Append(CustomGridDefId).Append("\n");
+            sb.Append("  DateTimeFormatting: ").Append(DateTimeFormatting).Append("\n");
+            sb.Append("  FieldId: ").Append(FieldId).Append("\n");
+            sb.Append("  Fields: ").Append(Fields).Append("\n");
+            sb.Append("  Filters: ").Append(Filters).Append("\n");
+            sb.Append("  IncludeAllFields: ").Append(IncludeAllFields).Append("\n");
+            sb.Append("  IncludeSchema: ").Append(IncludeSchema).Append("\n");
+            sb.Append("  PageNumber: ").Append(PageNumber).Append("\n");
+            sb.Append("  PageSize: ").Append(PageSize).Append("\n");
+            sb.Append("  Scope: ").Append(Scope).Append("\n");
+            sb.Append("  ScopeOwner: ").Append(ScopeOwner).Append("\n");
+            sb.Append("  SearchId: ").Append(SearchId).Append("\n");
+            sb.Append("  SearchName: ").Append(SearchName).Append("\n");
+            sb.Append("  SearchText: ").Append(SearchText).Append("\n");
+            sb.Append("  Sorting: ").Append(Sorting).Append("\n");
+            sb.Append("  PromptValues: ").Append(PromptValues).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -227,7 +227,7 @@ namespace CherwellConnector.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as TrebuchetWebApiDataContractsSearchesSearchResultsRequest);
+            return Equals(input as TrebuchetWebApiDataContractsSearchesSearchResultsRequest);
         }
 
         /// <summary>
@@ -242,99 +242,99 @@ namespace CherwellConnector.Model
 
             return 
                 (
-                    this.Association == input.Association ||
-                    (this.Association != null &&
-                    this.Association.Equals(input.Association))
+                    Association == input.Association ||
+                    (Association != null &&
+                    Association.Equals(input.Association))
                 ) && 
                 (
-                    this.AssociationName == input.AssociationName ||
-                    (this.AssociationName != null &&
-                    this.AssociationName.Equals(input.AssociationName))
+                    AssociationName == input.AssociationName ||
+                    (AssociationName != null &&
+                    AssociationName.Equals(input.AssociationName))
                 ) && 
                 (
-                    this.BusObId == input.BusObId ||
-                    (this.BusObId != null &&
-                    this.BusObId.Equals(input.BusObId))
+                    BusObId == input.BusObId ||
+                    (BusObId != null &&
+                    BusObId.Equals(input.BusObId))
                 ) && 
                 (
-                    this.CustomGridDefId == input.CustomGridDefId ||
-                    (this.CustomGridDefId != null &&
-                    this.CustomGridDefId.Equals(input.CustomGridDefId))
+                    CustomGridDefId == input.CustomGridDefId ||
+                    (CustomGridDefId != null &&
+                    CustomGridDefId.Equals(input.CustomGridDefId))
                 ) && 
                 (
-                    this.DateTimeFormatting == input.DateTimeFormatting ||
-                    (this.DateTimeFormatting != null &&
-                    this.DateTimeFormatting.Equals(input.DateTimeFormatting))
+                    DateTimeFormatting == input.DateTimeFormatting ||
+                    (DateTimeFormatting != null &&
+                    DateTimeFormatting.Equals(input.DateTimeFormatting))
                 ) && 
                 (
-                    this.FieldId == input.FieldId ||
-                    (this.FieldId != null &&
-                    this.FieldId.Equals(input.FieldId))
+                    FieldId == input.FieldId ||
+                    (FieldId != null &&
+                    FieldId.Equals(input.FieldId))
                 ) && 
                 (
-                    this.Fields == input.Fields ||
-                    this.Fields != null &&
-                    this.Fields.SequenceEqual(input.Fields)
+                    Fields == input.Fields ||
+                    Fields != null &&
+                    Fields.SequenceEqual(input.Fields)
                 ) && 
                 (
-                    this.Filters == input.Filters ||
-                    this.Filters != null &&
-                    this.Filters.SequenceEqual(input.Filters)
+                    Filters == input.Filters ||
+                    Filters != null &&
+                    Filters.SequenceEqual(input.Filters)
                 ) && 
                 (
-                    this.IncludeAllFields == input.IncludeAllFields ||
-                    (this.IncludeAllFields != null &&
-                    this.IncludeAllFields.Equals(input.IncludeAllFields))
+                    IncludeAllFields == input.IncludeAllFields ||
+                    (IncludeAllFields != null &&
+                    IncludeAllFields.Equals(input.IncludeAllFields))
                 ) && 
                 (
-                    this.IncludeSchema == input.IncludeSchema ||
-                    (this.IncludeSchema != null &&
-                    this.IncludeSchema.Equals(input.IncludeSchema))
+                    IncludeSchema == input.IncludeSchema ||
+                    (IncludeSchema != null &&
+                    IncludeSchema.Equals(input.IncludeSchema))
                 ) && 
                 (
-                    this.PageNumber == input.PageNumber ||
-                    (this.PageNumber != null &&
-                    this.PageNumber.Equals(input.PageNumber))
+                    PageNumber == input.PageNumber ||
+                    (PageNumber != null &&
+                    PageNumber.Equals(input.PageNumber))
                 ) && 
                 (
-                    this.PageSize == input.PageSize ||
-                    (this.PageSize != null &&
-                    this.PageSize.Equals(input.PageSize))
+                    PageSize == input.PageSize ||
+                    (PageSize != null &&
+                    PageSize.Equals(input.PageSize))
                 ) && 
                 (
-                    this.Scope == input.Scope ||
-                    (this.Scope != null &&
-                    this.Scope.Equals(input.Scope))
+                    Scope == input.Scope ||
+                    (Scope != null &&
+                    Scope.Equals(input.Scope))
                 ) && 
                 (
-                    this.ScopeOwner == input.ScopeOwner ||
-                    (this.ScopeOwner != null &&
-                    this.ScopeOwner.Equals(input.ScopeOwner))
+                    ScopeOwner == input.ScopeOwner ||
+                    (ScopeOwner != null &&
+                    ScopeOwner.Equals(input.ScopeOwner))
                 ) && 
                 (
-                    this.SearchId == input.SearchId ||
-                    (this.SearchId != null &&
-                    this.SearchId.Equals(input.SearchId))
+                    SearchId == input.SearchId ||
+                    (SearchId != null &&
+                    SearchId.Equals(input.SearchId))
                 ) && 
                 (
-                    this.SearchName == input.SearchName ||
-                    (this.SearchName != null &&
-                    this.SearchName.Equals(input.SearchName))
+                    SearchName == input.SearchName ||
+                    (SearchName != null &&
+                    SearchName.Equals(input.SearchName))
                 ) && 
                 (
-                    this.SearchText == input.SearchText ||
-                    (this.SearchText != null &&
-                    this.SearchText.Equals(input.SearchText))
+                    SearchText == input.SearchText ||
+                    (SearchText != null &&
+                    SearchText.Equals(input.SearchText))
                 ) && 
                 (
-                    this.Sorting == input.Sorting ||
-                    this.Sorting != null &&
-                    this.Sorting.SequenceEqual(input.Sorting)
+                    Sorting == input.Sorting ||
+                    Sorting != null &&
+                    Sorting.SequenceEqual(input.Sorting)
                 ) && 
                 (
-                    this.PromptValues == input.PromptValues ||
-                    this.PromptValues != null &&
-                    this.PromptValues.SequenceEqual(input.PromptValues)
+                    PromptValues == input.PromptValues ||
+                    PromptValues != null &&
+                    PromptValues.SequenceEqual(input.PromptValues)
                 );
         }
 
@@ -346,45 +346,45 @@ namespace CherwellConnector.Model
         {
             unchecked // Overflow is fine, just wrap
             {
-                int hashCode = 41;
-                if (this.Association != null)
-                    hashCode = hashCode * 59 + this.Association.GetHashCode();
-                if (this.AssociationName != null)
-                    hashCode = hashCode * 59 + this.AssociationName.GetHashCode();
-                if (this.BusObId != null)
-                    hashCode = hashCode * 59 + this.BusObId.GetHashCode();
-                if (this.CustomGridDefId != null)
-                    hashCode = hashCode * 59 + this.CustomGridDefId.GetHashCode();
-                if (this.DateTimeFormatting != null)
-                    hashCode = hashCode * 59 + this.DateTimeFormatting.GetHashCode();
-                if (this.FieldId != null)
-                    hashCode = hashCode * 59 + this.FieldId.GetHashCode();
-                if (this.Fields != null)
-                    hashCode = hashCode * 59 + this.Fields.GetHashCode();
-                if (this.Filters != null)
-                    hashCode = hashCode * 59 + this.Filters.GetHashCode();
-                if (this.IncludeAllFields != null)
-                    hashCode = hashCode * 59 + this.IncludeAllFields.GetHashCode();
-                if (this.IncludeSchema != null)
-                    hashCode = hashCode * 59 + this.IncludeSchema.GetHashCode();
-                if (this.PageNumber != null)
-                    hashCode = hashCode * 59 + this.PageNumber.GetHashCode();
-                if (this.PageSize != null)
-                    hashCode = hashCode * 59 + this.PageSize.GetHashCode();
-                if (this.Scope != null)
-                    hashCode = hashCode * 59 + this.Scope.GetHashCode();
-                if (this.ScopeOwner != null)
-                    hashCode = hashCode * 59 + this.ScopeOwner.GetHashCode();
-                if (this.SearchId != null)
-                    hashCode = hashCode * 59 + this.SearchId.GetHashCode();
-                if (this.SearchName != null)
-                    hashCode = hashCode * 59 + this.SearchName.GetHashCode();
-                if (this.SearchText != null)
-                    hashCode = hashCode * 59 + this.SearchText.GetHashCode();
-                if (this.Sorting != null)
-                    hashCode = hashCode * 59 + this.Sorting.GetHashCode();
-                if (this.PromptValues != null)
-                    hashCode = hashCode * 59 + this.PromptValues.GetHashCode();
+                var hashCode = 41;
+                if (Association != null)
+                    hashCode = hashCode * 59 + Association.GetHashCode();
+                if (AssociationName != null)
+                    hashCode = hashCode * 59 + AssociationName.GetHashCode();
+                if (BusObId != null)
+                    hashCode = hashCode * 59 + BusObId.GetHashCode();
+                if (CustomGridDefId != null)
+                    hashCode = hashCode * 59 + CustomGridDefId.GetHashCode();
+                if (DateTimeFormatting != null)
+                    hashCode = hashCode * 59 + DateTimeFormatting.GetHashCode();
+                if (FieldId != null)
+                    hashCode = hashCode * 59 + FieldId.GetHashCode();
+                if (Fields != null)
+                    hashCode = hashCode * 59 + Fields.GetHashCode();
+                if (Filters != null)
+                    hashCode = hashCode * 59 + Filters.GetHashCode();
+                if (IncludeAllFields != null)
+                    hashCode = hashCode * 59 + IncludeAllFields.GetHashCode();
+                if (IncludeSchema != null)
+                    hashCode = hashCode * 59 + IncludeSchema.GetHashCode();
+                if (PageNumber != null)
+                    hashCode = hashCode * 59 + PageNumber.GetHashCode();
+                if (PageSize != null)
+                    hashCode = hashCode * 59 + PageSize.GetHashCode();
+                if (Scope != null)
+                    hashCode = hashCode * 59 + Scope.GetHashCode();
+                if (ScopeOwner != null)
+                    hashCode = hashCode * 59 + ScopeOwner.GetHashCode();
+                if (SearchId != null)
+                    hashCode = hashCode * 59 + SearchId.GetHashCode();
+                if (SearchName != null)
+                    hashCode = hashCode * 59 + SearchName.GetHashCode();
+                if (SearchText != null)
+                    hashCode = hashCode * 59 + SearchText.GetHashCode();
+                if (Sorting != null)
+                    hashCode = hashCode * 59 + Sorting.GetHashCode();
+                if (PromptValues != null)
+                    hashCode = hashCode * 59 + PromptValues.GetHashCode();
                 return hashCode;
             }
         }
@@ -394,7 +394,7 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

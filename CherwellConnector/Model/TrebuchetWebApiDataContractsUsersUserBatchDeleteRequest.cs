@@ -26,10 +26,10 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="stopOnError">stopOnError.</param>
         /// <param name="userRecordIds">userRecordIds.</param>
-        public TrebuchetWebApiDataContractsUsersUserBatchDeleteRequest(bool? stopOnError = default(bool?), List<string> userRecordIds = default(List<string>))
+        public TrebuchetWebApiDataContractsUsersUserBatchDeleteRequest(bool? stopOnError = default, List<string> userRecordIds = default)
         {
-            this.StopOnError = stopOnError;
-            this.UserRecordIds = userRecordIds;
+            StopOnError = stopOnError;
+            UserRecordIds = userRecordIds;
         }
         
         /// <summary>
@@ -52,8 +52,8 @@ namespace CherwellConnector.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrebuchetWebApiDataContractsUsersUserBatchDeleteRequest {\n");
-            sb.Append("  StopOnError: ").Append(this.StopOnError).Append("\n");
-            sb.Append("  UserRecordIds: ").Append(this.UserRecordIds).Append("\n");
+            sb.Append("  StopOnError: ").Append(StopOnError).Append("\n");
+            sb.Append("  UserRecordIds: ").Append(UserRecordIds).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -74,7 +74,7 @@ namespace CherwellConnector.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as TrebuchetWebApiDataContractsUsersUserBatchDeleteRequest);
+            return Equals(input as TrebuchetWebApiDataContractsUsersUserBatchDeleteRequest);
         }
 
         /// <summary>
@@ -89,14 +89,14 @@ namespace CherwellConnector.Model
 
             return 
                 (
-                    this.StopOnError == input.StopOnError ||
-                    (this.StopOnError != null &&
-                    this.StopOnError.Equals(input.StopOnError))
+                    StopOnError == input.StopOnError ||
+                    (StopOnError != null &&
+                    StopOnError.Equals(input.StopOnError))
                 ) && 
                 (
-                    this.UserRecordIds == input.UserRecordIds ||
-                    this.UserRecordIds != null &&
-                    this.UserRecordIds.SequenceEqual(input.UserRecordIds)
+                    UserRecordIds == input.UserRecordIds ||
+                    UserRecordIds != null &&
+                    UserRecordIds.SequenceEqual(input.UserRecordIds)
                 );
         }
 
@@ -108,11 +108,11 @@ namespace CherwellConnector.Model
         {
             unchecked // Overflow is fine, just wrap
             {
-                int hashCode = 41;
-                if (this.StopOnError != null)
-                    hashCode = hashCode * 59 + this.StopOnError.GetHashCode();
-                if (this.UserRecordIds != null)
-                    hashCode = hashCode * 59 + this.UserRecordIds.GetHashCode();
+                var hashCode = 41;
+                if (StopOnError != null)
+                    hashCode = hashCode * 59 + StopOnError.GetHashCode();
+                if (UserRecordIds != null)
+                    hashCode = hashCode * 59 + UserRecordIds.GetHashCode();
                 return hashCode;
             }
         }
@@ -122,7 +122,7 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

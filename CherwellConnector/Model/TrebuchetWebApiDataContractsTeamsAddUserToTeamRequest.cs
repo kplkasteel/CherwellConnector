@@ -26,11 +26,11 @@ namespace CherwellConnector.Model
         /// <param name="teamId">teamId.</param>
         /// <param name="userIsTeamManager">userIsTeamManager.</param>
         /// <param name="userRecordId">userRecordId.</param>
-        public TrebuchetWebApiDataContractsTeamsAddUserToTeamRequest(string teamId = default(string), bool? userIsTeamManager = default(bool?), string userRecordId = default(string))
+        public TrebuchetWebApiDataContractsTeamsAddUserToTeamRequest(string teamId = default, bool? userIsTeamManager = default, string userRecordId = default)
         {
-            this.TeamId = teamId;
-            this.UserIsTeamManager = userIsTeamManager;
-            this.UserRecordId = userRecordId;
+            TeamId = teamId;
+            UserIsTeamManager = userIsTeamManager;
+            UserRecordId = userRecordId;
         }
         
         /// <summary>
@@ -59,9 +59,9 @@ namespace CherwellConnector.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrebuchetWebApiDataContractsTeamsAddUserToTeamRequest {\n");
-            sb.Append("  TeamId: ").Append(this.TeamId).Append("\n");
-            sb.Append("  UserIsTeamManager: ").Append(this.UserIsTeamManager).Append("\n");
-            sb.Append("  UserRecordId: ").Append(this.UserRecordId).Append("\n");
+            sb.Append("  TeamId: ").Append(TeamId).Append("\n");
+            sb.Append("  UserIsTeamManager: ").Append(UserIsTeamManager).Append("\n");
+            sb.Append("  UserRecordId: ").Append(UserRecordId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -82,7 +82,7 @@ namespace CherwellConnector.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as TrebuchetWebApiDataContractsTeamsAddUserToTeamRequest);
+            return Equals(input as TrebuchetWebApiDataContractsTeamsAddUserToTeamRequest);
         }
 
         /// <summary>
@@ -97,19 +97,19 @@ namespace CherwellConnector.Model
 
             return 
                 (
-                    this.TeamId == input.TeamId ||
-                    (this.TeamId != null &&
-                    this.TeamId.Equals(input.TeamId))
+                    TeamId == input.TeamId ||
+                    (TeamId != null &&
+                    TeamId.Equals(input.TeamId))
                 ) && 
                 (
-                    this.UserIsTeamManager == input.UserIsTeamManager ||
-                    (this.UserIsTeamManager != null &&
-                    this.UserIsTeamManager.Equals(input.UserIsTeamManager))
+                    UserIsTeamManager == input.UserIsTeamManager ||
+                    (UserIsTeamManager != null &&
+                    UserIsTeamManager.Equals(input.UserIsTeamManager))
                 ) && 
                 (
-                    this.UserRecordId == input.UserRecordId ||
-                    (this.UserRecordId != null &&
-                    this.UserRecordId.Equals(input.UserRecordId))
+                    UserRecordId == input.UserRecordId ||
+                    (UserRecordId != null &&
+                    UserRecordId.Equals(input.UserRecordId))
                 );
         }
 
@@ -121,13 +121,13 @@ namespace CherwellConnector.Model
         {
             unchecked // Overflow is fine, just wrap
             {
-                int hashCode = 41;
-                if (this.TeamId != null)
-                    hashCode = hashCode * 59 + this.TeamId.GetHashCode();
-                if (this.UserIsTeamManager != null)
-                    hashCode = hashCode * 59 + this.UserIsTeamManager.GetHashCode();
-                if (this.UserRecordId != null)
-                    hashCode = hashCode * 59 + this.UserRecordId.GetHashCode();
+                var hashCode = 41;
+                if (TeamId != null)
+                    hashCode = hashCode * 59 + TeamId.GetHashCode();
+                if (UserIsTeamManager != null)
+                    hashCode = hashCode * 59 + UserIsTeamManager.GetHashCode();
+                if (UserRecordId != null)
+                    hashCode = hashCode * 59 + UserRecordId.GetHashCode();
                 return hashCode;
             }
         }
@@ -137,7 +137,7 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

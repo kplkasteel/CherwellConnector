@@ -35,20 +35,20 @@ namespace CherwellConnector.Model
         /// <param name="sortByRelevance">sortByRelevance.</param>
         /// <param name="specificSearchTargetId">specificSearchTargetId.</param>
         /// <param name="useSortBy">useSortBy.</param>
-        public TrebuchetWebApiDataContractsSearchesQuickSearchSpecificRequest(bool? ascending = default(bool?), bool? isBusObTarget = default(bool?), bool? nonFinalState = default(bool?), bool? searchAnyWords = default(bool?), bool? searchAttachments = default(bool?), bool? searchRelated = default(bool?), string searchText = default(string), TrebuchetWebApiDataContractsSearchesChangedLimit selectedChangedLimit = default(TrebuchetWebApiDataContractsSearchesChangedLimit), string selectedSortByFieldId = default(string), bool? sortByRelevance = default(bool?), string specificSearchTargetId = default(string), bool? useSortBy = default(bool?))
+        public TrebuchetWebApiDataContractsSearchesQuickSearchSpecificRequest(bool? ascending = default, bool? isBusObTarget = default, bool? nonFinalState = default, bool? searchAnyWords = default, bool? searchAttachments = default, bool? searchRelated = default, string searchText = default, TrebuchetWebApiDataContractsSearchesChangedLimit selectedChangedLimit = default, string selectedSortByFieldId = default, bool? sortByRelevance = default, string specificSearchTargetId = default, bool? useSortBy = default)
         {
-            this.Ascending = ascending;
-            this.IsBusObTarget = isBusObTarget;
-            this.NonFinalState = nonFinalState;
-            this.SearchAnyWords = searchAnyWords;
-            this.SearchAttachments = searchAttachments;
-            this.SearchRelated = searchRelated;
-            this.SearchText = searchText;
-            this.SelectedChangedLimit = selectedChangedLimit;
-            this.SelectedSortByFieldId = selectedSortByFieldId;
-            this.SortByRelevance = sortByRelevance;
-            this.SpecificSearchTargetId = specificSearchTargetId;
-            this.UseSortBy = useSortBy;
+            Ascending = ascending;
+            IsBusObTarget = isBusObTarget;
+            NonFinalState = nonFinalState;
+            SearchAnyWords = searchAnyWords;
+            SearchAttachments = searchAttachments;
+            SearchRelated = searchRelated;
+            SearchText = searchText;
+            SelectedChangedLimit = selectedChangedLimit;
+            SelectedSortByFieldId = selectedSortByFieldId;
+            SortByRelevance = sortByRelevance;
+            SpecificSearchTargetId = specificSearchTargetId;
+            UseSortBy = useSortBy;
         }
         
         /// <summary>
@@ -131,18 +131,18 @@ namespace CherwellConnector.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrebuchetWebApiDataContractsSearchesQuickSearchSpecificRequest {\n");
-            sb.Append("  Ascending: ").Append(this.Ascending).Append("\n");
-            sb.Append("  IsBusObTarget: ").Append(this.IsBusObTarget).Append("\n");
-            sb.Append("  NonFinalState: ").Append(this.NonFinalState).Append("\n");
-            sb.Append("  SearchAnyWords: ").Append(this.SearchAnyWords).Append("\n");
-            sb.Append("  SearchAttachments: ").Append(this.SearchAttachments).Append("\n");
-            sb.Append("  SearchRelated: ").Append(this.SearchRelated).Append("\n");
-            sb.Append("  SearchText: ").Append(this.SearchText).Append("\n");
-            sb.Append("  SelectedChangedLimit: ").Append(this.SelectedChangedLimit).Append("\n");
-            sb.Append("  SelectedSortByFieldId: ").Append(this.SelectedSortByFieldId).Append("\n");
-            sb.Append("  SortByRelevance: ").Append(this.SortByRelevance).Append("\n");
-            sb.Append("  SpecificSearchTargetId: ").Append(this.SpecificSearchTargetId).Append("\n");
-            sb.Append("  UseSortBy: ").Append(this.UseSortBy).Append("\n");
+            sb.Append("  Ascending: ").Append(Ascending).Append("\n");
+            sb.Append("  IsBusObTarget: ").Append(IsBusObTarget).Append("\n");
+            sb.Append("  NonFinalState: ").Append(NonFinalState).Append("\n");
+            sb.Append("  SearchAnyWords: ").Append(SearchAnyWords).Append("\n");
+            sb.Append("  SearchAttachments: ").Append(SearchAttachments).Append("\n");
+            sb.Append("  SearchRelated: ").Append(SearchRelated).Append("\n");
+            sb.Append("  SearchText: ").Append(SearchText).Append("\n");
+            sb.Append("  SelectedChangedLimit: ").Append(SelectedChangedLimit).Append("\n");
+            sb.Append("  SelectedSortByFieldId: ").Append(SelectedSortByFieldId).Append("\n");
+            sb.Append("  SortByRelevance: ").Append(SortByRelevance).Append("\n");
+            sb.Append("  SpecificSearchTargetId: ").Append(SpecificSearchTargetId).Append("\n");
+            sb.Append("  UseSortBy: ").Append(UseSortBy).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -163,7 +163,7 @@ namespace CherwellConnector.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as TrebuchetWebApiDataContractsSearchesQuickSearchSpecificRequest);
+            return Equals(input as TrebuchetWebApiDataContractsSearchesQuickSearchSpecificRequest);
         }
 
         /// <summary>
@@ -178,64 +178,64 @@ namespace CherwellConnector.Model
 
             return 
                 (
-                    this.Ascending == input.Ascending ||
-                    (this.Ascending != null &&
-                    this.Ascending.Equals(input.Ascending))
+                    Ascending == input.Ascending ||
+                    (Ascending != null &&
+                    Ascending.Equals(input.Ascending))
                 ) && 
                 (
-                    this.IsBusObTarget == input.IsBusObTarget ||
-                    (this.IsBusObTarget != null &&
-                    this.IsBusObTarget.Equals(input.IsBusObTarget))
+                    IsBusObTarget == input.IsBusObTarget ||
+                    (IsBusObTarget != null &&
+                    IsBusObTarget.Equals(input.IsBusObTarget))
                 ) && 
                 (
-                    this.NonFinalState == input.NonFinalState ||
-                    (this.NonFinalState != null &&
-                    this.NonFinalState.Equals(input.NonFinalState))
+                    NonFinalState == input.NonFinalState ||
+                    (NonFinalState != null &&
+                    NonFinalState.Equals(input.NonFinalState))
                 ) && 
                 (
-                    this.SearchAnyWords == input.SearchAnyWords ||
-                    (this.SearchAnyWords != null &&
-                    this.SearchAnyWords.Equals(input.SearchAnyWords))
+                    SearchAnyWords == input.SearchAnyWords ||
+                    (SearchAnyWords != null &&
+                    SearchAnyWords.Equals(input.SearchAnyWords))
                 ) && 
                 (
-                    this.SearchAttachments == input.SearchAttachments ||
-                    (this.SearchAttachments != null &&
-                    this.SearchAttachments.Equals(input.SearchAttachments))
+                    SearchAttachments == input.SearchAttachments ||
+                    (SearchAttachments != null &&
+                    SearchAttachments.Equals(input.SearchAttachments))
                 ) && 
                 (
-                    this.SearchRelated == input.SearchRelated ||
-                    (this.SearchRelated != null &&
-                    this.SearchRelated.Equals(input.SearchRelated))
+                    SearchRelated == input.SearchRelated ||
+                    (SearchRelated != null &&
+                    SearchRelated.Equals(input.SearchRelated))
                 ) && 
                 (
-                    this.SearchText == input.SearchText ||
-                    (this.SearchText != null &&
-                    this.SearchText.Equals(input.SearchText))
+                    SearchText == input.SearchText ||
+                    (SearchText != null &&
+                    SearchText.Equals(input.SearchText))
                 ) && 
                 (
-                    this.SelectedChangedLimit == input.SelectedChangedLimit ||
-                    (this.SelectedChangedLimit != null &&
-                    this.SelectedChangedLimit.Equals(input.SelectedChangedLimit))
+                    SelectedChangedLimit == input.SelectedChangedLimit ||
+                    (SelectedChangedLimit != null &&
+                    SelectedChangedLimit.Equals(input.SelectedChangedLimit))
                 ) && 
                 (
-                    this.SelectedSortByFieldId == input.SelectedSortByFieldId ||
-                    (this.SelectedSortByFieldId != null &&
-                    this.SelectedSortByFieldId.Equals(input.SelectedSortByFieldId))
+                    SelectedSortByFieldId == input.SelectedSortByFieldId ||
+                    (SelectedSortByFieldId != null &&
+                    SelectedSortByFieldId.Equals(input.SelectedSortByFieldId))
                 ) && 
                 (
-                    this.SortByRelevance == input.SortByRelevance ||
-                    (this.SortByRelevance != null &&
-                    this.SortByRelevance.Equals(input.SortByRelevance))
+                    SortByRelevance == input.SortByRelevance ||
+                    (SortByRelevance != null &&
+                    SortByRelevance.Equals(input.SortByRelevance))
                 ) && 
                 (
-                    this.SpecificSearchTargetId == input.SpecificSearchTargetId ||
-                    (this.SpecificSearchTargetId != null &&
-                    this.SpecificSearchTargetId.Equals(input.SpecificSearchTargetId))
+                    SpecificSearchTargetId == input.SpecificSearchTargetId ||
+                    (SpecificSearchTargetId != null &&
+                    SpecificSearchTargetId.Equals(input.SpecificSearchTargetId))
                 ) && 
                 (
-                    this.UseSortBy == input.UseSortBy ||
-                    (this.UseSortBy != null &&
-                    this.UseSortBy.Equals(input.UseSortBy))
+                    UseSortBy == input.UseSortBy ||
+                    (UseSortBy != null &&
+                    UseSortBy.Equals(input.UseSortBy))
                 );
         }
 
@@ -247,31 +247,31 @@ namespace CherwellConnector.Model
         {
             unchecked // Overflow is fine, just wrap
             {
-                int hashCode = 41;
-                if (this.Ascending != null)
-                    hashCode = hashCode * 59 + this.Ascending.GetHashCode();
-                if (this.IsBusObTarget != null)
-                    hashCode = hashCode * 59 + this.IsBusObTarget.GetHashCode();
-                if (this.NonFinalState != null)
-                    hashCode = hashCode * 59 + this.NonFinalState.GetHashCode();
-                if (this.SearchAnyWords != null)
-                    hashCode = hashCode * 59 + this.SearchAnyWords.GetHashCode();
-                if (this.SearchAttachments != null)
-                    hashCode = hashCode * 59 + this.SearchAttachments.GetHashCode();
-                if (this.SearchRelated != null)
-                    hashCode = hashCode * 59 + this.SearchRelated.GetHashCode();
-                if (this.SearchText != null)
-                    hashCode = hashCode * 59 + this.SearchText.GetHashCode();
-                if (this.SelectedChangedLimit != null)
-                    hashCode = hashCode * 59 + this.SelectedChangedLimit.GetHashCode();
-                if (this.SelectedSortByFieldId != null)
-                    hashCode = hashCode * 59 + this.SelectedSortByFieldId.GetHashCode();
-                if (this.SortByRelevance != null)
-                    hashCode = hashCode * 59 + this.SortByRelevance.GetHashCode();
-                if (this.SpecificSearchTargetId != null)
-                    hashCode = hashCode * 59 + this.SpecificSearchTargetId.GetHashCode();
-                if (this.UseSortBy != null)
-                    hashCode = hashCode * 59 + this.UseSortBy.GetHashCode();
+                var hashCode = 41;
+                if (Ascending != null)
+                    hashCode = hashCode * 59 + Ascending.GetHashCode();
+                if (IsBusObTarget != null)
+                    hashCode = hashCode * 59 + IsBusObTarget.GetHashCode();
+                if (NonFinalState != null)
+                    hashCode = hashCode * 59 + NonFinalState.GetHashCode();
+                if (SearchAnyWords != null)
+                    hashCode = hashCode * 59 + SearchAnyWords.GetHashCode();
+                if (SearchAttachments != null)
+                    hashCode = hashCode * 59 + SearchAttachments.GetHashCode();
+                if (SearchRelated != null)
+                    hashCode = hashCode * 59 + SearchRelated.GetHashCode();
+                if (SearchText != null)
+                    hashCode = hashCode * 59 + SearchText.GetHashCode();
+                if (SelectedChangedLimit != null)
+                    hashCode = hashCode * 59 + SelectedChangedLimit.GetHashCode();
+                if (SelectedSortByFieldId != null)
+                    hashCode = hashCode * 59 + SelectedSortByFieldId.GetHashCode();
+                if (SortByRelevance != null)
+                    hashCode = hashCode * 59 + SortByRelevance.GetHashCode();
+                if (SpecificSearchTargetId != null)
+                    hashCode = hashCode * 59 + SpecificSearchTargetId.GetHashCode();
+                if (UseSortBy != null)
+                    hashCode = hashCode * 59 + UseSortBy.GetHashCode();
                 return hashCode;
             }
         }
@@ -281,7 +281,7 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

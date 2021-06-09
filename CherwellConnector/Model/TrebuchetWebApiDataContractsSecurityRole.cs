@@ -33,17 +33,17 @@ namespace CherwellConnector.Model
         /// <param name="roleId">roleId.</param>
         /// <param name="roleName">roleName.</param>
         /// <param name="smartClientCustomViewId">smartClientCustomViewId.</param>
-        public TrebuchetWebApiDataContractsSecurityRole(string browserClientCustomViewId = default(string), List<string> businessObjectExcludeList = default(List<string>), string culture = default(string), string description = default(string), string mobileClientCustomViewId = default(string), string primaryBusObId = default(string), string roleId = default(string), string roleName = default(string), string smartClientCustomViewId = default(string))
+        public TrebuchetWebApiDataContractsSecurityRole(string browserClientCustomViewId = default, List<string> businessObjectExcludeList = default, string culture = default, string description = default, string mobileClientCustomViewId = default, string primaryBusObId = default, string roleId = default, string roleName = default, string smartClientCustomViewId = default)
         {
-            this.BrowserClientCustomViewId = browserClientCustomViewId;
-            this.BusinessObjectExcludeList = businessObjectExcludeList;
-            this.Culture = culture;
-            this.Description = description;
-            this.MobileClientCustomViewId = mobileClientCustomViewId;
-            this.PrimaryBusObId = primaryBusObId;
-            this.RoleId = roleId;
-            this.RoleName = roleName;
-            this.SmartClientCustomViewId = smartClientCustomViewId;
+            BrowserClientCustomViewId = browserClientCustomViewId;
+            BusinessObjectExcludeList = businessObjectExcludeList;
+            Culture = culture;
+            Description = description;
+            MobileClientCustomViewId = mobileClientCustomViewId;
+            PrimaryBusObId = primaryBusObId;
+            RoleId = roleId;
+            RoleName = roleName;
+            SmartClientCustomViewId = smartClientCustomViewId;
         }
         
         /// <summary>
@@ -108,15 +108,15 @@ namespace CherwellConnector.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrebuchetWebApiDataContractsSecurityRole {\n");
-            sb.Append("  BrowserClientCustomViewId: ").Append(this.BrowserClientCustomViewId).Append("\n");
-            sb.Append("  BusinessObjectExcludeList: ").Append(this.BusinessObjectExcludeList).Append("\n");
-            sb.Append("  Culture: ").Append(this.Culture).Append("\n");
-            sb.Append("  Description: ").Append(this.Description).Append("\n");
-            sb.Append("  MobileClientCustomViewId: ").Append(this.MobileClientCustomViewId).Append("\n");
-            sb.Append("  PrimaryBusObId: ").Append(this.PrimaryBusObId).Append("\n");
-            sb.Append("  RoleId: ").Append(this.RoleId).Append("\n");
-            sb.Append("  RoleName: ").Append(this.RoleName).Append("\n");
-            sb.Append("  SmartClientCustomViewId: ").Append(this.SmartClientCustomViewId).Append("\n");
+            sb.Append("  BrowserClientCustomViewId: ").Append(BrowserClientCustomViewId).Append("\n");
+            sb.Append("  BusinessObjectExcludeList: ").Append(BusinessObjectExcludeList).Append("\n");
+            sb.Append("  Culture: ").Append(Culture).Append("\n");
+            sb.Append("  Description: ").Append(Description).Append("\n");
+            sb.Append("  MobileClientCustomViewId: ").Append(MobileClientCustomViewId).Append("\n");
+            sb.Append("  PrimaryBusObId: ").Append(PrimaryBusObId).Append("\n");
+            sb.Append("  RoleId: ").Append(RoleId).Append("\n");
+            sb.Append("  RoleName: ").Append(RoleName).Append("\n");
+            sb.Append("  SmartClientCustomViewId: ").Append(SmartClientCustomViewId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -137,7 +137,7 @@ namespace CherwellConnector.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as TrebuchetWebApiDataContractsSecurityRole);
+            return Equals(input as TrebuchetWebApiDataContractsSecurityRole);
         }
 
         /// <summary>
@@ -152,49 +152,49 @@ namespace CherwellConnector.Model
 
             return 
                 (
-                    this.BrowserClientCustomViewId == input.BrowserClientCustomViewId ||
-                    (this.BrowserClientCustomViewId != null &&
-                    this.BrowserClientCustomViewId.Equals(input.BrowserClientCustomViewId))
+                    BrowserClientCustomViewId == input.BrowserClientCustomViewId ||
+                    (BrowserClientCustomViewId != null &&
+                    BrowserClientCustomViewId.Equals(input.BrowserClientCustomViewId))
                 ) && 
                 (
-                    this.BusinessObjectExcludeList == input.BusinessObjectExcludeList ||
-                    this.BusinessObjectExcludeList != null &&
-                    this.BusinessObjectExcludeList.SequenceEqual(input.BusinessObjectExcludeList)
+                    BusinessObjectExcludeList == input.BusinessObjectExcludeList ||
+                    BusinessObjectExcludeList != null &&
+                    BusinessObjectExcludeList.SequenceEqual(input.BusinessObjectExcludeList)
                 ) && 
                 (
-                    this.Culture == input.Culture ||
-                    (this.Culture != null &&
-                    this.Culture.Equals(input.Culture))
+                    Culture == input.Culture ||
+                    (Culture != null &&
+                    Culture.Equals(input.Culture))
                 ) && 
                 (
-                    this.Description == input.Description ||
-                    (this.Description != null &&
-                    this.Description.Equals(input.Description))
+                    Description == input.Description ||
+                    (Description != null &&
+                    Description.Equals(input.Description))
                 ) && 
                 (
-                    this.MobileClientCustomViewId == input.MobileClientCustomViewId ||
-                    (this.MobileClientCustomViewId != null &&
-                    this.MobileClientCustomViewId.Equals(input.MobileClientCustomViewId))
+                    MobileClientCustomViewId == input.MobileClientCustomViewId ||
+                    (MobileClientCustomViewId != null &&
+                    MobileClientCustomViewId.Equals(input.MobileClientCustomViewId))
                 ) && 
                 (
-                    this.PrimaryBusObId == input.PrimaryBusObId ||
-                    (this.PrimaryBusObId != null &&
-                    this.PrimaryBusObId.Equals(input.PrimaryBusObId))
+                    PrimaryBusObId == input.PrimaryBusObId ||
+                    (PrimaryBusObId != null &&
+                    PrimaryBusObId.Equals(input.PrimaryBusObId))
                 ) && 
                 (
-                    this.RoleId == input.RoleId ||
-                    (this.RoleId != null &&
-                    this.RoleId.Equals(input.RoleId))
+                    RoleId == input.RoleId ||
+                    (RoleId != null &&
+                    RoleId.Equals(input.RoleId))
                 ) && 
                 (
-                    this.RoleName == input.RoleName ||
-                    (this.RoleName != null &&
-                    this.RoleName.Equals(input.RoleName))
+                    RoleName == input.RoleName ||
+                    (RoleName != null &&
+                    RoleName.Equals(input.RoleName))
                 ) && 
                 (
-                    this.SmartClientCustomViewId == input.SmartClientCustomViewId ||
-                    (this.SmartClientCustomViewId != null &&
-                    this.SmartClientCustomViewId.Equals(input.SmartClientCustomViewId))
+                    SmartClientCustomViewId == input.SmartClientCustomViewId ||
+                    (SmartClientCustomViewId != null &&
+                    SmartClientCustomViewId.Equals(input.SmartClientCustomViewId))
                 );
         }
 
@@ -206,25 +206,25 @@ namespace CherwellConnector.Model
         {
             unchecked // Overflow is fine, just wrap
             {
-                int hashCode = 41;
-                if (this.BrowserClientCustomViewId != null)
-                    hashCode = hashCode * 59 + this.BrowserClientCustomViewId.GetHashCode();
-                if (this.BusinessObjectExcludeList != null)
-                    hashCode = hashCode * 59 + this.BusinessObjectExcludeList.GetHashCode();
-                if (this.Culture != null)
-                    hashCode = hashCode * 59 + this.Culture.GetHashCode();
-                if (this.Description != null)
-                    hashCode = hashCode * 59 + this.Description.GetHashCode();
-                if (this.MobileClientCustomViewId != null)
-                    hashCode = hashCode * 59 + this.MobileClientCustomViewId.GetHashCode();
-                if (this.PrimaryBusObId != null)
-                    hashCode = hashCode * 59 + this.PrimaryBusObId.GetHashCode();
-                if (this.RoleId != null)
-                    hashCode = hashCode * 59 + this.RoleId.GetHashCode();
-                if (this.RoleName != null)
-                    hashCode = hashCode * 59 + this.RoleName.GetHashCode();
-                if (this.SmartClientCustomViewId != null)
-                    hashCode = hashCode * 59 + this.SmartClientCustomViewId.GetHashCode();
+                var hashCode = 41;
+                if (BrowserClientCustomViewId != null)
+                    hashCode = hashCode * 59 + BrowserClientCustomViewId.GetHashCode();
+                if (BusinessObjectExcludeList != null)
+                    hashCode = hashCode * 59 + BusinessObjectExcludeList.GetHashCode();
+                if (Culture != null)
+                    hashCode = hashCode * 59 + Culture.GetHashCode();
+                if (Description != null)
+                    hashCode = hashCode * 59 + Description.GetHashCode();
+                if (MobileClientCustomViewId != null)
+                    hashCode = hashCode * 59 + MobileClientCustomViewId.GetHashCode();
+                if (PrimaryBusObId != null)
+                    hashCode = hashCode * 59 + PrimaryBusObId.GetHashCode();
+                if (RoleId != null)
+                    hashCode = hashCode * 59 + RoleId.GetHashCode();
+                if (RoleName != null)
+                    hashCode = hashCode * 59 + RoleName.GetHashCode();
+                if (SmartClientCustomViewId != null)
+                    hashCode = hashCode * 59 + SmartClientCustomViewId.GetHashCode();
                 return hashCode;
             }
         }
@@ -234,7 +234,7 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

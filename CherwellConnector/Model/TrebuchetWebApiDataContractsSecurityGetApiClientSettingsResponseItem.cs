@@ -25,10 +25,10 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="name">name.</param>
         /// <param name="standInKey">standInKey.</param>
-        public TrebuchetWebApiDataContractsSecurityGetApiClientSettingsResponseItem(string name = default(string), string standInKey = default(string))
+        public TrebuchetWebApiDataContractsSecurityGetApiClientSettingsResponseItem(string name = default, string standInKey = default)
         {
-            this.Name = name;
-            this.StandInKey = standInKey;
+            Name = name;
+            StandInKey = standInKey;
         }
         
         /// <summary>
@@ -51,8 +51,8 @@ namespace CherwellConnector.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrebuchetWebApiDataContractsSecurityGetApiClientSettingsResponseItem {\n");
-            sb.Append("  Name: ").Append(this.Name).Append("\n");
-            sb.Append("  StandInKey: ").Append(this.StandInKey).Append("\n");
+            sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  StandInKey: ").Append(StandInKey).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -73,7 +73,7 @@ namespace CherwellConnector.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as TrebuchetWebApiDataContractsSecurityGetApiClientSettingsResponseItem);
+            return Equals(input as TrebuchetWebApiDataContractsSecurityGetApiClientSettingsResponseItem);
         }
 
         /// <summary>
@@ -88,14 +88,14 @@ namespace CherwellConnector.Model
 
             return 
                 (
-                    this.Name == input.Name ||
-                    (this.Name != null &&
-                    this.Name.Equals(input.Name))
+                    Name == input.Name ||
+                    (Name != null &&
+                    Name.Equals(input.Name))
                 ) && 
                 (
-                    this.StandInKey == input.StandInKey ||
-                    (this.StandInKey != null &&
-                    this.StandInKey.Equals(input.StandInKey))
+                    StandInKey == input.StandInKey ||
+                    (StandInKey != null &&
+                    StandInKey.Equals(input.StandInKey))
                 );
         }
 
@@ -107,11 +107,11 @@ namespace CherwellConnector.Model
         {
             unchecked // Overflow is fine, just wrap
             {
-                int hashCode = 41;
-                if (this.Name != null)
-                    hashCode = hashCode * 59 + this.Name.GetHashCode();
-                if (this.StandInKey != null)
-                    hashCode = hashCode * 59 + this.StandInKey.GetHashCode();
+                var hashCode = 41;
+                if (Name != null)
+                    hashCode = hashCode * 59 + Name.GetHashCode();
+                if (StandInKey != null)
+                    hashCode = hashCode * 59 + StandInKey.GetHashCode();
                 return hashCode;
             }
         }
@@ -121,7 +121,7 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

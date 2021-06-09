@@ -35,7 +35,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsApprovalApprovalReadResponse</returns>
-        TrebuchetWebApiDataContractsApprovalApprovalReadResponse ApprovalGetApprovalByRecIdV1 (string approvalRecId, string lang = null, string locale = null);
+        ApprovalReadResponse ApprovalGetApprovalByRecIdV1 (string approvalRecId, string lang = null, string locale = null);
 
        
         /// <summary>
@@ -48,7 +48,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsApprovalGetApprovalsResponse</returns>
-        TrebuchetWebApiDataContractsApprovalGetApprovalsResponse ApprovalGetMyApprovalsV1 (string lang = null, string locale = null);
+        ApprovalsResponse ApprovalGetMyApprovalsV1 (string lang = null, string locale = null);
 
         
         /// <summary>
@@ -61,7 +61,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsApprovalGetApprovalsResponse</returns>
-        TrebuchetWebApiDataContractsApprovalGetApprovalsResponse ApprovalGetMyPendingApprovalsV1 (string lang = null, string locale = null);
+        ApprovalsResponse ApprovalGetMyPendingApprovalsV1 (string lang = null, string locale = null);
 
     }
 }

@@ -27,12 +27,12 @@ namespace CherwellConnector.Model
         /// <param name="busObRecId">busObRecId.</param>
         /// <param name="historyNotes">historyNotes.</param>
         /// <param name="queueStandInKey">queueStandInKey.</param>
-        public TrebuchetWebApiDataContractsQueuesRemoveItemFromQueueRequest(string busObId = default(string), string busObRecId = default(string), string historyNotes = default(string), string queueStandInKey = default(string))
+        public TrebuchetWebApiDataContractsQueuesRemoveItemFromQueueRequest(string busObId = default, string busObRecId = default, string historyNotes = default, string queueStandInKey = default)
         {
-            this.BusObId = busObId;
-            this.BusObRecId = busObRecId;
-            this.HistoryNotes = historyNotes;
-            this.QueueStandInKey = queueStandInKey;
+            BusObId = busObId;
+            BusObRecId = busObRecId;
+            HistoryNotes = historyNotes;
+            QueueStandInKey = queueStandInKey;
         }
         
         /// <summary>
@@ -67,10 +67,10 @@ namespace CherwellConnector.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrebuchetWebApiDataContractsQueuesRemoveItemFromQueueRequest {\n");
-            sb.Append("  BusObId: ").Append(this.BusObId).Append("\n");
-            sb.Append("  BusObRecId: ").Append(this.BusObRecId).Append("\n");
-            sb.Append("  HistoryNotes: ").Append(this.HistoryNotes).Append("\n");
-            sb.Append("  QueueStandInKey: ").Append(this.QueueStandInKey).Append("\n");
+            sb.Append("  BusObId: ").Append(BusObId).Append("\n");
+            sb.Append("  BusObRecId: ").Append(BusObRecId).Append("\n");
+            sb.Append("  HistoryNotes: ").Append(HistoryNotes).Append("\n");
+            sb.Append("  QueueStandInKey: ").Append(QueueStandInKey).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -91,7 +91,7 @@ namespace CherwellConnector.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as TrebuchetWebApiDataContractsQueuesRemoveItemFromQueueRequest);
+            return Equals(input as TrebuchetWebApiDataContractsQueuesRemoveItemFromQueueRequest);
         }
 
         /// <summary>
@@ -106,24 +106,24 @@ namespace CherwellConnector.Model
 
             return 
                 (
-                    this.BusObId == input.BusObId ||
-                    (this.BusObId != null &&
-                    this.BusObId.Equals(input.BusObId))
+                    BusObId == input.BusObId ||
+                    (BusObId != null &&
+                    BusObId.Equals(input.BusObId))
                 ) && 
                 (
-                    this.BusObRecId == input.BusObRecId ||
-                    (this.BusObRecId != null &&
-                    this.BusObRecId.Equals(input.BusObRecId))
+                    BusObRecId == input.BusObRecId ||
+                    (BusObRecId != null &&
+                    BusObRecId.Equals(input.BusObRecId))
                 ) && 
                 (
-                    this.HistoryNotes == input.HistoryNotes ||
-                    (this.HistoryNotes != null &&
-                    this.HistoryNotes.Equals(input.HistoryNotes))
+                    HistoryNotes == input.HistoryNotes ||
+                    (HistoryNotes != null &&
+                    HistoryNotes.Equals(input.HistoryNotes))
                 ) && 
                 (
-                    this.QueueStandInKey == input.QueueStandInKey ||
-                    (this.QueueStandInKey != null &&
-                    this.QueueStandInKey.Equals(input.QueueStandInKey))
+                    QueueStandInKey == input.QueueStandInKey ||
+                    (QueueStandInKey != null &&
+                    QueueStandInKey.Equals(input.QueueStandInKey))
                 );
         }
 
@@ -135,15 +135,15 @@ namespace CherwellConnector.Model
         {
             unchecked // Overflow is fine, just wrap
             {
-                int hashCode = 41;
-                if (this.BusObId != null)
-                    hashCode = hashCode * 59 + this.BusObId.GetHashCode();
-                if (this.BusObRecId != null)
-                    hashCode = hashCode * 59 + this.BusObRecId.GetHashCode();
-                if (this.HistoryNotes != null)
-                    hashCode = hashCode * 59 + this.HistoryNotes.GetHashCode();
-                if (this.QueueStandInKey != null)
-                    hashCode = hashCode * 59 + this.QueueStandInKey.GetHashCode();
+                var hashCode = 41;
+                if (BusObId != null)
+                    hashCode = hashCode * 59 + BusObId.GetHashCode();
+                if (BusObRecId != null)
+                    hashCode = hashCode * 59 + BusObRecId.GetHashCode();
+                if (HistoryNotes != null)
+                    hashCode = hashCode * 59 + HistoryNotes.GetHashCode();
+                if (QueueStandInKey != null)
+                    hashCode = hashCode * 59 + QueueStandInKey.GetHashCode();
                 return hashCode;
             }
         }
@@ -153,7 +153,7 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

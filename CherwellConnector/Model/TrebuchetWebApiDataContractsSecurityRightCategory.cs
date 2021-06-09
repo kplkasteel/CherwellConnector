@@ -26,11 +26,11 @@ namespace CherwellConnector.Model
         /// <param name="categoryDescription">categoryDescription.</param>
         /// <param name="categoryId">categoryId.</param>
         /// <param name="categoryName">categoryName.</param>
-        public TrebuchetWebApiDataContractsSecurityRightCategory(string categoryDescription = default(string), string categoryId = default(string), string categoryName = default(string))
+        public TrebuchetWebApiDataContractsSecurityRightCategory(string categoryDescription = default, string categoryId = default, string categoryName = default)
         {
-            this.CategoryDescription = categoryDescription;
-            this.CategoryId = categoryId;
-            this.CategoryName = categoryName;
+            CategoryDescription = categoryDescription;
+            CategoryId = categoryId;
+            CategoryName = categoryName;
         }
         
         /// <summary>
@@ -59,9 +59,9 @@ namespace CherwellConnector.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrebuchetWebApiDataContractsSecurityRightCategory {\n");
-            sb.Append("  CategoryDescription: ").Append(this.CategoryDescription).Append("\n");
-            sb.Append("  CategoryId: ").Append(this.CategoryId).Append("\n");
-            sb.Append("  CategoryName: ").Append(this.CategoryName).Append("\n");
+            sb.Append("  CategoryDescription: ").Append(CategoryDescription).Append("\n");
+            sb.Append("  CategoryId: ").Append(CategoryId).Append("\n");
+            sb.Append("  CategoryName: ").Append(CategoryName).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -82,7 +82,7 @@ namespace CherwellConnector.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as TrebuchetWebApiDataContractsSecurityRightCategory);
+            return Equals(input as TrebuchetWebApiDataContractsSecurityRightCategory);
         }
 
         /// <summary>
@@ -97,19 +97,19 @@ namespace CherwellConnector.Model
 
             return 
                 (
-                    this.CategoryDescription == input.CategoryDescription ||
-                    (this.CategoryDescription != null &&
-                    this.CategoryDescription.Equals(input.CategoryDescription))
+                    CategoryDescription == input.CategoryDescription ||
+                    (CategoryDescription != null &&
+                    CategoryDescription.Equals(input.CategoryDescription))
                 ) && 
                 (
-                    this.CategoryId == input.CategoryId ||
-                    (this.CategoryId != null &&
-                    this.CategoryId.Equals(input.CategoryId))
+                    CategoryId == input.CategoryId ||
+                    (CategoryId != null &&
+                    CategoryId.Equals(input.CategoryId))
                 ) && 
                 (
-                    this.CategoryName == input.CategoryName ||
-                    (this.CategoryName != null &&
-                    this.CategoryName.Equals(input.CategoryName))
+                    CategoryName == input.CategoryName ||
+                    (CategoryName != null &&
+                    CategoryName.Equals(input.CategoryName))
                 );
         }
 
@@ -121,13 +121,13 @@ namespace CherwellConnector.Model
         {
             unchecked // Overflow is fine, just wrap
             {
-                int hashCode = 41;
-                if (this.CategoryDescription != null)
-                    hashCode = hashCode * 59 + this.CategoryDescription.GetHashCode();
-                if (this.CategoryId != null)
-                    hashCode = hashCode * 59 + this.CategoryId.GetHashCode();
-                if (this.CategoryName != null)
-                    hashCode = hashCode * 59 + this.CategoryName.GetHashCode();
+                var hashCode = 41;
+                if (CategoryDescription != null)
+                    hashCode = hashCode * 59 + CategoryDescription.GetHashCode();
+                if (CategoryId != null)
+                    hashCode = hashCode * 59 + CategoryId.GetHashCode();
+                if (CategoryName != null)
+                    hashCode = hashCode * 59 + CategoryName.GetHashCode();
                 return hashCode;
             }
         }
@@ -137,7 +137,7 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

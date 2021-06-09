@@ -24,9 +24,9 @@ namespace CherwellConnector.Model
         /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsLifecycleTransitionRecordRequest" /> class.
         /// </summary>
         /// <param name="transitionOptionId">transitionOptionId.</param>
-        public TrebuchetWebApiDataContractsLifecycleTransitionRecordRequest(string transitionOptionId = default(string))
+        public TrebuchetWebApiDataContractsLifecycleTransitionRecordRequest(string transitionOptionId = default)
         {
-            this.TransitionOptionId = transitionOptionId;
+            TransitionOptionId = transitionOptionId;
         }
         
         /// <summary>
@@ -43,7 +43,7 @@ namespace CherwellConnector.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrebuchetWebApiDataContractsLifecycleTransitionRecordRequest {\n");
-            sb.Append("  TransitionOptionId: ").Append(this.TransitionOptionId).Append("\n");
+            sb.Append("  TransitionOptionId: ").Append(TransitionOptionId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -64,7 +64,7 @@ namespace CherwellConnector.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as TrebuchetWebApiDataContractsLifecycleTransitionRecordRequest);
+            return Equals(input as TrebuchetWebApiDataContractsLifecycleTransitionRecordRequest);
         }
 
         /// <summary>
@@ -79,9 +79,9 @@ namespace CherwellConnector.Model
 
             return 
                 (
-                    this.TransitionOptionId == input.TransitionOptionId ||
-                    (this.TransitionOptionId != null &&
-                    this.TransitionOptionId.Equals(input.TransitionOptionId))
+                    TransitionOptionId == input.TransitionOptionId ||
+                    (TransitionOptionId != null &&
+                    TransitionOptionId.Equals(input.TransitionOptionId))
                 );
         }
 
@@ -93,9 +93,9 @@ namespace CherwellConnector.Model
         {
             unchecked // Overflow is fine, just wrap
             {
-                int hashCode = 41;
-                if (this.TransitionOptionId != null)
-                    hashCode = hashCode * 59 + this.TransitionOptionId.GetHashCode();
+                var hashCode = 41;
+                if (TransitionOptionId != null)
+                    hashCode = hashCode * 59 + TransitionOptionId.GetHashCode();
                 return hashCode;
             }
         }
@@ -105,7 +105,7 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

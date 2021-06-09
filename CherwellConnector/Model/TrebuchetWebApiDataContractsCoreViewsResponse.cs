@@ -25,9 +25,9 @@ namespace CherwellConnector.Model
         /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsCoreViewsResponse" /> class.
         /// </summary>
         /// <param name="views">views.</param>
-        public TrebuchetWebApiDataContractsCoreViewsResponse(List<TrebuchetWebApiDataContractsCoreView> views = default(List<TrebuchetWebApiDataContractsCoreView>))
+        public TrebuchetWebApiDataContractsCoreViewsResponse(List<TrebuchetWebApiDataContractsCoreView> views = default)
         {
-            this.Views = views;
+            Views = views;
         }
         
         /// <summary>
@@ -44,7 +44,7 @@ namespace CherwellConnector.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrebuchetWebApiDataContractsCoreViewsResponse {\n");
-            sb.Append("  Views: ").Append(this.Views).Append("\n");
+            sb.Append("  Views: ").Append(Views).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -65,7 +65,7 @@ namespace CherwellConnector.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as TrebuchetWebApiDataContractsCoreViewsResponse);
+            return Equals(input as TrebuchetWebApiDataContractsCoreViewsResponse);
         }
 
         /// <summary>
@@ -80,9 +80,9 @@ namespace CherwellConnector.Model
 
             return 
                 (
-                    this.Views == input.Views ||
-                    this.Views != null &&
-                    this.Views.SequenceEqual(input.Views)
+                    Views == input.Views ||
+                    Views != null &&
+                    Views.SequenceEqual(input.Views)
                 );
         }
 
@@ -94,9 +94,9 @@ namespace CherwellConnector.Model
         {
             unchecked // Overflow is fine, just wrap
             {
-                int hashCode = 41;
-                if (this.Views != null)
-                    hashCode = hashCode * 59 + this.Views.GetHashCode();
+                var hashCode = 41;
+                if (Views != null)
+                    hashCode = hashCode * 59 + Views.GetHashCode();
                 return hashCode;
             }
         }
@@ -106,7 +106,7 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

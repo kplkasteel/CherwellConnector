@@ -25,10 +25,10 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="loginId">loginId.</param>
         /// <param name="publicId">publicId.</param>
-        public TrebuchetWebApiDataContractsUsersUserReadRequest(string loginId = default(string), string publicId = default(string))
+        public TrebuchetWebApiDataContractsUsersUserReadRequest(string loginId = default, string publicId = default)
         {
-            this.LoginId = loginId;
-            this.PublicId = publicId;
+            LoginId = loginId;
+            PublicId = publicId;
         }
         
         /// <summary>
@@ -51,8 +51,8 @@ namespace CherwellConnector.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrebuchetWebApiDataContractsUsersUserReadRequest {\n");
-            sb.Append("  LoginId: ").Append(this.LoginId).Append("\n");
-            sb.Append("  PublicId: ").Append(this.PublicId).Append("\n");
+            sb.Append("  LoginId: ").Append(LoginId).Append("\n");
+            sb.Append("  PublicId: ").Append(PublicId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -73,7 +73,7 @@ namespace CherwellConnector.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as TrebuchetWebApiDataContractsUsersUserReadRequest);
+            return Equals(input as TrebuchetWebApiDataContractsUsersUserReadRequest);
         }
 
         /// <summary>
@@ -88,14 +88,14 @@ namespace CherwellConnector.Model
 
             return 
                 (
-                    this.LoginId == input.LoginId ||
-                    (this.LoginId != null &&
-                    this.LoginId.Equals(input.LoginId))
+                    LoginId == input.LoginId ||
+                    (LoginId != null &&
+                    LoginId.Equals(input.LoginId))
                 ) && 
                 (
-                    this.PublicId == input.PublicId ||
-                    (this.PublicId != null &&
-                    this.PublicId.Equals(input.PublicId))
+                    PublicId == input.PublicId ||
+                    (PublicId != null &&
+                    PublicId.Equals(input.PublicId))
                 );
         }
 
@@ -107,11 +107,11 @@ namespace CherwellConnector.Model
         {
             unchecked // Overflow is fine, just wrap
             {
-                int hashCode = 41;
-                if (this.LoginId != null)
-                    hashCode = hashCode * 59 + this.LoginId.GetHashCode();
-                if (this.PublicId != null)
-                    hashCode = hashCode * 59 + this.PublicId.GetHashCode();
+                var hashCode = 41;
+                if (LoginId != null)
+                    hashCode = hashCode * 59 + LoginId.GetHashCode();
+                if (PublicId != null)
+                    hashCode = hashCode * 59 + PublicId.GetHashCode();
                 return hashCode;
             }
         }
@@ -121,7 +121,7 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

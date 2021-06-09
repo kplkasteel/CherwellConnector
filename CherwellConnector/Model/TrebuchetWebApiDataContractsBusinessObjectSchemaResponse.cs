@@ -333,21 +333,21 @@ namespace CherwellConnector.Model
         /// <param name="errorMessage">errorMessage.</param>
         /// <param name="hasError">hasError.</param>
         /// <param name="httpStatusCode">httpStatusCode.</param>
-        public TrebuchetWebApiDataContractsBusinessObjectSchemaResponse(string busObId = default(string), List<TrebuchetWebApiDataContractsBusinessObjectFieldDefinition> fieldDefinitions = default(List<TrebuchetWebApiDataContractsBusinessObjectFieldDefinition>), string firstRecIdField = default(string), List<TrebuchetWebApiDataContractsBusinessObjectGridDefinition> gridDefinitions = default(List<TrebuchetWebApiDataContractsBusinessObjectGridDefinition>), string name = default(string), string recIdFields = default(string), List<TrebuchetWebApiDataContractsBusinessObjectRelationship> relationships = default(List<TrebuchetWebApiDataContractsBusinessObjectRelationship>), string stateFieldId = default(string), string states = default(string), string errorCode = default(string), string errorMessage = default(string), bool? hasError = default(bool?), HttpStatusCodeEnum? httpStatusCode = default(HttpStatusCodeEnum?))
+        public TrebuchetWebApiDataContractsBusinessObjectSchemaResponse(string busObId = default, List<FieldDefinition> fieldDefinitions = default, string firstRecIdField = default, List<TrebuchetWebApiDataContractsBusinessObjectGridDefinition> gridDefinitions = default, string name = default, string recIdFields = default, List<TrebuchetWebApiDataContractsBusinessObjectRelationship> relationships = default, string stateFieldId = default, string states = default, string errorCode = default, string errorMessage = default, bool? hasError = default, HttpStatusCodeEnum? httpStatusCode = default)
         {
-            this.BusObId = busObId;
-            this.FieldDefinitions = fieldDefinitions;
-            this.FirstRecIdField = firstRecIdField;
-            this.GridDefinitions = gridDefinitions;
-            this.Name = name;
-            this.RecIdFields = recIdFields;
-            this.Relationships = relationships;
-            this.StateFieldId = stateFieldId;
-            this.States = states;
-            this.ErrorCode = errorCode;
-            this.ErrorMessage = errorMessage;
-            this.HasError = hasError;
-            this.HttpStatusCode = httpStatusCode;
+            BusObId = busObId;
+            FieldDefinitions = fieldDefinitions;
+            FirstRecIdField = firstRecIdField;
+            GridDefinitions = gridDefinitions;
+            Name = name;
+            RecIdFields = recIdFields;
+            Relationships = relationships;
+            StateFieldId = stateFieldId;
+            States = states;
+            ErrorCode = errorCode;
+            ErrorMessage = errorMessage;
+            HasError = hasError;
+            HttpStatusCode = httpStatusCode;
         }
         
         /// <summary>
@@ -360,7 +360,7 @@ namespace CherwellConnector.Model
         /// Gets or Sets FieldDefinitions
         /// </summary>
         [DataMember(Name="fieldDefinitions", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsBusinessObjectFieldDefinition> FieldDefinitions { get; set; }
+        public List<FieldDefinition> FieldDefinitions { get; set; }
 
         /// <summary>
         /// Gets or Sets FirstRecIdField
@@ -431,19 +431,19 @@ namespace CherwellConnector.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrebuchetWebApiDataContractsBusinessObjectSchemaResponse {\n");
-            sb.Append("  BusObId: ").Append(this.BusObId).Append("\n");
-            sb.Append("  FieldDefinitions: ").Append(this.FieldDefinitions).Append("\n");
-            sb.Append("  FirstRecIdField: ").Append(this.FirstRecIdField).Append("\n");
-            sb.Append("  GridDefinitions: ").Append(this.GridDefinitions).Append("\n");
-            sb.Append("  Name: ").Append(this.Name).Append("\n");
-            sb.Append("  RecIdFields: ").Append(this.RecIdFields).Append("\n");
-            sb.Append("  Relationships: ").Append(this.Relationships).Append("\n");
-            sb.Append("  StateFieldId: ").Append(this.StateFieldId).Append("\n");
-            sb.Append("  States: ").Append(this.States).Append("\n");
-            sb.Append("  ErrorCode: ").Append(this.ErrorCode).Append("\n");
-            sb.Append("  ErrorMessage: ").Append(this.ErrorMessage).Append("\n");
-            sb.Append("  HasError: ").Append(this.HasError).Append("\n");
-            sb.Append("  HttpStatusCode: ").Append(this.HttpStatusCode).Append("\n");
+            sb.Append("  BusObId: ").Append(BusObId).Append("\n");
+            sb.Append("  FieldDefinitions: ").Append(FieldDefinitions).Append("\n");
+            sb.Append("  FirstRecIdField: ").Append(FirstRecIdField).Append("\n");
+            sb.Append("  GridDefinitions: ").Append(GridDefinitions).Append("\n");
+            sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  RecIdFields: ").Append(RecIdFields).Append("\n");
+            sb.Append("  Relationships: ").Append(Relationships).Append("\n");
+            sb.Append("  StateFieldId: ").Append(StateFieldId).Append("\n");
+            sb.Append("  States: ").Append(States).Append("\n");
+            sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
+            sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append("\n");
+            sb.Append("  HasError: ").Append(HasError).Append("\n");
+            sb.Append("  HttpStatusCode: ").Append(HttpStatusCode).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -464,7 +464,7 @@ namespace CherwellConnector.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as TrebuchetWebApiDataContractsBusinessObjectSchemaResponse);
+            return Equals(input as TrebuchetWebApiDataContractsBusinessObjectSchemaResponse);
         }
 
         /// <summary>
@@ -479,69 +479,69 @@ namespace CherwellConnector.Model
 
             return 
                 (
-                    this.BusObId == input.BusObId ||
-                    (this.BusObId != null &&
-                    this.BusObId.Equals(input.BusObId))
+                    BusObId == input.BusObId ||
+                    (BusObId != null &&
+                    BusObId.Equals(input.BusObId))
                 ) && 
                 (
-                    this.FieldDefinitions == input.FieldDefinitions ||
-                    this.FieldDefinitions != null &&
-                    this.FieldDefinitions.SequenceEqual(input.FieldDefinitions)
+                    FieldDefinitions == input.FieldDefinitions ||
+                    FieldDefinitions != null &&
+                    FieldDefinitions.SequenceEqual(input.FieldDefinitions)
                 ) && 
                 (
-                    this.FirstRecIdField == input.FirstRecIdField ||
-                    (this.FirstRecIdField != null &&
-                    this.FirstRecIdField.Equals(input.FirstRecIdField))
+                    FirstRecIdField == input.FirstRecIdField ||
+                    (FirstRecIdField != null &&
+                    FirstRecIdField.Equals(input.FirstRecIdField))
                 ) && 
                 (
-                    this.GridDefinitions == input.GridDefinitions ||
-                    this.GridDefinitions != null &&
-                    this.GridDefinitions.SequenceEqual(input.GridDefinitions)
+                    GridDefinitions == input.GridDefinitions ||
+                    GridDefinitions != null &&
+                    GridDefinitions.SequenceEqual(input.GridDefinitions)
                 ) && 
                 (
-                    this.Name == input.Name ||
-                    (this.Name != null &&
-                    this.Name.Equals(input.Name))
+                    Name == input.Name ||
+                    (Name != null &&
+                    Name.Equals(input.Name))
                 ) && 
                 (
-                    this.RecIdFields == input.RecIdFields ||
-                    (this.RecIdFields != null &&
-                    this.RecIdFields.Equals(input.RecIdFields))
+                    RecIdFields == input.RecIdFields ||
+                    (RecIdFields != null &&
+                    RecIdFields.Equals(input.RecIdFields))
                 ) && 
                 (
-                    this.Relationships == input.Relationships ||
-                    this.Relationships != null &&
-                    this.Relationships.SequenceEqual(input.Relationships)
+                    Relationships == input.Relationships ||
+                    Relationships != null &&
+                    Relationships.SequenceEqual(input.Relationships)
                 ) && 
                 (
-                    this.StateFieldId == input.StateFieldId ||
-                    (this.StateFieldId != null &&
-                    this.StateFieldId.Equals(input.StateFieldId))
+                    StateFieldId == input.StateFieldId ||
+                    (StateFieldId != null &&
+                    StateFieldId.Equals(input.StateFieldId))
                 ) && 
                 (
-                    this.States == input.States ||
-                    (this.States != null &&
-                    this.States.Equals(input.States))
+                    States == input.States ||
+                    (States != null &&
+                    States.Equals(input.States))
                 ) && 
                 (
-                    this.ErrorCode == input.ErrorCode ||
-                    (this.ErrorCode != null &&
-                    this.ErrorCode.Equals(input.ErrorCode))
+                    ErrorCode == input.ErrorCode ||
+                    (ErrorCode != null &&
+                    ErrorCode.Equals(input.ErrorCode))
                 ) && 
                 (
-                    this.ErrorMessage == input.ErrorMessage ||
-                    (this.ErrorMessage != null &&
-                    this.ErrorMessage.Equals(input.ErrorMessage))
+                    ErrorMessage == input.ErrorMessage ||
+                    (ErrorMessage != null &&
+                    ErrorMessage.Equals(input.ErrorMessage))
                 ) && 
                 (
-                    this.HasError == input.HasError ||
-                    (this.HasError != null &&
-                    this.HasError.Equals(input.HasError))
+                    HasError == input.HasError ||
+                    (HasError != null &&
+                    HasError.Equals(input.HasError))
                 ) && 
                 (
-                    this.HttpStatusCode == input.HttpStatusCode ||
-                    (this.HttpStatusCode != null &&
-                    this.HttpStatusCode.Equals(input.HttpStatusCode))
+                    HttpStatusCode == input.HttpStatusCode ||
+                    (HttpStatusCode != null &&
+                    HttpStatusCode.Equals(input.HttpStatusCode))
                 );
         }
 
@@ -553,33 +553,33 @@ namespace CherwellConnector.Model
         {
             unchecked // Overflow is fine, just wrap
             {
-                int hashCode = 41;
-                if (this.BusObId != null)
-                    hashCode = hashCode * 59 + this.BusObId.GetHashCode();
-                if (this.FieldDefinitions != null)
-                    hashCode = hashCode * 59 + this.FieldDefinitions.GetHashCode();
-                if (this.FirstRecIdField != null)
-                    hashCode = hashCode * 59 + this.FirstRecIdField.GetHashCode();
-                if (this.GridDefinitions != null)
-                    hashCode = hashCode * 59 + this.GridDefinitions.GetHashCode();
-                if (this.Name != null)
-                    hashCode = hashCode * 59 + this.Name.GetHashCode();
-                if (this.RecIdFields != null)
-                    hashCode = hashCode * 59 + this.RecIdFields.GetHashCode();
-                if (this.Relationships != null)
-                    hashCode = hashCode * 59 + this.Relationships.GetHashCode();
-                if (this.StateFieldId != null)
-                    hashCode = hashCode * 59 + this.StateFieldId.GetHashCode();
-                if (this.States != null)
-                    hashCode = hashCode * 59 + this.States.GetHashCode();
-                if (this.ErrorCode != null)
-                    hashCode = hashCode * 59 + this.ErrorCode.GetHashCode();
-                if (this.ErrorMessage != null)
-                    hashCode = hashCode * 59 + this.ErrorMessage.GetHashCode();
-                if (this.HasError != null)
-                    hashCode = hashCode * 59 + this.HasError.GetHashCode();
-                if (this.HttpStatusCode != null)
-                    hashCode = hashCode * 59 + this.HttpStatusCode.GetHashCode();
+                var hashCode = 41;
+                if (BusObId != null)
+                    hashCode = hashCode * 59 + BusObId.GetHashCode();
+                if (FieldDefinitions != null)
+                    hashCode = hashCode * 59 + FieldDefinitions.GetHashCode();
+                if (FirstRecIdField != null)
+                    hashCode = hashCode * 59 + FirstRecIdField.GetHashCode();
+                if (GridDefinitions != null)
+                    hashCode = hashCode * 59 + GridDefinitions.GetHashCode();
+                if (Name != null)
+                    hashCode = hashCode * 59 + Name.GetHashCode();
+                if (RecIdFields != null)
+                    hashCode = hashCode * 59 + RecIdFields.GetHashCode();
+                if (Relationships != null)
+                    hashCode = hashCode * 59 + Relationships.GetHashCode();
+                if (StateFieldId != null)
+                    hashCode = hashCode * 59 + StateFieldId.GetHashCode();
+                if (States != null)
+                    hashCode = hashCode * 59 + States.GetHashCode();
+                if (ErrorCode != null)
+                    hashCode = hashCode * 59 + ErrorCode.GetHashCode();
+                if (ErrorMessage != null)
+                    hashCode = hashCode * 59 + ErrorMessage.GetHashCode();
+                if (HasError != null)
+                    hashCode = hashCode * 59 + HasError.GetHashCode();
+                if (HttpStatusCode != null)
+                    hashCode = hashCode * 59 + HttpStatusCode.GetHashCode();
                 return hashCode;
             }
         }
@@ -589,7 +589,7 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

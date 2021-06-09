@@ -31,16 +31,16 @@ namespace CherwellConnector.Model
         /// <param name="refreshToken">refreshToken.</param>
         /// <param name="tokenType">tokenType.</param>
         /// <param name="username">username.</param>
-        public TrebuchetWebApiDataContractsSecurityTokenResponse(string accessToken = default(string), string asclientId = default(string), string expires = default(string), int? expiresIn = default(int?), string issued = default(string), string refreshToken = default(string), string tokenType = default(string), string username = default(string))
+        public TrebuchetWebApiDataContractsSecurityTokenResponse(string accessToken = default, string asclientId = default, string expires = default, int? expiresIn = default, string issued = default, string refreshToken = default, string tokenType = default, string username = default)
         {
-            this.AccessToken = accessToken;
-            this.AsclientId = asclientId;
-            this.Expires = expires;
-            this.ExpiresIn = expiresIn;
-            this.Issued = issued;
-            this.RefreshToken = refreshToken;
-            this.TokenType = tokenType;
-            this.Username = username;
+            AccessToken = accessToken;
+            AsclientId = asclientId;
+            Expires = expires;
+            ExpiresIn = expiresIn;
+            Issued = issued;
+            RefreshToken = refreshToken;
+            TokenType = tokenType;
+            Username = username;
         }
         
         /// <summary>
@@ -99,14 +99,14 @@ namespace CherwellConnector.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrebuchetWebApiDataContractsSecurityTokenResponse {\n");
-            sb.Append("  AccessToken: ").Append(this.AccessToken).Append("\n");
-            sb.Append("  AsclientId: ").Append(this.AsclientId).Append("\n");
-            sb.Append("  Expires: ").Append(this.Expires).Append("\n");
-            sb.Append("  ExpiresIn: ").Append(this.ExpiresIn).Append("\n");
-            sb.Append("  Issued: ").Append(this.Issued).Append("\n");
-            sb.Append("  RefreshToken: ").Append(this.RefreshToken).Append("\n");
-            sb.Append("  TokenType: ").Append(this.TokenType).Append("\n");
-            sb.Append("  Username: ").Append(this.Username).Append("\n");
+            sb.Append("  AccessToken: ").Append(AccessToken).Append("\n");
+            sb.Append("  AsclientId: ").Append(AsclientId).Append("\n");
+            sb.Append("  Expires: ").Append(Expires).Append("\n");
+            sb.Append("  ExpiresIn: ").Append(ExpiresIn).Append("\n");
+            sb.Append("  Issued: ").Append(Issued).Append("\n");
+            sb.Append("  RefreshToken: ").Append(RefreshToken).Append("\n");
+            sb.Append("  TokenType: ").Append(TokenType).Append("\n");
+            sb.Append("  Username: ").Append(Username).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -127,7 +127,7 @@ namespace CherwellConnector.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as TrebuchetWebApiDataContractsSecurityTokenResponse);
+            return Equals(input as TrebuchetWebApiDataContractsSecurityTokenResponse);
         }
 
         /// <summary>
@@ -142,44 +142,44 @@ namespace CherwellConnector.Model
 
             return 
                 (
-                    this.AccessToken == input.AccessToken ||
-                    (this.AccessToken != null &&
-                    this.AccessToken.Equals(input.AccessToken))
+                    AccessToken == input.AccessToken ||
+                    (AccessToken != null &&
+                    AccessToken.Equals(input.AccessToken))
                 ) && 
                 (
-                    this.AsclientId == input.AsclientId ||
-                    (this.AsclientId != null &&
-                    this.AsclientId.Equals(input.AsclientId))
+                    AsclientId == input.AsclientId ||
+                    (AsclientId != null &&
+                    AsclientId.Equals(input.AsclientId))
                 ) && 
                 (
-                    this.Expires == input.Expires ||
-                    (this.Expires != null &&
-                    this.Expires.Equals(input.Expires))
+                    Expires == input.Expires ||
+                    (Expires != null &&
+                    Expires.Equals(input.Expires))
                 ) && 
                 (
-                    this.ExpiresIn == input.ExpiresIn ||
-                    (this.ExpiresIn != null &&
-                    this.ExpiresIn.Equals(input.ExpiresIn))
+                    ExpiresIn == input.ExpiresIn ||
+                    (ExpiresIn != null &&
+                    ExpiresIn.Equals(input.ExpiresIn))
                 ) && 
                 (
-                    this.Issued == input.Issued ||
-                    (this.Issued != null &&
-                    this.Issued.Equals(input.Issued))
+                    Issued == input.Issued ||
+                    (Issued != null &&
+                    Issued.Equals(input.Issued))
                 ) && 
                 (
-                    this.RefreshToken == input.RefreshToken ||
-                    (this.RefreshToken != null &&
-                    this.RefreshToken.Equals(input.RefreshToken))
+                    RefreshToken == input.RefreshToken ||
+                    (RefreshToken != null &&
+                    RefreshToken.Equals(input.RefreshToken))
                 ) && 
                 (
-                    this.TokenType == input.TokenType ||
-                    (this.TokenType != null &&
-                    this.TokenType.Equals(input.TokenType))
+                    TokenType == input.TokenType ||
+                    (TokenType != null &&
+                    TokenType.Equals(input.TokenType))
                 ) && 
                 (
-                    this.Username == input.Username ||
-                    (this.Username != null &&
-                    this.Username.Equals(input.Username))
+                    Username == input.Username ||
+                    (Username != null &&
+                    Username.Equals(input.Username))
                 );
         }
 
@@ -191,23 +191,23 @@ namespace CherwellConnector.Model
         {
             unchecked // Overflow is fine, just wrap
             {
-                int hashCode = 41;
-                if (this.AccessToken != null)
-                    hashCode = hashCode * 59 + this.AccessToken.GetHashCode();
-                if (this.AsclientId != null)
-                    hashCode = hashCode * 59 + this.AsclientId.GetHashCode();
-                if (this.Expires != null)
-                    hashCode = hashCode * 59 + this.Expires.GetHashCode();
-                if (this.ExpiresIn != null)
-                    hashCode = hashCode * 59 + this.ExpiresIn.GetHashCode();
-                if (this.Issued != null)
-                    hashCode = hashCode * 59 + this.Issued.GetHashCode();
-                if (this.RefreshToken != null)
-                    hashCode = hashCode * 59 + this.RefreshToken.GetHashCode();
-                if (this.TokenType != null)
-                    hashCode = hashCode * 59 + this.TokenType.GetHashCode();
-                if (this.Username != null)
-                    hashCode = hashCode * 59 + this.Username.GetHashCode();
+                var hashCode = 41;
+                if (AccessToken != null)
+                    hashCode = hashCode * 59 + AccessToken.GetHashCode();
+                if (AsclientId != null)
+                    hashCode = hashCode * 59 + AsclientId.GetHashCode();
+                if (Expires != null)
+                    hashCode = hashCode * 59 + Expires.GetHashCode();
+                if (ExpiresIn != null)
+                    hashCode = hashCode * 59 + ExpiresIn.GetHashCode();
+                if (Issued != null)
+                    hashCode = hashCode * 59 + Issued.GetHashCode();
+                if (RefreshToken != null)
+                    hashCode = hashCode * 59 + RefreshToken.GetHashCode();
+                if (TokenType != null)
+                    hashCode = hashCode * 59 + TokenType.GetHashCode();
+                if (Username != null)
+                    hashCode = hashCode * 59 + Username.GetHashCode();
                 return hashCode;
             }
         }
@@ -217,7 +217,7 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

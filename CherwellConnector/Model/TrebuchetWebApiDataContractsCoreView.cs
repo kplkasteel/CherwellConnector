@@ -26,11 +26,11 @@ namespace CherwellConnector.Model
         /// <param name="name">name.</param>
         /// <param name="viewId">viewId.</param>
         /// <param name="image">image.</param>
-        public TrebuchetWebApiDataContractsCoreView(string name = default(string), string viewId = default(string), string image = default(string))
+        public TrebuchetWebApiDataContractsCoreView(string name = default, string viewId = default, string image = default)
         {
-            this.Name = name;
-            this.ViewId = viewId;
-            this.Image = image;
+            Name = name;
+            ViewId = viewId;
+            Image = image;
         }
         
         /// <summary>
@@ -59,9 +59,9 @@ namespace CherwellConnector.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrebuchetWebApiDataContractsCoreView {\n");
-            sb.Append("  Name: ").Append(this.Name).Append("\n");
-            sb.Append("  ViewId: ").Append(this.ViewId).Append("\n");
-            sb.Append("  Image: ").Append(this.Image).Append("\n");
+            sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  ViewId: ").Append(ViewId).Append("\n");
+            sb.Append("  Image: ").Append(Image).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -82,7 +82,7 @@ namespace CherwellConnector.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as TrebuchetWebApiDataContractsCoreView);
+            return Equals(input as TrebuchetWebApiDataContractsCoreView);
         }
 
         /// <summary>
@@ -97,19 +97,19 @@ namespace CherwellConnector.Model
 
             return 
                 (
-                    this.Name == input.Name ||
-                    (this.Name != null &&
-                    this.Name.Equals(input.Name))
+                    Name == input.Name ||
+                    (Name != null &&
+                    Name.Equals(input.Name))
                 ) && 
                 (
-                    this.ViewId == input.ViewId ||
-                    (this.ViewId != null &&
-                    this.ViewId.Equals(input.ViewId))
+                    ViewId == input.ViewId ||
+                    (ViewId != null &&
+                    ViewId.Equals(input.ViewId))
                 ) && 
                 (
-                    this.Image == input.Image ||
-                    (this.Image != null &&
-                    this.Image.Equals(input.Image))
+                    Image == input.Image ||
+                    (Image != null &&
+                    Image.Equals(input.Image))
                 );
         }
 
@@ -121,13 +121,13 @@ namespace CherwellConnector.Model
         {
             unchecked // Overflow is fine, just wrap
             {
-                int hashCode = 41;
-                if (this.Name != null)
-                    hashCode = hashCode * 59 + this.Name.GetHashCode();
-                if (this.ViewId != null)
-                    hashCode = hashCode * 59 + this.ViewId.GetHashCode();
-                if (this.Image != null)
-                    hashCode = hashCode * 59 + this.Image.GetHashCode();
+                var hashCode = 41;
+                if (Name != null)
+                    hashCode = hashCode * 59 + Name.GetHashCode();
+                if (ViewId != null)
+                    hashCode = hashCode * 59 + ViewId.GetHashCode();
+                if (Image != null)
+                    hashCode = hashCode * 59 + Image.GetHashCode();
                 return hashCode;
             }
         }
@@ -137,7 +137,7 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

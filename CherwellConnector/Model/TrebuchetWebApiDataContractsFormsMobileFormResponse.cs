@@ -330,18 +330,18 @@ namespace CherwellConnector.Model
         /// <param name="errorMessage">errorMessage.</param>
         /// <param name="hasError">hasError.</param>
         /// <param name="httpStatusCode">httpStatusCode.</param>
-        public TrebuchetWebApiDataContractsFormsMobileFormResponse(List<TrebuchetWebApiDataContractsCoreAction> actions = default(List<TrebuchetWebApiDataContractsCoreAction>), List<TrebuchetWebApiDataContractsBusinessObjectAttachment> attachments = default(List<TrebuchetWebApiDataContractsBusinessObjectAttachment>), string galleryImage = default(string), TrebuchetWebApiDataContractsCoreLocation locationInformation = default(TrebuchetWebApiDataContractsCoreLocation), List<TrebuchetWebApiDataContractsFormsSection> sections = default(List<TrebuchetWebApiDataContractsFormsSection>), string title = default(string), string errorCode = default(string), string errorMessage = default(string), bool? hasError = default(bool?), HttpStatusCodeEnum? httpStatusCode = default(HttpStatusCodeEnum?))
+        public TrebuchetWebApiDataContractsFormsMobileFormResponse(List<TrebuchetWebApiDataContractsCoreAction> actions = default, List<Attachment> attachments = default, string galleryImage = default, TrebuchetWebApiDataContractsCoreLocation locationInformation = default, List<TrebuchetWebApiDataContractsFormsSection> sections = default, string title = default, string errorCode = default, string errorMessage = default, bool? hasError = default, HttpStatusCodeEnum? httpStatusCode = default)
         {
-            this.Actions = actions;
-            this.Attachments = attachments;
-            this.GalleryImage = galleryImage;
-            this.LocationInformation = locationInformation;
-            this.Sections = sections;
-            this.Title = title;
-            this.ErrorCode = errorCode;
-            this.ErrorMessage = errorMessage;
-            this.HasError = hasError;
-            this.HttpStatusCode = httpStatusCode;
+            Actions = actions;
+            Attachments = attachments;
+            GalleryImage = galleryImage;
+            LocationInformation = locationInformation;
+            Sections = sections;
+            Title = title;
+            ErrorCode = errorCode;
+            ErrorMessage = errorMessage;
+            HasError = hasError;
+            HttpStatusCode = httpStatusCode;
         }
         
         /// <summary>
@@ -354,7 +354,7 @@ namespace CherwellConnector.Model
         /// Gets or Sets Attachments
         /// </summary>
         [DataMember(Name="attachments", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsBusinessObjectAttachment> Attachments { get; set; }
+        public List<Attachment> Attachments { get; set; }
 
         /// <summary>
         /// Gets or Sets GalleryImage
@@ -407,16 +407,16 @@ namespace CherwellConnector.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrebuchetWebApiDataContractsFormsMobileFormResponse {\n");
-            sb.Append("  Actions: ").Append(this.Actions).Append("\n");
-            sb.Append("  Attachments: ").Append(this.Attachments).Append("\n");
-            sb.Append("  GalleryImage: ").Append(this.GalleryImage).Append("\n");
-            sb.Append("  LocationInformation: ").Append(this.LocationInformation).Append("\n");
-            sb.Append("  Sections: ").Append(this.Sections).Append("\n");
-            sb.Append("  Title: ").Append(this.Title).Append("\n");
-            sb.Append("  ErrorCode: ").Append(this.ErrorCode).Append("\n");
-            sb.Append("  ErrorMessage: ").Append(this.ErrorMessage).Append("\n");
-            sb.Append("  HasError: ").Append(this.HasError).Append("\n");
-            sb.Append("  HttpStatusCode: ").Append(this.HttpStatusCode).Append("\n");
+            sb.Append("  Actions: ").Append(Actions).Append("\n");
+            sb.Append("  Attachments: ").Append(Attachments).Append("\n");
+            sb.Append("  GalleryImage: ").Append(GalleryImage).Append("\n");
+            sb.Append("  LocationInformation: ").Append(LocationInformation).Append("\n");
+            sb.Append("  Sections: ").Append(Sections).Append("\n");
+            sb.Append("  Title: ").Append(Title).Append("\n");
+            sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
+            sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append("\n");
+            sb.Append("  HasError: ").Append(HasError).Append("\n");
+            sb.Append("  HttpStatusCode: ").Append(HttpStatusCode).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -437,7 +437,7 @@ namespace CherwellConnector.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as TrebuchetWebApiDataContractsFormsMobileFormResponse);
+            return Equals(input as TrebuchetWebApiDataContractsFormsMobileFormResponse);
         }
 
         /// <summary>
@@ -452,54 +452,54 @@ namespace CherwellConnector.Model
 
             return 
                 (
-                    this.Actions == input.Actions ||
-                    this.Actions != null &&
-                    this.Actions.SequenceEqual(input.Actions)
+                    Actions == input.Actions ||
+                    Actions != null &&
+                    Actions.SequenceEqual(input.Actions)
                 ) && 
                 (
-                    this.Attachments == input.Attachments ||
-                    this.Attachments != null &&
-                    this.Attachments.SequenceEqual(input.Attachments)
+                    Attachments == input.Attachments ||
+                    Attachments != null &&
+                    Attachments.SequenceEqual(input.Attachments)
                 ) && 
                 (
-                    this.GalleryImage == input.GalleryImage ||
-                    (this.GalleryImage != null &&
-                    this.GalleryImage.Equals(input.GalleryImage))
+                    GalleryImage == input.GalleryImage ||
+                    (GalleryImage != null &&
+                    GalleryImage.Equals(input.GalleryImage))
                 ) && 
                 (
-                    this.LocationInformation == input.LocationInformation ||
-                    (this.LocationInformation != null &&
-                    this.LocationInformation.Equals(input.LocationInformation))
+                    LocationInformation == input.LocationInformation ||
+                    (LocationInformation != null &&
+                    LocationInformation.Equals(input.LocationInformation))
                 ) && 
                 (
-                    this.Sections == input.Sections ||
-                    this.Sections != null &&
-                    this.Sections.SequenceEqual(input.Sections)
+                    Sections == input.Sections ||
+                    Sections != null &&
+                    Sections.SequenceEqual(input.Sections)
                 ) && 
                 (
-                    this.Title == input.Title ||
-                    (this.Title != null &&
-                    this.Title.Equals(input.Title))
+                    Title == input.Title ||
+                    (Title != null &&
+                    Title.Equals(input.Title))
                 ) && 
                 (
-                    this.ErrorCode == input.ErrorCode ||
-                    (this.ErrorCode != null &&
-                    this.ErrorCode.Equals(input.ErrorCode))
+                    ErrorCode == input.ErrorCode ||
+                    (ErrorCode != null &&
+                    ErrorCode.Equals(input.ErrorCode))
                 ) && 
                 (
-                    this.ErrorMessage == input.ErrorMessage ||
-                    (this.ErrorMessage != null &&
-                    this.ErrorMessage.Equals(input.ErrorMessage))
+                    ErrorMessage == input.ErrorMessage ||
+                    (ErrorMessage != null &&
+                    ErrorMessage.Equals(input.ErrorMessage))
                 ) && 
                 (
-                    this.HasError == input.HasError ||
-                    (this.HasError != null &&
-                    this.HasError.Equals(input.HasError))
+                    HasError == input.HasError ||
+                    (HasError != null &&
+                    HasError.Equals(input.HasError))
                 ) && 
                 (
-                    this.HttpStatusCode == input.HttpStatusCode ||
-                    (this.HttpStatusCode != null &&
-                    this.HttpStatusCode.Equals(input.HttpStatusCode))
+                    HttpStatusCode == input.HttpStatusCode ||
+                    (HttpStatusCode != null &&
+                    HttpStatusCode.Equals(input.HttpStatusCode))
                 );
         }
 
@@ -511,27 +511,27 @@ namespace CherwellConnector.Model
         {
             unchecked // Overflow is fine, just wrap
             {
-                int hashCode = 41;
-                if (this.Actions != null)
-                    hashCode = hashCode * 59 + this.Actions.GetHashCode();
-                if (this.Attachments != null)
-                    hashCode = hashCode * 59 + this.Attachments.GetHashCode();
-                if (this.GalleryImage != null)
-                    hashCode = hashCode * 59 + this.GalleryImage.GetHashCode();
-                if (this.LocationInformation != null)
-                    hashCode = hashCode * 59 + this.LocationInformation.GetHashCode();
-                if (this.Sections != null)
-                    hashCode = hashCode * 59 + this.Sections.GetHashCode();
-                if (this.Title != null)
-                    hashCode = hashCode * 59 + this.Title.GetHashCode();
-                if (this.ErrorCode != null)
-                    hashCode = hashCode * 59 + this.ErrorCode.GetHashCode();
-                if (this.ErrorMessage != null)
-                    hashCode = hashCode * 59 + this.ErrorMessage.GetHashCode();
-                if (this.HasError != null)
-                    hashCode = hashCode * 59 + this.HasError.GetHashCode();
-                if (this.HttpStatusCode != null)
-                    hashCode = hashCode * 59 + this.HttpStatusCode.GetHashCode();
+                var hashCode = 41;
+                if (Actions != null)
+                    hashCode = hashCode * 59 + Actions.GetHashCode();
+                if (Attachments != null)
+                    hashCode = hashCode * 59 + Attachments.GetHashCode();
+                if (GalleryImage != null)
+                    hashCode = hashCode * 59 + GalleryImage.GetHashCode();
+                if (LocationInformation != null)
+                    hashCode = hashCode * 59 + LocationInformation.GetHashCode();
+                if (Sections != null)
+                    hashCode = hashCode * 59 + Sections.GetHashCode();
+                if (Title != null)
+                    hashCode = hashCode * 59 + Title.GetHashCode();
+                if (ErrorCode != null)
+                    hashCode = hashCode * 59 + ErrorCode.GetHashCode();
+                if (ErrorMessage != null)
+                    hashCode = hashCode * 59 + ErrorMessage.GetHashCode();
+                if (HasError != null)
+                    hashCode = hashCode * 59 + HasError.GetHashCode();
+                if (HttpStatusCode != null)
+                    hashCode = hashCode * 59 + HttpStatusCode.GetHashCode();
                 return hashCode;
             }
         }
@@ -541,7 +541,7 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

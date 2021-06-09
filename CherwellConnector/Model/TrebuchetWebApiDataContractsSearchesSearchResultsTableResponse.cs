@@ -328,16 +328,16 @@ namespace CherwellConnector.Model
         /// <param name="errorMessage">errorMessage.</param>
         /// <param name="hasError">hasError.</param>
         /// <param name="httpStatusCode">httpStatusCode.</param>
-        public TrebuchetWebApiDataContractsSearchesSearchResultsTableResponse(List<TrebuchetWebApiDataContractsSearchesField> columns = default(List<TrebuchetWebApiDataContractsSearchesField>), List<TrebuchetWebApiDataContractsSearchesSearchResultsRow> rows = default(List<TrebuchetWebApiDataContractsSearchesSearchResultsRow>), List<TrebuchetWebApiDataContractsSearchesSortInfo> sorting = default(List<TrebuchetWebApiDataContractsSearchesSortInfo>), long? totalRows = default(long?), string errorCode = default(string), string errorMessage = default(string), bool? hasError = default(bool?), HttpStatusCodeEnum? httpStatusCode = default(HttpStatusCodeEnum?))
+        public TrebuchetWebApiDataContractsSearchesSearchResultsTableResponse(List<TrebuchetWebApiDataContractsSearchesField> columns = default, List<TrebuchetWebApiDataContractsSearchesSearchResultsRow> rows = default, List<TrebuchetWebApiDataContractsSearchesSortInfo> sorting = default, long? totalRows = default, string errorCode = default, string errorMessage = default, bool? hasError = default, HttpStatusCodeEnum? httpStatusCode = default)
         {
-            this.Columns = columns;
-            this.Rows = rows;
-            this.Sorting = sorting;
-            this.TotalRows = totalRows;
-            this.ErrorCode = errorCode;
-            this.ErrorMessage = errorMessage;
-            this.HasError = hasError;
-            this.HttpStatusCode = httpStatusCode;
+            Columns = columns;
+            Rows = rows;
+            Sorting = sorting;
+            TotalRows = totalRows;
+            ErrorCode = errorCode;
+            ErrorMessage = errorMessage;
+            HasError = hasError;
+            HttpStatusCode = httpStatusCode;
         }
         
         /// <summary>
@@ -391,14 +391,14 @@ namespace CherwellConnector.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrebuchetWebApiDataContractsSearchesSearchResultsTableResponse {\n");
-            sb.Append("  Columns: ").Append(this.Columns).Append("\n");
-            sb.Append("  Rows: ").Append(this.Rows).Append("\n");
-            sb.Append("  Sorting: ").Append(this.Sorting).Append("\n");
-            sb.Append("  TotalRows: ").Append(this.TotalRows).Append("\n");
-            sb.Append("  ErrorCode: ").Append(this.ErrorCode).Append("\n");
-            sb.Append("  ErrorMessage: ").Append(this.ErrorMessage).Append("\n");
-            sb.Append("  HasError: ").Append(this.HasError).Append("\n");
-            sb.Append("  HttpStatusCode: ").Append(this.HttpStatusCode).Append("\n");
+            sb.Append("  Columns: ").Append(Columns).Append("\n");
+            sb.Append("  Rows: ").Append(Rows).Append("\n");
+            sb.Append("  Sorting: ").Append(Sorting).Append("\n");
+            sb.Append("  TotalRows: ").Append(TotalRows).Append("\n");
+            sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
+            sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append("\n");
+            sb.Append("  HasError: ").Append(HasError).Append("\n");
+            sb.Append("  HttpStatusCode: ").Append(HttpStatusCode).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -419,7 +419,7 @@ namespace CherwellConnector.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as TrebuchetWebApiDataContractsSearchesSearchResultsTableResponse);
+            return Equals(input as TrebuchetWebApiDataContractsSearchesSearchResultsTableResponse);
         }
 
         /// <summary>
@@ -434,44 +434,44 @@ namespace CherwellConnector.Model
 
             return 
                 (
-                    this.Columns == input.Columns ||
-                    this.Columns != null &&
-                    this.Columns.SequenceEqual(input.Columns)
+                    Columns == input.Columns ||
+                    Columns != null &&
+                    Columns.SequenceEqual(input.Columns)
                 ) && 
                 (
-                    this.Rows == input.Rows ||
-                    this.Rows != null &&
-                    this.Rows.SequenceEqual(input.Rows)
+                    Rows == input.Rows ||
+                    Rows != null &&
+                    Rows.SequenceEqual(input.Rows)
                 ) && 
                 (
-                    this.Sorting == input.Sorting ||
-                    this.Sorting != null &&
-                    this.Sorting.SequenceEqual(input.Sorting)
+                    Sorting == input.Sorting ||
+                    Sorting != null &&
+                    Sorting.SequenceEqual(input.Sorting)
                 ) && 
                 (
-                    this.TotalRows == input.TotalRows ||
-                    (this.TotalRows != null &&
-                    this.TotalRows.Equals(input.TotalRows))
+                    TotalRows == input.TotalRows ||
+                    (TotalRows != null &&
+                    TotalRows.Equals(input.TotalRows))
                 ) && 
                 (
-                    this.ErrorCode == input.ErrorCode ||
-                    (this.ErrorCode != null &&
-                    this.ErrorCode.Equals(input.ErrorCode))
+                    ErrorCode == input.ErrorCode ||
+                    (ErrorCode != null &&
+                    ErrorCode.Equals(input.ErrorCode))
                 ) && 
                 (
-                    this.ErrorMessage == input.ErrorMessage ||
-                    (this.ErrorMessage != null &&
-                    this.ErrorMessage.Equals(input.ErrorMessage))
+                    ErrorMessage == input.ErrorMessage ||
+                    (ErrorMessage != null &&
+                    ErrorMessage.Equals(input.ErrorMessage))
                 ) && 
                 (
-                    this.HasError == input.HasError ||
-                    (this.HasError != null &&
-                    this.HasError.Equals(input.HasError))
+                    HasError == input.HasError ||
+                    (HasError != null &&
+                    HasError.Equals(input.HasError))
                 ) && 
                 (
-                    this.HttpStatusCode == input.HttpStatusCode ||
-                    (this.HttpStatusCode != null &&
-                    this.HttpStatusCode.Equals(input.HttpStatusCode))
+                    HttpStatusCode == input.HttpStatusCode ||
+                    (HttpStatusCode != null &&
+                    HttpStatusCode.Equals(input.HttpStatusCode))
                 );
         }
 
@@ -483,23 +483,23 @@ namespace CherwellConnector.Model
         {
             unchecked // Overflow is fine, just wrap
             {
-                int hashCode = 41;
-                if (this.Columns != null)
-                    hashCode = hashCode * 59 + this.Columns.GetHashCode();
-                if (this.Rows != null)
-                    hashCode = hashCode * 59 + this.Rows.GetHashCode();
-                if (this.Sorting != null)
-                    hashCode = hashCode * 59 + this.Sorting.GetHashCode();
-                if (this.TotalRows != null)
-                    hashCode = hashCode * 59 + this.TotalRows.GetHashCode();
-                if (this.ErrorCode != null)
-                    hashCode = hashCode * 59 + this.ErrorCode.GetHashCode();
-                if (this.ErrorMessage != null)
-                    hashCode = hashCode * 59 + this.ErrorMessage.GetHashCode();
-                if (this.HasError != null)
-                    hashCode = hashCode * 59 + this.HasError.GetHashCode();
-                if (this.HttpStatusCode != null)
-                    hashCode = hashCode * 59 + this.HttpStatusCode.GetHashCode();
+                var hashCode = 41;
+                if (Columns != null)
+                    hashCode = hashCode * 59 + Columns.GetHashCode();
+                if (Rows != null)
+                    hashCode = hashCode * 59 + Rows.GetHashCode();
+                if (Sorting != null)
+                    hashCode = hashCode * 59 + Sorting.GetHashCode();
+                if (TotalRows != null)
+                    hashCode = hashCode * 59 + TotalRows.GetHashCode();
+                if (ErrorCode != null)
+                    hashCode = hashCode * 59 + ErrorCode.GetHashCode();
+                if (ErrorMessage != null)
+                    hashCode = hashCode * 59 + ErrorMessage.GetHashCode();
+                if (HasError != null)
+                    hashCode = hashCode * 59 + HasError.GetHashCode();
+                if (HttpStatusCode != null)
+                    hashCode = hashCode * 59 + HttpStatusCode.GetHashCode();
                 return hashCode;
             }
         }
@@ -509,7 +509,7 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

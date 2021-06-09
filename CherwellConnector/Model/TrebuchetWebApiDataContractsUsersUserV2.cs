@@ -338,26 +338,26 @@ namespace CherwellConnector.Model
         /// <param name="errorMessage">errorMessage.</param>
         /// <param name="hasError">hasError.</param>
         /// <param name="httpStatusCode">httpStatusCode.</param>
-        public TrebuchetWebApiDataContractsUsersUserV2(bool? accountLocked = default(bool?), DateTime? createDateTime = default(DateTime?), string displayName = default(string), List<TrebuchetWebApiDataContractsBusinessObjectFieldTemplateItem> fields = default(List<TrebuchetWebApiDataContractsBusinessObjectFieldTemplateItem>), DateTime? lastPasswordResetDate = default(DateTime?), DateTime? lastResetDateTime = default(DateTime?), bool? ldapRequired = default(bool?), bool? passwordNeverExpires = default(bool?), string publicId = default(string), string recordId = default(string), string securityGroupId = default(string), string shortDisplayName = default(string), bool? userCannotChangePassword = default(bool?), bool? userMustResetPasswordAtNextLogin = default(bool?), string errorCode = default(string), string errorMessage = default(string), bool? hasError = default(bool?), HttpStatusCodeEnum? httpStatusCode = default(HttpStatusCodeEnum?))
+        public TrebuchetWebApiDataContractsUsersUserV2(bool? accountLocked = default, DateTime? createDateTime = default, string displayName = default, List<FieldTemplateItem> fields = default, DateTime? lastPasswordResetDate = default, DateTime? lastResetDateTime = default, bool? ldapRequired = default, bool? passwordNeverExpires = default, string publicId = default, string recordId = default, string securityGroupId = default, string shortDisplayName = default, bool? userCannotChangePassword = default, bool? userMustResetPasswordAtNextLogin = default, string errorCode = default, string errorMessage = default, bool? hasError = default, HttpStatusCodeEnum? httpStatusCode = default)
         {
-            this.AccountLocked = accountLocked;
-            this.CreateDateTime = createDateTime;
-            this.DisplayName = displayName;
-            this.Fields = fields;
-            this.LastPasswordResetDate = lastPasswordResetDate;
-            this.LastResetDateTime = lastResetDateTime;
-            this.LdapRequired = ldapRequired;
-            this.PasswordNeverExpires = passwordNeverExpires;
-            this.PublicId = publicId;
-            this.RecordId = recordId;
-            this.SecurityGroupId = securityGroupId;
-            this.ShortDisplayName = shortDisplayName;
-            this.UserCannotChangePassword = userCannotChangePassword;
-            this.UserMustResetPasswordAtNextLogin = userMustResetPasswordAtNextLogin;
-            this.ErrorCode = errorCode;
-            this.ErrorMessage = errorMessage;
-            this.HasError = hasError;
-            this.HttpStatusCode = httpStatusCode;
+            AccountLocked = accountLocked;
+            CreateDateTime = createDateTime;
+            DisplayName = displayName;
+            Fields = fields;
+            LastPasswordResetDate = lastPasswordResetDate;
+            LastResetDateTime = lastResetDateTime;
+            LdapRequired = ldapRequired;
+            PasswordNeverExpires = passwordNeverExpires;
+            PublicId = publicId;
+            RecordId = recordId;
+            SecurityGroupId = securityGroupId;
+            ShortDisplayName = shortDisplayName;
+            UserCannotChangePassword = userCannotChangePassword;
+            UserMustResetPasswordAtNextLogin = userMustResetPasswordAtNextLogin;
+            ErrorCode = errorCode;
+            ErrorMessage = errorMessage;
+            HasError = hasError;
+            HttpStatusCode = httpStatusCode;
         }
         
         /// <summary>
@@ -382,7 +382,7 @@ namespace CherwellConnector.Model
         /// Gets or Sets Fields
         /// </summary>
         [DataMember(Name="fields", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsBusinessObjectFieldTemplateItem> Fields { get; set; }
+        public List<FieldTemplateItem> Fields { get; set; }
 
         /// <summary>
         /// Gets or Sets LastPasswordResetDate
@@ -471,24 +471,24 @@ namespace CherwellConnector.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrebuchetWebApiDataContractsUsersUserV2 {\n");
-            sb.Append("  AccountLocked: ").Append(this.AccountLocked).Append("\n");
-            sb.Append("  CreateDateTime: ").Append(this.CreateDateTime).Append("\n");
-            sb.Append("  DisplayName: ").Append(this.DisplayName).Append("\n");
-            sb.Append("  Fields: ").Append(this.Fields).Append("\n");
-            sb.Append("  LastPasswordResetDate: ").Append(this.LastPasswordResetDate).Append("\n");
-            sb.Append("  LastResetDateTime: ").Append(this.LastResetDateTime).Append("\n");
-            sb.Append("  LdapRequired: ").Append(this.LdapRequired).Append("\n");
-            sb.Append("  PasswordNeverExpires: ").Append(this.PasswordNeverExpires).Append("\n");
-            sb.Append("  PublicId: ").Append(this.PublicId).Append("\n");
-            sb.Append("  RecordId: ").Append(this.RecordId).Append("\n");
-            sb.Append("  SecurityGroupId: ").Append(this.SecurityGroupId).Append("\n");
-            sb.Append("  ShortDisplayName: ").Append(this.ShortDisplayName).Append("\n");
-            sb.Append("  UserCannotChangePassword: ").Append(this.UserCannotChangePassword).Append("\n");
-            sb.Append("  UserMustResetPasswordAtNextLogin: ").Append(this.UserMustResetPasswordAtNextLogin).Append("\n");
-            sb.Append("  ErrorCode: ").Append(this.ErrorCode).Append("\n");
-            sb.Append("  ErrorMessage: ").Append(this.ErrorMessage).Append("\n");
-            sb.Append("  HasError: ").Append(this.HasError).Append("\n");
-            sb.Append("  HttpStatusCode: ").Append(this.HttpStatusCode).Append("\n");
+            sb.Append("  AccountLocked: ").Append(AccountLocked).Append("\n");
+            sb.Append("  CreateDateTime: ").Append(CreateDateTime).Append("\n");
+            sb.Append("  DisplayName: ").Append(DisplayName).Append("\n");
+            sb.Append("  Fields: ").Append(Fields).Append("\n");
+            sb.Append("  LastPasswordResetDate: ").Append(LastPasswordResetDate).Append("\n");
+            sb.Append("  LastResetDateTime: ").Append(LastResetDateTime).Append("\n");
+            sb.Append("  LdapRequired: ").Append(LdapRequired).Append("\n");
+            sb.Append("  PasswordNeverExpires: ").Append(PasswordNeverExpires).Append("\n");
+            sb.Append("  PublicId: ").Append(PublicId).Append("\n");
+            sb.Append("  RecordId: ").Append(RecordId).Append("\n");
+            sb.Append("  SecurityGroupId: ").Append(SecurityGroupId).Append("\n");
+            sb.Append("  ShortDisplayName: ").Append(ShortDisplayName).Append("\n");
+            sb.Append("  UserCannotChangePassword: ").Append(UserCannotChangePassword).Append("\n");
+            sb.Append("  UserMustResetPasswordAtNextLogin: ").Append(UserMustResetPasswordAtNextLogin).Append("\n");
+            sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
+            sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append("\n");
+            sb.Append("  HasError: ").Append(HasError).Append("\n");
+            sb.Append("  HttpStatusCode: ").Append(HttpStatusCode).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -509,7 +509,7 @@ namespace CherwellConnector.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as TrebuchetWebApiDataContractsUsersUserV2);
+            return Equals(input as TrebuchetWebApiDataContractsUsersUserV2);
         }
 
         /// <summary>
@@ -524,94 +524,94 @@ namespace CherwellConnector.Model
 
             return 
                 (
-                    this.AccountLocked == input.AccountLocked ||
-                    (this.AccountLocked != null &&
-                    this.AccountLocked.Equals(input.AccountLocked))
+                    AccountLocked == input.AccountLocked ||
+                    (AccountLocked != null &&
+                    AccountLocked.Equals(input.AccountLocked))
                 ) && 
                 (
-                    this.CreateDateTime == input.CreateDateTime ||
-                    (this.CreateDateTime != null &&
-                    this.CreateDateTime.Equals(input.CreateDateTime))
+                    CreateDateTime == input.CreateDateTime ||
+                    (CreateDateTime != null &&
+                    CreateDateTime.Equals(input.CreateDateTime))
                 ) && 
                 (
-                    this.DisplayName == input.DisplayName ||
-                    (this.DisplayName != null &&
-                    this.DisplayName.Equals(input.DisplayName))
+                    DisplayName == input.DisplayName ||
+                    (DisplayName != null &&
+                    DisplayName.Equals(input.DisplayName))
                 ) && 
                 (
-                    this.Fields == input.Fields ||
-                    this.Fields != null &&
-                    this.Fields.SequenceEqual(input.Fields)
+                    Fields == input.Fields ||
+                    Fields != null &&
+                    Fields.SequenceEqual(input.Fields)
                 ) && 
                 (
-                    this.LastPasswordResetDate == input.LastPasswordResetDate ||
-                    (this.LastPasswordResetDate != null &&
-                    this.LastPasswordResetDate.Equals(input.LastPasswordResetDate))
+                    LastPasswordResetDate == input.LastPasswordResetDate ||
+                    (LastPasswordResetDate != null &&
+                    LastPasswordResetDate.Equals(input.LastPasswordResetDate))
                 ) && 
                 (
-                    this.LastResetDateTime == input.LastResetDateTime ||
-                    (this.LastResetDateTime != null &&
-                    this.LastResetDateTime.Equals(input.LastResetDateTime))
+                    LastResetDateTime == input.LastResetDateTime ||
+                    (LastResetDateTime != null &&
+                    LastResetDateTime.Equals(input.LastResetDateTime))
                 ) && 
                 (
-                    this.LdapRequired == input.LdapRequired ||
-                    (this.LdapRequired != null &&
-                    this.LdapRequired.Equals(input.LdapRequired))
+                    LdapRequired == input.LdapRequired ||
+                    (LdapRequired != null &&
+                    LdapRequired.Equals(input.LdapRequired))
                 ) && 
                 (
-                    this.PasswordNeverExpires == input.PasswordNeverExpires ||
-                    (this.PasswordNeverExpires != null &&
-                    this.PasswordNeverExpires.Equals(input.PasswordNeverExpires))
+                    PasswordNeverExpires == input.PasswordNeverExpires ||
+                    (PasswordNeverExpires != null &&
+                    PasswordNeverExpires.Equals(input.PasswordNeverExpires))
                 ) && 
                 (
-                    this.PublicId == input.PublicId ||
-                    (this.PublicId != null &&
-                    this.PublicId.Equals(input.PublicId))
+                    PublicId == input.PublicId ||
+                    (PublicId != null &&
+                    PublicId.Equals(input.PublicId))
                 ) && 
                 (
-                    this.RecordId == input.RecordId ||
-                    (this.RecordId != null &&
-                    this.RecordId.Equals(input.RecordId))
+                    RecordId == input.RecordId ||
+                    (RecordId != null &&
+                    RecordId.Equals(input.RecordId))
                 ) && 
                 (
-                    this.SecurityGroupId == input.SecurityGroupId ||
-                    (this.SecurityGroupId != null &&
-                    this.SecurityGroupId.Equals(input.SecurityGroupId))
+                    SecurityGroupId == input.SecurityGroupId ||
+                    (SecurityGroupId != null &&
+                    SecurityGroupId.Equals(input.SecurityGroupId))
                 ) && 
                 (
-                    this.ShortDisplayName == input.ShortDisplayName ||
-                    (this.ShortDisplayName != null &&
-                    this.ShortDisplayName.Equals(input.ShortDisplayName))
+                    ShortDisplayName == input.ShortDisplayName ||
+                    (ShortDisplayName != null &&
+                    ShortDisplayName.Equals(input.ShortDisplayName))
                 ) && 
                 (
-                    this.UserCannotChangePassword == input.UserCannotChangePassword ||
-                    (this.UserCannotChangePassword != null &&
-                    this.UserCannotChangePassword.Equals(input.UserCannotChangePassword))
+                    UserCannotChangePassword == input.UserCannotChangePassword ||
+                    (UserCannotChangePassword != null &&
+                    UserCannotChangePassword.Equals(input.UserCannotChangePassword))
                 ) && 
                 (
-                    this.UserMustResetPasswordAtNextLogin == input.UserMustResetPasswordAtNextLogin ||
-                    (this.UserMustResetPasswordAtNextLogin != null &&
-                    this.UserMustResetPasswordAtNextLogin.Equals(input.UserMustResetPasswordAtNextLogin))
+                    UserMustResetPasswordAtNextLogin == input.UserMustResetPasswordAtNextLogin ||
+                    (UserMustResetPasswordAtNextLogin != null &&
+                    UserMustResetPasswordAtNextLogin.Equals(input.UserMustResetPasswordAtNextLogin))
                 ) && 
                 (
-                    this.ErrorCode == input.ErrorCode ||
-                    (this.ErrorCode != null &&
-                    this.ErrorCode.Equals(input.ErrorCode))
+                    ErrorCode == input.ErrorCode ||
+                    (ErrorCode != null &&
+                    ErrorCode.Equals(input.ErrorCode))
                 ) && 
                 (
-                    this.ErrorMessage == input.ErrorMessage ||
-                    (this.ErrorMessage != null &&
-                    this.ErrorMessage.Equals(input.ErrorMessage))
+                    ErrorMessage == input.ErrorMessage ||
+                    (ErrorMessage != null &&
+                    ErrorMessage.Equals(input.ErrorMessage))
                 ) && 
                 (
-                    this.HasError == input.HasError ||
-                    (this.HasError != null &&
-                    this.HasError.Equals(input.HasError))
+                    HasError == input.HasError ||
+                    (HasError != null &&
+                    HasError.Equals(input.HasError))
                 ) && 
                 (
-                    this.HttpStatusCode == input.HttpStatusCode ||
-                    (this.HttpStatusCode != null &&
-                    this.HttpStatusCode.Equals(input.HttpStatusCode))
+                    HttpStatusCode == input.HttpStatusCode ||
+                    (HttpStatusCode != null &&
+                    HttpStatusCode.Equals(input.HttpStatusCode))
                 );
         }
 
@@ -623,43 +623,43 @@ namespace CherwellConnector.Model
         {
             unchecked // Overflow is fine, just wrap
             {
-                int hashCode = 41;
-                if (this.AccountLocked != null)
-                    hashCode = hashCode * 59 + this.AccountLocked.GetHashCode();
-                if (this.CreateDateTime != null)
-                    hashCode = hashCode * 59 + this.CreateDateTime.GetHashCode();
-                if (this.DisplayName != null)
-                    hashCode = hashCode * 59 + this.DisplayName.GetHashCode();
-                if (this.Fields != null)
-                    hashCode = hashCode * 59 + this.Fields.GetHashCode();
-                if (this.LastPasswordResetDate != null)
-                    hashCode = hashCode * 59 + this.LastPasswordResetDate.GetHashCode();
-                if (this.LastResetDateTime != null)
-                    hashCode = hashCode * 59 + this.LastResetDateTime.GetHashCode();
-                if (this.LdapRequired != null)
-                    hashCode = hashCode * 59 + this.LdapRequired.GetHashCode();
-                if (this.PasswordNeverExpires != null)
-                    hashCode = hashCode * 59 + this.PasswordNeverExpires.GetHashCode();
-                if (this.PublicId != null)
-                    hashCode = hashCode * 59 + this.PublicId.GetHashCode();
-                if (this.RecordId != null)
-                    hashCode = hashCode * 59 + this.RecordId.GetHashCode();
-                if (this.SecurityGroupId != null)
-                    hashCode = hashCode * 59 + this.SecurityGroupId.GetHashCode();
-                if (this.ShortDisplayName != null)
-                    hashCode = hashCode * 59 + this.ShortDisplayName.GetHashCode();
-                if (this.UserCannotChangePassword != null)
-                    hashCode = hashCode * 59 + this.UserCannotChangePassword.GetHashCode();
-                if (this.UserMustResetPasswordAtNextLogin != null)
-                    hashCode = hashCode * 59 + this.UserMustResetPasswordAtNextLogin.GetHashCode();
-                if (this.ErrorCode != null)
-                    hashCode = hashCode * 59 + this.ErrorCode.GetHashCode();
-                if (this.ErrorMessage != null)
-                    hashCode = hashCode * 59 + this.ErrorMessage.GetHashCode();
-                if (this.HasError != null)
-                    hashCode = hashCode * 59 + this.HasError.GetHashCode();
-                if (this.HttpStatusCode != null)
-                    hashCode = hashCode * 59 + this.HttpStatusCode.GetHashCode();
+                var hashCode = 41;
+                if (AccountLocked != null)
+                    hashCode = hashCode * 59 + AccountLocked.GetHashCode();
+                if (CreateDateTime != null)
+                    hashCode = hashCode * 59 + CreateDateTime.GetHashCode();
+                if (DisplayName != null)
+                    hashCode = hashCode * 59 + DisplayName.GetHashCode();
+                if (Fields != null)
+                    hashCode = hashCode * 59 + Fields.GetHashCode();
+                if (LastPasswordResetDate != null)
+                    hashCode = hashCode * 59 + LastPasswordResetDate.GetHashCode();
+                if (LastResetDateTime != null)
+                    hashCode = hashCode * 59 + LastResetDateTime.GetHashCode();
+                if (LdapRequired != null)
+                    hashCode = hashCode * 59 + LdapRequired.GetHashCode();
+                if (PasswordNeverExpires != null)
+                    hashCode = hashCode * 59 + PasswordNeverExpires.GetHashCode();
+                if (PublicId != null)
+                    hashCode = hashCode * 59 + PublicId.GetHashCode();
+                if (RecordId != null)
+                    hashCode = hashCode * 59 + RecordId.GetHashCode();
+                if (SecurityGroupId != null)
+                    hashCode = hashCode * 59 + SecurityGroupId.GetHashCode();
+                if (ShortDisplayName != null)
+                    hashCode = hashCode * 59 + ShortDisplayName.GetHashCode();
+                if (UserCannotChangePassword != null)
+                    hashCode = hashCode * 59 + UserCannotChangePassword.GetHashCode();
+                if (UserMustResetPasswordAtNextLogin != null)
+                    hashCode = hashCode * 59 + UserMustResetPasswordAtNextLogin.GetHashCode();
+                if (ErrorCode != null)
+                    hashCode = hashCode * 59 + ErrorCode.GetHashCode();
+                if (ErrorMessage != null)
+                    hashCode = hashCode * 59 + ErrorMessage.GetHashCode();
+                if (HasError != null)
+                    hashCode = hashCode * 59 + HasError.GetHashCode();
+                if (HttpStatusCode != null)
+                    hashCode = hashCode * 59 + HttpStatusCode.GetHashCode();
                 return hashCode;
             }
         }
@@ -669,7 +669,7 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

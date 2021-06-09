@@ -26,10 +26,10 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="readRequests">readRequests.</param>
         /// <param name="stopOnError">stopOnError.</param>
-        public TrebuchetWebApiDataContractsUsersUserBatchReadRequest(List<TrebuchetWebApiDataContractsUsersUserReadRequest> readRequests = default(List<TrebuchetWebApiDataContractsUsersUserReadRequest>), bool? stopOnError = default(bool?))
+        public TrebuchetWebApiDataContractsUsersUserBatchReadRequest(List<TrebuchetWebApiDataContractsUsersUserReadRequest> readRequests = default, bool? stopOnError = default)
         {
-            this.ReadRequests = readRequests;
-            this.StopOnError = stopOnError;
+            ReadRequests = readRequests;
+            StopOnError = stopOnError;
         }
         
         /// <summary>
@@ -52,8 +52,8 @@ namespace CherwellConnector.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrebuchetWebApiDataContractsUsersUserBatchReadRequest {\n");
-            sb.Append("  ReadRequests: ").Append(this.ReadRequests).Append("\n");
-            sb.Append("  StopOnError: ").Append(this.StopOnError).Append("\n");
+            sb.Append("  ReadRequests: ").Append(ReadRequests).Append("\n");
+            sb.Append("  StopOnError: ").Append(StopOnError).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -74,7 +74,7 @@ namespace CherwellConnector.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as TrebuchetWebApiDataContractsUsersUserBatchReadRequest);
+            return Equals(input as TrebuchetWebApiDataContractsUsersUserBatchReadRequest);
         }
 
         /// <summary>
@@ -89,14 +89,14 @@ namespace CherwellConnector.Model
 
             return 
                 (
-                    this.ReadRequests == input.ReadRequests ||
-                    this.ReadRequests != null &&
-                    this.ReadRequests.SequenceEqual(input.ReadRequests)
+                    ReadRequests == input.ReadRequests ||
+                    ReadRequests != null &&
+                    ReadRequests.SequenceEqual(input.ReadRequests)
                 ) && 
                 (
-                    this.StopOnError == input.StopOnError ||
-                    (this.StopOnError != null &&
-                    this.StopOnError.Equals(input.StopOnError))
+                    StopOnError == input.StopOnError ||
+                    (StopOnError != null &&
+                    StopOnError.Equals(input.StopOnError))
                 );
         }
 
@@ -108,11 +108,11 @@ namespace CherwellConnector.Model
         {
             unchecked // Overflow is fine, just wrap
             {
-                int hashCode = 41;
-                if (this.ReadRequests != null)
-                    hashCode = hashCode * 59 + this.ReadRequests.GetHashCode();
-                if (this.StopOnError != null)
-                    hashCode = hashCode * 59 + this.StopOnError.GetHashCode();
+                var hashCode = 41;
+                if (ReadRequests != null)
+                    hashCode = hashCode * 59 + ReadRequests.GetHashCode();
+                if (StopOnError != null)
+                    hashCode = hashCode * 59 + StopOnError.GetHashCode();
                 return hashCode;
             }
         }
@@ -122,7 +122,7 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

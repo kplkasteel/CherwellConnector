@@ -326,15 +326,15 @@ namespace CherwellConnector.Model
         /// <param name="errorMessage">errorMessage.</param>
         /// <param name="hasError">hasError.</param>
         /// <param name="httpStatusCode">httpStatusCode.</param>
-        public TrebuchetWebApiDataContractsQueuesCheckInQueueItemResponse(string historyRecId = default(string), string historyText = default(string), string historyTypeId = default(string), string errorCode = default(string), string errorMessage = default(string), bool? hasError = default(bool?), HttpStatusCodeEnum? httpStatusCode = default(HttpStatusCodeEnum?))
+        public TrebuchetWebApiDataContractsQueuesCheckInQueueItemResponse(string historyRecId = default, string historyText = default, string historyTypeId = default, string errorCode = default, string errorMessage = default, bool? hasError = default, HttpStatusCodeEnum? httpStatusCode = default)
         {
-            this.HistoryRecId = historyRecId;
-            this.HistoryText = historyText;
-            this.HistoryTypeId = historyTypeId;
-            this.ErrorCode = errorCode;
-            this.ErrorMessage = errorMessage;
-            this.HasError = hasError;
-            this.HttpStatusCode = httpStatusCode;
+            HistoryRecId = historyRecId;
+            HistoryText = historyText;
+            HistoryTypeId = historyTypeId;
+            ErrorCode = errorCode;
+            ErrorMessage = errorMessage;
+            HasError = hasError;
+            HttpStatusCode = httpStatusCode;
         }
         
         /// <summary>
@@ -382,13 +382,13 @@ namespace CherwellConnector.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrebuchetWebApiDataContractsQueuesCheckInQueueItemResponse {\n");
-            sb.Append("  HistoryRecId: ").Append(this.HistoryRecId).Append("\n");
-            sb.Append("  HistoryText: ").Append(this.HistoryText).Append("\n");
-            sb.Append("  HistoryTypeId: ").Append(this.HistoryTypeId).Append("\n");
-            sb.Append("  ErrorCode: ").Append(this.ErrorCode).Append("\n");
-            sb.Append("  ErrorMessage: ").Append(this.ErrorMessage).Append("\n");
-            sb.Append("  HasError: ").Append(this.HasError).Append("\n");
-            sb.Append("  HttpStatusCode: ").Append(this.HttpStatusCode).Append("\n");
+            sb.Append("  HistoryRecId: ").Append(HistoryRecId).Append("\n");
+            sb.Append("  HistoryText: ").Append(HistoryText).Append("\n");
+            sb.Append("  HistoryTypeId: ").Append(HistoryTypeId).Append("\n");
+            sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
+            sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append("\n");
+            sb.Append("  HasError: ").Append(HasError).Append("\n");
+            sb.Append("  HttpStatusCode: ").Append(HttpStatusCode).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -409,7 +409,7 @@ namespace CherwellConnector.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as TrebuchetWebApiDataContractsQueuesCheckInQueueItemResponse);
+            return Equals(input as TrebuchetWebApiDataContractsQueuesCheckInQueueItemResponse);
         }
 
         /// <summary>
@@ -424,39 +424,39 @@ namespace CherwellConnector.Model
 
             return 
                 (
-                    this.HistoryRecId == input.HistoryRecId ||
-                    (this.HistoryRecId != null &&
-                    this.HistoryRecId.Equals(input.HistoryRecId))
+                    HistoryRecId == input.HistoryRecId ||
+                    (HistoryRecId != null &&
+                    HistoryRecId.Equals(input.HistoryRecId))
                 ) && 
                 (
-                    this.HistoryText == input.HistoryText ||
-                    (this.HistoryText != null &&
-                    this.HistoryText.Equals(input.HistoryText))
+                    HistoryText == input.HistoryText ||
+                    (HistoryText != null &&
+                    HistoryText.Equals(input.HistoryText))
                 ) && 
                 (
-                    this.HistoryTypeId == input.HistoryTypeId ||
-                    (this.HistoryTypeId != null &&
-                    this.HistoryTypeId.Equals(input.HistoryTypeId))
+                    HistoryTypeId == input.HistoryTypeId ||
+                    (HistoryTypeId != null &&
+                    HistoryTypeId.Equals(input.HistoryTypeId))
                 ) && 
                 (
-                    this.ErrorCode == input.ErrorCode ||
-                    (this.ErrorCode != null &&
-                    this.ErrorCode.Equals(input.ErrorCode))
+                    ErrorCode == input.ErrorCode ||
+                    (ErrorCode != null &&
+                    ErrorCode.Equals(input.ErrorCode))
                 ) && 
                 (
-                    this.ErrorMessage == input.ErrorMessage ||
-                    (this.ErrorMessage != null &&
-                    this.ErrorMessage.Equals(input.ErrorMessage))
+                    ErrorMessage == input.ErrorMessage ||
+                    (ErrorMessage != null &&
+                    ErrorMessage.Equals(input.ErrorMessage))
                 ) && 
                 (
-                    this.HasError == input.HasError ||
-                    (this.HasError != null &&
-                    this.HasError.Equals(input.HasError))
+                    HasError == input.HasError ||
+                    (HasError != null &&
+                    HasError.Equals(input.HasError))
                 ) && 
                 (
-                    this.HttpStatusCode == input.HttpStatusCode ||
-                    (this.HttpStatusCode != null &&
-                    this.HttpStatusCode.Equals(input.HttpStatusCode))
+                    HttpStatusCode == input.HttpStatusCode ||
+                    (HttpStatusCode != null &&
+                    HttpStatusCode.Equals(input.HttpStatusCode))
                 );
         }
 
@@ -468,21 +468,21 @@ namespace CherwellConnector.Model
         {
             unchecked // Overflow is fine, just wrap
             {
-                int hashCode = 41;
-                if (this.HistoryRecId != null)
-                    hashCode = hashCode * 59 + this.HistoryRecId.GetHashCode();
-                if (this.HistoryText != null)
-                    hashCode = hashCode * 59 + this.HistoryText.GetHashCode();
-                if (this.HistoryTypeId != null)
-                    hashCode = hashCode * 59 + this.HistoryTypeId.GetHashCode();
-                if (this.ErrorCode != null)
-                    hashCode = hashCode * 59 + this.ErrorCode.GetHashCode();
-                if (this.ErrorMessage != null)
-                    hashCode = hashCode * 59 + this.ErrorMessage.GetHashCode();
-                if (this.HasError != null)
-                    hashCode = hashCode * 59 + this.HasError.GetHashCode();
-                if (this.HttpStatusCode != null)
-                    hashCode = hashCode * 59 + this.HttpStatusCode.GetHashCode();
+                var hashCode = 41;
+                if (HistoryRecId != null)
+                    hashCode = hashCode * 59 + HistoryRecId.GetHashCode();
+                if (HistoryText != null)
+                    hashCode = hashCode * 59 + HistoryText.GetHashCode();
+                if (HistoryTypeId != null)
+                    hashCode = hashCode * 59 + HistoryTypeId.GetHashCode();
+                if (ErrorCode != null)
+                    hashCode = hashCode * 59 + ErrorCode.GetHashCode();
+                if (ErrorMessage != null)
+                    hashCode = hashCode * 59 + ErrorMessage.GetHashCode();
+                if (HasError != null)
+                    hashCode = hashCode * 59 + HasError.GetHashCode();
+                if (HttpStatusCode != null)
+                    hashCode = hashCode * 59 + HttpStatusCode.GetHashCode();
                 return hashCode;
             }
         }
@@ -492,7 +492,7 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

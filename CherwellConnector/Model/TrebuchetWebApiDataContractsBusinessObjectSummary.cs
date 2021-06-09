@@ -36,20 +36,20 @@ namespace CherwellConnector.Model
         /// <param name="major">major.</param>
         /// <param name="name">name.</param>
         /// <param name="supporting">supporting.</param>
-        public TrebuchetWebApiDataContractsBusinessObjectSummary(string firstRecIdField = default(string), List<TrebuchetWebApiDataContractsBusinessObjectSummary> groupSummaries = default(List<TrebuchetWebApiDataContractsBusinessObjectSummary>), string recIdFields = default(string), string stateFieldId = default(string), string states = default(string), string busObId = default(string), string displayName = default(string), bool? group = default(bool?), bool? lookup = default(bool?), bool? major = default(bool?), string name = default(string), bool? supporting = default(bool?))
+        public TrebuchetWebApiDataContractsBusinessObjectSummary(string firstRecIdField = default, List<TrebuchetWebApiDataContractsBusinessObjectSummary> groupSummaries = default, string recIdFields = default, string stateFieldId = default, string states = default, string busObId = default, string displayName = default, bool? group = default, bool? lookup = default, bool? major = default, string name = default, bool? supporting = default)
         {
-            this.FirstRecIdField = firstRecIdField;
-            this.GroupSummaries = groupSummaries;
-            this.RecIdFields = recIdFields;
-            this.StateFieldId = stateFieldId;
-            this.States = states;
-            this.BusObId = busObId;
-            this.DisplayName = displayName;
-            this.Group = group;
-            this.Lookup = lookup;
-            this.Major = major;
-            this.Name = name;
-            this.Supporting = supporting;
+            FirstRecIdField = firstRecIdField;
+            GroupSummaries = groupSummaries;
+            RecIdFields = recIdFields;
+            StateFieldId = stateFieldId;
+            States = states;
+            BusObId = busObId;
+            DisplayName = displayName;
+            Group = group;
+            Lookup = lookup;
+            Major = major;
+            Name = name;
+            Supporting = supporting;
         }
         
         /// <summary>
@@ -132,18 +132,18 @@ namespace CherwellConnector.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrebuchetWebApiDataContractsBusinessObjectSummary {\n");
-            sb.Append("  FirstRecIdField: ").Append(this.FirstRecIdField).Append("\n");
-            sb.Append("  GroupSummaries: ").Append(this.GroupSummaries).Append("\n");
-            sb.Append("  RecIdFields: ").Append(this.RecIdFields).Append("\n");
-            sb.Append("  StateFieldId: ").Append(this.StateFieldId).Append("\n");
-            sb.Append("  States: ").Append(this.States).Append("\n");
-            sb.Append("  BusObId: ").Append(this.BusObId).Append("\n");
-            sb.Append("  DisplayName: ").Append(this.DisplayName).Append("\n");
-            sb.Append("  Group: ").Append(this.Group).Append("\n");
-            sb.Append("  Lookup: ").Append(this.Lookup).Append("\n");
-            sb.Append("  Major: ").Append(this.Major).Append("\n");
-            sb.Append("  Name: ").Append(this.Name).Append("\n");
-            sb.Append("  Supporting: ").Append(this.Supporting).Append("\n");
+            sb.Append("  FirstRecIdField: ").Append(FirstRecIdField).Append("\n");
+            sb.Append("  GroupSummaries: ").Append(GroupSummaries).Append("\n");
+            sb.Append("  RecIdFields: ").Append(RecIdFields).Append("\n");
+            sb.Append("  StateFieldId: ").Append(StateFieldId).Append("\n");
+            sb.Append("  States: ").Append(States).Append("\n");
+            sb.Append("  BusObId: ").Append(BusObId).Append("\n");
+            sb.Append("  DisplayName: ").Append(DisplayName).Append("\n");
+            sb.Append("  Group: ").Append(Group).Append("\n");
+            sb.Append("  Lookup: ").Append(Lookup).Append("\n");
+            sb.Append("  Major: ").Append(Major).Append("\n");
+            sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  Supporting: ").Append(Supporting).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -164,7 +164,7 @@ namespace CherwellConnector.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as TrebuchetWebApiDataContractsBusinessObjectSummary);
+            return Equals(input as TrebuchetWebApiDataContractsBusinessObjectSummary);
         }
 
         /// <summary>
@@ -179,64 +179,64 @@ namespace CherwellConnector.Model
 
             return 
                 (
-                    this.FirstRecIdField == input.FirstRecIdField ||
-                    (this.FirstRecIdField != null &&
-                    this.FirstRecIdField.Equals(input.FirstRecIdField))
+                    FirstRecIdField == input.FirstRecIdField ||
+                    (FirstRecIdField != null &&
+                    FirstRecIdField.Equals(input.FirstRecIdField))
                 ) && 
                 (
-                    this.GroupSummaries == input.GroupSummaries ||
-                    this.GroupSummaries != null &&
-                    this.GroupSummaries.SequenceEqual(input.GroupSummaries)
+                    GroupSummaries == input.GroupSummaries ||
+                    GroupSummaries != null &&
+                    GroupSummaries.SequenceEqual(input.GroupSummaries)
                 ) && 
                 (
-                    this.RecIdFields == input.RecIdFields ||
-                    (this.RecIdFields != null &&
-                    this.RecIdFields.Equals(input.RecIdFields))
+                    RecIdFields == input.RecIdFields ||
+                    (RecIdFields != null &&
+                    RecIdFields.Equals(input.RecIdFields))
                 ) && 
                 (
-                    this.StateFieldId == input.StateFieldId ||
-                    (this.StateFieldId != null &&
-                    this.StateFieldId.Equals(input.StateFieldId))
+                    StateFieldId == input.StateFieldId ||
+                    (StateFieldId != null &&
+                    StateFieldId.Equals(input.StateFieldId))
                 ) && 
                 (
-                    this.States == input.States ||
-                    (this.States != null &&
-                    this.States.Equals(input.States))
+                    States == input.States ||
+                    (States != null &&
+                    States.Equals(input.States))
                 ) && 
                 (
-                    this.BusObId == input.BusObId ||
-                    (this.BusObId != null &&
-                    this.BusObId.Equals(input.BusObId))
+                    BusObId == input.BusObId ||
+                    (BusObId != null &&
+                    BusObId.Equals(input.BusObId))
                 ) && 
                 (
-                    this.DisplayName == input.DisplayName ||
-                    (this.DisplayName != null &&
-                    this.DisplayName.Equals(input.DisplayName))
+                    DisplayName == input.DisplayName ||
+                    (DisplayName != null &&
+                    DisplayName.Equals(input.DisplayName))
                 ) && 
                 (
-                    this.Group == input.Group ||
-                    (this.Group != null &&
-                    this.Group.Equals(input.Group))
+                    Group == input.Group ||
+                    (Group != null &&
+                    Group.Equals(input.Group))
                 ) && 
                 (
-                    this.Lookup == input.Lookup ||
-                    (this.Lookup != null &&
-                    this.Lookup.Equals(input.Lookup))
+                    Lookup == input.Lookup ||
+                    (Lookup != null &&
+                    Lookup.Equals(input.Lookup))
                 ) && 
                 (
-                    this.Major == input.Major ||
-                    (this.Major != null &&
-                    this.Major.Equals(input.Major))
+                    Major == input.Major ||
+                    (Major != null &&
+                    Major.Equals(input.Major))
                 ) && 
                 (
-                    this.Name == input.Name ||
-                    (this.Name != null &&
-                    this.Name.Equals(input.Name))
+                    Name == input.Name ||
+                    (Name != null &&
+                    Name.Equals(input.Name))
                 ) && 
                 (
-                    this.Supporting == input.Supporting ||
-                    (this.Supporting != null &&
-                    this.Supporting.Equals(input.Supporting))
+                    Supporting == input.Supporting ||
+                    (Supporting != null &&
+                    Supporting.Equals(input.Supporting))
                 );
         }
 
@@ -248,31 +248,31 @@ namespace CherwellConnector.Model
         {
             unchecked // Overflow is fine, just wrap
             {
-                int hashCode = 41;
-                if (this.FirstRecIdField != null)
-                    hashCode = hashCode * 59 + this.FirstRecIdField.GetHashCode();
-                if (this.GroupSummaries != null)
-                    hashCode = hashCode * 59 + this.GroupSummaries.GetHashCode();
-                if (this.RecIdFields != null)
-                    hashCode = hashCode * 59 + this.RecIdFields.GetHashCode();
-                if (this.StateFieldId != null)
-                    hashCode = hashCode * 59 + this.StateFieldId.GetHashCode();
-                if (this.States != null)
-                    hashCode = hashCode * 59 + this.States.GetHashCode();
-                if (this.BusObId != null)
-                    hashCode = hashCode * 59 + this.BusObId.GetHashCode();
-                if (this.DisplayName != null)
-                    hashCode = hashCode * 59 + this.DisplayName.GetHashCode();
-                if (this.Group != null)
-                    hashCode = hashCode * 59 + this.Group.GetHashCode();
-                if (this.Lookup != null)
-                    hashCode = hashCode * 59 + this.Lookup.GetHashCode();
-                if (this.Major != null)
-                    hashCode = hashCode * 59 + this.Major.GetHashCode();
-                if (this.Name != null)
-                    hashCode = hashCode * 59 + this.Name.GetHashCode();
-                if (this.Supporting != null)
-                    hashCode = hashCode * 59 + this.Supporting.GetHashCode();
+                var hashCode = 41;
+                if (FirstRecIdField != null)
+                    hashCode = hashCode * 59 + FirstRecIdField.GetHashCode();
+                if (GroupSummaries != null)
+                    hashCode = hashCode * 59 + GroupSummaries.GetHashCode();
+                if (RecIdFields != null)
+                    hashCode = hashCode * 59 + RecIdFields.GetHashCode();
+                if (StateFieldId != null)
+                    hashCode = hashCode * 59 + StateFieldId.GetHashCode();
+                if (States != null)
+                    hashCode = hashCode * 59 + States.GetHashCode();
+                if (BusObId != null)
+                    hashCode = hashCode * 59 + BusObId.GetHashCode();
+                if (DisplayName != null)
+                    hashCode = hashCode * 59 + DisplayName.GetHashCode();
+                if (Group != null)
+                    hashCode = hashCode * 59 + Group.GetHashCode();
+                if (Lookup != null)
+                    hashCode = hashCode * 59 + Lookup.GetHashCode();
+                if (Major != null)
+                    hashCode = hashCode * 59 + Major.GetHashCode();
+                if (Name != null)
+                    hashCode = hashCode * 59 + Name.GetHashCode();
+                if (Supporting != null)
+                    hashCode = hashCode * 59 + Supporting.GetHashCode();
                 return hashCode;
             }
         }
@@ -282,7 +282,7 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

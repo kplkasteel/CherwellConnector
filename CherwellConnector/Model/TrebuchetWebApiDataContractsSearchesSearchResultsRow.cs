@@ -30,14 +30,14 @@ namespace CherwellConnector.Model
         /// <param name="publicId">publicId.</param>
         /// <param name="rowColor">rowColor.</param>
         /// <param name="searchResultsFieldValues">searchResultsFieldValues.</param>
-        public TrebuchetWebApiDataContractsSearchesSearchResultsRow(string busObId = default(string), string busObRecId = default(string), List<TrebuchetWebApiDataContractsCoreLink> links = default(List<TrebuchetWebApiDataContractsCoreLink>), string publicId = default(string), string rowColor = default(string), List<TrebuchetWebApiDataContractsBusinessObjectFieldTemplateItem> searchResultsFieldValues = default(List<TrebuchetWebApiDataContractsBusinessObjectFieldTemplateItem>))
+        public TrebuchetWebApiDataContractsSearchesSearchResultsRow(string busObId = default, string busObRecId = default, List<TrebuchetWebApiDataContractsCoreLink> links = default, string publicId = default, string rowColor = default, List<FieldTemplateItem> searchResultsFieldValues = default)
         {
-            this.BusObId = busObId;
-            this.BusObRecId = busObRecId;
-            this.Links = links;
-            this.PublicId = publicId;
-            this.RowColor = rowColor;
-            this.SearchResultsFieldValues = searchResultsFieldValues;
+            BusObId = busObId;
+            BusObRecId = busObRecId;
+            Links = links;
+            PublicId = publicId;
+            RowColor = rowColor;
+            SearchResultsFieldValues = searchResultsFieldValues;
         }
         
         /// <summary>
@@ -74,7 +74,7 @@ namespace CherwellConnector.Model
         /// Gets or Sets SearchResultsFieldValues
         /// </summary>
         [DataMember(Name="searchResultsFieldValues", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsBusinessObjectFieldTemplateItem> SearchResultsFieldValues { get; set; }
+        public List<FieldTemplateItem> SearchResultsFieldValues { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -84,12 +84,12 @@ namespace CherwellConnector.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrebuchetWebApiDataContractsSearchesSearchResultsRow {\n");
-            sb.Append("  BusObId: ").Append(this.BusObId).Append("\n");
-            sb.Append("  BusObRecId: ").Append(this.BusObRecId).Append("\n");
-            sb.Append("  Links: ").Append(this.Links).Append("\n");
-            sb.Append("  PublicId: ").Append(this.PublicId).Append("\n");
-            sb.Append("  RowColor: ").Append(this.RowColor).Append("\n");
-            sb.Append("  SearchResultsFieldValues: ").Append(this.SearchResultsFieldValues).Append("\n");
+            sb.Append("  BusObId: ").Append(BusObId).Append("\n");
+            sb.Append("  BusObRecId: ").Append(BusObRecId).Append("\n");
+            sb.Append("  Links: ").Append(Links).Append("\n");
+            sb.Append("  PublicId: ").Append(PublicId).Append("\n");
+            sb.Append("  RowColor: ").Append(RowColor).Append("\n");
+            sb.Append("  SearchResultsFieldValues: ").Append(SearchResultsFieldValues).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -110,7 +110,7 @@ namespace CherwellConnector.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as TrebuchetWebApiDataContractsSearchesSearchResultsRow);
+            return Equals(input as TrebuchetWebApiDataContractsSearchesSearchResultsRow);
         }
 
         /// <summary>
@@ -125,34 +125,34 @@ namespace CherwellConnector.Model
 
             return 
                 (
-                    this.BusObId == input.BusObId ||
-                    (this.BusObId != null &&
-                    this.BusObId.Equals(input.BusObId))
+                    BusObId == input.BusObId ||
+                    (BusObId != null &&
+                    BusObId.Equals(input.BusObId))
                 ) && 
                 (
-                    this.BusObRecId == input.BusObRecId ||
-                    (this.BusObRecId != null &&
-                    this.BusObRecId.Equals(input.BusObRecId))
+                    BusObRecId == input.BusObRecId ||
+                    (BusObRecId != null &&
+                    BusObRecId.Equals(input.BusObRecId))
                 ) && 
                 (
-                    this.Links == input.Links ||
-                    this.Links != null &&
-                    this.Links.SequenceEqual(input.Links)
+                    Links == input.Links ||
+                    Links != null &&
+                    Links.SequenceEqual(input.Links)
                 ) && 
                 (
-                    this.PublicId == input.PublicId ||
-                    (this.PublicId != null &&
-                    this.PublicId.Equals(input.PublicId))
+                    PublicId == input.PublicId ||
+                    (PublicId != null &&
+                    PublicId.Equals(input.PublicId))
                 ) && 
                 (
-                    this.RowColor == input.RowColor ||
-                    (this.RowColor != null &&
-                    this.RowColor.Equals(input.RowColor))
+                    RowColor == input.RowColor ||
+                    (RowColor != null &&
+                    RowColor.Equals(input.RowColor))
                 ) && 
                 (
-                    this.SearchResultsFieldValues == input.SearchResultsFieldValues ||
-                    this.SearchResultsFieldValues != null &&
-                    this.SearchResultsFieldValues.SequenceEqual(input.SearchResultsFieldValues)
+                    SearchResultsFieldValues == input.SearchResultsFieldValues ||
+                    SearchResultsFieldValues != null &&
+                    SearchResultsFieldValues.SequenceEqual(input.SearchResultsFieldValues)
                 );
         }
 
@@ -164,19 +164,19 @@ namespace CherwellConnector.Model
         {
             unchecked // Overflow is fine, just wrap
             {
-                int hashCode = 41;
-                if (this.BusObId != null)
-                    hashCode = hashCode * 59 + this.BusObId.GetHashCode();
-                if (this.BusObRecId != null)
-                    hashCode = hashCode * 59 + this.BusObRecId.GetHashCode();
-                if (this.Links != null)
-                    hashCode = hashCode * 59 + this.Links.GetHashCode();
-                if (this.PublicId != null)
-                    hashCode = hashCode * 59 + this.PublicId.GetHashCode();
-                if (this.RowColor != null)
-                    hashCode = hashCode * 59 + this.RowColor.GetHashCode();
-                if (this.SearchResultsFieldValues != null)
-                    hashCode = hashCode * 59 + this.SearchResultsFieldValues.GetHashCode();
+                var hashCode = 41;
+                if (BusObId != null)
+                    hashCode = hashCode * 59 + BusObId.GetHashCode();
+                if (BusObRecId != null)
+                    hashCode = hashCode * 59 + BusObRecId.GetHashCode();
+                if (Links != null)
+                    hashCode = hashCode * 59 + Links.GetHashCode();
+                if (PublicId != null)
+                    hashCode = hashCode * 59 + PublicId.GetHashCode();
+                if (RowColor != null)
+                    hashCode = hashCode * 59 + RowColor.GetHashCode();
+                if (SearchResultsFieldValues != null)
+                    hashCode = hashCode * 59 + SearchResultsFieldValues.GetHashCode();
                 return hashCode;
             }
         }
@@ -186,7 +186,7 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

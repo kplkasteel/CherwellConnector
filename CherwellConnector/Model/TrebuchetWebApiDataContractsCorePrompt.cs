@@ -184,27 +184,27 @@ namespace CherwellConnector.Model
         /// <param name="text">text.</param>
         /// <param name="value">value.</param>
         /// <param name="values">values.</param>
-        public TrebuchetWebApiDataContractsCorePrompt(bool? allowValuesOnly = default(bool?), string busObId = default(string), string collectionStoreEntireRow = default(string), string collectionValueField = default(string), string constraintXml = default(string), string contents = default(string), string _default = default(string), string fieldId = default(string), bool? isDateRange = default(bool?), ListDisplayOptionEnum? listDisplayOption = default(ListDisplayOptionEnum?), string listReturnFieldId = default(string), bool? multiLine = default(bool?), string promptId = default(string), PromptTypeEnum? promptType = default(PromptTypeEnum?), string promptTypeName = default(string), bool? required = default(bool?), string text = default(string), Object value = default(Object), List<string> values = default(List<string>))
+        public TrebuchetWebApiDataContractsCorePrompt(bool? allowValuesOnly = default, string busObId = default, string collectionStoreEntireRow = default, string collectionValueField = default, string constraintXml = default, string contents = default, string _default = default, string fieldId = default, bool? isDateRange = default, ListDisplayOptionEnum? listDisplayOption = default, string listReturnFieldId = default, bool? multiLine = default, string promptId = default, PromptTypeEnum? promptType = default, string promptTypeName = default, bool? required = default, string text = default, Object value = default, List<string> values = default)
         {
-            this.AllowValuesOnly = allowValuesOnly;
-            this.BusObId = busObId;
-            this.CollectionStoreEntireRow = collectionStoreEntireRow;
-            this.CollectionValueField = collectionValueField;
-            this.ConstraintXml = constraintXml;
-            this.Contents = contents;
-            this.Default = _default;
-            this.FieldId = fieldId;
-            this.IsDateRange = isDateRange;
-            this.ListDisplayOption = listDisplayOption;
-            this.ListReturnFieldId = listReturnFieldId;
-            this.MultiLine = multiLine;
-            this.PromptId = promptId;
-            this.PromptType = promptType;
-            this.PromptTypeName = promptTypeName;
-            this.Required = required;
-            this.Text = text;
-            this.Value = value;
-            this.Values = values;
+            AllowValuesOnly = allowValuesOnly;
+            BusObId = busObId;
+            CollectionStoreEntireRow = collectionStoreEntireRow;
+            CollectionValueField = collectionValueField;
+            ConstraintXml = constraintXml;
+            Contents = contents;
+            Default = _default;
+            FieldId = fieldId;
+            IsDateRange = isDateRange;
+            ListDisplayOption = listDisplayOption;
+            ListReturnFieldId = listReturnFieldId;
+            MultiLine = multiLine;
+            PromptId = promptId;
+            PromptType = promptType;
+            PromptTypeName = promptTypeName;
+            Required = required;
+            Text = text;
+            Value = value;
+            Values = values;
         }
         
         /// <summary>
@@ -319,25 +319,25 @@ namespace CherwellConnector.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrebuchetWebApiDataContractsCorePrompt {\n");
-            sb.Append("  AllowValuesOnly: ").Append(this.AllowValuesOnly).Append("\n");
-            sb.Append("  BusObId: ").Append(this.BusObId).Append("\n");
-            sb.Append("  CollectionStoreEntireRow: ").Append(this.CollectionStoreEntireRow).Append("\n");
-            sb.Append("  CollectionValueField: ").Append(this.CollectionValueField).Append("\n");
-            sb.Append("  ConstraintXml: ").Append(this.ConstraintXml).Append("\n");
-            sb.Append("  Contents: ").Append(this.Contents).Append("\n");
-            sb.Append("  Default: ").Append(this.Default).Append("\n");
-            sb.Append("  FieldId: ").Append(this.FieldId).Append("\n");
-            sb.Append("  IsDateRange: ").Append(this.IsDateRange).Append("\n");
-            sb.Append("  ListDisplayOption: ").Append(this.ListDisplayOption).Append("\n");
-            sb.Append("  ListReturnFieldId: ").Append(this.ListReturnFieldId).Append("\n");
-            sb.Append("  MultiLine: ").Append(this.MultiLine).Append("\n");
-            sb.Append("  PromptId: ").Append(this.PromptId).Append("\n");
-            sb.Append("  PromptType: ").Append(this.PromptType).Append("\n");
-            sb.Append("  PromptTypeName: ").Append(this.PromptTypeName).Append("\n");
-            sb.Append("  Required: ").Append(this.Required).Append("\n");
-            sb.Append("  Text: ").Append(this.Text).Append("\n");
-            sb.Append("  Value: ").Append(this.Value).Append("\n");
-            sb.Append("  Values: ").Append(this.Values).Append("\n");
+            sb.Append("  AllowValuesOnly: ").Append(AllowValuesOnly).Append("\n");
+            sb.Append("  BusObId: ").Append(BusObId).Append("\n");
+            sb.Append("  CollectionStoreEntireRow: ").Append(CollectionStoreEntireRow).Append("\n");
+            sb.Append("  CollectionValueField: ").Append(CollectionValueField).Append("\n");
+            sb.Append("  ConstraintXml: ").Append(ConstraintXml).Append("\n");
+            sb.Append("  Contents: ").Append(Contents).Append("\n");
+            sb.Append("  Default: ").Append(Default).Append("\n");
+            sb.Append("  FieldId: ").Append(FieldId).Append("\n");
+            sb.Append("  IsDateRange: ").Append(IsDateRange).Append("\n");
+            sb.Append("  ListDisplayOption: ").Append(ListDisplayOption).Append("\n");
+            sb.Append("  ListReturnFieldId: ").Append(ListReturnFieldId).Append("\n");
+            sb.Append("  MultiLine: ").Append(MultiLine).Append("\n");
+            sb.Append("  PromptId: ").Append(PromptId).Append("\n");
+            sb.Append("  PromptType: ").Append(PromptType).Append("\n");
+            sb.Append("  PromptTypeName: ").Append(PromptTypeName).Append("\n");
+            sb.Append("  Required: ").Append(Required).Append("\n");
+            sb.Append("  Text: ").Append(Text).Append("\n");
+            sb.Append("  Value: ").Append(Value).Append("\n");
+            sb.Append("  Values: ").Append(Values).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -358,7 +358,7 @@ namespace CherwellConnector.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as TrebuchetWebApiDataContractsCorePrompt);
+            return Equals(input as TrebuchetWebApiDataContractsCorePrompt);
         }
 
         /// <summary>
@@ -373,99 +373,99 @@ namespace CherwellConnector.Model
 
             return 
                 (
-                    this.AllowValuesOnly == input.AllowValuesOnly ||
-                    (this.AllowValuesOnly != null &&
-                    this.AllowValuesOnly.Equals(input.AllowValuesOnly))
+                    AllowValuesOnly == input.AllowValuesOnly ||
+                    (AllowValuesOnly != null &&
+                    AllowValuesOnly.Equals(input.AllowValuesOnly))
                 ) && 
                 (
-                    this.BusObId == input.BusObId ||
-                    (this.BusObId != null &&
-                    this.BusObId.Equals(input.BusObId))
+                    BusObId == input.BusObId ||
+                    (BusObId != null &&
+                    BusObId.Equals(input.BusObId))
                 ) && 
                 (
-                    this.CollectionStoreEntireRow == input.CollectionStoreEntireRow ||
-                    (this.CollectionStoreEntireRow != null &&
-                    this.CollectionStoreEntireRow.Equals(input.CollectionStoreEntireRow))
+                    CollectionStoreEntireRow == input.CollectionStoreEntireRow ||
+                    (CollectionStoreEntireRow != null &&
+                    CollectionStoreEntireRow.Equals(input.CollectionStoreEntireRow))
                 ) && 
                 (
-                    this.CollectionValueField == input.CollectionValueField ||
-                    (this.CollectionValueField != null &&
-                    this.CollectionValueField.Equals(input.CollectionValueField))
+                    CollectionValueField == input.CollectionValueField ||
+                    (CollectionValueField != null &&
+                    CollectionValueField.Equals(input.CollectionValueField))
                 ) && 
                 (
-                    this.ConstraintXml == input.ConstraintXml ||
-                    (this.ConstraintXml != null &&
-                    this.ConstraintXml.Equals(input.ConstraintXml))
+                    ConstraintXml == input.ConstraintXml ||
+                    (ConstraintXml != null &&
+                    ConstraintXml.Equals(input.ConstraintXml))
                 ) && 
                 (
-                    this.Contents == input.Contents ||
-                    (this.Contents != null &&
-                    this.Contents.Equals(input.Contents))
+                    Contents == input.Contents ||
+                    (Contents != null &&
+                    Contents.Equals(input.Contents))
                 ) && 
                 (
-                    this.Default == input.Default ||
-                    (this.Default != null &&
-                    this.Default.Equals(input.Default))
+                    Default == input.Default ||
+                    (Default != null &&
+                    Default.Equals(input.Default))
                 ) && 
                 (
-                    this.FieldId == input.FieldId ||
-                    (this.FieldId != null &&
-                    this.FieldId.Equals(input.FieldId))
+                    FieldId == input.FieldId ||
+                    (FieldId != null &&
+                    FieldId.Equals(input.FieldId))
                 ) && 
                 (
-                    this.IsDateRange == input.IsDateRange ||
-                    (this.IsDateRange != null &&
-                    this.IsDateRange.Equals(input.IsDateRange))
+                    IsDateRange == input.IsDateRange ||
+                    (IsDateRange != null &&
+                    IsDateRange.Equals(input.IsDateRange))
                 ) && 
                 (
-                    this.ListDisplayOption == input.ListDisplayOption ||
-                    (this.ListDisplayOption != null &&
-                    this.ListDisplayOption.Equals(input.ListDisplayOption))
+                    ListDisplayOption == input.ListDisplayOption ||
+                    (ListDisplayOption != null &&
+                    ListDisplayOption.Equals(input.ListDisplayOption))
                 ) && 
                 (
-                    this.ListReturnFieldId == input.ListReturnFieldId ||
-                    (this.ListReturnFieldId != null &&
-                    this.ListReturnFieldId.Equals(input.ListReturnFieldId))
+                    ListReturnFieldId == input.ListReturnFieldId ||
+                    (ListReturnFieldId != null &&
+                    ListReturnFieldId.Equals(input.ListReturnFieldId))
                 ) && 
                 (
-                    this.MultiLine == input.MultiLine ||
-                    (this.MultiLine != null &&
-                    this.MultiLine.Equals(input.MultiLine))
+                    MultiLine == input.MultiLine ||
+                    (MultiLine != null &&
+                    MultiLine.Equals(input.MultiLine))
                 ) && 
                 (
-                    this.PromptId == input.PromptId ||
-                    (this.PromptId != null &&
-                    this.PromptId.Equals(input.PromptId))
+                    PromptId == input.PromptId ||
+                    (PromptId != null &&
+                    PromptId.Equals(input.PromptId))
                 ) && 
                 (
-                    this.PromptType == input.PromptType ||
-                    (this.PromptType != null &&
-                    this.PromptType.Equals(input.PromptType))
+                    PromptType == input.PromptType ||
+                    (PromptType != null &&
+                    PromptType.Equals(input.PromptType))
                 ) && 
                 (
-                    this.PromptTypeName == input.PromptTypeName ||
-                    (this.PromptTypeName != null &&
-                    this.PromptTypeName.Equals(input.PromptTypeName))
+                    PromptTypeName == input.PromptTypeName ||
+                    (PromptTypeName != null &&
+                    PromptTypeName.Equals(input.PromptTypeName))
                 ) && 
                 (
-                    this.Required == input.Required ||
-                    (this.Required != null &&
-                    this.Required.Equals(input.Required))
+                    Required == input.Required ||
+                    (Required != null &&
+                    Required.Equals(input.Required))
                 ) && 
                 (
-                    this.Text == input.Text ||
-                    (this.Text != null &&
-                    this.Text.Equals(input.Text))
+                    Text == input.Text ||
+                    (Text != null &&
+                    Text.Equals(input.Text))
                 ) && 
                 (
-                    this.Value == input.Value ||
-                    (this.Value != null &&
-                    this.Value.Equals(input.Value))
+                    Value == input.Value ||
+                    (Value != null &&
+                    Value.Equals(input.Value))
                 ) && 
                 (
-                    this.Values == input.Values ||
-                    this.Values != null &&
-                    this.Values.SequenceEqual(input.Values)
+                    Values == input.Values ||
+                    Values != null &&
+                    Values.SequenceEqual(input.Values)
                 );
         }
 
@@ -477,45 +477,45 @@ namespace CherwellConnector.Model
         {
             unchecked // Overflow is fine, just wrap
             {
-                int hashCode = 41;
-                if (this.AllowValuesOnly != null)
-                    hashCode = hashCode * 59 + this.AllowValuesOnly.GetHashCode();
-                if (this.BusObId != null)
-                    hashCode = hashCode * 59 + this.BusObId.GetHashCode();
-                if (this.CollectionStoreEntireRow != null)
-                    hashCode = hashCode * 59 + this.CollectionStoreEntireRow.GetHashCode();
-                if (this.CollectionValueField != null)
-                    hashCode = hashCode * 59 + this.CollectionValueField.GetHashCode();
-                if (this.ConstraintXml != null)
-                    hashCode = hashCode * 59 + this.ConstraintXml.GetHashCode();
-                if (this.Contents != null)
-                    hashCode = hashCode * 59 + this.Contents.GetHashCode();
-                if (this.Default != null)
-                    hashCode = hashCode * 59 + this.Default.GetHashCode();
-                if (this.FieldId != null)
-                    hashCode = hashCode * 59 + this.FieldId.GetHashCode();
-                if (this.IsDateRange != null)
-                    hashCode = hashCode * 59 + this.IsDateRange.GetHashCode();
-                if (this.ListDisplayOption != null)
-                    hashCode = hashCode * 59 + this.ListDisplayOption.GetHashCode();
-                if (this.ListReturnFieldId != null)
-                    hashCode = hashCode * 59 + this.ListReturnFieldId.GetHashCode();
-                if (this.MultiLine != null)
-                    hashCode = hashCode * 59 + this.MultiLine.GetHashCode();
-                if (this.PromptId != null)
-                    hashCode = hashCode * 59 + this.PromptId.GetHashCode();
-                if (this.PromptType != null)
-                    hashCode = hashCode * 59 + this.PromptType.GetHashCode();
-                if (this.PromptTypeName != null)
-                    hashCode = hashCode * 59 + this.PromptTypeName.GetHashCode();
-                if (this.Required != null)
-                    hashCode = hashCode * 59 + this.Required.GetHashCode();
-                if (this.Text != null)
-                    hashCode = hashCode * 59 + this.Text.GetHashCode();
-                if (this.Value != null)
-                    hashCode = hashCode * 59 + this.Value.GetHashCode();
-                if (this.Values != null)
-                    hashCode = hashCode * 59 + this.Values.GetHashCode();
+                var hashCode = 41;
+                if (AllowValuesOnly != null)
+                    hashCode = hashCode * 59 + AllowValuesOnly.GetHashCode();
+                if (BusObId != null)
+                    hashCode = hashCode * 59 + BusObId.GetHashCode();
+                if (CollectionStoreEntireRow != null)
+                    hashCode = hashCode * 59 + CollectionStoreEntireRow.GetHashCode();
+                if (CollectionValueField != null)
+                    hashCode = hashCode * 59 + CollectionValueField.GetHashCode();
+                if (ConstraintXml != null)
+                    hashCode = hashCode * 59 + ConstraintXml.GetHashCode();
+                if (Contents != null)
+                    hashCode = hashCode * 59 + Contents.GetHashCode();
+                if (Default != null)
+                    hashCode = hashCode * 59 + Default.GetHashCode();
+                if (FieldId != null)
+                    hashCode = hashCode * 59 + FieldId.GetHashCode();
+                if (IsDateRange != null)
+                    hashCode = hashCode * 59 + IsDateRange.GetHashCode();
+                if (ListDisplayOption != null)
+                    hashCode = hashCode * 59 + ListDisplayOption.GetHashCode();
+                if (ListReturnFieldId != null)
+                    hashCode = hashCode * 59 + ListReturnFieldId.GetHashCode();
+                if (MultiLine != null)
+                    hashCode = hashCode * 59 + MultiLine.GetHashCode();
+                if (PromptId != null)
+                    hashCode = hashCode * 59 + PromptId.GetHashCode();
+                if (PromptType != null)
+                    hashCode = hashCode * 59 + PromptType.GetHashCode();
+                if (PromptTypeName != null)
+                    hashCode = hashCode * 59 + PromptTypeName.GetHashCode();
+                if (Required != null)
+                    hashCode = hashCode * 59 + Required.GetHashCode();
+                if (Text != null)
+                    hashCode = hashCode * 59 + Text.GetHashCode();
+                if (Value != null)
+                    hashCode = hashCode * 59 + Value.GetHashCode();
+                if (Values != null)
+                    hashCode = hashCode * 59 + Values.GetHashCode();
                 return hashCode;
             }
         }
@@ -525,7 +525,7 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

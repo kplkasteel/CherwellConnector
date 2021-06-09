@@ -211,23 +211,23 @@ namespace CherwellConnector.Model
         /// <param name="name">name.</param>
         /// <param name="parameters">parameters.</param>
         /// <param name="visible">visible.</param>
-        public TrebuchetWebApiDataContractsCoreAction(string actionCommand = default(string), ActionTypeEnum? actionType = default(ActionTypeEnum?), bool? alwaysTextAndImage = default(bool?), bool? beginGroup = default(bool?), List<TrebuchetWebApiDataContractsCoreAction> childActions = default(List<TrebuchetWebApiDataContractsCoreAction>), List<string> dependencies = default(List<string>), string displayText = default(string), bool? enabled = default(bool?), string galleryImage = default(string), string helpText = default(string), LoginEnabledModeEnum? loginEnabledMode = default(LoginEnabledModeEnum?), LoginVisibilityModeEnum? loginVisibilityMode = default(LoginVisibilityModeEnum?), string name = default(string), Dictionary<string, string> parameters = default(Dictionary<string, string>), bool? visible = default(bool?))
+        public TrebuchetWebApiDataContractsCoreAction(string actionCommand = default, ActionTypeEnum? actionType = default, bool? alwaysTextAndImage = default, bool? beginGroup = default, List<TrebuchetWebApiDataContractsCoreAction> childActions = default, List<string> dependencies = default, string displayText = default, bool? enabled = default, string galleryImage = default, string helpText = default, LoginEnabledModeEnum? loginEnabledMode = default, LoginVisibilityModeEnum? loginVisibilityMode = default, string name = default, Dictionary<string, string> parameters = default, bool? visible = default)
         {
-            this.ActionCommand = actionCommand;
-            this.ActionType = actionType;
-            this.AlwaysTextAndImage = alwaysTextAndImage;
-            this.BeginGroup = beginGroup;
-            this.ChildActions = childActions;
-            this.Dependencies = dependencies;
-            this.DisplayText = displayText;
-            this.Enabled = enabled;
-            this.GalleryImage = galleryImage;
-            this.HelpText = helpText;
-            this.LoginEnabledMode = loginEnabledMode;
-            this.LoginVisibilityMode = loginVisibilityMode;
-            this.Name = name;
-            this.Parameters = parameters;
-            this.Visible = visible;
+            ActionCommand = actionCommand;
+            ActionType = actionType;
+            AlwaysTextAndImage = alwaysTextAndImage;
+            BeginGroup = beginGroup;
+            ChildActions = childActions;
+            Dependencies = dependencies;
+            DisplayText = displayText;
+            Enabled = enabled;
+            GalleryImage = galleryImage;
+            HelpText = helpText;
+            LoginEnabledMode = loginEnabledMode;
+            LoginVisibilityMode = loginVisibilityMode;
+            Name = name;
+            Parameters = parameters;
+            Visible = visible;
         }
         
         /// <summary>
@@ -313,21 +313,21 @@ namespace CherwellConnector.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrebuchetWebApiDataContractsCoreAction {\n");
-            sb.Append("  ActionCommand: ").Append(this.ActionCommand).Append("\n");
-            sb.Append("  ActionType: ").Append(this.ActionType).Append("\n");
-            sb.Append("  AlwaysTextAndImage: ").Append(this.AlwaysTextAndImage).Append("\n");
-            sb.Append("  BeginGroup: ").Append(this.BeginGroup).Append("\n");
-            sb.Append("  ChildActions: ").Append(this.ChildActions).Append("\n");
-            sb.Append("  Dependencies: ").Append(this.Dependencies).Append("\n");
-            sb.Append("  DisplayText: ").Append(this.DisplayText).Append("\n");
-            sb.Append("  Enabled: ").Append(this.Enabled).Append("\n");
-            sb.Append("  GalleryImage: ").Append(this.GalleryImage).Append("\n");
-            sb.Append("  HelpText: ").Append(this.HelpText).Append("\n");
-            sb.Append("  LoginEnabledMode: ").Append(this.LoginEnabledMode).Append("\n");
-            sb.Append("  LoginVisibilityMode: ").Append(this.LoginVisibilityMode).Append("\n");
-            sb.Append("  Name: ").Append(this.Name).Append("\n");
-            sb.Append("  Parameters: ").Append(this.Parameters).Append("\n");
-            sb.Append("  Visible: ").Append(this.Visible).Append("\n");
+            sb.Append("  ActionCommand: ").Append(ActionCommand).Append("\n");
+            sb.Append("  ActionType: ").Append(ActionType).Append("\n");
+            sb.Append("  AlwaysTextAndImage: ").Append(AlwaysTextAndImage).Append("\n");
+            sb.Append("  BeginGroup: ").Append(BeginGroup).Append("\n");
+            sb.Append("  ChildActions: ").Append(ChildActions).Append("\n");
+            sb.Append("  Dependencies: ").Append(Dependencies).Append("\n");
+            sb.Append("  DisplayText: ").Append(DisplayText).Append("\n");
+            sb.Append("  Enabled: ").Append(Enabled).Append("\n");
+            sb.Append("  GalleryImage: ").Append(GalleryImage).Append("\n");
+            sb.Append("  HelpText: ").Append(HelpText).Append("\n");
+            sb.Append("  LoginEnabledMode: ").Append(LoginEnabledMode).Append("\n");
+            sb.Append("  LoginVisibilityMode: ").Append(LoginVisibilityMode).Append("\n");
+            sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  Parameters: ").Append(Parameters).Append("\n");
+            sb.Append("  Visible: ").Append(Visible).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -348,7 +348,7 @@ namespace CherwellConnector.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as TrebuchetWebApiDataContractsCoreAction);
+            return Equals(input as TrebuchetWebApiDataContractsCoreAction);
         }
 
         /// <summary>
@@ -363,79 +363,79 @@ namespace CherwellConnector.Model
 
             return 
                 (
-                    this.ActionCommand == input.ActionCommand ||
-                    (this.ActionCommand != null &&
-                    this.ActionCommand.Equals(input.ActionCommand))
+                    ActionCommand == input.ActionCommand ||
+                    (ActionCommand != null &&
+                    ActionCommand.Equals(input.ActionCommand))
                 ) && 
                 (
-                    this.ActionType == input.ActionType ||
-                    (this.ActionType != null &&
-                    this.ActionType.Equals(input.ActionType))
+                    ActionType == input.ActionType ||
+                    (ActionType != null &&
+                    ActionType.Equals(input.ActionType))
                 ) && 
                 (
-                    this.AlwaysTextAndImage == input.AlwaysTextAndImage ||
-                    (this.AlwaysTextAndImage != null &&
-                    this.AlwaysTextAndImage.Equals(input.AlwaysTextAndImage))
+                    AlwaysTextAndImage == input.AlwaysTextAndImage ||
+                    (AlwaysTextAndImage != null &&
+                    AlwaysTextAndImage.Equals(input.AlwaysTextAndImage))
                 ) && 
                 (
-                    this.BeginGroup == input.BeginGroup ||
-                    (this.BeginGroup != null &&
-                    this.BeginGroup.Equals(input.BeginGroup))
+                    BeginGroup == input.BeginGroup ||
+                    (BeginGroup != null &&
+                    BeginGroup.Equals(input.BeginGroup))
                 ) && 
                 (
-                    this.ChildActions == input.ChildActions ||
-                    this.ChildActions != null &&
-                    this.ChildActions.SequenceEqual(input.ChildActions)
+                    ChildActions == input.ChildActions ||
+                    ChildActions != null &&
+                    ChildActions.SequenceEqual(input.ChildActions)
                 ) && 
                 (
-                    this.Dependencies == input.Dependencies ||
-                    this.Dependencies != null &&
-                    this.Dependencies.SequenceEqual(input.Dependencies)
+                    Dependencies == input.Dependencies ||
+                    Dependencies != null &&
+                    Dependencies.SequenceEqual(input.Dependencies)
                 ) && 
                 (
-                    this.DisplayText == input.DisplayText ||
-                    (this.DisplayText != null &&
-                    this.DisplayText.Equals(input.DisplayText))
+                    DisplayText == input.DisplayText ||
+                    (DisplayText != null &&
+                    DisplayText.Equals(input.DisplayText))
                 ) && 
                 (
-                    this.Enabled == input.Enabled ||
-                    (this.Enabled != null &&
-                    this.Enabled.Equals(input.Enabled))
+                    Enabled == input.Enabled ||
+                    (Enabled != null &&
+                    Enabled.Equals(input.Enabled))
                 ) && 
                 (
-                    this.GalleryImage == input.GalleryImage ||
-                    (this.GalleryImage != null &&
-                    this.GalleryImage.Equals(input.GalleryImage))
+                    GalleryImage == input.GalleryImage ||
+                    (GalleryImage != null &&
+                    GalleryImage.Equals(input.GalleryImage))
                 ) && 
                 (
-                    this.HelpText == input.HelpText ||
-                    (this.HelpText != null &&
-                    this.HelpText.Equals(input.HelpText))
+                    HelpText == input.HelpText ||
+                    (HelpText != null &&
+                    HelpText.Equals(input.HelpText))
                 ) && 
                 (
-                    this.LoginEnabledMode == input.LoginEnabledMode ||
-                    (this.LoginEnabledMode != null &&
-                    this.LoginEnabledMode.Equals(input.LoginEnabledMode))
+                    LoginEnabledMode == input.LoginEnabledMode ||
+                    (LoginEnabledMode != null &&
+                    LoginEnabledMode.Equals(input.LoginEnabledMode))
                 ) && 
                 (
-                    this.LoginVisibilityMode == input.LoginVisibilityMode ||
-                    (this.LoginVisibilityMode != null &&
-                    this.LoginVisibilityMode.Equals(input.LoginVisibilityMode))
+                    LoginVisibilityMode == input.LoginVisibilityMode ||
+                    (LoginVisibilityMode != null &&
+                    LoginVisibilityMode.Equals(input.LoginVisibilityMode))
                 ) && 
                 (
-                    this.Name == input.Name ||
-                    (this.Name != null &&
-                    this.Name.Equals(input.Name))
+                    Name == input.Name ||
+                    (Name != null &&
+                    Name.Equals(input.Name))
                 ) && 
                 (
-                    this.Parameters == input.Parameters ||
-                    this.Parameters != null &&
-                    this.Parameters.SequenceEqual(input.Parameters)
+                    Parameters == input.Parameters ||
+                    Parameters != null &&
+                    Parameters.SequenceEqual(input.Parameters)
                 ) && 
                 (
-                    this.Visible == input.Visible ||
-                    (this.Visible != null &&
-                    this.Visible.Equals(input.Visible))
+                    Visible == input.Visible ||
+                    (Visible != null &&
+                    Visible.Equals(input.Visible))
                 );
         }
 
@@ -447,37 +447,37 @@ namespace CherwellConnector.Model
         {
             unchecked // Overflow is fine, just wrap
             {
-                int hashCode = 41;
-                if (this.ActionCommand != null)
-                    hashCode = hashCode * 59 + this.ActionCommand.GetHashCode();
-                if (this.ActionType != null)
-                    hashCode = hashCode * 59 + this.ActionType.GetHashCode();
-                if (this.AlwaysTextAndImage != null)
-                    hashCode = hashCode * 59 + this.AlwaysTextAndImage.GetHashCode();
-                if (this.BeginGroup != null)
-                    hashCode = hashCode * 59 + this.BeginGroup.GetHashCode();
-                if (this.ChildActions != null)
-                    hashCode = hashCode * 59 + this.ChildActions.GetHashCode();
-                if (this.Dependencies != null)
-                    hashCode = hashCode * 59 + this.Dependencies.GetHashCode();
-                if (this.DisplayText != null)
-                    hashCode = hashCode * 59 + this.DisplayText.GetHashCode();
-                if (this.Enabled != null)
-                    hashCode = hashCode * 59 + this.Enabled.GetHashCode();
-                if (this.GalleryImage != null)
-                    hashCode = hashCode * 59 + this.GalleryImage.GetHashCode();
-                if (this.HelpText != null)
-                    hashCode = hashCode * 59 + this.HelpText.GetHashCode();
-                if (this.LoginEnabledMode != null)
-                    hashCode = hashCode * 59 + this.LoginEnabledMode.GetHashCode();
-                if (this.LoginVisibilityMode != null)
-                    hashCode = hashCode * 59 + this.LoginVisibilityMode.GetHashCode();
-                if (this.Name != null)
-                    hashCode = hashCode * 59 + this.Name.GetHashCode();
-                if (this.Parameters != null)
-                    hashCode = hashCode * 59 + this.Parameters.GetHashCode();
-                if (this.Visible != null)
-                    hashCode = hashCode * 59 + this.Visible.GetHashCode();
+                var hashCode = 41;
+                if (ActionCommand != null)
+                    hashCode = hashCode * 59 + ActionCommand.GetHashCode();
+                if (ActionType != null)
+                    hashCode = hashCode * 59 + ActionType.GetHashCode();
+                if (AlwaysTextAndImage != null)
+                    hashCode = hashCode * 59 + AlwaysTextAndImage.GetHashCode();
+                if (BeginGroup != null)
+                    hashCode = hashCode * 59 + BeginGroup.GetHashCode();
+                if (ChildActions != null)
+                    hashCode = hashCode * 59 + ChildActions.GetHashCode();
+                if (Dependencies != null)
+                    hashCode = hashCode * 59 + Dependencies.GetHashCode();
+                if (DisplayText != null)
+                    hashCode = hashCode * 59 + DisplayText.GetHashCode();
+                if (Enabled != null)
+                    hashCode = hashCode * 59 + Enabled.GetHashCode();
+                if (GalleryImage != null)
+                    hashCode = hashCode * 59 + GalleryImage.GetHashCode();
+                if (HelpText != null)
+                    hashCode = hashCode * 59 + HelpText.GetHashCode();
+                if (LoginEnabledMode != null)
+                    hashCode = hashCode * 59 + LoginEnabledMode.GetHashCode();
+                if (LoginVisibilityMode != null)
+                    hashCode = hashCode * 59 + LoginVisibilityMode.GetHashCode();
+                if (Name != null)
+                    hashCode = hashCode * 59 + Name.GetHashCode();
+                if (Parameters != null)
+                    hashCode = hashCode * 59 + Parameters.GetHashCode();
+                if (Visible != null)
+                    hashCode = hashCode * 59 + Visible.GetHashCode();
                 return hashCode;
             }
         }
@@ -487,7 +487,7 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

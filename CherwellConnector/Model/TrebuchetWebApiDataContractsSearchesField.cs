@@ -46,31 +46,31 @@ namespace CherwellConnector.Model
         /// <param name="sortOrder">sortOrder.</param>
         /// <param name="storageName">storageName.</param>
         /// <param name="wholeDigits">wholeDigits.</param>
-        public TrebuchetWebApiDataContractsSearchesField(string caption = default(string), string currencyCulture = default(string), string currencySymbol = default(string), int? decimalDigits = default(int?), bool? defaultSortOrderAscending = default(bool?), string displayName = default(string), string fieldName = default(string), string fullFieldId = default(string), bool? hasDefaultSortField = default(bool?), string fieldId = default(string), bool? isBinary = default(bool?), bool? isCurrency = default(bool?), bool? isDateTime = default(bool?), bool? isFilterAllowed = default(bool?), bool? isLogical = default(bool?), bool? isNumber = default(bool?), bool? isShortDate = default(bool?), bool? isShortTime = default(bool?), bool? isVisible = default(bool?), bool? sortable = default(bool?), string sortOrder = default(string), string storageName = default(string), int? wholeDigits = default(int?))
+        public TrebuchetWebApiDataContractsSearchesField(string caption = default, string currencyCulture = default, string currencySymbol = default, int? decimalDigits = default, bool? defaultSortOrderAscending = default, string displayName = default, string fieldName = default, string fullFieldId = default, bool? hasDefaultSortField = default, string fieldId = default, bool? isBinary = default, bool? isCurrency = default, bool? isDateTime = default, bool? isFilterAllowed = default, bool? isLogical = default, bool? isNumber = default, bool? isShortDate = default, bool? isShortTime = default, bool? isVisible = default, bool? sortable = default, string sortOrder = default, string storageName = default, int? wholeDigits = default)
         {
-            this.Caption = caption;
-            this.CurrencyCulture = currencyCulture;
-            this.CurrencySymbol = currencySymbol;
-            this.DecimalDigits = decimalDigits;
-            this.DefaultSortOrderAscending = defaultSortOrderAscending;
-            this.DisplayName = displayName;
-            this.FieldName = fieldName;
-            this.FullFieldId = fullFieldId;
-            this.HasDefaultSortField = hasDefaultSortField;
-            this.FieldId = fieldId;
-            this.IsBinary = isBinary;
-            this.IsCurrency = isCurrency;
-            this.IsDateTime = isDateTime;
-            this.IsFilterAllowed = isFilterAllowed;
-            this.IsLogical = isLogical;
-            this.IsNumber = isNumber;
-            this.IsShortDate = isShortDate;
-            this.IsShortTime = isShortTime;
-            this.IsVisible = isVisible;
-            this.Sortable = sortable;
-            this.SortOrder = sortOrder;
-            this.StorageName = storageName;
-            this.WholeDigits = wholeDigits;
+            Caption = caption;
+            CurrencyCulture = currencyCulture;
+            CurrencySymbol = currencySymbol;
+            DecimalDigits = decimalDigits;
+            DefaultSortOrderAscending = defaultSortOrderAscending;
+            DisplayName = displayName;
+            FieldName = fieldName;
+            FullFieldId = fullFieldId;
+            HasDefaultSortField = hasDefaultSortField;
+            FieldId = fieldId;
+            IsBinary = isBinary;
+            IsCurrency = isCurrency;
+            IsDateTime = isDateTime;
+            IsFilterAllowed = isFilterAllowed;
+            IsLogical = isLogical;
+            IsNumber = isNumber;
+            IsShortDate = isShortDate;
+            IsShortTime = isShortTime;
+            IsVisible = isVisible;
+            Sortable = sortable;
+            SortOrder = sortOrder;
+            StorageName = storageName;
+            WholeDigits = wholeDigits;
         }
         
         /// <summary>
@@ -219,29 +219,29 @@ namespace CherwellConnector.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrebuchetWebApiDataContractsSearchesField {\n");
-            sb.Append("  Caption: ").Append(this.Caption).Append("\n");
-            sb.Append("  CurrencyCulture: ").Append(this.CurrencyCulture).Append("\n");
-            sb.Append("  CurrencySymbol: ").Append(this.CurrencySymbol).Append("\n");
-            sb.Append("  DecimalDigits: ").Append(this.DecimalDigits).Append("\n");
-            sb.Append("  DefaultSortOrderAscending: ").Append(this.DefaultSortOrderAscending).Append("\n");
-            sb.Append("  DisplayName: ").Append(this.DisplayName).Append("\n");
-            sb.Append("  FieldName: ").Append(this.FieldName).Append("\n");
-            sb.Append("  FullFieldId: ").Append(this.FullFieldId).Append("\n");
-            sb.Append("  HasDefaultSortField: ").Append(this.HasDefaultSortField).Append("\n");
-            sb.Append("  FieldId: ").Append(this.FieldId).Append("\n");
-            sb.Append("  IsBinary: ").Append(this.IsBinary).Append("\n");
-            sb.Append("  IsCurrency: ").Append(this.IsCurrency).Append("\n");
-            sb.Append("  IsDateTime: ").Append(this.IsDateTime).Append("\n");
-            sb.Append("  IsFilterAllowed: ").Append(this.IsFilterAllowed).Append("\n");
-            sb.Append("  IsLogical: ").Append(this.IsLogical).Append("\n");
-            sb.Append("  IsNumber: ").Append(this.IsNumber).Append("\n");
-            sb.Append("  IsShortDate: ").Append(this.IsShortDate).Append("\n");
-            sb.Append("  IsShortTime: ").Append(this.IsShortTime).Append("\n");
-            sb.Append("  IsVisible: ").Append(this.IsVisible).Append("\n");
-            sb.Append("  Sortable: ").Append(this.Sortable).Append("\n");
-            sb.Append("  SortOrder: ").Append(this.SortOrder).Append("\n");
-            sb.Append("  StorageName: ").Append(this.StorageName).Append("\n");
-            sb.Append("  WholeDigits: ").Append(this.WholeDigits).Append("\n");
+            sb.Append("  Caption: ").Append(Caption).Append("\n");
+            sb.Append("  CurrencyCulture: ").Append(CurrencyCulture).Append("\n");
+            sb.Append("  CurrencySymbol: ").Append(CurrencySymbol).Append("\n");
+            sb.Append("  DecimalDigits: ").Append(DecimalDigits).Append("\n");
+            sb.Append("  DefaultSortOrderAscending: ").Append(DefaultSortOrderAscending).Append("\n");
+            sb.Append("  DisplayName: ").Append(DisplayName).Append("\n");
+            sb.Append("  FieldName: ").Append(FieldName).Append("\n");
+            sb.Append("  FullFieldId: ").Append(FullFieldId).Append("\n");
+            sb.Append("  HasDefaultSortField: ").Append(HasDefaultSortField).Append("\n");
+            sb.Append("  FieldId: ").Append(FieldId).Append("\n");
+            sb.Append("  IsBinary: ").Append(IsBinary).Append("\n");
+            sb.Append("  IsCurrency: ").Append(IsCurrency).Append("\n");
+            sb.Append("  IsDateTime: ").Append(IsDateTime).Append("\n");
+            sb.Append("  IsFilterAllowed: ").Append(IsFilterAllowed).Append("\n");
+            sb.Append("  IsLogical: ").Append(IsLogical).Append("\n");
+            sb.Append("  IsNumber: ").Append(IsNumber).Append("\n");
+            sb.Append("  IsShortDate: ").Append(IsShortDate).Append("\n");
+            sb.Append("  IsShortTime: ").Append(IsShortTime).Append("\n");
+            sb.Append("  IsVisible: ").Append(IsVisible).Append("\n");
+            sb.Append("  Sortable: ").Append(Sortable).Append("\n");
+            sb.Append("  SortOrder: ").Append(SortOrder).Append("\n");
+            sb.Append("  StorageName: ").Append(StorageName).Append("\n");
+            sb.Append("  WholeDigits: ").Append(WholeDigits).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -262,7 +262,7 @@ namespace CherwellConnector.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as TrebuchetWebApiDataContractsSearchesField);
+            return Equals(input as TrebuchetWebApiDataContractsSearchesField);
         }
 
         /// <summary>
@@ -277,119 +277,119 @@ namespace CherwellConnector.Model
 
             return 
                 (
-                    this.Caption == input.Caption ||
-                    (this.Caption != null &&
-                    this.Caption.Equals(input.Caption))
+                    Caption == input.Caption ||
+                    (Caption != null &&
+                    Caption.Equals(input.Caption))
                 ) && 
                 (
-                    this.CurrencyCulture == input.CurrencyCulture ||
-                    (this.CurrencyCulture != null &&
-                    this.CurrencyCulture.Equals(input.CurrencyCulture))
+                    CurrencyCulture == input.CurrencyCulture ||
+                    (CurrencyCulture != null &&
+                    CurrencyCulture.Equals(input.CurrencyCulture))
                 ) && 
                 (
-                    this.CurrencySymbol == input.CurrencySymbol ||
-                    (this.CurrencySymbol != null &&
-                    this.CurrencySymbol.Equals(input.CurrencySymbol))
+                    CurrencySymbol == input.CurrencySymbol ||
+                    (CurrencySymbol != null &&
+                    CurrencySymbol.Equals(input.CurrencySymbol))
                 ) && 
                 (
-                    this.DecimalDigits == input.DecimalDigits ||
-                    (this.DecimalDigits != null &&
-                    this.DecimalDigits.Equals(input.DecimalDigits))
+                    DecimalDigits == input.DecimalDigits ||
+                    (DecimalDigits != null &&
+                    DecimalDigits.Equals(input.DecimalDigits))
                 ) && 
                 (
-                    this.DefaultSortOrderAscending == input.DefaultSortOrderAscending ||
-                    (this.DefaultSortOrderAscending != null &&
-                    this.DefaultSortOrderAscending.Equals(input.DefaultSortOrderAscending))
+                    DefaultSortOrderAscending == input.DefaultSortOrderAscending ||
+                    (DefaultSortOrderAscending != null &&
+                    DefaultSortOrderAscending.Equals(input.DefaultSortOrderAscending))
                 ) && 
                 (
-                    this.DisplayName == input.DisplayName ||
-                    (this.DisplayName != null &&
-                    this.DisplayName.Equals(input.DisplayName))
+                    DisplayName == input.DisplayName ||
+                    (DisplayName != null &&
+                    DisplayName.Equals(input.DisplayName))
                 ) && 
                 (
-                    this.FieldName == input.FieldName ||
-                    (this.FieldName != null &&
-                    this.FieldName.Equals(input.FieldName))
+                    FieldName == input.FieldName ||
+                    (FieldName != null &&
+                    FieldName.Equals(input.FieldName))
                 ) && 
                 (
-                    this.FullFieldId == input.FullFieldId ||
-                    (this.FullFieldId != null &&
-                    this.FullFieldId.Equals(input.FullFieldId))
+                    FullFieldId == input.FullFieldId ||
+                    (FullFieldId != null &&
+                    FullFieldId.Equals(input.FullFieldId))
                 ) && 
                 (
-                    this.HasDefaultSortField == input.HasDefaultSortField ||
-                    (this.HasDefaultSortField != null &&
-                    this.HasDefaultSortField.Equals(input.HasDefaultSortField))
+                    HasDefaultSortField == input.HasDefaultSortField ||
+                    (HasDefaultSortField != null &&
+                    HasDefaultSortField.Equals(input.HasDefaultSortField))
                 ) && 
                 (
-                    this.FieldId == input.FieldId ||
-                    (this.FieldId != null &&
-                    this.FieldId.Equals(input.FieldId))
+                    FieldId == input.FieldId ||
+                    (FieldId != null &&
+                    FieldId.Equals(input.FieldId))
                 ) && 
                 (
-                    this.IsBinary == input.IsBinary ||
-                    (this.IsBinary != null &&
-                    this.IsBinary.Equals(input.IsBinary))
+                    IsBinary == input.IsBinary ||
+                    (IsBinary != null &&
+                    IsBinary.Equals(input.IsBinary))
                 ) && 
                 (
-                    this.IsCurrency == input.IsCurrency ||
-                    (this.IsCurrency != null &&
-                    this.IsCurrency.Equals(input.IsCurrency))
+                    IsCurrency == input.IsCurrency ||
+                    (IsCurrency != null &&
+                    IsCurrency.Equals(input.IsCurrency))
                 ) && 
                 (
-                    this.IsDateTime == input.IsDateTime ||
-                    (this.IsDateTime != null &&
-                    this.IsDateTime.Equals(input.IsDateTime))
+                    IsDateTime == input.IsDateTime ||
+                    (IsDateTime != null &&
+                    IsDateTime.Equals(input.IsDateTime))
                 ) && 
                 (
-                    this.IsFilterAllowed == input.IsFilterAllowed ||
-                    (this.IsFilterAllowed != null &&
-                    this.IsFilterAllowed.Equals(input.IsFilterAllowed))
+                    IsFilterAllowed == input.IsFilterAllowed ||
+                    (IsFilterAllowed != null &&
+                    IsFilterAllowed.Equals(input.IsFilterAllowed))
                 ) && 
                 (
-                    this.IsLogical == input.IsLogical ||
-                    (this.IsLogical != null &&
-                    this.IsLogical.Equals(input.IsLogical))
+                    IsLogical == input.IsLogical ||
+                    (IsLogical != null &&
+                    IsLogical.Equals(input.IsLogical))
                 ) && 
                 (
-                    this.IsNumber == input.IsNumber ||
-                    (this.IsNumber != null &&
-                    this.IsNumber.Equals(input.IsNumber))
+                    IsNumber == input.IsNumber ||
+                    (IsNumber != null &&
+                    IsNumber.Equals(input.IsNumber))
                 ) && 
                 (
-                    this.IsShortDate == input.IsShortDate ||
-                    (this.IsShortDate != null &&
-                    this.IsShortDate.Equals(input.IsShortDate))
+                    IsShortDate == input.IsShortDate ||
+                    (IsShortDate != null &&
+                    IsShortDate.Equals(input.IsShortDate))
                 ) && 
                 (
-                    this.IsShortTime == input.IsShortTime ||
-                    (this.IsShortTime != null &&
-                    this.IsShortTime.Equals(input.IsShortTime))
+                    IsShortTime == input.IsShortTime ||
+                    (IsShortTime != null &&
+                    IsShortTime.Equals(input.IsShortTime))
                 ) && 
                 (
-                    this.IsVisible == input.IsVisible ||
-                    (this.IsVisible != null &&
-                    this.IsVisible.Equals(input.IsVisible))
+                    IsVisible == input.IsVisible ||
+                    (IsVisible != null &&
+                    IsVisible.Equals(input.IsVisible))
                 ) && 
                 (
-                    this.Sortable == input.Sortable ||
-                    (this.Sortable != null &&
-                    this.Sortable.Equals(input.Sortable))
+                    Sortable == input.Sortable ||
+                    (Sortable != null &&
+                    Sortable.Equals(input.Sortable))
                 ) && 
                 (
-                    this.SortOrder == input.SortOrder ||
-                    (this.SortOrder != null &&
-                    this.SortOrder.Equals(input.SortOrder))
+                    SortOrder == input.SortOrder ||
+                    (SortOrder != null &&
+                    SortOrder.Equals(input.SortOrder))
                 ) && 
                 (
-                    this.StorageName == input.StorageName ||
-                    (this.StorageName != null &&
-                    this.StorageName.Equals(input.StorageName))
+                    StorageName == input.StorageName ||
+                    (StorageName != null &&
+                    StorageName.Equals(input.StorageName))
                 ) && 
                 (
-                    this.WholeDigits == input.WholeDigits ||
-                    (this.WholeDigits != null &&
-                    this.WholeDigits.Equals(input.WholeDigits))
+                    WholeDigits == input.WholeDigits ||
+                    (WholeDigits != null &&
+                    WholeDigits.Equals(input.WholeDigits))
                 );
         }
 
@@ -401,53 +401,53 @@ namespace CherwellConnector.Model
         {
             unchecked // Overflow is fine, just wrap
             {
-                int hashCode = 41;
-                if (this.Caption != null)
-                    hashCode = hashCode * 59 + this.Caption.GetHashCode();
-                if (this.CurrencyCulture != null)
-                    hashCode = hashCode * 59 + this.CurrencyCulture.GetHashCode();
-                if (this.CurrencySymbol != null)
-                    hashCode = hashCode * 59 + this.CurrencySymbol.GetHashCode();
-                if (this.DecimalDigits != null)
-                    hashCode = hashCode * 59 + this.DecimalDigits.GetHashCode();
-                if (this.DefaultSortOrderAscending != null)
-                    hashCode = hashCode * 59 + this.DefaultSortOrderAscending.GetHashCode();
-                if (this.DisplayName != null)
-                    hashCode = hashCode * 59 + this.DisplayName.GetHashCode();
-                if (this.FieldName != null)
-                    hashCode = hashCode * 59 + this.FieldName.GetHashCode();
-                if (this.FullFieldId != null)
-                    hashCode = hashCode * 59 + this.FullFieldId.GetHashCode();
-                if (this.HasDefaultSortField != null)
-                    hashCode = hashCode * 59 + this.HasDefaultSortField.GetHashCode();
-                if (this.FieldId != null)
-                    hashCode = hashCode * 59 + this.FieldId.GetHashCode();
-                if (this.IsBinary != null)
-                    hashCode = hashCode * 59 + this.IsBinary.GetHashCode();
-                if (this.IsCurrency != null)
-                    hashCode = hashCode * 59 + this.IsCurrency.GetHashCode();
-                if (this.IsDateTime != null)
-                    hashCode = hashCode * 59 + this.IsDateTime.GetHashCode();
-                if (this.IsFilterAllowed != null)
-                    hashCode = hashCode * 59 + this.IsFilterAllowed.GetHashCode();
-                if (this.IsLogical != null)
-                    hashCode = hashCode * 59 + this.IsLogical.GetHashCode();
-                if (this.IsNumber != null)
-                    hashCode = hashCode * 59 + this.IsNumber.GetHashCode();
-                if (this.IsShortDate != null)
-                    hashCode = hashCode * 59 + this.IsShortDate.GetHashCode();
-                if (this.IsShortTime != null)
-                    hashCode = hashCode * 59 + this.IsShortTime.GetHashCode();
-                if (this.IsVisible != null)
-                    hashCode = hashCode * 59 + this.IsVisible.GetHashCode();
-                if (this.Sortable != null)
-                    hashCode = hashCode * 59 + this.Sortable.GetHashCode();
-                if (this.SortOrder != null)
-                    hashCode = hashCode * 59 + this.SortOrder.GetHashCode();
-                if (this.StorageName != null)
-                    hashCode = hashCode * 59 + this.StorageName.GetHashCode();
-                if (this.WholeDigits != null)
-                    hashCode = hashCode * 59 + this.WholeDigits.GetHashCode();
+                var hashCode = 41;
+                if (Caption != null)
+                    hashCode = hashCode * 59 + Caption.GetHashCode();
+                if (CurrencyCulture != null)
+                    hashCode = hashCode * 59 + CurrencyCulture.GetHashCode();
+                if (CurrencySymbol != null)
+                    hashCode = hashCode * 59 + CurrencySymbol.GetHashCode();
+                if (DecimalDigits != null)
+                    hashCode = hashCode * 59 + DecimalDigits.GetHashCode();
+                if (DefaultSortOrderAscending != null)
+                    hashCode = hashCode * 59 + DefaultSortOrderAscending.GetHashCode();
+                if (DisplayName != null)
+                    hashCode = hashCode * 59 + DisplayName.GetHashCode();
+                if (FieldName != null)
+                    hashCode = hashCode * 59 + FieldName.GetHashCode();
+                if (FullFieldId != null)
+                    hashCode = hashCode * 59 + FullFieldId.GetHashCode();
+                if (HasDefaultSortField != null)
+                    hashCode = hashCode * 59 + HasDefaultSortField.GetHashCode();
+                if (FieldId != null)
+                    hashCode = hashCode * 59 + FieldId.GetHashCode();
+                if (IsBinary != null)
+                    hashCode = hashCode * 59 + IsBinary.GetHashCode();
+                if (IsCurrency != null)
+                    hashCode = hashCode * 59 + IsCurrency.GetHashCode();
+                if (IsDateTime != null)
+                    hashCode = hashCode * 59 + IsDateTime.GetHashCode();
+                if (IsFilterAllowed != null)
+                    hashCode = hashCode * 59 + IsFilterAllowed.GetHashCode();
+                if (IsLogical != null)
+                    hashCode = hashCode * 59 + IsLogical.GetHashCode();
+                if (IsNumber != null)
+                    hashCode = hashCode * 59 + IsNumber.GetHashCode();
+                if (IsShortDate != null)
+                    hashCode = hashCode * 59 + IsShortDate.GetHashCode();
+                if (IsShortTime != null)
+                    hashCode = hashCode * 59 + IsShortTime.GetHashCode();
+                if (IsVisible != null)
+                    hashCode = hashCode * 59 + IsVisible.GetHashCode();
+                if (Sortable != null)
+                    hashCode = hashCode * 59 + Sortable.GetHashCode();
+                if (SortOrder != null)
+                    hashCode = hashCode * 59 + SortOrder.GetHashCode();
+                if (StorageName != null)
+                    hashCode = hashCode * 59 + StorageName.GetHashCode();
+                if (WholeDigits != null)
+                    hashCode = hashCode * 59 + WholeDigits.GetHashCode();
                 return hashCode;
             }
         }
@@ -457,7 +457,7 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }
