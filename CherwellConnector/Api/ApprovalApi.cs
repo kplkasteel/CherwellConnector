@@ -82,8 +82,7 @@ namespace CherwellConnector.Api
         /// <returns>TrebuchetWebApiDataContractsBusinessObjectSaveResponse</returns>
         public TrebuchetWebApiDataContractsBusinessObjectSaveResponse ApprovalActionApprovalV1(string approvalRecId, string approvalAction, string lang = null, string locale = null)
         {
-            var localVarResponse = ApprovalActionApprovalV1WithHttpInfo(approvalRecId, approvalAction, lang, locale);
-            return localVarResponse.Data;
+            return ApprovalActionApprovalV1WithHttpInfo(approvalRecId, approvalAction, lang, locale).Data;
         }
 
         /// <summary>
@@ -159,8 +158,7 @@ namespace CherwellConnector.Api
         /// <returns>TrebuchetWebApiDataContractsApprovalApprovalReadResponse</returns>
         public TrebuchetWebApiDataContractsApprovalApprovalReadResponse ApprovalGetApprovalByRecIdV1(string approvalRecId, string lang = null, string locale = null)
         {
-            var localVarResponse = ApprovalGetApprovalByRecIdV1WithHttpInfo(approvalRecId, lang, locale);
-            return localVarResponse.Data;
+            return ApprovalGetApprovalByRecIdV1WithHttpInfo(approvalRecId, lang, locale).Data;
         }
 
         /// <summary>
@@ -233,8 +231,7 @@ namespace CherwellConnector.Api
         /// <returns>TrebuchetWebApiDataContractsApprovalGetApprovalsResponse</returns>
         public TrebuchetWebApiDataContractsApprovalGetApprovalsResponse ApprovalGetMyApprovalsV1(string lang = null, string locale = null)
         {
-            var localVarResponse = ApprovalGetMyApprovalsV1WithHttpInfo(lang, locale);
-            return localVarResponse.Data;
+            return ApprovalGetMyApprovalsV1WithHttpInfo(lang, locale).Data;
         }
 
         /// <summary>
@@ -299,8 +296,7 @@ namespace CherwellConnector.Api
         /// <returns>TrebuchetWebApiDataContractsApprovalGetApprovalsResponse</returns>
         public TrebuchetWebApiDataContractsApprovalGetApprovalsResponse ApprovalGetMyPendingApprovalsV1(string lang = null, string locale = null)
         {
-            var localVarResponse = ApprovalGetMyPendingApprovalsV1WithHttpInfo(lang, locale);
-            return localVarResponse.Data;
+            return ApprovalGetMyPendingApprovalsV1WithHttpInfo(lang, locale).Data;
         }
 
         /// <summary>
