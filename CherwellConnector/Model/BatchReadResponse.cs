@@ -27,7 +27,7 @@ namespace CherwellConnector.Model
         /// Initializes a new instance of the <see cref="BatchReadResponse" /> class.
         /// </summary>
         /// <param name="responses">responses.</param>
-        public BatchReadResponse(List<TrebuchetWebApiDataContractsBusinessObjectReadResponse> responses = default)
+        public BatchReadResponse(List<ReadResponse> responses = default)
         {
             Responses = responses;
         }
@@ -36,7 +36,7 @@ namespace CherwellConnector.Model
         /// Gets or Sets Responses
         /// </summary>
         [DataMember(Name="responses", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsBusinessObjectReadResponse> Responses { get; set; }
+        public List<ReadResponse> Responses { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

@@ -36,7 +36,7 @@ namespace CherwellConnector.Model
         /// <param name="relatedBusinessObjects">relatedBusinessObjects.</param>
         /// <param name="relationshipId">relationshipId.</param>
         /// <param name="totalRecords">totalRecords.</param>
-        public TrebuchetWebApiDataContractsSearchesRelatedBusinessObjectResponse(string errorCode = default, string errorMessage = default, bool? hasError = default, List<TrebuchetWebApiDataContractsCoreLink> links = default, int? pageNumber = default, int? pageSize = default, string parentBusObId = default, string parentBusObPublicId = default, string parentBusObRecId = default, List<TrebuchetWebApiDataContractsBusinessObjectReadResponse> relatedBusinessObjects = default, string relationshipId = default, int? totalRecords = default)
+        public TrebuchetWebApiDataContractsSearchesRelatedBusinessObjectResponse(string errorCode = default, string errorMessage = default, bool? hasError = default, List<TrebuchetWebApiDataContractsCoreLink> links = default, int? pageNumber = default, int? pageSize = default, string parentBusObId = default, string parentBusObPublicId = default, string parentBusObRecId = default, List<ReadResponse> relatedBusinessObjects = default, string relationshipId = default, int? totalRecords = default)
         {
             ErrorCode = errorCode;
             ErrorMessage = errorMessage;
@@ -110,7 +110,7 @@ namespace CherwellConnector.Model
         /// Gets or Sets RelatedBusinessObjects
         /// </summary>
         [DataMember(Name="relatedBusinessObjects", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsBusinessObjectReadResponse> RelatedBusinessObjects { get; set; }
+        public List<ReadResponse> RelatedBusinessObjects { get; set; }
 
         /// <summary>
         /// Gets or Sets RelationshipId

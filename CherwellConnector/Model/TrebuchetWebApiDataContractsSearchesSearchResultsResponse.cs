@@ -332,7 +332,7 @@ namespace CherwellConnector.Model
         /// <param name="errorMessage">errorMessage.</param>
         /// <param name="hasError">hasError.</param>
         /// <param name="httpStatusCode">httpStatusCode.</param>
-        public TrebuchetWebApiDataContractsSearchesSearchResultsResponse(List<TrebuchetWebApiDataContractsBusinessObjectReadResponse> businessObjects = default, bool? hasPrompts = default, List<TrebuchetWebApiDataContractsCoreLink> links = default, List<TrebuchetWebApiDataContractsCorePrompt> prompts = default, List<TrebuchetWebApiDataContractsSearchesField> searchResultsFields = default, TrebuchetWebApiDataContractsSearchesSimpleResultsList simpleResults = default, long? totalRows = default, bool? hasMoreRecords = default, string errorCode = default, string errorMessage = default, bool? hasError = default, HttpStatusCodeEnum? httpStatusCode = default)
+        public TrebuchetWebApiDataContractsSearchesSearchResultsResponse(List<ReadResponse> businessObjects = default, bool? hasPrompts = default, List<TrebuchetWebApiDataContractsCoreLink> links = default, List<TrebuchetWebApiDataContractsCorePrompt> prompts = default, List<TrebuchetWebApiDataContractsSearchesField> searchResultsFields = default, TrebuchetWebApiDataContractsSearchesSimpleResultsList simpleResults = default, long? totalRows = default, bool? hasMoreRecords = default, string errorCode = default, string errorMessage = default, bool? hasError = default, HttpStatusCodeEnum? httpStatusCode = default)
         {
             BusinessObjects = businessObjects;
             HasPrompts = hasPrompts;
@@ -352,7 +352,7 @@ namespace CherwellConnector.Model
         /// Gets or Sets BusinessObjects
         /// </summary>
         [DataMember(Name="businessObjects", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsBusinessObjectReadResponse> BusinessObjects { get; set; }
+        public List<ReadResponse> BusinessObjects { get; set; }
 
         /// <summary>
         /// Gets or Sets HasPrompts

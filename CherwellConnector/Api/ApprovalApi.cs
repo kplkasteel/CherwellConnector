@@ -80,7 +80,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsBusinessObjectSaveResponse</returns>
-        public TrebuchetWebApiDataContractsBusinessObjectSaveResponse ApprovalActionApprovalV1(string approvalRecId, string approvalAction, string lang = null, string locale = null)
+        public SaveResponse ApprovalActionApprovalV1(string approvalRecId, string approvalAction, string lang = null, string locale = null)
         {
             return ApprovalActionApprovalV1WithHttpInfo(approvalRecId, approvalAction, lang, locale).Data;
         }
@@ -94,7 +94,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsBusinessObjectSaveResponse</returns>
-        private ApiResponse<TrebuchetWebApiDataContractsBusinessObjectSaveResponse> ApprovalActionApprovalV1WithHttpInfo(string approvalRecId, string approvalAction, string lang = null, string locale = null)
+        private ApiResponse<SaveResponse> ApprovalActionApprovalV1WithHttpInfo(string approvalRecId, string approvalAction, string lang = null, string locale = null)
         {
             // verify the required parameter 'approvalRecId' is set
             if (approvalRecId == null)
@@ -140,9 +140,9 @@ namespace CherwellConnector.Api
             var exception = ExceptionFactory?.Invoke("ApprovalActionApprovalV1", localVarResponse);
             if (exception != null) throw exception;
 
-            return new ApiResponse<TrebuchetWebApiDataContractsBusinessObjectSaveResponse>(localVarStatusCode,
+            return new ApiResponse<SaveResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value?.ToString()),
-                (TrebuchetWebApiDataContractsBusinessObjectSaveResponse)Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsBusinessObjectSaveResponse)));
+                (SaveResponse)Configuration.ApiClient.Deserialize(localVarResponse, typeof(SaveResponse)));
         }
         
         #endregion

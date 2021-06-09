@@ -1296,7 +1296,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsBusinessObjectReadResponse</returns>
-        public TrebuchetWebApiDataContractsBusinessObjectReadResponse BusinessObjectGetBusinessObjectByPublicIdV1 (string busobid, string publicid, string lang = null, string locale = null)
+        public ReadResponse BusinessObjectGetBusinessObjectByPublicIdV1 (string busobid, string publicid, string lang = null, string locale = null)
         {
              return BusinessObjectGetBusinessObjectByPublicIdV1WithHttpInfo(busobid, publicid, lang, locale).Data;
         }
@@ -1310,7 +1310,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsBusinessObjectReadResponse</returns>
-        private ApiResponse< TrebuchetWebApiDataContractsBusinessObjectReadResponse > BusinessObjectGetBusinessObjectByPublicIdV1WithHttpInfo (string busobid, string publicid, string lang = null, string locale = null)
+        private ApiResponse< ReadResponse > BusinessObjectGetBusinessObjectByPublicIdV1WithHttpInfo (string busobid, string publicid, string lang = null, string locale = null)
         {
             // verify the required parameter 'busobid' is set
             if (busobid == null)
@@ -1356,16 +1356,16 @@ namespace CherwellConnector.Api
             var exception = ExceptionFactory?.Invoke("BusinessObjectGetBusinessObjectByPublicIdV1", localVarResponse);
             if (exception != null) throw exception;
 
-            return new ApiResponse<TrebuchetWebApiDataContractsBusinessObjectReadResponse>(localVarStatusCode,
+            return new ApiResponse<ReadResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value?.ToString()),
-                (TrebuchetWebApiDataContractsBusinessObjectReadResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsBusinessObjectReadResponse)));
+                (ReadResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ReadResponse)));
         }
 
         #endregion
         
         #region BusinessObjectGetBusinessObjectByRecIdV1
 
-         public TrebuchetWebApiDataContractsBusinessObjectReadResponse BusinessObjectGetBusinessObjectByRecIdV1(string busobid,
+         public ReadResponse BusinessObjectGetBusinessObjectByRecIdV1(string busobid,
             string busobrecid, string lang = null, string locale = null)
         {
             return BusinessObjectGetBusinessObjectByRecIdV1WithHttpInfo(busobid, busobrecid, lang, locale).Data;
@@ -1381,7 +1381,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsBusinessObjectReadResponse</returns>
-        private ApiResponse< TrebuchetWebApiDataContractsBusinessObjectReadResponse > BusinessObjectGetBusinessObjectByRecIdV1WithHttpInfo (string busobid, string busobrecid, string lang = null, string locale = null)
+        private ApiResponse< ReadResponse > BusinessObjectGetBusinessObjectByRecIdV1WithHttpInfo (string busobid, string busobrecid, string lang = null, string locale = null)
         {
             // verify the required parameter 'busobid' is set
             if (busobid == null)
@@ -1428,9 +1428,9 @@ namespace CherwellConnector.Api
             var exception = ExceptionFactory?.Invoke("BusinessObjectGetBusinessObjectByRecIdV1", localVarResponse);
             if (exception != null) throw exception;
 
-            return new ApiResponse<TrebuchetWebApiDataContractsBusinessObjectReadResponse>(localVarStatusCode,
+            return new ApiResponse<ReadResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value?.ToString()),
-                (TrebuchetWebApiDataContractsBusinessObjectReadResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsBusinessObjectReadResponse)));
+                (ReadResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ReadResponse)));
         }
         
         #endregion
@@ -1603,7 +1603,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsBusinessObjectSchemaResponse</returns>
-        public TrebuchetWebApiDataContractsBusinessObjectSchemaResponse BusinessObjectGetBusinessObjectSchemaV1 (string busobId, bool? includerelationships = null, string lang = null, string locale = null)
+        public SchemaResponse BusinessObjectGetBusinessObjectSchemaV1 (string busobId, bool? includerelationships = null, string lang = null, string locale = null)
         {
              return BusinessObjectGetBusinessObjectSchemaV1WithHttpInfo(busobId, includerelationships, lang, locale).Data;
         }
@@ -1617,7 +1617,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsBusinessObjectSchemaResponse</returns>
-        private ApiResponse< TrebuchetWebApiDataContractsBusinessObjectSchemaResponse > BusinessObjectGetBusinessObjectSchemaV1WithHttpInfo (string busobId, bool? includerelationships = null, string lang = null, string locale = null)
+        private ApiResponse< SchemaResponse > BusinessObjectGetBusinessObjectSchemaV1WithHttpInfo (string busobId, bool? includerelationships = null, string lang = null, string locale = null)
         {
             // verify the required parameter 'busobId' is set
             if (busobId == null)
@@ -1661,9 +1661,9 @@ namespace CherwellConnector.Api
             var exception = ExceptionFactory?.Invoke("BusinessObjectGetBusinessObjectSchemaV1", localVarResponse);
             if (exception != null) throw exception;
 
-            return new ApiResponse<TrebuchetWebApiDataContractsBusinessObjectSchemaResponse>(localVarStatusCode,
+            return new ApiResponse<SchemaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value?.ToString()),
-                (TrebuchetWebApiDataContractsBusinessObjectSchemaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsBusinessObjectSchemaResponse)));
+                (SchemaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SchemaResponse)));
         }
 
         #endregion
@@ -1678,7 +1678,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>List&lt;TrebuchetWebApiDataContractsBusinessObjectSummary&gt;</returns>
-        public List<TrebuchetWebApiDataContractsBusinessObjectSummary> BusinessObjectGetBusinessObjectSummariesV1 (string type, string lang = null, string locale = null)
+        public List<Summary> BusinessObjectGetBusinessObjectSummariesV1 (string type, string lang = null, string locale = null)
         {
              return BusinessObjectGetBusinessObjectSummariesV1WithHttpInfo(type, lang, locale).Data;
         }
@@ -1691,7 +1691,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of List&lt;TrebuchetWebApiDataContractsBusinessObjectSummary&gt;</returns>
-        private ApiResponse< List<TrebuchetWebApiDataContractsBusinessObjectSummary> > BusinessObjectGetBusinessObjectSummariesV1WithHttpInfo (string type, string lang = null, string locale = null)
+        private ApiResponse< List<Summary> > BusinessObjectGetBusinessObjectSummariesV1WithHttpInfo (string type, string lang = null, string locale = null)
         {
             // verify the required parameter 'type' is set
             if (type == null)
@@ -1733,9 +1733,9 @@ namespace CherwellConnector.Api
             var exception = ExceptionFactory?.Invoke("BusinessObjectGetBusinessObjectSummariesV1", localVarResponse);
             if (exception != null) throw exception;
 
-            return new ApiResponse<List<TrebuchetWebApiDataContractsBusinessObjectSummary>>(localVarStatusCode,
+            return new ApiResponse<List<Summary>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value?.ToString()),
-                (List<TrebuchetWebApiDataContractsBusinessObjectSummary>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<TrebuchetWebApiDataContractsBusinessObjectSummary>)));
+                (List<Summary>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<Summary>)));
         }
 
         #endregion
@@ -1750,7 +1750,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>List&lt;TrebuchetWebApiDataContractsBusinessObjectSummary&gt;</returns>
-        public List<TrebuchetWebApiDataContractsBusinessObjectSummary> BusinessObjectGetBusinessObjectSummaryByIdV1 (string busobid, string lang = null, string locale = null)
+        public List<Summary> BusinessObjectGetBusinessObjectSummaryByIdV1 (string busobid, string lang = null, string locale = null)
         {
              return BusinessObjectGetBusinessObjectSummaryByIdV1WithHttpInfo(busobid, lang, locale).Data;
         }
@@ -1763,7 +1763,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of List&lt;TrebuchetWebApiDataContractsBusinessObjectSummary&gt;</returns>
-        private ApiResponse< List<TrebuchetWebApiDataContractsBusinessObjectSummary> > BusinessObjectGetBusinessObjectSummaryByIdV1WithHttpInfo (string busobid, string lang = null, string locale = null)
+        private ApiResponse< List<Summary> > BusinessObjectGetBusinessObjectSummaryByIdV1WithHttpInfo (string busobid, string lang = null, string locale = null)
         {
             // verify the required parameter 'busobid' is set
             if (busobid == null)
@@ -1805,9 +1805,9 @@ namespace CherwellConnector.Api
             var exception = ExceptionFactory?.Invoke("BusinessObjectGetBusinessObjectSummaryByIdV1", localVarResponse);
             if (exception != null) throw exception;
 
-            return new ApiResponse<List<TrebuchetWebApiDataContractsBusinessObjectSummary>>(localVarStatusCode,
+            return new ApiResponse<List<Summary>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value?.ToString()),
-                (List<TrebuchetWebApiDataContractsBusinessObjectSummary>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<TrebuchetWebApiDataContractsBusinessObjectSummary>)));
+                (List<Summary>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<Summary>)));
         }
         
         #endregion
@@ -1822,7 +1822,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>List&lt;TrebuchetWebApiDataContractsBusinessObjectSummary&gt;</returns>
-        public List<TrebuchetWebApiDataContractsBusinessObjectSummary> BusinessObjectGetBusinessObjectSummaryByNameV1 (string busobname, string lang = null, string locale = null)
+        public List<Summary> BusinessObjectGetBusinessObjectSummaryByNameV1 (string busobname, string lang = null, string locale = null)
         {
              return  BusinessObjectGetBusinessObjectSummaryByNameV1WithHttpInfo(busobname, lang, locale).Data;
         }
@@ -1835,7 +1835,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of List&lt;TrebuchetWebApiDataContractsBusinessObjectSummary&gt;</returns>
-        private ApiResponse< List<TrebuchetWebApiDataContractsBusinessObjectSummary> > BusinessObjectGetBusinessObjectSummaryByNameV1WithHttpInfo (string busobname, string lang = null, string locale = null)
+        private ApiResponse< List<Summary> > BusinessObjectGetBusinessObjectSummaryByNameV1WithHttpInfo (string busobname, string lang = null, string locale = null)
         {
             // verify the required parameter 'busobname' is set
             if (busobname == null)
@@ -1877,9 +1877,9 @@ namespace CherwellConnector.Api
             var exception = ExceptionFactory?.Invoke("BusinessObjectGetBusinessObjectSummaryByNameV1", localVarResponse);
             if (exception != null) throw exception;
 
-            return new ApiResponse<List<TrebuchetWebApiDataContractsBusinessObjectSummary>>(localVarStatusCode,
+            return new ApiResponse<List<Summary>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value?.ToString()),
-                (List<TrebuchetWebApiDataContractsBusinessObjectSummary>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<TrebuchetWebApiDataContractsBusinessObjectSummary>)));
+                (List<Summary>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<Summary>)));
         }
 
         #endregion
@@ -1894,7 +1894,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsBusinessObjectTemplateResponse</returns>
-        public TrebuchetWebApiDataContractsBusinessObjectTemplateResponse BusinessObjectGetBusinessObjectTemplateV1 (TrebuchetWebApiDataContractsBusinessObjectTemplateRequest request, string lang = null, string locale = null)
+        public TrebuchetWebApiDataContractsBusinessObjectTemplateResponse BusinessObjectGetBusinessObjectTemplateV1 (TemplateRequest request, string lang = null, string locale = null)
         {
              return BusinessObjectGetBusinessObjectTemplateV1WithHttpInfo(request, lang, locale).Data;
         }
@@ -1907,7 +1907,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsBusinessObjectTemplateResponse</returns>
-        private ApiResponse< TrebuchetWebApiDataContractsBusinessObjectTemplateResponse > BusinessObjectGetBusinessObjectTemplateV1WithHttpInfo (TrebuchetWebApiDataContractsBusinessObjectTemplateRequest request, string lang = null, string locale = null)
+        private ApiResponse< TrebuchetWebApiDataContractsBusinessObjectTemplateResponse > BusinessObjectGetBusinessObjectTemplateV1WithHttpInfo (TemplateRequest request, string lang = null, string locale = null)
         {
             // verify the required parameter 'request' is set
             if (request == null)
@@ -2794,7 +2794,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsBusinessObjectAttachmentsResponse</returns>
-        public AttachmentsResponse BusinessObjectSaveBusinessObjectAttachmentBusObV1 (TrebuchetWebApiDataContractsBusinessObjectSaveBusObAttachmentRequest request, string lang = null, string locale = null)
+        public AttachmentsResponse BusinessObjectSaveBusinessObjectAttachmentBusObV1 (SaveBusObAttachmentRequest request, string lang = null, string locale = null)
         {
              return BusinessObjectSaveBusinessObjectAttachmentBusObV1WithHttpInfo(request, lang, locale).Data;
         }
@@ -2807,7 +2807,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsBusinessObjectAttachmentsResponse</returns>
-        private ApiResponse< AttachmentsResponse > BusinessObjectSaveBusinessObjectAttachmentBusObV1WithHttpInfo (TrebuchetWebApiDataContractsBusinessObjectSaveBusObAttachmentRequest request, string lang = null, string locale = null)
+        private ApiResponse< AttachmentsResponse > BusinessObjectSaveBusinessObjectAttachmentBusObV1WithHttpInfo (SaveBusObAttachmentRequest request, string lang = null, string locale = null)
         {
             // verify the required parameter 'request' is set
             if (request == null)
@@ -2874,7 +2874,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsBusinessObjectAttachmentsResponse</returns>
-        public AttachmentsResponse BusinessObjectSaveBusinessObjectAttachmentLinkV1 (TrebuchetWebApiDataContractsBusinessObjectSaveLinkAttachmentRequest request, string lang = null, string locale = null)
+        public AttachmentsResponse BusinessObjectSaveBusinessObjectAttachmentLinkV1 (SaveLinkAttachmentRequest request, string lang = null, string locale = null)
         {
              return  BusinessObjectSaveBusinessObjectAttachmentLinkV1WithHttpInfo(request, lang, locale).Data;
         }
@@ -2887,7 +2887,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsBusinessObjectAttachmentsResponse</returns>
-        private ApiResponse< AttachmentsResponse > BusinessObjectSaveBusinessObjectAttachmentLinkV1WithHttpInfo (TrebuchetWebApiDataContractsBusinessObjectSaveLinkAttachmentRequest request, string lang = null, string locale = null)
+        private ApiResponse< AttachmentsResponse > BusinessObjectSaveBusinessObjectAttachmentLinkV1WithHttpInfo (SaveLinkAttachmentRequest request, string lang = null, string locale = null)
         {
             // verify the required parameter 'request' is set
             if (request == null)
@@ -2952,7 +2952,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsBusinessObjectAttachmentsResponse</returns>
-        public AttachmentsResponse BusinessObjectSaveBusinessObjectAttachmentUrlV1 (TrebuchetWebApiDataContractsBusinessObjectSaveUrlAttachmentRequest request, string lang = null, string locale = null)
+        public AttachmentsResponse BusinessObjectSaveBusinessObjectAttachmentUrlV1 (SaveUrlAttachmentRequest request, string lang = null, string locale = null)
         {
              return BusinessObjectSaveBusinessObjectAttachmentUrlV1WithHttpInfo(request, lang, locale).Data;
         }
@@ -2965,7 +2965,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsBusinessObjectAttachmentsResponse</returns>
-        private ApiResponse< AttachmentsResponse > BusinessObjectSaveBusinessObjectAttachmentUrlV1WithHttpInfo (TrebuchetWebApiDataContractsBusinessObjectSaveUrlAttachmentRequest request, string lang = null, string locale = null)
+        private ApiResponse< AttachmentsResponse > BusinessObjectSaveBusinessObjectAttachmentUrlV1WithHttpInfo (SaveUrlAttachmentRequest request, string lang = null, string locale = null)
         {
             // verify the required parameter 'request' is set
             if (request == null)
@@ -3031,7 +3031,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsBusinessObjectSaveResponse</returns>
-        public TrebuchetWebApiDataContractsBusinessObjectSaveResponse BusinessObjectSaveBusinessObjectV1 (TrebuchetWebApiDataContractsBusinessObjectSaveRequest request, string lang = null, string locale = null)
+        public SaveResponse BusinessObjectSaveBusinessObjectV1 (SaveRequest request, string lang = null, string locale = null)
         {
              var localVarResponse = BusinessObjectSaveBusinessObjectV1WithHttpInfo(request, lang, locale);
              return localVarResponse.Data;
@@ -3045,7 +3045,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsBusinessObjectSaveResponse</returns>
-        private ApiResponse< TrebuchetWebApiDataContractsBusinessObjectSaveResponse > BusinessObjectSaveBusinessObjectV1WithHttpInfo (TrebuchetWebApiDataContractsBusinessObjectSaveRequest request, string lang = null, string locale = null)
+        private ApiResponse< SaveResponse > BusinessObjectSaveBusinessObjectV1WithHttpInfo (SaveRequest request, string lang = null, string locale = null)
         {
             // verify the required parameter 'request' is set
             if (request == null)
@@ -3093,9 +3093,9 @@ namespace CherwellConnector.Api
             var exception = ExceptionFactory?.Invoke("BusinessObjectSaveBusinessObjectV1", localVarResponse);
             if (exception != null) throw exception;
 
-            return new ApiResponse<TrebuchetWebApiDataContractsBusinessObjectSaveResponse>(localVarStatusCode,
+            return new ApiResponse<SaveResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value?.ToString()),
-                (TrebuchetWebApiDataContractsBusinessObjectSaveResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsBusinessObjectSaveResponse)));
+                (SaveResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SaveResponse)));
         }
 
         #endregion
@@ -3110,7 +3110,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsBusinessObjectRelatedSaveResponse</returns>
-        public TrebuchetWebApiDataContractsBusinessObjectRelatedSaveResponse BusinessObjectSaveRelatedBusinessObjectV1 (TrebuchetWebApiDataContractsBusinessObjectRelatedSaveRequest request, string lang = null, string locale = null)
+        public RelatedSaveResponse BusinessObjectSaveRelatedBusinessObjectV1 (RelatedSaveRequest request, string lang = null, string locale = null)
         {
              return BusinessObjectSaveRelatedBusinessObjectV1WithHttpInfo(request, lang, locale).Data;
         }
@@ -3123,7 +3123,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsBusinessObjectRelatedSaveResponse</returns>
-        private ApiResponse< TrebuchetWebApiDataContractsBusinessObjectRelatedSaveResponse > BusinessObjectSaveRelatedBusinessObjectV1WithHttpInfo (TrebuchetWebApiDataContractsBusinessObjectRelatedSaveRequest request, string lang = null, string locale = null)
+        private ApiResponse< RelatedSaveResponse > BusinessObjectSaveRelatedBusinessObjectV1WithHttpInfo (RelatedSaveRequest request, string lang = null, string locale = null)
         {
             // verify the required parameter 'request' is set
             if (request == null)
@@ -3171,9 +3171,9 @@ namespace CherwellConnector.Api
             var exception = ExceptionFactory?.Invoke("BusinessObjectSaveRelatedBusinessObjectV1", localVarResponse);
             if (exception != null) throw exception;
 
-            return new ApiResponse<TrebuchetWebApiDataContractsBusinessObjectRelatedSaveResponse>(localVarStatusCode,
+            return new ApiResponse<RelatedSaveResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value?.ToString()),
-                (TrebuchetWebApiDataContractsBusinessObjectRelatedSaveResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsBusinessObjectRelatedSaveResponse)));
+                (RelatedSaveResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RelatedSaveResponse)));
         }
         
         #endregion

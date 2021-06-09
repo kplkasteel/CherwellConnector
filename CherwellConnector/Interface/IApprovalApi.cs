@@ -21,7 +21,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsBusinessObjectSaveResponse</returns>
-        TrebuchetWebApiDataContractsBusinessObjectSaveResponse ApprovalActionApprovalV1 (string approvalRecId, string approvalAction, string lang = null, string locale = null);
+        SaveResponse ApprovalActionApprovalV1 (string approvalRecId, string approvalAction, string lang = null, string locale = null);
 
        
         /// <summary>
