@@ -342,7 +342,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsBusinessObjectTemplateResponse</returns>
-        TrebuchetWebApiDataContractsBusinessObjectTemplateResponse BusinessObjectGetBusinessObjectTemplateV1 (TemplateRequest request, string lang = null, string locale = null);
+        TemplateResponse BusinessObjectGetBusinessObjectTemplateV1 (TemplateRequest request, string lang = null, string locale = null);
 
         /// <summary>
         /// Get related Business Objects using a request object

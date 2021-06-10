@@ -36,7 +36,7 @@ namespace CherwellConnector.Model
         /// <param name="relatedBusinessObjects">relatedBusinessObjects.</param>
         /// <param name="relationshipId">relationshipId.</param>
         /// <param name="totalRecords">totalRecords.</param>
-        public TrebuchetWebApiDataContractsSearchesRelatedBusinessObjectResponse(string errorCode = default, string errorMessage = default, bool? hasError = default, List<TrebuchetWebApiDataContractsCoreLink> links = default, int? pageNumber = default, int? pageSize = default, string parentBusObId = default, string parentBusObPublicId = default, string parentBusObRecId = default, List<ReadResponse> relatedBusinessObjects = default, string relationshipId = default, int? totalRecords = default)
+        public TrebuchetWebApiDataContractsSearchesRelatedBusinessObjectResponse(string errorCode = default, string errorMessage = default, bool? hasError = default, List<Link> links = default, int? pageNumber = default, int? pageSize = default, string parentBusObId = default, string parentBusObPublicId = default, string parentBusObRecId = default, List<ReadResponse> relatedBusinessObjects = default, string relationshipId = default, int? totalRecords = default)
         {
             ErrorCode = errorCode;
             ErrorMessage = errorMessage;
@@ -74,7 +74,7 @@ namespace CherwellConnector.Model
         /// Gets or Sets Links
         /// </summary>
         [DataMember(Name="links", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsCoreLink> Links { get; set; }
+        public List<Link> Links { get; set; }
 
         /// <summary>
         /// Gets or Sets PageNumber

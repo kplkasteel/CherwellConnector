@@ -34,7 +34,7 @@ namespace CherwellConnector.Model
         /// <param name="parentFolderId">parentFolderId.</param>
         /// <param name="scope">scope.</param>
         /// <param name="scopeOwner">scopeOwner.</param>
-        public TrebuchetWebApiDataContractsSearchesSearchFolder(string association = default, List<TrebuchetWebApiDataContractsSearchesSearchFolder> childFolders = default, List<TrebuchetWebApiDataContractsSearchesSearchItem> childItems = default, string folderId = default, string folderName = default, List<TrebuchetWebApiDataContractsCoreLink> links = default, string localizedScopeName = default, string parentFolderId = default, string scope = default, string scopeOwner = default)
+        public TrebuchetWebApiDataContractsSearchesSearchFolder(string association = default, List<TrebuchetWebApiDataContractsSearchesSearchFolder> childFolders = default, List<TrebuchetWebApiDataContractsSearchesSearchItem> childItems = default, string folderId = default, string folderName = default, List<Link> links = default, string localizedScopeName = default, string parentFolderId = default, string scope = default, string scopeOwner = default)
         {
             Association = association;
             ChildFolders = childFolders;
@@ -82,7 +82,7 @@ namespace CherwellConnector.Model
         /// Gets or Sets Links
         /// </summary>
         [DataMember(Name="links", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsCoreLink> Links { get; set; }
+        public List<Link> Links { get; set; }
 
         /// <summary>
         /// Gets or Sets LocalizedScopeName

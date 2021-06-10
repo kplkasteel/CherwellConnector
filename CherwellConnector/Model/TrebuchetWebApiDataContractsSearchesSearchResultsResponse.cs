@@ -332,7 +332,7 @@ namespace CherwellConnector.Model
         /// <param name="errorMessage">errorMessage.</param>
         /// <param name="hasError">hasError.</param>
         /// <param name="httpStatusCode">httpStatusCode.</param>
-        public TrebuchetWebApiDataContractsSearchesSearchResultsResponse(List<ReadResponse> businessObjects = default, bool? hasPrompts = default, List<TrebuchetWebApiDataContractsCoreLink> links = default, List<TrebuchetWebApiDataContractsCorePrompt> prompts = default, List<TrebuchetWebApiDataContractsSearchesField> searchResultsFields = default, TrebuchetWebApiDataContractsSearchesSimpleResultsList simpleResults = default, long? totalRows = default, bool? hasMoreRecords = default, string errorCode = default, string errorMessage = default, bool? hasError = default, HttpStatusCodeEnum? httpStatusCode = default)
+        public TrebuchetWebApiDataContractsSearchesSearchResultsResponse(List<ReadResponse> businessObjects = default, bool? hasPrompts = default, List<Link> links = default, List<Prompt> prompts = default, List<TrebuchetWebApiDataContractsSearchesField> searchResultsFields = default, TrebuchetWebApiDataContractsSearchesSimpleResultsList simpleResults = default, long? totalRows = default, bool? hasMoreRecords = default, string errorCode = default, string errorMessage = default, bool? hasError = default, HttpStatusCodeEnum? httpStatusCode = default)
         {
             BusinessObjects = businessObjects;
             HasPrompts = hasPrompts;
@@ -364,13 +364,13 @@ namespace CherwellConnector.Model
         /// Gets or Sets Links
         /// </summary>
         [DataMember(Name="links", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsCoreLink> Links { get; set; }
+        public List<Link> Links { get; set; }
 
         /// <summary>
         /// Gets or Sets Prompts
         /// </summary>
         [DataMember(Name="prompts", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsCorePrompt> Prompts { get; set; }
+        public List<Prompt> Prompts { get; set; }
 
         /// <summary>
         /// Gets or Sets SearchResultsFields

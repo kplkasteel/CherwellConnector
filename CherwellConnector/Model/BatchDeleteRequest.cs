@@ -1,6 +1,4 @@
 
-using System.Diagnostics.CodeAnalysis;
-
 namespace CherwellConnector.Model
 {
     using System;
@@ -101,7 +99,7 @@ namespace CherwellConnector.Model
         /// Gets the hash code
         /// </summary>
         /// <returns>Hash code</returns>
-        [SuppressMessage("ReSharper", "NonReadonlyMemberInGetHashCode")]
+        
         public override int GetHashCode()
         {
             var hashCode = 41;

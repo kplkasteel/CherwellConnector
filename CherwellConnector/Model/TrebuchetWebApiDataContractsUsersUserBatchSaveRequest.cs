@@ -26,7 +26,7 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="saveRequests">saveRequests.</param>
         /// <param name="stopOnError">stopOnError.</param>
-        public TrebuchetWebApiDataContractsUsersUserBatchSaveRequest(List<TrebuchetWebApiDataContractsUsersUserSaveRequest> saveRequests = default, bool? stopOnError = default)
+        public TrebuchetWebApiDataContractsUsersUserBatchSaveRequest(List<UserSaveRequest> saveRequests = default, bool? stopOnError = default)
         {
             SaveRequests = saveRequests;
             StopOnError = stopOnError;
@@ -36,7 +36,7 @@ namespace CherwellConnector.Model
         /// Gets or Sets SaveRequests
         /// </summary>
         [DataMember(Name="saveRequests", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsUsersUserSaveRequest> SaveRequests { get; set; }
+        public List<UserSaveRequest> SaveRequests { get; set; }
 
         /// <summary>
         /// Gets or Sets StopOnError

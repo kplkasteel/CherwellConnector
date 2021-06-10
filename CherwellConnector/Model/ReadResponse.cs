@@ -1,5 +1,3 @@
-
-using System.Diagnostics.CodeAnalysis;
 using CherwellConnector.Enum;
 
 namespace CherwellConnector.Model
@@ -39,7 +37,7 @@ namespace CherwellConnector.Model
         /// <param name="errorMessage">errorMessage.</param>
         /// <param name="hasError">hasError.</param>
         /// <param name="httpStatusCode">httpStatusCode.</param>
-        public ReadResponse(string busObId = default, string busObPublicId = default, string busObRecId = default, List<FieldTemplateItem> fields = default, List<TrebuchetWebApiDataContractsCoreLink> links = default, string errorCode = default, string errorMessage = default, bool? hasError = default, HttpStatusCodeEnum? httpStatusCode = default)
+        public ReadResponse(string busObId = default, string busObPublicId = default, string busObRecId = default, List<FieldTemplateItem> fields = default, List<Link> links = default, string errorCode = default, string errorMessage = default, bool? hasError = default, HttpStatusCodeEnum? httpStatusCode = default)
         {
             BusObId = busObId;
             BusObPublicId = busObPublicId;
@@ -80,7 +78,7 @@ namespace CherwellConnector.Model
         /// Gets or Sets Links
         /// </summary>
         [DataMember(Name="links", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsCoreLink> Links { get; set; }
+        public List<Link> Links { get; set; }
 
         /// <summary>
         /// Gets or Sets ErrorCode
@@ -203,7 +201,7 @@ namespace CherwellConnector.Model
         /// Gets the hash code
         /// </summary>
         /// <returns>Hash code</returns>
-        [SuppressMessage("ReSharper", "NonReadonlyMemberInGetHashCode")]
+        
         public override int GetHashCode()
         {
             unchecked // Overflow is fine, just wrap

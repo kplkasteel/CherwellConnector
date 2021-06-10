@@ -129,9 +129,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsCoreManagerData</returns>
-        public TrebuchetWebApiDataContractsCoreManagerData OneStepActionsGetOneStepActionsByAssociationScopeScopeOwnerFolderV1 (string association, string scope, string scopeowner, string folder, bool? links = null, string lang = null, string locale = null)
+        public ManagerData OneStepActionsGetOneStepActionsByAssociationScopeScopeOwnerFolderV1 (string association, string scope, string scopeowner, string folder, bool? links = null, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsCoreManagerData> localVarResponse = OneStepActionsGetOneStepActionsByAssociationScopeScopeOwnerFolderV1WithHttpInfo(association, scope, scopeowner, folder, links, lang, locale);
+             ApiResponse<ManagerData> localVarResponse = OneStepActionsGetOneStepActionsByAssociationScopeScopeOwnerFolderV1WithHttpInfo(association, scope, scopeowner, folder, links, lang, locale);
              return localVarResponse.Data;
         }
 
@@ -147,7 +147,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsCoreManagerData</returns>
-        public ApiResponse< TrebuchetWebApiDataContractsCoreManagerData > OneStepActionsGetOneStepActionsByAssociationScopeScopeOwnerFolderV1WithHttpInfo (string association, string scope, string scopeowner, string folder, bool? links = null, string lang = null, string locale = null)
+        public ApiResponse< ManagerData > OneStepActionsGetOneStepActionsByAssociationScopeScopeOwnerFolderV1WithHttpInfo (string association, string scope, string scopeowner, string folder, bool? links = null, string lang = null, string locale = null)
         {
             // verify the required parameter 'association' is set
             if (association == null)
@@ -214,9 +214,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsCoreManagerData>(localVarStatusCode,
+            return new ApiResponse<ManagerData>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsCoreManagerData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsCoreManagerData)));
+                (ManagerData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ManagerData)));
         }
 
         /// <summary>
@@ -231,9 +231,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsCoreManagerData</returns>
-        public async System.Threading.Tasks.Task<TrebuchetWebApiDataContractsCoreManagerData> OneStepActionsGetOneStepActionsByAssociationScopeScopeOwnerFolderV1Async (string association, string scope, string scopeowner, string folder, bool? links = null, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ManagerData> OneStepActionsGetOneStepActionsByAssociationScopeScopeOwnerFolderV1Async (string association, string scope, string scopeowner, string folder, bool? links = null, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsCoreManagerData> localVarResponse = await OneStepActionsGetOneStepActionsByAssociationScopeScopeOwnerFolderV1AsyncWithHttpInfo(association, scope, scopeowner, folder, links, lang, locale);
+             ApiResponse<ManagerData> localVarResponse = await OneStepActionsGetOneStepActionsByAssociationScopeScopeOwnerFolderV1AsyncWithHttpInfo(association, scope, scopeowner, folder, links, lang, locale);
              return localVarResponse.Data;
 
         }
@@ -250,7 +250,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsCoreManagerData)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsCoreManagerData>> OneStepActionsGetOneStepActionsByAssociationScopeScopeOwnerFolderV1AsyncWithHttpInfo (string association, string scope, string scopeowner, string folder, bool? links = null, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ManagerData>> OneStepActionsGetOneStepActionsByAssociationScopeScopeOwnerFolderV1AsyncWithHttpInfo (string association, string scope, string scopeowner, string folder, bool? links = null, string lang = null, string locale = null)
         {
             // verify the required parameter 'association' is set
             if (association == null)
@@ -317,9 +317,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsCoreManagerData>(localVarStatusCode,
+            return new ApiResponse<ManagerData>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsCoreManagerData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsCoreManagerData)));
+                (ManagerData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ManagerData)));
         }
 
         /// <summary>
@@ -333,9 +333,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsCoreManagerData</returns>
-        public TrebuchetWebApiDataContractsCoreManagerData OneStepActionsGetOneStepActionsByAssociationScopeScopeOwnerV1 (string association, string scope, string scopeowner, bool? links = null, string lang = null, string locale = null)
+        public ManagerData OneStepActionsGetOneStepActionsByAssociationScopeScopeOwnerV1 (string association, string scope, string scopeowner, bool? links = null, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsCoreManagerData> localVarResponse = OneStepActionsGetOneStepActionsByAssociationScopeScopeOwnerV1WithHttpInfo(association, scope, scopeowner, links, lang, locale);
+             ApiResponse<ManagerData> localVarResponse = OneStepActionsGetOneStepActionsByAssociationScopeScopeOwnerV1WithHttpInfo(association, scope, scopeowner, links, lang, locale);
              return localVarResponse.Data;
         }
 
@@ -350,7 +350,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsCoreManagerData</returns>
-        public ApiResponse< TrebuchetWebApiDataContractsCoreManagerData > OneStepActionsGetOneStepActionsByAssociationScopeScopeOwnerV1WithHttpInfo (string association, string scope, string scopeowner, bool? links = null, string lang = null, string locale = null)
+        public ApiResponse< ManagerData > OneStepActionsGetOneStepActionsByAssociationScopeScopeOwnerV1WithHttpInfo (string association, string scope, string scopeowner, bool? links = null, string lang = null, string locale = null)
         {
             // verify the required parameter 'association' is set
             if (association == null)
@@ -413,9 +413,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsCoreManagerData>(localVarStatusCode,
+            return new ApiResponse<ManagerData>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsCoreManagerData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsCoreManagerData)));
+                (ManagerData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ManagerData)));
         }
 
         /// <summary>
@@ -429,9 +429,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsCoreManagerData</returns>
-        public async System.Threading.Tasks.Task<TrebuchetWebApiDataContractsCoreManagerData> OneStepActionsGetOneStepActionsByAssociationScopeScopeOwnerV1Async (string association, string scope, string scopeowner, bool? links = null, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ManagerData> OneStepActionsGetOneStepActionsByAssociationScopeScopeOwnerV1Async (string association, string scope, string scopeowner, bool? links = null, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsCoreManagerData> localVarResponse = await OneStepActionsGetOneStepActionsByAssociationScopeScopeOwnerV1AsyncWithHttpInfo(association, scope, scopeowner, links, lang, locale);
+             ApiResponse<ManagerData> localVarResponse = await OneStepActionsGetOneStepActionsByAssociationScopeScopeOwnerV1AsyncWithHttpInfo(association, scope, scopeowner, links, lang, locale);
              return localVarResponse.Data;
 
         }
@@ -447,7 +447,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsCoreManagerData)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsCoreManagerData>> OneStepActionsGetOneStepActionsByAssociationScopeScopeOwnerV1AsyncWithHttpInfo (string association, string scope, string scopeowner, bool? links = null, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ManagerData>> OneStepActionsGetOneStepActionsByAssociationScopeScopeOwnerV1AsyncWithHttpInfo (string association, string scope, string scopeowner, bool? links = null, string lang = null, string locale = null)
         {
             // verify the required parameter 'association' is set
             if (association == null)
@@ -510,9 +510,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsCoreManagerData>(localVarStatusCode,
+            return new ApiResponse<ManagerData>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsCoreManagerData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsCoreManagerData)));
+                (ManagerData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ManagerData)));
         }
 
         /// <summary>
@@ -525,9 +525,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsCoreManagerData</returns>
-        public TrebuchetWebApiDataContractsCoreManagerData OneStepActionsGetOneStepActionsByAssociationScopeV1 (string association, string scope, bool? links = null, string lang = null, string locale = null)
+        public ManagerData OneStepActionsGetOneStepActionsByAssociationScopeV1 (string association, string scope, bool? links = null, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsCoreManagerData> localVarResponse = OneStepActionsGetOneStepActionsByAssociationScopeV1WithHttpInfo(association, scope, links, lang, locale);
+             ApiResponse<ManagerData> localVarResponse = OneStepActionsGetOneStepActionsByAssociationScopeV1WithHttpInfo(association, scope, links, lang, locale);
              return localVarResponse.Data;
         }
 
@@ -541,7 +541,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsCoreManagerData</returns>
-        public ApiResponse< TrebuchetWebApiDataContractsCoreManagerData > OneStepActionsGetOneStepActionsByAssociationScopeV1WithHttpInfo (string association, string scope, bool? links = null, string lang = null, string locale = null)
+        public ApiResponse< ManagerData > OneStepActionsGetOneStepActionsByAssociationScopeV1WithHttpInfo (string association, string scope, bool? links = null, string lang = null, string locale = null)
         {
             // verify the required parameter 'association' is set
             if (association == null)
@@ -600,9 +600,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsCoreManagerData>(localVarStatusCode,
+            return new ApiResponse<ManagerData>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsCoreManagerData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsCoreManagerData)));
+                (ManagerData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ManagerData)));
         }
 
         /// <summary>
@@ -615,9 +615,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsCoreManagerData</returns>
-        public async System.Threading.Tasks.Task<TrebuchetWebApiDataContractsCoreManagerData> OneStepActionsGetOneStepActionsByAssociationScopeV1Async (string association, string scope, bool? links = null, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ManagerData> OneStepActionsGetOneStepActionsByAssociationScopeV1Async (string association, string scope, bool? links = null, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsCoreManagerData> localVarResponse = await OneStepActionsGetOneStepActionsByAssociationScopeV1AsyncWithHttpInfo(association, scope, links, lang, locale);
+             ApiResponse<ManagerData> localVarResponse = await OneStepActionsGetOneStepActionsByAssociationScopeV1AsyncWithHttpInfo(association, scope, links, lang, locale);
              return localVarResponse.Data;
 
         }
@@ -632,7 +632,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsCoreManagerData)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsCoreManagerData>> OneStepActionsGetOneStepActionsByAssociationScopeV1AsyncWithHttpInfo (string association, string scope, bool? links = null, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ManagerData>> OneStepActionsGetOneStepActionsByAssociationScopeV1AsyncWithHttpInfo (string association, string scope, bool? links = null, string lang = null, string locale = null)
         {
             // verify the required parameter 'association' is set
             if (association == null)
@@ -691,9 +691,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsCoreManagerData>(localVarStatusCode,
+            return new ApiResponse<ManagerData>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsCoreManagerData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsCoreManagerData)));
+                (ManagerData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ManagerData)));
         }
 
         /// <summary>
@@ -705,9 +705,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsCoreManagerData</returns>
-        public TrebuchetWebApiDataContractsCoreManagerData OneStepActionsGetOneStepActionsByAssociationV1 (string association, bool? links = null, string lang = null, string locale = null)
+        public ManagerData OneStepActionsGetOneStepActionsByAssociationV1 (string association, bool? links = null, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsCoreManagerData> localVarResponse = OneStepActionsGetOneStepActionsByAssociationV1WithHttpInfo(association, links, lang, locale);
+             ApiResponse<ManagerData> localVarResponse = OneStepActionsGetOneStepActionsByAssociationV1WithHttpInfo(association, links, lang, locale);
              return localVarResponse.Data;
         }
 
@@ -720,7 +720,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsCoreManagerData</returns>
-        public ApiResponse< TrebuchetWebApiDataContractsCoreManagerData > OneStepActionsGetOneStepActionsByAssociationV1WithHttpInfo (string association, bool? links = null, string lang = null, string locale = null)
+        public ApiResponse< ManagerData > OneStepActionsGetOneStepActionsByAssociationV1WithHttpInfo (string association, bool? links = null, string lang = null, string locale = null)
         {
             // verify the required parameter 'association' is set
             if (association == null)
@@ -775,9 +775,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsCoreManagerData>(localVarStatusCode,
+            return new ApiResponse<ManagerData>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsCoreManagerData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsCoreManagerData)));
+                (ManagerData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ManagerData)));
         }
 
         /// <summary>
@@ -789,9 +789,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsCoreManagerData</returns>
-        public async System.Threading.Tasks.Task<TrebuchetWebApiDataContractsCoreManagerData> OneStepActionsGetOneStepActionsByAssociationV1Async (string association, bool? links = null, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ManagerData> OneStepActionsGetOneStepActionsByAssociationV1Async (string association, bool? links = null, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsCoreManagerData> localVarResponse = await OneStepActionsGetOneStepActionsByAssociationV1AsyncWithHttpInfo(association, links, lang, locale);
+             ApiResponse<ManagerData> localVarResponse = await OneStepActionsGetOneStepActionsByAssociationV1AsyncWithHttpInfo(association, links, lang, locale);
              return localVarResponse.Data;
 
         }
@@ -805,7 +805,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsCoreManagerData)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsCoreManagerData>> OneStepActionsGetOneStepActionsByAssociationV1AsyncWithHttpInfo (string association, bool? links = null, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ManagerData>> OneStepActionsGetOneStepActionsByAssociationV1AsyncWithHttpInfo (string association, bool? links = null, string lang = null, string locale = null)
         {
             // verify the required parameter 'association' is set
             if (association == null)
@@ -860,9 +860,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsCoreManagerData>(localVarStatusCode,
+            return new ApiResponse<ManagerData>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsCoreManagerData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsCoreManagerData)));
+                (ManagerData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ManagerData)));
         }
 
         /// <summary>
@@ -873,9 +873,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsCoreManagerData</returns>
-        public TrebuchetWebApiDataContractsCoreManagerData OneStepActionsGetOneStepActionsV1 (bool? links = null, string lang = null, string locale = null)
+        public ManagerData OneStepActionsGetOneStepActionsV1 (bool? links = null, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsCoreManagerData> localVarResponse = OneStepActionsGetOneStepActionsV1WithHttpInfo(links, lang, locale);
+             ApiResponse<ManagerData> localVarResponse = OneStepActionsGetOneStepActionsV1WithHttpInfo(links, lang, locale);
              return localVarResponse.Data;
         }
 
@@ -887,7 +887,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsCoreManagerData</returns>
-        public ApiResponse< TrebuchetWebApiDataContractsCoreManagerData > OneStepActionsGetOneStepActionsV1WithHttpInfo (bool? links = null, string lang = null, string locale = null)
+        public ApiResponse< ManagerData > OneStepActionsGetOneStepActionsV1WithHttpInfo (bool? links = null, string lang = null, string locale = null)
         {
 
             var localVarPath = "/api/V1/getonestepactions";
@@ -938,9 +938,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsCoreManagerData>(localVarStatusCode,
+            return new ApiResponse<ManagerData>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsCoreManagerData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsCoreManagerData)));
+                (ManagerData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ManagerData)));
         }
 
         /// <summary>
@@ -951,9 +951,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsCoreManagerData</returns>
-        public async System.Threading.Tasks.Task<TrebuchetWebApiDataContractsCoreManagerData> OneStepActionsGetOneStepActionsV1Async (bool? links = null, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ManagerData> OneStepActionsGetOneStepActionsV1Async (bool? links = null, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsCoreManagerData> localVarResponse = await OneStepActionsGetOneStepActionsV1AsyncWithHttpInfo(links, lang, locale);
+             ApiResponse<ManagerData> localVarResponse = await OneStepActionsGetOneStepActionsV1AsyncWithHttpInfo(links, lang, locale);
              return localVarResponse.Data;
 
         }
@@ -966,7 +966,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsCoreManagerData)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsCoreManagerData>> OneStepActionsGetOneStepActionsV1AsyncWithHttpInfo (bool? links = null, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ManagerData>> OneStepActionsGetOneStepActionsV1AsyncWithHttpInfo (bool? links = null, string lang = null, string locale = null)
         {
 
             var localVarPath = "/api/V1/getonestepactions";
@@ -1017,9 +1017,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsCoreManagerData>(localVarStatusCode,
+            return new ApiResponse<ManagerData>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsCoreManagerData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsCoreManagerData)));
+                (ManagerData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ManagerData)));
         }
 
         /// <summary>

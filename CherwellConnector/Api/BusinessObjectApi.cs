@@ -1894,7 +1894,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsBusinessObjectTemplateResponse</returns>
-        public TrebuchetWebApiDataContractsBusinessObjectTemplateResponse BusinessObjectGetBusinessObjectTemplateV1 (TemplateRequest request, string lang = null, string locale = null)
+        public TemplateResponse BusinessObjectGetBusinessObjectTemplateV1 (TemplateRequest request, string lang = null, string locale = null)
         {
              return BusinessObjectGetBusinessObjectTemplateV1WithHttpInfo(request, lang, locale).Data;
         }
@@ -1907,7 +1907,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsBusinessObjectTemplateResponse</returns>
-        private ApiResponse< TrebuchetWebApiDataContractsBusinessObjectTemplateResponse > BusinessObjectGetBusinessObjectTemplateV1WithHttpInfo (TemplateRequest request, string lang = null, string locale = null)
+        private ApiResponse< TemplateResponse > BusinessObjectGetBusinessObjectTemplateV1WithHttpInfo (TemplateRequest request, string lang = null, string locale = null)
         {
             // verify the required parameter 'request' is set
             if (request == null)
@@ -1955,9 +1955,9 @@ namespace CherwellConnector.Api
             var exception = ExceptionFactory?.Invoke("BusinessObjectGetBusinessObjectTemplateV1", localVarResponse);
             if (exception != null) throw exception;
 
-            return new ApiResponse<TrebuchetWebApiDataContractsBusinessObjectTemplateResponse>(localVarStatusCode,
+            return new ApiResponse<TemplateResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value?.ToString()),
-                (TrebuchetWebApiDataContractsBusinessObjectTemplateResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsBusinessObjectTemplateResponse)));
+                (TemplateResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TemplateResponse)));
         }
 
         #endregion

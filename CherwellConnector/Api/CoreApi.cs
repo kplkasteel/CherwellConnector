@@ -444,9 +444,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsCoreManagerData</returns>
-        public TrebuchetWebApiDataContractsCoreManagerData CoreGetGalleryImagesFolderV1 (string scope, string scopeowner, string folder, bool? links = null, string lang = null, string locale = null)
+        public ManagerData CoreGetGalleryImagesFolderV1 (string scope, string scopeowner, string folder, bool? links = null, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsCoreManagerData> localVarResponse = CoreGetGalleryImagesFolderV1WithHttpInfo(scope, scopeowner, folder, links, lang, locale);
+             ApiResponse<ManagerData> localVarResponse = CoreGetGalleryImagesFolderV1WithHttpInfo(scope, scopeowner, folder, links, lang, locale);
              return localVarResponse.Data;
         }
 
@@ -461,7 +461,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsCoreManagerData</returns>
-        public ApiResponse< TrebuchetWebApiDataContractsCoreManagerData > CoreGetGalleryImagesFolderV1WithHttpInfo (string scope, string scopeowner, string folder, bool? links = null, string lang = null, string locale = null)
+        public ApiResponse< ManagerData > CoreGetGalleryImagesFolderV1WithHttpInfo (string scope, string scopeowner, string folder, bool? links = null, string lang = null, string locale = null)
         {
             // verify the required parameter 'scope' is set
             if (scope == null)
@@ -524,9 +524,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsCoreManagerData>(localVarStatusCode,
+            return new ApiResponse<ManagerData>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsCoreManagerData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsCoreManagerData)));
+                (ManagerData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ManagerData)));
         }
 
         /// <summary>
@@ -540,9 +540,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsCoreManagerData</returns>
-        public async System.Threading.Tasks.Task<TrebuchetWebApiDataContractsCoreManagerData> CoreGetGalleryImagesFolderV1Async (string scope, string scopeowner, string folder, bool? links = null, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ManagerData> CoreGetGalleryImagesFolderV1Async (string scope, string scopeowner, string folder, bool? links = null, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsCoreManagerData> localVarResponse = await CoreGetGalleryImagesFolderV1AsyncWithHttpInfo(scope, scopeowner, folder, links, lang, locale);
+             ApiResponse<ManagerData> localVarResponse = await CoreGetGalleryImagesFolderV1AsyncWithHttpInfo(scope, scopeowner, folder, links, lang, locale);
              return localVarResponse.Data;
 
         }
@@ -558,7 +558,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsCoreManagerData)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsCoreManagerData>> CoreGetGalleryImagesFolderV1AsyncWithHttpInfo (string scope, string scopeowner, string folder, bool? links = null, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ManagerData>> CoreGetGalleryImagesFolderV1AsyncWithHttpInfo (string scope, string scopeowner, string folder, bool? links = null, string lang = null, string locale = null)
         {
             // verify the required parameter 'scope' is set
             if (scope == null)
@@ -621,9 +621,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsCoreManagerData>(localVarStatusCode,
+            return new ApiResponse<ManagerData>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsCoreManagerData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsCoreManagerData)));
+                (ManagerData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ManagerData)));
         }
 
         /// <summary>
@@ -636,9 +636,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsCoreManagerData</returns>
-        public TrebuchetWebApiDataContractsCoreManagerData CoreGetGalleryImagesScopeOwnerV1 (string scope, string scopeowner, bool? links = null, string lang = null, string locale = null)
+        public ManagerData CoreGetGalleryImagesScopeOwnerV1 (string scope, string scopeowner, bool? links = null, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsCoreManagerData> localVarResponse = CoreGetGalleryImagesScopeOwnerV1WithHttpInfo(scope, scopeowner, links, lang, locale);
+             ApiResponse<ManagerData> localVarResponse = CoreGetGalleryImagesScopeOwnerV1WithHttpInfo(scope, scopeowner, links, lang, locale);
              return localVarResponse.Data;
         }
 
@@ -652,7 +652,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsCoreManagerData</returns>
-        public ApiResponse< TrebuchetWebApiDataContractsCoreManagerData > CoreGetGalleryImagesScopeOwnerV1WithHttpInfo (string scope, string scopeowner, bool? links = null, string lang = null, string locale = null)
+        public ApiResponse< ManagerData > CoreGetGalleryImagesScopeOwnerV1WithHttpInfo (string scope, string scopeowner, bool? links = null, string lang = null, string locale = null)
         {
             // verify the required parameter 'scope' is set
             if (scope == null)
@@ -711,9 +711,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsCoreManagerData>(localVarStatusCode,
+            return new ApiResponse<ManagerData>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsCoreManagerData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsCoreManagerData)));
+                (ManagerData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ManagerData)));
         }
 
         /// <summary>
@@ -726,9 +726,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsCoreManagerData</returns>
-        public async System.Threading.Tasks.Task<TrebuchetWebApiDataContractsCoreManagerData> CoreGetGalleryImagesScopeOwnerV1Async (string scope, string scopeowner, bool? links = null, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ManagerData> CoreGetGalleryImagesScopeOwnerV1Async (string scope, string scopeowner, bool? links = null, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsCoreManagerData> localVarResponse = await CoreGetGalleryImagesScopeOwnerV1AsyncWithHttpInfo(scope, scopeowner, links, lang, locale);
+             ApiResponse<ManagerData> localVarResponse = await CoreGetGalleryImagesScopeOwnerV1AsyncWithHttpInfo(scope, scopeowner, links, lang, locale);
              return localVarResponse.Data;
 
         }
@@ -743,7 +743,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsCoreManagerData)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsCoreManagerData>> CoreGetGalleryImagesScopeOwnerV1AsyncWithHttpInfo (string scope, string scopeowner, bool? links = null, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ManagerData>> CoreGetGalleryImagesScopeOwnerV1AsyncWithHttpInfo (string scope, string scopeowner, bool? links = null, string lang = null, string locale = null)
         {
             // verify the required parameter 'scope' is set
             if (scope == null)
@@ -802,9 +802,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsCoreManagerData>(localVarStatusCode,
+            return new ApiResponse<ManagerData>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsCoreManagerData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsCoreManagerData)));
+                (ManagerData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ManagerData)));
         }
 
         /// <summary>
@@ -816,9 +816,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsCoreManagerData</returns>
-        public TrebuchetWebApiDataContractsCoreManagerData CoreGetGalleryImagesScopeV1 (string scope, bool? links = null, string lang = null, string locale = null)
+        public ManagerData CoreGetGalleryImagesScopeV1 (string scope, bool? links = null, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsCoreManagerData> localVarResponse = CoreGetGalleryImagesScopeV1WithHttpInfo(scope, links, lang, locale);
+             ApiResponse<ManagerData> localVarResponse = CoreGetGalleryImagesScopeV1WithHttpInfo(scope, links, lang, locale);
              return localVarResponse.Data;
         }
 
@@ -831,7 +831,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsCoreManagerData</returns>
-        public ApiResponse< TrebuchetWebApiDataContractsCoreManagerData > CoreGetGalleryImagesScopeV1WithHttpInfo (string scope, bool? links = null, string lang = null, string locale = null)
+        public ApiResponse< ManagerData > CoreGetGalleryImagesScopeV1WithHttpInfo (string scope, bool? links = null, string lang = null, string locale = null)
         {
             // verify the required parameter 'scope' is set
             if (scope == null)
@@ -886,9 +886,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsCoreManagerData>(localVarStatusCode,
+            return new ApiResponse<ManagerData>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsCoreManagerData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsCoreManagerData)));
+                (ManagerData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ManagerData)));
         }
 
         /// <summary>
@@ -900,9 +900,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsCoreManagerData</returns>
-        public async System.Threading.Tasks.Task<TrebuchetWebApiDataContractsCoreManagerData> CoreGetGalleryImagesScopeV1Async (string scope, bool? links = null, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ManagerData> CoreGetGalleryImagesScopeV1Async (string scope, bool? links = null, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsCoreManagerData> localVarResponse = await CoreGetGalleryImagesScopeV1AsyncWithHttpInfo(scope, links, lang, locale);
+             ApiResponse<ManagerData> localVarResponse = await CoreGetGalleryImagesScopeV1AsyncWithHttpInfo(scope, links, lang, locale);
              return localVarResponse.Data;
 
         }
@@ -916,7 +916,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsCoreManagerData)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsCoreManagerData>> CoreGetGalleryImagesScopeV1AsyncWithHttpInfo (string scope, bool? links = null, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ManagerData>> CoreGetGalleryImagesScopeV1AsyncWithHttpInfo (string scope, bool? links = null, string lang = null, string locale = null)
         {
             // verify the required parameter 'scope' is set
             if (scope == null)
@@ -971,9 +971,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsCoreManagerData>(localVarStatusCode,
+            return new ApiResponse<ManagerData>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsCoreManagerData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsCoreManagerData)));
+                (ManagerData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ManagerData)));
         }
 
         /// <summary>
@@ -984,9 +984,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsCoreManagerData</returns>
-        public TrebuchetWebApiDataContractsCoreManagerData CoreGetGalleryImagesV1 (bool? links = null, string lang = null, string locale = null)
+        public ManagerData CoreGetGalleryImagesV1 (bool? links = null, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsCoreManagerData> localVarResponse = CoreGetGalleryImagesV1WithHttpInfo(links, lang, locale);
+             ApiResponse<ManagerData> localVarResponse = CoreGetGalleryImagesV1WithHttpInfo(links, lang, locale);
              return localVarResponse.Data;
         }
 
@@ -998,7 +998,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsCoreManagerData</returns>
-        public ApiResponse< TrebuchetWebApiDataContractsCoreManagerData > CoreGetGalleryImagesV1WithHttpInfo (bool? links = null, string lang = null, string locale = null)
+        public ApiResponse< ManagerData > CoreGetGalleryImagesV1WithHttpInfo (bool? links = null, string lang = null, string locale = null)
         {
 
             var localVarPath = "/api/V1/getgalleryimages";
@@ -1049,9 +1049,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsCoreManagerData>(localVarStatusCode,
+            return new ApiResponse<ManagerData>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsCoreManagerData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsCoreManagerData)));
+                (ManagerData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ManagerData)));
         }
 
         /// <summary>
@@ -1062,9 +1062,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsCoreManagerData</returns>
-        public async System.Threading.Tasks.Task<TrebuchetWebApiDataContractsCoreManagerData> CoreGetGalleryImagesV1Async (bool? links = null, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ManagerData> CoreGetGalleryImagesV1Async (bool? links = null, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsCoreManagerData> localVarResponse = await CoreGetGalleryImagesV1AsyncWithHttpInfo(links, lang, locale);
+             ApiResponse<ManagerData> localVarResponse = await CoreGetGalleryImagesV1AsyncWithHttpInfo(links, lang, locale);
              return localVarResponse.Data;
 
         }
@@ -1077,7 +1077,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsCoreManagerData)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsCoreManagerData>> CoreGetGalleryImagesV1AsyncWithHttpInfo (bool? links = null, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ManagerData>> CoreGetGalleryImagesV1AsyncWithHttpInfo (bool? links = null, string lang = null, string locale = null)
         {
 
             var localVarPath = "/api/V1/getgalleryimages";
@@ -1128,9 +1128,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsCoreManagerData>(localVarStatusCode,
+            return new ApiResponse<ManagerData>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsCoreManagerData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsCoreManagerData)));
+                (ManagerData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ManagerData)));
         }
 
         /// <summary>
@@ -1141,9 +1141,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsCoreStoredValueResponse</returns>
-        public TrebuchetWebApiDataContractsCoreStoredValueResponse CoreGetStoredValueV1 (string standInKey, string lang = null, string locale = null)
+        public StoredValueResponse CoreGetStoredValueV1 (string standInKey, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsCoreStoredValueResponse> localVarResponse = CoreGetStoredValueV1WithHttpInfo(standInKey, lang, locale);
+             ApiResponse<StoredValueResponse> localVarResponse = CoreGetStoredValueV1WithHttpInfo(standInKey, lang, locale);
              return localVarResponse.Data;
         }
 
@@ -1155,7 +1155,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsCoreStoredValueResponse</returns>
-        public ApiResponse< TrebuchetWebApiDataContractsCoreStoredValueResponse > CoreGetStoredValueV1WithHttpInfo (string standInKey, string lang = null, string locale = null)
+        public ApiResponse< StoredValueResponse > CoreGetStoredValueV1WithHttpInfo (string standInKey, string lang = null, string locale = null)
         {
             // verify the required parameter 'standInKey' is set
             if (standInKey == null)
@@ -1209,9 +1209,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsCoreStoredValueResponse>(localVarStatusCode,
+            return new ApiResponse<StoredValueResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsCoreStoredValueResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsCoreStoredValueResponse)));
+                (StoredValueResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(StoredValueResponse)));
         }
 
         /// <summary>
@@ -1222,9 +1222,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsCoreStoredValueResponse</returns>
-        public async System.Threading.Tasks.Task<TrebuchetWebApiDataContractsCoreStoredValueResponse> CoreGetStoredValueV1Async (string standInKey, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<StoredValueResponse> CoreGetStoredValueV1Async (string standInKey, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsCoreStoredValueResponse> localVarResponse = await CoreGetStoredValueV1AsyncWithHttpInfo(standInKey, lang, locale);
+             ApiResponse<StoredValueResponse> localVarResponse = await CoreGetStoredValueV1AsyncWithHttpInfo(standInKey, lang, locale);
              return localVarResponse.Data;
 
         }
@@ -1237,7 +1237,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsCoreStoredValueResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsCoreStoredValueResponse>> CoreGetStoredValueV1AsyncWithHttpInfo (string standInKey, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ApiResponse<StoredValueResponse>> CoreGetStoredValueV1AsyncWithHttpInfo (string standInKey, string lang = null, string locale = null)
         {
             // verify the required parameter 'standInKey' is set
             if (standInKey == null)
@@ -1291,9 +1291,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsCoreStoredValueResponse>(localVarStatusCode,
+            return new ApiResponse<StoredValueResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsCoreStoredValueResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsCoreStoredValueResponse)));
+                (StoredValueResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(StoredValueResponse)));
         }
 
         /// <summary>
@@ -1307,9 +1307,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsCoreManagerData</returns>
-        public TrebuchetWebApiDataContractsCoreManagerData CoreGetStoredValuesFolderV1 (string scope, string scopeowner, string folder, bool? links = null, string lang = null, string locale = null)
+        public ManagerData CoreGetStoredValuesFolderV1 (string scope, string scopeowner, string folder, bool? links = null, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsCoreManagerData> localVarResponse = CoreGetStoredValuesFolderV1WithHttpInfo(scope, scopeowner, folder, links, lang, locale);
+             ApiResponse<ManagerData> localVarResponse = CoreGetStoredValuesFolderV1WithHttpInfo(scope, scopeowner, folder, links, lang, locale);
              return localVarResponse.Data;
         }
 
@@ -1324,7 +1324,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsCoreManagerData</returns>
-        public ApiResponse< TrebuchetWebApiDataContractsCoreManagerData > CoreGetStoredValuesFolderV1WithHttpInfo (string scope, string scopeowner, string folder, bool? links = null, string lang = null, string locale = null)
+        public ApiResponse< ManagerData > CoreGetStoredValuesFolderV1WithHttpInfo (string scope, string scopeowner, string folder, bool? links = null, string lang = null, string locale = null)
         {
             // verify the required parameter 'scope' is set
             if (scope == null)
@@ -1387,9 +1387,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsCoreManagerData>(localVarStatusCode,
+            return new ApiResponse<ManagerData>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsCoreManagerData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsCoreManagerData)));
+                (ManagerData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ManagerData)));
         }
 
         /// <summary>
@@ -1403,9 +1403,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsCoreManagerData</returns>
-        public async System.Threading.Tasks.Task<TrebuchetWebApiDataContractsCoreManagerData> CoreGetStoredValuesFolderV1Async (string scope, string scopeowner, string folder, bool? links = null, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ManagerData> CoreGetStoredValuesFolderV1Async (string scope, string scopeowner, string folder, bool? links = null, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsCoreManagerData> localVarResponse = await CoreGetStoredValuesFolderV1AsyncWithHttpInfo(scope, scopeowner, folder, links, lang, locale);
+             ApiResponse<ManagerData> localVarResponse = await CoreGetStoredValuesFolderV1AsyncWithHttpInfo(scope, scopeowner, folder, links, lang, locale);
              return localVarResponse.Data;
 
         }
@@ -1421,7 +1421,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsCoreManagerData)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsCoreManagerData>> CoreGetStoredValuesFolderV1AsyncWithHttpInfo (string scope, string scopeowner, string folder, bool? links = null, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ManagerData>> CoreGetStoredValuesFolderV1AsyncWithHttpInfo (string scope, string scopeowner, string folder, bool? links = null, string lang = null, string locale = null)
         {
             // verify the required parameter 'scope' is set
             if (scope == null)
@@ -1484,9 +1484,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsCoreManagerData>(localVarStatusCode,
+            return new ApiResponse<ManagerData>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsCoreManagerData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsCoreManagerData)));
+                (ManagerData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ManagerData)));
         }
 
         /// <summary>
@@ -1499,9 +1499,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsCoreManagerData</returns>
-        public TrebuchetWebApiDataContractsCoreManagerData CoreGetStoredValuesScopeOwnerV1 (string scope, string scopeowner, bool? links = null, string lang = null, string locale = null)
+        public ManagerData CoreGetStoredValuesScopeOwnerV1 (string scope, string scopeowner, bool? links = null, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsCoreManagerData> localVarResponse = CoreGetStoredValuesScopeOwnerV1WithHttpInfo(scope, scopeowner, links, lang, locale);
+             ApiResponse<ManagerData> localVarResponse = CoreGetStoredValuesScopeOwnerV1WithHttpInfo(scope, scopeowner, links, lang, locale);
              return localVarResponse.Data;
         }
 
@@ -1515,7 +1515,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsCoreManagerData</returns>
-        public ApiResponse< TrebuchetWebApiDataContractsCoreManagerData > CoreGetStoredValuesScopeOwnerV1WithHttpInfo (string scope, string scopeowner, bool? links = null, string lang = null, string locale = null)
+        public ApiResponse< ManagerData > CoreGetStoredValuesScopeOwnerV1WithHttpInfo (string scope, string scopeowner, bool? links = null, string lang = null, string locale = null)
         {
             // verify the required parameter 'scope' is set
             if (scope == null)
@@ -1574,9 +1574,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsCoreManagerData>(localVarStatusCode,
+            return new ApiResponse<ManagerData>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsCoreManagerData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsCoreManagerData)));
+                (ManagerData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ManagerData)));
         }
 
         /// <summary>
@@ -1589,9 +1589,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsCoreManagerData</returns>
-        public async System.Threading.Tasks.Task<TrebuchetWebApiDataContractsCoreManagerData> CoreGetStoredValuesScopeOwnerV1Async (string scope, string scopeowner, bool? links = null, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ManagerData> CoreGetStoredValuesScopeOwnerV1Async (string scope, string scopeowner, bool? links = null, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsCoreManagerData> localVarResponse = await CoreGetStoredValuesScopeOwnerV1AsyncWithHttpInfo(scope, scopeowner, links, lang, locale);
+             ApiResponse<ManagerData> localVarResponse = await CoreGetStoredValuesScopeOwnerV1AsyncWithHttpInfo(scope, scopeowner, links, lang, locale);
              return localVarResponse.Data;
 
         }
@@ -1606,7 +1606,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsCoreManagerData)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsCoreManagerData>> CoreGetStoredValuesScopeOwnerV1AsyncWithHttpInfo (string scope, string scopeowner, bool? links = null, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ManagerData>> CoreGetStoredValuesScopeOwnerV1AsyncWithHttpInfo (string scope, string scopeowner, bool? links = null, string lang = null, string locale = null)
         {
             // verify the required parameter 'scope' is set
             if (scope == null)
@@ -1665,9 +1665,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsCoreManagerData>(localVarStatusCode,
+            return new ApiResponse<ManagerData>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsCoreManagerData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsCoreManagerData)));
+                (ManagerData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ManagerData)));
         }
 
         /// <summary>
@@ -1679,9 +1679,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsCoreManagerData</returns>
-        public TrebuchetWebApiDataContractsCoreManagerData CoreGetStoredValuesScopeV1 (string scope, bool? links = null, string lang = null, string locale = null)
+        public ManagerData CoreGetStoredValuesScopeV1 (string scope, bool? links = null, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsCoreManagerData> localVarResponse = CoreGetStoredValuesScopeV1WithHttpInfo(scope, links, lang, locale);
+             ApiResponse<ManagerData> localVarResponse = CoreGetStoredValuesScopeV1WithHttpInfo(scope, links, lang, locale);
              return localVarResponse.Data;
         }
 
@@ -1694,7 +1694,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsCoreManagerData</returns>
-        public ApiResponse< TrebuchetWebApiDataContractsCoreManagerData > CoreGetStoredValuesScopeV1WithHttpInfo (string scope, bool? links = null, string lang = null, string locale = null)
+        public ApiResponse< ManagerData > CoreGetStoredValuesScopeV1WithHttpInfo (string scope, bool? links = null, string lang = null, string locale = null)
         {
             // verify the required parameter 'scope' is set
             if (scope == null)
@@ -1749,9 +1749,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsCoreManagerData>(localVarStatusCode,
+            return new ApiResponse<ManagerData>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsCoreManagerData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsCoreManagerData)));
+                (ManagerData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ManagerData)));
         }
 
         /// <summary>
@@ -1763,9 +1763,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsCoreManagerData</returns>
-        public async System.Threading.Tasks.Task<TrebuchetWebApiDataContractsCoreManagerData> CoreGetStoredValuesScopeV1Async (string scope, bool? links = null, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ManagerData> CoreGetStoredValuesScopeV1Async (string scope, bool? links = null, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsCoreManagerData> localVarResponse = await CoreGetStoredValuesScopeV1AsyncWithHttpInfo(scope, links, lang, locale);
+             ApiResponse<ManagerData> localVarResponse = await CoreGetStoredValuesScopeV1AsyncWithHttpInfo(scope, links, lang, locale);
              return localVarResponse.Data;
 
         }
@@ -1779,7 +1779,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsCoreManagerData)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsCoreManagerData>> CoreGetStoredValuesScopeV1AsyncWithHttpInfo (string scope, bool? links = null, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ManagerData>> CoreGetStoredValuesScopeV1AsyncWithHttpInfo (string scope, bool? links = null, string lang = null, string locale = null)
         {
             // verify the required parameter 'scope' is set
             if (scope == null)
@@ -1834,9 +1834,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsCoreManagerData>(localVarStatusCode,
+            return new ApiResponse<ManagerData>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsCoreManagerData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsCoreManagerData)));
+                (ManagerData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ManagerData)));
         }
 
         /// <summary>
@@ -1847,9 +1847,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsCoreManagerData</returns>
-        public TrebuchetWebApiDataContractsCoreManagerData CoreGetStoredValuesV1 (bool? links = null, string lang = null, string locale = null)
+        public ManagerData CoreGetStoredValuesV1 (bool? links = null, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsCoreManagerData> localVarResponse = CoreGetStoredValuesV1WithHttpInfo(links, lang, locale);
+             ApiResponse<ManagerData> localVarResponse = CoreGetStoredValuesV1WithHttpInfo(links, lang, locale);
              return localVarResponse.Data;
         }
 
@@ -1861,7 +1861,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsCoreManagerData</returns>
-        public ApiResponse< TrebuchetWebApiDataContractsCoreManagerData > CoreGetStoredValuesV1WithHttpInfo (bool? links = null, string lang = null, string locale = null)
+        public ApiResponse< ManagerData > CoreGetStoredValuesV1WithHttpInfo (bool? links = null, string lang = null, string locale = null)
         {
 
             var localVarPath = "/api/V1/storedvalues";
@@ -1912,9 +1912,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsCoreManagerData>(localVarStatusCode,
+            return new ApiResponse<ManagerData>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsCoreManagerData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsCoreManagerData)));
+                (ManagerData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ManagerData)));
         }
 
         /// <summary>
@@ -1925,9 +1925,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsCoreManagerData</returns>
-        public async System.Threading.Tasks.Task<TrebuchetWebApiDataContractsCoreManagerData> CoreGetStoredValuesV1Async (bool? links = null, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ManagerData> CoreGetStoredValuesV1Async (bool? links = null, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsCoreManagerData> localVarResponse = await CoreGetStoredValuesV1AsyncWithHttpInfo(links, lang, locale);
+             ApiResponse<ManagerData> localVarResponse = await CoreGetStoredValuesV1AsyncWithHttpInfo(links, lang, locale);
              return localVarResponse.Data;
 
         }
@@ -1940,7 +1940,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsCoreManagerData)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsCoreManagerData>> CoreGetStoredValuesV1AsyncWithHttpInfo (bool? links = null, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ManagerData>> CoreGetStoredValuesV1AsyncWithHttpInfo (bool? links = null, string lang = null, string locale = null)
         {
 
             var localVarPath = "/api/V1/storedvalues";
@@ -1991,9 +1991,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsCoreManagerData>(localVarStatusCode,
+            return new ApiResponse<ManagerData>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsCoreManagerData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsCoreManagerData)));
+                (ManagerData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ManagerData)));
         }
 
         /// <summary>
@@ -2003,9 +2003,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsCoreViewsResponse</returns>
-        public TrebuchetWebApiDataContractsCoreViewsResponse CoreGetViewsV1 (string lang = null, string locale = null)
+        public ViewsResponse CoreGetViewsV1 (string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsCoreViewsResponse> localVarResponse = CoreGetViewsV1WithHttpInfo(lang, locale);
+             ApiResponse<ViewsResponse> localVarResponse = CoreGetViewsV1WithHttpInfo(lang, locale);
              return localVarResponse.Data;
         }
 
@@ -2016,7 +2016,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsCoreViewsResponse</returns>
-        public ApiResponse< TrebuchetWebApiDataContractsCoreViewsResponse > CoreGetViewsV1WithHttpInfo (string lang = null, string locale = null)
+        public ApiResponse< ViewsResponse > CoreGetViewsV1WithHttpInfo (string lang = null, string locale = null)
         {
 
             var localVarPath = "/api/V1/getviews";
@@ -2066,9 +2066,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsCoreViewsResponse>(localVarStatusCode,
+            return new ApiResponse<ViewsResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsCoreViewsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsCoreViewsResponse)));
+                (ViewsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ViewsResponse)));
         }
 
         /// <summary>
@@ -2078,9 +2078,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsCoreViewsResponse</returns>
-        public async System.Threading.Tasks.Task<TrebuchetWebApiDataContractsCoreViewsResponse> CoreGetViewsV1Async (string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ViewsResponse> CoreGetViewsV1Async (string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsCoreViewsResponse> localVarResponse = await CoreGetViewsV1AsyncWithHttpInfo(lang, locale);
+             ApiResponse<ViewsResponse> localVarResponse = await CoreGetViewsV1AsyncWithHttpInfo(lang, locale);
              return localVarResponse.Data;
 
         }
@@ -2092,7 +2092,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsCoreViewsResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsCoreViewsResponse>> CoreGetViewsV1AsyncWithHttpInfo (string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ViewsResponse>> CoreGetViewsV1AsyncWithHttpInfo (string lang = null, string locale = null)
         {
 
             var localVarPath = "/api/V1/getviews";
@@ -2142,9 +2142,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsCoreViewsResponse>(localVarStatusCode,
+            return new ApiResponse<ViewsResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsCoreViewsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsCoreViewsResponse)));
+                (ViewsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ViewsResponse)));
         }
 
         /// <summary>
@@ -2155,9 +2155,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsCoreSaveGalleryImageResponse</returns>
-        public TrebuchetWebApiDataContractsCoreSaveGalleryImageResponse CoreSaveGalleryImageV1 (TrebuchetWebApiDataContractsCoreSaveGalleryImageRequest request, string lang = null, string locale = null)
+        public SaveGalleryImageResponse CoreSaveGalleryImageV1 (SaveGalleryImageRequest request, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsCoreSaveGalleryImageResponse> localVarResponse = CoreSaveGalleryImageV1WithHttpInfo(request, lang, locale);
+             ApiResponse<SaveGalleryImageResponse> localVarResponse = CoreSaveGalleryImageV1WithHttpInfo(request, lang, locale);
              return localVarResponse.Data;
         }
 
@@ -2169,7 +2169,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsCoreSaveGalleryImageResponse</returns>
-        public ApiResponse< TrebuchetWebApiDataContractsCoreSaveGalleryImageResponse > CoreSaveGalleryImageV1WithHttpInfo (TrebuchetWebApiDataContractsCoreSaveGalleryImageRequest request, string lang = null, string locale = null)
+        public ApiResponse< SaveGalleryImageResponse > CoreSaveGalleryImageV1WithHttpInfo (SaveGalleryImageRequest request, string lang = null, string locale = null)
         {
             // verify the required parameter 'request' is set
             if (request == null)
@@ -2235,9 +2235,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsCoreSaveGalleryImageResponse>(localVarStatusCode,
+            return new ApiResponse<SaveGalleryImageResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsCoreSaveGalleryImageResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsCoreSaveGalleryImageResponse)));
+                (SaveGalleryImageResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SaveGalleryImageResponse)));
         }
 
         /// <summary>
@@ -2248,9 +2248,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsCoreSaveGalleryImageResponse</returns>
-        public async System.Threading.Tasks.Task<TrebuchetWebApiDataContractsCoreSaveGalleryImageResponse> CoreSaveGalleryImageV1Async (TrebuchetWebApiDataContractsCoreSaveGalleryImageRequest request, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<SaveGalleryImageResponse> CoreSaveGalleryImageV1Async (SaveGalleryImageRequest request, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsCoreSaveGalleryImageResponse> localVarResponse = await CoreSaveGalleryImageV1AsyncWithHttpInfo(request, lang, locale);
+             ApiResponse<SaveGalleryImageResponse> localVarResponse = await CoreSaveGalleryImageV1AsyncWithHttpInfo(request, lang, locale);
              return localVarResponse.Data;
 
         }
@@ -2263,7 +2263,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsCoreSaveGalleryImageResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsCoreSaveGalleryImageResponse>> CoreSaveGalleryImageV1AsyncWithHttpInfo (TrebuchetWebApiDataContractsCoreSaveGalleryImageRequest request, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ApiResponse<SaveGalleryImageResponse>> CoreSaveGalleryImageV1AsyncWithHttpInfo (SaveGalleryImageRequest request, string lang = null, string locale = null)
         {
             // verify the required parameter 'request' is set
             if (request == null)
@@ -2329,9 +2329,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsCoreSaveGalleryImageResponse>(localVarStatusCode,
+            return new ApiResponse<SaveGalleryImageResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsCoreSaveGalleryImageResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsCoreSaveGalleryImageResponse)));
+                (SaveGalleryImageResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SaveGalleryImageResponse)));
         }
 
         /// <summary>
@@ -2342,9 +2342,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsCoreStoredValueResponse</returns>
-        public TrebuchetWebApiDataContractsCoreStoredValueResponse CoreSaveStoredValueV1 (TrebuchetWebApiDataContractsCoreSaveStoredValueRequest request, string lang = null, string locale = null)
+        public StoredValueResponse CoreSaveStoredValueV1 (SaveStoredValueRequest request, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsCoreStoredValueResponse> localVarResponse = CoreSaveStoredValueV1WithHttpInfo(request, lang, locale);
+             ApiResponse<StoredValueResponse> localVarResponse = CoreSaveStoredValueV1WithHttpInfo(request, lang, locale);
              return localVarResponse.Data;
         }
 
@@ -2356,7 +2356,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsCoreStoredValueResponse</returns>
-        public ApiResponse< TrebuchetWebApiDataContractsCoreStoredValueResponse > CoreSaveStoredValueV1WithHttpInfo (TrebuchetWebApiDataContractsCoreSaveStoredValueRequest request, string lang = null, string locale = null)
+        public ApiResponse< StoredValueResponse > CoreSaveStoredValueV1WithHttpInfo (SaveStoredValueRequest request, string lang = null, string locale = null)
         {
             // verify the required parameter 'request' is set
             if (request == null)
@@ -2422,9 +2422,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsCoreStoredValueResponse>(localVarStatusCode,
+            return new ApiResponse<StoredValueResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsCoreStoredValueResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsCoreStoredValueResponse)));
+                (StoredValueResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(StoredValueResponse)));
         }
 
         /// <summary>
@@ -2435,9 +2435,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsCoreStoredValueResponse</returns>
-        public async System.Threading.Tasks.Task<TrebuchetWebApiDataContractsCoreStoredValueResponse> CoreSaveStoredValueV1Async (TrebuchetWebApiDataContractsCoreSaveStoredValueRequest request, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<StoredValueResponse> CoreSaveStoredValueV1Async (SaveStoredValueRequest request, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsCoreStoredValueResponse> localVarResponse = await CoreSaveStoredValueV1AsyncWithHttpInfo(request, lang, locale);
+             ApiResponse<StoredValueResponse> localVarResponse = await CoreSaveStoredValueV1AsyncWithHttpInfo(request, lang, locale);
              return localVarResponse.Data;
 
         }
@@ -2450,7 +2450,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsCoreStoredValueResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsCoreStoredValueResponse>> CoreSaveStoredValueV1AsyncWithHttpInfo (TrebuchetWebApiDataContractsCoreSaveStoredValueRequest request, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ApiResponse<StoredValueResponse>> CoreSaveStoredValueV1AsyncWithHttpInfo (SaveStoredValueRequest request, string lang = null, string locale = null)
         {
             // verify the required parameter 'request' is set
             if (request == null)
@@ -2516,9 +2516,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsCoreStoredValueResponse>(localVarStatusCode,
+            return new ApiResponse<StoredValueResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsCoreStoredValueResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsCoreStoredValueResponse)));
+                (StoredValueResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(StoredValueResponse)));
         }
 
         /// <summary>

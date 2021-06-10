@@ -124,9 +124,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsCoreServiceInfoResponse</returns>
-        public TrebuchetWebApiDataContractsCoreServiceInfoResponse ServiceGetServiceInfoV1 (string lang = null, string locale = null)
+        public ServiceInfoResponse ServiceGetServiceInfoV1 (string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsCoreServiceInfoResponse> localVarResponse = ServiceGetServiceInfoV1WithHttpInfo(lang, locale);
+             ApiResponse<ServiceInfoResponse> localVarResponse = ServiceGetServiceInfoV1WithHttpInfo(lang, locale);
              return localVarResponse.Data;
         }
 
@@ -137,7 +137,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsCoreServiceInfoResponse</returns>
-        public ApiResponse< TrebuchetWebApiDataContractsCoreServiceInfoResponse > ServiceGetServiceInfoV1WithHttpInfo (string lang = null, string locale = null)
+        public ApiResponse< ServiceInfoResponse > ServiceGetServiceInfoV1WithHttpInfo (string lang = null, string locale = null)
         {
 
             var localVarPath = "/api/V1/serviceinfo";
@@ -181,9 +181,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsCoreServiceInfoResponse>(localVarStatusCode,
+            return new ApiResponse<ServiceInfoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsCoreServiceInfoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsCoreServiceInfoResponse)));
+                (ServiceInfoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ServiceInfoResponse)));
         }
 
         /// <summary>
@@ -193,9 +193,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsCoreServiceInfoResponse</returns>
-        public async System.Threading.Tasks.Task<TrebuchetWebApiDataContractsCoreServiceInfoResponse> ServiceGetServiceInfoV1Async (string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ServiceInfoResponse> ServiceGetServiceInfoV1Async (string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsCoreServiceInfoResponse> localVarResponse = await ServiceGetServiceInfoV1AsyncWithHttpInfo(lang, locale);
+             ApiResponse<ServiceInfoResponse> localVarResponse = await ServiceGetServiceInfoV1AsyncWithHttpInfo(lang, locale);
              return localVarResponse.Data;
 
         }
@@ -207,7 +207,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsCoreServiceInfoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsCoreServiceInfoResponse>> ServiceGetServiceInfoV1AsyncWithHttpInfo (string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ServiceInfoResponse>> ServiceGetServiceInfoV1AsyncWithHttpInfo (string lang = null, string locale = null)
         {
 
             var localVarPath = "/api/V1/serviceinfo";
@@ -251,9 +251,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsCoreServiceInfoResponse>(localVarStatusCode,
+            return new ApiResponse<ServiceInfoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsCoreServiceInfoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsCoreServiceInfoResponse)));
+                (ServiceInfoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ServiceInfoResponse)));
         }
 
         /// <summary>

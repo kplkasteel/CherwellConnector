@@ -689,9 +689,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsCoreManagerData</returns>
-        public TrebuchetWebApiDataContractsCoreManagerData QueuesGetQueuesFolderV1 (string scope, string scopeowner, string folder, bool? links = null, string lang = null, string locale = null)
+        public ManagerData QueuesGetQueuesFolderV1 (string scope, string scopeowner, string folder, bool? links = null, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsCoreManagerData> localVarResponse = QueuesGetQueuesFolderV1WithHttpInfo(scope, scopeowner, folder, links, lang, locale);
+             ApiResponse<ManagerData> localVarResponse = QueuesGetQueuesFolderV1WithHttpInfo(scope, scopeowner, folder, links, lang, locale);
              return localVarResponse.Data;
         }
 
@@ -706,7 +706,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsCoreManagerData</returns>
-        public ApiResponse< TrebuchetWebApiDataContractsCoreManagerData > QueuesGetQueuesFolderV1WithHttpInfo (string scope, string scopeowner, string folder, bool? links = null, string lang = null, string locale = null)
+        public ApiResponse< ManagerData > QueuesGetQueuesFolderV1WithHttpInfo (string scope, string scopeowner, string folder, bool? links = null, string lang = null, string locale = null)
         {
             // verify the required parameter 'scope' is set
             if (scope == null)
@@ -769,9 +769,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsCoreManagerData>(localVarStatusCode,
+            return new ApiResponse<ManagerData>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsCoreManagerData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsCoreManagerData)));
+                (ManagerData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ManagerData)));
         }
 
         /// <summary>
@@ -785,9 +785,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsCoreManagerData</returns>
-        public async System.Threading.Tasks.Task<TrebuchetWebApiDataContractsCoreManagerData> QueuesGetQueuesFolderV1Async (string scope, string scopeowner, string folder, bool? links = null, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ManagerData> QueuesGetQueuesFolderV1Async (string scope, string scopeowner, string folder, bool? links = null, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsCoreManagerData> localVarResponse = await QueuesGetQueuesFolderV1AsyncWithHttpInfo(scope, scopeowner, folder, links, lang, locale);
+             ApiResponse<ManagerData> localVarResponse = await QueuesGetQueuesFolderV1AsyncWithHttpInfo(scope, scopeowner, folder, links, lang, locale);
              return localVarResponse.Data;
 
         }
@@ -803,7 +803,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsCoreManagerData)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsCoreManagerData>> QueuesGetQueuesFolderV1AsyncWithHttpInfo (string scope, string scopeowner, string folder, bool? links = null, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ManagerData>> QueuesGetQueuesFolderV1AsyncWithHttpInfo (string scope, string scopeowner, string folder, bool? links = null, string lang = null, string locale = null)
         {
             // verify the required parameter 'scope' is set
             if (scope == null)
@@ -866,9 +866,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsCoreManagerData>(localVarStatusCode,
+            return new ApiResponse<ManagerData>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsCoreManagerData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsCoreManagerData)));
+                (ManagerData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ManagerData)));
         }
 
         /// <summary>
@@ -881,9 +881,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsCoreManagerData</returns>
-        public TrebuchetWebApiDataContractsCoreManagerData QueuesGetQueuesScopeOwnerV1 (string scope, string scopeowner, bool? links = null, string lang = null, string locale = null)
+        public ManagerData QueuesGetQueuesScopeOwnerV1 (string scope, string scopeowner, bool? links = null, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsCoreManagerData> localVarResponse = QueuesGetQueuesScopeOwnerV1WithHttpInfo(scope, scopeowner, links, lang, locale);
+             ApiResponse<ManagerData> localVarResponse = QueuesGetQueuesScopeOwnerV1WithHttpInfo(scope, scopeowner, links, lang, locale);
              return localVarResponse.Data;
         }
 
@@ -897,7 +897,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsCoreManagerData</returns>
-        public ApiResponse< TrebuchetWebApiDataContractsCoreManagerData > QueuesGetQueuesScopeOwnerV1WithHttpInfo (string scope, string scopeowner, bool? links = null, string lang = null, string locale = null)
+        public ApiResponse< ManagerData > QueuesGetQueuesScopeOwnerV1WithHttpInfo (string scope, string scopeowner, bool? links = null, string lang = null, string locale = null)
         {
             // verify the required parameter 'scope' is set
             if (scope == null)
@@ -956,9 +956,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsCoreManagerData>(localVarStatusCode,
+            return new ApiResponse<ManagerData>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsCoreManagerData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsCoreManagerData)));
+                (ManagerData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ManagerData)));
         }
 
         /// <summary>
@@ -971,9 +971,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsCoreManagerData</returns>
-        public async System.Threading.Tasks.Task<TrebuchetWebApiDataContractsCoreManagerData> QueuesGetQueuesScopeOwnerV1Async (string scope, string scopeowner, bool? links = null, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ManagerData> QueuesGetQueuesScopeOwnerV1Async (string scope, string scopeowner, bool? links = null, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsCoreManagerData> localVarResponse = await QueuesGetQueuesScopeOwnerV1AsyncWithHttpInfo(scope, scopeowner, links, lang, locale);
+             ApiResponse<ManagerData> localVarResponse = await QueuesGetQueuesScopeOwnerV1AsyncWithHttpInfo(scope, scopeowner, links, lang, locale);
              return localVarResponse.Data;
 
         }
@@ -988,7 +988,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsCoreManagerData)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsCoreManagerData>> QueuesGetQueuesScopeOwnerV1AsyncWithHttpInfo (string scope, string scopeowner, bool? links = null, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ManagerData>> QueuesGetQueuesScopeOwnerV1AsyncWithHttpInfo (string scope, string scopeowner, bool? links = null, string lang = null, string locale = null)
         {
             // verify the required parameter 'scope' is set
             if (scope == null)
@@ -1047,9 +1047,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsCoreManagerData>(localVarStatusCode,
+            return new ApiResponse<ManagerData>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsCoreManagerData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsCoreManagerData)));
+                (ManagerData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ManagerData)));
         }
 
         /// <summary>
@@ -1061,9 +1061,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsCoreManagerData</returns>
-        public TrebuchetWebApiDataContractsCoreManagerData QueuesGetQueuesScopeV1 (string scope, bool? links = null, string lang = null, string locale = null)
+        public ManagerData QueuesGetQueuesScopeV1 (string scope, bool? links = null, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsCoreManagerData> localVarResponse = QueuesGetQueuesScopeV1WithHttpInfo(scope, links, lang, locale);
+             ApiResponse<ManagerData> localVarResponse = QueuesGetQueuesScopeV1WithHttpInfo(scope, links, lang, locale);
              return localVarResponse.Data;
         }
 
@@ -1076,7 +1076,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsCoreManagerData</returns>
-        public ApiResponse< TrebuchetWebApiDataContractsCoreManagerData > QueuesGetQueuesScopeV1WithHttpInfo (string scope, bool? links = null, string lang = null, string locale = null)
+        public ApiResponse< ManagerData > QueuesGetQueuesScopeV1WithHttpInfo (string scope, bool? links = null, string lang = null, string locale = null)
         {
             // verify the required parameter 'scope' is set
             if (scope == null)
@@ -1131,9 +1131,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsCoreManagerData>(localVarStatusCode,
+            return new ApiResponse<ManagerData>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsCoreManagerData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsCoreManagerData)));
+                (ManagerData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ManagerData)));
         }
 
         /// <summary>
@@ -1145,9 +1145,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsCoreManagerData</returns>
-        public async System.Threading.Tasks.Task<TrebuchetWebApiDataContractsCoreManagerData> QueuesGetQueuesScopeV1Async (string scope, bool? links = null, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ManagerData> QueuesGetQueuesScopeV1Async (string scope, bool? links = null, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsCoreManagerData> localVarResponse = await QueuesGetQueuesScopeV1AsyncWithHttpInfo(scope, links, lang, locale);
+             ApiResponse<ManagerData> localVarResponse = await QueuesGetQueuesScopeV1AsyncWithHttpInfo(scope, links, lang, locale);
              return localVarResponse.Data;
 
         }
@@ -1161,7 +1161,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsCoreManagerData)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsCoreManagerData>> QueuesGetQueuesScopeV1AsyncWithHttpInfo (string scope, bool? links = null, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ManagerData>> QueuesGetQueuesScopeV1AsyncWithHttpInfo (string scope, bool? links = null, string lang = null, string locale = null)
         {
             // verify the required parameter 'scope' is set
             if (scope == null)
@@ -1216,9 +1216,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsCoreManagerData>(localVarStatusCode,
+            return new ApiResponse<ManagerData>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsCoreManagerData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsCoreManagerData)));
+                (ManagerData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ManagerData)));
         }
 
         /// <summary>
@@ -1229,9 +1229,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsCoreManagerData</returns>
-        public TrebuchetWebApiDataContractsCoreManagerData QueuesGetQueuesV1 (bool? links = null, string lang = null, string locale = null)
+        public ManagerData QueuesGetQueuesV1 (bool? links = null, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsCoreManagerData> localVarResponse = QueuesGetQueuesV1WithHttpInfo(links, lang, locale);
+             ApiResponse<ManagerData> localVarResponse = QueuesGetQueuesV1WithHttpInfo(links, lang, locale);
              return localVarResponse.Data;
         }
 
@@ -1243,7 +1243,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsCoreManagerData</returns>
-        public ApiResponse< TrebuchetWebApiDataContractsCoreManagerData > QueuesGetQueuesV1WithHttpInfo (bool? links = null, string lang = null, string locale = null)
+        public ApiResponse< ManagerData > QueuesGetQueuesV1WithHttpInfo (bool? links = null, string lang = null, string locale = null)
         {
 
             var localVarPath = "/api/V1/getqueues";
@@ -1294,9 +1294,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsCoreManagerData>(localVarStatusCode,
+            return new ApiResponse<ManagerData>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsCoreManagerData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsCoreManagerData)));
+                (ManagerData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ManagerData)));
         }
 
         /// <summary>
@@ -1307,9 +1307,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsCoreManagerData</returns>
-        public async System.Threading.Tasks.Task<TrebuchetWebApiDataContractsCoreManagerData> QueuesGetQueuesV1Async (bool? links = null, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ManagerData> QueuesGetQueuesV1Async (bool? links = null, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsCoreManagerData> localVarResponse = await QueuesGetQueuesV1AsyncWithHttpInfo(links, lang, locale);
+             ApiResponse<ManagerData> localVarResponse = await QueuesGetQueuesV1AsyncWithHttpInfo(links, lang, locale);
              return localVarResponse.Data;
 
         }
@@ -1322,7 +1322,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsCoreManagerData)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsCoreManagerData>> QueuesGetQueuesV1AsyncWithHttpInfo (bool? links = null, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ManagerData>> QueuesGetQueuesV1AsyncWithHttpInfo (bool? links = null, string lang = null, string locale = null)
         {
 
             var localVarPath = "/api/V1/getqueues";
@@ -1373,9 +1373,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsCoreManagerData>(localVarStatusCode,
+            return new ApiResponse<ManagerData>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsCoreManagerData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsCoreManagerData)));
+                (ManagerData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ManagerData)));
         }
 
         /// <summary>

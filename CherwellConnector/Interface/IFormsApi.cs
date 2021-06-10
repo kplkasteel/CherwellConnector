@@ -23,7 +23,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsFormsMobileFormResponse</returns>
-        TrebuchetWebApiDataContractsFormsMobileFormResponse FormsGetMobileFormForBusObByIdAndPublicIdV1 (string busobid, string publicid, bool? foredit = null, string formid = null, string lang = null, string locale = null);
+        MobileFormResponse FormsGetMobileFormForBusObByIdAndPublicIdV1 (string busobid, string publicid, bool? foredit = null, string formid = null, string lang = null, string locale = null);
 
         /// <summary>
         /// Get mobile form by BusObId and Public ID
@@ -39,7 +39,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsFormsMobileFormResponse</returns>
-        ApiResponse<TrebuchetWebApiDataContractsFormsMobileFormResponse> FormsGetMobileFormForBusObByIdAndPublicIdV1WithHttpInfo (string busobid, string publicid, bool? foredit = null, string formid = null, string lang = null, string locale = null);
+        ApiResponse<MobileFormResponse> FormsGetMobileFormForBusObByIdAndPublicIdV1WithHttpInfo (string busobid, string publicid, bool? foredit = null, string formid = null, string lang = null, string locale = null);
         /// <summary>
         /// Get mobile form by Business Object ID and Business Object Record ID.
         /// </summary>
@@ -54,7 +54,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsFormsMobileFormResponse</returns>
-        TrebuchetWebApiDataContractsFormsMobileFormResponse FormsGetMobileFormForBusObByIdAndRecIdV1 (string busobid, string busobrecid, bool? foredit = null, string formid = null, string lang = null, string locale = null);
+        MobileFormResponse FormsGetMobileFormForBusObByIdAndRecIdV1 (string busobid, string busobrecid, bool? foredit = null, string formid = null, string lang = null, string locale = null);
 
         /// <summary>
         /// Get mobile form by Business Object ID and Business Object Record ID.
@@ -70,7 +70,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsFormsMobileFormResponse</returns>
-        ApiResponse<TrebuchetWebApiDataContractsFormsMobileFormResponse> FormsGetMobileFormForBusObByIdAndRecIdV1WithHttpInfo (string busobid, string busobrecid, bool? foredit = null, string formid = null, string lang = null, string locale = null);
+        ApiResponse<MobileFormResponse> FormsGetMobileFormForBusObByIdAndRecIdV1WithHttpInfo (string busobid, string busobrecid, bool? foredit = null, string formid = null, string lang = null, string locale = null);
         /// <summary>
         /// Get mobile form by Business Object name and Public ID
         /// </summary>
@@ -85,7 +85,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsFormsMobileFormResponse</returns>
-        TrebuchetWebApiDataContractsFormsMobileFormResponse FormsGetMobileFormForBusObByNameAndPublicIdV1 (string busobname, string publicid, bool? foredit = null, string formid = null, string lang = null, string locale = null);
+        MobileFormResponse FormsGetMobileFormForBusObByNameAndPublicIdV1 (string busobname, string publicid, bool? foredit = null, string formid = null, string lang = null, string locale = null);
 
         /// <summary>
         /// Get mobile form by Business Object name and Public ID
@@ -101,7 +101,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsFormsMobileFormResponse</returns>
-        ApiResponse<TrebuchetWebApiDataContractsFormsMobileFormResponse> FormsGetMobileFormForBusObByNameAndPublicIdV1WithHttpInfo (string busobname, string publicid, bool? foredit = null, string formid = null, string lang = null, string locale = null);
+        ApiResponse<MobileFormResponse> FormsGetMobileFormForBusObByNameAndPublicIdV1WithHttpInfo (string busobname, string publicid, bool? foredit = null, string formid = null, string lang = null, string locale = null);
         /// <summary>
         /// Get mobile form by Business Object name and record ID.
         /// </summary>
@@ -116,7 +116,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsFormsMobileFormResponse</returns>
-        TrebuchetWebApiDataContractsFormsMobileFormResponse FormsGetMobileFormForBusObByNameAndRecIdV1 (string busobname, string busobrecid, bool? foredit = null, string formid = null, string lang = null, string locale = null);
+        MobileFormResponse FormsGetMobileFormForBusObByNameAndRecIdV1 (string busobname, string busobrecid, bool? foredit = null, string formid = null, string lang = null, string locale = null);
 
         /// <summary>
         /// Get mobile form by Business Object name and record ID.
@@ -132,7 +132,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsFormsMobileFormResponse</returns>
-        ApiResponse<TrebuchetWebApiDataContractsFormsMobileFormResponse> FormsGetMobileFormForBusObByNameAndRecIdV1WithHttpInfo (string busobname, string busobrecid, bool? foredit = null, string formid = null, string lang = null, string locale = null);
+        ApiResponse<MobileFormResponse> FormsGetMobileFormForBusObByNameAndRecIdV1WithHttpInfo (string busobname, string busobrecid, bool? foredit = null, string formid = null, string lang = null, string locale = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -149,7 +149,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsFormsMobileFormResponse</returns>
-        System.Threading.Tasks.Task<TrebuchetWebApiDataContractsFormsMobileFormResponse> FormsGetMobileFormForBusObByIdAndPublicIdV1Async (string busobid, string publicid, bool? foredit = null, string formid = null, string lang = null, string locale = null);
+        System.Threading.Tasks.Task<MobileFormResponse> FormsGetMobileFormForBusObByIdAndPublicIdV1Async (string busobid, string publicid, bool? foredit = null, string formid = null, string lang = null, string locale = null);
 
         /// <summary>
         /// Get mobile form by BusObId and Public ID
@@ -165,7 +165,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsFormsMobileFormResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsFormsMobileFormResponse>> FormsGetMobileFormForBusObByIdAndPublicIdV1AsyncWithHttpInfo (string busobid, string publicid, bool? foredit = null, string formid = null, string lang = null, string locale = null);
+        System.Threading.Tasks.Task<ApiResponse<MobileFormResponse>> FormsGetMobileFormForBusObByIdAndPublicIdV1AsyncWithHttpInfo (string busobid, string publicid, bool? foredit = null, string formid = null, string lang = null, string locale = null);
         /// <summary>
         /// Get mobile form by Business Object ID and Business Object Record ID.
         /// </summary>
@@ -180,7 +180,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsFormsMobileFormResponse</returns>
-        System.Threading.Tasks.Task<TrebuchetWebApiDataContractsFormsMobileFormResponse> FormsGetMobileFormForBusObByIdAndRecIdV1Async (string busobid, string busobrecid, bool? foredit = null, string formid = null, string lang = null, string locale = null);
+        System.Threading.Tasks.Task<MobileFormResponse> FormsGetMobileFormForBusObByIdAndRecIdV1Async (string busobid, string busobrecid, bool? foredit = null, string formid = null, string lang = null, string locale = null);
 
         /// <summary>
         /// Get mobile form by Business Object ID and Business Object Record ID.
@@ -196,7 +196,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsFormsMobileFormResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsFormsMobileFormResponse>> FormsGetMobileFormForBusObByIdAndRecIdV1AsyncWithHttpInfo (string busobid, string busobrecid, bool? foredit = null, string formid = null, string lang = null, string locale = null);
+        System.Threading.Tasks.Task<ApiResponse<MobileFormResponse>> FormsGetMobileFormForBusObByIdAndRecIdV1AsyncWithHttpInfo (string busobid, string busobrecid, bool? foredit = null, string formid = null, string lang = null, string locale = null);
         /// <summary>
         /// Get mobile form by Business Object name and Public ID
         /// </summary>
@@ -211,7 +211,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsFormsMobileFormResponse</returns>
-        System.Threading.Tasks.Task<TrebuchetWebApiDataContractsFormsMobileFormResponse> FormsGetMobileFormForBusObByNameAndPublicIdV1Async (string busobname, string publicid, bool? foredit = null, string formid = null, string lang = null, string locale = null);
+        System.Threading.Tasks.Task<MobileFormResponse> FormsGetMobileFormForBusObByNameAndPublicIdV1Async (string busobname, string publicid, bool? foredit = null, string formid = null, string lang = null, string locale = null);
 
         /// <summary>
         /// Get mobile form by Business Object name and Public ID
@@ -227,7 +227,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsFormsMobileFormResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsFormsMobileFormResponse>> FormsGetMobileFormForBusObByNameAndPublicIdV1AsyncWithHttpInfo (string busobname, string publicid, bool? foredit = null, string formid = null, string lang = null, string locale = null);
+        System.Threading.Tasks.Task<ApiResponse<MobileFormResponse>> FormsGetMobileFormForBusObByNameAndPublicIdV1AsyncWithHttpInfo (string busobname, string publicid, bool? foredit = null, string formid = null, string lang = null, string locale = null);
         /// <summary>
         /// Get mobile form by Business Object name and record ID.
         /// </summary>
@@ -242,7 +242,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsFormsMobileFormResponse</returns>
-        System.Threading.Tasks.Task<TrebuchetWebApiDataContractsFormsMobileFormResponse> FormsGetMobileFormForBusObByNameAndRecIdV1Async (string busobname, string busobrecid, bool? foredit = null, string formid = null, string lang = null, string locale = null);
+        System.Threading.Tasks.Task<MobileFormResponse> FormsGetMobileFormForBusObByNameAndRecIdV1Async (string busobname, string busobrecid, bool? foredit = null, string formid = null, string lang = null, string locale = null);
 
         /// <summary>
         /// Get mobile form by Business Object name and record ID.
@@ -258,7 +258,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsFormsMobileFormResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsFormsMobileFormResponse>> FormsGetMobileFormForBusObByNameAndRecIdV1AsyncWithHttpInfo (string busobname, string busobrecid, bool? foredit = null, string formid = null, string lang = null, string locale = null);
+        System.Threading.Tasks.Task<ApiResponse<MobileFormResponse>> FormsGetMobileFormForBusObByNameAndRecIdV1AsyncWithHttpInfo (string busobname, string busobrecid, bool? foredit = null, string formid = null, string lang = null, string locale = null);
         #endregion Asynchronous Operations
     }
 }

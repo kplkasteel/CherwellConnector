@@ -325,7 +325,7 @@ namespace CherwellConnector.Model
         /// <param name="errorMessage">errorMessage.</param>
         /// <param name="hasError">hasError.</param>
         /// <param name="httpStatusCode">httpStatusCode.</param>
-        public TrebuchetWebApiDataContractsUsersUserBatchReadResponse(List<TrebuchetWebApiDataContractsUsersUserReadV2Response> responses = default, string errorCode = default, string errorMessage = default, bool? hasError = default, HttpStatusCodeEnum? httpStatusCode = default)
+        public TrebuchetWebApiDataContractsUsersUserBatchReadResponse(List<UserReadV2Response> responses = default, string errorCode = default, string errorMessage = default, bool? hasError = default, HttpStatusCodeEnum? httpStatusCode = default)
         {
             Responses = responses;
             ErrorCode = errorCode;
@@ -338,7 +338,7 @@ namespace CherwellConnector.Model
         /// Gets or Sets Responses
         /// </summary>
         [DataMember(Name="responses", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsUsersUserReadV2Response> Responses { get; set; }
+        public List<UserReadV2Response> Responses { get; set; }
 
         /// <summary>
         /// Gets or Sets ErrorCode

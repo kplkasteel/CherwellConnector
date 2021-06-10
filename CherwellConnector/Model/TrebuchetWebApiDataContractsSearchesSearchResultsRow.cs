@@ -30,7 +30,7 @@ namespace CherwellConnector.Model
         /// <param name="publicId">publicId.</param>
         /// <param name="rowColor">rowColor.</param>
         /// <param name="searchResultsFieldValues">searchResultsFieldValues.</param>
-        public TrebuchetWebApiDataContractsSearchesSearchResultsRow(string busObId = default, string busObRecId = default, List<TrebuchetWebApiDataContractsCoreLink> links = default, string publicId = default, string rowColor = default, List<FieldTemplateItem> searchResultsFieldValues = default)
+        public TrebuchetWebApiDataContractsSearchesSearchResultsRow(string busObId = default, string busObRecId = default, List<Link> links = default, string publicId = default, string rowColor = default, List<FieldTemplateItem> searchResultsFieldValues = default)
         {
             BusObId = busObId;
             BusObRecId = busObRecId;
@@ -56,7 +56,7 @@ namespace CherwellConnector.Model
         /// Gets or Sets Links
         /// </summary>
         [DataMember(Name="links", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsCoreLink> Links { get; set; }
+        public List<Link> Links { get; set; }
 
         /// <summary>
         /// Gets or Sets PublicId

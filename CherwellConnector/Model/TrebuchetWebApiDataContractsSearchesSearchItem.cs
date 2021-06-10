@@ -32,7 +32,7 @@ namespace CherwellConnector.Model
         /// <param name="scopeOwner">scopeOwner.</param>
         /// <param name="searchId">searchId.</param>
         /// <param name="searchName">searchName.</param>
-        public TrebuchetWebApiDataContractsSearchesSearchItem(string association = default, List<TrebuchetWebApiDataContractsCoreLink> links = default, string localizedScopeName = default, string parentFolderId = default, string scope = default, string scopeOwner = default, string searchId = default, string searchName = default)
+        public TrebuchetWebApiDataContractsSearchesSearchItem(string association = default, List<Link> links = default, string localizedScopeName = default, string parentFolderId = default, string scope = default, string scopeOwner = default, string searchId = default, string searchName = default)
         {
             Association = association;
             Links = links;
@@ -54,7 +54,7 @@ namespace CherwellConnector.Model
         /// Gets or Sets Links
         /// </summary>
         [DataMember(Name="links", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsCoreLink> Links { get; set; }
+        public List<Link> Links { get; set; }
 
         /// <summary>
         /// Gets or Sets LocalizedScopeName

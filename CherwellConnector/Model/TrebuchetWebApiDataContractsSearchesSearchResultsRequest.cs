@@ -43,7 +43,7 @@ namespace CherwellConnector.Model
         /// <param name="searchText">searchText.</param>
         /// <param name="sorting">sorting.</param>
         /// <param name="promptValues">promptValues.</param>
-        public TrebuchetWebApiDataContractsSearchesSearchResultsRequest(string association = default, string associationName = default, string busObId = default, string customGridDefId = default, string dateTimeFormatting = default, string fieldId = default, List<string> fields = default, List<TrebuchetWebApiDataContractsSearchesFilterInfo> filters = default, bool? includeAllFields = default, bool? includeSchema = default, int? pageNumber = default, int? pageSize = default, string scope = default, string scopeOwner = default, string searchId = default, string searchName = default, string searchText = default, List<TrebuchetWebApiDataContractsSearchesSortInfo> sorting = default, List<TrebuchetWebApiDataContractsCorePromptValue> promptValues = default)
+        public TrebuchetWebApiDataContractsSearchesSearchResultsRequest(string association = default, string associationName = default, string busObId = default, string customGridDefId = default, string dateTimeFormatting = default, string fieldId = default, List<string> fields = default, List<TrebuchetWebApiDataContractsSearchesFilterInfo> filters = default, bool? includeAllFields = default, bool? includeSchema = default, int? pageNumber = default, int? pageSize = default, string scope = default, string scopeOwner = default, string searchId = default, string searchName = default, string searchText = default, List<TrebuchetWebApiDataContractsSearchesSortInfo> sorting = default, List<PromptValue> promptValues = default)
         {
             Association = association;
             AssociationName = associationName;
@@ -178,7 +178,7 @@ namespace CherwellConnector.Model
         /// Gets or Sets PromptValues
         /// </summary>
         [DataMember(Name="promptValues", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsCorePromptValue> PromptValues { get; set; }
+        public List<PromptValue> PromptValues { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

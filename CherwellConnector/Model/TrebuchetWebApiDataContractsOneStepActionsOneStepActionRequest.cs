@@ -29,7 +29,7 @@ namespace CherwellConnector.Model
         /// <param name="busObRecId">busObRecId.</param>
         /// <param name="oneStepActionStandInKey">oneStepActionStandInKey.</param>
         /// <param name="promptValues">promptValues.</param>
-        public TrebuchetWebApiDataContractsOneStepActionsOneStepActionRequest(bool? acquireLicense = default, string busObId = default, string busObRecId = default, string oneStepActionStandInKey = default, List<TrebuchetWebApiDataContractsCoreSimplePromptValue> promptValues = default)
+        public TrebuchetWebApiDataContractsOneStepActionsOneStepActionRequest(bool? acquireLicense = default, string busObId = default, string busObRecId = default, string oneStepActionStandInKey = default, List<SimplePromptValue> promptValues = default)
         {
             AcquireLicense = acquireLicense;
             BusObId = busObId;
@@ -66,7 +66,7 @@ namespace CherwellConnector.Model
         /// Gets or Sets PromptValues
         /// </summary>
         [DataMember(Name="promptValues", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsCoreSimplePromptValue> PromptValues { get; set; }
+        public List<SimplePromptValue> PromptValues { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

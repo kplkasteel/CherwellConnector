@@ -1,4 +1,3 @@
-using System.Diagnostics.CodeAnalysis;
 using CherwellConnector.Enum;
 
 namespace CherwellConnector.Model
@@ -11,7 +10,6 @@ namespace CherwellConnector.Model
     using System.Text;
 
     using Newtonsoft.Json;
-    using Newtonsoft.Json.Converters;
 
     /// <summary>
     /// SaveResponse
@@ -202,7 +200,7 @@ namespace CherwellConnector.Model
         /// Gets the hash code
         /// </summary>
         /// <returns>Hash code</returns>
-        [SuppressMessage("ReSharper", "NonReadonlyMemberInGetHashCode")]
+        
         public override int GetHashCode()
         {
             unchecked // Overflow is fine, just wrap

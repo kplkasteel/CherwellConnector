@@ -1,5 +1,3 @@
-
-using System.Diagnostics.CodeAnalysis;
 using CherwellConnector.Enum;
 
 namespace CherwellConnector.Model
@@ -14,7 +12,7 @@ namespace CherwellConnector.Model
     using Newtonsoft.Json;
 
     /// <summary>
-    /// TrebuchetWebApiDataContractsApprovalApprovalReadResponse
+    /// ApprovalReadResponse
     /// </summary>
     [DataContract]
     public sealed class ApprovalReadResponse :  IEquatable<ApprovalReadResponse>, IValidatableObject
@@ -33,7 +31,7 @@ namespace CherwellConnector.Model
         /// <param name="errorMessage">errorMessage.</param>
         /// <param name="hasError">hasError.</param>
         /// <param name="httpStatusCode">httpStatusCode.</param>
-        public ApprovalReadResponse(Dictionary<string, Object> properties = default, List<TrebuchetWebApiDataContractsCoreLink> links = default, string errorCode = default, string errorMessage = default, bool? hasError = default, HttpStatusCodeEnum? httpStatusCode = default)
+        public ApprovalReadResponse(Dictionary<string, Object> properties = default, List<Link> links = default, string errorCode = default, string errorMessage = default, bool? hasError = default, HttpStatusCodeEnum? httpStatusCode = default)
         {
             Properties = properties;
             Links = links;
@@ -53,7 +51,7 @@ namespace CherwellConnector.Model
         /// Gets or Sets Links
         /// </summary>
         [DataMember(Name="links", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsCoreLink> Links { get; set; }
+        public List<Link> Links { get; set; }
 
         /// <summary>
         /// Gets or Sets ErrorCode
@@ -112,9 +110,9 @@ namespace CherwellConnector.Model
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsApprovalApprovalReadResponse instances are equal
+        /// Returns true if ApprovalReadResponse instances are equal
         /// </summary>
-        /// <param name="input">Instance of TrebuchetWebApiDataContractsApprovalApprovalReadResponse to be compared</param>
+        /// <param name="input">Instance of ApprovalReadResponse to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(ApprovalReadResponse input)
         {
@@ -158,7 +156,7 @@ namespace CherwellConnector.Model
         /// Gets the hash code
         /// </summary>
         /// <returns>Hash code</returns>
-        [SuppressMessage("ReSharper", "NonReadonlyMemberInGetHashCode")]
+        
         public override int GetHashCode()
         {
             var hashCode = 41;

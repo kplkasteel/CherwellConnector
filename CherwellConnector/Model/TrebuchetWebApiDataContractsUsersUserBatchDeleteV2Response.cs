@@ -325,7 +325,7 @@ namespace CherwellConnector.Model
         /// <param name="errorMessage">errorMessage.</param>
         /// <param name="hasError">hasError.</param>
         /// <param name="httpStatusCode">httpStatusCode.</param>
-        public TrebuchetWebApiDataContractsUsersUserBatchDeleteV2Response(List<TrebuchetWebApiDataContractsUsersUserDeleteV2Response> responses = default, string errorCode = default, string errorMessage = default, bool? hasError = default, HttpStatusCodeEnum? httpStatusCode = default)
+        public TrebuchetWebApiDataContractsUsersUserBatchDeleteV2Response(List<UserDeleteV2Response> responses = default, string errorCode = default, string errorMessage = default, bool? hasError = default, HttpStatusCodeEnum? httpStatusCode = default)
         {
             Responses = responses;
             ErrorCode = errorCode;
@@ -338,7 +338,7 @@ namespace CherwellConnector.Model
         /// Gets or Sets Responses
         /// </summary>
         [DataMember(Name="responses", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsUsersUserDeleteV2Response> Responses { get; set; }
+        public List<UserDeleteV2Response> Responses { get; set; }
 
         /// <summary>
         /// Gets or Sets ErrorCode

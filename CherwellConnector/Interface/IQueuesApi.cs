@@ -98,7 +98,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsCoreManagerData</returns>
-        TrebuchetWebApiDataContractsCoreManagerData QueuesGetQueuesFolderV1 (string scope, string scopeowner, string folder, bool? links = null, string lang = null, string locale = null);
+        ManagerData QueuesGetQueuesFolderV1 (string scope, string scopeowner, string folder, bool? links = null, string lang = null, string locale = null);
 
         /// <summary>
         /// Get available queues.
@@ -114,7 +114,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsCoreManagerData</returns>
-        ApiResponse<TrebuchetWebApiDataContractsCoreManagerData> QueuesGetQueuesFolderV1WithHttpInfo (string scope, string scopeowner, string folder, bool? links = null, string lang = null, string locale = null);
+        ApiResponse<ManagerData> QueuesGetQueuesFolderV1WithHttpInfo (string scope, string scopeowner, string folder, bool? links = null, string lang = null, string locale = null);
         /// <summary>
         /// Get available queues.
         /// </summary>
@@ -128,7 +128,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsCoreManagerData</returns>
-        TrebuchetWebApiDataContractsCoreManagerData QueuesGetQueuesScopeOwnerV1 (string scope, string scopeowner, bool? links = null, string lang = null, string locale = null);
+        ManagerData QueuesGetQueuesScopeOwnerV1 (string scope, string scopeowner, bool? links = null, string lang = null, string locale = null);
 
         /// <summary>
         /// Get available queues.
@@ -143,7 +143,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsCoreManagerData</returns>
-        ApiResponse<TrebuchetWebApiDataContractsCoreManagerData> QueuesGetQueuesScopeOwnerV1WithHttpInfo (string scope, string scopeowner, bool? links = null, string lang = null, string locale = null);
+        ApiResponse<ManagerData> QueuesGetQueuesScopeOwnerV1WithHttpInfo (string scope, string scopeowner, bool? links = null, string lang = null, string locale = null);
         /// <summary>
         /// Get available queues.
         /// </summary>
@@ -156,7 +156,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsCoreManagerData</returns>
-        TrebuchetWebApiDataContractsCoreManagerData QueuesGetQueuesScopeV1 (string scope, bool? links = null, string lang = null, string locale = null);
+        ManagerData QueuesGetQueuesScopeV1 (string scope, bool? links = null, string lang = null, string locale = null);
 
         /// <summary>
         /// Get available queues.
@@ -170,7 +170,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsCoreManagerData</returns>
-        ApiResponse<TrebuchetWebApiDataContractsCoreManagerData> QueuesGetQueuesScopeV1WithHttpInfo (string scope, bool? links = null, string lang = null, string locale = null);
+        ApiResponse<ManagerData> QueuesGetQueuesScopeV1WithHttpInfo (string scope, bool? links = null, string lang = null, string locale = null);
         /// <summary>
         /// Get available queues.
         /// </summary>
@@ -182,7 +182,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsCoreManagerData</returns>
-        TrebuchetWebApiDataContractsCoreManagerData QueuesGetQueuesV1 (bool? links = null, string lang = null, string locale = null);
+        ManagerData QueuesGetQueuesV1 (bool? links = null, string lang = null, string locale = null);
 
         /// <summary>
         /// Get available queues.
@@ -195,7 +195,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsCoreManagerData</returns>
-        ApiResponse<TrebuchetWebApiDataContractsCoreManagerData> QueuesGetQueuesV1WithHttpInfo (bool? links = null, string lang = null, string locale = null);
+        ApiResponse<ManagerData> QueuesGetQueuesV1WithHttpInfo (bool? links = null, string lang = null, string locale = null);
         /// <summary>
         /// Remove an item from a queue
         /// </summary>
@@ -312,7 +312,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsCoreManagerData</returns>
-        System.Threading.Tasks.Task<TrebuchetWebApiDataContractsCoreManagerData> QueuesGetQueuesFolderV1Async (string scope, string scopeowner, string folder, bool? links = null, string lang = null, string locale = null);
+        System.Threading.Tasks.Task<ManagerData> QueuesGetQueuesFolderV1Async (string scope, string scopeowner, string folder, bool? links = null, string lang = null, string locale = null);
 
         /// <summary>
         /// Get available queues.
@@ -328,7 +328,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsCoreManagerData)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsCoreManagerData>> QueuesGetQueuesFolderV1AsyncWithHttpInfo (string scope, string scopeowner, string folder, bool? links = null, string lang = null, string locale = null);
+        System.Threading.Tasks.Task<ApiResponse<ManagerData>> QueuesGetQueuesFolderV1AsyncWithHttpInfo (string scope, string scopeowner, string folder, bool? links = null, string lang = null, string locale = null);
         /// <summary>
         /// Get available queues.
         /// </summary>
@@ -342,7 +342,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsCoreManagerData</returns>
-        System.Threading.Tasks.Task<TrebuchetWebApiDataContractsCoreManagerData> QueuesGetQueuesScopeOwnerV1Async (string scope, string scopeowner, bool? links = null, string lang = null, string locale = null);
+        System.Threading.Tasks.Task<ManagerData> QueuesGetQueuesScopeOwnerV1Async (string scope, string scopeowner, bool? links = null, string lang = null, string locale = null);
 
         /// <summary>
         /// Get available queues.
@@ -357,7 +357,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsCoreManagerData)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsCoreManagerData>> QueuesGetQueuesScopeOwnerV1AsyncWithHttpInfo (string scope, string scopeowner, bool? links = null, string lang = null, string locale = null);
+        System.Threading.Tasks.Task<ApiResponse<ManagerData>> QueuesGetQueuesScopeOwnerV1AsyncWithHttpInfo (string scope, string scopeowner, bool? links = null, string lang = null, string locale = null);
         /// <summary>
         /// Get available queues.
         /// </summary>
@@ -370,7 +370,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsCoreManagerData</returns>
-        System.Threading.Tasks.Task<TrebuchetWebApiDataContractsCoreManagerData> QueuesGetQueuesScopeV1Async (string scope, bool? links = null, string lang = null, string locale = null);
+        System.Threading.Tasks.Task<ManagerData> QueuesGetQueuesScopeV1Async (string scope, bool? links = null, string lang = null, string locale = null);
 
         /// <summary>
         /// Get available queues.
@@ -384,7 +384,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsCoreManagerData)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsCoreManagerData>> QueuesGetQueuesScopeV1AsyncWithHttpInfo (string scope, bool? links = null, string lang = null, string locale = null);
+        System.Threading.Tasks.Task<ApiResponse<ManagerData>> QueuesGetQueuesScopeV1AsyncWithHttpInfo (string scope, bool? links = null, string lang = null, string locale = null);
         /// <summary>
         /// Get available queues.
         /// </summary>
@@ -396,7 +396,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsCoreManagerData</returns>
-        System.Threading.Tasks.Task<TrebuchetWebApiDataContractsCoreManagerData> QueuesGetQueuesV1Async (bool? links = null, string lang = null, string locale = null);
+        System.Threading.Tasks.Task<ManagerData> QueuesGetQueuesV1Async (bool? links = null, string lang = null, string locale = null);
 
         /// <summary>
         /// Get available queues.
@@ -409,7 +409,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsCoreManagerData)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsCoreManagerData>> QueuesGetQueuesV1AsyncWithHttpInfo (bool? links = null, string lang = null, string locale = null);
+        System.Threading.Tasks.Task<ApiResponse<ManagerData>> QueuesGetQueuesV1AsyncWithHttpInfo (bool? links = null, string lang = null, string locale = null);
         /// <summary>
         /// Remove an item from a queue
         /// </summary>

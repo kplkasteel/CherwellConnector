@@ -25,7 +25,7 @@ namespace CherwellConnector.Model
         /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsUsersUserBatchSaveResponse" /> class.
         /// </summary>
         /// <param name="responses">responses.</param>
-        public TrebuchetWebApiDataContractsUsersUserBatchSaveResponse(List<TrebuchetWebApiDataContractsUsersUserSaveResponse> responses = default)
+        public TrebuchetWebApiDataContractsUsersUserBatchSaveResponse(List<UserSaveResponse> responses = default)
         {
             Responses = responses;
         }
@@ -34,7 +34,7 @@ namespace CherwellConnector.Model
         /// Gets or Sets Responses
         /// </summary>
         [DataMember(Name="responses", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsUsersUserSaveResponse> Responses { get; set; }
+        public List<UserSaveResponse> Responses { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

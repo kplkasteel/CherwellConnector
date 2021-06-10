@@ -35,7 +35,7 @@ namespace CherwellConnector.Model
         /// <param name="subTitle">subTitle.</param>
         /// <param name="text">text.</param>
         /// <param name="title">title.</param>
-        public TrebuchetWebApiDataContractsSearchesSimpleResultsListItem(string busObId = default, string busObRecId = default, string docRepositoryItemId = default, string galleryImage = default, List<TrebuchetWebApiDataContractsCoreLink> links = default, string publicId = default, string scope = default, string scopeOwner = default, string subTitle = default, string text = default, string title = default)
+        public TrebuchetWebApiDataContractsSearchesSimpleResultsListItem(string busObId = default, string busObRecId = default, string docRepositoryItemId = default, string galleryImage = default, List<Link> links = default, string publicId = default, string scope = default, string scopeOwner = default, string subTitle = default, string text = default, string title = default)
         {
             BusObId = busObId;
             BusObRecId = busObRecId;
@@ -78,7 +78,7 @@ namespace CherwellConnector.Model
         /// Gets or Sets Links
         /// </summary>
         [DataMember(Name="links", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsCoreLink> Links { get; set; }
+        public List<Link> Links { get; set; }
 
         /// <summary>
         /// Gets or Sets PublicId

@@ -1,5 +1,3 @@
-
-using System.Diagnostics.CodeAnalysis;
 using CherwellConnector.Enum;
 
 namespace CherwellConnector.Model
@@ -174,7 +172,7 @@ namespace CherwellConnector.Model
         /// Gets the hash code
         /// </summary>
         /// <returns>Hash code</returns>
-        [SuppressMessage("ReSharper", "NonReadonlyMemberInGetHashCode")]
+        
         public override int GetHashCode()
         {
             unchecked // Overflow is fine, just wrap

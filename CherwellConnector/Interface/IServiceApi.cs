@@ -20,7 +20,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsCoreServiceInfoResponse</returns>
-        TrebuchetWebApiDataContractsCoreServiceInfoResponse ServiceGetServiceInfoV1 (string lang = null, string locale = null);
+        ServiceInfoResponse ServiceGetServiceInfoV1 (string lang = null, string locale = null);
 
         /// <summary>
         /// Get information about the REST Api and CSM
@@ -32,7 +32,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsCoreServiceInfoResponse</returns>
-        ApiResponse<TrebuchetWebApiDataContractsCoreServiceInfoResponse> ServiceGetServiceInfoV1WithHttpInfo (string lang = null, string locale = null);
+        ApiResponse<ServiceInfoResponse> ServiceGetServiceInfoV1WithHttpInfo (string lang = null, string locale = null);
         /// <summary>
         /// Log out user by token
         /// </summary>
@@ -103,7 +103,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsCoreServiceInfoResponse</returns>
-        System.Threading.Tasks.Task<TrebuchetWebApiDataContractsCoreServiceInfoResponse> ServiceGetServiceInfoV1Async (string lang = null, string locale = null);
+        System.Threading.Tasks.Task<ServiceInfoResponse> ServiceGetServiceInfoV1Async (string lang = null, string locale = null);
 
         /// <summary>
         /// Get information about the REST Api and CSM
@@ -115,7 +115,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsCoreServiceInfoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsCoreServiceInfoResponse>> ServiceGetServiceInfoV1AsyncWithHttpInfo (string lang = null, string locale = null);
+        System.Threading.Tasks.Task<ApiResponse<ServiceInfoResponse>> ServiceGetServiceInfoV1AsyncWithHttpInfo (string lang = null, string locale = null);
         /// <summary>
         /// Log out user by token
         /// </summary>

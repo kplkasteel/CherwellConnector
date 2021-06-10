@@ -26,7 +26,7 @@ namespace CherwellConnector.Model
         /// </summary>
         /// <param name="readRequests">readRequests.</param>
         /// <param name="stopOnError">stopOnError.</param>
-        public TrebuchetWebApiDataContractsUsersUserBatchReadRequest(List<TrebuchetWebApiDataContractsUsersUserReadRequest> readRequests = default, bool? stopOnError = default)
+        public TrebuchetWebApiDataContractsUsersUserBatchReadRequest(List<UserReadRequest> readRequests = default, bool? stopOnError = default)
         {
             ReadRequests = readRequests;
             StopOnError = stopOnError;
@@ -36,7 +36,7 @@ namespace CherwellConnector.Model
         /// Gets or Sets ReadRequests
         /// </summary>
         [DataMember(Name="readRequests", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsUsersUserReadRequest> ReadRequests { get; set; }
+        public List<UserReadRequest> ReadRequests { get; set; }
 
         /// <summary>
         /// Gets or Sets StopOnError
