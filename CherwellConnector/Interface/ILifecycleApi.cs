@@ -178,7 +178,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsResponseBase</returns>
-        TrebuchetWebApiDataContractsResponseBase LifecycleTransitionRecord (string businessObjectDefinitionId, string recordId, TransitionRecordRequest transitionRecordRequest, string lang = null, string locale = null);
+        ResponseBase LifecycleTransitionRecord (string businessObjectDefinitionId, string recordId, TransitionRecordRequest transitionRecordRequest, string lang = null, string locale = null);
 
         /// <summary>
         /// Transition a business object record
@@ -193,7 +193,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsResponseBase</returns>
-        ApiResponse<TrebuchetWebApiDataContractsResponseBase> LifecycleTransitionRecordWithHttpInfo (string businessObjectDefinitionId, string recordId, TransitionRecordRequest transitionRecordRequest, string lang = null, string locale = null);
+        ApiResponse<ResponseBase> LifecycleTransitionRecordWithHttpInfo (string businessObjectDefinitionId, string recordId, TransitionRecordRequest transitionRecordRequest, string lang = null, string locale = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -365,7 +365,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsResponseBase</returns>
-        System.Threading.Tasks.Task<TrebuchetWebApiDataContractsResponseBase> LifecycleTransitionRecordAsync (string businessObjectDefinitionId, string recordId, TransitionRecordRequest transitionRecordRequest, string lang = null, string locale = null);
+        System.Threading.Tasks.Task<ResponseBase> LifecycleTransitionRecordAsync (string businessObjectDefinitionId, string recordId, TransitionRecordRequest transitionRecordRequest, string lang = null, string locale = null);
 
         /// <summary>
         /// Transition a business object record
@@ -380,7 +380,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsResponseBase)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsResponseBase>> LifecycleTransitionRecordAsyncWithHttpInfo (string businessObjectDefinitionId, string recordId, TransitionRecordRequest transitionRecordRequest, string lang = null, string locale = null);
+        System.Threading.Tasks.Task<ApiResponse<ResponseBase>> LifecycleTransitionRecordAsyncWithHttpInfo (string businessObjectDefinitionId, string recordId, TransitionRecordRequest transitionRecordRequest, string lang = null, string locale = null);
         #endregion Asynchronous Operations
     }
 }

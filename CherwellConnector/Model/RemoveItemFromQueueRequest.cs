@@ -10,20 +10,24 @@ namespace CherwellConnector.Model
     using Newtonsoft.Json;
 
     /// <summary>
-    /// TrebuchetWebApiDataContractsSearchesAssociation
+    /// RemoveItemFromQueueRequest
     /// </summary>
     [DataContract]
-    public sealed class TrebuchetWebApiDataContractsSearchesAssociation :  IEquatable<TrebuchetWebApiDataContractsSearchesAssociation>, IValidatableObject
+    public sealed class RemoveItemFromQueueRequest :  IEquatable<RemoveItemFromQueueRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsSearchesAssociation" /> class.
+        /// Initializes a new instance of the <see cref="RemoveItemFromQueueRequest" /> class.
         /// </summary>
         /// <param name="busObId">busObId.</param>
-        /// <param name="busObName">busObName.</param>
-        public TrebuchetWebApiDataContractsSearchesAssociation(string busObId = default, string busObName = default)
+        /// <param name="busObRecId">busObRecId.</param>
+        /// <param name="historyNotes">historyNotes.</param>
+        /// <param name="queueStandInKey">queueStandInKey.</param>
+        public RemoveItemFromQueueRequest(string busObId = default, string busObRecId = default, string historyNotes = default, string queueStandInKey = default)
         {
             BusObId = busObId;
-            BusObName = busObName;
+            BusObRecId = busObRecId;
+            HistoryNotes = historyNotes;
+            QueueStandInKey = queueStandInKey;
         }
         
         /// <summary>
@@ -33,10 +37,22 @@ namespace CherwellConnector.Model
         public string BusObId { get; set; }
 
         /// <summary>
-        /// Gets or Sets BusObName
+        /// Gets or Sets BusObRecId
         /// </summary>
-        [DataMember(Name="busObName", EmitDefaultValue=false)]
-        public string BusObName { get; set; }
+        [DataMember(Name="busObRecId", EmitDefaultValue=false)]
+        public string BusObRecId { get; set; }
+
+        /// <summary>
+        /// Gets or Sets HistoryNotes
+        /// </summary>
+        [DataMember(Name="historyNotes", EmitDefaultValue=false)]
+        public string HistoryNotes { get; set; }
+
+        /// <summary>
+        /// Gets or Sets QueueStandInKey
+        /// </summary>
+        [DataMember(Name="queueStandInKey", EmitDefaultValue=false)]
+        public string QueueStandInKey { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -45,9 +61,11 @@ namespace CherwellConnector.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsSearchesAssociation {\n");
+            sb.Append("class RemoveItemFromQueueRequest {\n");
             sb.Append("  BusObId: ").Append(BusObId).Append("\n");
-            sb.Append("  BusObName: ").Append(BusObName).Append("\n");
+            sb.Append("  BusObRecId: ").Append(BusObRecId).Append("\n");
+            sb.Append("  HistoryNotes: ").Append(HistoryNotes).Append("\n");
+            sb.Append("  QueueStandInKey: ").Append(QueueStandInKey).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -68,15 +86,15 @@ namespace CherwellConnector.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return Equals(input as TrebuchetWebApiDataContractsSearchesAssociation);
+            return Equals(input as RemoveItemFromQueueRequest);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsSearchesAssociation instances are equal
+        /// Returns true if RemoveItemFromQueueRequest instances are equal
         /// </summary>
-        /// <param name="input">Instance of TrebuchetWebApiDataContractsSearchesAssociation to be compared</param>
+        /// <param name="input">Instance of RemoveItemFromQueueRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsSearchesAssociation input)
+        public bool Equals(RemoveItemFromQueueRequest input)
         {
             if (input == null)
                 return false;
@@ -88,9 +106,19 @@ namespace CherwellConnector.Model
                     BusObId.Equals(input.BusObId))
                 ) && 
                 (
-                    BusObName == input.BusObName ||
-                    (BusObName != null &&
-                    BusObName.Equals(input.BusObName))
+                    BusObRecId == input.BusObRecId ||
+                    (BusObRecId != null &&
+                    BusObRecId.Equals(input.BusObRecId))
+                ) && 
+                (
+                    HistoryNotes == input.HistoryNotes ||
+                    (HistoryNotes != null &&
+                    HistoryNotes.Equals(input.HistoryNotes))
+                ) && 
+                (
+                    QueueStandInKey == input.QueueStandInKey ||
+                    (QueueStandInKey != null &&
+                    QueueStandInKey.Equals(input.QueueStandInKey))
                 );
         }
 
@@ -105,8 +133,12 @@ namespace CherwellConnector.Model
                 var hashCode = 41;
                 if (BusObId != null)
                     hashCode = hashCode * 59 + BusObId.GetHashCode();
-                if (BusObName != null)
-                    hashCode = hashCode * 59 + BusObName.GetHashCode();
+                if (BusObRecId != null)
+                    hashCode = hashCode * 59 + BusObRecId.GetHashCode();
+                if (HistoryNotes != null)
+                    hashCode = hashCode * 59 + HistoryNotes.GetHashCode();
+                if (QueueStandInKey != null)
+                    hashCode = hashCode * 59 + QueueStandInKey.GetHashCode();
                 return hashCode;
             }
         }

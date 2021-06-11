@@ -1136,9 +1136,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsResponseBase</returns>
-        public TrebuchetWebApiDataContractsResponseBase LifecycleTransitionRecord (string businessObjectDefinitionId, string recordId, TransitionRecordRequest transitionRecordRequest, string lang = null, string locale = null)
+        public ResponseBase LifecycleTransitionRecord (string businessObjectDefinitionId, string recordId, TransitionRecordRequest transitionRecordRequest, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsResponseBase> localVarResponse = LifecycleTransitionRecordWithHttpInfo(businessObjectDefinitionId, recordId, transitionRecordRequest, lang, locale);
+             ApiResponse<ResponseBase> localVarResponse = LifecycleTransitionRecordWithHttpInfo(businessObjectDefinitionId, recordId, transitionRecordRequest, lang, locale);
              return localVarResponse.Data;
         }
 
@@ -1152,7 +1152,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsResponseBase</returns>
-        public ApiResponse< TrebuchetWebApiDataContractsResponseBase > LifecycleTransitionRecordWithHttpInfo (string businessObjectDefinitionId, string recordId, TransitionRecordRequest transitionRecordRequest, string lang = null, string locale = null)
+        public ApiResponse< ResponseBase > LifecycleTransitionRecordWithHttpInfo (string businessObjectDefinitionId, string recordId, TransitionRecordRequest transitionRecordRequest, string lang = null, string locale = null)
         {
             // verify the required parameter 'businessObjectDefinitionId' is set
             if (businessObjectDefinitionId == null)
@@ -1226,9 +1226,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsResponseBase>(localVarStatusCode,
+            return new ApiResponse<ResponseBase>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsResponseBase) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsResponseBase)));
+                (ResponseBase) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseBase)));
         }
 
         /// <summary>
@@ -1241,9 +1241,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsResponseBase</returns>
-        public async System.Threading.Tasks.Task<TrebuchetWebApiDataContractsResponseBase> LifecycleTransitionRecordAsync (string businessObjectDefinitionId, string recordId, TransitionRecordRequest transitionRecordRequest, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ResponseBase> LifecycleTransitionRecordAsync (string businessObjectDefinitionId, string recordId, TransitionRecordRequest transitionRecordRequest, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsResponseBase> localVarResponse = await LifecycleTransitionRecordAsyncWithHttpInfo(businessObjectDefinitionId, recordId, transitionRecordRequest, lang, locale);
+             ApiResponse<ResponseBase> localVarResponse = await LifecycleTransitionRecordAsyncWithHttpInfo(businessObjectDefinitionId, recordId, transitionRecordRequest, lang, locale);
              return localVarResponse.Data;
 
         }
@@ -1258,7 +1258,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsResponseBase)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsResponseBase>> LifecycleTransitionRecordAsyncWithHttpInfo (string businessObjectDefinitionId, string recordId, TransitionRecordRequest transitionRecordRequest, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ResponseBase>> LifecycleTransitionRecordAsyncWithHttpInfo (string businessObjectDefinitionId, string recordId, TransitionRecordRequest transitionRecordRequest, string lang = null, string locale = null)
         {
             // verify the required parameter 'businessObjectDefinitionId' is set
             if (businessObjectDefinitionId == null)
@@ -1332,9 +1332,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsResponseBase>(localVarStatusCode,
+            return new ApiResponse<ResponseBase>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsResponseBase) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsResponseBase)));
+                (ResponseBase) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseBase)));
         }
 
     }

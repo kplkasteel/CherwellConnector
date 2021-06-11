@@ -284,7 +284,7 @@ namespace CherwellConnector.Model
         /// <param name="sortByFields">sortByFields.</param>
         /// <param name="sortByOption">sortByOption.</param>
         /// <param name="watermarkText">watermarkText.</param>
-        public TrebuchetWebApiDataContractsSearchesQuickSearchItem(bool? ascending = default, List<TrebuchetWebApiDataContractsSearchesChangedLimit> changedLimits = default, ChangedOptionEnum? changedOption = default, string displayName = default, string galleryImage = default, bool? hasAnyOptions = default, NonFinalStateOptionEnum? nonFinalStateOption = default, SearchAnyWordsOptionEnum? searchAnyWordsOption = default, SearchAttachmentsOptionEnum? searchAttachmentsOption = default, SearchRelatedOptionEnum? searchRelatedOption = default, string searchTargetId = default, SearchTargetTypeEnum? searchTargetType = default, TrebuchetWebApiDataContractsSearchesChangedLimit selectedChangedLimit = default, string selectedSortByFieldId = default, Dictionary<string, string> sortByFields = default, SortByOptionEnum? sortByOption = default, string watermarkText = default)
+        public TrebuchetWebApiDataContractsSearchesQuickSearchItem(bool? ascending = default, List<SearchesChangedLimit> changedLimits = default, ChangedOptionEnum? changedOption = default, string displayName = default, string galleryImage = default, bool? hasAnyOptions = default, NonFinalStateOptionEnum? nonFinalStateOption = default, SearchAnyWordsOptionEnum? searchAnyWordsOption = default, SearchAttachmentsOptionEnum? searchAttachmentsOption = default, SearchRelatedOptionEnum? searchRelatedOption = default, string searchTargetId = default, SearchTargetTypeEnum? searchTargetType = default, SearchesChangedLimit selectedChangedLimit = default, string selectedSortByFieldId = default, Dictionary<string, string> sortByFields = default, SortByOptionEnum? sortByOption = default, string watermarkText = default)
         {
             Ascending = ascending;
             ChangedLimits = changedLimits;
@@ -315,7 +315,7 @@ namespace CherwellConnector.Model
         /// Gets or Sets ChangedLimits
         /// </summary>
         [DataMember(Name="changedLimits", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsSearchesChangedLimit> ChangedLimits { get; set; }
+        public List<SearchesChangedLimit> ChangedLimits { get; set; }
 
 
         /// <summary>
@@ -351,7 +351,7 @@ namespace CherwellConnector.Model
         /// Gets or Sets SelectedChangedLimit
         /// </summary>
         [DataMember(Name="selectedChangedLimit", EmitDefaultValue=false)]
-        public TrebuchetWebApiDataContractsSearchesChangedLimit SelectedChangedLimit { get; set; }
+        public SearchesChangedLimit SelectedChangedLimit { get; set; }
 
         /// <summary>
         /// Gets or Sets SelectedSortByFieldId

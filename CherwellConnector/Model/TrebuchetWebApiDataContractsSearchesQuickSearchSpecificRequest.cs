@@ -30,7 +30,7 @@ namespace CherwellConnector.Model
         /// <param name="sortByRelevance">sortByRelevance.</param>
         /// <param name="specificSearchTargetId">specificSearchTargetId.</param>
         /// <param name="useSortBy">useSortBy.</param>
-        public TrebuchetWebApiDataContractsSearchesQuickSearchSpecificRequest(bool? ascending = default, bool? isBusObTarget = default, bool? nonFinalState = default, bool? searchAnyWords = default, bool? searchAttachments = default, bool? searchRelated = default, string searchText = default, TrebuchetWebApiDataContractsSearchesChangedLimit selectedChangedLimit = default, string selectedSortByFieldId = default, bool? sortByRelevance = default, string specificSearchTargetId = default, bool? useSortBy = default)
+        public TrebuchetWebApiDataContractsSearchesQuickSearchSpecificRequest(bool? ascending = default, bool? isBusObTarget = default, bool? nonFinalState = default, bool? searchAnyWords = default, bool? searchAttachments = default, bool? searchRelated = default, string searchText = default, SearchesChangedLimit selectedChangedLimit = default, string selectedSortByFieldId = default, bool? sortByRelevance = default, string specificSearchTargetId = default, bool? useSortBy = default)
         {
             Ascending = ascending;
             IsBusObTarget = isBusObTarget;
@@ -92,7 +92,7 @@ namespace CherwellConnector.Model
         /// Gets or Sets SelectedChangedLimit
         /// </summary>
         [DataMember(Name="selectedChangedLimit", EmitDefaultValue=false)]
-        public TrebuchetWebApiDataContractsSearchesChangedLimit SelectedChangedLimit { get; set; }
+        public SearchesChangedLimit SelectedChangedLimit { get; set; }
 
         /// <summary>
         /// Gets or Sets SelectedSortByFieldId

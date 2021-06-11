@@ -4,38 +4,39 @@ namespace CherwellConnector.Model
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
-    using System.Linq;
     using System.Runtime.Serialization;
     using System.Text;
 
     using Newtonsoft.Json;
 
     /// <summary>
-    /// TrebuchetWebApiDataContractsSearchesStoredSearchResults
+    /// SearchesAssociation
     /// </summary>
     [DataContract]
-    public sealed class TrebuchetWebApiDataContractsSearchesStoredSearchResults :  IEquatable<TrebuchetWebApiDataContractsSearchesStoredSearchResults>, IValidatableObject
+    public sealed class SearchesAssociation :  IEquatable<SearchesAssociation>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsSearchesStoredSearchResults" /> class.
+        /// Initializes a new instance of the <see cref="SearchesAssociation" /> class.
         /// </summary>
-        /// <param name="columns">columns.</param>
-        public TrebuchetWebApiDataContractsSearchesStoredSearchResults(List<SearchesColumnSchema> columns = default)
+        /// <param name="busObId">busObId.</param>
+        /// <param name="busObName">busObName.</param>
+        public SearchesAssociation(string busObId = default, string busObName = default)
         {
-            Columns = columns;
+            BusObId = busObId;
+            BusObName = busObName;
         }
         
         /// <summary>
-        /// Gets or Sets Columns
+        /// Gets or Sets BusObId
         /// </summary>
-        [DataMember(Name="columns", EmitDefaultValue=false)]
-        public List<SearchesColumnSchema> Columns { get; set; }
+        [DataMember(Name="busObId", EmitDefaultValue=false)]
+        public string BusObId { get; set; }
 
         /// <summary>
-        /// Gets or Sets Rows
+        /// Gets or Sets BusObName
         /// </summary>
-        [DataMember(Name="rows", EmitDefaultValue=false)]
-        public List<List<Object>> Rows { get; private set; }
+        [DataMember(Name="busObName", EmitDefaultValue=false)]
+        public string BusObName { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -44,9 +45,9 @@ namespace CherwellConnector.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsSearchesStoredSearchResults {\n");
-            sb.Append("  Columns: ").Append(Columns).Append("\n");
-            sb.Append("  Rows: ").Append(Rows).Append("\n");
+            sb.Append("class SearchesAssociation {\n");
+            sb.Append("  BusObId: ").Append(BusObId).Append("\n");
+            sb.Append("  BusObName: ").Append(BusObName).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -67,29 +68,29 @@ namespace CherwellConnector.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return Equals(input as TrebuchetWebApiDataContractsSearchesStoredSearchResults);
+            return Equals(input as SearchesAssociation);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsSearchesStoredSearchResults instances are equal
+        /// Returns true if SearchesAssociation instances are equal
         /// </summary>
-        /// <param name="input">Instance of TrebuchetWebApiDataContractsSearchesStoredSearchResults to be compared</param>
+        /// <param name="input">Instance of SearchesAssociation to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsSearchesStoredSearchResults input)
+        public bool Equals(SearchesAssociation input)
         {
             if (input == null)
                 return false;
 
             return 
                 (
-                    Columns == input.Columns ||
-                    Columns != null &&
-                    Columns.SequenceEqual(input.Columns)
+                    BusObId == input.BusObId ||
+                    (BusObId != null &&
+                    BusObId.Equals(input.BusObId))
                 ) && 
                 (
-                    Rows == input.Rows ||
-                    Rows != null &&
-                    Rows.SequenceEqual(input.Rows)
+                    BusObName == input.BusObName ||
+                    (BusObName != null &&
+                    BusObName.Equals(input.BusObName))
                 );
         }
 
@@ -102,10 +103,10 @@ namespace CherwellConnector.Model
             unchecked // Overflow is fine, just wrap
             {
                 var hashCode = 41;
-                if (Columns != null)
-                    hashCode = hashCode * 59 + Columns.GetHashCode();
-                if (Rows != null)
-                    hashCode = hashCode * 59 + Rows.GetHashCode();
+                if (BusObId != null)
+                    hashCode = hashCode * 59 + BusObId.GetHashCode();
+                if (BusObName != null)
+                    hashCode = hashCode * 59 + BusObName.GetHashCode();
                 return hashCode;
             }
         }

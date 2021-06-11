@@ -1381,9 +1381,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsQueuesRemoveItemFromQueueResponse</returns>
-        public TrebuchetWebApiDataContractsQueuesRemoveItemFromQueueResponse QueuesRemoveItemFromQueueV1 (RemoveItemFromQueueRequest request, string lang = null, string locale = null)
+        public RemoveItemFromQueueResponse QueuesRemoveItemFromQueueV1 (RemoveItemFromQueueRequest request, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsQueuesRemoveItemFromQueueResponse> localVarResponse = QueuesRemoveItemFromQueueV1WithHttpInfo(request, lang, locale);
+             ApiResponse<RemoveItemFromQueueResponse> localVarResponse = QueuesRemoveItemFromQueueV1WithHttpInfo(request, lang, locale);
              return localVarResponse.Data;
         }
 
@@ -1395,7 +1395,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsQueuesRemoveItemFromQueueResponse</returns>
-        public ApiResponse< TrebuchetWebApiDataContractsQueuesRemoveItemFromQueueResponse > QueuesRemoveItemFromQueueV1WithHttpInfo (RemoveItemFromQueueRequest request, string lang = null, string locale = null)
+        public ApiResponse< RemoveItemFromQueueResponse > QueuesRemoveItemFromQueueV1WithHttpInfo (RemoveItemFromQueueRequest request, string lang = null, string locale = null)
         {
             // verify the required parameter 'request' is set
             if (request == null)
@@ -1461,9 +1461,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsQueuesRemoveItemFromQueueResponse>(localVarStatusCode,
+            return new ApiResponse<RemoveItemFromQueueResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsQueuesRemoveItemFromQueueResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsQueuesRemoveItemFromQueueResponse)));
+                (RemoveItemFromQueueResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RemoveItemFromQueueResponse)));
         }
 
         /// <summary>
@@ -1474,9 +1474,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsQueuesRemoveItemFromQueueResponse</returns>
-        public async System.Threading.Tasks.Task<TrebuchetWebApiDataContractsQueuesRemoveItemFromQueueResponse> QueuesRemoveItemFromQueueV1Async (RemoveItemFromQueueRequest request, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<RemoveItemFromQueueResponse> QueuesRemoveItemFromQueueV1Async (RemoveItemFromQueueRequest request, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsQueuesRemoveItemFromQueueResponse> localVarResponse = await QueuesRemoveItemFromQueueV1AsyncWithHttpInfo(request, lang, locale);
+             ApiResponse<RemoveItemFromQueueResponse> localVarResponse = await QueuesRemoveItemFromQueueV1AsyncWithHttpInfo(request, lang, locale);
              return localVarResponse.Data;
 
         }
@@ -1489,7 +1489,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsQueuesRemoveItemFromQueueResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsQueuesRemoveItemFromQueueResponse>> QueuesRemoveItemFromQueueV1AsyncWithHttpInfo (RemoveItemFromQueueRequest request, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ApiResponse<RemoveItemFromQueueResponse>> QueuesRemoveItemFromQueueV1AsyncWithHttpInfo (RemoveItemFromQueueRequest request, string lang = null, string locale = null)
         {
             // verify the required parameter 'request' is set
             if (request == null)
@@ -1555,9 +1555,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsQueuesRemoveItemFromQueueResponse>(localVarStatusCode,
+            return new ApiResponse<RemoveItemFromQueueResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsQueuesRemoveItemFromQueueResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsQueuesRemoveItemFromQueueResponse)));
+                (RemoveItemFromQueueResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RemoveItemFromQueueResponse)));
         }
 
     }

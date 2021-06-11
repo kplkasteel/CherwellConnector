@@ -321,7 +321,7 @@ namespace CherwellConnector.Model
         /// <param name="errorMessage">errorMessage.</param>
         /// <param name="hasError">hasError.</param>
         /// <param name="httpStatusCode">httpStatusCode.</param>
-        public TrebuchetWebApiDataContractsSearchesSearchItemResponse(TrebuchetWebApiDataContractsSearchesSearchFolder root = default, List<TrebuchetWebApiDataContractsSearchesAssociation> supportedAssociations = default, string errorCode = default, string errorMessage = default, bool? hasError = default, HttpStatusCodeEnum? httpStatusCode = default)
+        public TrebuchetWebApiDataContractsSearchesSearchItemResponse(TrebuchetWebApiDataContractsSearchesSearchFolder root = default, List<SearchesAssociation> supportedAssociations = default, string errorCode = default, string errorMessage = default, bool? hasError = default, HttpStatusCodeEnum? httpStatusCode = default)
         {
             Root = root;
             SupportedAssociations = supportedAssociations;
@@ -341,7 +341,7 @@ namespace CherwellConnector.Model
         /// Gets or Sets SupportedAssociations
         /// </summary>
         [DataMember(Name="supportedAssociations", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsSearchesAssociation> SupportedAssociations { get; set; }
+        public List<SearchesAssociation> SupportedAssociations { get; set; }
 
         /// <summary>
         /// Gets or Sets ErrorCode

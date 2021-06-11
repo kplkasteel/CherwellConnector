@@ -10,18 +10,18 @@ namespace CherwellConnector.Model
     using Newtonsoft.Json;
 
     /// <summary>
-    /// TrebuchetWebApiDataContractsSearchesChangedLimit
+    /// SearchesChangedLimit
     /// </summary>
     [DataContract]
-    public sealed class TrebuchetWebApiDataContractsSearchesChangedLimit :  IEquatable<TrebuchetWebApiDataContractsSearchesChangedLimit>, IValidatableObject
+    public sealed class SearchesChangedLimit :  IEquatable<SearchesChangedLimit>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsSearchesChangedLimit" /> class.
+        /// Initializes a new instance of the <see cref="SearchesChangedLimit" /> class.
         /// </summary>
         /// <param name="displayName">displayName.</param>
         /// <param name="units">units.</param>
         /// <param name="value">value.</param>
-        public TrebuchetWebApiDataContractsSearchesChangedLimit(string displayName = default, string units = default, int? value = default)
+        public SearchesChangedLimit(string displayName = default, string units = default, int? value = default)
         {
             DisplayName = displayName;
             Units = units;
@@ -53,7 +53,7 @@ namespace CherwellConnector.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsSearchesChangedLimit {\n");
+            sb.Append("class SearchesChangedLimit {\n");
             sb.Append("  DisplayName: ").Append(DisplayName).Append("\n");
             sb.Append("  Units: ").Append(Units).Append("\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
@@ -77,15 +77,15 @@ namespace CherwellConnector.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return Equals(input as TrebuchetWebApiDataContractsSearchesChangedLimit);
+            return Equals(input as SearchesChangedLimit);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsSearchesChangedLimit instances are equal
+        /// Returns true if SearchesChangedLimit instances are equal
         /// </summary>
-        /// <param name="input">Instance of TrebuchetWebApiDataContractsSearchesChangedLimit to be compared</param>
+        /// <param name="input">Instance of SearchesChangedLimit to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsSearchesChangedLimit input)
+        public bool Equals(SearchesChangedLimit input)
         {
             if (input == null)
                 return false;
