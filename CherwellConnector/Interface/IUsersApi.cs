@@ -45,7 +45,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsUsersUserBatchDeleteV2Response</returns>
-        TrebuchetWebApiDataContractsUsersUserBatchDeleteV2Response UsersDeleteUserBatchV2 (TrebuchetWebApiDataContractsUsersUserBatchDeleteRequest request, string lang = null, string locale = null);
+        UserBatchDeleteV2Response UsersDeleteUserBatchV2 (TrebuchetWebApiDataContractsUsersUserBatchDeleteRequest request, string lang = null, string locale = null);
 
         /// <summary>
         /// Delete a batch of users
@@ -58,7 +58,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsUsersUserBatchDeleteV2Response</returns>
-        ApiResponse<TrebuchetWebApiDataContractsUsersUserBatchDeleteV2Response> UsersDeleteUserBatchV2WithHttpInfo (TrebuchetWebApiDataContractsUsersUserBatchDeleteRequest request, string lang = null, string locale = null);
+        ApiResponse<UserBatchDeleteV2Response> UsersDeleteUserBatchV2WithHttpInfo (TrebuchetWebApiDataContractsUsersUserBatchDeleteRequest request, string lang = null, string locale = null);
         /// <summary>
         /// Delete a user by record ID
         /// </summary>
@@ -147,7 +147,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsUsersUserBatchReadResponse</returns>
-        TrebuchetWebApiDataContractsUsersUserBatchReadResponse UsersGetUserBatchV1 (TrebuchetWebApiDataContractsUsersUserBatchReadRequest request, string lang = null, string locale = null);
+        UserBatchReadResponse UsersGetUserBatchV1 (UserBatchReadRequest request, string lang = null, string locale = null);
 
         /// <summary>
         /// Get user information in a batch
@@ -160,7 +160,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsUsersUserBatchReadResponse</returns>
-        ApiResponse<TrebuchetWebApiDataContractsUsersUserBatchReadResponse> UsersGetUserBatchV1WithHttpInfo (TrebuchetWebApiDataContractsUsersUserBatchReadRequest request, string lang = null, string locale = null);
+        ApiResponse<UserBatchReadResponse> UsersGetUserBatchV1WithHttpInfo (UserBatchReadRequest request, string lang = null, string locale = null);
         /// <summary>
         /// Get a user by login ID
         /// </summary>
@@ -326,7 +326,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsUsersUserBatchSaveResponse</returns>
-        UserBatchSaveResponse UsersSaveUserBatchV1 (TrebuchetWebApiDataContractsUsersUserBatchSaveRequest request, string lang = null, string locale = null);
+        UserBatchSaveResponse UsersSaveUserBatchV1 (UserBatchSaveRequest request, string lang = null, string locale = null);
 
         /// <summary>
         /// Create or update users in a batch
@@ -339,7 +339,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsUsersUserBatchSaveResponse</returns>
-        ApiResponse<UserBatchSaveResponse> UsersSaveUserBatchV1WithHttpInfo (TrebuchetWebApiDataContractsUsersUserBatchSaveRequest request, string lang = null, string locale = null);
+        ApiResponse<UserBatchSaveResponse> UsersSaveUserBatchV1WithHttpInfo (UserBatchSaveRequest request, string lang = null, string locale = null);
         /// <summary>
         /// Create or update users in a batch
         /// </summary>
@@ -453,7 +453,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsUsersUserBatchDeleteV2Response</returns>
-        System.Threading.Tasks.Task<TrebuchetWebApiDataContractsUsersUserBatchDeleteV2Response> UsersDeleteUserBatchV2Async (TrebuchetWebApiDataContractsUsersUserBatchDeleteRequest request, string lang = null, string locale = null);
+        System.Threading.Tasks.Task<UserBatchDeleteV2Response> UsersDeleteUserBatchV2Async (TrebuchetWebApiDataContractsUsersUserBatchDeleteRequest request, string lang = null, string locale = null);
 
         /// <summary>
         /// Delete a batch of users
@@ -466,7 +466,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsUsersUserBatchDeleteV2Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsUsersUserBatchDeleteV2Response>> UsersDeleteUserBatchV2AsyncWithHttpInfo (TrebuchetWebApiDataContractsUsersUserBatchDeleteRequest request, string lang = null, string locale = null);
+        System.Threading.Tasks.Task<ApiResponse<UserBatchDeleteV2Response>> UsersDeleteUserBatchV2AsyncWithHttpInfo (TrebuchetWebApiDataContractsUsersUserBatchDeleteRequest request, string lang = null, string locale = null);
         /// <summary>
         /// Delete a user by record ID
         /// </summary>
@@ -555,7 +555,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsUsersUserBatchReadResponse</returns>
-        System.Threading.Tasks.Task<TrebuchetWebApiDataContractsUsersUserBatchReadResponse> UsersGetUserBatchV1Async (TrebuchetWebApiDataContractsUsersUserBatchReadRequest request, string lang = null, string locale = null);
+        System.Threading.Tasks.Task<UserBatchReadResponse> UsersGetUserBatchV1Async (UserBatchReadRequest request, string lang = null, string locale = null);
 
         /// <summary>
         /// Get user information in a batch
@@ -568,7 +568,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsUsersUserBatchReadResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsUsersUserBatchReadResponse>> UsersGetUserBatchV1AsyncWithHttpInfo (TrebuchetWebApiDataContractsUsersUserBatchReadRequest request, string lang = null, string locale = null);
+        System.Threading.Tasks.Task<ApiResponse<UserBatchReadResponse>> UsersGetUserBatchV1AsyncWithHttpInfo (UserBatchReadRequest request, string lang = null, string locale = null);
         /// <summary>
         /// Get a user by login ID
         /// </summary>
@@ -734,7 +734,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsUsersUserBatchSaveResponse</returns>
-        System.Threading.Tasks.Task<UserBatchSaveResponse> UsersSaveUserBatchV1Async (TrebuchetWebApiDataContractsUsersUserBatchSaveRequest request, string lang = null, string locale = null);
+        System.Threading.Tasks.Task<UserBatchSaveResponse> UsersSaveUserBatchV1Async (UserBatchSaveRequest request, string lang = null, string locale = null);
 
         /// <summary>
         /// Create or update users in a batch
@@ -747,7 +747,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsUsersUserBatchSaveResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserBatchSaveResponse>> UsersSaveUserBatchV1AsyncWithHttpInfo (TrebuchetWebApiDataContractsUsersUserBatchSaveRequest request, string lang = null, string locale = null);
+        System.Threading.Tasks.Task<ApiResponse<UserBatchSaveResponse>> UsersSaveUserBatchV1AsyncWithHttpInfo (UserBatchSaveRequest request, string lang = null, string locale = null);
         /// <summary>
         /// Create or update users in a batch
         /// </summary>

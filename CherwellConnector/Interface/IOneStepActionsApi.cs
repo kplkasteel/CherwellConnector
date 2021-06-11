@@ -167,7 +167,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsOneStepActionsOneStepActionResponse</returns>
-        TrebuchetWebApiDataContractsOneStepActionsOneStepActionResponse OneStepActionsRunOneStepActionByKeyForRecordByRecIdV1 (string standinkey, string busobid, string busobrecid, string lang = null, string locale = null);
+        OneStepActionResponse OneStepActionsRunOneStepActionByKeyForRecordByRecIdV1 (string standinkey, string busobid, string busobrecid, string lang = null, string locale = null);
 
         /// <summary>
         /// Run a One-Step Action for a Business Object record
@@ -182,7 +182,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsOneStepActionsOneStepActionResponse</returns>
-        ApiResponse<TrebuchetWebApiDataContractsOneStepActionsOneStepActionResponse> OneStepActionsRunOneStepActionByKeyForRecordByRecIdV1WithHttpInfo (string standinkey, string busobid, string busobrecid, string lang = null, string locale = null);
+        ApiResponse<OneStepActionResponse> OneStepActionsRunOneStepActionByKeyForRecordByRecIdV1WithHttpInfo (string standinkey, string busobid, string busobrecid, string lang = null, string locale = null);
         /// <summary>
         /// Run a stand alone One-Step Action
         /// </summary>
@@ -194,7 +194,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsOneStepActionsOneStepActionResponse</returns>
-        TrebuchetWebApiDataContractsOneStepActionsOneStepActionResponse OneStepActionsRunOneStepActionByStandInKeyV1 (string standinkey, string lang = null, string locale = null);
+        OneStepActionResponse OneStepActionsRunOneStepActionByStandInKeyV1 (string standinkey, string lang = null, string locale = null);
 
         /// <summary>
         /// Run a stand alone One-Step Action
@@ -207,7 +207,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsOneStepActionsOneStepActionResponse</returns>
-        ApiResponse<TrebuchetWebApiDataContractsOneStepActionsOneStepActionResponse> OneStepActionsRunOneStepActionByStandInKeyV1WithHttpInfo (string standinkey, string lang = null, string locale = null);
+        ApiResponse<OneStepActionResponse> OneStepActionsRunOneStepActionByStandInKeyV1WithHttpInfo (string standinkey, string lang = null, string locale = null);
         /// <summary>
         /// Run a One-Step Action using a OneStepActionRequest
         /// </summary>
@@ -219,7 +219,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsOneStepActionsOneStepActionResponse</returns>
-        TrebuchetWebApiDataContractsOneStepActionsOneStepActionResponse OneStepActionsRunOneStepActionV1 (TrebuchetWebApiDataContractsOneStepActionsOneStepActionRequest request, string lang = null, string locale = null);
+        OneStepActionResponse OneStepActionsRunOneStepActionV1 (OneStepActionRequest request, string lang = null, string locale = null);
 
         /// <summary>
         /// Run a One-Step Action using a OneStepActionRequest
@@ -232,7 +232,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsOneStepActionsOneStepActionResponse</returns>
-        ApiResponse<TrebuchetWebApiDataContractsOneStepActionsOneStepActionResponse> OneStepActionsRunOneStepActionV1WithHttpInfo (TrebuchetWebApiDataContractsOneStepActionsOneStepActionRequest request, string lang = null, string locale = null);
+        ApiResponse<OneStepActionResponse> OneStepActionsRunOneStepActionV1WithHttpInfo (OneStepActionRequest request, string lang = null, string locale = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -393,7 +393,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsOneStepActionsOneStepActionResponse</returns>
-        System.Threading.Tasks.Task<TrebuchetWebApiDataContractsOneStepActionsOneStepActionResponse> OneStepActionsRunOneStepActionByKeyForRecordByRecIdV1Async (string standinkey, string busobid, string busobrecid, string lang = null, string locale = null);
+        System.Threading.Tasks.Task<OneStepActionResponse> OneStepActionsRunOneStepActionByKeyForRecordByRecIdV1Async (string standinkey, string busobid, string busobrecid, string lang = null, string locale = null);
 
         /// <summary>
         /// Run a One-Step Action for a Business Object record
@@ -408,7 +408,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsOneStepActionsOneStepActionResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsOneStepActionsOneStepActionResponse>> OneStepActionsRunOneStepActionByKeyForRecordByRecIdV1AsyncWithHttpInfo (string standinkey, string busobid, string busobrecid, string lang = null, string locale = null);
+        System.Threading.Tasks.Task<ApiResponse<OneStepActionResponse>> OneStepActionsRunOneStepActionByKeyForRecordByRecIdV1AsyncWithHttpInfo (string standinkey, string busobid, string busobrecid, string lang = null, string locale = null);
         /// <summary>
         /// Run a stand alone One-Step Action
         /// </summary>
@@ -420,7 +420,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsOneStepActionsOneStepActionResponse</returns>
-        System.Threading.Tasks.Task<TrebuchetWebApiDataContractsOneStepActionsOneStepActionResponse> OneStepActionsRunOneStepActionByStandInKeyV1Async (string standinkey, string lang = null, string locale = null);
+        System.Threading.Tasks.Task<OneStepActionResponse> OneStepActionsRunOneStepActionByStandInKeyV1Async (string standinkey, string lang = null, string locale = null);
 
         /// <summary>
         /// Run a stand alone One-Step Action
@@ -433,7 +433,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsOneStepActionsOneStepActionResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsOneStepActionsOneStepActionResponse>> OneStepActionsRunOneStepActionByStandInKeyV1AsyncWithHttpInfo (string standinkey, string lang = null, string locale = null);
+        System.Threading.Tasks.Task<ApiResponse<OneStepActionResponse>> OneStepActionsRunOneStepActionByStandInKeyV1AsyncWithHttpInfo (string standinkey, string lang = null, string locale = null);
         /// <summary>
         /// Run a One-Step Action using a OneStepActionRequest
         /// </summary>
@@ -445,7 +445,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsOneStepActionsOneStepActionResponse</returns>
-        System.Threading.Tasks.Task<TrebuchetWebApiDataContractsOneStepActionsOneStepActionResponse> OneStepActionsRunOneStepActionV1Async (TrebuchetWebApiDataContractsOneStepActionsOneStepActionRequest request, string lang = null, string locale = null);
+        System.Threading.Tasks.Task<OneStepActionResponse> OneStepActionsRunOneStepActionV1Async (OneStepActionRequest request, string lang = null, string locale = null);
 
         /// <summary>
         /// Run a One-Step Action using a OneStepActionRequest
@@ -458,7 +458,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsOneStepActionsOneStepActionResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsOneStepActionsOneStepActionResponse>> OneStepActionsRunOneStepActionV1AsyncWithHttpInfo (TrebuchetWebApiDataContractsOneStepActionsOneStepActionRequest request, string lang = null, string locale = null);
+        System.Threading.Tasks.Task<ApiResponse<OneStepActionResponse>> OneStepActionsRunOneStepActionV1AsyncWithHttpInfo (OneStepActionRequest request, string lang = null, string locale = null);
         #endregion Asynchronous Operations
     }
 }

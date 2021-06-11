@@ -1,40 +1,39 @@
+
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Runtime.Serialization;
+using System.Text;
 using CherwellConnector.Enum;
+using Newtonsoft.Json;
 
 namespace CherwellConnector.Model
 {
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.Linq;
-    using System.Runtime.Serialization;
-    using System.Text;
-
-    using Newtonsoft.Json;
-    using Newtonsoft.Json.Converters;
-
     /// <summary>
-    /// StatusesResponse
+    /// TrebuchetWebApiDataContractsLifecycleGetTransitionOptionsResponse
     /// </summary>
     [DataContract]
-    public sealed class StatusesResponse :  IEquatable<StatusesResponse>, IValidatableObject
+    public sealed class TransitionOptionsResponse :  IEquatable<TransitionOptionsResponse>, IValidatableObject
     {
-       
+        
+
         /// <summary>
         /// Gets or Sets HttpStatusCode
         /// </summary>
         [DataMember(Name="httpStatusCode", EmitDefaultValue=false)]
         public HttpStatusCodeEnum? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="StatusesResponse" /> class.
+        /// Initializes a new instance of the <see cref="TransitionOptionsResponse" /> class.
         /// </summary>
-        /// <param name="statuses">statuses.</param>
+        /// <param name="transitions">transitions.</param>
         /// <param name="errorCode">errorCode.</param>
         /// <param name="errorMessage">errorMessage.</param>
         /// <param name="hasError">hasError.</param>
         /// <param name="httpStatusCode">httpStatusCode.</param>
-        public StatusesResponse(List<TrebuchetWebApiDataContractsLifecycleGetStatusesResponseStatuses> statuses = default, string errorCode = default, string errorMessage = default, bool? hasError = default, HttpStatusCodeEnum? httpStatusCode = default)
+        public TransitionOptionsResponse(List<TransitionOptionsResponseTransition> transitions = default(List<TransitionOptionsResponseTransition>), string errorCode = default(string), string errorMessage = default(string), bool? hasError = default(bool?), HttpStatusCodeEnum? httpStatusCode = default(HttpStatusCodeEnum?))
         {
-            Statuses = statuses;
+            Transitions = transitions;
             ErrorCode = errorCode;
             ErrorMessage = errorMessage;
             HasError = hasError;
@@ -42,10 +41,10 @@ namespace CherwellConnector.Model
         }
         
         /// <summary>
-        /// Gets or Sets Statuses
+        /// Gets or Sets Transitions
         /// </summary>
-        [DataMember(Name="statuses", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsLifecycleGetStatusesResponseStatuses> Statuses { get; set; }
+        [DataMember(Name="transitions", EmitDefaultValue=false)]
+        public List<TransitionOptionsResponseTransition> Transitions { get; set; }
 
         /// <summary>
         /// Gets or Sets ErrorCode
@@ -73,8 +72,8 @@ namespace CherwellConnector.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class StatusesResponse {\n");
-            sb.Append("  Statuses: ").Append(Statuses).Append("\n");
+            sb.Append("class TransitionOptionsResponse {\n");
+            sb.Append("  Transitions: ").Append(Transitions).Append("\n");
             sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
             sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append("\n");
             sb.Append("  HasError: ").Append(HasError).Append("\n");
@@ -99,24 +98,24 @@ namespace CherwellConnector.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return Equals(input as StatusesResponse);
+            return Equals(input as TransitionOptionsResponse);
         }
 
         /// <summary>
-        /// Returns true if StatusesResponse instances are equal
+        /// Returns true if TransitionOptionsResponse instances are equal
         /// </summary>
-        /// <param name="input">Instance of StatusesResponse to be compared</param>
+        /// <param name="input">Instance of TransitionOptionsResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(StatusesResponse input)
+        public bool Equals(TransitionOptionsResponse input)
         {
             if (input == null)
                 return false;
 
             return 
                 (
-                    Statuses == input.Statuses ||
-                    Statuses != null &&
-                    Statuses.SequenceEqual(input.Statuses)
+                    Transitions == input.Transitions ||
+                    Transitions != null &&
+                    Transitions.SequenceEqual(input.Transitions)
                 ) && 
                 (
                     ErrorCode == input.ErrorCode ||
@@ -149,8 +148,8 @@ namespace CherwellConnector.Model
             unchecked // Overflow is fine, just wrap
             {
                 var hashCode = 41;
-                if (Statuses != null)
-                    hashCode = hashCode * 59 + Statuses.GetHashCode();
+                if (Transitions != null)
+                    hashCode = hashCode * 59 + Transitions.GetHashCode();
                 if (ErrorCode != null)
                     hashCode = hashCode * 59 + ErrorCode.GetHashCode();
                 if (ErrorMessage != null)

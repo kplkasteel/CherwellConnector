@@ -11,7 +11,6 @@ namespace CherwellConnector.Model
     using System.Text;
 
     using Newtonsoft.Json;
-    using Newtonsoft.Json.Converters;
 
     /// <summary>
     /// StagesResponse

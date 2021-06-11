@@ -20,7 +20,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsQueuesAddItemToQueueResponse</returns>
-        TrebuchetWebApiDataContractsQueuesAddItemToQueueResponse QueuesAddItemToQueueV1 (TrebuchetWebApiDataContractsQueuesAddItemToQueueRequest request, string lang = null, string locale = null);
+        AddItemToQueueResponse QueuesAddItemToQueueV1 (AddItemToQueueRequest request, string lang = null, string locale = null);
 
         /// <summary>
         /// Add a Business Object to a queue
@@ -33,7 +33,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsQueuesAddItemToQueueResponse</returns>
-        ApiResponse<TrebuchetWebApiDataContractsQueuesAddItemToQueueResponse> QueuesAddItemToQueueV1WithHttpInfo (TrebuchetWebApiDataContractsQueuesAddItemToQueueRequest request, string lang = null, string locale = null);
+        ApiResponse<AddItemToQueueResponse> QueuesAddItemToQueueV1WithHttpInfo (AddItemToQueueRequest request, string lang = null, string locale = null);
         /// <summary>
         /// Check a Business Object in to a queue
         /// </summary>
@@ -45,7 +45,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsQueuesCheckInQueueItemResponse</returns>
-        TrebuchetWebApiDataContractsQueuesCheckInQueueItemResponse QueuesCheckInQueueItemV1 (TrebuchetWebApiDataContractsQueuesCheckInQueueItemRequest request, string lang = null, string locale = null);
+        CheckInQueueItemResponse QueuesCheckInQueueItemV1 (CheckInQueueItemRequest request, string lang = null, string locale = null);
 
         /// <summary>
         /// Check a Business Object in to a queue
@@ -58,7 +58,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsQueuesCheckInQueueItemResponse</returns>
-        ApiResponse<TrebuchetWebApiDataContractsQueuesCheckInQueueItemResponse> QueuesCheckInQueueItemV1WithHttpInfo (TrebuchetWebApiDataContractsQueuesCheckInQueueItemRequest request, string lang = null, string locale = null);
+        ApiResponse<CheckInQueueItemResponse> QueuesCheckInQueueItemV1WithHttpInfo (CheckInQueueItemRequest request, string lang = null, string locale = null);
         /// <summary>
         /// Check a Business Object out of a queue
         /// </summary>
@@ -70,7 +70,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsQueuesCheckOutQueueItemResponse</returns>
-        TrebuchetWebApiDataContractsQueuesCheckOutQueueItemResponse QueuesCheckOutQueueItemV1 (TrebuchetWebApiDataContractsQueuesCheckOutQueueItemRequest request, string lang = null, string locale = null);
+        CheckOutQueueItemResponse QueuesCheckOutQueueItemV1 (CheckOutQueueItemRequest request, string lang = null, string locale = null);
 
         /// <summary>
         /// Check a Business Object out of a queue
@@ -83,7 +83,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsQueuesCheckOutQueueItemResponse</returns>
-        ApiResponse<TrebuchetWebApiDataContractsQueuesCheckOutQueueItemResponse> QueuesCheckOutQueueItemV1WithHttpInfo (TrebuchetWebApiDataContractsQueuesCheckOutQueueItemRequest request, string lang = null, string locale = null);
+        ApiResponse<CheckOutQueueItemResponse> QueuesCheckOutQueueItemV1WithHttpInfo (CheckOutQueueItemRequest request, string lang = null, string locale = null);
         /// <summary>
         /// Get available queues.
         /// </summary>
@@ -207,7 +207,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsQueuesRemoveItemFromQueueResponse</returns>
-        TrebuchetWebApiDataContractsQueuesRemoveItemFromQueueResponse QueuesRemoveItemFromQueueV1 (TrebuchetWebApiDataContractsQueuesRemoveItemFromQueueRequest request, string lang = null, string locale = null);
+        TrebuchetWebApiDataContractsQueuesRemoveItemFromQueueResponse QueuesRemoveItemFromQueueV1 (RemoveItemFromQueueRequest request, string lang = null, string locale = null);
 
         /// <summary>
         /// Remove an item from a queue
@@ -220,7 +220,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsQueuesRemoveItemFromQueueResponse</returns>
-        ApiResponse<TrebuchetWebApiDataContractsQueuesRemoveItemFromQueueResponse> QueuesRemoveItemFromQueueV1WithHttpInfo (TrebuchetWebApiDataContractsQueuesRemoveItemFromQueueRequest request, string lang = null, string locale = null);
+        ApiResponse<TrebuchetWebApiDataContractsQueuesRemoveItemFromQueueResponse> QueuesRemoveItemFromQueueV1WithHttpInfo (RemoveItemFromQueueRequest request, string lang = null, string locale = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -234,7 +234,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsQueuesAddItemToQueueResponse</returns>
-        System.Threading.Tasks.Task<TrebuchetWebApiDataContractsQueuesAddItemToQueueResponse> QueuesAddItemToQueueV1Async (TrebuchetWebApiDataContractsQueuesAddItemToQueueRequest request, string lang = null, string locale = null);
+        System.Threading.Tasks.Task<AddItemToQueueResponse> QueuesAddItemToQueueV1Async (AddItemToQueueRequest request, string lang = null, string locale = null);
 
         /// <summary>
         /// Add a Business Object to a queue
@@ -247,7 +247,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsQueuesAddItemToQueueResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsQueuesAddItemToQueueResponse>> QueuesAddItemToQueueV1AsyncWithHttpInfo (TrebuchetWebApiDataContractsQueuesAddItemToQueueRequest request, string lang = null, string locale = null);
+        System.Threading.Tasks.Task<ApiResponse<AddItemToQueueResponse>> QueuesAddItemToQueueV1AsyncWithHttpInfo (AddItemToQueueRequest request, string lang = null, string locale = null);
         /// <summary>
         /// Check a Business Object in to a queue
         /// </summary>
@@ -259,7 +259,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsQueuesCheckInQueueItemResponse</returns>
-        System.Threading.Tasks.Task<TrebuchetWebApiDataContractsQueuesCheckInQueueItemResponse> QueuesCheckInQueueItemV1Async (TrebuchetWebApiDataContractsQueuesCheckInQueueItemRequest request, string lang = null, string locale = null);
+        System.Threading.Tasks.Task<CheckInQueueItemResponse> QueuesCheckInQueueItemV1Async (CheckInQueueItemRequest request, string lang = null, string locale = null);
 
         /// <summary>
         /// Check a Business Object in to a queue
@@ -272,7 +272,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsQueuesCheckInQueueItemResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsQueuesCheckInQueueItemResponse>> QueuesCheckInQueueItemV1AsyncWithHttpInfo (TrebuchetWebApiDataContractsQueuesCheckInQueueItemRequest request, string lang = null, string locale = null);
+        System.Threading.Tasks.Task<ApiResponse<CheckInQueueItemResponse>> QueuesCheckInQueueItemV1AsyncWithHttpInfo (CheckInQueueItemRequest request, string lang = null, string locale = null);
         /// <summary>
         /// Check a Business Object out of a queue
         /// </summary>
@@ -284,7 +284,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsQueuesCheckOutQueueItemResponse</returns>
-        System.Threading.Tasks.Task<TrebuchetWebApiDataContractsQueuesCheckOutQueueItemResponse> QueuesCheckOutQueueItemV1Async (TrebuchetWebApiDataContractsQueuesCheckOutQueueItemRequest request, string lang = null, string locale = null);
+        System.Threading.Tasks.Task<CheckOutQueueItemResponse> QueuesCheckOutQueueItemV1Async (CheckOutQueueItemRequest request, string lang = null, string locale = null);
 
         /// <summary>
         /// Check a Business Object out of a queue
@@ -297,7 +297,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsQueuesCheckOutQueueItemResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsQueuesCheckOutQueueItemResponse>> QueuesCheckOutQueueItemV1AsyncWithHttpInfo (TrebuchetWebApiDataContractsQueuesCheckOutQueueItemRequest request, string lang = null, string locale = null);
+        System.Threading.Tasks.Task<ApiResponse<CheckOutQueueItemResponse>> QueuesCheckOutQueueItemV1AsyncWithHttpInfo (CheckOutQueueItemRequest request, string lang = null, string locale = null);
         /// <summary>
         /// Get available queues.
         /// </summary>
@@ -421,7 +421,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsQueuesRemoveItemFromQueueResponse</returns>
-        System.Threading.Tasks.Task<TrebuchetWebApiDataContractsQueuesRemoveItemFromQueueResponse> QueuesRemoveItemFromQueueV1Async (TrebuchetWebApiDataContractsQueuesRemoveItemFromQueueRequest request, string lang = null, string locale = null);
+        System.Threading.Tasks.Task<TrebuchetWebApiDataContractsQueuesRemoveItemFromQueueResponse> QueuesRemoveItemFromQueueV1Async (RemoveItemFromQueueRequest request, string lang = null, string locale = null);
 
         /// <summary>
         /// Remove an item from a queue
@@ -434,7 +434,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsQueuesRemoveItemFromQueueResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsQueuesRemoveItemFromQueueResponse>> QueuesRemoveItemFromQueueV1AsyncWithHttpInfo (TrebuchetWebApiDataContractsQueuesRemoveItemFromQueueRequest request, string lang = null, string locale = null);
+        System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsQueuesRemoveItemFromQueueResponse>> QueuesRemoveItemFromQueueV1AsyncWithHttpInfo (RemoveItemFromQueueRequest request, string lang = null, string locale = null);
         #endregion Asynchronous Operations
     }
 }

@@ -12,7 +12,7 @@ namespace CherwellConnector.Model
     /// SimplePromptValue
     /// </summary>
     [DataContract]
-    public partial class SimplePromptValue :  IEquatable<SimplePromptValue>, IValidatableObject
+    public sealed class SimplePromptValue :  IEquatable<SimplePromptValue>, IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="SimplePromptValue" /> class.
@@ -64,7 +64,7 @@ namespace CherwellConnector.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public virtual string ToJson()
+        public  string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }
