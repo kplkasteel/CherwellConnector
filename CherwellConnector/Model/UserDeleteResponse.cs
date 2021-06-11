@@ -1,4 +1,3 @@
-using CherwellConnector.Enum;
 
 namespace CherwellConnector.Model
 {
@@ -10,42 +9,33 @@ namespace CherwellConnector.Model
     using System.Text;
 
     using Newtonsoft.Json;
-    using Newtonsoft.Json.Converters;
 
     /// <summary>
-    /// StatusesResponse
+    /// UserDeleteResponse
     /// </summary>
     [DataContract]
-    public sealed class StatusesResponse :  IEquatable<StatusesResponse>, IValidatableObject
+    public sealed class UserDeleteResponse :  IEquatable<UserDeleteResponse>, IValidatableObject
     {
-       
         /// <summary>
-        /// Gets or Sets HttpStatusCode
+        /// Initializes a new instance of the <see cref="UserDeleteResponse" /> class.
         /// </summary>
-        [DataMember(Name="httpStatusCode", EmitDefaultValue=false)]
-        public HttpStatusCodeEnum? HttpStatusCode { get; set; }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="StatusesResponse" /> class.
-        /// </summary>
-        /// <param name="statuses">statuses.</param>
+        /// <param name="error">error.</param>
         /// <param name="errorCode">errorCode.</param>
-        /// <param name="errorMessage">errorMessage.</param>
         /// <param name="hasError">hasError.</param>
-        /// <param name="httpStatusCode">httpStatusCode.</param>
-        public StatusesResponse(List<TrebuchetWebApiDataContractsLifecycleGetStatusesResponseStatuses> statuses = default, string errorCode = default, string errorMessage = default, bool? hasError = default, HttpStatusCodeEnum? httpStatusCode = default)
+        /// <param name="users">users.</param>
+        public UserDeleteResponse(string error = default, string errorCode = default, bool? hasError = default, List<TrebuchetWebApiDataContractsUsersUser> users = default)
         {
-            Statuses = statuses;
+            Error = error;
             ErrorCode = errorCode;
-            ErrorMessage = errorMessage;
             HasError = hasError;
-            HttpStatusCode = httpStatusCode;
+            Users = users;
         }
         
         /// <summary>
-        /// Gets or Sets Statuses
+        /// Gets or Sets Error
         /// </summary>
-        [DataMember(Name="statuses", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsLifecycleGetStatusesResponseStatuses> Statuses { get; set; }
+        [DataMember(Name="error", EmitDefaultValue=false)]
+        public string Error { get; set; }
 
         /// <summary>
         /// Gets or Sets ErrorCode
@@ -54,17 +44,16 @@ namespace CherwellConnector.Model
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// Gets or Sets ErrorMessage
-        /// </summary>
-        [DataMember(Name="errorMessage", EmitDefaultValue=false)]
-        public string ErrorMessage { get; set; }
-
-        /// <summary>
         /// Gets or Sets HasError
         /// </summary>
         [DataMember(Name="hasError", EmitDefaultValue=false)]
         public bool? HasError { get; set; }
 
+        /// <summary>
+        /// Gets or Sets Users
+        /// </summary>
+        [DataMember(Name="users", EmitDefaultValue=false)]
+        public List<TrebuchetWebApiDataContractsUsersUser> Users { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -73,12 +62,11 @@ namespace CherwellConnector.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class StatusesResponse {\n");
-            sb.Append("  Statuses: ").Append(Statuses).Append("\n");
+            sb.Append("class UserDeleteResponse {\n");
+            sb.Append("  Error: ").Append(Error).Append("\n");
             sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
-            sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append("\n");
             sb.Append("  HasError: ").Append(HasError).Append("\n");
-            sb.Append("  HttpStatusCode: ").Append(HttpStatusCode).Append("\n");
+            sb.Append("  Users: ").Append(Users).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -99,24 +87,24 @@ namespace CherwellConnector.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return Equals(input as StatusesResponse);
+            return Equals(input as UserDeleteResponse);
         }
 
         /// <summary>
-        /// Returns true if StatusesResponse instances are equal
+        /// Returns true if UserDeleteResponse instances are equal
         /// </summary>
-        /// <param name="input">Instance of StatusesResponse to be compared</param>
+        /// <param name="input">Instance of UserDeleteResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(StatusesResponse input)
+        public bool Equals(UserDeleteResponse input)
         {
             if (input == null)
                 return false;
 
             return 
                 (
-                    Statuses == input.Statuses ||
-                    Statuses != null &&
-                    Statuses.SequenceEqual(input.Statuses)
+                    Error == input.Error ||
+                    (Error != null &&
+                    Error.Equals(input.Error))
                 ) && 
                 (
                     ErrorCode == input.ErrorCode ||
@@ -124,19 +112,14 @@ namespace CherwellConnector.Model
                     ErrorCode.Equals(input.ErrorCode))
                 ) && 
                 (
-                    ErrorMessage == input.ErrorMessage ||
-                    (ErrorMessage != null &&
-                    ErrorMessage.Equals(input.ErrorMessage))
-                ) && 
-                (
                     HasError == input.HasError ||
                     (HasError != null &&
                     HasError.Equals(input.HasError))
                 ) && 
                 (
-                    HttpStatusCode == input.HttpStatusCode ||
-                    (HttpStatusCode != null &&
-                    HttpStatusCode.Equals(input.HttpStatusCode))
+                    Users == input.Users ||
+                    Users != null &&
+                    Users.SequenceEqual(input.Users)
                 );
         }
 
@@ -149,16 +132,14 @@ namespace CherwellConnector.Model
             unchecked // Overflow is fine, just wrap
             {
                 var hashCode = 41;
-                if (Statuses != null)
-                    hashCode = hashCode * 59 + Statuses.GetHashCode();
+                if (Error != null)
+                    hashCode = hashCode * 59 + Error.GetHashCode();
                 if (ErrorCode != null)
                     hashCode = hashCode * 59 + ErrorCode.GetHashCode();
-                if (ErrorMessage != null)
-                    hashCode = hashCode * 59 + ErrorMessage.GetHashCode();
                 if (HasError != null)
                     hashCode = hashCode * 59 + HasError.GetHashCode();
-                if (HttpStatusCode != null)
-                    hashCode = hashCode * 59 + HttpStatusCode.GetHashCode();
+                if (Users != null)
+                    hashCode = hashCode * 59 + Users.GetHashCode();
                 return hashCode;
             }
         }

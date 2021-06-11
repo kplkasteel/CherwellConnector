@@ -113,9 +113,9 @@ namespace CherwellConnector.Api
             var localVarFileParams = new Dictionary<string, FileParameter>();
             object localVarPostBody;
             
-            var localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(LocalVarHttpContentTypes);
+            var localVarHttpContentType = ApiClient.SelectHeaderContentType(LocalVarHttpContentTypes);
             
-            var localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
+            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -197,9 +197,9 @@ namespace CherwellConnector.Api
 
             // to determine the Content-Type header
             var localVarHttpContentTypes = Array.Empty<string>();
-            var localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            var localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
             
-            var localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
+            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -275,9 +275,9 @@ namespace CherwellConnector.Api
 
             // to determine the Content-Type header
             var localVarHttpContentTypes = Array.Empty<string>();
-            var localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            var localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
             
-            var localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
+            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -367,9 +367,9 @@ namespace CherwellConnector.Api
 
             // to determine the Content-Type header
             var localVarHttpContentTypes = Array.Empty<string>();
-            var localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            var localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
             
-            var localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
+            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -457,9 +457,9 @@ namespace CherwellConnector.Api
 
             // to determine the Content-Type header
             var localVarHttpContentTypes = Array.Empty<string>();
-            var localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            var localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
             
-            var localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
+            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -531,9 +531,9 @@ namespace CherwellConnector.Api
             var localVarFileParams = new Dictionary<string, FileParameter>();
             object localVarPostBody;
             
-            var localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(LocalVarHttpContentTypes);
+            var localVarHttpContentType = ApiClient.SelectHeaderContentType(LocalVarHttpContentTypes);
             
-            var localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
+            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -625,9 +625,9 @@ namespace CherwellConnector.Api
 
             // to determine the Content-Type header
             var localVarHttpContentTypes = Array.Empty<string>();
-            var localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            var localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
             
-            var localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
+            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -712,13 +712,13 @@ namespace CherwellConnector.Api
 
             // to determine the Content-Type header
             var localVarHttpContentTypes = Array.Empty<string>();
-            var localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            var localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             var localVarHttpHeaderAccepts = new[] {
                 "application/octet-stream"
             };
-            var localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -807,10 +807,10 @@ namespace CherwellConnector.Api
 
             // to determine the Content-Type header
             var localVarHttpContentTypes = Array.Empty<string>();
-            var localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            var localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
            
-            var localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
+            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -902,10 +902,10 @@ namespace CherwellConnector.Api
             // to determine the Content-Type header
             var localVarHttpContentTypes = new string[] {
             };
-            var localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            var localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
            
-            var localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
+            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -996,10 +996,10 @@ namespace CherwellConnector.Api
 
             // to determine the Content-Type header
             var localVarHttpContentTypes = Array.Empty<string>();
-            var localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            var localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
           
-            var localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
+            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -1090,9 +1090,9 @@ namespace CherwellConnector.Api
 
             // to determine the Content-Type header
             var localVarHttpContentTypes = Array.Empty<string>();
-            var localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            var localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
             
-            var localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
+            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -1165,10 +1165,10 @@ namespace CherwellConnector.Api
             var localVarFileParams = new Dictionary<string, FileParameter>();
             object localVarPostBody;
             
-            var localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(LocalVarHttpContentTypes);
+            var localVarHttpContentType = ApiClient.SelectHeaderContentType(LocalVarHttpContentTypes);
 
            
-            var localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
+            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -1244,9 +1244,9 @@ namespace CherwellConnector.Api
             var localVarFileParams = new Dictionary<string, FileParameter>();
             object localVarPostBody;
             
-            var localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(LocalVarHttpContentTypes);
+            var localVarHttpContentType = ApiClient.SelectHeaderContentType(LocalVarHttpContentTypes);
             
-            var localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
+            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -1328,9 +1328,9 @@ namespace CherwellConnector.Api
 
             // to determine the Content-Type header
             var localVarHttpContentTypes = Array.Empty<string>();
-            var localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            var localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
             
-            var localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
+            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -1399,10 +1399,10 @@ namespace CherwellConnector.Api
 
             // to determine the Content-Type header
             var localVarHttpContentTypes = Array.Empty<string>();
-            var localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            var localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             
-            var localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
+            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -1478,9 +1478,9 @@ namespace CherwellConnector.Api
 
             // to determine the Content-Type header
             var localVarHttpContentTypes = Array.Empty<string>();
-            var localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            var localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
             
-            var localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
+            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -1556,10 +1556,10 @@ namespace CherwellConnector.Api
 
             // to determine the Content-Type header
             var localVarHttpContentTypes = Array.Empty<string>();
-            var localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            var localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
            
-            var localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
+            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -1632,10 +1632,10 @@ namespace CherwellConnector.Api
 
             // to determine the Content-Type header
             var localVarHttpContentTypes = Array.Empty<string>();
-            var localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            var localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
           
-            var localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
+            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -1706,9 +1706,9 @@ namespace CherwellConnector.Api
 
             // to determine the Content-Type header
             var localVarHttpContentTypes = Array.Empty<string>();
-            var localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            var localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
             
-            var localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
+            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -1778,9 +1778,9 @@ namespace CherwellConnector.Api
 
             // to determine the Content-Type header
             var localVarHttpContentTypes = Array.Empty<string>();
-            var localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            var localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
             
-            var localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
+            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -1850,9 +1850,9 @@ namespace CherwellConnector.Api
 
             // to determine the Content-Type header
             var localVarHttpContentTypes = Array.Empty<string>();
-            var localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            var localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
             
-            var localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
+            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -1921,9 +1921,9 @@ namespace CherwellConnector.Api
             var localVarFileParams = new Dictionary<string, FileParameter>();
             object localVarPostBody;
             
-            var localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(LocalVarHttpContentTypes);
+            var localVarHttpContentType = ApiClient.SelectHeaderContentType(LocalVarHttpContentTypes);
             
-            var localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
+            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -2002,10 +2002,10 @@ namespace CherwellConnector.Api
             object localVarPostBody;
 
            
-            var localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(LocalVarHttpContentTypes);
+            var localVarHttpContentType = ApiClient.SelectHeaderContentType(LocalVarHttpContentTypes);
 
           
-            var localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
+            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -2104,9 +2104,9 @@ namespace CherwellConnector.Api
             // to determine the Content-Type header
             var localVarHttpContentTypes = new string[] {
             };
-            var localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            var localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
             
-            var localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
+            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -2204,10 +2204,10 @@ namespace CherwellConnector.Api
 
             // to determine the Content-Type header
             var localVarHttpContentTypes = Array.Empty<string>();
-            var localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            var localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
           
-            var localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
+            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -2303,10 +2303,10 @@ namespace CherwellConnector.Api
 
             // to determine the Content-Type header
             var localVarHttpContentTypes = Array.Empty<string>();
-            var localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            var localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
            
-            var localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
+            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -2401,9 +2401,9 @@ namespace CherwellConnector.Api
 
             // to determine the Content-Type header
             var localVarHttpContentTypes = Array.Empty<string>();
-            var localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            var localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
             
-            var localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
+            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -2487,11 +2487,11 @@ namespace CherwellConnector.Api
 
             // to determine the Content-Type header
             var localVarHttpContentTypes = Array.Empty<string>();
-            var localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            var localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             var localVarHttpHeaderAccepts = Array.Empty<string>();
-            var localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -2573,11 +2573,11 @@ namespace CherwellConnector.Api
 
             // to determine the Content-Type header
             var localVarHttpContentTypes = Array.Empty<string>();
-            var localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            var localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             var localVarHttpHeaderAccepts = Array.Empty<string>();
-            var localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -2660,11 +2660,11 @@ namespace CherwellConnector.Api
 
             // to determine the Content-Type header
             var localVarHttpContentTypes = Array.Empty<string>();
-            var localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            var localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             var localVarHttpHeaderAccepts = Array.Empty<string>();
-            var localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -2746,11 +2746,11 @@ namespace CherwellConnector.Api
 
             // to determine the Content-Type header
             var localVarHttpContentTypes = Array.Empty<string>();
-            var localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            var localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             var localVarHttpHeaderAccepts = Array.Empty<string>();
-            var localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -2821,10 +2821,10 @@ namespace CherwellConnector.Api
             var localVarFileParams = new Dictionary<string, FileParameter>();
             object localVarPostBody;
             
-            var localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(LocalVarHttpContentTypes);
+            var localVarHttpContentType = ApiClient.SelectHeaderContentType(LocalVarHttpContentTypes);
 
            
-            var localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
+            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -2901,9 +2901,9 @@ namespace CherwellConnector.Api
             var localVarFileParams = new Dictionary<string, FileParameter>();
             object localVarPostBody;
             
-            var localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(LocalVarHttpContentTypes);
+            var localVarHttpContentType = ApiClient.SelectHeaderContentType(LocalVarHttpContentTypes);
             
-            var localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
+            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -2979,10 +2979,10 @@ namespace CherwellConnector.Api
             var localVarFileParams = new Dictionary<string, FileParameter>();
             object localVarPostBody;
             
-            var localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(LocalVarHttpContentTypes);
+            var localVarHttpContentType = ApiClient.SelectHeaderContentType(LocalVarHttpContentTypes);
 
            
-            var localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
+            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -3059,9 +3059,9 @@ namespace CherwellConnector.Api
             var localVarFileParams = new Dictionary<string, FileParameter>();
             object localVarPostBody;
             
-            var localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(LocalVarHttpContentTypes);
+            var localVarHttpContentType = ApiClient.SelectHeaderContentType(LocalVarHttpContentTypes);
             
-            var localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
+            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -3137,9 +3137,9 @@ namespace CherwellConnector.Api
             var localVarFileParams = new Dictionary<string, FileParameter>();
             object localVarPostBody;
             
-            var localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(LocalVarHttpContentTypes);
+            var localVarHttpContentType = ApiClient.SelectHeaderContentType(LocalVarHttpContentTypes);
             
-            var localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
+            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -3236,9 +3236,9 @@ namespace CherwellConnector.Api
 
             // to determine the Content-Type header
             var localVarHttpContentTypes = Array.Empty<string>();
-            var localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            var localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
             
-            var localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
+            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -3345,9 +3345,9 @@ namespace CherwellConnector.Api
             var localVarHttpContentTypes = new[] {
                 "application/octet-stream"
             };
-            var localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            var localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
             
-            var localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
+            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -3463,9 +3463,9 @@ namespace CherwellConnector.Api
             var localVarHttpContentTypes = new[] {
                 "application/octet-stream"
             };
-            var localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            var localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
             
-            var localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
+            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -3582,10 +3582,10 @@ namespace CherwellConnector.Api
             var localVarHttpContentTypes = new[] {
                 "application/octet-stream"
             };
-            var localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            var localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             
-            var localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
+            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -3702,10 +3702,10 @@ namespace CherwellConnector.Api
             var localVarHttpContentTypes = new[] {
                 "application/octet-stream"
             };
-            var localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            var localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             
-            var localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
+            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -3779,9 +3779,9 @@ namespace CherwellConnector.Api
             var localVarFileParams = new Dictionary<string, FileParameter>();
             object localVarPostBody;
             
-            var localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(LocalVarHttpContentTypes);
+            var localVarHttpContentType = ApiClient.SelectHeaderContentType(LocalVarHttpContentTypes);
             
-            var localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
+            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 

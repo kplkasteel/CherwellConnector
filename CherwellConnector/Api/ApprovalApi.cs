@@ -79,7 +79,7 @@ namespace CherwellConnector.Api
         /// <param name="approvalAction"></param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>TrebuchetWebApiDataContractsBusinessObjectSaveResponse</returns>
+        /// <returns>SaveResponse</returns>
         public SaveResponse ApprovalActionApprovalV1(string approvalRecId, string approvalAction, string lang = null, string locale = null)
         {
             return ApprovalActionApprovalV1WithHttpInfo(approvalRecId, approvalAction, lang, locale).Data;
@@ -93,7 +93,7 @@ namespace CherwellConnector.Api
         /// <param name="approvalAction"></param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>ApiResponse of TrebuchetWebApiDataContractsBusinessObjectSaveResponse</returns>
+        /// <returns>ApiResponse of SaveResponse</returns>
         private ApiResponse<SaveResponse> ApprovalActionApprovalV1WithHttpInfo(string approvalRecId, string approvalAction, string lang = null, string locale = null)
         {
             // verify the required parameter 'approvalRecId' is set
@@ -112,9 +112,9 @@ namespace CherwellConnector.Api
 
             // to determine the Content-Type header
             var localVarHttpContentTypes = Array.Empty<string>();
-            var localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            var localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
             
-            var localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
+            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -155,7 +155,7 @@ namespace CherwellConnector.Api
         /// <param name="approvalRecId"></param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>TrebuchetWebApiDataContractsApprovalApprovalReadResponse</returns>
+        /// <returns>ApprovalReadResponse</returns>
         public ApprovalReadResponse ApprovalGetApprovalByRecIdV1(string approvalRecId, string lang = null, string locale = null)
         {
             return ApprovalGetApprovalByRecIdV1WithHttpInfo(approvalRecId, lang, locale).Data;
@@ -168,7 +168,7 @@ namespace CherwellConnector.Api
         /// <param name="approvalRecId"></param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>ApiResponse of TrebuchetWebApiDataContractsApprovalApprovalReadResponse</returns>
+        /// <returns>ApiResponse of ApprovalReadResponse</returns>
         private ApiResponse<ApprovalReadResponse> ApprovalGetApprovalByRecIdV1WithHttpInfo(string approvalRecId, string lang = null, string locale = null)
         {
             // verify the required parameter 'approvalRecId' is set
@@ -184,10 +184,10 @@ namespace CherwellConnector.Api
 
             // to determine the Content-Type header
             var localVarHttpContentTypes = Array.Empty<string>();
-            var localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            var localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
            
-            var localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
+            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -228,7 +228,7 @@ namespace CherwellConnector.Api
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>TrebuchetWebApiDataContractsApprovalGetApprovalsResponse</returns>
+        /// <returns>ApprovalsResponse</returns>
         public ApprovalsResponse ApprovalGetMyApprovalsV1(string lang = null, string locale = null)
         {
             return ApprovalGetMyApprovalsV1WithHttpInfo(lang, locale).Data;
@@ -240,7 +240,7 @@ namespace CherwellConnector.Api
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>ApiResponse of TrebuchetWebApiDataContractsApprovalGetApprovalsResponse</returns>
+        /// <returns>ApiResponse of ApprovalsResponse</returns>
         private ApiResponse<ApprovalsResponse> ApprovalGetMyApprovalsV1WithHttpInfo(string lang = null, string locale = null)
         {
             const string varPath = "/api/V1/getmyapprovals";
@@ -252,9 +252,9 @@ namespace CherwellConnector.Api
 
             // to determine the Content-Type header
             var localVarHttpContentTypes = Array.Empty<string>();   
-            var localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            var localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
-            var localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
+            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -293,7 +293,7 @@ namespace CherwellConnector.Api
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>TrebuchetWebApiDataContractsApprovalGetApprovalsResponse</returns>
+        /// <returns>ApprovalsResponse</returns>
         public ApprovalsResponse ApprovalGetMyPendingApprovalsV1(string lang = null, string locale = null)
         {
             return ApprovalGetMyPendingApprovalsV1WithHttpInfo(lang, locale).Data;
@@ -305,7 +305,7 @@ namespace CherwellConnector.Api
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>ApiResponse of TrebuchetWebApiDataContractsApprovalGetApprovalsResponse</returns>
+        /// <returns>ApiResponse of ApprovalsResponse</returns>
         private ApiResponse<ApprovalsResponse> ApprovalGetMyPendingApprovalsV1WithHttpInfo(string lang = null, string locale = null)
         {
             const string varPath = "/api/V1/getmypendingapprovals";
@@ -318,9 +318,9 @@ namespace CherwellConnector.Api
             // to determine the Content-Type header
             var localVarHttpContentTypes = Array.Empty<string>();
 
-            var localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            var localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
-            var localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
+            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 

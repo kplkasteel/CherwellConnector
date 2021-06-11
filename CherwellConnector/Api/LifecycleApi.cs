@@ -126,9 +126,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsLifecycleGetRecordStatusResponse</returns>
-        public TrebuchetWebApiDataContractsLifecycleGetRecordStatusResponse LifecycleGetRecordStage (string businessObjectDefinitionId, string recordId, string lang = null, string locale = null)
+        public RecordStatusResponse LifecycleGetRecordStage (string businessObjectDefinitionId, string recordId, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsLifecycleGetRecordStatusResponse> localVarResponse = LifecycleGetRecordStageWithHttpInfo(businessObjectDefinitionId, recordId, lang, locale);
+             ApiResponse<RecordStatusResponse> localVarResponse = LifecycleGetRecordStageWithHttpInfo(businessObjectDefinitionId, recordId, lang, locale);
              return localVarResponse.Data;
         }
 
@@ -141,7 +141,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsLifecycleGetRecordStatusResponse</returns>
-        public ApiResponse< TrebuchetWebApiDataContractsLifecycleGetRecordStatusResponse > LifecycleGetRecordStageWithHttpInfo (string businessObjectDefinitionId, string recordId, string lang = null, string locale = null)
+        public ApiResponse< RecordStatusResponse > LifecycleGetRecordStageWithHttpInfo (string businessObjectDefinitionId, string recordId, string lang = null, string locale = null)
         {
             // verify the required parameter 'businessObjectDefinitionId' is set
             if (businessObjectDefinitionId == null)
@@ -161,7 +161,7 @@ namespace CherwellConnector.Api
             // to determine the Content-Type header
             string[] localVarHttpContentTypes = new string[] {
             };
-            string localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            string localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             string[] localVarHttpHeaderAccepts = new string[] {
@@ -170,7 +170,7 @@ namespace CherwellConnector.Api
                 "application/xml",
                 "text/xml"
             };
-            string localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            string localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -199,9 +199,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsLifecycleGetRecordStatusResponse>(localVarStatusCode,
+            return new ApiResponse<RecordStatusResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsLifecycleGetRecordStatusResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsLifecycleGetRecordStatusResponse)));
+                (RecordStatusResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RecordStatusResponse)));
         }
 
         /// <summary>
@@ -213,9 +213,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsLifecycleGetRecordStatusResponse</returns>
-        public async System.Threading.Tasks.Task<TrebuchetWebApiDataContractsLifecycleGetRecordStatusResponse> LifecycleGetRecordStageAsync (string businessObjectDefinitionId, string recordId, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<RecordStatusResponse> LifecycleGetRecordStageAsync (string businessObjectDefinitionId, string recordId, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsLifecycleGetRecordStatusResponse> localVarResponse = await LifecycleGetRecordStageAsyncWithHttpInfo(businessObjectDefinitionId, recordId, lang, locale);
+             ApiResponse<RecordStatusResponse> localVarResponse = await LifecycleGetRecordStageAsyncWithHttpInfo(businessObjectDefinitionId, recordId, lang, locale);
              return localVarResponse.Data;
 
         }
@@ -229,7 +229,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsLifecycleGetRecordStatusResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsLifecycleGetRecordStatusResponse>> LifecycleGetRecordStageAsyncWithHttpInfo (string businessObjectDefinitionId, string recordId, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ApiResponse<RecordStatusResponse>> LifecycleGetRecordStageAsyncWithHttpInfo (string businessObjectDefinitionId, string recordId, string lang = null, string locale = null)
         {
             // verify the required parameter 'businessObjectDefinitionId' is set
             if (businessObjectDefinitionId == null)
@@ -249,7 +249,7 @@ namespace CherwellConnector.Api
             // to determine the Content-Type header
             string[] localVarHttpContentTypes = new string[] {
             };
-            string localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            string localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             string[] localVarHttpHeaderAccepts = new string[] {
@@ -258,7 +258,7 @@ namespace CherwellConnector.Api
                 "application/xml",
                 "text/xml"
             };
-            string localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            string localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -287,9 +287,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsLifecycleGetRecordStatusResponse>(localVarStatusCode,
+            return new ApiResponse<RecordStatusResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsLifecycleGetRecordStatusResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsLifecycleGetRecordStatusResponse)));
+                (RecordStatusResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RecordStatusResponse)));
         }
 
         /// <summary>
@@ -301,9 +301,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsLifecycleGetRecordStatusResponse</returns>
-        public TrebuchetWebApiDataContractsLifecycleGetRecordStatusResponse LifecycleGetRecordStatus (string businessObjectDefinitionId, string recordId, string lang = null, string locale = null)
+        public RecordStatusResponse LifecycleGetRecordStatus (string businessObjectDefinitionId, string recordId, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsLifecycleGetRecordStatusResponse> localVarResponse = LifecycleGetRecordStatusWithHttpInfo(businessObjectDefinitionId, recordId, lang, locale);
+             ApiResponse<RecordStatusResponse> localVarResponse = LifecycleGetRecordStatusWithHttpInfo(businessObjectDefinitionId, recordId, lang, locale);
              return localVarResponse.Data;
         }
 
@@ -316,7 +316,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsLifecycleGetRecordStatusResponse</returns>
-        public ApiResponse< TrebuchetWebApiDataContractsLifecycleGetRecordStatusResponse > LifecycleGetRecordStatusWithHttpInfo (string businessObjectDefinitionId, string recordId, string lang = null, string locale = null)
+        public ApiResponse< RecordStatusResponse > LifecycleGetRecordStatusWithHttpInfo (string businessObjectDefinitionId, string recordId, string lang = null, string locale = null)
         {
             // verify the required parameter 'businessObjectDefinitionId' is set
             if (businessObjectDefinitionId == null)
@@ -336,7 +336,7 @@ namespace CherwellConnector.Api
             // to determine the Content-Type header
             string[] localVarHttpContentTypes = new string[] {
             };
-            string localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            string localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             string[] localVarHttpHeaderAccepts = new string[] {
@@ -345,7 +345,7 @@ namespace CherwellConnector.Api
                 "application/xml",
                 "text/xml"
             };
-            string localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            string localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -374,9 +374,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsLifecycleGetRecordStatusResponse>(localVarStatusCode,
+            return new ApiResponse<RecordStatusResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsLifecycleGetRecordStatusResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsLifecycleGetRecordStatusResponse)));
+                (RecordStatusResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RecordStatusResponse)));
         }
 
         /// <summary>
@@ -388,9 +388,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsLifecycleGetRecordStatusResponse</returns>
-        public async System.Threading.Tasks.Task<TrebuchetWebApiDataContractsLifecycleGetRecordStatusResponse> LifecycleGetRecordStatusAsync (string businessObjectDefinitionId, string recordId, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<RecordStatusResponse> LifecycleGetRecordStatusAsync (string businessObjectDefinitionId, string recordId, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsLifecycleGetRecordStatusResponse> localVarResponse = await LifecycleGetRecordStatusAsyncWithHttpInfo(businessObjectDefinitionId, recordId, lang, locale);
+             ApiResponse<RecordStatusResponse> localVarResponse = await LifecycleGetRecordStatusAsyncWithHttpInfo(businessObjectDefinitionId, recordId, lang, locale);
              return localVarResponse.Data;
 
         }
@@ -404,7 +404,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsLifecycleGetRecordStatusResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsLifecycleGetRecordStatusResponse>> LifecycleGetRecordStatusAsyncWithHttpInfo (string businessObjectDefinitionId, string recordId, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ApiResponse<RecordStatusResponse>> LifecycleGetRecordStatusAsyncWithHttpInfo (string businessObjectDefinitionId, string recordId, string lang = null, string locale = null)
         {
             // verify the required parameter 'businessObjectDefinitionId' is set
             if (businessObjectDefinitionId == null)
@@ -424,7 +424,7 @@ namespace CherwellConnector.Api
             // to determine the Content-Type header
             string[] localVarHttpContentTypes = new string[] {
             };
-            string localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            string localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             string[] localVarHttpHeaderAccepts = new string[] {
@@ -433,7 +433,7 @@ namespace CherwellConnector.Api
                 "application/xml",
                 "text/xml"
             };
-            string localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            string localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -462,9 +462,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsLifecycleGetRecordStatusResponse>(localVarStatusCode,
+            return new ApiResponse<RecordStatusResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsLifecycleGetRecordStatusResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsLifecycleGetRecordStatusResponse)));
+                (RecordStatusResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RecordStatusResponse)));
         }
 
         /// <summary>
@@ -475,9 +475,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsLifecycleGetStagesResponse</returns>
-        public TrebuchetWebApiDataContractsLifecycleGetStagesResponse LifecycleGetStages (string businessObjectDefinitionId, string lang = null, string locale = null)
+        public StagesResponse LifecycleGetStages (string businessObjectDefinitionId, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsLifecycleGetStagesResponse> localVarResponse = LifecycleGetStagesWithHttpInfo(businessObjectDefinitionId, lang, locale);
+             ApiResponse<StagesResponse> localVarResponse = LifecycleGetStagesWithHttpInfo(businessObjectDefinitionId, lang, locale);
              return localVarResponse.Data;
         }
 
@@ -489,7 +489,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsLifecycleGetStagesResponse</returns>
-        public ApiResponse< TrebuchetWebApiDataContractsLifecycleGetStagesResponse > LifecycleGetStagesWithHttpInfo (string businessObjectDefinitionId, string lang = null, string locale = null)
+        public ApiResponse< StagesResponse > LifecycleGetStagesWithHttpInfo (string businessObjectDefinitionId, string lang = null, string locale = null)
         {
             // verify the required parameter 'businessObjectDefinitionId' is set
             if (businessObjectDefinitionId == null)
@@ -506,7 +506,7 @@ namespace CherwellConnector.Api
             // to determine the Content-Type header
             string[] localVarHttpContentTypes = new string[] {
             };
-            string localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            string localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             string[] localVarHttpHeaderAccepts = new string[] {
@@ -515,7 +515,7 @@ namespace CherwellConnector.Api
                 "application/xml",
                 "text/xml"
             };
-            string localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            string localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -543,9 +543,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsLifecycleGetStagesResponse>(localVarStatusCode,
+            return new ApiResponse<StagesResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsLifecycleGetStagesResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsLifecycleGetStagesResponse)));
+                (StagesResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(StagesResponse)));
         }
 
         /// <summary>
@@ -556,9 +556,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsLifecycleGetStagesResponse</returns>
-        public async System.Threading.Tasks.Task<TrebuchetWebApiDataContractsLifecycleGetStagesResponse> LifecycleGetStagesAsync (string businessObjectDefinitionId, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<StagesResponse> LifecycleGetStagesAsync (string businessObjectDefinitionId, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsLifecycleGetStagesResponse> localVarResponse = await LifecycleGetStagesAsyncWithHttpInfo(businessObjectDefinitionId, lang, locale);
+             ApiResponse<StagesResponse> localVarResponse = await LifecycleGetStagesAsyncWithHttpInfo(businessObjectDefinitionId, lang, locale);
              return localVarResponse.Data;
 
         }
@@ -571,7 +571,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsLifecycleGetStagesResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsLifecycleGetStagesResponse>> LifecycleGetStagesAsyncWithHttpInfo (string businessObjectDefinitionId, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ApiResponse<StagesResponse>> LifecycleGetStagesAsyncWithHttpInfo (string businessObjectDefinitionId, string lang = null, string locale = null)
         {
             // verify the required parameter 'businessObjectDefinitionId' is set
             if (businessObjectDefinitionId == null)
@@ -588,7 +588,7 @@ namespace CherwellConnector.Api
             // to determine the Content-Type header
             string[] localVarHttpContentTypes = new string[] {
             };
-            string localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            string localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             string[] localVarHttpHeaderAccepts = new string[] {
@@ -597,7 +597,7 @@ namespace CherwellConnector.Api
                 "application/xml",
                 "text/xml"
             };
-            string localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            string localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -625,9 +625,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsLifecycleGetStagesResponse>(localVarStatusCode,
+            return new ApiResponse<StagesResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsLifecycleGetStagesResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsLifecycleGetStagesResponse)));
+                (StagesResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(StagesResponse)));
         }
 
         /// <summary>
@@ -638,9 +638,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsLifecycleGetStatusesResponse</returns>
-        public TrebuchetWebApiDataContractsLifecycleGetStatusesResponse LifecycleGetStatuses (string businessObjectDefinitionId, string lang = null, string locale = null)
+        public StatusesResponse LifecycleGetStatuses (string businessObjectDefinitionId, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsLifecycleGetStatusesResponse> localVarResponse = LifecycleGetStatusesWithHttpInfo(businessObjectDefinitionId, lang, locale);
+             ApiResponse<StatusesResponse> localVarResponse = LifecycleGetStatusesWithHttpInfo(businessObjectDefinitionId, lang, locale);
              return localVarResponse.Data;
         }
 
@@ -652,7 +652,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsLifecycleGetStatusesResponse</returns>
-        public ApiResponse< TrebuchetWebApiDataContractsLifecycleGetStatusesResponse > LifecycleGetStatusesWithHttpInfo (string businessObjectDefinitionId, string lang = null, string locale = null)
+        public ApiResponse< StatusesResponse > LifecycleGetStatusesWithHttpInfo (string businessObjectDefinitionId, string lang = null, string locale = null)
         {
             // verify the required parameter 'businessObjectDefinitionId' is set
             if (businessObjectDefinitionId == null)
@@ -669,7 +669,7 @@ namespace CherwellConnector.Api
             // to determine the Content-Type header
             string[] localVarHttpContentTypes = new string[] {
             };
-            string localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            string localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             string[] localVarHttpHeaderAccepts = new string[] {
@@ -678,7 +678,7 @@ namespace CherwellConnector.Api
                 "application/xml",
                 "text/xml"
             };
-            string localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            string localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -706,9 +706,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsLifecycleGetStatusesResponse>(localVarStatusCode,
+            return new ApiResponse<StatusesResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsLifecycleGetStatusesResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsLifecycleGetStatusesResponse)));
+                (StatusesResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(StatusesResponse)));
         }
 
         /// <summary>
@@ -719,9 +719,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsLifecycleGetStatusesResponse</returns>
-        public async System.Threading.Tasks.Task<TrebuchetWebApiDataContractsLifecycleGetStatusesResponse> LifecycleGetStatusesAsync (string businessObjectDefinitionId, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<StatusesResponse> LifecycleGetStatusesAsync (string businessObjectDefinitionId, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsLifecycleGetStatusesResponse> localVarResponse = await LifecycleGetStatusesAsyncWithHttpInfo(businessObjectDefinitionId, lang, locale);
+             ApiResponse<StatusesResponse> localVarResponse = await LifecycleGetStatusesAsyncWithHttpInfo(businessObjectDefinitionId, lang, locale);
              return localVarResponse.Data;
 
         }
@@ -734,7 +734,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsLifecycleGetStatusesResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsLifecycleGetStatusesResponse>> LifecycleGetStatusesAsyncWithHttpInfo (string businessObjectDefinitionId, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ApiResponse<StatusesResponse>> LifecycleGetStatusesAsyncWithHttpInfo (string businessObjectDefinitionId, string lang = null, string locale = null)
         {
             // verify the required parameter 'businessObjectDefinitionId' is set
             if (businessObjectDefinitionId == null)
@@ -751,7 +751,7 @@ namespace CherwellConnector.Api
             // to determine the Content-Type header
             string[] localVarHttpContentTypes = new string[] {
             };
-            string localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            string localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             string[] localVarHttpHeaderAccepts = new string[] {
@@ -760,7 +760,7 @@ namespace CherwellConnector.Api
                 "application/xml",
                 "text/xml"
             };
-            string localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            string localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -788,9 +788,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsLifecycleGetStatusesResponse>(localVarStatusCode,
+            return new ApiResponse<StatusesResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsLifecycleGetStatusesResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsLifecycleGetStatusesResponse)));
+                (StatusesResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(StatusesResponse)));
         }
 
         /// <summary>
@@ -837,7 +837,7 @@ namespace CherwellConnector.Api
             // to determine the Content-Type header
             string[] localVarHttpContentTypes = new string[] {
             };
-            string localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            string localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             string[] localVarHttpHeaderAccepts = new string[] {
@@ -846,7 +846,7 @@ namespace CherwellConnector.Api
                 "application/xml",
                 "text/xml"
             };
-            string localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            string localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -925,7 +925,7 @@ namespace CherwellConnector.Api
             // to determine the Content-Type header
             string[] localVarHttpContentTypes = new string[] {
             };
-            string localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            string localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             string[] localVarHttpHeaderAccepts = new string[] {
@@ -934,7 +934,7 @@ namespace CherwellConnector.Api
                 "application/xml",
                 "text/xml"
             };
-            string localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            string localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -1007,7 +1007,7 @@ namespace CherwellConnector.Api
             // to determine the Content-Type header
             string[] localVarHttpContentTypes = new string[] {
             };
-            string localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            string localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             string[] localVarHttpHeaderAccepts = new string[] {
@@ -1016,7 +1016,7 @@ namespace CherwellConnector.Api
                 "application/xml",
                 "text/xml"
             };
-            string localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            string localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -1089,7 +1089,7 @@ namespace CherwellConnector.Api
             // to determine the Content-Type header
             string[] localVarHttpContentTypes = new string[] {
             };
-            string localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            string localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             string[] localVarHttpHeaderAccepts = new string[] {
@@ -1098,7 +1098,7 @@ namespace CherwellConnector.Api
                 "application/xml",
                 "text/xml"
             };
-            string localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            string localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -1185,7 +1185,7 @@ namespace CherwellConnector.Api
                 "text/xml", 
                 "application/x-www-form-urlencoded"
             };
-            string localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            string localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             string[] localVarHttpHeaderAccepts = new string[] {
@@ -1194,7 +1194,7 @@ namespace CherwellConnector.Api
                 "application/xml",
                 "text/xml"
             };
-            string localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            string localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -1291,7 +1291,7 @@ namespace CherwellConnector.Api
                 "text/xml", 
                 "application/x-www-form-urlencoded"
             };
-            string localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            string localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             string[] localVarHttpHeaderAccepts = new string[] {
@@ -1300,7 +1300,7 @@ namespace CherwellConnector.Api
                 "application/xml",
                 "text/xml"
             };
-            string localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            string localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 

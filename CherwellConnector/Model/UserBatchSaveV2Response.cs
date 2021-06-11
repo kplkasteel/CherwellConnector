@@ -10,15 +10,18 @@ namespace CherwellConnector.Model
     using System.Text;
 
     using Newtonsoft.Json;
-    using Newtonsoft.Json.Converters;
+
 
     /// <summary>
-    /// MobileFormResponse
+    /// UserBatchSaveV2Response
     /// </summary>
     [DataContract]
-    public sealed class MobileFormResponse :  IEquatable<MobileFormResponse>, IValidatableObject
+    public sealed class UserBatchSaveV2Response :  IEquatable<UserBatchSaveV2Response>, IValidatableObject
     {
-        
+      
+            /// <summary>
+            /// Enum Accepted for value: Accepted
+            /// </summary>
 
         /// <summary>
         /// Gets or Sets HttpStatusCode
@@ -26,26 +29,16 @@ namespace CherwellConnector.Model
         [DataMember(Name="httpStatusCode", EmitDefaultValue=false)]
         public HttpStatusCodeEnum? HttpStatusCode { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="MobileFormResponse" /> class.
+        /// Initializes a new instance of the <see cref="UserBatchSaveV2Response" /> class.
         /// </summary>
-        /// <param name="actions">actions.</param>
-        /// <param name="attachments">attachments.</param>
-        /// <param name="galleryImage">galleryImage.</param>
-        /// <param name="locationInformation">locationInformation.</param>
-        /// <param name="sections">sections.</param>
-        /// <param name="title">title.</param>
+        /// <param name="responses">responses.</param>
         /// <param name="errorCode">errorCode.</param>
         /// <param name="errorMessage">errorMessage.</param>
         /// <param name="hasError">hasError.</param>
         /// <param name="httpStatusCode">httpStatusCode.</param>
-        public MobileFormResponse(List<Action> actions = default, List<Attachment> attachments = default, string galleryImage = default, Location locationInformation = default, List<Section> sections = default, string title = default, string errorCode = default, string errorMessage = default, bool? hasError = default, HttpStatusCodeEnum? httpStatusCode = default)
+        public UserBatchSaveV2Response(List<UserSaveV2Response> responses = default, string errorCode = default, string errorMessage = default, bool? hasError = default, HttpStatusCodeEnum? httpStatusCode = default)
         {
-            Actions = actions;
-            Attachments = attachments;
-            GalleryImage = galleryImage;
-            LocationInformation = locationInformation;
-            Sections = sections;
-            Title = title;
+            Responses = responses;
             ErrorCode = errorCode;
             ErrorMessage = errorMessage;
             HasError = hasError;
@@ -53,40 +46,10 @@ namespace CherwellConnector.Model
         }
         
         /// <summary>
-        /// Gets or Sets Actions
+        /// Gets or Sets Responses
         /// </summary>
-        [DataMember(Name="actions", EmitDefaultValue=false)]
-        public List<Action> Actions { get; set; }
-
-        /// <summary>
-        /// Gets or Sets Attachments
-        /// </summary>
-        [DataMember(Name="attachments", EmitDefaultValue=false)]
-        public List<Attachment> Attachments { get; set; }
-
-        /// <summary>
-        /// Gets or Sets GalleryImage
-        /// </summary>
-        [DataMember(Name="galleryImage", EmitDefaultValue=false)]
-        public string GalleryImage { get; set; }
-
-        /// <summary>
-        /// Gets or Sets LocationInformation
-        /// </summary>
-        [DataMember(Name="locationInformation", EmitDefaultValue=false)]
-        public Location LocationInformation { get; set; }
-
-        /// <summary>
-        /// Gets or Sets Sections
-        /// </summary>
-        [DataMember(Name="sections", EmitDefaultValue=false)]
-        public List<Section> Sections { get; set; }
-
-        /// <summary>
-        /// Gets or Sets Title
-        /// </summary>
-        [DataMember(Name="title", EmitDefaultValue=false)]
-        public string Title { get; set; }
+        [DataMember(Name="responses", EmitDefaultValue=false)]
+        public List<UserSaveV2Response> Responses { get; set; }
 
         /// <summary>
         /// Gets or Sets ErrorCode
@@ -114,13 +77,8 @@ namespace CherwellConnector.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class MobileFormResponse {\n");
-            sb.Append("  Actions: ").Append(Actions).Append("\n");
-            sb.Append("  Attachments: ").Append(Attachments).Append("\n");
-            sb.Append("  GalleryImage: ").Append(GalleryImage).Append("\n");
-            sb.Append("  LocationInformation: ").Append(LocationInformation).Append("\n");
-            sb.Append("  Sections: ").Append(Sections).Append("\n");
-            sb.Append("  Title: ").Append(Title).Append("\n");
+            sb.Append("class UserBatchSaveV2Response {\n");
+            sb.Append("  Responses: ").Append(Responses).Append("\n");
             sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
             sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append("\n");
             sb.Append("  HasError: ").Append(HasError).Append("\n");
@@ -145,49 +103,24 @@ namespace CherwellConnector.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return Equals(input as MobileFormResponse);
+            return Equals(input as UserBatchSaveV2Response);
         }
 
         /// <summary>
-        /// Returns true if MobileFormResponse instances are equal
+        /// Returns true if UserBatchSaveV2Response instances are equal
         /// </summary>
-        /// <param name="input">Instance of MobileFormResponse to be compared</param>
+        /// <param name="input">Instance of UserBatchSaveV2Response to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(MobileFormResponse input)
+        public bool Equals(UserBatchSaveV2Response input)
         {
             if (input == null)
                 return false;
 
             return 
                 (
-                    Actions == input.Actions ||
-                    Actions != null &&
-                    Actions.SequenceEqual(input.Actions)
-                ) && 
-                (
-                    Attachments == input.Attachments ||
-                    Attachments != null &&
-                    Attachments.SequenceEqual(input.Attachments)
-                ) && 
-                (
-                    GalleryImage == input.GalleryImage ||
-                    (GalleryImage != null &&
-                    GalleryImage.Equals(input.GalleryImage))
-                ) && 
-                (
-                    LocationInformation.Equals(input.LocationInformation) ||
-                    (LocationInformation != null &&
-                    LocationInformation.Equals(input.LocationInformation))
-                ) && 
-                (
-                    Sections == input.Sections ||
-                    Sections != null &&
-                    Sections.SequenceEqual(input.Sections)
-                ) && 
-                (
-                    Title == input.Title ||
-                    (Title != null &&
-                    Title.Equals(input.Title))
+                    Responses == input.Responses ||
+                    Responses != null &&
+                    Responses.SequenceEqual(input.Responses)
                 ) && 
                 (
                     ErrorCode == input.ErrorCode ||
@@ -220,18 +153,8 @@ namespace CherwellConnector.Model
             unchecked // Overflow is fine, just wrap
             {
                 var hashCode = 41;
-                if (Actions != null)
-                    hashCode = hashCode * 59 + Actions.GetHashCode();
-                if (Attachments != null)
-                    hashCode = hashCode * 59 + Attachments.GetHashCode();
-                if (GalleryImage != null)
-                    hashCode = hashCode * 59 + GalleryImage.GetHashCode();
-                if (LocationInformation != null)
-                    hashCode = hashCode * 59 + LocationInformation.GetHashCode();
-                if (Sections != null)
-                    hashCode = hashCode * 59 + Sections.GetHashCode();
-                if (Title != null)
-                    hashCode = hashCode * 59 + Title.GetHashCode();
+                if (Responses != null)
+                    hashCode = hashCode * 59 + Responses.GetHashCode();
                 if (ErrorCode != null)
                     hashCode = hashCode * 59 + ErrorCode.GetHashCode();
                 if (ErrorMessage != null)

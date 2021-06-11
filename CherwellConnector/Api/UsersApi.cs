@@ -161,7 +161,7 @@ namespace CherwellConnector.Api
                 "text/xml", 
                 "application/x-www-form-urlencoded"
             };
-            string localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            string localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             string[] localVarHttpHeaderAccepts = new string[] {
@@ -170,7 +170,7 @@ namespace CherwellConnector.Api
                 "application/xml",
                 "text/xml"
             };
-            string localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            string localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -255,7 +255,7 @@ namespace CherwellConnector.Api
                 "text/xml", 
                 "application/x-www-form-urlencoded"
             };
-            string localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            string localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             string[] localVarHttpHeaderAccepts = new string[] {
@@ -264,7 +264,7 @@ namespace CherwellConnector.Api
                 "application/xml",
                 "text/xml"
             };
-            string localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            string localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -348,7 +348,7 @@ namespace CherwellConnector.Api
                 "text/xml", 
                 "application/x-www-form-urlencoded"
             };
-            string localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            string localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             string[] localVarHttpHeaderAccepts = new string[] {
@@ -357,7 +357,7 @@ namespace CherwellConnector.Api
                 "application/xml",
                 "text/xml"
             };
-            string localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            string localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -442,7 +442,7 @@ namespace CherwellConnector.Api
                 "text/xml", 
                 "application/x-www-form-urlencoded"
             };
-            string localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            string localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             string[] localVarHttpHeaderAccepts = new string[] {
@@ -451,7 +451,7 @@ namespace CherwellConnector.Api
                 "application/xml",
                 "text/xml"
             };
-            string localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            string localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -499,9 +499,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsUsersUserDeleteResponse</returns>
-        public TrebuchetWebApiDataContractsUsersUserDeleteResponse UsersDeleteUserV1 (string userrecordid, string lang = null, string locale = null)
+        public UserDeleteResponse UsersDeleteUserV1 (string userrecordid, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsUsersUserDeleteResponse> localVarResponse = UsersDeleteUserV1WithHttpInfo(userrecordid, lang, locale);
+             ApiResponse<UserDeleteResponse> localVarResponse = UsersDeleteUserV1WithHttpInfo(userrecordid, lang, locale);
              return localVarResponse.Data;
         }
 
@@ -513,7 +513,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsUsersUserDeleteResponse</returns>
-        public ApiResponse< TrebuchetWebApiDataContractsUsersUserDeleteResponse > UsersDeleteUserV1WithHttpInfo (string userrecordid, string lang = null, string locale = null)
+        public ApiResponse< UserDeleteResponse > UsersDeleteUserV1WithHttpInfo (string userrecordid, string lang = null, string locale = null)
         {
             // verify the required parameter 'userrecordid' is set
             if (userrecordid == null)
@@ -530,7 +530,7 @@ namespace CherwellConnector.Api
             // to determine the Content-Type header
             string[] localVarHttpContentTypes = new string[] {
             };
-            string localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            string localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             string[] localVarHttpHeaderAccepts = new string[] {
@@ -539,7 +539,7 @@ namespace CherwellConnector.Api
                 "application/xml",
                 "text/xml"
             };
-            string localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            string localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -567,9 +567,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsUsersUserDeleteResponse>(localVarStatusCode,
+            return new ApiResponse<UserDeleteResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsUsersUserDeleteResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsUsersUserDeleteResponse)));
+                (UserDeleteResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserDeleteResponse)));
         }
 
         /// <summary>
@@ -580,9 +580,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsUsersUserDeleteResponse</returns>
-        public async System.Threading.Tasks.Task<TrebuchetWebApiDataContractsUsersUserDeleteResponse> UsersDeleteUserV1Async (string userrecordid, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<UserDeleteResponse> UsersDeleteUserV1Async (string userrecordid, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsUsersUserDeleteResponse> localVarResponse = await UsersDeleteUserV1AsyncWithHttpInfo(userrecordid, lang, locale);
+             ApiResponse<UserDeleteResponse> localVarResponse = await UsersDeleteUserV1AsyncWithHttpInfo(userrecordid, lang, locale);
              return localVarResponse.Data;
 
         }
@@ -595,7 +595,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsUsersUserDeleteResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsUsersUserDeleteResponse>> UsersDeleteUserV1AsyncWithHttpInfo (string userrecordid, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ApiResponse<UserDeleteResponse>> UsersDeleteUserV1AsyncWithHttpInfo (string userrecordid, string lang = null, string locale = null)
         {
             // verify the required parameter 'userrecordid' is set
             if (userrecordid == null)
@@ -612,7 +612,7 @@ namespace CherwellConnector.Api
             // to determine the Content-Type header
             string[] localVarHttpContentTypes = new string[] {
             };
-            string localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            string localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             string[] localVarHttpHeaderAccepts = new string[] {
@@ -621,7 +621,7 @@ namespace CherwellConnector.Api
                 "application/xml",
                 "text/xml"
             };
-            string localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            string localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -649,9 +649,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsUsersUserDeleteResponse>(localVarStatusCode,
+            return new ApiResponse<UserDeleteResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsUsersUserDeleteResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsUsersUserDeleteResponse)));
+                (UserDeleteResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserDeleteResponse)));
         }
 
         /// <summary>
@@ -693,7 +693,7 @@ namespace CherwellConnector.Api
             // to determine the Content-Type header
             string[] localVarHttpContentTypes = new string[] {
             };
-            string localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            string localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             string[] localVarHttpHeaderAccepts = new string[] {
@@ -702,7 +702,7 @@ namespace CherwellConnector.Api
                 "application/xml",
                 "text/xml"
             };
-            string localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            string localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -775,7 +775,7 @@ namespace CherwellConnector.Api
             // to determine the Content-Type header
             string[] localVarHttpContentTypes = new string[] {
             };
-            string localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            string localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             string[] localVarHttpHeaderAccepts = new string[] {
@@ -784,7 +784,7 @@ namespace CherwellConnector.Api
                 "application/xml",
                 "text/xml"
             };
-            string localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            string localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -858,7 +858,7 @@ namespace CherwellConnector.Api
             // to determine the Content-Type header
             string[] localVarHttpContentTypes = new string[] {
             };
-            string localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            string localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             string[] localVarHttpHeaderAccepts = new string[] {
@@ -867,7 +867,7 @@ namespace CherwellConnector.Api
                 "application/xml",
                 "text/xml"
             };
-            string localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            string localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -943,7 +943,7 @@ namespace CherwellConnector.Api
             // to determine the Content-Type header
             string[] localVarHttpContentTypes = new string[] {
             };
-            string localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            string localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             string[] localVarHttpHeaderAccepts = new string[] {
@@ -952,7 +952,7 @@ namespace CherwellConnector.Api
                 "application/xml",
                 "text/xml"
             };
-            string localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            string localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -1030,7 +1030,7 @@ namespace CherwellConnector.Api
                 "text/xml", 
                 "application/x-www-form-urlencoded"
             };
-            string localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            string localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             string[] localVarHttpHeaderAccepts = new string[] {
@@ -1039,7 +1039,7 @@ namespace CherwellConnector.Api
                 "application/xml",
                 "text/xml"
             };
-            string localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            string localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -1124,7 +1124,7 @@ namespace CherwellConnector.Api
                 "text/xml", 
                 "application/x-www-form-urlencoded"
             };
-            string localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            string localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             string[] localVarHttpHeaderAccepts = new string[] {
@@ -1133,7 +1133,7 @@ namespace CherwellConnector.Api
                 "application/xml",
                 "text/xml"
             };
-            string localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            string localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -1212,7 +1212,7 @@ namespace CherwellConnector.Api
             // to determine the Content-Type header
             string[] localVarHttpContentTypes = new string[] {
             };
-            string localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            string localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             string[] localVarHttpHeaderAccepts = new string[] {
@@ -1221,7 +1221,7 @@ namespace CherwellConnector.Api
                 "application/xml",
                 "text/xml"
             };
-            string localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            string localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -1294,7 +1294,7 @@ namespace CherwellConnector.Api
             // to determine the Content-Type header
             string[] localVarHttpContentTypes = new string[] {
             };
-            string localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            string localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             string[] localVarHttpHeaderAccepts = new string[] {
@@ -1303,7 +1303,7 @@ namespace CherwellConnector.Api
                 "application/xml",
                 "text/xml"
             };
-            string localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            string localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -1380,7 +1380,7 @@ namespace CherwellConnector.Api
             // to determine the Content-Type header
             string[] localVarHttpContentTypes = new string[] {
             };
-            string localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            string localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             string[] localVarHttpHeaderAccepts = new string[] {
@@ -1389,7 +1389,7 @@ namespace CherwellConnector.Api
                 "application/xml",
                 "text/xml"
             };
-            string localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            string localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -1468,7 +1468,7 @@ namespace CherwellConnector.Api
             // to determine the Content-Type header
             string[] localVarHttpContentTypes = new string[] {
             };
-            string localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            string localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             string[] localVarHttpHeaderAccepts = new string[] {
@@ -1477,7 +1477,7 @@ namespace CherwellConnector.Api
                 "application/xml",
                 "text/xml"
             };
-            string localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            string localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -1555,7 +1555,7 @@ namespace CherwellConnector.Api
             // to determine the Content-Type header
             string[] localVarHttpContentTypes = new string[] {
             };
-            string localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            string localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             string[] localVarHttpHeaderAccepts = new string[] {
@@ -1564,7 +1564,7 @@ namespace CherwellConnector.Api
                 "application/xml",
                 "text/xml"
             };
-            string localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            string localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -1643,7 +1643,7 @@ namespace CherwellConnector.Api
             // to determine the Content-Type header
             string[] localVarHttpContentTypes = new string[] {
             };
-            string localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            string localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             string[] localVarHttpHeaderAccepts = new string[] {
@@ -1652,7 +1652,7 @@ namespace CherwellConnector.Api
                 "application/xml",
                 "text/xml"
             };
-            string localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            string localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -1725,7 +1725,7 @@ namespace CherwellConnector.Api
             // to determine the Content-Type header
             string[] localVarHttpContentTypes = new string[] {
             };
-            string localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            string localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             string[] localVarHttpHeaderAccepts = new string[] {
@@ -1734,7 +1734,7 @@ namespace CherwellConnector.Api
                 "application/xml",
                 "text/xml"
             };
-            string localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            string localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -1807,7 +1807,7 @@ namespace CherwellConnector.Api
             // to determine the Content-Type header
             string[] localVarHttpContentTypes = new string[] {
             };
-            string localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            string localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             string[] localVarHttpHeaderAccepts = new string[] {
@@ -1816,7 +1816,7 @@ namespace CherwellConnector.Api
                 "application/xml",
                 "text/xml"
             };
-            string localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            string localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -1888,7 +1888,7 @@ namespace CherwellConnector.Api
             // to determine the Content-Type header
             string[] localVarHttpContentTypes = new string[] {
             };
-            string localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            string localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             string[] localVarHttpHeaderAccepts = new string[] {
@@ -1897,7 +1897,7 @@ namespace CherwellConnector.Api
                 "application/xml",
                 "text/xml"
             };
-            string localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            string localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -1970,7 +1970,7 @@ namespace CherwellConnector.Api
             // to determine the Content-Type header
             string[] localVarHttpContentTypes = new string[] {
             };
-            string localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            string localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             string[] localVarHttpHeaderAccepts = new string[] {
@@ -1979,7 +1979,7 @@ namespace CherwellConnector.Api
                 "application/xml",
                 "text/xml"
             };
-            string localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            string localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -2051,7 +2051,7 @@ namespace CherwellConnector.Api
             // to determine the Content-Type header
             string[] localVarHttpContentTypes = new string[] {
             };
-            string localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            string localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             string[] localVarHttpHeaderAccepts = new string[] {
@@ -2060,7 +2060,7 @@ namespace CherwellConnector.Api
                 "application/xml",
                 "text/xml"
             };
-            string localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            string localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -2133,7 +2133,7 @@ namespace CherwellConnector.Api
             // to determine the Content-Type header
             string[] localVarHttpContentTypes = new string[] {
             };
-            string localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            string localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             string[] localVarHttpHeaderAccepts = new string[] {
@@ -2142,7 +2142,7 @@ namespace CherwellConnector.Api
                 "application/xml",
                 "text/xml"
             };
-            string localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            string localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -2183,9 +2183,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsUsersUserBatchSaveResponse</returns>
-        public TrebuchetWebApiDataContractsUsersUserBatchSaveResponse UsersSaveUserBatchV1 (TrebuchetWebApiDataContractsUsersUserBatchSaveRequest request, string lang = null, string locale = null)
+        public UserBatchSaveResponse UsersSaveUserBatchV1 (TrebuchetWebApiDataContractsUsersUserBatchSaveRequest request, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsUsersUserBatchSaveResponse> localVarResponse = UsersSaveUserBatchV1WithHttpInfo(request, lang, locale);
+             ApiResponse<UserBatchSaveResponse> localVarResponse = UsersSaveUserBatchV1WithHttpInfo(request, lang, locale);
              return localVarResponse.Data;
         }
 
@@ -2197,7 +2197,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsUsersUserBatchSaveResponse</returns>
-        public ApiResponse< TrebuchetWebApiDataContractsUsersUserBatchSaveResponse > UsersSaveUserBatchV1WithHttpInfo (TrebuchetWebApiDataContractsUsersUserBatchSaveRequest request, string lang = null, string locale = null)
+        public ApiResponse< UserBatchSaveResponse > UsersSaveUserBatchV1WithHttpInfo (TrebuchetWebApiDataContractsUsersUserBatchSaveRequest request, string lang = null, string locale = null)
         {
             // verify the required parameter 'request' is set
             if (request == null)
@@ -2219,7 +2219,7 @@ namespace CherwellConnector.Api
                 "text/xml", 
                 "application/x-www-form-urlencoded"
             };
-            string localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            string localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             string[] localVarHttpHeaderAccepts = new string[] {
@@ -2228,7 +2228,7 @@ namespace CherwellConnector.Api
                 "application/xml",
                 "text/xml"
             };
-            string localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            string localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -2263,9 +2263,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsUsersUserBatchSaveResponse>(localVarStatusCode,
+            return new ApiResponse<UserBatchSaveResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsUsersUserBatchSaveResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsUsersUserBatchSaveResponse)));
+                (UserBatchSaveResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserBatchSaveResponse)));
         }
 
         /// <summary>
@@ -2276,9 +2276,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsUsersUserBatchSaveResponse</returns>
-        public async System.Threading.Tasks.Task<TrebuchetWebApiDataContractsUsersUserBatchSaveResponse> UsersSaveUserBatchV1Async (TrebuchetWebApiDataContractsUsersUserBatchSaveRequest request, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<UserBatchSaveResponse> UsersSaveUserBatchV1Async (TrebuchetWebApiDataContractsUsersUserBatchSaveRequest request, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsUsersUserBatchSaveResponse> localVarResponse = await UsersSaveUserBatchV1AsyncWithHttpInfo(request, lang, locale);
+             ApiResponse<UserBatchSaveResponse> localVarResponse = await UsersSaveUserBatchV1AsyncWithHttpInfo(request, lang, locale);
              return localVarResponse.Data;
 
         }
@@ -2291,7 +2291,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsUsersUserBatchSaveResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsUsersUserBatchSaveResponse>> UsersSaveUserBatchV1AsyncWithHttpInfo (TrebuchetWebApiDataContractsUsersUserBatchSaveRequest request, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ApiResponse<UserBatchSaveResponse>> UsersSaveUserBatchV1AsyncWithHttpInfo (TrebuchetWebApiDataContractsUsersUserBatchSaveRequest request, string lang = null, string locale = null)
         {
             // verify the required parameter 'request' is set
             if (request == null)
@@ -2313,7 +2313,7 @@ namespace CherwellConnector.Api
                 "text/xml", 
                 "application/x-www-form-urlencoded"
             };
-            string localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            string localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             string[] localVarHttpHeaderAccepts = new string[] {
@@ -2322,7 +2322,7 @@ namespace CherwellConnector.Api
                 "application/xml",
                 "text/xml"
             };
-            string localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            string localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -2357,9 +2357,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsUsersUserBatchSaveResponse>(localVarStatusCode,
+            return new ApiResponse<UserBatchSaveResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsUsersUserBatchSaveResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsUsersUserBatchSaveResponse)));
+                (UserBatchSaveResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserBatchSaveResponse)));
         }
 
         /// <summary>
@@ -2370,9 +2370,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsUsersUserBatchSaveV2Response</returns>
-        public TrebuchetWebApiDataContractsUsersUserBatchSaveV2Response UsersSaveUserBatchV2 (TrebuchetWebApiDataContractsUsersUserBatchSaveV2Request request, string lang = null, string locale = null)
+        public UserBatchSaveV2Response UsersSaveUserBatchV2 (UserBatchSaveV2Request request, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsUsersUserBatchSaveV2Response> localVarResponse = UsersSaveUserBatchV2WithHttpInfo(request, lang, locale);
+             ApiResponse<UserBatchSaveV2Response> localVarResponse = UsersSaveUserBatchV2WithHttpInfo(request, lang, locale);
              return localVarResponse.Data;
         }
 
@@ -2384,7 +2384,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsUsersUserBatchSaveV2Response</returns>
-        public ApiResponse< TrebuchetWebApiDataContractsUsersUserBatchSaveV2Response > UsersSaveUserBatchV2WithHttpInfo (TrebuchetWebApiDataContractsUsersUserBatchSaveV2Request request, string lang = null, string locale = null)
+        public ApiResponse< UserBatchSaveV2Response > UsersSaveUserBatchV2WithHttpInfo (UserBatchSaveV2Request request, string lang = null, string locale = null)
         {
             // verify the required parameter 'request' is set
             if (request == null)
@@ -2406,7 +2406,7 @@ namespace CherwellConnector.Api
                 "text/xml", 
                 "application/x-www-form-urlencoded"
             };
-            string localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            string localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             string[] localVarHttpHeaderAccepts = new string[] {
@@ -2415,7 +2415,7 @@ namespace CherwellConnector.Api
                 "application/xml",
                 "text/xml"
             };
-            string localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            string localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -2450,9 +2450,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsUsersUserBatchSaveV2Response>(localVarStatusCode,
+            return new ApiResponse<UserBatchSaveV2Response>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsUsersUserBatchSaveV2Response) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsUsersUserBatchSaveV2Response)));
+                (UserBatchSaveV2Response) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserBatchSaveV2Response)));
         }
 
         /// <summary>
@@ -2463,9 +2463,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsUsersUserBatchSaveV2Response</returns>
-        public async System.Threading.Tasks.Task<TrebuchetWebApiDataContractsUsersUserBatchSaveV2Response> UsersSaveUserBatchV2Async (TrebuchetWebApiDataContractsUsersUserBatchSaveV2Request request, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<UserBatchSaveV2Response> UsersSaveUserBatchV2Async (UserBatchSaveV2Request request, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsUsersUserBatchSaveV2Response> localVarResponse = await UsersSaveUserBatchV2AsyncWithHttpInfo(request, lang, locale);
+             ApiResponse<UserBatchSaveV2Response> localVarResponse = await UsersSaveUserBatchV2AsyncWithHttpInfo(request, lang, locale);
              return localVarResponse.Data;
 
         }
@@ -2478,7 +2478,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsUsersUserBatchSaveV2Response)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsUsersUserBatchSaveV2Response>> UsersSaveUserBatchV2AsyncWithHttpInfo (TrebuchetWebApiDataContractsUsersUserBatchSaveV2Request request, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ApiResponse<UserBatchSaveV2Response>> UsersSaveUserBatchV2AsyncWithHttpInfo (UserBatchSaveV2Request request, string lang = null, string locale = null)
         {
             // verify the required parameter 'request' is set
             if (request == null)
@@ -2500,7 +2500,7 @@ namespace CherwellConnector.Api
                 "text/xml", 
                 "application/x-www-form-urlencoded"
             };
-            string localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            string localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             string[] localVarHttpHeaderAccepts = new string[] {
@@ -2509,7 +2509,7 @@ namespace CherwellConnector.Api
                 "application/xml",
                 "text/xml"
             };
-            string localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            string localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -2544,9 +2544,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsUsersUserBatchSaveV2Response>(localVarStatusCode,
+            return new ApiResponse<UserBatchSaveV2Response>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsUsersUserBatchSaveV2Response) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsUsersUserBatchSaveV2Response)));
+                (UserBatchSaveV2Response) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserBatchSaveV2Response)));
         }
 
         /// <summary>
@@ -2593,7 +2593,7 @@ namespace CherwellConnector.Api
                 "text/xml", 
                 "application/x-www-form-urlencoded"
             };
-            string localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            string localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             string[] localVarHttpHeaderAccepts = new string[] {
@@ -2602,7 +2602,7 @@ namespace CherwellConnector.Api
                 "application/xml",
                 "text/xml"
             };
-            string localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            string localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -2687,7 +2687,7 @@ namespace CherwellConnector.Api
                 "text/xml", 
                 "application/x-www-form-urlencoded"
             };
-            string localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            string localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             string[] localVarHttpHeaderAccepts = new string[] {
@@ -2696,7 +2696,7 @@ namespace CherwellConnector.Api
                 "application/xml",
                 "text/xml"
             };
-            string localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            string localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -2780,7 +2780,7 @@ namespace CherwellConnector.Api
                 "text/xml", 
                 "application/x-www-form-urlencoded"
             };
-            string localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            string localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             string[] localVarHttpHeaderAccepts = new string[] {
@@ -2789,7 +2789,7 @@ namespace CherwellConnector.Api
                 "application/xml",
                 "text/xml"
             };
-            string localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            string localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -2874,7 +2874,7 @@ namespace CherwellConnector.Api
                 "text/xml", 
                 "application/x-www-form-urlencoded"
             };
-            string localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            string localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             string[] localVarHttpHeaderAccepts = new string[] {
@@ -2883,7 +2883,7 @@ namespace CherwellConnector.Api
                 "application/xml",
                 "text/xml"
             };
-            string localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            string localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 

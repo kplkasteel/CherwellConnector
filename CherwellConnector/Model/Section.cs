@@ -13,10 +13,10 @@ namespace CherwellConnector.Model
     /// FormsSection
     /// </summary>
     [DataContract]
-    public sealed class FormsSection :  IEquatable<FormsSection>, IValidatableObject
+    public sealed class Section :  IEquatable<Section>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="FormsSection" /> class.
+        /// Initializes a new instance of the <see cref="Section" /> class.
         /// </summary>
         /// <param name="sectionFields">sectionFields.</param>
         /// <param name="galleryImage">galleryImage.</param>
@@ -24,7 +24,7 @@ namespace CherwellConnector.Model
         /// <param name="relationshipId">relationshipId.</param>
         /// <param name="targetBusObId">targetBusObId.</param>
         /// <param name="targetBusObRecId">targetBusObRecId.</param>
-        public FormsSection(List<TrebuchetWebApiDataContractsFormsSectionField> sectionFields = default, string galleryImage = default, string title = default, string relationshipId = default, string targetBusObId = default, string targetBusObRecId = default)
+        public Section(List<SectionField> sectionFields = default, string galleryImage = default, string title = default, string relationshipId = default, string targetBusObId = default, string targetBusObRecId = default)
         {
             SectionFields = sectionFields;
             GalleryImage = galleryImage;
@@ -38,7 +38,7 @@ namespace CherwellConnector.Model
         /// Gets or Sets SectionFields
         /// </summary>
         [DataMember(Name="sectionFields", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsFormsSectionField> SectionFields { get; set; }
+        public List<SectionField> SectionFields { get; set; }
 
         /// <summary>
         /// Gets or Sets GalleryImage
@@ -77,7 +77,7 @@ namespace CherwellConnector.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class FormsSection {\n");
+            sb.Append("class Section {\n");
             sb.Append("  SectionFields: ").Append(SectionFields).Append("\n");
             sb.Append("  GalleryImage: ").Append(GalleryImage).Append("\n");
             sb.Append("  Title: ").Append(Title).Append("\n");
@@ -104,15 +104,15 @@ namespace CherwellConnector.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return Equals(input as FormsSection);
+            return Equals(input as Section);
         }
 
         /// <summary>
-        /// Returns true if FormsSection instances are equal
+        /// Returns true if Section instances are equal
         /// </summary>
-        /// <param name="input">Instance of FormsSection to be compared</param>
+        /// <param name="input">Instance of Section to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(FormsSection input)
+        public bool Equals(Section input)
         {
             if (input == null)
                 return false;

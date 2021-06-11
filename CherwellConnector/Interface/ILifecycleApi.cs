@@ -21,7 +21,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsLifecycleGetRecordStatusResponse</returns>
-        TrebuchetWebApiDataContractsLifecycleGetRecordStatusResponse LifecycleGetRecordStage (string businessObjectDefinitionId, string recordId, string lang = null, string locale = null);
+        RecordStatusResponse LifecycleGetRecordStage (string businessObjectDefinitionId, string recordId, string lang = null, string locale = null);
 
         /// <summary>
         /// Get current lifecycle stage for record
@@ -35,7 +35,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsLifecycleGetRecordStatusResponse</returns>
-        ApiResponse<TrebuchetWebApiDataContractsLifecycleGetRecordStatusResponse> LifecycleGetRecordStageWithHttpInfo (string businessObjectDefinitionId, string recordId, string lang = null, string locale = null);
+        ApiResponse<RecordStatusResponse> LifecycleGetRecordStageWithHttpInfo (string businessObjectDefinitionId, string recordId, string lang = null, string locale = null);
         /// <summary>
         /// Get current lifecycle status for record
         /// </summary>
@@ -48,7 +48,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsLifecycleGetRecordStatusResponse</returns>
-        TrebuchetWebApiDataContractsLifecycleGetRecordStatusResponse LifecycleGetRecordStatus (string businessObjectDefinitionId, string recordId, string lang = null, string locale = null);
+        RecordStatusResponse LifecycleGetRecordStatus (string businessObjectDefinitionId, string recordId, string lang = null, string locale = null);
 
         /// <summary>
         /// Get current lifecycle status for record
@@ -62,7 +62,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsLifecycleGetRecordStatusResponse</returns>
-        ApiResponse<TrebuchetWebApiDataContractsLifecycleGetRecordStatusResponse> LifecycleGetRecordStatusWithHttpInfo (string businessObjectDefinitionId, string recordId, string lang = null, string locale = null);
+        ApiResponse<RecordStatusResponse> LifecycleGetRecordStatusWithHttpInfo (string businessObjectDefinitionId, string recordId, string lang = null, string locale = null);
         /// <summary>
         /// Get lifecycle stages
         /// </summary>
@@ -74,7 +74,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsLifecycleGetStagesResponse</returns>
-        TrebuchetWebApiDataContractsLifecycleGetStagesResponse LifecycleGetStages (string businessObjectDefinitionId, string lang = null, string locale = null);
+        StagesResponse LifecycleGetStages (string businessObjectDefinitionId, string lang = null, string locale = null);
 
         /// <summary>
         /// Get lifecycle stages
@@ -87,7 +87,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsLifecycleGetStagesResponse</returns>
-        ApiResponse<TrebuchetWebApiDataContractsLifecycleGetStagesResponse> LifecycleGetStagesWithHttpInfo (string businessObjectDefinitionId, string lang = null, string locale = null);
+        ApiResponse<StagesResponse> LifecycleGetStagesWithHttpInfo (string businessObjectDefinitionId, string lang = null, string locale = null);
         /// <summary>
         /// Get lifecycle statuses
         /// </summary>
@@ -99,7 +99,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsLifecycleGetStatusesResponse</returns>
-        TrebuchetWebApiDataContractsLifecycleGetStatusesResponse LifecycleGetStatuses (string businessObjectDefinitionId, string lang = null, string locale = null);
+        StatusesResponse LifecycleGetStatuses (string businessObjectDefinitionId, string lang = null, string locale = null);
 
         /// <summary>
         /// Get lifecycle statuses
@@ -112,7 +112,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsLifecycleGetStatusesResponse</returns>
-        ApiResponse<TrebuchetWebApiDataContractsLifecycleGetStatusesResponse> LifecycleGetStatusesWithHttpInfo (string businessObjectDefinitionId, string lang = null, string locale = null);
+        ApiResponse<StatusesResponse> LifecycleGetStatusesWithHttpInfo (string businessObjectDefinitionId, string lang = null, string locale = null);
         /// <summary>
         /// Get lifecycle transition options for record
         /// </summary>
@@ -208,7 +208,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsLifecycleGetRecordStatusResponse</returns>
-        System.Threading.Tasks.Task<TrebuchetWebApiDataContractsLifecycleGetRecordStatusResponse> LifecycleGetRecordStageAsync (string businessObjectDefinitionId, string recordId, string lang = null, string locale = null);
+        System.Threading.Tasks.Task<RecordStatusResponse> LifecycleGetRecordStageAsync (string businessObjectDefinitionId, string recordId, string lang = null, string locale = null);
 
         /// <summary>
         /// Get current lifecycle stage for record
@@ -222,7 +222,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsLifecycleGetRecordStatusResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsLifecycleGetRecordStatusResponse>> LifecycleGetRecordStageAsyncWithHttpInfo (string businessObjectDefinitionId, string recordId, string lang = null, string locale = null);
+        System.Threading.Tasks.Task<ApiResponse<RecordStatusResponse>> LifecycleGetRecordStageAsyncWithHttpInfo (string businessObjectDefinitionId, string recordId, string lang = null, string locale = null);
         /// <summary>
         /// Get current lifecycle status for record
         /// </summary>
@@ -235,7 +235,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsLifecycleGetRecordStatusResponse</returns>
-        System.Threading.Tasks.Task<TrebuchetWebApiDataContractsLifecycleGetRecordStatusResponse> LifecycleGetRecordStatusAsync (string businessObjectDefinitionId, string recordId, string lang = null, string locale = null);
+        System.Threading.Tasks.Task<RecordStatusResponse> LifecycleGetRecordStatusAsync (string businessObjectDefinitionId, string recordId, string lang = null, string locale = null);
 
         /// <summary>
         /// Get current lifecycle status for record
@@ -249,7 +249,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsLifecycleGetRecordStatusResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsLifecycleGetRecordStatusResponse>> LifecycleGetRecordStatusAsyncWithHttpInfo (string businessObjectDefinitionId, string recordId, string lang = null, string locale = null);
+        System.Threading.Tasks.Task<ApiResponse<RecordStatusResponse>> LifecycleGetRecordStatusAsyncWithHttpInfo (string businessObjectDefinitionId, string recordId, string lang = null, string locale = null);
         /// <summary>
         /// Get lifecycle stages
         /// </summary>
@@ -261,7 +261,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsLifecycleGetStagesResponse</returns>
-        System.Threading.Tasks.Task<TrebuchetWebApiDataContractsLifecycleGetStagesResponse> LifecycleGetStagesAsync (string businessObjectDefinitionId, string lang = null, string locale = null);
+        System.Threading.Tasks.Task<StagesResponse> LifecycleGetStagesAsync (string businessObjectDefinitionId, string lang = null, string locale = null);
 
         /// <summary>
         /// Get lifecycle stages
@@ -274,7 +274,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsLifecycleGetStagesResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsLifecycleGetStagesResponse>> LifecycleGetStagesAsyncWithHttpInfo (string businessObjectDefinitionId, string lang = null, string locale = null);
+        System.Threading.Tasks.Task<ApiResponse<StagesResponse>> LifecycleGetStagesAsyncWithHttpInfo (string businessObjectDefinitionId, string lang = null, string locale = null);
         /// <summary>
         /// Get lifecycle statuses
         /// </summary>
@@ -286,7 +286,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsLifecycleGetStatusesResponse</returns>
-        System.Threading.Tasks.Task<TrebuchetWebApiDataContractsLifecycleGetStatusesResponse> LifecycleGetStatusesAsync (string businessObjectDefinitionId, string lang = null, string locale = null);
+        System.Threading.Tasks.Task<StatusesResponse> LifecycleGetStatusesAsync (string businessObjectDefinitionId, string lang = null, string locale = null);
 
         /// <summary>
         /// Get lifecycle statuses
@@ -299,7 +299,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsLifecycleGetStatusesResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsLifecycleGetStatusesResponse>> LifecycleGetStatusesAsyncWithHttpInfo (string businessObjectDefinitionId, string lang = null, string locale = null);
+        System.Threading.Tasks.Task<ApiResponse<StatusesResponse>> LifecycleGetStatusesAsyncWithHttpInfo (string businessObjectDefinitionId, string lang = null, string locale = null);
         /// <summary>
         /// Get lifecycle transition options for record
         /// </summary>

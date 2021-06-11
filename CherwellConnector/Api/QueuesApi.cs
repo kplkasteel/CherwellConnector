@@ -161,7 +161,7 @@ namespace CherwellConnector.Api
                 "text/xml", 
                 "application/x-www-form-urlencoded"
             };
-            string localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            string localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             string[] localVarHttpHeaderAccepts = new string[] {
@@ -170,7 +170,7 @@ namespace CherwellConnector.Api
                 "application/xml",
                 "text/xml"
             };
-            string localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            string localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -255,7 +255,7 @@ namespace CherwellConnector.Api
                 "text/xml", 
                 "application/x-www-form-urlencoded"
             };
-            string localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            string localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             string[] localVarHttpHeaderAccepts = new string[] {
@@ -264,7 +264,7 @@ namespace CherwellConnector.Api
                 "application/xml",
                 "text/xml"
             };
-            string localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            string localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -348,7 +348,7 @@ namespace CherwellConnector.Api
                 "text/xml", 
                 "application/x-www-form-urlencoded"
             };
-            string localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            string localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             string[] localVarHttpHeaderAccepts = new string[] {
@@ -357,7 +357,7 @@ namespace CherwellConnector.Api
                 "application/xml",
                 "text/xml"
             };
-            string localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            string localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -442,7 +442,7 @@ namespace CherwellConnector.Api
                 "text/xml", 
                 "application/x-www-form-urlencoded"
             };
-            string localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            string localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             string[] localVarHttpHeaderAccepts = new string[] {
@@ -451,7 +451,7 @@ namespace CherwellConnector.Api
                 "application/xml",
                 "text/xml"
             };
-            string localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            string localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -535,7 +535,7 @@ namespace CherwellConnector.Api
                 "text/xml", 
                 "application/x-www-form-urlencoded"
             };
-            string localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            string localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             string[] localVarHttpHeaderAccepts = new string[] {
@@ -544,7 +544,7 @@ namespace CherwellConnector.Api
                 "application/xml",
                 "text/xml"
             };
-            string localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            string localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -629,7 +629,7 @@ namespace CherwellConnector.Api
                 "text/xml", 
                 "application/x-www-form-urlencoded"
             };
-            string localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            string localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             string[] localVarHttpHeaderAccepts = new string[] {
@@ -638,7 +638,7 @@ namespace CherwellConnector.Api
                 "application/xml",
                 "text/xml"
             };
-            string localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            string localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -729,7 +729,7 @@ namespace CherwellConnector.Api
             // to determine the Content-Type header
             string[] localVarHttpContentTypes = new string[] {
             };
-            string localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            string localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             string[] localVarHttpHeaderAccepts = new string[] {
@@ -738,7 +738,7 @@ namespace CherwellConnector.Api
                 "application/xml",
                 "text/xml"
             };
-            string localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            string localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -826,7 +826,7 @@ namespace CherwellConnector.Api
             // to determine the Content-Type header
             string[] localVarHttpContentTypes = new string[] {
             };
-            string localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            string localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             string[] localVarHttpHeaderAccepts = new string[] {
@@ -835,7 +835,7 @@ namespace CherwellConnector.Api
                 "application/xml",
                 "text/xml"
             };
-            string localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            string localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -917,7 +917,7 @@ namespace CherwellConnector.Api
             // to determine the Content-Type header
             string[] localVarHttpContentTypes = new string[] {
             };
-            string localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            string localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             string[] localVarHttpHeaderAccepts = new string[] {
@@ -926,7 +926,7 @@ namespace CherwellConnector.Api
                 "application/xml",
                 "text/xml"
             };
-            string localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            string localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -1008,7 +1008,7 @@ namespace CherwellConnector.Api
             // to determine the Content-Type header
             string[] localVarHttpContentTypes = new string[] {
             };
-            string localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            string localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             string[] localVarHttpHeaderAccepts = new string[] {
@@ -1017,7 +1017,7 @@ namespace CherwellConnector.Api
                 "application/xml",
                 "text/xml"
             };
-            string localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            string localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -1093,7 +1093,7 @@ namespace CherwellConnector.Api
             // to determine the Content-Type header
             string[] localVarHttpContentTypes = new string[] {
             };
-            string localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            string localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             string[] localVarHttpHeaderAccepts = new string[] {
@@ -1102,7 +1102,7 @@ namespace CherwellConnector.Api
                 "application/xml",
                 "text/xml"
             };
-            string localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            string localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -1178,7 +1178,7 @@ namespace CherwellConnector.Api
             // to determine the Content-Type header
             string[] localVarHttpContentTypes = new string[] {
             };
-            string localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            string localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             string[] localVarHttpHeaderAccepts = new string[] {
@@ -1187,7 +1187,7 @@ namespace CherwellConnector.Api
                 "application/xml",
                 "text/xml"
             };
-            string localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            string localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -1257,7 +1257,7 @@ namespace CherwellConnector.Api
             // to determine the Content-Type header
             string[] localVarHttpContentTypes = new string[] {
             };
-            string localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            string localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             string[] localVarHttpHeaderAccepts = new string[] {
@@ -1266,7 +1266,7 @@ namespace CherwellConnector.Api
                 "application/xml",
                 "text/xml"
             };
-            string localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            string localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -1336,7 +1336,7 @@ namespace CherwellConnector.Api
             // to determine the Content-Type header
             string[] localVarHttpContentTypes = new string[] {
             };
-            string localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            string localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             string[] localVarHttpHeaderAccepts = new string[] {
@@ -1345,7 +1345,7 @@ namespace CherwellConnector.Api
                 "application/xml",
                 "text/xml"
             };
-            string localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            string localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -1422,7 +1422,7 @@ namespace CherwellConnector.Api
                 "text/xml", 
                 "application/x-www-form-urlencoded"
             };
-            string localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            string localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             string[] localVarHttpHeaderAccepts = new string[] {
@@ -1431,7 +1431,7 @@ namespace CherwellConnector.Api
                 "application/xml",
                 "text/xml"
             };
-            string localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            string localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -1516,7 +1516,7 @@ namespace CherwellConnector.Api
                 "text/xml", 
                 "application/x-www-form-urlencoded"
             };
-            string localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            string localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             string[] localVarHttpHeaderAccepts = new string[] {
@@ -1525,7 +1525,7 @@ namespace CherwellConnector.Api
                 "application/xml",
                 "text/xml"
             };
-            string localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            string localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 

@@ -16,13 +16,13 @@ namespace CherwellConnector.Model
     using Newtonsoft.Json;
 
     /// <summary>
-    /// TrebuchetWebApiDataContractsFormsSectionField
+    /// SectionField
     /// </summary>
     [DataContract]
-    public partial class TrebuchetWebApiDataContractsFormsSectionField :  IEquatable<TrebuchetWebApiDataContractsFormsSectionField>, IValidatableObject
+    public sealed class SectionField :  IEquatable<SectionField>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetWebApiDataContractsFormsSectionField" /> class.
+        /// Initializes a new instance of the <see cref="SectionField" /> class.
         /// </summary>
         /// <param name="attributes">attributes.</param>
         /// <param name="fieldId">fieldId.</param>
@@ -30,7 +30,7 @@ namespace CherwellConnector.Model
         /// <param name="label">label.</param>
         /// <param name="multiline">multiline.</param>
         /// <param name="value">value.</param>
-        public TrebuchetWebApiDataContractsFormsSectionField(List<Object> attributes = default, string fieldId = default, string fieldType = default, string label = default, bool? multiline = default, string value = default)
+        public SectionField(List<Object> attributes = default, string fieldId = default, string fieldType = default, string label = default, bool? multiline = default, string value = default)
         {
             Attributes = attributes;
             FieldId = fieldId;
@@ -83,7 +83,7 @@ namespace CherwellConnector.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsFormsSectionField {\n");
+            sb.Append("class SectionField {\n");
             sb.Append("  Attributes: ").Append(Attributes).Append("\n");
             sb.Append("  FieldId: ").Append(FieldId).Append("\n");
             sb.Append("  FieldType: ").Append(FieldType).Append("\n");
@@ -98,7 +98,7 @@ namespace CherwellConnector.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public virtual string ToJson()
+        public string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }
@@ -110,15 +110,15 @@ namespace CherwellConnector.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return Equals(input as TrebuchetWebApiDataContractsFormsSectionField);
+            return Equals(input as SectionField);
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsFormsSectionField instances are equal
+        /// Returns true if SectionField instances are equal
         /// </summary>
-        /// <param name="input">Instance of TrebuchetWebApiDataContractsFormsSectionField to be compared</param>
+        /// <param name="input">Instance of SectionField to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrebuchetWebApiDataContractsFormsSectionField input)
+        public bool Equals(SectionField input)
         {
             if (input == null)
                 return false;

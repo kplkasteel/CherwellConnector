@@ -20,7 +20,7 @@ namespace CherwellConnector.Client
         public SwaggerDateConverter()
         {
             // full-date   = date-fullyear "-" date-month "-" date-mday
-            this.DateTimeFormat = "yyyy-MM-dd";
+            DateTimeFormat = "yyyy-MM-dd";
         }
     }
 }
