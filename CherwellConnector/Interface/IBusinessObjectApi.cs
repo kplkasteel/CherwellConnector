@@ -20,7 +20,7 @@ namespace CherwellConnector.Interface
         /// <param name="request">Specify an array of Business Object IDs and record IDs or public IDs. Use a flag to stop on error or continue on error.</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>TrebuchetWebApiDataContractsBusinessObjectBatchDeleteResponse</returns>
+        /// <returns>BatchDeleteResponse</returns>
         BatchDeleteResponse BusinessObjectDeleteBusinessObjectBatchV1 (BatchDeleteRequest request, string lang = null, string locale = null);
 
         /// <summary>
@@ -34,7 +34,7 @@ namespace CherwellConnector.Interface
         /// <param name="publicid">Specify the Business Object public ID.</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>TrebuchetWebApiDataContractsBusinessObjectDeleteResponse</returns>
+        /// <returns>DeleteResponse</returns>
         DeleteResponse BusinessObjectDeleteBusinessObjectByPublicIdV1 (string busobid, string publicid, string lang = null, string locale = null);
 
         /// <summary>
@@ -48,7 +48,7 @@ namespace CherwellConnector.Interface
         /// <param name="busobrecid"> Specify the Business Object record ID.</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>TrebuchetWebApiDataContractsBusinessObjectDeleteResponse</returns>
+        /// <returns>DeleteResponse</returns>
         DeleteResponse BusinessObjectDeleteBusinessObjectByRecIdV1 (string busobid, string busobrecid, string lang = null, string locale = null);
 
         /// <summary>
@@ -64,7 +64,7 @@ namespace CherwellConnector.Interface
         /// <param name="publicid">Specify the public ID for the related Business Object you want to delete. Use only for Business Objects with unique public IDs. Use \&quot;Delete a related Business Object by record ID\&quot; when public IDs are not unique.</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>TrebuchetWebApiDataContractsSearchesRelatedBusinessObjectResponse</returns>
+        /// <returns>SearchesRelatedBusinessObjectResponse</returns>
         SearchesRelatedBusinessObjectResponse BusinessObjectDeleteRelatedBusinessObjectByPublicIdV1 (string parentbusobid, string parentbusobrecid, string relationshipid, string publicid, string lang = null, string locale = null);
 
          /// <summary>
@@ -80,7 +80,7 @@ namespace CherwellConnector.Interface
         /// <param name="busobrecid">Specify the record ID for the related Business Object you want to delete.</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>TrebuchetWebApiDataContractsSearchesRelatedBusinessObjectResponse</returns>
+        /// <returns>SearchesRelatedBusinessObjectResponse</returns>
         SearchesRelatedBusinessObjectResponse BusinessObjectDeleteRelatedBusinessObjectByRecIdV1 (string parentbusobid, string parentbusobrecid, string relationshipid, string busobrecid, string lang = null, string locale = null);
 
      /// <summary>
@@ -93,7 +93,7 @@ namespace CherwellConnector.Interface
         /// <param name="request">Request object that specifies the Business Object and fields for which values are to be returned.</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>TrebuchetWebApiDataContractsBusinessObjectFieldValuesLookupResponse</returns>
+        /// <returns>FieldValuesLookupResponse</returns>
         FieldValuesLookupResponse BusinessObjectFieldValuesLookupV1 (FieldValuesLookupRequest request, string lang = null, string locale = null);
 
         /// <summary>
@@ -110,7 +110,7 @@ namespace CherwellConnector.Interface
         /// <param name="activityType">The category of activities to retrieve. Will default to All if not specified. (optional)</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>List&lt;TrebuchetWebApiDataContractsBusinessObjectBusObActivity&gt;</returns>
+        /// <returns>List&lt;BusObActivity&gt;</returns>
         List<BusObActivity> BusinessObjectGetActivitiesV1 (string busobid, string busobrecid, int? pageSize, int? pageNumber = null, string activityType = null, string lang = null, string locale = null);
 
         /// <summary>
@@ -142,7 +142,7 @@ namespace CherwellConnector.Interface
         /// <param name="includelinks">Flag to include hyperlinks in results. Default is false.  (optional)</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>TrebuchetWebApiDataContractsBusinessObjectAttachmentsResponse</returns>
+        /// <returns>AttachmentsResponse</returns>
         AttachmentsResponse BusinessObjectGetBusinessObjectAttachmentsByIdAndPublicIdV1 (string busobid, string publicid, string type, string attachmenttype, bool? includelinks = null, string lang = null, string locale = null);
 
         /// <summary>
@@ -159,7 +159,7 @@ namespace CherwellConnector.Interface
         /// <param name="includelinks">Flag to include hyperlinks in results. Default is false.  (optional)</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>TrebuchetWebApiDataContractsBusinessObjectAttachmentsResponse</returns>
+        /// <returns>AttachmentsResponse</returns>
         AttachmentsResponse BusinessObjectGetBusinessObjectAttachmentsByIdAndRecIdV1 (string busobid, string busobrecid, string type, string attachmenttype, bool? includelinks = null, string lang = null, string locale = null);
 
         /// <summary>
@@ -176,7 +176,7 @@ namespace CherwellConnector.Interface
         /// <param name="includelinks">Flag to include hyperlinks in results. Default is false.  (optional)</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>TrebuchetWebApiDataContractsBusinessObjectAttachmentsResponse</returns>
+        /// <returns>AttachmentsResponse</returns>
         AttachmentsResponse BusinessObjectGetBusinessObjectAttachmentsByNameAndPublicIdV1 (string busobname, string publicid, string type, string attachmenttype, bool? includelinks = null, string lang = null, string locale = null);
 
         /// <summary>
@@ -193,7 +193,7 @@ namespace CherwellConnector.Interface
         /// <param name="includelinks">Flag to include hyperlinks in results. Default is false.  (optional)</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>TrebuchetWebApiDataContractsBusinessObjectAttachmentsResponse</returns>
+        /// <returns>AttachmentsResponse</returns>
         AttachmentsResponse BusinessObjectGetBusinessObjectAttachmentsByNameAndRecIdV1 (string busobname, string busobrecid, string type, string attachmenttype, bool? includelinks = null, string lang = null, string locale = null);
 
         /// <summary>
@@ -206,7 +206,7 @@ namespace CherwellConnector.Interface
         /// <param name="attachmentsRequest">Object with all the parameters to request an attachments list. You can also request a list of types to get more than just one type at a time.</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>TrebuchetWebApiDataContractsBusinessObjectAttachmentsResponse</returns>
+        /// <returns>AttachmentsResponse</returns>
         AttachmentsResponse BusinessObjectGetBusinessObjectAttachmentsV1 (AttachmentsRequest attachmentsRequest, string lang = null, string locale = null);
 
         /// <summary>
@@ -219,7 +219,7 @@ namespace CherwellConnector.Interface
         /// <param name="request">Specify an array of Business Object IDs, record IDs, or public IDs. Use a flag to stop on error or continue on error.</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>TrebuchetWebApiDataContractsBusinessObjectBatchReadResponse</returns>
+        /// <returns>BatchReadResponse</returns>
         BatchReadResponse BusinessObjectGetBusinessObjectBatchV1 (BatchReadRequest request, string lang = null, string locale = null);
 
         /// <summary>
@@ -233,7 +233,7 @@ namespace CherwellConnector.Interface
         /// <param name="publicid">Specify the Business Object public ID.</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>TrebuchetWebApiDataContractsBusinessObjectReadResponse</returns>
+        /// <returns>ReadResponse</returns>
         ReadResponse BusinessObjectGetBusinessObjectByPublicIdV1 (string busobid, string publicid, string lang = null, string locale = null);
 
         /// <summary>
@@ -247,7 +247,7 @@ namespace CherwellConnector.Interface
         /// <param name="busobrecid">Specify the Business Object record ID.</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>TrebuchetWebApiDataContractsBusinessObjectReadResponse</returns>
+        /// <returns>ReadResponse</returns>
         ReadResponse BusinessObjectGetBusinessObjectByRecIdV1 (string busobid, string busobrecid, string lang = null, string locale = null);
 
         /// <summary>
@@ -261,7 +261,7 @@ namespace CherwellConnector.Interface
         /// <param name="busobid">The Business Object ID.</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>TrebuchetWebApiDataContractsBusinessObjectBarcodeLookupResponse</returns>
+        /// <returns>BarcodeLookupResponse</returns>
         BarcodeLookupResponse BusinessObjectGetBusinessObjectByScanCodeBusObIdV1 (string scanCode, string busobid, string lang = null, string locale = null);
 
         /// <summary>
@@ -275,7 +275,7 @@ namespace CherwellConnector.Interface
         /// <param name="busobname">The Business Bbject name.</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>TrebuchetWebApiDataContractsBusinessObjectBarcodeLookupResponse</returns>
+        /// <returns>BarcodeLookupResponse</returns>
         BarcodeLookupResponse BusinessObjectGetBusinessObjectByScanCodeBusObNameV1 (string scanCode, string busobname, string lang = null, string locale = null);
 
         /// <summary>
@@ -289,7 +289,7 @@ namespace CherwellConnector.Interface
         /// <param name="includerelationships">Flag to include schemas for related Business Object. Default is false. (optional)</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>TrebuchetWebApiDataContractsBusinessObjectSchemaResponse</returns>
+        /// <returns>SchemaResponse</returns>
         SchemaResponse BusinessObjectGetBusinessObjectSchemaV1 (string busobId, bool? includerelationships = null, string lang = null, string locale = null);
 
         /// <summary>
@@ -302,7 +302,7 @@ namespace CherwellConnector.Interface
         /// <param name="type">Use to show:&lt;br /&gt;All - All objects&lt;br /&gt;Major - Major objects only&lt;br /&gt;Supporting - Supporting objects only&lt;br /&gt;Lookup - Lookup objects only&lt;br /&gt;Groups - Groups only</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>List&lt;TrebuchetWebApiDataContractsBusinessObjectSummary&gt;</returns>
+        /// <returns>List&lt;Summary&gt;</returns>
         List<Summary> BusinessObjectGetBusinessObjectSummariesV1 (string type, string lang = null, string locale = null);
 
         /// <summary>
@@ -315,7 +315,7 @@ namespace CherwellConnector.Interface
         /// <param name="busobid">Specify a Business Object ID to get its summary.</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>List&lt;TrebuchetWebApiDataContractsBusinessObjectSummary&gt;</returns>
+        /// <returns>List&lt;Summary&gt;</returns>
         List<Summary> BusinessObjectGetBusinessObjectSummaryByIdV1 (string busobid, string lang = null, string locale = null);
 
         /// <summary>
@@ -328,7 +328,7 @@ namespace CherwellConnector.Interface
         /// <param name="busobname">Specify a Business Object name to get its summary.</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>List&lt;TrebuchetWebApiDataContractsBusinessObjectSummary&gt;</returns>
+        /// <returns>List&lt;Summary&gt;</returns>
         List<Summary> BusinessObjectGetBusinessObjectSummaryByNameV1 (string busobname, string lang = null, string locale = null);
 
         /// <summary>
@@ -341,7 +341,7 @@ namespace CherwellConnector.Interface
         /// <param name="request">Specify the Business Object ID. Use true to include all required fields or all fields. Specify an optional fields list by adding field names in a comma-delimited list [\&quot;field1\&quot;, \&quot;field2\&quot;]. </param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>TrebuchetWebApiDataContractsBusinessObjectTemplateResponse</returns>
+        /// <returns>TemplateResponse</returns>
         TemplateResponse BusinessObjectGetBusinessObjectTemplateV1 (TemplateRequest request, string lang = null, string locale = null);
 
         /// <summary>
@@ -355,7 +355,7 @@ namespace CherwellConnector.Interface
         /// <param name="includelinks">Flag to include hyperlinks in results. Default is false.  (optional)</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>TrebuchetWebApiDataContractsSearchesRelatedBusinessObjectResponse</returns>
+        /// <returns>SearchesRelatedBusinessObjectResponse</returns>
         SearchesRelatedBusinessObjectResponse BusinessObjectGetRelatedBusinessObjectByRequestV1 (RelatedBusinessObjectRequest relatedBusinessObjectRequest, bool? includelinks = null, string lang = null, string locale = null);
 
         /// <summary>
@@ -375,7 +375,7 @@ namespace CherwellConnector.Interface
         /// <param name="includelinks">Flag to include hyperlinks in results. Default is false.  (optional)</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>TrebuchetWebApiDataContractsSearchesRelatedBusinessObjectResponse</returns>
+        /// <returns>SearchesRelatedBusinessObjectResponse</returns>
         SearchesRelatedBusinessObjectResponse BusinessObjectGetRelatedBusinessObjectV1 (string parentbusobid, string parentbusobrecid, string relationshipid, int? pageNumber = null, int? pageSize = null, bool? allfields = null, bool? usedefaultgrid = null, bool? includelinks = null, string lang = null, string locale = null);
 
         /// <summary>
@@ -394,7 +394,7 @@ namespace CherwellConnector.Interface
         /// <param name="includelinks">Flag to include hyperlinks in results. Default is false.  (optional)</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>TrebuchetWebApiDataContractsSearchesRelatedBusinessObjectResponse</returns>
+        /// <returns>SearchesRelatedBusinessObjectResponse</returns>
         SearchesRelatedBusinessObjectResponse BusinessObjectGetRelatedBusinessObjectWithCustomGridV1 (string parentbusobid, string parentbusobrecid, string relationshipid, string gridid, int? pageNumber = null, int? pageSize = null, bool? includelinks = null, string lang = null, string locale = null);
 
         /// <summary>
@@ -411,7 +411,7 @@ namespace CherwellConnector.Interface
         /// <param name="busobrecid">Specify the Business Object record ID of the Business Object to be linked.</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>TrebuchetWebApiDataContractsSearchesRelatedBusinessObjectResponse</returns>
+        /// <returns>SearchesRelatedBusinessObjectResponse</returns>
         SearchesRelatedBusinessObjectResponse BusinessObjectLinkRelatedBusinessObjectByRecIdV1 (string parentbusobid, string parentbusobrecid, string relationshipid, string busobid, string busobrecid, string lang = null, string locale = null);
 
         /// <summary>
@@ -428,7 +428,7 @@ namespace CherwellConnector.Interface
         /// <param name="busobrecid">Specify the Business Object record ID of the Business Object to be linked.</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>TrebuchetWebApiDataContractsResponseBase</returns>
+        /// <returns>ResponseBase</returns>
         ResponseBase BusinessObjectLinkRelatedBusinessObjectByRecIdV2 (string parentbusobid, string parentbusobrecid, string relationshipid, string busobid, string busobrecid, string lang = null, string locale = null);
 
         /// <summary>
@@ -443,7 +443,7 @@ namespace CherwellConnector.Interface
         /// <param name="publicid">Specify the Business Object public ID.</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns></returns>
+        /// <returns>Object</returns>
         object BusinessObjectRemoveBusinessObjectAttachmentByIdAndPublicIdV1 (string attachmentid, string busobid, string publicid, string lang = null, string locale = null);
 
         /// <summary>
@@ -458,7 +458,7 @@ namespace CherwellConnector.Interface
         /// <param name="busobrecid">Specify the Business Object record ID.</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns></returns>
+        /// <returns>Object</returns>
         object BusinessObjectRemoveBusinessObjectAttachmentByIdAndRecIdV1 (string attachmentid, string busobid, string busobrecid, string lang = null, string locale = null);
 
         /// <summary>
@@ -473,7 +473,7 @@ namespace CherwellConnector.Interface
         /// <param name="publicid">Specify the Business Object public ID.</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns></returns>
+        /// <returns>Object</returns>
         object BusinessObjectRemoveBusinessObjectAttachmentByNameAndPublicIdV1 (string attachmentid, string busobname, string publicid, string lang = null, string locale = null);
         
         /// <summary>
@@ -488,7 +488,7 @@ namespace CherwellConnector.Interface
         /// <param name="busobrecid">Specify the Business Object record ID.</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns></returns>
+        /// <returns>Object</returns>
         object BusinessObjectRemoveBusinessObjectAttachmentByNameAndRecIdV1 (string attachmentid, string busobname, string busobrecid, string lang = null, string locale = null);
 
         /// <summary>
@@ -501,7 +501,7 @@ namespace CherwellConnector.Interface
         /// <param name="request">Request object used to specify the Business Objects to attach. You can use Business Object name or ID and Business Object record ID or public ID.</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>TrebuchetWebApiDataContractsBusinessObjectAttachmentsResponse</returns>
+        /// <returns>AttachmentsResponse</returns>
         AttachmentsResponse BusinessObjectSaveBusinessObjectAttachmentBusObV1 (SaveBusObAttachmentRequest request, string lang = null, string locale = null);
 
         /// <summary>
@@ -514,7 +514,7 @@ namespace CherwellConnector.Interface
         /// <param name="request">Request object used to specify the file path (UNC recommended) and the Business Object. You can use Business Object name or ID and Business Object record ID or public ID.</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>TrebuchetWebApiDataContractsBusinessObjectAttachmentsResponse</returns>
+        /// <returns>AttachmentsResponse</returns>
         AttachmentsResponse BusinessObjectSaveBusinessObjectAttachmentLinkV1 (SaveLinkAttachmentRequest request, string lang = null, string locale = null);
 
         /// <summary>
@@ -527,7 +527,7 @@ namespace CherwellConnector.Interface
         /// <param name="request">Request object used to specify the URL path and Business Object. You can use Business Object name or ID and Business Object record ID or public ID.</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>TrebuchetWebApiDataContractsBusinessObjectAttachmentsResponse</returns>
+        /// <returns>AttachmentsResponse</returns>
         AttachmentsResponse BusinessObjectSaveBusinessObjectAttachmentUrlV1 (SaveUrlAttachmentRequest request, string lang = null, string locale = null);
 
         /// <summary>
@@ -540,7 +540,7 @@ namespace CherwellConnector.Interface
         /// <param name="request">Specify the array of Business Object templates. </param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>TrebuchetWebApiDataContractsBusinessObjectBatchSaveResponse</returns>
+        /// <returns>BatchSaveResponse</returns>
         BatchSaveResponse BusinessObjectSaveBusinessObjectBatchV1 (BatchSaveRequest request, string lang = null, string locale = null);
 
         /// <summary>
@@ -553,7 +553,7 @@ namespace CherwellConnector.Interface
         /// <param name="request">Specify a list of fields from a Business Object template. </param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>TrebuchetWebApiDataContractsBusinessObjectSaveResponse</returns>
+        /// <returns>SaveResponse</returns>
         SaveResponse BusinessObjectSaveBusinessObjectV1 (SaveRequest request, string lang = null, string locale = null);
 
         /// <summary>
@@ -566,7 +566,7 @@ namespace CherwellConnector.Interface
         /// <param name="request">Request object specifying the parent the Business Object, the Relationship, and field values for the Business Object to create or update. </param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>TrebuchetWebApiDataContractsBusinessObjectRelatedSaveResponse</returns>
+        /// <returns>RelatedSaveResponse</returns>
         RelatedSaveResponse BusinessObjectSaveRelatedBusinessObjectV1 (RelatedSaveRequest request, string lang = null, string locale = null);
 
         /// <summary>
@@ -583,7 +583,7 @@ namespace CherwellConnector.Interface
         /// <param name="busobrecid">Specify the Business Object record ID of the Business Object to be unlinked.</param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>TrebuchetWebApiDataContractsSearchesRelatedBusinessObjectResponse</returns>
+        /// <returns>SearchesRelatedBusinessObjectResponse</returns>
         SearchesRelatedBusinessObjectResponse BusinessObjectUnLinkRelatedBusinessObjectByRecIdV1 (string parentbusobid, string parentbusobrecid, string relationshipid, string busobid, string busobrecid, string lang = null, string locale = null);
 
         /// <summary>
