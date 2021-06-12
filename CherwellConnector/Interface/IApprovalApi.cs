@@ -20,7 +20,7 @@ namespace CherwellConnector.Interface
         /// <param name="approvalAction"></param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>TrebuchetWebApiDataContractsBusinessObjectSaveResponse</returns>
+        /// <returns>SaveResponse</returns>
         SaveResponse ApprovalActionApprovalV1 (string approvalRecId, string approvalAction, string lang = null, string locale = null);
 
        
@@ -34,7 +34,7 @@ namespace CherwellConnector.Interface
         /// <param name="approvalRecId"></param>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>TrebuchetWebApiDataContractsApprovalApprovalReadResponse</returns>
+        /// <returns>ApprovalReadResponse</returns>
         ApprovalReadResponse ApprovalGetApprovalByRecIdV1 (string approvalRecId, string lang = null, string locale = null);
 
        
@@ -47,7 +47,7 @@ namespace CherwellConnector.Interface
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>TrebuchetWebApiDataContractsApprovalGetApprovalsResponse</returns>
+        /// <returns>ApprovalsResponse</returns>
         ApprovalsResponse ApprovalGetMyApprovalsV1 (string lang = null, string locale = null);
 
         
@@ -60,7 +60,7 @@ namespace CherwellConnector.Interface
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
-        /// <returns>TrebuchetWebApiDataContractsApprovalGetApprovalsResponse</returns>
+        /// <returns>ApprovalsResponse</returns>
         ApprovalsResponse ApprovalGetMyPendingApprovalsV1 (string lang = null, string locale = null);
 
     }
