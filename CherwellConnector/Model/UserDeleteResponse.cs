@@ -23,7 +23,7 @@ namespace CherwellConnector.Model
         /// <param name="errorCode">errorCode.</param>
         /// <param name="hasError">hasError.</param>
         /// <param name="users">users.</param>
-        public UserDeleteResponse(string error = default, string errorCode = default, bool? hasError = default, List<TrebuchetWebApiDataContractsUsersUser> users = default)
+        public UserDeleteResponse(string error = default, string errorCode = default, bool? hasError = default, List<User> users = default)
         {
             Error = error;
             ErrorCode = errorCode;
@@ -53,7 +53,7 @@ namespace CherwellConnector.Model
         /// Gets or Sets Users
         /// </summary>
         [DataMember(Name="users", EmitDefaultValue=false)]
-        public List<TrebuchetWebApiDataContractsUsersUser> Users { get; set; }
+        public List<User> Users { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

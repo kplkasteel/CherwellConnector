@@ -72,7 +72,7 @@ namespace CherwellConnector.Interface
         /// <param name="authMode">Specify the Authentication Mode to use for requesting an access token. (optional)</param>
         /// <param name="siteName">If for portal specify the Site name to use for requesting an access token. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsSecurityTokenResponse</returns>
-        TrebuchetWebApiDataContractsSecurityTokenResponse ServiceToken (string grantType, string clientId, string clientSecret = null, string username = null, string password = null, string refreshToken = null, string authMode = null, string siteName = null);
+        TokenResponse ServiceToken (string grantType, string clientId, string clientSecret = null, string username = null, string password = null, string refreshToken = null, string authMode = null, string siteName = null);
 
         /// <summary>
         /// Get an access token
@@ -90,7 +90,7 @@ namespace CherwellConnector.Interface
         /// <param name="authMode">Specify the Authentication Mode to use for requesting an access token. (optional)</param>
         /// <param name="siteName">If for portal specify the Site name to use for requesting an access token. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsSecurityTokenResponse</returns>
-        ApiResponse<TrebuchetWebApiDataContractsSecurityTokenResponse> ServiceTokenWithHttpInfo (string grantType, string clientId, string clientSecret = null, string username = null, string password = null, string refreshToken = null, string authMode = null, string siteName = null);
+        ApiResponse<TokenResponse> ServiceTokenWithHttpInfo (string grantType, string clientId, string clientSecret = null, string username = null, string password = null, string refreshToken = null, string authMode = null, string siteName = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -155,7 +155,7 @@ namespace CherwellConnector.Interface
         /// <param name="authMode">Specify the Authentication Mode to use for requesting an access token. (optional)</param>
         /// <param name="siteName">If for portal specify the Site name to use for requesting an access token. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsSecurityTokenResponse</returns>
-        System.Threading.Tasks.Task<TrebuchetWebApiDataContractsSecurityTokenResponse> ServiceTokenAsync (string grantType, string clientId, string clientSecret = null, string username = null, string password = null, string refreshToken = null, string authMode = null, string siteName = null);
+        System.Threading.Tasks.Task<TokenResponse> ServiceTokenAsync (string grantType, string clientId, string clientSecret = null, string username = null, string password = null, string refreshToken = null, string authMode = null, string siteName = null);
 
         /// <summary>
         /// Get an access token
@@ -173,7 +173,7 @@ namespace CherwellConnector.Interface
         /// <param name="authMode">Specify the Authentication Mode to use for requesting an access token. (optional)</param>
         /// <param name="siteName">If for portal specify the Site name to use for requesting an access token. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsSecurityTokenResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsSecurityTokenResponse>> ServiceTokenAsyncWithHttpInfo (string grantType, string clientId, string clientSecret = null, string username = null, string password = null, string refreshToken = null, string authMode = null, string siteName = null);
+        System.Threading.Tasks.Task<ApiResponse<TokenResponse>> ServiceTokenAsyncWithHttpInfo (string grantType, string clientId, string clientSecret = null, string username = null, string password = null, string refreshToken = null, string authMode = null, string siteName = null);
         #endregion Asynchronous Operations
     }
 }

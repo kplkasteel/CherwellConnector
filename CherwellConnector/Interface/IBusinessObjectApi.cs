@@ -65,7 +65,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsSearchesRelatedBusinessObjectResponse</returns>
-        TrebuchetWebApiDataContractsSearchesRelatedBusinessObjectResponse BusinessObjectDeleteRelatedBusinessObjectByPublicIdV1 (string parentbusobid, string parentbusobrecid, string relationshipid, string publicid, string lang = null, string locale = null);
+        SearchesRelatedBusinessObjectResponse BusinessObjectDeleteRelatedBusinessObjectByPublicIdV1 (string parentbusobid, string parentbusobrecid, string relationshipid, string publicid, string lang = null, string locale = null);
 
          /// <summary>
         /// Delete a related Business Object by record ID
@@ -81,7 +81,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsSearchesRelatedBusinessObjectResponse</returns>
-        TrebuchetWebApiDataContractsSearchesRelatedBusinessObjectResponse BusinessObjectDeleteRelatedBusinessObjectByRecIdV1 (string parentbusobid, string parentbusobrecid, string relationshipid, string busobrecid, string lang = null, string locale = null);
+        SearchesRelatedBusinessObjectResponse BusinessObjectDeleteRelatedBusinessObjectByRecIdV1 (string parentbusobid, string parentbusobrecid, string relationshipid, string busobrecid, string lang = null, string locale = null);
 
      /// <summary>
         /// Get lookup values for fields
@@ -356,7 +356,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsSearchesRelatedBusinessObjectResponse</returns>
-        TrebuchetWebApiDataContractsSearchesRelatedBusinessObjectResponse BusinessObjectGetRelatedBusinessObjectByRequestV1 (TrebuchetWebApiDataContractsSearchesRelatedBusinessObjectRequest relatedBusinessObjectRequest, bool? includelinks = null, string lang = null, string locale = null);
+        SearchesRelatedBusinessObjectResponse BusinessObjectGetRelatedBusinessObjectByRequestV1 (RelatedBusinessObjectRequest relatedBusinessObjectRequest, bool? includelinks = null, string lang = null, string locale = null);
 
         /// <summary>
         /// Get related Business Objects by ID
@@ -376,7 +376,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsSearchesRelatedBusinessObjectResponse</returns>
-        TrebuchetWebApiDataContractsSearchesRelatedBusinessObjectResponse BusinessObjectGetRelatedBusinessObjectV1 (string parentbusobid, string parentbusobrecid, string relationshipid, int? pageNumber = null, int? pageSize = null, bool? allfields = null, bool? usedefaultgrid = null, bool? includelinks = null, string lang = null, string locale = null);
+        SearchesRelatedBusinessObjectResponse BusinessObjectGetRelatedBusinessObjectV1 (string parentbusobid, string parentbusobrecid, string relationshipid, int? pageNumber = null, int? pageSize = null, bool? allfields = null, bool? usedefaultgrid = null, bool? includelinks = null, string lang = null, string locale = null);
 
         /// <summary>
         /// Get related Business Objects custom grid
@@ -395,7 +395,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsSearchesRelatedBusinessObjectResponse</returns>
-        TrebuchetWebApiDataContractsSearchesRelatedBusinessObjectResponse BusinessObjectGetRelatedBusinessObjectWithCustomGridV1 (string parentbusobid, string parentbusobrecid, string relationshipid, string gridid, int? pageNumber = null, int? pageSize = null, bool? includelinks = null, string lang = null, string locale = null);
+        SearchesRelatedBusinessObjectResponse BusinessObjectGetRelatedBusinessObjectWithCustomGridV1 (string parentbusobid, string parentbusobrecid, string relationshipid, string gridid, int? pageNumber = null, int? pageSize = null, bool? includelinks = null, string lang = null, string locale = null);
 
         /// <summary>
         /// Link related Business Objects
@@ -412,7 +412,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsSearchesRelatedBusinessObjectResponse</returns>
-        TrebuchetWebApiDataContractsSearchesRelatedBusinessObjectResponse BusinessObjectLinkRelatedBusinessObjectByRecIdV1 (string parentbusobid, string parentbusobrecid, string relationshipid, string busobid, string busobrecid, string lang = null, string locale = null);
+        SearchesRelatedBusinessObjectResponse BusinessObjectLinkRelatedBusinessObjectByRecIdV1 (string parentbusobid, string parentbusobrecid, string relationshipid, string busobid, string busobrecid, string lang = null, string locale = null);
 
         /// <summary>
         /// Link related Business Objects
@@ -584,7 +584,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsSearchesRelatedBusinessObjectResponse</returns>
-        TrebuchetWebApiDataContractsSearchesRelatedBusinessObjectResponse BusinessObjectUnLinkRelatedBusinessObjectByRecIdV1 (string parentbusobid, string parentbusobrecid, string relationshipid, string busobid, string busobrecid, string lang = null, string locale = null);
+        SearchesRelatedBusinessObjectResponse BusinessObjectUnLinkRelatedBusinessObjectByRecIdV1 (string parentbusobid, string parentbusobrecid, string relationshipid, string busobid, string busobrecid, string lang = null, string locale = null);
 
         /// <summary>
         /// Upload an attachment by Business Object ID and public ID

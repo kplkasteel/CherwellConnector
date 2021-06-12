@@ -21,7 +21,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsTeamsAddUserToTeamByBatchResponse</returns>
-        TrebuchetWebApiDataContractsTeamsAddUserToTeamByBatchResponse TeamsAddUserToTeamByBatchV1 (TrebuchetWebApiDataContractsTeamsAddUserToTeamByBatchRequest request, string lang = null, string locale = null);
+        AddUserToTeamByBatchResponse TeamsAddUserToTeamByBatchV1 (AddUserToTeamByBatchRequest request, string lang = null, string locale = null);
 
         /// <summary>
         /// Add users to a team by batch
@@ -34,7 +34,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsTeamsAddUserToTeamByBatchResponse</returns>
-        ApiResponse<TrebuchetWebApiDataContractsTeamsAddUserToTeamByBatchResponse> TeamsAddUserToTeamByBatchV1WithHttpInfo (TrebuchetWebApiDataContractsTeamsAddUserToTeamByBatchRequest request, string lang = null, string locale = null);
+        ApiResponse<AddUserToTeamByBatchResponse> TeamsAddUserToTeamByBatchV1WithHttpInfo (AddUserToTeamByBatchRequest request, string lang = null, string locale = null);
         /// <summary>
         /// Add a user to a team
         /// </summary>
@@ -46,7 +46,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns></returns>
-        void TeamsAddUserToTeamV1 (TrebuchetWebApiDataContractsTeamsAddUserToTeamRequest dataRequest, string lang = null, string locale = null);
+        void TeamsAddUserToTeamV1 (AddUserToTeamRequest dataRequest, string lang = null, string locale = null);
 
         /// <summary>
         /// Add a user to a team
@@ -59,7 +59,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<object> TeamsAddUserToTeamV1WithHttpInfo (TrebuchetWebApiDataContractsTeamsAddUserToTeamRequest dataRequest, string lang = null, string locale = null);
+        ApiResponse<object> TeamsAddUserToTeamV1WithHttpInfo (AddUserToTeamRequest dataRequest, string lang = null, string locale = null);
         /// <summary>
         /// Add a user to a team
         /// </summary>
@@ -71,7 +71,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsTeamsAddUserToTeamResponse</returns>
-        TrebuchetWebApiDataContractsTeamsAddUserToTeamResponse TeamsAddUserToTeamV2 (TrebuchetWebApiDataContractsTeamsAddUserToTeamRequest dataRequest, string lang = null, string locale = null);
+        AddUserToTeamResponse TeamsAddUserToTeamV2 (AddUserToTeamRequest dataRequest, string lang = null, string locale = null);
 
         /// <summary>
         /// Add a user to a team
@@ -84,7 +84,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsTeamsAddUserToTeamResponse</returns>
-        ApiResponse<TrebuchetWebApiDataContractsTeamsAddUserToTeamResponse> TeamsAddUserToTeamV2WithHttpInfo (TrebuchetWebApiDataContractsTeamsAddUserToTeamRequest dataRequest, string lang = null, string locale = null);
+        ApiResponse<AddUserToTeamResponse> TeamsAddUserToTeamV2WithHttpInfo (AddUserToTeamRequest dataRequest, string lang = null, string locale = null);
         /// <summary>
         /// Delete a Team
         /// </summary>
@@ -121,7 +121,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsTeamsTeamResponse</returns>
-        TrebuchetWebApiDataContractsTeamsTeamResponse TeamsGetTeamV1 (string teamid, string lang = null, string locale = null);
+        TeamResponse TeamsGetTeamV1 (string teamid, string lang = null, string locale = null);
 
         /// <summary>
         /// Get a team by its TeamId
@@ -134,7 +134,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsTeamsTeamResponse</returns>
-        ApiResponse<TrebuchetWebApiDataContractsTeamsTeamResponse> TeamsGetTeamV1WithHttpInfo (string teamid, string lang = null, string locale = null);
+        ApiResponse<TeamResponse> TeamsGetTeamV1WithHttpInfo (string teamid, string lang = null, string locale = null);
         /// <summary>
         /// Get all available Teams
         /// </summary>
@@ -145,7 +145,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsTeamsTeamsResponse</returns>
-        TrebuchetWebApiDataContractsTeamsTeamsResponse TeamsGetTeamsV1 (string lang = null, string locale = null);
+        TeamsResponse TeamsGetTeamsV1 (string lang = null, string locale = null);
 
         /// <summary>
         /// Get all available Teams
@@ -157,7 +157,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsTeamsTeamsResponse</returns>
-        ApiResponse<TrebuchetWebApiDataContractsTeamsTeamsResponse> TeamsGetTeamsV1WithHttpInfo (string lang = null, string locale = null);
+        ApiResponse<TeamsResponse> TeamsGetTeamsV1WithHttpInfo (string lang = null, string locale = null);
         /// <summary>
         /// Get all available Teams
         /// </summary>
@@ -168,7 +168,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsTeamsTeamsV2Response</returns>
-        TrebuchetWebApiDataContractsTeamsTeamsV2Response TeamsGetTeamsV2 (string lang = null, string locale = null);
+        TeamsV2Response TeamsGetTeamsV2 (string lang = null, string locale = null);
 
         /// <summary>
         /// Get all available Teams
@@ -180,7 +180,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsTeamsTeamsV2Response</returns>
-        ApiResponse<TrebuchetWebApiDataContractsTeamsTeamsV2Response> TeamsGetTeamsV2WithHttpInfo (string lang = null, string locale = null);
+        ApiResponse<TeamsV2Response> TeamsGetTeamsV2WithHttpInfo (string lang = null, string locale = null);
         /// <summary>
         /// Get Team assignments for a user
         /// </summary>
@@ -192,7 +192,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsTeamsTeamsResponse</returns>
-        TrebuchetWebApiDataContractsTeamsTeamsResponse TeamsGetUsersTeamsV1 (string userRecordId, string lang = null, string locale = null);
+        TeamsResponse TeamsGetUsersTeamsV1 (string userRecordId, string lang = null, string locale = null);
 
         /// <summary>
         /// Get Team assignments for a user
@@ -205,7 +205,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsTeamsTeamsResponse</returns>
-        ApiResponse<TrebuchetWebApiDataContractsTeamsTeamsResponse> TeamsGetUsersTeamsV1WithHttpInfo (string userRecordId, string lang = null, string locale = null);
+        ApiResponse<TeamsResponse> TeamsGetUsersTeamsV1WithHttpInfo (string userRecordId, string lang = null, string locale = null);
         /// <summary>
         /// Get Team assignments for a user
         /// </summary>
@@ -217,7 +217,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsTeamsTeamsV2Response</returns>
-        TrebuchetWebApiDataContractsTeamsTeamsV2Response TeamsGetUsersTeamsV2 (string userRecordId, string lang = null, string locale = null);
+        TeamsV2Response TeamsGetUsersTeamsV2 (string userRecordId, string lang = null, string locale = null);
 
         /// <summary>
         /// Get Team assignments for a user
@@ -230,7 +230,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsTeamsTeamsV2Response</returns>
-        ApiResponse<TrebuchetWebApiDataContractsTeamsTeamsV2Response> TeamsGetUsersTeamsV2WithHttpInfo (string userRecordId, string lang = null, string locale = null);
+        ApiResponse<TeamsV2Response> TeamsGetUsersTeamsV2WithHttpInfo (string userRecordId, string lang = null, string locale = null);
         /// <summary>
         /// Get all available Workgroups
         /// </summary>
@@ -241,7 +241,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsTeamsTeamsResponse</returns>
-        TrebuchetWebApiDataContractsTeamsTeamsResponse TeamsGetWorkgroupsV1 (string lang = null, string locale = null);
+        TeamsResponse TeamsGetWorkgroupsV1 (string lang = null, string locale = null);
 
         /// <summary>
         /// Get all available Workgroups
@@ -253,7 +253,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsTeamsTeamsResponse</returns>
-        ApiResponse<TrebuchetWebApiDataContractsTeamsTeamsResponse> TeamsGetWorkgroupsV1WithHttpInfo (string lang = null, string locale = null);
+        ApiResponse<TeamsResponse> TeamsGetWorkgroupsV1WithHttpInfo (string lang = null, string locale = null);
         /// <summary>
         /// Get all available Workgroups
         /// </summary>
@@ -264,7 +264,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsTeamsTeamsV2Response</returns>
-        TrebuchetWebApiDataContractsTeamsTeamsV2Response TeamsGetWorkgroupsV2 (string lang = null, string locale = null);
+        TeamsV2Response TeamsGetWorkgroupsV2 (string lang = null, string locale = null);
 
         /// <summary>
         /// Get all available Workgroups
@@ -276,7 +276,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsTeamsTeamsV2Response</returns>
-        ApiResponse<TrebuchetWebApiDataContractsTeamsTeamsV2Response> TeamsGetWorkgroupsV2WithHttpInfo (string lang = null, string locale = null);
+        ApiResponse<TeamsV2Response> TeamsGetWorkgroupsV2WithHttpInfo (string lang = null, string locale = null);
         /// <summary>
         /// Remove a customer from a Workgroup
         /// </summary>
@@ -289,7 +289,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsTeamsRemoveCustomerFromWorkgroupResponse</returns>
-        TrebuchetWebApiDataContractsTeamsRemoveCustomerFromWorkgroupResponse TeamsRemoveCustomerFromWorkgroupV1 (string workgroupid, string customerrecordid, string lang = null, string locale = null);
+        RemoveCustomerFromWorkgroupResponse TeamsRemoveCustomerFromWorkgroupV1 (string workgroupid, string customerrecordid, string lang = null, string locale = null);
 
         /// <summary>
         /// Remove a customer from a Workgroup
@@ -303,7 +303,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsTeamsRemoveCustomerFromWorkgroupResponse</returns>
-        ApiResponse<TrebuchetWebApiDataContractsTeamsRemoveCustomerFromWorkgroupResponse> TeamsRemoveCustomerFromWorkgroupV1WithHttpInfo (string workgroupid, string customerrecordid, string lang = null, string locale = null);
+        ApiResponse<RemoveCustomerFromWorkgroupResponse> TeamsRemoveCustomerFromWorkgroupV1WithHttpInfo (string workgroupid, string customerrecordid, string lang = null, string locale = null);
         /// <summary>
         /// Operation to remove a User from a Team.
         /// </summary>
@@ -343,7 +343,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsTeamsRemoveUserFromTeamResponse</returns>
-        TrebuchetWebApiDataContractsTeamsRemoveUserFromTeamResponse TeamsRemoveUserFromTeamV2 (string teamId, string userrecordid, string lang = null, string locale = null);
+        RemoveUserFromTeamResponse TeamsRemoveUserFromTeamV2 (string teamId, string userrecordid, string lang = null, string locale = null);
 
         /// <summary>
         /// Operation to remove a User from a Team.
@@ -357,7 +357,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsTeamsRemoveUserFromTeamResponse</returns>
-        ApiResponse<TrebuchetWebApiDataContractsTeamsRemoveUserFromTeamResponse> TeamsRemoveUserFromTeamV2WithHttpInfo (string teamId, string userrecordid, string lang = null, string locale = null);
+        ApiResponse<RemoveUserFromTeamResponse> TeamsRemoveUserFromTeamV2WithHttpInfo (string teamId, string userrecordid, string lang = null, string locale = null);
         /// <summary>
         /// Add or Update a team member
         /// </summary>
@@ -369,7 +369,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsTeamsSaveTeamMemberResponse</returns>
-        TrebuchetWebApiDataContractsTeamsSaveTeamMemberResponse TeamsSaveTeamMemberV1 (TrebuchetWebApiDataContractsTeamsSaveTeamMemberRequest request, string lang = null, string locale = null);
+        SaveTeamMemberResponse TeamsSaveTeamMemberV1 (SaveTeamMemberRequest request, string lang = null, string locale = null);
 
         /// <summary>
         /// Add or Update a team member
@@ -382,7 +382,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsTeamsSaveTeamMemberResponse</returns>
-        ApiResponse<TrebuchetWebApiDataContractsTeamsSaveTeamMemberResponse> TeamsSaveTeamMemberV1WithHttpInfo (TrebuchetWebApiDataContractsTeamsSaveTeamMemberRequest request, string lang = null, string locale = null);
+        ApiResponse<SaveTeamMemberResponse> TeamsSaveTeamMemberV1WithHttpInfo (SaveTeamMemberRequest request, string lang = null, string locale = null);
         /// <summary>
         /// Create or update a team
         /// </summary>
@@ -394,7 +394,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsTeamsTeamSaveResponse</returns>
-        TrebuchetWebApiDataContractsTeamsTeamSaveResponse TeamsSaveTeamV1 (TrebuchetWebApiDataContractsTeamsTeamSaveRequest request, string lang = null, string locale = null);
+        TeamSaveResponse TeamsSaveTeamV1 (TeamSaveRequest request, string lang = null, string locale = null);
 
         /// <summary>
         /// Create or update a team
@@ -407,7 +407,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsTeamsTeamSaveResponse</returns>
-        ApiResponse<TrebuchetWebApiDataContractsTeamsTeamSaveResponse> TeamsSaveTeamV1WithHttpInfo (TrebuchetWebApiDataContractsTeamsTeamSaveRequest request, string lang = null, string locale = null);
+        ApiResponse<TeamSaveResponse> TeamsSaveTeamV1WithHttpInfo (TeamSaveRequest request, string lang = null, string locale = null);
         /// <summary>
         /// Save the membership status of a Workgroup member.
         /// </summary>
@@ -419,7 +419,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsTeamsSaveWorkgroupMemberResponse</returns>
-        TrebuchetWebApiDataContractsTeamsSaveWorkgroupMemberResponse TeamsSaveWorkgroupMemberV1 (TrebuchetWebApiDataContractsTeamsSaveWorkgroupMemberRequest request, string lang = null, string locale = null);
+        SaveWorkgroupMemberResponse TeamsSaveWorkgroupMemberV1 (SaveWorkgroupMemberRequest request, string lang = null, string locale = null);
 
         /// <summary>
         /// Save the membership status of a Workgroup member.
@@ -432,7 +432,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsTeamsSaveWorkgroupMemberResponse</returns>
-        ApiResponse<TrebuchetWebApiDataContractsTeamsSaveWorkgroupMemberResponse> TeamsSaveWorkgroupMemberV1WithHttpInfo (TrebuchetWebApiDataContractsTeamsSaveWorkgroupMemberRequest request, string lang = null, string locale = null);
+        ApiResponse<SaveWorkgroupMemberResponse> TeamsSaveWorkgroupMemberV1WithHttpInfo (SaveWorkgroupMemberRequest request, string lang = null, string locale = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -446,7 +446,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsTeamsAddUserToTeamByBatchResponse</returns>
-        System.Threading.Tasks.Task<TrebuchetWebApiDataContractsTeamsAddUserToTeamByBatchResponse> TeamsAddUserToTeamByBatchV1Async (TrebuchetWebApiDataContractsTeamsAddUserToTeamByBatchRequest request, string lang = null, string locale = null);
+        System.Threading.Tasks.Task<AddUserToTeamByBatchResponse> TeamsAddUserToTeamByBatchV1Async (AddUserToTeamByBatchRequest request, string lang = null, string locale = null);
 
         /// <summary>
         /// Add users to a team by batch
@@ -459,7 +459,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsTeamsAddUserToTeamByBatchResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsTeamsAddUserToTeamByBatchResponse>> TeamsAddUserToTeamByBatchV1AsyncWithHttpInfo (TrebuchetWebApiDataContractsTeamsAddUserToTeamByBatchRequest request, string lang = null, string locale = null);
+        System.Threading.Tasks.Task<ApiResponse<AddUserToTeamByBatchResponse>> TeamsAddUserToTeamByBatchV1AsyncWithHttpInfo (AddUserToTeamByBatchRequest request, string lang = null, string locale = null);
         /// <summary>
         /// Add a user to a team
         /// </summary>
@@ -471,7 +471,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task TeamsAddUserToTeamV1Async (TrebuchetWebApiDataContractsTeamsAddUserToTeamRequest dataRequest, string lang = null, string locale = null);
+        System.Threading.Tasks.Task TeamsAddUserToTeamV1Async (AddUserToTeamRequest dataRequest, string lang = null, string locale = null);
 
         /// <summary>
         /// Add a user to a team
@@ -484,7 +484,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<object>> TeamsAddUserToTeamV1AsyncWithHttpInfo (TrebuchetWebApiDataContractsTeamsAddUserToTeamRequest dataRequest, string lang = null, string locale = null);
+        System.Threading.Tasks.Task<ApiResponse<object>> TeamsAddUserToTeamV1AsyncWithHttpInfo (AddUserToTeamRequest dataRequest, string lang = null, string locale = null);
         /// <summary>
         /// Add a user to a team
         /// </summary>
@@ -496,7 +496,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsTeamsAddUserToTeamResponse</returns>
-        System.Threading.Tasks.Task<TrebuchetWebApiDataContractsTeamsAddUserToTeamResponse> TeamsAddUserToTeamV2Async (TrebuchetWebApiDataContractsTeamsAddUserToTeamRequest dataRequest, string lang = null, string locale = null);
+        System.Threading.Tasks.Task<AddUserToTeamResponse> TeamsAddUserToTeamV2Async (AddUserToTeamRequest dataRequest, string lang = null, string locale = null);
 
         /// <summary>
         /// Add a user to a team
@@ -509,7 +509,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsTeamsAddUserToTeamResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsTeamsAddUserToTeamResponse>> TeamsAddUserToTeamV2AsyncWithHttpInfo (TrebuchetWebApiDataContractsTeamsAddUserToTeamRequest dataRequest, string lang = null, string locale = null);
+        System.Threading.Tasks.Task<ApiResponse<AddUserToTeamResponse>> TeamsAddUserToTeamV2AsyncWithHttpInfo (AddUserToTeamRequest dataRequest, string lang = null, string locale = null);
         /// <summary>
         /// Delete a Team
         /// </summary>
@@ -546,7 +546,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsTeamsTeamResponse</returns>
-        System.Threading.Tasks.Task<TrebuchetWebApiDataContractsTeamsTeamResponse> TeamsGetTeamV1Async (string teamid, string lang = null, string locale = null);
+        System.Threading.Tasks.Task<TeamResponse> TeamsGetTeamV1Async (string teamid, string lang = null, string locale = null);
 
         /// <summary>
         /// Get a team by its TeamId
@@ -559,7 +559,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsTeamsTeamResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsTeamsTeamResponse>> TeamsGetTeamV1AsyncWithHttpInfo (string teamid, string lang = null, string locale = null);
+        System.Threading.Tasks.Task<ApiResponse<TeamResponse>> TeamsGetTeamV1AsyncWithHttpInfo (string teamid, string lang = null, string locale = null);
         /// <summary>
         /// Get all available Teams
         /// </summary>
@@ -570,7 +570,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsTeamsTeamsResponse</returns>
-        System.Threading.Tasks.Task<TrebuchetWebApiDataContractsTeamsTeamsResponse> TeamsGetTeamsV1Async (string lang = null, string locale = null);
+        System.Threading.Tasks.Task<TeamsResponse> TeamsGetTeamsV1Async (string lang = null, string locale = null);
 
         /// <summary>
         /// Get all available Teams
@@ -582,7 +582,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsTeamsTeamsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsTeamsTeamsResponse>> TeamsGetTeamsV1AsyncWithHttpInfo (string lang = null, string locale = null);
+        System.Threading.Tasks.Task<ApiResponse<TeamsResponse>> TeamsGetTeamsV1AsyncWithHttpInfo (string lang = null, string locale = null);
         /// <summary>
         /// Get all available Teams
         /// </summary>
@@ -593,7 +593,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsTeamsTeamsV2Response</returns>
-        System.Threading.Tasks.Task<TrebuchetWebApiDataContractsTeamsTeamsV2Response> TeamsGetTeamsV2Async (string lang = null, string locale = null);
+        System.Threading.Tasks.Task<TeamsV2Response> TeamsGetTeamsV2Async (string lang = null, string locale = null);
 
         /// <summary>
         /// Get all available Teams
@@ -605,7 +605,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsTeamsTeamsV2Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsTeamsTeamsV2Response>> TeamsGetTeamsV2AsyncWithHttpInfo (string lang = null, string locale = null);
+        System.Threading.Tasks.Task<ApiResponse<TeamsV2Response>> TeamsGetTeamsV2AsyncWithHttpInfo (string lang = null, string locale = null);
         /// <summary>
         /// Get Team assignments for a user
         /// </summary>
@@ -617,7 +617,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsTeamsTeamsResponse</returns>
-        System.Threading.Tasks.Task<TrebuchetWebApiDataContractsTeamsTeamsResponse> TeamsGetUsersTeamsV1Async (string userRecordId, string lang = null, string locale = null);
+        System.Threading.Tasks.Task<TeamsResponse> TeamsGetUsersTeamsV1Async (string userRecordId, string lang = null, string locale = null);
 
         /// <summary>
         /// Get Team assignments for a user
@@ -630,7 +630,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsTeamsTeamsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsTeamsTeamsResponse>> TeamsGetUsersTeamsV1AsyncWithHttpInfo (string userRecordId, string lang = null, string locale = null);
+        System.Threading.Tasks.Task<ApiResponse<TeamsResponse>> TeamsGetUsersTeamsV1AsyncWithHttpInfo (string userRecordId, string lang = null, string locale = null);
         /// <summary>
         /// Get Team assignments for a user
         /// </summary>
@@ -642,7 +642,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsTeamsTeamsV2Response</returns>
-        System.Threading.Tasks.Task<TrebuchetWebApiDataContractsTeamsTeamsV2Response> TeamsGetUsersTeamsV2Async (string userRecordId, string lang = null, string locale = null);
+        System.Threading.Tasks.Task<TeamsV2Response> TeamsGetUsersTeamsV2Async (string userRecordId, string lang = null, string locale = null);
 
         /// <summary>
         /// Get Team assignments for a user
@@ -655,7 +655,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsTeamsTeamsV2Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsTeamsTeamsV2Response>> TeamsGetUsersTeamsV2AsyncWithHttpInfo (string userRecordId, string lang = null, string locale = null);
+        System.Threading.Tasks.Task<ApiResponse<TeamsV2Response>> TeamsGetUsersTeamsV2AsyncWithHttpInfo (string userRecordId, string lang = null, string locale = null);
         /// <summary>
         /// Get all available Workgroups
         /// </summary>
@@ -666,7 +666,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsTeamsTeamsResponse</returns>
-        System.Threading.Tasks.Task<TrebuchetWebApiDataContractsTeamsTeamsResponse> TeamsGetWorkgroupsV1Async (string lang = null, string locale = null);
+        System.Threading.Tasks.Task<TeamsResponse> TeamsGetWorkgroupsV1Async (string lang = null, string locale = null);
 
         /// <summary>
         /// Get all available Workgroups
@@ -678,7 +678,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsTeamsTeamsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsTeamsTeamsResponse>> TeamsGetWorkgroupsV1AsyncWithHttpInfo (string lang = null, string locale = null);
+        System.Threading.Tasks.Task<ApiResponse<TeamsResponse>> TeamsGetWorkgroupsV1AsyncWithHttpInfo (string lang = null, string locale = null);
         /// <summary>
         /// Get all available Workgroups
         /// </summary>
@@ -689,7 +689,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsTeamsTeamsV2Response</returns>
-        System.Threading.Tasks.Task<TrebuchetWebApiDataContractsTeamsTeamsV2Response> TeamsGetWorkgroupsV2Async (string lang = null, string locale = null);
+        System.Threading.Tasks.Task<TeamsV2Response> TeamsGetWorkgroupsV2Async (string lang = null, string locale = null);
 
         /// <summary>
         /// Get all available Workgroups
@@ -701,7 +701,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsTeamsTeamsV2Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsTeamsTeamsV2Response>> TeamsGetWorkgroupsV2AsyncWithHttpInfo (string lang = null, string locale = null);
+        System.Threading.Tasks.Task<ApiResponse<TeamsV2Response>> TeamsGetWorkgroupsV2AsyncWithHttpInfo (string lang = null, string locale = null);
         /// <summary>
         /// Remove a customer from a Workgroup
         /// </summary>
@@ -714,7 +714,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsTeamsRemoveCustomerFromWorkgroupResponse</returns>
-        System.Threading.Tasks.Task<TrebuchetWebApiDataContractsTeamsRemoveCustomerFromWorkgroupResponse> TeamsRemoveCustomerFromWorkgroupV1Async (string workgroupid, string customerrecordid, string lang = null, string locale = null);
+        System.Threading.Tasks.Task<RemoveCustomerFromWorkgroupResponse> TeamsRemoveCustomerFromWorkgroupV1Async (string workgroupid, string customerrecordid, string lang = null, string locale = null);
 
         /// <summary>
         /// Remove a customer from a Workgroup
@@ -728,7 +728,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsTeamsRemoveCustomerFromWorkgroupResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsTeamsRemoveCustomerFromWorkgroupResponse>> TeamsRemoveCustomerFromWorkgroupV1AsyncWithHttpInfo (string workgroupid, string customerrecordid, string lang = null, string locale = null);
+        System.Threading.Tasks.Task<ApiResponse<RemoveCustomerFromWorkgroupResponse>> TeamsRemoveCustomerFromWorkgroupV1AsyncWithHttpInfo (string workgroupid, string customerrecordid, string lang = null, string locale = null);
         /// <summary>
         /// Operation to remove a User from a Team.
         /// </summary>
@@ -768,7 +768,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsTeamsRemoveUserFromTeamResponse</returns>
-        System.Threading.Tasks.Task<TrebuchetWebApiDataContractsTeamsRemoveUserFromTeamResponse> TeamsRemoveUserFromTeamV2Async (string teamId, string userrecordid, string lang = null, string locale = null);
+        System.Threading.Tasks.Task<RemoveUserFromTeamResponse> TeamsRemoveUserFromTeamV2Async (string teamId, string userrecordid, string lang = null, string locale = null);
 
         /// <summary>
         /// Operation to remove a User from a Team.
@@ -782,7 +782,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsTeamsRemoveUserFromTeamResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsTeamsRemoveUserFromTeamResponse>> TeamsRemoveUserFromTeamV2AsyncWithHttpInfo (string teamId, string userrecordid, string lang = null, string locale = null);
+        System.Threading.Tasks.Task<ApiResponse<RemoveUserFromTeamResponse>> TeamsRemoveUserFromTeamV2AsyncWithHttpInfo (string teamId, string userrecordid, string lang = null, string locale = null);
         /// <summary>
         /// Add or Update a team member
         /// </summary>
@@ -794,7 +794,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsTeamsSaveTeamMemberResponse</returns>
-        System.Threading.Tasks.Task<TrebuchetWebApiDataContractsTeamsSaveTeamMemberResponse> TeamsSaveTeamMemberV1Async (TrebuchetWebApiDataContractsTeamsSaveTeamMemberRequest request, string lang = null, string locale = null);
+        System.Threading.Tasks.Task<SaveTeamMemberResponse> TeamsSaveTeamMemberV1Async (SaveTeamMemberRequest request, string lang = null, string locale = null);
 
         /// <summary>
         /// Add or Update a team member
@@ -807,7 +807,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsTeamsSaveTeamMemberResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsTeamsSaveTeamMemberResponse>> TeamsSaveTeamMemberV1AsyncWithHttpInfo (TrebuchetWebApiDataContractsTeamsSaveTeamMemberRequest request, string lang = null, string locale = null);
+        System.Threading.Tasks.Task<ApiResponse<SaveTeamMemberResponse>> TeamsSaveTeamMemberV1AsyncWithHttpInfo (SaveTeamMemberRequest request, string lang = null, string locale = null);
         /// <summary>
         /// Create or update a team
         /// </summary>
@@ -819,7 +819,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsTeamsTeamSaveResponse</returns>
-        System.Threading.Tasks.Task<TrebuchetWebApiDataContractsTeamsTeamSaveResponse> TeamsSaveTeamV1Async (TrebuchetWebApiDataContractsTeamsTeamSaveRequest request, string lang = null, string locale = null);
+        System.Threading.Tasks.Task<TeamSaveResponse> TeamsSaveTeamV1Async (TeamSaveRequest request, string lang = null, string locale = null);
 
         /// <summary>
         /// Create or update a team
@@ -832,7 +832,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsTeamsTeamSaveResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsTeamsTeamSaveResponse>> TeamsSaveTeamV1AsyncWithHttpInfo (TrebuchetWebApiDataContractsTeamsTeamSaveRequest request, string lang = null, string locale = null);
+        System.Threading.Tasks.Task<ApiResponse<TeamSaveResponse>> TeamsSaveTeamV1AsyncWithHttpInfo (TeamSaveRequest request, string lang = null, string locale = null);
         /// <summary>
         /// Save the membership status of a Workgroup member.
         /// </summary>
@@ -844,7 +844,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsTeamsSaveWorkgroupMemberResponse</returns>
-        System.Threading.Tasks.Task<TrebuchetWebApiDataContractsTeamsSaveWorkgroupMemberResponse> TeamsSaveWorkgroupMemberV1Async (TrebuchetWebApiDataContractsTeamsSaveWorkgroupMemberRequest request, string lang = null, string locale = null);
+        System.Threading.Tasks.Task<SaveWorkgroupMemberResponse> TeamsSaveWorkgroupMemberV1Async (SaveWorkgroupMemberRequest request, string lang = null, string locale = null);
 
         /// <summary>
         /// Save the membership status of a Workgroup member.
@@ -857,7 +857,7 @@ namespace CherwellConnector.Interface
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsTeamsSaveWorkgroupMemberResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsTeamsSaveWorkgroupMemberResponse>> TeamsSaveWorkgroupMemberV1AsyncWithHttpInfo (TrebuchetWebApiDataContractsTeamsSaveWorkgroupMemberRequest request, string lang = null, string locale = null);
+        System.Threading.Tasks.Task<ApiResponse<SaveWorkgroupMemberResponse>> TeamsSaveWorkgroupMemberV1AsyncWithHttpInfo (SaveWorkgroupMemberRequest request, string lang = null, string locale = null);
         #endregion Asynchronous Operations
     }
 }

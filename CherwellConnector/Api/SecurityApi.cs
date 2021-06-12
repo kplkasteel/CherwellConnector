@@ -120,9 +120,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsSecurityClientSecuritySettingsResponse</returns>
-        public TrebuchetWebApiDataContractsSecurityClientSecuritySettingsResponse SecurityGetClientSecuritySettingsV1 (string applicationtype, string lang = null, string locale = null)
+        public ClientSecuritySettingsResponse SecurityGetClientSecuritySettingsV1 (string applicationtype, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsSecurityClientSecuritySettingsResponse> localVarResponse = SecurityGetClientSecuritySettingsV1WithHttpInfo(applicationtype, lang, locale);
+             ApiResponse<ClientSecuritySettingsResponse> localVarResponse = SecurityGetClientSecuritySettingsV1WithHttpInfo(applicationtype, lang, locale);
              return localVarResponse.Data;
         }
 
@@ -134,7 +134,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsSecurityClientSecuritySettingsResponse</returns>
-        public ApiResponse< TrebuchetWebApiDataContractsSecurityClientSecuritySettingsResponse > SecurityGetClientSecuritySettingsV1WithHttpInfo (string applicationtype, string lang = null, string locale = null)
+        public ApiResponse< ClientSecuritySettingsResponse > SecurityGetClientSecuritySettingsV1WithHttpInfo (string applicationtype, string lang = null, string locale = null)
         {
             // verify the required parameter 'applicationtype' is set
             if (applicationtype == null)
@@ -182,9 +182,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsSecurityClientSecuritySettingsResponse>(localVarStatusCode,
+            return new ApiResponse<ClientSecuritySettingsResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsSecurityClientSecuritySettingsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsSecurityClientSecuritySettingsResponse)));
+                (ClientSecuritySettingsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ClientSecuritySettingsResponse)));
         }
 
         /// <summary>
@@ -195,9 +195,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsSecurityClientSecuritySettingsResponse</returns>
-        public async System.Threading.Tasks.Task<TrebuchetWebApiDataContractsSecurityClientSecuritySettingsResponse> SecurityGetClientSecuritySettingsV1Async (string applicationtype, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ClientSecuritySettingsResponse> SecurityGetClientSecuritySettingsV1Async (string applicationtype, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsSecurityClientSecuritySettingsResponse> localVarResponse = await SecurityGetClientSecuritySettingsV1AsyncWithHttpInfo(applicationtype, lang, locale);
+             ApiResponse<ClientSecuritySettingsResponse> localVarResponse = await SecurityGetClientSecuritySettingsV1AsyncWithHttpInfo(applicationtype, lang, locale);
              return localVarResponse.Data;
 
         }
@@ -210,7 +210,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsSecurityClientSecuritySettingsResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsSecurityClientSecuritySettingsResponse>> SecurityGetClientSecuritySettingsV1AsyncWithHttpInfo (string applicationtype, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ClientSecuritySettingsResponse>> SecurityGetClientSecuritySettingsV1AsyncWithHttpInfo (string applicationtype, string lang = null, string locale = null)
         {
             // verify the required parameter 'applicationtype' is set
             if (applicationtype == null)
@@ -258,9 +258,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsSecurityClientSecuritySettingsResponse>(localVarStatusCode,
+            return new ApiResponse<ClientSecuritySettingsResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsSecurityClientSecuritySettingsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsSecurityClientSecuritySettingsResponse)));
+                (ClientSecuritySettingsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ClientSecuritySettingsResponse)));
         }
 
         /// <summary>
@@ -270,9 +270,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsSecurityRoleReadResponse</returns>
-        public TrebuchetWebApiDataContractsSecurityRoleReadResponse SecurityGetRolesV1 (string lang = null, string locale = null)
+        public SecurityRoleReadResponse SecurityGetRolesV1 (string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsSecurityRoleReadResponse> localVarResponse = SecurityGetRolesV1WithHttpInfo(lang, locale);
+             ApiResponse<SecurityRoleReadResponse> localVarResponse = SecurityGetRolesV1WithHttpInfo(lang, locale);
              return localVarResponse.Data;
         }
 
@@ -283,7 +283,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsSecurityRoleReadResponse</returns>
-        public ApiResponse< TrebuchetWebApiDataContractsSecurityRoleReadResponse > SecurityGetRolesV1WithHttpInfo (string lang = null, string locale = null)
+        public ApiResponse< SecurityRoleReadResponse > SecurityGetRolesV1WithHttpInfo (string lang = null, string locale = null)
         {
 
             var localVarPath = "/api/V1/getroles";
@@ -333,9 +333,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsSecurityRoleReadResponse>(localVarStatusCode,
+            return new ApiResponse<SecurityRoleReadResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsSecurityRoleReadResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsSecurityRoleReadResponse)));
+                (SecurityRoleReadResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SecurityRoleReadResponse)));
         }
 
         /// <summary>
@@ -345,9 +345,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsSecurityRoleReadResponse</returns>
-        public async System.Threading.Tasks.Task<TrebuchetWebApiDataContractsSecurityRoleReadResponse> SecurityGetRolesV1Async (string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<SecurityRoleReadResponse> SecurityGetRolesV1Async (string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsSecurityRoleReadResponse> localVarResponse = await SecurityGetRolesV1AsyncWithHttpInfo(lang, locale);
+             ApiResponse<SecurityRoleReadResponse> localVarResponse = await SecurityGetRolesV1AsyncWithHttpInfo(lang, locale);
              return localVarResponse.Data;
 
         }
@@ -359,7 +359,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsSecurityRoleReadResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsSecurityRoleReadResponse>> SecurityGetRolesV1AsyncWithHttpInfo (string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ApiResponse<SecurityRoleReadResponse>> SecurityGetRolesV1AsyncWithHttpInfo (string lang = null, string locale = null)
         {
 
             var localVarPath = "/api/V1/getroles";
@@ -409,9 +409,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsSecurityRoleReadResponse>(localVarStatusCode,
+            return new ApiResponse<SecurityRoleReadResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsSecurityRoleReadResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsSecurityRoleReadResponse)));
+                (SecurityRoleReadResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SecurityRoleReadResponse)));
         }
 
         /// <summary>
@@ -421,9 +421,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsSecurityRoleReadV2Response</returns>
-        public TrebuchetWebApiDataContractsSecurityRoleReadV2Response SecurityGetRolesV2 (string lang = null, string locale = null)
+        public RoleReadV2Response SecurityGetRolesV2 (string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsSecurityRoleReadV2Response> localVarResponse = SecurityGetRolesV2WithHttpInfo(lang, locale);
+             ApiResponse<RoleReadV2Response> localVarResponse = SecurityGetRolesV2WithHttpInfo(lang, locale);
              return localVarResponse.Data;
         }
 
@@ -434,7 +434,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsSecurityRoleReadV2Response</returns>
-        public ApiResponse< TrebuchetWebApiDataContractsSecurityRoleReadV2Response > SecurityGetRolesV2WithHttpInfo (string lang = null, string locale = null)
+        public ApiResponse< RoleReadV2Response > SecurityGetRolesV2WithHttpInfo (string lang = null, string locale = null)
         {
 
             var localVarPath = "/api/V2/getroles";
@@ -484,9 +484,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsSecurityRoleReadV2Response>(localVarStatusCode,
+            return new ApiResponse<RoleReadV2Response>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsSecurityRoleReadV2Response) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsSecurityRoleReadV2Response)));
+                (RoleReadV2Response) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RoleReadV2Response)));
         }
 
         /// <summary>
@@ -496,9 +496,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsSecurityRoleReadV2Response</returns>
-        public async System.Threading.Tasks.Task<TrebuchetWebApiDataContractsSecurityRoleReadV2Response> SecurityGetRolesV2Async (string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<RoleReadV2Response> SecurityGetRolesV2Async (string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsSecurityRoleReadV2Response> localVarResponse = await SecurityGetRolesV2AsyncWithHttpInfo(lang, locale);
+             ApiResponse<RoleReadV2Response> localVarResponse = await SecurityGetRolesV2AsyncWithHttpInfo(lang, locale);
              return localVarResponse.Data;
 
         }
@@ -510,7 +510,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsSecurityRoleReadV2Response)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsSecurityRoleReadV2Response>> SecurityGetRolesV2AsyncWithHttpInfo (string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ApiResponse<RoleReadV2Response>> SecurityGetRolesV2AsyncWithHttpInfo (string lang = null, string locale = null)
         {
 
             var localVarPath = "/api/V2/getroles";
@@ -560,9 +560,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsSecurityRoleReadV2Response>(localVarStatusCode,
+            return new ApiResponse<RoleReadV2Response>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsSecurityRoleReadV2Response) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsSecurityRoleReadV2Response)));
+                (RoleReadV2Response) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RoleReadV2Response)));
         }
 
         /// <summary>
@@ -574,9 +574,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>List&lt;TrebuchetWebApiDataContractsSecurityBusinessObjectPermission&gt;</returns>
-        public List<TrebuchetWebApiDataContractsSecurityBusinessObjectPermission> SecurityGetSecurityGroupBusinessObjectPermissionsByBusObIdV1 (string groupid, string busObId, string lang = null, string locale = null)
+        public List<BusinessObjectPermission> SecurityGetSecurityGroupBusinessObjectPermissionsByBusObIdV1 (string groupid, string busObId, string lang = null, string locale = null)
         {
-             ApiResponse<List<TrebuchetWebApiDataContractsSecurityBusinessObjectPermission>> localVarResponse = SecurityGetSecurityGroupBusinessObjectPermissionsByBusObIdV1WithHttpInfo(groupid, busObId, lang, locale);
+             ApiResponse<List<BusinessObjectPermission>> localVarResponse = SecurityGetSecurityGroupBusinessObjectPermissionsByBusObIdV1WithHttpInfo(groupid, busObId, lang, locale);
              return localVarResponse.Data;
         }
 
@@ -589,7 +589,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of List&lt;TrebuchetWebApiDataContractsSecurityBusinessObjectPermission&gt;</returns>
-        public ApiResponse< List<TrebuchetWebApiDataContractsSecurityBusinessObjectPermission> > SecurityGetSecurityGroupBusinessObjectPermissionsByBusObIdV1WithHttpInfo (string groupid, string busObId, string lang = null, string locale = null)
+        public ApiResponse< List<BusinessObjectPermission> > SecurityGetSecurityGroupBusinessObjectPermissionsByBusObIdV1WithHttpInfo (string groupid, string busObId, string lang = null, string locale = null)
         {
             // verify the required parameter 'groupid' is set
             if (groupid == null)
@@ -647,9 +647,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<TrebuchetWebApiDataContractsSecurityBusinessObjectPermission>>(localVarStatusCode,
+            return new ApiResponse<List<BusinessObjectPermission>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<TrebuchetWebApiDataContractsSecurityBusinessObjectPermission>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<TrebuchetWebApiDataContractsSecurityBusinessObjectPermission>)));
+                (List<BusinessObjectPermission>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<BusinessObjectPermission>)));
         }
 
         /// <summary>
@@ -661,9 +661,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of List&lt;TrebuchetWebApiDataContractsSecurityBusinessObjectPermission&gt;</returns>
-        public async System.Threading.Tasks.Task<List<TrebuchetWebApiDataContractsSecurityBusinessObjectPermission>> SecurityGetSecurityGroupBusinessObjectPermissionsByBusObIdV1Async (string groupid, string busObId, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<List<BusinessObjectPermission>> SecurityGetSecurityGroupBusinessObjectPermissionsByBusObIdV1Async (string groupid, string busObId, string lang = null, string locale = null)
         {
-             ApiResponse<List<TrebuchetWebApiDataContractsSecurityBusinessObjectPermission>> localVarResponse = await SecurityGetSecurityGroupBusinessObjectPermissionsByBusObIdV1AsyncWithHttpInfo(groupid, busObId, lang, locale);
+             ApiResponse<List<BusinessObjectPermission>> localVarResponse = await SecurityGetSecurityGroupBusinessObjectPermissionsByBusObIdV1AsyncWithHttpInfo(groupid, busObId, lang, locale);
              return localVarResponse.Data;
 
         }
@@ -677,7 +677,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;TrebuchetWebApiDataContractsSecurityBusinessObjectPermission&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<TrebuchetWebApiDataContractsSecurityBusinessObjectPermission>>> SecurityGetSecurityGroupBusinessObjectPermissionsByBusObIdV1AsyncWithHttpInfo (string groupid, string busObId, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ApiResponse<List<BusinessObjectPermission>>> SecurityGetSecurityGroupBusinessObjectPermissionsByBusObIdV1AsyncWithHttpInfo (string groupid, string busObId, string lang = null, string locale = null)
         {
             // verify the required parameter 'groupid' is set
             if (groupid == null)
@@ -735,9 +735,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<TrebuchetWebApiDataContractsSecurityBusinessObjectPermission>>(localVarStatusCode,
+            return new ApiResponse<List<BusinessObjectPermission>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<TrebuchetWebApiDataContractsSecurityBusinessObjectPermission>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<TrebuchetWebApiDataContractsSecurityBusinessObjectPermission>)));
+                (List<BusinessObjectPermission>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<BusinessObjectPermission>)));
         }
 
         /// <summary>
@@ -749,9 +749,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsSecurityGetSecurityGroupBusinessObjectPermissionsResponse</returns>
-        public TrebuchetWebApiDataContractsSecurityGetSecurityGroupBusinessObjectPermissionsResponse SecurityGetSecurityGroupBusinessObjectPermissionsByBusObIdV2 (string groupid, string busObId, string lang = null, string locale = null)
+        public SecurityGroupBusinessObjectPermissionsResponse SecurityGetSecurityGroupBusinessObjectPermissionsByBusObIdV2 (string groupid, string busObId, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsSecurityGetSecurityGroupBusinessObjectPermissionsResponse> localVarResponse = SecurityGetSecurityGroupBusinessObjectPermissionsByBusObIdV2WithHttpInfo(groupid, busObId, lang, locale);
+             ApiResponse<SecurityGroupBusinessObjectPermissionsResponse> localVarResponse = SecurityGetSecurityGroupBusinessObjectPermissionsByBusObIdV2WithHttpInfo(groupid, busObId, lang, locale);
              return localVarResponse.Data;
         }
 
@@ -764,7 +764,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsSecurityGetSecurityGroupBusinessObjectPermissionsResponse</returns>
-        public ApiResponse< TrebuchetWebApiDataContractsSecurityGetSecurityGroupBusinessObjectPermissionsResponse > SecurityGetSecurityGroupBusinessObjectPermissionsByBusObIdV2WithHttpInfo (string groupid, string busObId, string lang = null, string locale = null)
+        public ApiResponse< SecurityGroupBusinessObjectPermissionsResponse > SecurityGetSecurityGroupBusinessObjectPermissionsByBusObIdV2WithHttpInfo (string groupid, string busObId, string lang = null, string locale = null)
         {
             // verify the required parameter 'groupid' is set
             if (groupid == null)
@@ -822,9 +822,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsSecurityGetSecurityGroupBusinessObjectPermissionsResponse>(localVarStatusCode,
+            return new ApiResponse<SecurityGroupBusinessObjectPermissionsResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsSecurityGetSecurityGroupBusinessObjectPermissionsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsSecurityGetSecurityGroupBusinessObjectPermissionsResponse)));
+                (SecurityGroupBusinessObjectPermissionsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SecurityGroupBusinessObjectPermissionsResponse)));
         }
 
         /// <summary>
@@ -836,9 +836,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsSecurityGetSecurityGroupBusinessObjectPermissionsResponse</returns>
-        public async System.Threading.Tasks.Task<TrebuchetWebApiDataContractsSecurityGetSecurityGroupBusinessObjectPermissionsResponse> SecurityGetSecurityGroupBusinessObjectPermissionsByBusObIdV2Async (string groupid, string busObId, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<SecurityGroupBusinessObjectPermissionsResponse> SecurityGetSecurityGroupBusinessObjectPermissionsByBusObIdV2Async (string groupid, string busObId, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsSecurityGetSecurityGroupBusinessObjectPermissionsResponse> localVarResponse = await SecurityGetSecurityGroupBusinessObjectPermissionsByBusObIdV2AsyncWithHttpInfo(groupid, busObId, lang, locale);
+             ApiResponse<SecurityGroupBusinessObjectPermissionsResponse> localVarResponse = await SecurityGetSecurityGroupBusinessObjectPermissionsByBusObIdV2AsyncWithHttpInfo(groupid, busObId, lang, locale);
              return localVarResponse.Data;
 
         }
@@ -852,7 +852,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsSecurityGetSecurityGroupBusinessObjectPermissionsResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsSecurityGetSecurityGroupBusinessObjectPermissionsResponse>> SecurityGetSecurityGroupBusinessObjectPermissionsByBusObIdV2AsyncWithHttpInfo (string groupid, string busObId, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ApiResponse<SecurityGroupBusinessObjectPermissionsResponse>> SecurityGetSecurityGroupBusinessObjectPermissionsByBusObIdV2AsyncWithHttpInfo (string groupid, string busObId, string lang = null, string locale = null)
         {
             // verify the required parameter 'groupid' is set
             if (groupid == null)
@@ -910,9 +910,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsSecurityGetSecurityGroupBusinessObjectPermissionsResponse>(localVarStatusCode,
+            return new ApiResponse<SecurityGroupBusinessObjectPermissionsResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsSecurityGetSecurityGroupBusinessObjectPermissionsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsSecurityGetSecurityGroupBusinessObjectPermissionsResponse)));
+                (SecurityGroupBusinessObjectPermissionsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SecurityGroupBusinessObjectPermissionsResponse)));
         }
 
         /// <summary>
@@ -924,9 +924,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>List&lt;TrebuchetWebApiDataContractsSecurityBusinessObjectPermission&gt;</returns>
-        public List<TrebuchetWebApiDataContractsSecurityBusinessObjectPermission> SecurityGetSecurityGroupBusinessObjectPermissionsByBusObNameV1 (string groupname, string busobname, string lang = null, string locale = null)
+        public List<BusinessObjectPermission> SecurityGetSecurityGroupBusinessObjectPermissionsByBusObNameV1 (string groupname, string busobname, string lang = null, string locale = null)
         {
-             ApiResponse<List<TrebuchetWebApiDataContractsSecurityBusinessObjectPermission>> localVarResponse = SecurityGetSecurityGroupBusinessObjectPermissionsByBusObNameV1WithHttpInfo(groupname, busobname, lang, locale);
+             ApiResponse<List<BusinessObjectPermission>> localVarResponse = SecurityGetSecurityGroupBusinessObjectPermissionsByBusObNameV1WithHttpInfo(groupname, busobname, lang, locale);
              return localVarResponse.Data;
         }
 
@@ -939,7 +939,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of List&lt;TrebuchetWebApiDataContractsSecurityBusinessObjectPermission&gt;</returns>
-        public ApiResponse< List<TrebuchetWebApiDataContractsSecurityBusinessObjectPermission> > SecurityGetSecurityGroupBusinessObjectPermissionsByBusObNameV1WithHttpInfo (string groupname, string busobname, string lang = null, string locale = null)
+        public ApiResponse< List<BusinessObjectPermission> > SecurityGetSecurityGroupBusinessObjectPermissionsByBusObNameV1WithHttpInfo (string groupname, string busobname, string lang = null, string locale = null)
         {
             // verify the required parameter 'groupname' is set
             if (groupname == null)
@@ -997,9 +997,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<TrebuchetWebApiDataContractsSecurityBusinessObjectPermission>>(localVarStatusCode,
+            return new ApiResponse<List<BusinessObjectPermission>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<TrebuchetWebApiDataContractsSecurityBusinessObjectPermission>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<TrebuchetWebApiDataContractsSecurityBusinessObjectPermission>)));
+                (List<BusinessObjectPermission>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<BusinessObjectPermission>)));
         }
 
         /// <summary>
@@ -1011,9 +1011,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of List&lt;TrebuchetWebApiDataContractsSecurityBusinessObjectPermission&gt;</returns>
-        public async System.Threading.Tasks.Task<List<TrebuchetWebApiDataContractsSecurityBusinessObjectPermission>> SecurityGetSecurityGroupBusinessObjectPermissionsByBusObNameV1Async (string groupname, string busobname, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<List<BusinessObjectPermission>> SecurityGetSecurityGroupBusinessObjectPermissionsByBusObNameV1Async (string groupname, string busobname, string lang = null, string locale = null)
         {
-             ApiResponse<List<TrebuchetWebApiDataContractsSecurityBusinessObjectPermission>> localVarResponse = await SecurityGetSecurityGroupBusinessObjectPermissionsByBusObNameV1AsyncWithHttpInfo(groupname, busobname, lang, locale);
+             ApiResponse<List<BusinessObjectPermission>> localVarResponse = await SecurityGetSecurityGroupBusinessObjectPermissionsByBusObNameV1AsyncWithHttpInfo(groupname, busobname, lang, locale);
              return localVarResponse.Data;
 
         }
@@ -1027,7 +1027,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;TrebuchetWebApiDataContractsSecurityBusinessObjectPermission&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<TrebuchetWebApiDataContractsSecurityBusinessObjectPermission>>> SecurityGetSecurityGroupBusinessObjectPermissionsByBusObNameV1AsyncWithHttpInfo (string groupname, string busobname, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ApiResponse<List<BusinessObjectPermission>>> SecurityGetSecurityGroupBusinessObjectPermissionsByBusObNameV1AsyncWithHttpInfo (string groupname, string busobname, string lang = null, string locale = null)
         {
             // verify the required parameter 'groupname' is set
             if (groupname == null)
@@ -1085,9 +1085,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<TrebuchetWebApiDataContractsSecurityBusinessObjectPermission>>(localVarStatusCode,
+            return new ApiResponse<List<BusinessObjectPermission>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<TrebuchetWebApiDataContractsSecurityBusinessObjectPermission>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<TrebuchetWebApiDataContractsSecurityBusinessObjectPermission>)));
+                (List<BusinessObjectPermission>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<BusinessObjectPermission>)));
         }
 
         /// <summary>
@@ -1099,9 +1099,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsSecurityGetSecurityGroupBusinessObjectPermissionsResponse</returns>
-        public TrebuchetWebApiDataContractsSecurityGetSecurityGroupBusinessObjectPermissionsResponse SecurityGetSecurityGroupBusinessObjectPermissionsByBusObNameV2 (string groupname, string busobname, string lang = null, string locale = null)
+        public SecurityGroupBusinessObjectPermissionsResponse SecurityGetSecurityGroupBusinessObjectPermissionsByBusObNameV2 (string groupname, string busobname, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsSecurityGetSecurityGroupBusinessObjectPermissionsResponse> localVarResponse = SecurityGetSecurityGroupBusinessObjectPermissionsByBusObNameV2WithHttpInfo(groupname, busobname, lang, locale);
+             ApiResponse<SecurityGroupBusinessObjectPermissionsResponse> localVarResponse = SecurityGetSecurityGroupBusinessObjectPermissionsByBusObNameV2WithHttpInfo(groupname, busobname, lang, locale);
              return localVarResponse.Data;
         }
 
@@ -1114,7 +1114,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsSecurityGetSecurityGroupBusinessObjectPermissionsResponse</returns>
-        public ApiResponse< TrebuchetWebApiDataContractsSecurityGetSecurityGroupBusinessObjectPermissionsResponse > SecurityGetSecurityGroupBusinessObjectPermissionsByBusObNameV2WithHttpInfo (string groupname, string busobname, string lang = null, string locale = null)
+        public ApiResponse< SecurityGroupBusinessObjectPermissionsResponse > SecurityGetSecurityGroupBusinessObjectPermissionsByBusObNameV2WithHttpInfo (string groupname, string busobname, string lang = null, string locale = null)
         {
             // verify the required parameter 'groupname' is set
             if (groupname == null)
@@ -1172,9 +1172,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsSecurityGetSecurityGroupBusinessObjectPermissionsResponse>(localVarStatusCode,
+            return new ApiResponse<SecurityGroupBusinessObjectPermissionsResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsSecurityGetSecurityGroupBusinessObjectPermissionsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsSecurityGetSecurityGroupBusinessObjectPermissionsResponse)));
+                (SecurityGroupBusinessObjectPermissionsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SecurityGroupBusinessObjectPermissionsResponse)));
         }
 
         /// <summary>
@@ -1186,9 +1186,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsSecurityGetSecurityGroupBusinessObjectPermissionsResponse</returns>
-        public async System.Threading.Tasks.Task<TrebuchetWebApiDataContractsSecurityGetSecurityGroupBusinessObjectPermissionsResponse> SecurityGetSecurityGroupBusinessObjectPermissionsByBusObNameV2Async (string groupname, string busobname, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<SecurityGroupBusinessObjectPermissionsResponse> SecurityGetSecurityGroupBusinessObjectPermissionsByBusObNameV2Async (string groupname, string busobname, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsSecurityGetSecurityGroupBusinessObjectPermissionsResponse> localVarResponse = await SecurityGetSecurityGroupBusinessObjectPermissionsByBusObNameV2AsyncWithHttpInfo(groupname, busobname, lang, locale);
+             ApiResponse<SecurityGroupBusinessObjectPermissionsResponse> localVarResponse = await SecurityGetSecurityGroupBusinessObjectPermissionsByBusObNameV2AsyncWithHttpInfo(groupname, busobname, lang, locale);
              return localVarResponse.Data;
 
         }
@@ -1202,7 +1202,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsSecurityGetSecurityGroupBusinessObjectPermissionsResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsSecurityGetSecurityGroupBusinessObjectPermissionsResponse>> SecurityGetSecurityGroupBusinessObjectPermissionsByBusObNameV2AsyncWithHttpInfo (string groupname, string busobname, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ApiResponse<SecurityGroupBusinessObjectPermissionsResponse>> SecurityGetSecurityGroupBusinessObjectPermissionsByBusObNameV2AsyncWithHttpInfo (string groupname, string busobname, string lang = null, string locale = null)
         {
             // verify the required parameter 'groupname' is set
             if (groupname == null)
@@ -1260,9 +1260,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsSecurityGetSecurityGroupBusinessObjectPermissionsResponse>(localVarStatusCode,
+            return new ApiResponse<SecurityGroupBusinessObjectPermissionsResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsSecurityGetSecurityGroupBusinessObjectPermissionsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsSecurityGetSecurityGroupBusinessObjectPermissionsResponse)));
+                (SecurityGroupBusinessObjectPermissionsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SecurityGroupBusinessObjectPermissionsResponse)));
         }
 
         /// <summary>
@@ -1273,9 +1273,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>List&lt;TrebuchetWebApiDataContractsSecurityBusinessObjectPermission&gt;</returns>
-        public List<TrebuchetWebApiDataContractsSecurityBusinessObjectPermission> SecurityGetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObIdV1 (string busObId, string lang = null, string locale = null)
+        public List<BusinessObjectPermission> SecurityGetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObIdV1 (string busObId, string lang = null, string locale = null)
         {
-             ApiResponse<List<TrebuchetWebApiDataContractsSecurityBusinessObjectPermission>> localVarResponse = SecurityGetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObIdV1WithHttpInfo(busObId, lang, locale);
+             ApiResponse<List<BusinessObjectPermission>> localVarResponse = SecurityGetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObIdV1WithHttpInfo(busObId, lang, locale);
              return localVarResponse.Data;
         }
 
@@ -1287,7 +1287,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of List&lt;TrebuchetWebApiDataContractsSecurityBusinessObjectPermission&gt;</returns>
-        public ApiResponse< List<TrebuchetWebApiDataContractsSecurityBusinessObjectPermission> > SecurityGetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObIdV1WithHttpInfo (string busObId, string lang = null, string locale = null)
+        public ApiResponse< List<BusinessObjectPermission> > SecurityGetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObIdV1WithHttpInfo (string busObId, string lang = null, string locale = null)
         {
             // verify the required parameter 'busObId' is set
             if (busObId == null)
@@ -1341,9 +1341,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<TrebuchetWebApiDataContractsSecurityBusinessObjectPermission>>(localVarStatusCode,
+            return new ApiResponse<List<BusinessObjectPermission>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<TrebuchetWebApiDataContractsSecurityBusinessObjectPermission>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<TrebuchetWebApiDataContractsSecurityBusinessObjectPermission>)));
+                (List<BusinessObjectPermission>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<BusinessObjectPermission>)));
         }
 
         /// <summary>
@@ -1354,9 +1354,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of List&lt;TrebuchetWebApiDataContractsSecurityBusinessObjectPermission&gt;</returns>
-        public async System.Threading.Tasks.Task<List<TrebuchetWebApiDataContractsSecurityBusinessObjectPermission>> SecurityGetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObIdV1Async (string busObId, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<List<BusinessObjectPermission>> SecurityGetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObIdV1Async (string busObId, string lang = null, string locale = null)
         {
-             ApiResponse<List<TrebuchetWebApiDataContractsSecurityBusinessObjectPermission>> localVarResponse = await SecurityGetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObIdV1AsyncWithHttpInfo(busObId, lang, locale);
+             ApiResponse<List<BusinessObjectPermission>> localVarResponse = await SecurityGetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObIdV1AsyncWithHttpInfo(busObId, lang, locale);
              return localVarResponse.Data;
 
         }
@@ -1369,7 +1369,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;TrebuchetWebApiDataContractsSecurityBusinessObjectPermission&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<TrebuchetWebApiDataContractsSecurityBusinessObjectPermission>>> SecurityGetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObIdV1AsyncWithHttpInfo (string busObId, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ApiResponse<List<BusinessObjectPermission>>> SecurityGetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObIdV1AsyncWithHttpInfo (string busObId, string lang = null, string locale = null)
         {
             // verify the required parameter 'busObId' is set
             if (busObId == null)
@@ -1423,9 +1423,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<TrebuchetWebApiDataContractsSecurityBusinessObjectPermission>>(localVarStatusCode,
+            return new ApiResponse<List<BusinessObjectPermission>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<TrebuchetWebApiDataContractsSecurityBusinessObjectPermission>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<TrebuchetWebApiDataContractsSecurityBusinessObjectPermission>)));
+                (List<BusinessObjectPermission>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<BusinessObjectPermission>)));
         }
 
         /// <summary>
@@ -1436,9 +1436,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsSecurityGetSecurityGroupBusinessObjectPermissionsResponse</returns>
-        public TrebuchetWebApiDataContractsSecurityGetSecurityGroupBusinessObjectPermissionsResponse SecurityGetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObIdV2 (string busObId, string lang = null, string locale = null)
+        public SecurityGroupBusinessObjectPermissionsResponse SecurityGetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObIdV2 (string busObId, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsSecurityGetSecurityGroupBusinessObjectPermissionsResponse> localVarResponse = SecurityGetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObIdV2WithHttpInfo(busObId, lang, locale);
+             ApiResponse<SecurityGroupBusinessObjectPermissionsResponse> localVarResponse = SecurityGetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObIdV2WithHttpInfo(busObId, lang, locale);
              return localVarResponse.Data;
         }
 
@@ -1450,7 +1450,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsSecurityGetSecurityGroupBusinessObjectPermissionsResponse</returns>
-        public ApiResponse< TrebuchetWebApiDataContractsSecurityGetSecurityGroupBusinessObjectPermissionsResponse > SecurityGetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObIdV2WithHttpInfo (string busObId, string lang = null, string locale = null)
+        public ApiResponse< SecurityGroupBusinessObjectPermissionsResponse > SecurityGetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObIdV2WithHttpInfo (string busObId, string lang = null, string locale = null)
         {
             // verify the required parameter 'busObId' is set
             if (busObId == null)
@@ -1504,9 +1504,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsSecurityGetSecurityGroupBusinessObjectPermissionsResponse>(localVarStatusCode,
+            return new ApiResponse<SecurityGroupBusinessObjectPermissionsResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsSecurityGetSecurityGroupBusinessObjectPermissionsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsSecurityGetSecurityGroupBusinessObjectPermissionsResponse)));
+                (SecurityGroupBusinessObjectPermissionsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SecurityGroupBusinessObjectPermissionsResponse)));
         }
 
         /// <summary>
@@ -1517,9 +1517,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsSecurityGetSecurityGroupBusinessObjectPermissionsResponse</returns>
-        public async System.Threading.Tasks.Task<TrebuchetWebApiDataContractsSecurityGetSecurityGroupBusinessObjectPermissionsResponse> SecurityGetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObIdV2Async (string busObId, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<SecurityGroupBusinessObjectPermissionsResponse> SecurityGetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObIdV2Async (string busObId, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsSecurityGetSecurityGroupBusinessObjectPermissionsResponse> localVarResponse = await SecurityGetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObIdV2AsyncWithHttpInfo(busObId, lang, locale);
+             ApiResponse<SecurityGroupBusinessObjectPermissionsResponse> localVarResponse = await SecurityGetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObIdV2AsyncWithHttpInfo(busObId, lang, locale);
              return localVarResponse.Data;
 
         }
@@ -1532,7 +1532,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsSecurityGetSecurityGroupBusinessObjectPermissionsResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsSecurityGetSecurityGroupBusinessObjectPermissionsResponse>> SecurityGetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObIdV2AsyncWithHttpInfo (string busObId, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ApiResponse<SecurityGroupBusinessObjectPermissionsResponse>> SecurityGetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObIdV2AsyncWithHttpInfo (string busObId, string lang = null, string locale = null)
         {
             // verify the required parameter 'busObId' is set
             if (busObId == null)
@@ -1586,9 +1586,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsSecurityGetSecurityGroupBusinessObjectPermissionsResponse>(localVarStatusCode,
+            return new ApiResponse<SecurityGroupBusinessObjectPermissionsResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsSecurityGetSecurityGroupBusinessObjectPermissionsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsSecurityGetSecurityGroupBusinessObjectPermissionsResponse)));
+                (SecurityGroupBusinessObjectPermissionsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SecurityGroupBusinessObjectPermissionsResponse)));
         }
 
         /// <summary>
@@ -1599,9 +1599,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>List&lt;TrebuchetWebApiDataContractsSecurityBusinessObjectPermission&gt;</returns>
-        public List<TrebuchetWebApiDataContractsSecurityBusinessObjectPermission> SecurityGetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObNameV1 (string busobname, string lang = null, string locale = null)
+        public List<BusinessObjectPermission> SecurityGetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObNameV1 (string busobname, string lang = null, string locale = null)
         {
-             ApiResponse<List<TrebuchetWebApiDataContractsSecurityBusinessObjectPermission>> localVarResponse = SecurityGetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObNameV1WithHttpInfo(busobname, lang, locale);
+             ApiResponse<List<BusinessObjectPermission>> localVarResponse = SecurityGetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObNameV1WithHttpInfo(busobname, lang, locale);
              return localVarResponse.Data;
         }
 
@@ -1613,7 +1613,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of List&lt;TrebuchetWebApiDataContractsSecurityBusinessObjectPermission&gt;</returns>
-        public ApiResponse< List<TrebuchetWebApiDataContractsSecurityBusinessObjectPermission> > SecurityGetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObNameV1WithHttpInfo (string busobname, string lang = null, string locale = null)
+        public ApiResponse< List<BusinessObjectPermission> > SecurityGetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObNameV1WithHttpInfo (string busobname, string lang = null, string locale = null)
         {
             // verify the required parameter 'busobname' is set
             if (busobname == null)
@@ -1667,9 +1667,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<TrebuchetWebApiDataContractsSecurityBusinessObjectPermission>>(localVarStatusCode,
+            return new ApiResponse<List<BusinessObjectPermission>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<TrebuchetWebApiDataContractsSecurityBusinessObjectPermission>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<TrebuchetWebApiDataContractsSecurityBusinessObjectPermission>)));
+                (List<BusinessObjectPermission>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<BusinessObjectPermission>)));
         }
 
         /// <summary>
@@ -1680,9 +1680,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of List&lt;TrebuchetWebApiDataContractsSecurityBusinessObjectPermission&gt;</returns>
-        public async System.Threading.Tasks.Task<List<TrebuchetWebApiDataContractsSecurityBusinessObjectPermission>> SecurityGetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObNameV1Async (string busobname, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<List<BusinessObjectPermission>> SecurityGetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObNameV1Async (string busobname, string lang = null, string locale = null)
         {
-             ApiResponse<List<TrebuchetWebApiDataContractsSecurityBusinessObjectPermission>> localVarResponse = await SecurityGetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObNameV1AsyncWithHttpInfo(busobname, lang, locale);
+             ApiResponse<List<BusinessObjectPermission>> localVarResponse = await SecurityGetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObNameV1AsyncWithHttpInfo(busobname, lang, locale);
              return localVarResponse.Data;
 
         }
@@ -1695,7 +1695,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;TrebuchetWebApiDataContractsSecurityBusinessObjectPermission&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<TrebuchetWebApiDataContractsSecurityBusinessObjectPermission>>> SecurityGetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObNameV1AsyncWithHttpInfo (string busobname, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ApiResponse<List<BusinessObjectPermission>>> SecurityGetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObNameV1AsyncWithHttpInfo (string busobname, string lang = null, string locale = null)
         {
             // verify the required parameter 'busobname' is set
             if (busobname == null)
@@ -1749,9 +1749,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<TrebuchetWebApiDataContractsSecurityBusinessObjectPermission>>(localVarStatusCode,
+            return new ApiResponse<List<BusinessObjectPermission>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<TrebuchetWebApiDataContractsSecurityBusinessObjectPermission>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<TrebuchetWebApiDataContractsSecurityBusinessObjectPermission>)));
+                (List<BusinessObjectPermission>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<BusinessObjectPermission>)));
         }
 
         /// <summary>
@@ -1762,9 +1762,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsSecurityGetSecurityGroupBusinessObjectPermissionsResponse</returns>
-        public TrebuchetWebApiDataContractsSecurityGetSecurityGroupBusinessObjectPermissionsResponse SecurityGetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObNameV2 (string busobname, string lang = null, string locale = null)
+        public SecurityGroupBusinessObjectPermissionsResponse SecurityGetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObNameV2 (string busobname, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsSecurityGetSecurityGroupBusinessObjectPermissionsResponse> localVarResponse = SecurityGetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObNameV2WithHttpInfo(busobname, lang, locale);
+             ApiResponse<SecurityGroupBusinessObjectPermissionsResponse> localVarResponse = SecurityGetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObNameV2WithHttpInfo(busobname, lang, locale);
              return localVarResponse.Data;
         }
 
@@ -1776,7 +1776,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsSecurityGetSecurityGroupBusinessObjectPermissionsResponse</returns>
-        public ApiResponse< TrebuchetWebApiDataContractsSecurityGetSecurityGroupBusinessObjectPermissionsResponse > SecurityGetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObNameV2WithHttpInfo (string busobname, string lang = null, string locale = null)
+        public ApiResponse< SecurityGroupBusinessObjectPermissionsResponse > SecurityGetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObNameV2WithHttpInfo (string busobname, string lang = null, string locale = null)
         {
             // verify the required parameter 'busobname' is set
             if (busobname == null)
@@ -1830,9 +1830,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsSecurityGetSecurityGroupBusinessObjectPermissionsResponse>(localVarStatusCode,
+            return new ApiResponse<SecurityGroupBusinessObjectPermissionsResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsSecurityGetSecurityGroupBusinessObjectPermissionsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsSecurityGetSecurityGroupBusinessObjectPermissionsResponse)));
+                (SecurityGroupBusinessObjectPermissionsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SecurityGroupBusinessObjectPermissionsResponse)));
         }
 
         /// <summary>
@@ -1843,9 +1843,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsSecurityGetSecurityGroupBusinessObjectPermissionsResponse</returns>
-        public async System.Threading.Tasks.Task<TrebuchetWebApiDataContractsSecurityGetSecurityGroupBusinessObjectPermissionsResponse> SecurityGetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObNameV2Async (string busobname, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<SecurityGroupBusinessObjectPermissionsResponse> SecurityGetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObNameV2Async (string busobname, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsSecurityGetSecurityGroupBusinessObjectPermissionsResponse> localVarResponse = await SecurityGetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObNameV2AsyncWithHttpInfo(busobname, lang, locale);
+             ApiResponse<SecurityGroupBusinessObjectPermissionsResponse> localVarResponse = await SecurityGetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObNameV2AsyncWithHttpInfo(busobname, lang, locale);
              return localVarResponse.Data;
 
         }
@@ -1858,7 +1858,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsSecurityGetSecurityGroupBusinessObjectPermissionsResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsSecurityGetSecurityGroupBusinessObjectPermissionsResponse>> SecurityGetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObNameV2AsyncWithHttpInfo (string busobname, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ApiResponse<SecurityGroupBusinessObjectPermissionsResponse>> SecurityGetSecurityGroupBusinessObjectPermissionsForCurrentUserByBusObNameV2AsyncWithHttpInfo (string busobname, string lang = null, string locale = null)
         {
             // verify the required parameter 'busobname' is set
             if (busobname == null)
@@ -1912,9 +1912,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsSecurityGetSecurityGroupBusinessObjectPermissionsResponse>(localVarStatusCode,
+            return new ApiResponse<SecurityGroupBusinessObjectPermissionsResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsSecurityGetSecurityGroupBusinessObjectPermissionsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsSecurityGetSecurityGroupBusinessObjectPermissionsResponse)));
+                (SecurityGroupBusinessObjectPermissionsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SecurityGroupBusinessObjectPermissionsResponse)));
         }
 
         /// <summary>
@@ -1924,9 +1924,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>List&lt;TrebuchetWebApiDataContractsSecurityRightCategory&gt;</returns>
-        public List<TrebuchetWebApiDataContractsSecurityRightCategory> SecurityGetSecurityGroupCategoriesV1 (string lang = null, string locale = null)
+        public List<RightCategory> SecurityGetSecurityGroupCategoriesV1 (string lang = null, string locale = null)
         {
-             ApiResponse<List<TrebuchetWebApiDataContractsSecurityRightCategory>> localVarResponse = SecurityGetSecurityGroupCategoriesV1WithHttpInfo(lang, locale);
+             ApiResponse<List<RightCategory>> localVarResponse = SecurityGetSecurityGroupCategoriesV1WithHttpInfo(lang, locale);
              return localVarResponse.Data;
         }
 
@@ -1937,7 +1937,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of List&lt;TrebuchetWebApiDataContractsSecurityRightCategory&gt;</returns>
-        public ApiResponse< List<TrebuchetWebApiDataContractsSecurityRightCategory> > SecurityGetSecurityGroupCategoriesV1WithHttpInfo (string lang = null, string locale = null)
+        public ApiResponse< List<RightCategory> > SecurityGetSecurityGroupCategoriesV1WithHttpInfo (string lang = null, string locale = null)
         {
 
             var localVarPath = "/api/V1/getsecuritygroupcategories";
@@ -1987,9 +1987,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<TrebuchetWebApiDataContractsSecurityRightCategory>>(localVarStatusCode,
+            return new ApiResponse<List<RightCategory>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<TrebuchetWebApiDataContractsSecurityRightCategory>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<TrebuchetWebApiDataContractsSecurityRightCategory>)));
+                (List<RightCategory>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<RightCategory>)));
         }
 
         /// <summary>
@@ -1999,9 +1999,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of List&lt;TrebuchetWebApiDataContractsSecurityRightCategory&gt;</returns>
-        public async System.Threading.Tasks.Task<List<TrebuchetWebApiDataContractsSecurityRightCategory>> SecurityGetSecurityGroupCategoriesV1Async (string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<List<RightCategory>> SecurityGetSecurityGroupCategoriesV1Async (string lang = null, string locale = null)
         {
-             ApiResponse<List<TrebuchetWebApiDataContractsSecurityRightCategory>> localVarResponse = await SecurityGetSecurityGroupCategoriesV1AsyncWithHttpInfo(lang, locale);
+             ApiResponse<List<RightCategory>> localVarResponse = await SecurityGetSecurityGroupCategoriesV1AsyncWithHttpInfo(lang, locale);
              return localVarResponse.Data;
 
         }
@@ -2013,7 +2013,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;TrebuchetWebApiDataContractsSecurityRightCategory&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<TrebuchetWebApiDataContractsSecurityRightCategory>>> SecurityGetSecurityGroupCategoriesV1AsyncWithHttpInfo (string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ApiResponse<List<RightCategory>>> SecurityGetSecurityGroupCategoriesV1AsyncWithHttpInfo (string lang = null, string locale = null)
         {
 
             var localVarPath = "/api/V1/getsecuritygroupcategories";
@@ -2063,9 +2063,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<TrebuchetWebApiDataContractsSecurityRightCategory>>(localVarStatusCode,
+            return new ApiResponse<List<RightCategory>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<TrebuchetWebApiDataContractsSecurityRightCategory>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<TrebuchetWebApiDataContractsSecurityRightCategory>)));
+                (List<RightCategory>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<RightCategory>)));
         }
 
         /// <summary>
@@ -2075,9 +2075,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsSecuritySecurityRightCategoriesResponse</returns>
-        public TrebuchetWebApiDataContractsSecuritySecurityRightCategoriesResponse SecurityGetSecurityGroupCategoriesV2 (string lang = null, string locale = null)
+        public SecurityRightCategoriesResponse SecurityGetSecurityGroupCategoriesV2 (string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsSecuritySecurityRightCategoriesResponse> localVarResponse = SecurityGetSecurityGroupCategoriesV2WithHttpInfo(lang, locale);
+             ApiResponse<SecurityRightCategoriesResponse> localVarResponse = SecurityGetSecurityGroupCategoriesV2WithHttpInfo(lang, locale);
              return localVarResponse.Data;
         }
 
@@ -2088,7 +2088,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsSecuritySecurityRightCategoriesResponse</returns>
-        public ApiResponse< TrebuchetWebApiDataContractsSecuritySecurityRightCategoriesResponse > SecurityGetSecurityGroupCategoriesV2WithHttpInfo (string lang = null, string locale = null)
+        public ApiResponse< SecurityRightCategoriesResponse > SecurityGetSecurityGroupCategoriesV2WithHttpInfo (string lang = null, string locale = null)
         {
 
             var localVarPath = "/api/V2/getsecuritygroupcategories";
@@ -2138,9 +2138,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsSecuritySecurityRightCategoriesResponse>(localVarStatusCode,
+            return new ApiResponse<SecurityRightCategoriesResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsSecuritySecurityRightCategoriesResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsSecuritySecurityRightCategoriesResponse)));
+                (SecurityRightCategoriesResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SecurityRightCategoriesResponse)));
         }
 
         /// <summary>
@@ -2150,9 +2150,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsSecuritySecurityRightCategoriesResponse</returns>
-        public async System.Threading.Tasks.Task<TrebuchetWebApiDataContractsSecuritySecurityRightCategoriesResponse> SecurityGetSecurityGroupCategoriesV2Async (string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<SecurityRightCategoriesResponse> SecurityGetSecurityGroupCategoriesV2Async (string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsSecuritySecurityRightCategoriesResponse> localVarResponse = await SecurityGetSecurityGroupCategoriesV2AsyncWithHttpInfo(lang, locale);
+             ApiResponse<SecurityRightCategoriesResponse> localVarResponse = await SecurityGetSecurityGroupCategoriesV2AsyncWithHttpInfo(lang, locale);
              return localVarResponse.Data;
 
         }
@@ -2164,7 +2164,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsSecuritySecurityRightCategoriesResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsSecuritySecurityRightCategoriesResponse>> SecurityGetSecurityGroupCategoriesV2AsyncWithHttpInfo (string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ApiResponse<SecurityRightCategoriesResponse>> SecurityGetSecurityGroupCategoriesV2AsyncWithHttpInfo (string lang = null, string locale = null)
         {
 
             var localVarPath = "/api/V2/getsecuritygroupcategories";
@@ -2214,9 +2214,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsSecuritySecurityRightCategoriesResponse>(localVarStatusCode,
+            return new ApiResponse<SecurityRightCategoriesResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsSecuritySecurityRightCategoriesResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsSecuritySecurityRightCategoriesResponse)));
+                (SecurityRightCategoriesResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SecurityRightCategoriesResponse)));
         }
 
         /// <summary>
@@ -2228,9 +2228,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>List&lt;TrebuchetWebApiDataContractsSecurityRight&gt;</returns>
-        public List<TrebuchetWebApiDataContractsSecurityRight> SecurityGetSecurityGroupRightsByGroupIdAndCategoryIdV1 (string groupid, string categoryid, string lang = null, string locale = null)
+        public List<SecurityRight> SecurityGetSecurityGroupRightsByGroupIdAndCategoryIdV1 (string groupid, string categoryid, string lang = null, string locale = null)
         {
-             ApiResponse<List<TrebuchetWebApiDataContractsSecurityRight>> localVarResponse = SecurityGetSecurityGroupRightsByGroupIdAndCategoryIdV1WithHttpInfo(groupid, categoryid, lang, locale);
+             ApiResponse<List<SecurityRight>> localVarResponse = SecurityGetSecurityGroupRightsByGroupIdAndCategoryIdV1WithHttpInfo(groupid, categoryid, lang, locale);
              return localVarResponse.Data;
         }
 
@@ -2243,7 +2243,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of List&lt;TrebuchetWebApiDataContractsSecurityRight&gt;</returns>
-        public ApiResponse< List<TrebuchetWebApiDataContractsSecurityRight> > SecurityGetSecurityGroupRightsByGroupIdAndCategoryIdV1WithHttpInfo (string groupid, string categoryid, string lang = null, string locale = null)
+        public ApiResponse< List<SecurityRight> > SecurityGetSecurityGroupRightsByGroupIdAndCategoryIdV1WithHttpInfo (string groupid, string categoryid, string lang = null, string locale = null)
         {
             // verify the required parameter 'groupid' is set
             if (groupid == null)
@@ -2301,9 +2301,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<TrebuchetWebApiDataContractsSecurityRight>>(localVarStatusCode,
+            return new ApiResponse<List<SecurityRight>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<TrebuchetWebApiDataContractsSecurityRight>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<TrebuchetWebApiDataContractsSecurityRight>)));
+                (List<SecurityRight>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<SecurityRight>)));
         }
 
         /// <summary>
@@ -2315,9 +2315,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of List&lt;TrebuchetWebApiDataContractsSecurityRight&gt;</returns>
-        public async System.Threading.Tasks.Task<List<TrebuchetWebApiDataContractsSecurityRight>> SecurityGetSecurityGroupRightsByGroupIdAndCategoryIdV1Async (string groupid, string categoryid, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<List<SecurityRight>> SecurityGetSecurityGroupRightsByGroupIdAndCategoryIdV1Async (string groupid, string categoryid, string lang = null, string locale = null)
         {
-             ApiResponse<List<TrebuchetWebApiDataContractsSecurityRight>> localVarResponse = await SecurityGetSecurityGroupRightsByGroupIdAndCategoryIdV1AsyncWithHttpInfo(groupid, categoryid, lang, locale);
+             ApiResponse<List<SecurityRight>> localVarResponse = await SecurityGetSecurityGroupRightsByGroupIdAndCategoryIdV1AsyncWithHttpInfo(groupid, categoryid, lang, locale);
              return localVarResponse.Data;
 
         }
@@ -2331,7 +2331,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;TrebuchetWebApiDataContractsSecurityRight&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<TrebuchetWebApiDataContractsSecurityRight>>> SecurityGetSecurityGroupRightsByGroupIdAndCategoryIdV1AsyncWithHttpInfo (string groupid, string categoryid, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ApiResponse<List<SecurityRight>>> SecurityGetSecurityGroupRightsByGroupIdAndCategoryIdV1AsyncWithHttpInfo (string groupid, string categoryid, string lang = null, string locale = null)
         {
             // verify the required parameter 'groupid' is set
             if (groupid == null)
@@ -2389,9 +2389,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<TrebuchetWebApiDataContractsSecurityRight>>(localVarStatusCode,
+            return new ApiResponse<List<SecurityRight>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<TrebuchetWebApiDataContractsSecurityRight>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<TrebuchetWebApiDataContractsSecurityRight>)));
+                (List<SecurityRight>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<SecurityRight>)));
         }
 
         /// <summary>
@@ -2403,9 +2403,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsSecuritySecurityRightsResponse</returns>
-        public TrebuchetWebApiDataContractsSecuritySecurityRightsResponse SecurityGetSecurityGroupRightsByGroupIdAndCategoryIdV2 (string groupid, string categoryid, string lang = null, string locale = null)
+        public SecurityRightsResponse SecurityGetSecurityGroupRightsByGroupIdAndCategoryIdV2 (string groupid, string categoryid, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsSecuritySecurityRightsResponse> localVarResponse = SecurityGetSecurityGroupRightsByGroupIdAndCategoryIdV2WithHttpInfo(groupid, categoryid, lang, locale);
+             ApiResponse<SecurityRightsResponse> localVarResponse = SecurityGetSecurityGroupRightsByGroupIdAndCategoryIdV2WithHttpInfo(groupid, categoryid, lang, locale);
              return localVarResponse.Data;
         }
 
@@ -2418,7 +2418,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsSecuritySecurityRightsResponse</returns>
-        public ApiResponse< TrebuchetWebApiDataContractsSecuritySecurityRightsResponse > SecurityGetSecurityGroupRightsByGroupIdAndCategoryIdV2WithHttpInfo (string groupid, string categoryid, string lang = null, string locale = null)
+        public ApiResponse< SecurityRightsResponse > SecurityGetSecurityGroupRightsByGroupIdAndCategoryIdV2WithHttpInfo (string groupid, string categoryid, string lang = null, string locale = null)
         {
             // verify the required parameter 'groupid' is set
             if (groupid == null)
@@ -2476,9 +2476,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsSecuritySecurityRightsResponse>(localVarStatusCode,
+            return new ApiResponse<SecurityRightsResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsSecuritySecurityRightsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsSecuritySecurityRightsResponse)));
+                (SecurityRightsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SecurityRightsResponse)));
         }
 
         /// <summary>
@@ -2490,9 +2490,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsSecuritySecurityRightsResponse</returns>
-        public async System.Threading.Tasks.Task<TrebuchetWebApiDataContractsSecuritySecurityRightsResponse> SecurityGetSecurityGroupRightsByGroupIdAndCategoryIdV2Async (string groupid, string categoryid, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<SecurityRightsResponse> SecurityGetSecurityGroupRightsByGroupIdAndCategoryIdV2Async (string groupid, string categoryid, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsSecuritySecurityRightsResponse> localVarResponse = await SecurityGetSecurityGroupRightsByGroupIdAndCategoryIdV2AsyncWithHttpInfo(groupid, categoryid, lang, locale);
+             ApiResponse<SecurityRightsResponse> localVarResponse = await SecurityGetSecurityGroupRightsByGroupIdAndCategoryIdV2AsyncWithHttpInfo(groupid, categoryid, lang, locale);
              return localVarResponse.Data;
 
         }
@@ -2506,7 +2506,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsSecuritySecurityRightsResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsSecuritySecurityRightsResponse>> SecurityGetSecurityGroupRightsByGroupIdAndCategoryIdV2AsyncWithHttpInfo (string groupid, string categoryid, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ApiResponse<SecurityRightsResponse>> SecurityGetSecurityGroupRightsByGroupIdAndCategoryIdV2AsyncWithHttpInfo (string groupid, string categoryid, string lang = null, string locale = null)
         {
             // verify the required parameter 'groupid' is set
             if (groupid == null)
@@ -2564,9 +2564,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsSecuritySecurityRightsResponse>(localVarStatusCode,
+            return new ApiResponse<SecurityRightsResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsSecuritySecurityRightsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsSecuritySecurityRightsResponse)));
+                (SecurityRightsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SecurityRightsResponse)));
         }
 
         /// <summary>
@@ -2578,9 +2578,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>List&lt;TrebuchetWebApiDataContractsSecurityRight&gt;</returns>
-        public List<TrebuchetWebApiDataContractsSecurityRight> SecurityGetSecurityGroupRightsByGroupNameAndCategoryNameV1 (string groupname, string categoryname, string lang = null, string locale = null)
+        public List<SecurityRight> SecurityGetSecurityGroupRightsByGroupNameAndCategoryNameV1 (string groupname, string categoryname, string lang = null, string locale = null)
         {
-             ApiResponse<List<TrebuchetWebApiDataContractsSecurityRight>> localVarResponse = SecurityGetSecurityGroupRightsByGroupNameAndCategoryNameV1WithHttpInfo(groupname, categoryname, lang, locale);
+             ApiResponse<List<SecurityRight>> localVarResponse = SecurityGetSecurityGroupRightsByGroupNameAndCategoryNameV1WithHttpInfo(groupname, categoryname, lang, locale);
              return localVarResponse.Data;
         }
 
@@ -2593,7 +2593,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of List&lt;TrebuchetWebApiDataContractsSecurityRight&gt;</returns>
-        public ApiResponse< List<TrebuchetWebApiDataContractsSecurityRight> > SecurityGetSecurityGroupRightsByGroupNameAndCategoryNameV1WithHttpInfo (string groupname, string categoryname, string lang = null, string locale = null)
+        public ApiResponse< List<SecurityRight> > SecurityGetSecurityGroupRightsByGroupNameAndCategoryNameV1WithHttpInfo (string groupname, string categoryname, string lang = null, string locale = null)
         {
             // verify the required parameter 'groupname' is set
             if (groupname == null)
@@ -2651,9 +2651,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<TrebuchetWebApiDataContractsSecurityRight>>(localVarStatusCode,
+            return new ApiResponse<List<SecurityRight>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<TrebuchetWebApiDataContractsSecurityRight>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<TrebuchetWebApiDataContractsSecurityRight>)));
+                (List<SecurityRight>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<SecurityRight>)));
         }
 
         /// <summary>
@@ -2665,9 +2665,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of List&lt;TrebuchetWebApiDataContractsSecurityRight&gt;</returns>
-        public async System.Threading.Tasks.Task<List<TrebuchetWebApiDataContractsSecurityRight>> SecurityGetSecurityGroupRightsByGroupNameAndCategoryNameV1Async (string groupname, string categoryname, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<List<SecurityRight>> SecurityGetSecurityGroupRightsByGroupNameAndCategoryNameV1Async (string groupname, string categoryname, string lang = null, string locale = null)
         {
-             ApiResponse<List<TrebuchetWebApiDataContractsSecurityRight>> localVarResponse = await SecurityGetSecurityGroupRightsByGroupNameAndCategoryNameV1AsyncWithHttpInfo(groupname, categoryname, lang, locale);
+             ApiResponse<List<SecurityRight>> localVarResponse = await SecurityGetSecurityGroupRightsByGroupNameAndCategoryNameV1AsyncWithHttpInfo(groupname, categoryname, lang, locale);
              return localVarResponse.Data;
 
         }
@@ -2681,7 +2681,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;TrebuchetWebApiDataContractsSecurityRight&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<TrebuchetWebApiDataContractsSecurityRight>>> SecurityGetSecurityGroupRightsByGroupNameAndCategoryNameV1AsyncWithHttpInfo (string groupname, string categoryname, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ApiResponse<List<SecurityRight>>> SecurityGetSecurityGroupRightsByGroupNameAndCategoryNameV1AsyncWithHttpInfo (string groupname, string categoryname, string lang = null, string locale = null)
         {
             // verify the required parameter 'groupname' is set
             if (groupname == null)
@@ -2739,9 +2739,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<TrebuchetWebApiDataContractsSecurityRight>>(localVarStatusCode,
+            return new ApiResponse<List<SecurityRight>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<TrebuchetWebApiDataContractsSecurityRight>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<TrebuchetWebApiDataContractsSecurityRight>)));
+                (List<SecurityRight>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<SecurityRight>)));
         }
 
         /// <summary>
@@ -2753,9 +2753,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsSecuritySecurityRightsResponse</returns>
-        public TrebuchetWebApiDataContractsSecuritySecurityRightsResponse SecurityGetSecurityGroupRightsByGroupNameAndCategoryNameV2 (string groupname, string categoryname, string lang = null, string locale = null)
+        public SecurityRightsResponse SecurityGetSecurityGroupRightsByGroupNameAndCategoryNameV2 (string groupname, string categoryname, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsSecuritySecurityRightsResponse> localVarResponse = SecurityGetSecurityGroupRightsByGroupNameAndCategoryNameV2WithHttpInfo(groupname, categoryname, lang, locale);
+             ApiResponse<SecurityRightsResponse> localVarResponse = SecurityGetSecurityGroupRightsByGroupNameAndCategoryNameV2WithHttpInfo(groupname, categoryname, lang, locale);
              return localVarResponse.Data;
         }
 
@@ -2768,7 +2768,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsSecuritySecurityRightsResponse</returns>
-        public ApiResponse< TrebuchetWebApiDataContractsSecuritySecurityRightsResponse > SecurityGetSecurityGroupRightsByGroupNameAndCategoryNameV2WithHttpInfo (string groupname, string categoryname, string lang = null, string locale = null)
+        public ApiResponse< SecurityRightsResponse > SecurityGetSecurityGroupRightsByGroupNameAndCategoryNameV2WithHttpInfo (string groupname, string categoryname, string lang = null, string locale = null)
         {
             // verify the required parameter 'groupname' is set
             if (groupname == null)
@@ -2826,9 +2826,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsSecuritySecurityRightsResponse>(localVarStatusCode,
+            return new ApiResponse<SecurityRightsResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsSecuritySecurityRightsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsSecuritySecurityRightsResponse)));
+                (SecurityRightsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SecurityRightsResponse)));
         }
 
         /// <summary>
@@ -2840,9 +2840,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsSecuritySecurityRightsResponse</returns>
-        public async System.Threading.Tasks.Task<TrebuchetWebApiDataContractsSecuritySecurityRightsResponse> SecurityGetSecurityGroupRightsByGroupNameAndCategoryNameV2Async (string groupname, string categoryname, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<SecurityRightsResponse> SecurityGetSecurityGroupRightsByGroupNameAndCategoryNameV2Async (string groupname, string categoryname, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsSecuritySecurityRightsResponse> localVarResponse = await SecurityGetSecurityGroupRightsByGroupNameAndCategoryNameV2AsyncWithHttpInfo(groupname, categoryname, lang, locale);
+             ApiResponse<SecurityRightsResponse> localVarResponse = await SecurityGetSecurityGroupRightsByGroupNameAndCategoryNameV2AsyncWithHttpInfo(groupname, categoryname, lang, locale);
              return localVarResponse.Data;
 
         }
@@ -2856,7 +2856,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsSecuritySecurityRightsResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsSecuritySecurityRightsResponse>> SecurityGetSecurityGroupRightsByGroupNameAndCategoryNameV2AsyncWithHttpInfo (string groupname, string categoryname, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ApiResponse<SecurityRightsResponse>> SecurityGetSecurityGroupRightsByGroupNameAndCategoryNameV2AsyncWithHttpInfo (string groupname, string categoryname, string lang = null, string locale = null)
         {
             // verify the required parameter 'groupname' is set
             if (groupname == null)
@@ -2914,9 +2914,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsSecuritySecurityRightsResponse>(localVarStatusCode,
+            return new ApiResponse<SecurityRightsResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsSecuritySecurityRightsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsSecuritySecurityRightsResponse)));
+                (SecurityRightsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SecurityRightsResponse)));
         }
 
         /// <summary>
@@ -2927,9 +2927,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>List&lt;TrebuchetWebApiDataContractsSecurityRight&gt;</returns>
-        public List<TrebuchetWebApiDataContractsSecurityRight> SecurityGetSecurityGroupRightsForCurrentUserByCategoryIdV1 (string categoryid, string lang = null, string locale = null)
+        public List<SecurityRight> SecurityGetSecurityGroupRightsForCurrentUserByCategoryIdV1 (string categoryid, string lang = null, string locale = null)
         {
-             ApiResponse<List<TrebuchetWebApiDataContractsSecurityRight>> localVarResponse = SecurityGetSecurityGroupRightsForCurrentUserByCategoryIdV1WithHttpInfo(categoryid, lang, locale);
+             ApiResponse<List<SecurityRight>> localVarResponse = SecurityGetSecurityGroupRightsForCurrentUserByCategoryIdV1WithHttpInfo(categoryid, lang, locale);
              return localVarResponse.Data;
         }
 
@@ -2941,7 +2941,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of List&lt;TrebuchetWebApiDataContractsSecurityRight&gt;</returns>
-        public ApiResponse< List<TrebuchetWebApiDataContractsSecurityRight> > SecurityGetSecurityGroupRightsForCurrentUserByCategoryIdV1WithHttpInfo (string categoryid, string lang = null, string locale = null)
+        public ApiResponse< List<SecurityRight> > SecurityGetSecurityGroupRightsForCurrentUserByCategoryIdV1WithHttpInfo (string categoryid, string lang = null, string locale = null)
         {
             // verify the required parameter 'categoryid' is set
             if (categoryid == null)
@@ -2995,9 +2995,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<TrebuchetWebApiDataContractsSecurityRight>>(localVarStatusCode,
+            return new ApiResponse<List<SecurityRight>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<TrebuchetWebApiDataContractsSecurityRight>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<TrebuchetWebApiDataContractsSecurityRight>)));
+                (List<SecurityRight>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<SecurityRight>)));
         }
 
         /// <summary>
@@ -3008,9 +3008,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of List&lt;TrebuchetWebApiDataContractsSecurityRight&gt;</returns>
-        public async System.Threading.Tasks.Task<List<TrebuchetWebApiDataContractsSecurityRight>> SecurityGetSecurityGroupRightsForCurrentUserByCategoryIdV1Async (string categoryid, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<List<SecurityRight>> SecurityGetSecurityGroupRightsForCurrentUserByCategoryIdV1Async (string categoryid, string lang = null, string locale = null)
         {
-             ApiResponse<List<TrebuchetWebApiDataContractsSecurityRight>> localVarResponse = await SecurityGetSecurityGroupRightsForCurrentUserByCategoryIdV1AsyncWithHttpInfo(categoryid, lang, locale);
+             ApiResponse<List<SecurityRight>> localVarResponse = await SecurityGetSecurityGroupRightsForCurrentUserByCategoryIdV1AsyncWithHttpInfo(categoryid, lang, locale);
              return localVarResponse.Data;
 
         }
@@ -3023,7 +3023,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;TrebuchetWebApiDataContractsSecurityRight&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<TrebuchetWebApiDataContractsSecurityRight>>> SecurityGetSecurityGroupRightsForCurrentUserByCategoryIdV1AsyncWithHttpInfo (string categoryid, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ApiResponse<List<SecurityRight>>> SecurityGetSecurityGroupRightsForCurrentUserByCategoryIdV1AsyncWithHttpInfo (string categoryid, string lang = null, string locale = null)
         {
             // verify the required parameter 'categoryid' is set
             if (categoryid == null)
@@ -3077,9 +3077,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<TrebuchetWebApiDataContractsSecurityRight>>(localVarStatusCode,
+            return new ApiResponse<List<SecurityRight>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<TrebuchetWebApiDataContractsSecurityRight>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<TrebuchetWebApiDataContractsSecurityRight>)));
+                (List<SecurityRight>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<SecurityRight>)));
         }
 
         /// <summary>
@@ -3090,9 +3090,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsSecuritySecurityRightsResponse</returns>
-        public TrebuchetWebApiDataContractsSecuritySecurityRightsResponse SecurityGetSecurityGroupRightsForCurrentUserByCategoryIdV2 (string categoryid, string lang = null, string locale = null)
+        public SecurityRightsResponse SecurityGetSecurityGroupRightsForCurrentUserByCategoryIdV2 (string categoryid, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsSecuritySecurityRightsResponse> localVarResponse = SecurityGetSecurityGroupRightsForCurrentUserByCategoryIdV2WithHttpInfo(categoryid, lang, locale);
+             ApiResponse<SecurityRightsResponse> localVarResponse = SecurityGetSecurityGroupRightsForCurrentUserByCategoryIdV2WithHttpInfo(categoryid, lang, locale);
              return localVarResponse.Data;
         }
 
@@ -3104,7 +3104,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsSecuritySecurityRightsResponse</returns>
-        public ApiResponse< TrebuchetWebApiDataContractsSecuritySecurityRightsResponse > SecurityGetSecurityGroupRightsForCurrentUserByCategoryIdV2WithHttpInfo (string categoryid, string lang = null, string locale = null)
+        public ApiResponse< SecurityRightsResponse > SecurityGetSecurityGroupRightsForCurrentUserByCategoryIdV2WithHttpInfo (string categoryid, string lang = null, string locale = null)
         {
             // verify the required parameter 'categoryid' is set
             if (categoryid == null)
@@ -3158,9 +3158,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsSecuritySecurityRightsResponse>(localVarStatusCode,
+            return new ApiResponse<SecurityRightsResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsSecuritySecurityRightsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsSecuritySecurityRightsResponse)));
+                (SecurityRightsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SecurityRightsResponse)));
         }
 
         /// <summary>
@@ -3171,9 +3171,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsSecuritySecurityRightsResponse</returns>
-        public async System.Threading.Tasks.Task<TrebuchetWebApiDataContractsSecuritySecurityRightsResponse> SecurityGetSecurityGroupRightsForCurrentUserByCategoryIdV2Async (string categoryid, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<SecurityRightsResponse> SecurityGetSecurityGroupRightsForCurrentUserByCategoryIdV2Async (string categoryid, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsSecuritySecurityRightsResponse> localVarResponse = await SecurityGetSecurityGroupRightsForCurrentUserByCategoryIdV2AsyncWithHttpInfo(categoryid, lang, locale);
+             ApiResponse<SecurityRightsResponse> localVarResponse = await SecurityGetSecurityGroupRightsForCurrentUserByCategoryIdV2AsyncWithHttpInfo(categoryid, lang, locale);
              return localVarResponse.Data;
 
         }
@@ -3186,7 +3186,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsSecuritySecurityRightsResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsSecuritySecurityRightsResponse>> SecurityGetSecurityGroupRightsForCurrentUserByCategoryIdV2AsyncWithHttpInfo (string categoryid, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ApiResponse<SecurityRightsResponse>> SecurityGetSecurityGroupRightsForCurrentUserByCategoryIdV2AsyncWithHttpInfo (string categoryid, string lang = null, string locale = null)
         {
             // verify the required parameter 'categoryid' is set
             if (categoryid == null)
@@ -3240,9 +3240,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsSecuritySecurityRightsResponse>(localVarStatusCode,
+            return new ApiResponse<SecurityRightsResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsSecuritySecurityRightsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsSecuritySecurityRightsResponse)));
+                (SecurityRightsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SecurityRightsResponse)));
         }
 
         /// <summary>
@@ -3253,9 +3253,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>List&lt;TrebuchetWebApiDataContractsSecurityRight&gt;</returns>
-        public List<TrebuchetWebApiDataContractsSecurityRight> SecurityGetSecurityGroupRightsForCurrentUserByCategoryNameV1 (string categoryname, string lang = null, string locale = null)
+        public List<SecurityRight> SecurityGetSecurityGroupRightsForCurrentUserByCategoryNameV1 (string categoryname, string lang = null, string locale = null)
         {
-             ApiResponse<List<TrebuchetWebApiDataContractsSecurityRight>> localVarResponse = SecurityGetSecurityGroupRightsForCurrentUserByCategoryNameV1WithHttpInfo(categoryname, lang, locale);
+             ApiResponse<List<SecurityRight>> localVarResponse = SecurityGetSecurityGroupRightsForCurrentUserByCategoryNameV1WithHttpInfo(categoryname, lang, locale);
              return localVarResponse.Data;
         }
 
@@ -3267,7 +3267,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of List&lt;TrebuchetWebApiDataContractsSecurityRight&gt;</returns>
-        public ApiResponse< List<TrebuchetWebApiDataContractsSecurityRight> > SecurityGetSecurityGroupRightsForCurrentUserByCategoryNameV1WithHttpInfo (string categoryname, string lang = null, string locale = null)
+        public ApiResponse< List<SecurityRight> > SecurityGetSecurityGroupRightsForCurrentUserByCategoryNameV1WithHttpInfo (string categoryname, string lang = null, string locale = null)
         {
             // verify the required parameter 'categoryname' is set
             if (categoryname == null)
@@ -3321,9 +3321,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<TrebuchetWebApiDataContractsSecurityRight>>(localVarStatusCode,
+            return new ApiResponse<List<SecurityRight>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<TrebuchetWebApiDataContractsSecurityRight>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<TrebuchetWebApiDataContractsSecurityRight>)));
+                (List<SecurityRight>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<SecurityRight>)));
         }
 
         /// <summary>
@@ -3334,9 +3334,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of List&lt;TrebuchetWebApiDataContractsSecurityRight&gt;</returns>
-        public async System.Threading.Tasks.Task<List<TrebuchetWebApiDataContractsSecurityRight>> SecurityGetSecurityGroupRightsForCurrentUserByCategoryNameV1Async (string categoryname, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<List<SecurityRight>> SecurityGetSecurityGroupRightsForCurrentUserByCategoryNameV1Async (string categoryname, string lang = null, string locale = null)
         {
-             ApiResponse<List<TrebuchetWebApiDataContractsSecurityRight>> localVarResponse = await SecurityGetSecurityGroupRightsForCurrentUserByCategoryNameV1AsyncWithHttpInfo(categoryname, lang, locale);
+             ApiResponse<List<SecurityRight>> localVarResponse = await SecurityGetSecurityGroupRightsForCurrentUserByCategoryNameV1AsyncWithHttpInfo(categoryname, lang, locale);
              return localVarResponse.Data;
 
         }
@@ -3349,7 +3349,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;TrebuchetWebApiDataContractsSecurityRight&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<TrebuchetWebApiDataContractsSecurityRight>>> SecurityGetSecurityGroupRightsForCurrentUserByCategoryNameV1AsyncWithHttpInfo (string categoryname, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ApiResponse<List<SecurityRight>>> SecurityGetSecurityGroupRightsForCurrentUserByCategoryNameV1AsyncWithHttpInfo (string categoryname, string lang = null, string locale = null)
         {
             // verify the required parameter 'categoryname' is set
             if (categoryname == null)
@@ -3403,9 +3403,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<TrebuchetWebApiDataContractsSecurityRight>>(localVarStatusCode,
+            return new ApiResponse<List<SecurityRight>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<TrebuchetWebApiDataContractsSecurityRight>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<TrebuchetWebApiDataContractsSecurityRight>)));
+                (List<SecurityRight>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<SecurityRight>)));
         }
 
         /// <summary>
@@ -3416,9 +3416,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsSecuritySecurityRightsResponse</returns>
-        public TrebuchetWebApiDataContractsSecuritySecurityRightsResponse SecurityGetSecurityGroupRightsForCurrentUserByCategoryNameV2 (string categoryname, string lang = null, string locale = null)
+        public SecurityRightsResponse SecurityGetSecurityGroupRightsForCurrentUserByCategoryNameV2 (string categoryname, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsSecuritySecurityRightsResponse> localVarResponse = SecurityGetSecurityGroupRightsForCurrentUserByCategoryNameV2WithHttpInfo(categoryname, lang, locale);
+             ApiResponse<SecurityRightsResponse> localVarResponse = SecurityGetSecurityGroupRightsForCurrentUserByCategoryNameV2WithHttpInfo(categoryname, lang, locale);
              return localVarResponse.Data;
         }
 
@@ -3430,7 +3430,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsSecuritySecurityRightsResponse</returns>
-        public ApiResponse< TrebuchetWebApiDataContractsSecuritySecurityRightsResponse > SecurityGetSecurityGroupRightsForCurrentUserByCategoryNameV2WithHttpInfo (string categoryname, string lang = null, string locale = null)
+        public ApiResponse< SecurityRightsResponse > SecurityGetSecurityGroupRightsForCurrentUserByCategoryNameV2WithHttpInfo (string categoryname, string lang = null, string locale = null)
         {
             // verify the required parameter 'categoryname' is set
             if (categoryname == null)
@@ -3484,9 +3484,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsSecuritySecurityRightsResponse>(localVarStatusCode,
+            return new ApiResponse<SecurityRightsResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsSecuritySecurityRightsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsSecuritySecurityRightsResponse)));
+                (SecurityRightsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SecurityRightsResponse)));
         }
 
         /// <summary>
@@ -3497,9 +3497,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsSecuritySecurityRightsResponse</returns>
-        public async System.Threading.Tasks.Task<TrebuchetWebApiDataContractsSecuritySecurityRightsResponse> SecurityGetSecurityGroupRightsForCurrentUserByCategoryNameV2Async (string categoryname, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<SecurityRightsResponse> SecurityGetSecurityGroupRightsForCurrentUserByCategoryNameV2Async (string categoryname, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsSecuritySecurityRightsResponse> localVarResponse = await SecurityGetSecurityGroupRightsForCurrentUserByCategoryNameV2AsyncWithHttpInfo(categoryname, lang, locale);
+             ApiResponse<SecurityRightsResponse> localVarResponse = await SecurityGetSecurityGroupRightsForCurrentUserByCategoryNameV2AsyncWithHttpInfo(categoryname, lang, locale);
              return localVarResponse.Data;
 
         }
@@ -3512,7 +3512,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsSecuritySecurityRightsResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsSecuritySecurityRightsResponse>> SecurityGetSecurityGroupRightsForCurrentUserByCategoryNameV2AsyncWithHttpInfo (string categoryname, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ApiResponse<SecurityRightsResponse>> SecurityGetSecurityGroupRightsForCurrentUserByCategoryNameV2AsyncWithHttpInfo (string categoryname, string lang = null, string locale = null)
         {
             // verify the required parameter 'categoryname' is set
             if (categoryname == null)
@@ -3566,9 +3566,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsSecuritySecurityRightsResponse>(localVarStatusCode,
+            return new ApiResponse<SecurityRightsResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsSecuritySecurityRightsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsSecuritySecurityRightsResponse)));
+                (SecurityRightsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SecurityRightsResponse)));
         }
 
         /// <summary>
@@ -3578,9 +3578,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsSecuritySecurityGroupResponse</returns>
-        public TrebuchetWebApiDataContractsSecuritySecurityGroupResponse SecurityGetSecurityGroupsV1 (string lang = null, string locale = null)
+        public SecurityGroupResponse SecurityGetSecurityGroupsV1 (string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsSecuritySecurityGroupResponse> localVarResponse = SecurityGetSecurityGroupsV1WithHttpInfo(lang, locale);
+             ApiResponse<SecurityGroupResponse> localVarResponse = SecurityGetSecurityGroupsV1WithHttpInfo(lang, locale);
              return localVarResponse.Data;
         }
 
@@ -3591,7 +3591,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsSecuritySecurityGroupResponse</returns>
-        public ApiResponse< TrebuchetWebApiDataContractsSecuritySecurityGroupResponse > SecurityGetSecurityGroupsV1WithHttpInfo (string lang = null, string locale = null)
+        public ApiResponse< SecurityGroupResponse > SecurityGetSecurityGroupsV1WithHttpInfo (string lang = null, string locale = null)
         {
 
             var localVarPath = "/api/V1/getsecuritygroups";
@@ -3641,9 +3641,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsSecuritySecurityGroupResponse>(localVarStatusCode,
+            return new ApiResponse<SecurityGroupResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsSecuritySecurityGroupResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsSecuritySecurityGroupResponse)));
+                (SecurityGroupResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SecurityGroupResponse)));
         }
 
         /// <summary>
@@ -3653,9 +3653,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsSecuritySecurityGroupResponse</returns>
-        public async System.Threading.Tasks.Task<TrebuchetWebApiDataContractsSecuritySecurityGroupResponse> SecurityGetSecurityGroupsV1Async (string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<SecurityGroupResponse> SecurityGetSecurityGroupsV1Async (string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsSecuritySecurityGroupResponse> localVarResponse = await SecurityGetSecurityGroupsV1AsyncWithHttpInfo(lang, locale);
+             ApiResponse<SecurityGroupResponse> localVarResponse = await SecurityGetSecurityGroupsV1AsyncWithHttpInfo(lang, locale);
              return localVarResponse.Data;
 
         }
@@ -3667,7 +3667,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsSecuritySecurityGroupResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsSecuritySecurityGroupResponse>> SecurityGetSecurityGroupsV1AsyncWithHttpInfo (string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ApiResponse<SecurityGroupResponse>> SecurityGetSecurityGroupsV1AsyncWithHttpInfo (string lang = null, string locale = null)
         {
 
             var localVarPath = "/api/V1/getsecuritygroups";
@@ -3717,9 +3717,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsSecuritySecurityGroupResponse>(localVarStatusCode,
+            return new ApiResponse<SecurityGroupResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsSecuritySecurityGroupResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsSecuritySecurityGroupResponse)));
+                (SecurityGroupResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SecurityGroupResponse)));
         }
 
         /// <summary>
@@ -3729,9 +3729,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsSecuritySecurityGroupV2Response</returns>
-        public TrebuchetWebApiDataContractsSecuritySecurityGroupV2Response SecurityGetSecurityGroupsV2 (string lang = null, string locale = null)
+        public SecurityGroupV2Response SecurityGetSecurityGroupsV2 (string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsSecuritySecurityGroupV2Response> localVarResponse = SecurityGetSecurityGroupsV2WithHttpInfo(lang, locale);
+             ApiResponse<SecurityGroupV2Response> localVarResponse = SecurityGetSecurityGroupsV2WithHttpInfo(lang, locale);
              return localVarResponse.Data;
         }
 
@@ -3742,7 +3742,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsSecuritySecurityGroupV2Response</returns>
-        public ApiResponse< TrebuchetWebApiDataContractsSecuritySecurityGroupV2Response > SecurityGetSecurityGroupsV2WithHttpInfo (string lang = null, string locale = null)
+        public ApiResponse< SecurityGroupV2Response > SecurityGetSecurityGroupsV2WithHttpInfo (string lang = null, string locale = null)
         {
 
             var localVarPath = "/api/V2/getsecuritygroups";
@@ -3792,9 +3792,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsSecuritySecurityGroupV2Response>(localVarStatusCode,
+            return new ApiResponse<SecurityGroupV2Response>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsSecuritySecurityGroupV2Response) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsSecuritySecurityGroupV2Response)));
+                (SecurityGroupV2Response) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SecurityGroupV2Response)));
         }
 
         /// <summary>
@@ -3804,9 +3804,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsSecuritySecurityGroupV2Response</returns>
-        public async System.Threading.Tasks.Task<TrebuchetWebApiDataContractsSecuritySecurityGroupV2Response> SecurityGetSecurityGroupsV2Async (string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<SecurityGroupV2Response> SecurityGetSecurityGroupsV2Async (string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsSecuritySecurityGroupV2Response> localVarResponse = await SecurityGetSecurityGroupsV2AsyncWithHttpInfo(lang, locale);
+             ApiResponse<SecurityGroupV2Response> localVarResponse = await SecurityGetSecurityGroupsV2AsyncWithHttpInfo(lang, locale);
              return localVarResponse.Data;
 
         }
@@ -3818,7 +3818,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsSecuritySecurityGroupV2Response)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsSecuritySecurityGroupV2Response>> SecurityGetSecurityGroupsV2AsyncWithHttpInfo (string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ApiResponse<SecurityGroupV2Response>> SecurityGetSecurityGroupsV2AsyncWithHttpInfo (string lang = null, string locale = null)
         {
 
             var localVarPath = "/api/V2/getsecuritygroups";
@@ -3868,9 +3868,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsSecuritySecurityGroupV2Response>(localVarStatusCode,
+            return new ApiResponse<SecurityGroupV2Response>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsSecuritySecurityGroupV2Response) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsSecuritySecurityGroupV2Response)));
+                (SecurityGroupV2Response) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SecurityGroupV2Response)));
         }
 
         /// <summary>
@@ -3881,9 +3881,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>List&lt;TrebuchetWebApiDataContractsUsersUser&gt;</returns>
-        public List<TrebuchetWebApiDataContractsUsersUser> SecurityGetUsersInSecurityGroupV1 (string groupid, string lang = null, string locale = null)
+        public List<User> SecurityGetUsersInSecurityGroupV1 (string groupid, string lang = null, string locale = null)
         {
-             ApiResponse<List<TrebuchetWebApiDataContractsUsersUser>> localVarResponse = SecurityGetUsersInSecurityGroupV1WithHttpInfo(groupid, lang, locale);
+             ApiResponse<List<User>> localVarResponse = SecurityGetUsersInSecurityGroupV1WithHttpInfo(groupid, lang, locale);
              return localVarResponse.Data;
         }
 
@@ -3895,7 +3895,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of List&lt;TrebuchetWebApiDataContractsUsersUser&gt;</returns>
-        public ApiResponse< List<TrebuchetWebApiDataContractsUsersUser> > SecurityGetUsersInSecurityGroupV1WithHttpInfo (string groupid, string lang = null, string locale = null)
+        public ApiResponse< List<User> > SecurityGetUsersInSecurityGroupV1WithHttpInfo (string groupid, string lang = null, string locale = null)
         {
             // verify the required parameter 'groupid' is set
             if (groupid == null)
@@ -3949,9 +3949,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<TrebuchetWebApiDataContractsUsersUser>>(localVarStatusCode,
+            return new ApiResponse<List<User>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<TrebuchetWebApiDataContractsUsersUser>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<TrebuchetWebApiDataContractsUsersUser>)));
+                (List<User>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<User>)));
         }
 
         /// <summary>
@@ -3962,9 +3962,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of List&lt;TrebuchetWebApiDataContractsUsersUser&gt;</returns>
-        public async System.Threading.Tasks.Task<List<TrebuchetWebApiDataContractsUsersUser>> SecurityGetUsersInSecurityGroupV1Async (string groupid, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<List<User>> SecurityGetUsersInSecurityGroupV1Async (string groupid, string lang = null, string locale = null)
         {
-             ApiResponse<List<TrebuchetWebApiDataContractsUsersUser>> localVarResponse = await SecurityGetUsersInSecurityGroupV1AsyncWithHttpInfo(groupid, lang, locale);
+             ApiResponse<List<User>> localVarResponse = await SecurityGetUsersInSecurityGroupV1AsyncWithHttpInfo(groupid, lang, locale);
              return localVarResponse.Data;
 
         }
@@ -3977,7 +3977,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;TrebuchetWebApiDataContractsUsersUser&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<TrebuchetWebApiDataContractsUsersUser>>> SecurityGetUsersInSecurityGroupV1AsyncWithHttpInfo (string groupid, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ApiResponse<List<User>>> SecurityGetUsersInSecurityGroupV1AsyncWithHttpInfo (string groupid, string lang = null, string locale = null)
         {
             // verify the required parameter 'groupid' is set
             if (groupid == null)
@@ -4031,9 +4031,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<TrebuchetWebApiDataContractsUsersUser>>(localVarStatusCode,
+            return new ApiResponse<List<User>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<TrebuchetWebApiDataContractsUsersUser>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<TrebuchetWebApiDataContractsUsersUser>)));
+                (List<User>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<User>)));
         }
 
         /// <summary>

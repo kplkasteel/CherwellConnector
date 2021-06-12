@@ -405,9 +405,9 @@ namespace CherwellConnector.Api
         /// <param name="authMode">Specify the Authentication Mode to use for requesting an access token. (optional)</param>
         /// <param name="siteName">If for portal specify the Site name to use for requesting an access token. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsSecurityTokenResponse</returns>
-        public TrebuchetWebApiDataContractsSecurityTokenResponse ServiceToken (string grantType, string clientId, string clientSecret = null, string username = null, string password = null, string refreshToken = null, string authMode = null, string siteName = null)
+        public TokenResponse ServiceToken (string grantType, string clientId, string clientSecret = null, string username = null, string password = null, string refreshToken = null, string authMode = null, string siteName = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsSecurityTokenResponse> localVarResponse = ServiceTokenWithHttpInfo(grantType, clientId, clientSecret, username, password, refreshToken, authMode, siteName);
+             ApiResponse<TokenResponse> localVarResponse = ServiceTokenWithHttpInfo(grantType, clientId, clientSecret, username, password, refreshToken, authMode, siteName);
              return localVarResponse.Data;
         }
 
@@ -424,7 +424,7 @@ namespace CherwellConnector.Api
         /// <param name="authMode">Specify the Authentication Mode to use for requesting an access token. (optional)</param>
         /// <param name="siteName">If for portal specify the Site name to use for requesting an access token. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsSecurityTokenResponse</returns>
-        public ApiResponse< TrebuchetWebApiDataContractsSecurityTokenResponse > ServiceTokenWithHttpInfo (string grantType, string clientId, string clientSecret = null, string username = null, string password = null, string refreshToken = null, string authMode = null, string siteName = null)
+        public ApiResponse< TokenResponse > ServiceTokenWithHttpInfo (string grantType, string clientId, string clientSecret = null, string username = null, string password = null, string refreshToken = null, string authMode = null, string siteName = null)
         {
             // verify the required parameter 'grantType' is set
             if (grantType == null)
@@ -477,9 +477,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsSecurityTokenResponse>(localVarStatusCode,
+            return new ApiResponse<TokenResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsSecurityTokenResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsSecurityTokenResponse)));
+                (TokenResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TokenResponse)));
         }
 
         /// <summary>
@@ -495,9 +495,9 @@ namespace CherwellConnector.Api
         /// <param name="authMode">Specify the Authentication Mode to use for requesting an access token. (optional)</param>
         /// <param name="siteName">If for portal specify the Site name to use for requesting an access token. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsSecurityTokenResponse</returns>
-        public async System.Threading.Tasks.Task<TrebuchetWebApiDataContractsSecurityTokenResponse> ServiceTokenAsync (string grantType, string clientId, string clientSecret = null, string username = null, string password = null, string refreshToken = null, string authMode = null, string siteName = null)
+        public async System.Threading.Tasks.Task<TokenResponse> ServiceTokenAsync (string grantType, string clientId, string clientSecret = null, string username = null, string password = null, string refreshToken = null, string authMode = null, string siteName = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsSecurityTokenResponse> localVarResponse = await ServiceTokenAsyncWithHttpInfo(grantType, clientId, clientSecret, username, password, refreshToken, authMode, siteName);
+             ApiResponse<TokenResponse> localVarResponse = await ServiceTokenAsyncWithHttpInfo(grantType, clientId, clientSecret, username, password, refreshToken, authMode, siteName);
              return localVarResponse.Data;
 
         }
@@ -515,7 +515,7 @@ namespace CherwellConnector.Api
         /// <param name="authMode">Specify the Authentication Mode to use for requesting an access token. (optional)</param>
         /// <param name="siteName">If for portal specify the Site name to use for requesting an access token. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsSecurityTokenResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsSecurityTokenResponse>> ServiceTokenAsyncWithHttpInfo (string grantType, string clientId, string clientSecret = null, string username = null, string password = null, string refreshToken = null, string authMode = null, string siteName = null)
+        public async System.Threading.Tasks.Task<ApiResponse<TokenResponse>> ServiceTokenAsyncWithHttpInfo (string grantType, string clientId, string clientSecret = null, string username = null, string password = null, string refreshToken = null, string authMode = null, string siteName = null)
         {
             // verify the required parameter 'grantType' is set
             if (grantType == null)
@@ -568,9 +568,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsSecurityTokenResponse>(localVarStatusCode,
+            return new ApiResponse<TokenResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsSecurityTokenResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsSecurityTokenResponse)));
+                (TokenResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TokenResponse)));
         }
 
     }

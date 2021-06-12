@@ -120,9 +120,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsTeamsAddUserToTeamByBatchResponse</returns>
-        public TrebuchetWebApiDataContractsTeamsAddUserToTeamByBatchResponse TeamsAddUserToTeamByBatchV1 (TrebuchetWebApiDataContractsTeamsAddUserToTeamByBatchRequest request, string lang = null, string locale = null)
+        public AddUserToTeamByBatchResponse TeamsAddUserToTeamByBatchV1 (AddUserToTeamByBatchRequest request, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsTeamsAddUserToTeamByBatchResponse> localVarResponse = TeamsAddUserToTeamByBatchV1WithHttpInfo(request, lang, locale);
+             ApiResponse<AddUserToTeamByBatchResponse> localVarResponse = TeamsAddUserToTeamByBatchV1WithHttpInfo(request, lang, locale);
              return localVarResponse.Data;
         }
 
@@ -134,7 +134,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsTeamsAddUserToTeamByBatchResponse</returns>
-        public ApiResponse< TrebuchetWebApiDataContractsTeamsAddUserToTeamByBatchResponse > TeamsAddUserToTeamByBatchV1WithHttpInfo (TrebuchetWebApiDataContractsTeamsAddUserToTeamByBatchRequest request, string lang = null, string locale = null)
+        public ApiResponse< AddUserToTeamByBatchResponse > TeamsAddUserToTeamByBatchV1WithHttpInfo (AddUserToTeamByBatchRequest request, string lang = null, string locale = null)
         {
             // verify the required parameter 'request' is set
             if (request == null)
@@ -200,9 +200,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsTeamsAddUserToTeamByBatchResponse>(localVarStatusCode,
+            return new ApiResponse<AddUserToTeamByBatchResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsTeamsAddUserToTeamByBatchResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsTeamsAddUserToTeamByBatchResponse)));
+                (AddUserToTeamByBatchResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AddUserToTeamByBatchResponse)));
         }
 
         /// <summary>
@@ -213,9 +213,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsTeamsAddUserToTeamByBatchResponse</returns>
-        public async System.Threading.Tasks.Task<TrebuchetWebApiDataContractsTeamsAddUserToTeamByBatchResponse> TeamsAddUserToTeamByBatchV1Async (TrebuchetWebApiDataContractsTeamsAddUserToTeamByBatchRequest request, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<AddUserToTeamByBatchResponse> TeamsAddUserToTeamByBatchV1Async (AddUserToTeamByBatchRequest request, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsTeamsAddUserToTeamByBatchResponse> localVarResponse = await TeamsAddUserToTeamByBatchV1AsyncWithHttpInfo(request, lang, locale);
+             ApiResponse<AddUserToTeamByBatchResponse> localVarResponse = await TeamsAddUserToTeamByBatchV1AsyncWithHttpInfo(request, lang, locale);
              return localVarResponse.Data;
 
         }
@@ -228,7 +228,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsTeamsAddUserToTeamByBatchResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsTeamsAddUserToTeamByBatchResponse>> TeamsAddUserToTeamByBatchV1AsyncWithHttpInfo (TrebuchetWebApiDataContractsTeamsAddUserToTeamByBatchRequest request, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ApiResponse<AddUserToTeamByBatchResponse>> TeamsAddUserToTeamByBatchV1AsyncWithHttpInfo (AddUserToTeamByBatchRequest request, string lang = null, string locale = null)
         {
             // verify the required parameter 'request' is set
             if (request == null)
@@ -294,9 +294,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsTeamsAddUserToTeamByBatchResponse>(localVarStatusCode,
+            return new ApiResponse<AddUserToTeamByBatchResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsTeamsAddUserToTeamByBatchResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsTeamsAddUserToTeamByBatchResponse)));
+                (AddUserToTeamByBatchResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AddUserToTeamByBatchResponse)));
         }
 
         /// <summary>
@@ -307,7 +307,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns></returns>
-        public void TeamsAddUserToTeamV1 (TrebuchetWebApiDataContractsTeamsAddUserToTeamRequest dataRequest, string lang = null, string locale = null)
+        public void TeamsAddUserToTeamV1 (AddUserToTeamRequest dataRequest, string lang = null, string locale = null)
         {
              TeamsAddUserToTeamV1WithHttpInfo(dataRequest, lang, locale);
         }
@@ -320,7 +320,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<object> TeamsAddUserToTeamV1WithHttpInfo (TrebuchetWebApiDataContractsTeamsAddUserToTeamRequest dataRequest, string lang = null, string locale = null)
+        public ApiResponse<object> TeamsAddUserToTeamV1WithHttpInfo (AddUserToTeamRequest dataRequest, string lang = null, string locale = null)
         {
             // verify the required parameter 'dataRequest' is set
             if (dataRequest == null)
@@ -395,7 +395,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task TeamsAddUserToTeamV1Async (TrebuchetWebApiDataContractsTeamsAddUserToTeamRequest dataRequest, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task TeamsAddUserToTeamV1Async (AddUserToTeamRequest dataRequest, string lang = null, string locale = null)
         {
              await TeamsAddUserToTeamV1AsyncWithHttpInfo(dataRequest, lang, locale);
 
@@ -409,7 +409,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<object>> TeamsAddUserToTeamV1AsyncWithHttpInfo (TrebuchetWebApiDataContractsTeamsAddUserToTeamRequest dataRequest, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ApiResponse<object>> TeamsAddUserToTeamV1AsyncWithHttpInfo (AddUserToTeamRequest dataRequest, string lang = null, string locale = null)
         {
             // verify the required parameter 'dataRequest' is set
             if (dataRequest == null)
@@ -484,9 +484,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsTeamsAddUserToTeamResponse</returns>
-        public TrebuchetWebApiDataContractsTeamsAddUserToTeamResponse TeamsAddUserToTeamV2 (TrebuchetWebApiDataContractsTeamsAddUserToTeamRequest dataRequest, string lang = null, string locale = null)
+        public AddUserToTeamResponse TeamsAddUserToTeamV2 (AddUserToTeamRequest dataRequest, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsTeamsAddUserToTeamResponse> localVarResponse = TeamsAddUserToTeamV2WithHttpInfo(dataRequest, lang, locale);
+             ApiResponse<AddUserToTeamResponse> localVarResponse = TeamsAddUserToTeamV2WithHttpInfo(dataRequest, lang, locale);
              return localVarResponse.Data;
         }
 
@@ -498,7 +498,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsTeamsAddUserToTeamResponse</returns>
-        public ApiResponse< TrebuchetWebApiDataContractsTeamsAddUserToTeamResponse > TeamsAddUserToTeamV2WithHttpInfo (TrebuchetWebApiDataContractsTeamsAddUserToTeamRequest dataRequest, string lang = null, string locale = null)
+        public ApiResponse< AddUserToTeamResponse > TeamsAddUserToTeamV2WithHttpInfo (AddUserToTeamRequest dataRequest, string lang = null, string locale = null)
         {
             // verify the required parameter 'dataRequest' is set
             if (dataRequest == null)
@@ -564,9 +564,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsTeamsAddUserToTeamResponse>(localVarStatusCode,
+            return new ApiResponse<AddUserToTeamResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsTeamsAddUserToTeamResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsTeamsAddUserToTeamResponse)));
+                (AddUserToTeamResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AddUserToTeamResponse)));
         }
 
         /// <summary>
@@ -577,9 +577,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsTeamsAddUserToTeamResponse</returns>
-        public async System.Threading.Tasks.Task<TrebuchetWebApiDataContractsTeamsAddUserToTeamResponse> TeamsAddUserToTeamV2Async (TrebuchetWebApiDataContractsTeamsAddUserToTeamRequest dataRequest, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<AddUserToTeamResponse> TeamsAddUserToTeamV2Async (AddUserToTeamRequest dataRequest, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsTeamsAddUserToTeamResponse> localVarResponse = await TeamsAddUserToTeamV2AsyncWithHttpInfo(dataRequest, lang, locale);
+             ApiResponse<AddUserToTeamResponse> localVarResponse = await TeamsAddUserToTeamV2AsyncWithHttpInfo(dataRequest, lang, locale);
              return localVarResponse.Data;
 
         }
@@ -592,7 +592,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsTeamsAddUserToTeamResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsTeamsAddUserToTeamResponse>> TeamsAddUserToTeamV2AsyncWithHttpInfo (TrebuchetWebApiDataContractsTeamsAddUserToTeamRequest dataRequest, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ApiResponse<AddUserToTeamResponse>> TeamsAddUserToTeamV2AsyncWithHttpInfo (AddUserToTeamRequest dataRequest, string lang = null, string locale = null)
         {
             // verify the required parameter 'dataRequest' is set
             if (dataRequest == null)
@@ -658,9 +658,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsTeamsAddUserToTeamResponse>(localVarStatusCode,
+            return new ApiResponse<AddUserToTeamResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsTeamsAddUserToTeamResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsTeamsAddUserToTeamResponse)));
+                (AddUserToTeamResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AddUserToTeamResponse)));
         }
 
         /// <summary>
@@ -824,9 +824,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsTeamsTeamResponse</returns>
-        public TrebuchetWebApiDataContractsTeamsTeamResponse TeamsGetTeamV1 (string teamid, string lang = null, string locale = null)
+        public TeamResponse TeamsGetTeamV1 (string teamid, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsTeamsTeamResponse> localVarResponse = TeamsGetTeamV1WithHttpInfo(teamid, lang, locale);
+             ApiResponse<TeamResponse> localVarResponse = TeamsGetTeamV1WithHttpInfo(teamid, lang, locale);
              return localVarResponse.Data;
         }
 
@@ -838,7 +838,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsTeamsTeamResponse</returns>
-        public ApiResponse< TrebuchetWebApiDataContractsTeamsTeamResponse > TeamsGetTeamV1WithHttpInfo (string teamid, string lang = null, string locale = null)
+        public ApiResponse< TeamResponse > TeamsGetTeamV1WithHttpInfo (string teamid, string lang = null, string locale = null)
         {
             // verify the required parameter 'teamid' is set
             if (teamid == null)
@@ -892,9 +892,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsTeamsTeamResponse>(localVarStatusCode,
+            return new ApiResponse<TeamResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsTeamsTeamResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsTeamsTeamResponse)));
+                (TeamResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TeamResponse)));
         }
 
         /// <summary>
@@ -905,9 +905,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsTeamsTeamResponse</returns>
-        public async System.Threading.Tasks.Task<TrebuchetWebApiDataContractsTeamsTeamResponse> TeamsGetTeamV1Async (string teamid, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<TeamResponse> TeamsGetTeamV1Async (string teamid, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsTeamsTeamResponse> localVarResponse = await TeamsGetTeamV1AsyncWithHttpInfo(teamid, lang, locale);
+             ApiResponse<TeamResponse> localVarResponse = await TeamsGetTeamV1AsyncWithHttpInfo(teamid, lang, locale);
              return localVarResponse.Data;
 
         }
@@ -920,7 +920,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsTeamsTeamResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsTeamsTeamResponse>> TeamsGetTeamV1AsyncWithHttpInfo (string teamid, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ApiResponse<TeamResponse>> TeamsGetTeamV1AsyncWithHttpInfo (string teamid, string lang = null, string locale = null)
         {
             // verify the required parameter 'teamid' is set
             if (teamid == null)
@@ -974,9 +974,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsTeamsTeamResponse>(localVarStatusCode,
+            return new ApiResponse<TeamResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsTeamsTeamResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsTeamsTeamResponse)));
+                (TeamResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TeamResponse)));
         }
 
         /// <summary>
@@ -986,9 +986,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsTeamsTeamsResponse</returns>
-        public TrebuchetWebApiDataContractsTeamsTeamsResponse TeamsGetTeamsV1 (string lang = null, string locale = null)
+        public TeamsResponse TeamsGetTeamsV1 (string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsTeamsTeamsResponse> localVarResponse = TeamsGetTeamsV1WithHttpInfo(lang, locale);
+             ApiResponse<TeamsResponse> localVarResponse = TeamsGetTeamsV1WithHttpInfo(lang, locale);
              return localVarResponse.Data;
         }
 
@@ -999,7 +999,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsTeamsTeamsResponse</returns>
-        public ApiResponse< TrebuchetWebApiDataContractsTeamsTeamsResponse > TeamsGetTeamsV1WithHttpInfo (string lang = null, string locale = null)
+        public ApiResponse< TeamsResponse > TeamsGetTeamsV1WithHttpInfo (string lang = null, string locale = null)
         {
 
             var localVarPath = "/api/V1/getteams";
@@ -1049,9 +1049,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsTeamsTeamsResponse>(localVarStatusCode,
+            return new ApiResponse<TeamsResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsTeamsTeamsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsTeamsTeamsResponse)));
+                (TeamsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TeamsResponse)));
         }
 
         /// <summary>
@@ -1061,9 +1061,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsTeamsTeamsResponse</returns>
-        public async System.Threading.Tasks.Task<TrebuchetWebApiDataContractsTeamsTeamsResponse> TeamsGetTeamsV1Async (string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<TeamsResponse> TeamsGetTeamsV1Async (string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsTeamsTeamsResponse> localVarResponse = await TeamsGetTeamsV1AsyncWithHttpInfo(lang, locale);
+             ApiResponse<TeamsResponse> localVarResponse = await TeamsGetTeamsV1AsyncWithHttpInfo(lang, locale);
              return localVarResponse.Data;
 
         }
@@ -1075,7 +1075,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsTeamsTeamsResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsTeamsTeamsResponse>> TeamsGetTeamsV1AsyncWithHttpInfo (string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ApiResponse<TeamsResponse>> TeamsGetTeamsV1AsyncWithHttpInfo (string lang = null, string locale = null)
         {
 
             var localVarPath = "/api/V1/getteams";
@@ -1125,9 +1125,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsTeamsTeamsResponse>(localVarStatusCode,
+            return new ApiResponse<TeamsResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsTeamsTeamsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsTeamsTeamsResponse)));
+                (TeamsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TeamsResponse)));
         }
 
         /// <summary>
@@ -1137,9 +1137,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsTeamsTeamsV2Response</returns>
-        public TrebuchetWebApiDataContractsTeamsTeamsV2Response TeamsGetTeamsV2 (string lang = null, string locale = null)
+        public TeamsV2Response TeamsGetTeamsV2 (string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsTeamsTeamsV2Response> localVarResponse = TeamsGetTeamsV2WithHttpInfo(lang, locale);
+             ApiResponse<TeamsV2Response> localVarResponse = TeamsGetTeamsV2WithHttpInfo(lang, locale);
              return localVarResponse.Data;
         }
 
@@ -1150,7 +1150,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsTeamsTeamsV2Response</returns>
-        public ApiResponse< TrebuchetWebApiDataContractsTeamsTeamsV2Response > TeamsGetTeamsV2WithHttpInfo (string lang = null, string locale = null)
+        public ApiResponse< TeamsV2Response > TeamsGetTeamsV2WithHttpInfo (string lang = null, string locale = null)
         {
 
             var localVarPath = "/api/V2/getteams";
@@ -1200,9 +1200,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsTeamsTeamsV2Response>(localVarStatusCode,
+            return new ApiResponse<TeamsV2Response>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsTeamsTeamsV2Response) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsTeamsTeamsV2Response)));
+                (TeamsV2Response) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TeamsV2Response)));
         }
 
         /// <summary>
@@ -1212,9 +1212,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsTeamsTeamsV2Response</returns>
-        public async System.Threading.Tasks.Task<TrebuchetWebApiDataContractsTeamsTeamsV2Response> TeamsGetTeamsV2Async (string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<TeamsV2Response> TeamsGetTeamsV2Async (string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsTeamsTeamsV2Response> localVarResponse = await TeamsGetTeamsV2AsyncWithHttpInfo(lang, locale);
+             ApiResponse<TeamsV2Response> localVarResponse = await TeamsGetTeamsV2AsyncWithHttpInfo(lang, locale);
              return localVarResponse.Data;
 
         }
@@ -1226,7 +1226,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsTeamsTeamsV2Response)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsTeamsTeamsV2Response>> TeamsGetTeamsV2AsyncWithHttpInfo (string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ApiResponse<TeamsV2Response>> TeamsGetTeamsV2AsyncWithHttpInfo (string lang = null, string locale = null)
         {
 
             var localVarPath = "/api/V2/getteams";
@@ -1276,9 +1276,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsTeamsTeamsV2Response>(localVarStatusCode,
+            return new ApiResponse<TeamsV2Response>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsTeamsTeamsV2Response) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsTeamsTeamsV2Response)));
+                (TeamsV2Response) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TeamsV2Response)));
         }
 
         /// <summary>
@@ -1289,9 +1289,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsTeamsTeamsResponse</returns>
-        public TrebuchetWebApiDataContractsTeamsTeamsResponse TeamsGetUsersTeamsV1 (string userRecordId, string lang = null, string locale = null)
+        public TeamsResponse TeamsGetUsersTeamsV1 (string userRecordId, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsTeamsTeamsResponse> localVarResponse = TeamsGetUsersTeamsV1WithHttpInfo(userRecordId, lang, locale);
+             ApiResponse<TeamsResponse> localVarResponse = TeamsGetUsersTeamsV1WithHttpInfo(userRecordId, lang, locale);
              return localVarResponse.Data;
         }
 
@@ -1303,7 +1303,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsTeamsTeamsResponse</returns>
-        public ApiResponse< TrebuchetWebApiDataContractsTeamsTeamsResponse > TeamsGetUsersTeamsV1WithHttpInfo (string userRecordId, string lang = null, string locale = null)
+        public ApiResponse< TeamsResponse > TeamsGetUsersTeamsV1WithHttpInfo (string userRecordId, string lang = null, string locale = null)
         {
             // verify the required parameter 'userRecordId' is set
             if (userRecordId == null)
@@ -1357,9 +1357,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsTeamsTeamsResponse>(localVarStatusCode,
+            return new ApiResponse<TeamsResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsTeamsTeamsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsTeamsTeamsResponse)));
+                (TeamsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TeamsResponse)));
         }
 
         /// <summary>
@@ -1370,9 +1370,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsTeamsTeamsResponse</returns>
-        public async System.Threading.Tasks.Task<TrebuchetWebApiDataContractsTeamsTeamsResponse> TeamsGetUsersTeamsV1Async (string userRecordId, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<TeamsResponse> TeamsGetUsersTeamsV1Async (string userRecordId, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsTeamsTeamsResponse> localVarResponse = await TeamsGetUsersTeamsV1AsyncWithHttpInfo(userRecordId, lang, locale);
+             ApiResponse<TeamsResponse> localVarResponse = await TeamsGetUsersTeamsV1AsyncWithHttpInfo(userRecordId, lang, locale);
              return localVarResponse.Data;
 
         }
@@ -1385,7 +1385,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsTeamsTeamsResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsTeamsTeamsResponse>> TeamsGetUsersTeamsV1AsyncWithHttpInfo (string userRecordId, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ApiResponse<TeamsResponse>> TeamsGetUsersTeamsV1AsyncWithHttpInfo (string userRecordId, string lang = null, string locale = null)
         {
             // verify the required parameter 'userRecordId' is set
             if (userRecordId == null)
@@ -1439,9 +1439,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsTeamsTeamsResponse>(localVarStatusCode,
+            return new ApiResponse<TeamsResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsTeamsTeamsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsTeamsTeamsResponse)));
+                (TeamsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TeamsResponse)));
         }
 
         /// <summary>
@@ -1452,9 +1452,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsTeamsTeamsV2Response</returns>
-        public TrebuchetWebApiDataContractsTeamsTeamsV2Response TeamsGetUsersTeamsV2 (string userRecordId, string lang = null, string locale = null)
+        public TeamsV2Response TeamsGetUsersTeamsV2 (string userRecordId, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsTeamsTeamsV2Response> localVarResponse = TeamsGetUsersTeamsV2WithHttpInfo(userRecordId, lang, locale);
+             ApiResponse<TeamsV2Response> localVarResponse = TeamsGetUsersTeamsV2WithHttpInfo(userRecordId, lang, locale);
              return localVarResponse.Data;
         }
 
@@ -1466,7 +1466,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsTeamsTeamsV2Response</returns>
-        public ApiResponse< TrebuchetWebApiDataContractsTeamsTeamsV2Response > TeamsGetUsersTeamsV2WithHttpInfo (string userRecordId, string lang = null, string locale = null)
+        public ApiResponse< TeamsV2Response > TeamsGetUsersTeamsV2WithHttpInfo (string userRecordId, string lang = null, string locale = null)
         {
             // verify the required parameter 'userRecordId' is set
             if (userRecordId == null)
@@ -1520,9 +1520,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsTeamsTeamsV2Response>(localVarStatusCode,
+            return new ApiResponse<TeamsV2Response>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsTeamsTeamsV2Response) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsTeamsTeamsV2Response)));
+                (TeamsV2Response) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TeamsV2Response)));
         }
 
         /// <summary>
@@ -1533,9 +1533,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsTeamsTeamsV2Response</returns>
-        public async System.Threading.Tasks.Task<TrebuchetWebApiDataContractsTeamsTeamsV2Response> TeamsGetUsersTeamsV2Async (string userRecordId, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<TeamsV2Response> TeamsGetUsersTeamsV2Async (string userRecordId, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsTeamsTeamsV2Response> localVarResponse = await TeamsGetUsersTeamsV2AsyncWithHttpInfo(userRecordId, lang, locale);
+             ApiResponse<TeamsV2Response> localVarResponse = await TeamsGetUsersTeamsV2AsyncWithHttpInfo(userRecordId, lang, locale);
              return localVarResponse.Data;
 
         }
@@ -1548,7 +1548,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsTeamsTeamsV2Response)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsTeamsTeamsV2Response>> TeamsGetUsersTeamsV2AsyncWithHttpInfo (string userRecordId, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ApiResponse<TeamsV2Response>> TeamsGetUsersTeamsV2AsyncWithHttpInfo (string userRecordId, string lang = null, string locale = null)
         {
             // verify the required parameter 'userRecordId' is set
             if (userRecordId == null)
@@ -1602,9 +1602,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsTeamsTeamsV2Response>(localVarStatusCode,
+            return new ApiResponse<TeamsV2Response>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsTeamsTeamsV2Response) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsTeamsTeamsV2Response)));
+                (TeamsV2Response) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TeamsV2Response)));
         }
 
         /// <summary>
@@ -1614,9 +1614,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsTeamsTeamsResponse</returns>
-        public TrebuchetWebApiDataContractsTeamsTeamsResponse TeamsGetWorkgroupsV1 (string lang = null, string locale = null)
+        public TeamsResponse TeamsGetWorkgroupsV1 (string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsTeamsTeamsResponse> localVarResponse = TeamsGetWorkgroupsV1WithHttpInfo(lang, locale);
+             ApiResponse<TeamsResponse> localVarResponse = TeamsGetWorkgroupsV1WithHttpInfo(lang, locale);
              return localVarResponse.Data;
         }
 
@@ -1627,7 +1627,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsTeamsTeamsResponse</returns>
-        public ApiResponse< TrebuchetWebApiDataContractsTeamsTeamsResponse > TeamsGetWorkgroupsV1WithHttpInfo (string lang = null, string locale = null)
+        public ApiResponse< TeamsResponse > TeamsGetWorkgroupsV1WithHttpInfo (string lang = null, string locale = null)
         {
 
             var localVarPath = "/api/V1/getworkgroups";
@@ -1677,9 +1677,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsTeamsTeamsResponse>(localVarStatusCode,
+            return new ApiResponse<TeamsResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsTeamsTeamsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsTeamsTeamsResponse)));
+                (TeamsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TeamsResponse)));
         }
 
         /// <summary>
@@ -1689,9 +1689,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsTeamsTeamsResponse</returns>
-        public async System.Threading.Tasks.Task<TrebuchetWebApiDataContractsTeamsTeamsResponse> TeamsGetWorkgroupsV1Async (string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<TeamsResponse> TeamsGetWorkgroupsV1Async (string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsTeamsTeamsResponse> localVarResponse = await TeamsGetWorkgroupsV1AsyncWithHttpInfo(lang, locale);
+             ApiResponse<TeamsResponse> localVarResponse = await TeamsGetWorkgroupsV1AsyncWithHttpInfo(lang, locale);
              return localVarResponse.Data;
 
         }
@@ -1703,7 +1703,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsTeamsTeamsResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsTeamsTeamsResponse>> TeamsGetWorkgroupsV1AsyncWithHttpInfo (string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ApiResponse<TeamsResponse>> TeamsGetWorkgroupsV1AsyncWithHttpInfo (string lang = null, string locale = null)
         {
 
             var localVarPath = "/api/V1/getworkgroups";
@@ -1753,9 +1753,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsTeamsTeamsResponse>(localVarStatusCode,
+            return new ApiResponse<TeamsResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsTeamsTeamsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsTeamsTeamsResponse)));
+                (TeamsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TeamsResponse)));
         }
 
         /// <summary>
@@ -1765,9 +1765,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsTeamsTeamsV2Response</returns>
-        public TrebuchetWebApiDataContractsTeamsTeamsV2Response TeamsGetWorkgroupsV2 (string lang = null, string locale = null)
+        public TeamsV2Response TeamsGetWorkgroupsV2 (string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsTeamsTeamsV2Response> localVarResponse = TeamsGetWorkgroupsV2WithHttpInfo(lang, locale);
+             ApiResponse<TeamsV2Response> localVarResponse = TeamsGetWorkgroupsV2WithHttpInfo(lang, locale);
              return localVarResponse.Data;
         }
 
@@ -1778,7 +1778,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsTeamsTeamsV2Response</returns>
-        public ApiResponse< TrebuchetWebApiDataContractsTeamsTeamsV2Response > TeamsGetWorkgroupsV2WithHttpInfo (string lang = null, string locale = null)
+        public ApiResponse< TeamsV2Response > TeamsGetWorkgroupsV2WithHttpInfo (string lang = null, string locale = null)
         {
 
             var localVarPath = "/api/V2/getworkgroups";
@@ -1828,9 +1828,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsTeamsTeamsV2Response>(localVarStatusCode,
+            return new ApiResponse<TeamsV2Response>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsTeamsTeamsV2Response) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsTeamsTeamsV2Response)));
+                (TeamsV2Response) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TeamsV2Response)));
         }
 
         /// <summary>
@@ -1840,9 +1840,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsTeamsTeamsV2Response</returns>
-        public async System.Threading.Tasks.Task<TrebuchetWebApiDataContractsTeamsTeamsV2Response> TeamsGetWorkgroupsV2Async (string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<TeamsV2Response> TeamsGetWorkgroupsV2Async (string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsTeamsTeamsV2Response> localVarResponse = await TeamsGetWorkgroupsV2AsyncWithHttpInfo(lang, locale);
+             ApiResponse<TeamsV2Response> localVarResponse = await TeamsGetWorkgroupsV2AsyncWithHttpInfo(lang, locale);
              return localVarResponse.Data;
 
         }
@@ -1854,7 +1854,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsTeamsTeamsV2Response)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsTeamsTeamsV2Response>> TeamsGetWorkgroupsV2AsyncWithHttpInfo (string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ApiResponse<TeamsV2Response>> TeamsGetWorkgroupsV2AsyncWithHttpInfo (string lang = null, string locale = null)
         {
 
             var localVarPath = "/api/V2/getworkgroups";
@@ -1904,9 +1904,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsTeamsTeamsV2Response>(localVarStatusCode,
+            return new ApiResponse<TeamsV2Response>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsTeamsTeamsV2Response) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsTeamsTeamsV2Response)));
+                (TeamsV2Response) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TeamsV2Response)));
         }
 
         /// <summary>
@@ -1918,9 +1918,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsTeamsRemoveCustomerFromWorkgroupResponse</returns>
-        public TrebuchetWebApiDataContractsTeamsRemoveCustomerFromWorkgroupResponse TeamsRemoveCustomerFromWorkgroupV1 (string workgroupid, string customerrecordid, string lang = null, string locale = null)
+        public RemoveCustomerFromWorkgroupResponse TeamsRemoveCustomerFromWorkgroupV1 (string workgroupid, string customerrecordid, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsTeamsRemoveCustomerFromWorkgroupResponse> localVarResponse = TeamsRemoveCustomerFromWorkgroupV1WithHttpInfo(workgroupid, customerrecordid, lang, locale);
+             ApiResponse<RemoveCustomerFromWorkgroupResponse> localVarResponse = TeamsRemoveCustomerFromWorkgroupV1WithHttpInfo(workgroupid, customerrecordid, lang, locale);
              return localVarResponse.Data;
         }
 
@@ -1933,7 +1933,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsTeamsRemoveCustomerFromWorkgroupResponse</returns>
-        public ApiResponse< TrebuchetWebApiDataContractsTeamsRemoveCustomerFromWorkgroupResponse > TeamsRemoveCustomerFromWorkgroupV1WithHttpInfo (string workgroupid, string customerrecordid, string lang = null, string locale = null)
+        public ApiResponse< RemoveCustomerFromWorkgroupResponse > TeamsRemoveCustomerFromWorkgroupV1WithHttpInfo (string workgroupid, string customerrecordid, string lang = null, string locale = null)
         {
             // verify the required parameter 'workgroupid' is set
             if (workgroupid == null)
@@ -1991,9 +1991,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsTeamsRemoveCustomerFromWorkgroupResponse>(localVarStatusCode,
+            return new ApiResponse<RemoveCustomerFromWorkgroupResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsTeamsRemoveCustomerFromWorkgroupResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsTeamsRemoveCustomerFromWorkgroupResponse)));
+                (RemoveCustomerFromWorkgroupResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RemoveCustomerFromWorkgroupResponse)));
         }
 
         /// <summary>
@@ -2005,9 +2005,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsTeamsRemoveCustomerFromWorkgroupResponse</returns>
-        public async System.Threading.Tasks.Task<TrebuchetWebApiDataContractsTeamsRemoveCustomerFromWorkgroupResponse> TeamsRemoveCustomerFromWorkgroupV1Async (string workgroupid, string customerrecordid, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<RemoveCustomerFromWorkgroupResponse> TeamsRemoveCustomerFromWorkgroupV1Async (string workgroupid, string customerrecordid, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsTeamsRemoveCustomerFromWorkgroupResponse> localVarResponse = await TeamsRemoveCustomerFromWorkgroupV1AsyncWithHttpInfo(workgroupid, customerrecordid, lang, locale);
+             ApiResponse<RemoveCustomerFromWorkgroupResponse> localVarResponse = await TeamsRemoveCustomerFromWorkgroupV1AsyncWithHttpInfo(workgroupid, customerrecordid, lang, locale);
              return localVarResponse.Data;
 
         }
@@ -2021,7 +2021,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsTeamsRemoveCustomerFromWorkgroupResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsTeamsRemoveCustomerFromWorkgroupResponse>> TeamsRemoveCustomerFromWorkgroupV1AsyncWithHttpInfo (string workgroupid, string customerrecordid, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ApiResponse<RemoveCustomerFromWorkgroupResponse>> TeamsRemoveCustomerFromWorkgroupV1AsyncWithHttpInfo (string workgroupid, string customerrecordid, string lang = null, string locale = null)
         {
             // verify the required parameter 'workgroupid' is set
             if (workgroupid == null)
@@ -2079,9 +2079,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsTeamsRemoveCustomerFromWorkgroupResponse>(localVarStatusCode,
+            return new ApiResponse<RemoveCustomerFromWorkgroupResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsTeamsRemoveCustomerFromWorkgroupResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsTeamsRemoveCustomerFromWorkgroupResponse)));
+                (RemoveCustomerFromWorkgroupResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RemoveCustomerFromWorkgroupResponse)));
         }
 
         /// <summary>
@@ -2258,9 +2258,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsTeamsRemoveUserFromTeamResponse</returns>
-        public TrebuchetWebApiDataContractsTeamsRemoveUserFromTeamResponse TeamsRemoveUserFromTeamV2 (string teamId, string userrecordid, string lang = null, string locale = null)
+        public RemoveUserFromTeamResponse TeamsRemoveUserFromTeamV2 (string teamId, string userrecordid, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsTeamsRemoveUserFromTeamResponse> localVarResponse = TeamsRemoveUserFromTeamV2WithHttpInfo(teamId, userrecordid, lang, locale);
+             ApiResponse<RemoveUserFromTeamResponse> localVarResponse = TeamsRemoveUserFromTeamV2WithHttpInfo(teamId, userrecordid, lang, locale);
              return localVarResponse.Data;
         }
 
@@ -2273,7 +2273,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsTeamsRemoveUserFromTeamResponse</returns>
-        public ApiResponse< TrebuchetWebApiDataContractsTeamsRemoveUserFromTeamResponse > TeamsRemoveUserFromTeamV2WithHttpInfo (string teamId, string userrecordid, string lang = null, string locale = null)
+        public ApiResponse< RemoveUserFromTeamResponse > TeamsRemoveUserFromTeamV2WithHttpInfo (string teamId, string userrecordid, string lang = null, string locale = null)
         {
             // verify the required parameter 'teamId' is set
             if (teamId == null)
@@ -2331,9 +2331,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsTeamsRemoveUserFromTeamResponse>(localVarStatusCode,
+            return new ApiResponse<RemoveUserFromTeamResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsTeamsRemoveUserFromTeamResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsTeamsRemoveUserFromTeamResponse)));
+                (RemoveUserFromTeamResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RemoveUserFromTeamResponse)));
         }
 
         /// <summary>
@@ -2345,9 +2345,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsTeamsRemoveUserFromTeamResponse</returns>
-        public async System.Threading.Tasks.Task<TrebuchetWebApiDataContractsTeamsRemoveUserFromTeamResponse> TeamsRemoveUserFromTeamV2Async (string teamId, string userrecordid, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<RemoveUserFromTeamResponse> TeamsRemoveUserFromTeamV2Async (string teamId, string userrecordid, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsTeamsRemoveUserFromTeamResponse> localVarResponse = await TeamsRemoveUserFromTeamV2AsyncWithHttpInfo(teamId, userrecordid, lang, locale);
+             ApiResponse<RemoveUserFromTeamResponse> localVarResponse = await TeamsRemoveUserFromTeamV2AsyncWithHttpInfo(teamId, userrecordid, lang, locale);
              return localVarResponse.Data;
 
         }
@@ -2361,7 +2361,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsTeamsRemoveUserFromTeamResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsTeamsRemoveUserFromTeamResponse>> TeamsRemoveUserFromTeamV2AsyncWithHttpInfo (string teamId, string userrecordid, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ApiResponse<RemoveUserFromTeamResponse>> TeamsRemoveUserFromTeamV2AsyncWithHttpInfo (string teamId, string userrecordid, string lang = null, string locale = null)
         {
             // verify the required parameter 'teamId' is set
             if (teamId == null)
@@ -2419,9 +2419,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsTeamsRemoveUserFromTeamResponse>(localVarStatusCode,
+            return new ApiResponse<RemoveUserFromTeamResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsTeamsRemoveUserFromTeamResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsTeamsRemoveUserFromTeamResponse)));
+                (RemoveUserFromTeamResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RemoveUserFromTeamResponse)));
         }
 
         /// <summary>
@@ -2432,9 +2432,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsTeamsSaveTeamMemberResponse</returns>
-        public TrebuchetWebApiDataContractsTeamsSaveTeamMemberResponse TeamsSaveTeamMemberV1 (TrebuchetWebApiDataContractsTeamsSaveTeamMemberRequest request, string lang = null, string locale = null)
+        public SaveTeamMemberResponse TeamsSaveTeamMemberV1 (SaveTeamMemberRequest request, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsTeamsSaveTeamMemberResponse> localVarResponse = TeamsSaveTeamMemberV1WithHttpInfo(request, lang, locale);
+             ApiResponse<SaveTeamMemberResponse> localVarResponse = TeamsSaveTeamMemberV1WithHttpInfo(request, lang, locale);
              return localVarResponse.Data;
         }
 
@@ -2446,7 +2446,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsTeamsSaveTeamMemberResponse</returns>
-        public ApiResponse< TrebuchetWebApiDataContractsTeamsSaveTeamMemberResponse > TeamsSaveTeamMemberV1WithHttpInfo (TrebuchetWebApiDataContractsTeamsSaveTeamMemberRequest request, string lang = null, string locale = null)
+        public ApiResponse< SaveTeamMemberResponse > TeamsSaveTeamMemberV1WithHttpInfo (SaveTeamMemberRequest request, string lang = null, string locale = null)
         {
             // verify the required parameter 'request' is set
             if (request == null)
@@ -2512,9 +2512,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsTeamsSaveTeamMemberResponse>(localVarStatusCode,
+            return new ApiResponse<SaveTeamMemberResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsTeamsSaveTeamMemberResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsTeamsSaveTeamMemberResponse)));
+                (SaveTeamMemberResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SaveTeamMemberResponse)));
         }
 
         /// <summary>
@@ -2525,9 +2525,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsTeamsSaveTeamMemberResponse</returns>
-        public async System.Threading.Tasks.Task<TrebuchetWebApiDataContractsTeamsSaveTeamMemberResponse> TeamsSaveTeamMemberV1Async (TrebuchetWebApiDataContractsTeamsSaveTeamMemberRequest request, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<SaveTeamMemberResponse> TeamsSaveTeamMemberV1Async (SaveTeamMemberRequest request, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsTeamsSaveTeamMemberResponse> localVarResponse = await TeamsSaveTeamMemberV1AsyncWithHttpInfo(request, lang, locale);
+             ApiResponse<SaveTeamMemberResponse> localVarResponse = await TeamsSaveTeamMemberV1AsyncWithHttpInfo(request, lang, locale);
              return localVarResponse.Data;
 
         }
@@ -2540,7 +2540,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsTeamsSaveTeamMemberResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsTeamsSaveTeamMemberResponse>> TeamsSaveTeamMemberV1AsyncWithHttpInfo (TrebuchetWebApiDataContractsTeamsSaveTeamMemberRequest request, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ApiResponse<SaveTeamMemberResponse>> TeamsSaveTeamMemberV1AsyncWithHttpInfo (SaveTeamMemberRequest request, string lang = null, string locale = null)
         {
             // verify the required parameter 'request' is set
             if (request == null)
@@ -2606,9 +2606,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsTeamsSaveTeamMemberResponse>(localVarStatusCode,
+            return new ApiResponse<SaveTeamMemberResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsTeamsSaveTeamMemberResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsTeamsSaveTeamMemberResponse)));
+                (SaveTeamMemberResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SaveTeamMemberResponse)));
         }
 
         /// <summary>
@@ -2619,9 +2619,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsTeamsTeamSaveResponse</returns>
-        public TrebuchetWebApiDataContractsTeamsTeamSaveResponse TeamsSaveTeamV1 (TrebuchetWebApiDataContractsTeamsTeamSaveRequest request, string lang = null, string locale = null)
+        public TeamSaveResponse TeamsSaveTeamV1 (TeamSaveRequest request, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsTeamsTeamSaveResponse> localVarResponse = TeamsSaveTeamV1WithHttpInfo(request, lang, locale);
+             ApiResponse<TeamSaveResponse> localVarResponse = TeamsSaveTeamV1WithHttpInfo(request, lang, locale);
              return localVarResponse.Data;
         }
 
@@ -2633,7 +2633,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsTeamsTeamSaveResponse</returns>
-        public ApiResponse< TrebuchetWebApiDataContractsTeamsTeamSaveResponse > TeamsSaveTeamV1WithHttpInfo (TrebuchetWebApiDataContractsTeamsTeamSaveRequest request, string lang = null, string locale = null)
+        public ApiResponse< TeamSaveResponse > TeamsSaveTeamV1WithHttpInfo (TeamSaveRequest request, string lang = null, string locale = null)
         {
             // verify the required parameter 'request' is set
             if (request == null)
@@ -2699,9 +2699,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsTeamsTeamSaveResponse>(localVarStatusCode,
+            return new ApiResponse<TeamSaveResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsTeamsTeamSaveResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsTeamsTeamSaveResponse)));
+                (TeamSaveResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TeamSaveResponse)));
         }
 
         /// <summary>
@@ -2712,9 +2712,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsTeamsTeamSaveResponse</returns>
-        public async System.Threading.Tasks.Task<TrebuchetWebApiDataContractsTeamsTeamSaveResponse> TeamsSaveTeamV1Async (TrebuchetWebApiDataContractsTeamsTeamSaveRequest request, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<TeamSaveResponse> TeamsSaveTeamV1Async (TeamSaveRequest request, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsTeamsTeamSaveResponse> localVarResponse = await TeamsSaveTeamV1AsyncWithHttpInfo(request, lang, locale);
+             ApiResponse<TeamSaveResponse> localVarResponse = await TeamsSaveTeamV1AsyncWithHttpInfo(request, lang, locale);
              return localVarResponse.Data;
 
         }
@@ -2727,7 +2727,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsTeamsTeamSaveResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsTeamsTeamSaveResponse>> TeamsSaveTeamV1AsyncWithHttpInfo (TrebuchetWebApiDataContractsTeamsTeamSaveRequest request, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ApiResponse<TeamSaveResponse>> TeamsSaveTeamV1AsyncWithHttpInfo (TeamSaveRequest request, string lang = null, string locale = null)
         {
             // verify the required parameter 'request' is set
             if (request == null)
@@ -2793,9 +2793,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsTeamsTeamSaveResponse>(localVarStatusCode,
+            return new ApiResponse<TeamSaveResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsTeamsTeamSaveResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsTeamsTeamSaveResponse)));
+                (TeamSaveResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TeamSaveResponse)));
         }
 
         /// <summary>
@@ -2806,9 +2806,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>TrebuchetWebApiDataContractsTeamsSaveWorkgroupMemberResponse</returns>
-        public TrebuchetWebApiDataContractsTeamsSaveWorkgroupMemberResponse TeamsSaveWorkgroupMemberV1 (TrebuchetWebApiDataContractsTeamsSaveWorkgroupMemberRequest request, string lang = null, string locale = null)
+        public SaveWorkgroupMemberResponse TeamsSaveWorkgroupMemberV1 (SaveWorkgroupMemberRequest request, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsTeamsSaveWorkgroupMemberResponse> localVarResponse = TeamsSaveWorkgroupMemberV1WithHttpInfo(request, lang, locale);
+             ApiResponse<SaveWorkgroupMemberResponse> localVarResponse = TeamsSaveWorkgroupMemberV1WithHttpInfo(request, lang, locale);
              return localVarResponse.Data;
         }
 
@@ -2820,7 +2820,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>ApiResponse of TrebuchetWebApiDataContractsTeamsSaveWorkgroupMemberResponse</returns>
-        public ApiResponse< TrebuchetWebApiDataContractsTeamsSaveWorkgroupMemberResponse > TeamsSaveWorkgroupMemberV1WithHttpInfo (TrebuchetWebApiDataContractsTeamsSaveWorkgroupMemberRequest request, string lang = null, string locale = null)
+        public ApiResponse< SaveWorkgroupMemberResponse > TeamsSaveWorkgroupMemberV1WithHttpInfo (SaveWorkgroupMemberRequest request, string lang = null, string locale = null)
         {
             // verify the required parameter 'request' is set
             if (request == null)
@@ -2886,9 +2886,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsTeamsSaveWorkgroupMemberResponse>(localVarStatusCode,
+            return new ApiResponse<SaveWorkgroupMemberResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsTeamsSaveWorkgroupMemberResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsTeamsSaveWorkgroupMemberResponse)));
+                (SaveWorkgroupMemberResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SaveWorkgroupMemberResponse)));
         }
 
         /// <summary>
@@ -2899,9 +2899,9 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of TrebuchetWebApiDataContractsTeamsSaveWorkgroupMemberResponse</returns>
-        public async System.Threading.Tasks.Task<TrebuchetWebApiDataContractsTeamsSaveWorkgroupMemberResponse> TeamsSaveWorkgroupMemberV1Async (TrebuchetWebApiDataContractsTeamsSaveWorkgroupMemberRequest request, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<SaveWorkgroupMemberResponse> TeamsSaveWorkgroupMemberV1Async (SaveWorkgroupMemberRequest request, string lang = null, string locale = null)
         {
-             ApiResponse<TrebuchetWebApiDataContractsTeamsSaveWorkgroupMemberResponse> localVarResponse = await TeamsSaveWorkgroupMemberV1AsyncWithHttpInfo(request, lang, locale);
+             ApiResponse<SaveWorkgroupMemberResponse> localVarResponse = await TeamsSaveWorkgroupMemberV1AsyncWithHttpInfo(request, lang, locale);
              return localVarResponse.Data;
 
         }
@@ -2914,7 +2914,7 @@ namespace CherwellConnector.Api
         /// <param name="lang">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>Task of ApiResponse (TrebuchetWebApiDataContractsTeamsSaveWorkgroupMemberResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TrebuchetWebApiDataContractsTeamsSaveWorkgroupMemberResponse>> TeamsSaveWorkgroupMemberV1AsyncWithHttpInfo (TrebuchetWebApiDataContractsTeamsSaveWorkgroupMemberRequest request, string lang = null, string locale = null)
+        public async System.Threading.Tasks.Task<ApiResponse<SaveWorkgroupMemberResponse>> TeamsSaveWorkgroupMemberV1AsyncWithHttpInfo (SaveWorkgroupMemberRequest request, string lang = null, string locale = null)
         {
             // verify the required parameter 'request' is set
             if (request == null)
@@ -2980,9 +2980,9 @@ namespace CherwellConnector.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TrebuchetWebApiDataContractsTeamsSaveWorkgroupMemberResponse>(localVarStatusCode,
+            return new ApiResponse<SaveWorkgroupMemberResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TrebuchetWebApiDataContractsTeamsSaveWorkgroupMemberResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrebuchetWebApiDataContractsTeamsSaveWorkgroupMemberResponse)));
+                (SaveWorkgroupMemberResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SaveWorkgroupMemberResponse)));
         }
 
     }
