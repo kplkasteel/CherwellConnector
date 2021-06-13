@@ -18,7 +18,27 @@ namespace CherwellConnector.Api
     /// </summary>
     public class FormsApi : BaseApi, IFormsApi
     {
+        #region Variables & Properties
         
+        private static FormsApi _instance;
+
+        private static readonly object Padlock = new();
+        
+        public static FormsApi Instance
+        {
+            get
+            {
+                lock (Padlock)
+                {
+                    return _instance ??= new FormsApi();
+                }
+            }
+            set => _instance = value;
+        }
+        
+        #endregion
+
+        #region Constructors
 
         /// <summary>
         /// Initializes a new instance of the <see cref="FormsApi"/> class.
@@ -43,8 +63,11 @@ namespace CherwellConnector.Api
 
             ExceptionFactory = Configuration.DefaultExceptionFactory;
         }
-
         
+        #endregion
+
+        #region FormsGetMobileFormForBusObByIdAndPublicIdV1
+
         /// <summary>
         /// Get mobile form by BusObId and Public ID Operation that gets a mobile form for a specific Business Object by Business Object ID and Public ID.
         /// </summary>
@@ -126,6 +149,9 @@ namespace CherwellConnector.Api
                 (MobileFormResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(MobileFormResponse)));
         }
 
+        #endregion
+
+        #region FormsGetMobileFormForBusObByIdAndRecIdV1
 
         /// <summary>
         /// Get mobile form by Business Object ID and Business Object Record ID. Operation that gets a mobile form for a specific Business Object by Business Object ID and record ID.
@@ -208,7 +234,10 @@ namespace CherwellConnector.Api
                 (MobileFormResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(MobileFormResponse)));
         }
 
-        
+        #endregion
+
+        #region FormsGetMobileFormForBusObByNameAndPublicIdV1
+
         /// <summary>
         /// Get mobile form by Business Object name and Public ID Operation that gets a mobile form for a specific Business Object by Business Object name and public ID.
         /// </summary>
@@ -290,6 +319,9 @@ namespace CherwellConnector.Api
                 (MobileFormResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(MobileFormResponse)));
         }
 
+        #endregion
+
+        #region FormsGetMobileFormForBusObByNameAndRecIdV1
 
         /// <summary>
         /// Get mobile form by Business Object name and record ID. Operation that gets a mobile form for a specific Business Object by Business Object name and record ID.
@@ -373,5 +405,7 @@ namespace CherwellConnector.Api
                 (MobileFormResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(MobileFormResponse)));
         }
 
+        #endregion
+        
     }
 }

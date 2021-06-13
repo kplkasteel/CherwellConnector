@@ -11,7 +11,6 @@ namespace CherwellConnector.Api
 
     using RestSharp;
     
-
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
@@ -65,7 +64,8 @@ namespace CherwellConnector.Api
 
         #endregion
 
-       
+        #region CoreDeleteGalleryImageByStandInKeyV1
+
         /// <summary>
         /// Delete a gallery image Endpoint to delete a gallery image.
         /// </summary>
@@ -136,7 +136,9 @@ namespace CherwellConnector.Api
                 null);
         }
 
-       
+        #endregion
+
+        #region CoreGetGalleryImageV1
 
         /// <summary>
         /// Get built-in images Operation that gets built-in images. If you are requesting an icon (.ico), you can specify width and height.
@@ -207,6 +209,9 @@ namespace CherwellConnector.Api
                 (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
         }
 
+        #endregion
+
+        #region CoreGetGalleryImagesFolderV1
 
         /// <summary>
         /// Get gallery images by scope, scopeowner, and folder Get gallery images for the specified scope, scopeowner, and folder.
@@ -291,9 +296,11 @@ namespace CherwellConnector.Api
                 (ManagerData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ManagerData)));
         }
 
-        
+        #endregion
 
-        /// <summary>
+        #region CoreGetGalleryImagesScopeOwnerV1
+
+         /// <summary>
         /// Get gallery images by scope and scopeowner Get all gallery images for the specified scope and scope owner.
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
@@ -382,6 +389,10 @@ namespace CherwellConnector.Api
                 (ManagerData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ManagerData)));
         }
 
+        #endregion
+
+        #region CoreGetGalleryImagesScopeV1
+
         /// <summary>
         /// Get gallery images by scope Get all gallery images for the specified scope.
         /// </summary>
@@ -454,7 +465,9 @@ namespace CherwellConnector.Api
                 (ManagerData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ManagerData)));
         }
 
-        
+        #endregion
+
+        #region CoreGetGalleryImagesV1
 
         /// <summary>
         /// Get all gallery images Get all the gallery images in the system.
@@ -521,6 +534,9 @@ namespace CherwellConnector.Api
                 (ManagerData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ManagerData)));
         }
 
+        #endregion
+
+        #region CoreGetStoredValueV1
 
         /// <summary>
         /// Get a  stored value Get a stored value by its StandIn key.
@@ -590,7 +606,10 @@ namespace CherwellConnector.Api
                 (StoredValueResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(StoredValueResponse)));
         }
 
-        
+        #endregion
+
+        #region CoreGetStoredValuesFolderV1
+
         /// <summary>
         /// Get stored values by folder Get stored values for the specified folder.
         /// </summary>
@@ -675,6 +694,10 @@ namespace CherwellConnector.Api
                 (ManagerData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ManagerData)));
         }
 
+        #endregion
+
+        #region CoreGetStoredValuesScopeOwnerV1
+
         /// <summary>
         /// Get stored values by scope owner Get stored values for the specified scope and scope owner.
         /// </summary>
@@ -752,9 +775,11 @@ namespace CherwellConnector.Api
                 (ManagerData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ManagerData)));
         }
 
-        
+        #endregion
 
-        /// <summary>
+        #region MyRegion
+
+         /// <summary>
         /// Get stored values by scope Get all the stored values for the specified scope.
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
@@ -825,9 +850,11 @@ namespace CherwellConnector.Api
                 (ManagerData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ManagerData)));
         }
 
-        
+        #endregion
 
-        /// <summary>
+        #region MyRegion
+
+         /// <summary>
         /// Gets all the stored values in the system Get all the stored values in the system.
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
@@ -893,7 +920,9 @@ namespace CherwellConnector.Api
                 (ManagerData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ManagerData)));
         }
 
-        
+        #endregion
+
+        #region CoreGetViewsV1
 
         /// <summary>
         /// Get a list of the views Operation to get a list of views that are configured in the system.
@@ -958,7 +987,9 @@ namespace CherwellConnector.Api
                 (ViewsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ViewsResponse)));
         }
 
-        
+        #endregion
+
+        #region CoreSaveGalleryImageV1
 
         /// <summary>
         /// Create or update a gallery image Endpoint to Create or update a gallery image. To create a new gallery image leave the StandIn key blank. To update a gallery image provide the StandIn key of the gallery image you want to update.&lt;/br&gt;There are three different ImageTypes allowed: Imported, Url, and File. To use the Imported image type, provide the filename in the Name property, with extension, and provide the image data in a Base64 encoded format in the Base64EncodedImageData property. The max file size is 512k.&lt;/br&gt;To use the Url image type,  provide the full network share path to the file in the Name property, ie: \&quot;\\\\\\\\\\\\\\\\networkshare\\\\\\somefolder\\\\\\somefile.jpg\&quot;. If the file is not accessible to all users it will not visible to all users.&lt;/br&gt;To use the File image type, provide the full path to the file in the Name property, ie: \&quot;C:\\\\\\somefolder\\\\\\somfile.jpg\&quot;. If the file is not accessible to all users it will not visible to all users.&lt;/br&gt;When creating or updating an image, Name and ImageType are always required, and if the image type is \&quot;Imported\&quot;, then the Base64EncodedImageData is also required. &lt;/br&gt;scope, scopeowner, and folder can all be updated independently.
@@ -1036,7 +1067,11 @@ namespace CherwellConnector.Api
                 (SaveGalleryImageResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SaveGalleryImageResponse)));
         }
 
-        /// <summary>
+        #endregion
+
+        #region CoreSaveStoredValueV1
+
+         /// <summary>
         /// Create or update a stored value Operation to create or update a stored value. To update, specify the StandIn key for the stored value to update. To create leave StandIn key blank, and provide a name, a scope, a type, and a value.
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
@@ -1109,7 +1144,11 @@ namespace CherwellConnector.Api
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value?.ToString()),
                 (StoredValueResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(StoredValueResponse)));
         }
-        
+
+        #endregion
+
+        #region CoreSetCultureV1
+
         /// <summary>
         /// Set the culture for the current user Operation to update the current users culture by culture code. This returns a new access token that has the updated information in it.
         /// </summary>
@@ -1178,6 +1217,8 @@ namespace CherwellConnector.Api
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value?.ToString()),
                 (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
         }
+
+        #endregion
 
     }
 }
