@@ -16,21 +16,21 @@ namespace CherwellConnector.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public class TrebuchetBusinessObjectApi : TrebuchetBaseApi, ITrebuchetBusinessObjectApi
+    public class BusinessObjectApi : TrebuchetBaseApi, ITrebuchetBusinessObjectApi
     {
         #region Variables & Properties
         
-        private static TrebuchetBusinessObjectApi _instance;
+        private static BusinessObjectApi _instance;
 
         private static readonly object Padlock = new();
         
-        public static TrebuchetBusinessObjectApi Instance
+        public static BusinessObjectApi Instance
         {
             get
             {
                 lock (Padlock)
                 {
-                    return _instance ??= new TrebuchetBusinessObjectApi();
+                    return _instance ??= new BusinessObjectApi();
                 }
             }
             set => _instance = value;
@@ -41,19 +41,19 @@ namespace CherwellConnector.Api
         #region Constructors
         
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetBusinessObjectApi"/> class.
+        /// Initializes a new instance of the <see cref="BusinessObjectApi"/> class.
         /// </summary>
         /// <returns></returns>
-        private TrebuchetBusinessObjectApi()
+        private BusinessObjectApi()
         {
         }
         
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetBusinessObjectApi"/> class.
+        /// Initializes a new instance of the <see cref="BusinessObjectApi"/> class.
         /// </summary>
         /// <param name="basePath">An endpoint for Configuration </param>
         /// <returns></returns>
-        public TrebuchetBusinessObjectApi(string basePath)
+        public BusinessObjectApi(string basePath)
         {
             Configuration = new Configuration { BasePath = basePath };
 
@@ -61,12 +61,12 @@ namespace CherwellConnector.Api
         }   
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrebuchetBusinessObjectApi"/> class
+        /// Initializes a new instance of the <see cref="BusinessObjectApi"/> class
         /// using Configuration object
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public TrebuchetBusinessObjectApi(Configuration configuration = null)
+        public BusinessObjectApi(Configuration configuration = null)
         {
             Configuration = configuration ?? Configuration.Default;
 

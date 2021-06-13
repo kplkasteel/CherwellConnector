@@ -1,6 +1,5 @@
 using CherwellConnector.Client;
 using CherwellConnector.Model;
-using Object = System.Object;
 
 namespace CherwellConnector.Interface
 {
