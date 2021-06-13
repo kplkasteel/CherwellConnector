@@ -15,7 +15,7 @@ namespace CherwellConnector.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public class CoreApi :TrebuchetBaseApi, ICoreApi
+    public class CoreApi :BaseApi, ICoreApi
     {
         #region Variables & Properties
         

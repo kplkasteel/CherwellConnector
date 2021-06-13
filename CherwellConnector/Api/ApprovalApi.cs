@@ -15,7 +15,7 @@ namespace CherwellConnector.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>  
-    public class TrebuchetApprovalApi : TrebuchetBaseApi, IApprovalApi
+    public class TrebuchetApprovalApi : BaseApi, IApprovalApi
     {
         #region Variables & Properties
 

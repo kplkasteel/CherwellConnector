@@ -4,7 +4,7 @@ using CherwellConnector.Client;
 
 namespace CherwellConnector.Api
 {
-    public abstract class TrebuchetBaseApi
+    public abstract class BaseApi
     {
         private ExceptionFactory _exceptionFactory = (name, response) => null;
 

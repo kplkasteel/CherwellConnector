@@ -16,7 +16,7 @@ namespace CherwellConnector.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public class BusinessObjectApi : TrebuchetBaseApi, ITrebuchetBusinessObjectApi
+    public class BusinessObjectApi : BaseApi, ITrebuchetBusinessObjectApi
     {
         #region Variables & Properties
         
