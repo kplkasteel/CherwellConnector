@@ -63,8 +63,10 @@ namespace CherwellConnector.Api
         }
         
         #endregion
-        
-        /// <summary>
+
+        #region SearchesGetQuickSearchConfigurationForBusObsV1
+
+         /// <summary>
         /// Get a Quick Search from a list of Business Object IDs Operation to build a Quick Search configuration that you can use to execute a Quick Search for multiple Business Objects. The configuration  includes supplied Business Object IDs and specific search items with the following options. Use the Option Key to determine if you can change the options. &lt;/br&gt;&lt;/br&gt;&lt;/br&gt;ChangedOption&lt;/br&gt;&lt;/br&gt;NonFinalStateOption&lt;/br&gt;&lt;/br&gt;SearchAnyWordsOption&lt;/br&gt;&lt;/br&gt;SearchAttachmentsOption&lt;/br&gt;&lt;/br&gt;SearchRelatedOption&lt;/br&gt;&lt;/br&gt;SortByOption&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;Option Key:&lt;/br&gt;&lt;/br&gt;0 &#x3D; None (Not selected and cannot select.)&lt;/br&gt;&lt;/br&gt;1 &#x3D; Use (Selected and cannot clear.)&lt;/br&gt;&lt;/br&gt;2 &#x3D; Display (Not selected and can select.)&lt;/br&gt;&lt;/br&gt;3 &#x3D; UseAndDisplay (Selected and can clear.)&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;SearchTargetType:&lt;/br&gt;&lt;/br&gt;0 &#x3D; BusOb (Business Object)&lt;/br&gt;&lt;/br&gt;1 &#x3D; DocRepository (Document Repository)
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
@@ -73,10 +75,9 @@ namespace CherwellConnector.Api
         /// <param name="locale">Optional parameter to specify the culture of the request. Either \&quot;lang\&quot; or \&quot;locale\&quot; can be used to specify the culture. (optional)</param>
         /// <returns>QuickSearchConfigurationResponse</returns>
         public QuickSearchConfigurationResponse SearchesGetQuickSearchConfigurationForBusObsV1 (QuickSearchConfigurationRequest dataRequest, string lang = null, string locale = null)
-        {
-             var localVarResponse = SearchesGetQuickSearchConfigurationForBusObsV1WithHttpInfo(dataRequest, lang, locale);
-             return localVarResponse.Data;
-        }
+         {
+             return SearchesGetQuickSearchConfigurationForBusObsV1WithHttpInfo(dataRequest, lang, locale).Data;
+         }
 
         /// <summary>
         /// Get a Quick Search from a list of Business Object IDs Operation to build a Quick Search configuration that you can use to execute a Quick Search for multiple Business Objects. The configuration  includes supplied Business Object IDs and specific search items with the following options. Use the Option Key to determine if you can change the options. &lt;/br&gt;&lt;/br&gt;&lt;/br&gt;ChangedOption&lt;/br&gt;&lt;/br&gt;NonFinalStateOption&lt;/br&gt;&lt;/br&gt;SearchAnyWordsOption&lt;/br&gt;&lt;/br&gt;SearchAttachmentsOption&lt;/br&gt;&lt;/br&gt;SearchRelatedOption&lt;/br&gt;&lt;/br&gt;SortByOption&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;Option Key:&lt;/br&gt;&lt;/br&gt;0 &#x3D; None (Not selected and cannot select.)&lt;/br&gt;&lt;/br&gt;1 &#x3D; Use (Selected and cannot clear.)&lt;/br&gt;&lt;/br&gt;2 &#x3D; Display (Not selected and can select.)&lt;/br&gt;&lt;/br&gt;3 &#x3D; UseAndDisplay (Selected and can clear.)&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;SearchTargetType:&lt;/br&gt;&lt;/br&gt;0 &#x3D; BusOb (Business Object)&lt;/br&gt;&lt;/br&gt;1 &#x3D; DocRepository (Document Repository)
@@ -92,38 +93,23 @@ namespace CherwellConnector.Api
             if (dataRequest == null)
                 throw new ApiException(400, "Missing required parameter 'dataRequest' when calling SearchesApi->SearchesGetQuickSearchConfigurationForBusObsV1");
 
-            var localVarPath = "/api/V1/getquicksearchconfigurationforbusobs";
+            const string varPath = "/api/V1/getquicksearchconfigurationforbusobs";
             var localVarPathParams = new Dictionary<string, string>();
             var localVarQueryParams = new List<KeyValuePair<string, string>>();
             var localVarHeaderParams = new Dictionary<string, string>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<string, string>();
             var localVarFileParams = new Dictionary<string, FileParameter>();
-            object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            var localVarHttpContentTypes = new string[] {
-                "application/json", 
-                "text/json", 
-                "application/xml", 
-                "text/xml", 
-                "application/x-www-form-urlencoded"
-            };
-            var localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            var localVarHttpHeaderAccepts = new string[] {
-                "application/json",
-                "text/json",
-                "application/xml",
-                "text/xml"
-            };
-            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            object localVarPostBody;
+            
+            var localVarHttpContentType = ApiClient.SelectHeaderContentType(LocalVarHttpContentTypes);
+            
+            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (lang != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "lang", lang)); // query parameter
             if (locale != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "locale", locale)); // query parameter
-            if (dataRequest != null && dataRequest.GetType() != typeof(byte[]))
+            if (dataRequest.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(dataRequest); // http body (model) parameter
             }
@@ -140,24 +126,25 @@ namespace CherwellConnector.Api
             }
 
             // make the HTTP request
-            var localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            var localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(varPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             var localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            if (ExceptionFactory != null)
-            {
-                var exception = ExceptionFactory("SearchesGetQuickSearchConfigurationForBusObsV1", localVarResponse);
-                if (exception != null) throw exception;
-            }
+            var exception = ExceptionFactory?.Invoke("SearchesGetQuickSearchConfigurationForBusObsV1", localVarResponse);
+            if (exception != null) throw exception;
 
             return new ApiResponse<QuickSearchConfigurationResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value?.ToString()),
                 (QuickSearchConfigurationResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(QuickSearchConfigurationResponse)));
         }
-        
-        /// <summary>
+
+        #endregion
+
+        #region SearchesGetQuickSearchConfigurationForBusObsWithViewRightsV1
+
+         /// <summary>
         /// Get a Quick Search by Business Objects with view rights Operation to get a Quick Search configuration that you can use to execute a Quick Search based the current user&#39;s Business Object view rights. The configuration  includes supplied Business Object IDs and specific search items with the following options. Use the Option Key to determine if you can change the options.&lt;/br&gt;&lt;/br&gt;ChangedOption&lt;/br&gt;&lt;/br&gt;NonFinalStateOption&lt;/br&gt;&lt;/br&gt;SearchAnyWordsOption&lt;/br&gt;&lt;/br&gt;SearchAttachmentsOption&lt;/br&gt;&lt;/br&gt;SearchRelatedOption&lt;/br&gt;&lt;/br&gt;SortByOption&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;Option Key:&lt;/br&gt;&lt;/br&gt;0 &#x3D; None (Not selected and cannot select.)&lt;/br&gt;&lt;/br&gt;1 &#x3D; Use (Selected and cannot clear.)&lt;/br&gt;&lt;/br&gt;2 &#x3D; Display (Not selected and can select.)&lt;/br&gt;&lt;/br&gt;3 &#x3D; UseAndDisplay (Selected and can clear.)&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;SearchTargetType:&lt;/br&gt;&lt;/br&gt;0 &#x3D; BusOb (Business Object)&lt;/br&gt;&lt;/br&gt;1 &#x3D; DocRepository (Document Repository)
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
@@ -166,8 +153,7 @@ namespace CherwellConnector.Api
         /// <returns>QuickSearchConfigurationResponse</returns>
         public QuickSearchConfigurationResponse SearchesGetQuickSearchConfigurationForBusObsWithViewRightsV1 (string lang = null, string locale = null)
         {
-             var localVarResponse = SearchesGetQuickSearchConfigurationForBusObsWithViewRightsV1WithHttpInfo(lang, locale);
-             return localVarResponse.Data;
+             return SearchesGetQuickSearchConfigurationForBusObsWithViewRightsV1WithHttpInfo(lang, locale).Data;
         }
 
         /// <summary>
@@ -180,27 +166,18 @@ namespace CherwellConnector.Api
         private ApiResponse< QuickSearchConfigurationResponse > SearchesGetQuickSearchConfigurationForBusObsWithViewRightsV1WithHttpInfo (string lang = null, string locale = null)
         {
 
-            var localVarPath = "/api/V1/getquicksearchconfigurationforbusobswithviewrights";
+            const string varPath = "/api/V1/getquicksearchconfigurationforbusobswithviewrights";
             var localVarPathParams = new Dictionary<string, string>();
             var localVarQueryParams = new List<KeyValuePair<string, string>>();
             var localVarHeaderParams = new Dictionary<string, string>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<string, string>();
             var localVarFileParams = new Dictionary<string, FileParameter>();
-            object localVarPostBody = null;
 
             // to determine the Content-Type header
-            var localVarHttpContentTypes = new string[] {
-            };
+            var localVarHttpContentTypes = System.Array.Empty<string>();
             var localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            var localVarHttpHeaderAccepts = new string[] {
-                "application/json",
-                "text/json",
-                "application/xml",
-                "text/xml"
-            };
-            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            
+            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -215,24 +192,24 @@ namespace CherwellConnector.Api
             }
 
             // make the HTTP request
-            var localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            var localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(varPath,
+                Method.GET, localVarQueryParams, null, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             var localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            if (ExceptionFactory != null)
-            {
-                var exception = ExceptionFactory("SearchesGetQuickSearchConfigurationForBusObsWithViewRightsV1", localVarResponse);
-                if (exception != null) throw exception;
-            }
+            var exception = ExceptionFactory?.Invoke("SearchesGetQuickSearchConfigurationForBusObsWithViewRightsV1", localVarResponse);
+            if (exception != null) throw exception;
 
             return new ApiResponse<QuickSearchConfigurationResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value?.ToString()),
                 (QuickSearchConfigurationResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(QuickSearchConfigurationResponse)));
         }
 
-        
+        #endregion
+
+        #region SearchesGetQuickSearchResultsV1
+
         /// <summary>
         /// Execute a Quick Search from a list of Business Object IDs and search text Operation to execute a Quick Search using a list of Business Object IDs and search text.
         /// </summary>
@@ -244,8 +221,7 @@ namespace CherwellConnector.Api
         /// <returns>SimpleResultsList</returns>
         public SimpleResultsList SearchesGetQuickSearchResultsV1 (QuickSearchRequest dataRequest, bool? includeLinks = null, string lang = null, string locale = null)
         {
-             var localVarResponse = SearchesGetQuickSearchResultsV1WithHttpInfo(dataRequest, includeLinks, lang, locale);
-             return localVarResponse.Data;
+             return SearchesGetQuickSearchResultsV1WithHttpInfo(dataRequest, includeLinks, lang, locale).Data;
         }
 
         /// <summary>
@@ -263,39 +239,24 @@ namespace CherwellConnector.Api
             if (dataRequest == null)
                 throw new ApiException(400, "Missing required parameter 'dataRequest' when calling SearchesApi->SearchesGetQuickSearchResultsV1");
 
-            var localVarPath = "/api/V1/getquicksearchresults";
+            const string varPath = "/api/V1/getquicksearchresults";
             var localVarPathParams = new Dictionary<string, string>();
             var localVarQueryParams = new List<KeyValuePair<string, string>>();
             var localVarHeaderParams = new Dictionary<string, string>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<string, string>();
             var localVarFileParams = new Dictionary<string, FileParameter>();
-            object localVarPostBody = null;
+            object localVarPostBody;
 
-            // to determine the Content-Type header
-            var localVarHttpContentTypes = new string[] {
-                "application/json", 
-                "text/json", 
-                "application/xml", 
-                "text/xml", 
-                "application/x-www-form-urlencoded"
-            };
-            var localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            var localVarHttpHeaderAccepts = new string[] {
-                "application/json",
-                "text/json",
-                "application/xml",
-                "text/xml"
-            };
-            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            var localVarHttpContentType = ApiClient.SelectHeaderContentType(LocalVarHttpContentTypes);
+            
+            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (includeLinks != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "includeLinks", includeLinks)); // query parameter
             if (lang != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "lang", lang)); // query parameter
             if (locale != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "locale", locale)); // query parameter
-            if (dataRequest != null && dataRequest.GetType() != typeof(byte[]))
+            if (dataRequest.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(dataRequest); // http body (model) parameter
             }
@@ -312,24 +273,24 @@ namespace CherwellConnector.Api
             }
 
             // make the HTTP request
-            var localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            var localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(varPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             var localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            if (ExceptionFactory != null)
-            {
-                var exception = ExceptionFactory("SearchesGetQuickSearchResultsV1", localVarResponse);
-                if (exception != null) throw exception;
-            }
+            var exception = ExceptionFactory?.Invoke("SearchesGetQuickSearchResultsV1", localVarResponse);
+            if (exception != null) throw exception;
 
             return new ApiResponse<SimpleResultsList>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value?.ToString()),
                 (SimpleResultsList) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SimpleResultsList)));
         }
 
-        
+        #endregion
+
+        #region SearchesGetQuickSearchSpecificResultsV1
+
         /// <summary>
         /// Execute a Quick Search on a specific Business Object Operation to execute a Quick Search for a specific Business Object ID. Use \&quot;Get a Quick Search from a list of Business Object IDs\&quot; to find values for specific search item options, such as NonFinalStateOption.
         /// </summary>
@@ -343,8 +304,7 @@ namespace CherwellConnector.Api
         /// <returns>SearchResultsTableResponse</returns>
         public SearchResultsTableResponse SearchesGetQuickSearchSpecificResultsV1 (QuickSearchSpecificRequest dataRequest, bool? includeSchema = null, bool? includeLocationFields = null, bool? includeLinks = null, string lang = null, string locale = null)
         {
-             var localVarResponse = SearchesGetQuickSearchSpecificResultsV1WithHttpInfo(dataRequest, includeSchema, includeLocationFields, includeLinks, lang, locale);
-             return localVarResponse.Data;
+             return SearchesGetQuickSearchSpecificResultsV1WithHttpInfo(dataRequest, includeSchema, includeLocationFields, includeLinks, lang, locale).Data;
         }
 
         /// <summary>
@@ -364,32 +324,17 @@ namespace CherwellConnector.Api
             if (dataRequest == null)
                 throw new ApiException(400, "Missing required parameter 'dataRequest' when calling SearchesApi->SearchesGetQuickSearchSpecificResultsV1");
 
-            var localVarPath = "/api/V1/getquicksearchspecificresults";
+            const string varPath = "/api/V1/getquicksearchspecificresults";
             var localVarPathParams = new Dictionary<string, string>();
             var localVarQueryParams = new List<KeyValuePair<string, string>>();
             var localVarHeaderParams = new Dictionary<string, string>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<string, string>();
             var localVarFileParams = new Dictionary<string, FileParameter>();
-            object localVarPostBody = null;
+            object localVarPostBody;
+            
+            var localVarHttpContentType = ApiClient.SelectHeaderContentType(LocalVarHttpContentTypes);
 
-            // to determine the Content-Type header
-            var localVarHttpContentTypes = new string[] {
-                "application/json", 
-                "text/json", 
-                "application/xml", 
-                "text/xml", 
-                "application/x-www-form-urlencoded"
-            };
-            var localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            var localVarHttpHeaderAccepts = new string[] {
-                "application/json",
-                "text/json",
-                "application/xml",
-                "text/xml"
-            };
-            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -398,7 +343,7 @@ namespace CherwellConnector.Api
             if (includeLinks != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "includeLinks", includeLinks)); // query parameter
             if (lang != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "lang", lang)); // query parameter
             if (locale != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "locale", locale)); // query parameter
-            if (dataRequest != null && dataRequest.GetType() != typeof(byte[]))
+            if (dataRequest.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(dataRequest); // http body (model) parameter
             }
@@ -415,24 +360,22 @@ namespace CherwellConnector.Api
             }
 
             // make the HTTP request
-            var localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            var localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(varPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             var localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            if (ExceptionFactory != null)
-            {
-                var exception = ExceptionFactory("SearchesGetQuickSearchSpecificResultsV1", localVarResponse);
-                if (exception != null) throw exception;
-            }
+            var exception = ExceptionFactory?.Invoke("SearchesGetQuickSearchSpecificResultsV1", localVarResponse);
+            if (exception != null) throw exception;
 
             return new ApiResponse<SearchResultsTableResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value?.ToString()),
                 (SearchResultsTableResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SearchResultsTableResponse)));
         }
 
-        
+        #endregion
+
         /// <summary>
         /// Execute a Quick Search on a specific Business Object Operation to execute a Quick Search for a specific Business Object ID. Use \&quot;Get a Quick Search from a list of Business Object IDs\&quot; to find values for specific search item options, such as NonFinalStateOption.
         /// </summary>
