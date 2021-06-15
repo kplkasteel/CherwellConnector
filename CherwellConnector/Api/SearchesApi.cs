@@ -376,6 +376,8 @@ namespace CherwellConnector.Api
 
         #endregion
 
+        #region SearchesGetQuickSearchSpecificResultsV2
+
         /// <summary>
         /// Execute a Quick Search on a specific Business Object Operation to execute a Quick Search for a specific Business Object ID. Use \&quot;Get a Quick Search from a list of Business Object IDs\&quot; to find values for specific search item options, such as NonFinalStateOption.
         /// </summary>
@@ -389,8 +391,7 @@ namespace CherwellConnector.Api
         /// <returns>QuickSearchResponse</returns>
         public QuickSearchResponse SearchesGetQuickSearchSpecificResultsV2 (QuickSearchSpecificRequest dataRequest, bool? includeSchema = null, bool? includeLocationFields = null, bool? includeLinks = null, string lang = null, string locale = null)
         {
-             var localVarResponse = SearchesGetQuickSearchSpecificResultsV2WithHttpInfo(dataRequest, includeSchema, includeLocationFields, includeLinks, lang, locale);
-             return localVarResponse.Data;
+             return SearchesGetQuickSearchSpecificResultsV2WithHttpInfo(dataRequest, includeSchema, includeLocationFields, includeLinks, lang, locale).Data;
         }
 
         /// <summary>
@@ -410,32 +411,17 @@ namespace CherwellConnector.Api
             if (dataRequest == null)
                 throw new ApiException(400, "Missing required parameter 'dataRequest' when calling SearchesApi->SearchesGetQuickSearchSpecificResultsV2");
 
-            var localVarPath = "/api/V2/getquicksearchspecificresults";
+            const string varPath = "/api/V2/getquicksearchspecificresults";
             var localVarPathParams = new Dictionary<string, string>();
             var localVarQueryParams = new List<KeyValuePair<string, string>>();
             var localVarHeaderParams = new Dictionary<string, string>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<string, string>();
             var localVarFileParams = new Dictionary<string, FileParameter>();
-            object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            var localVarHttpContentTypes = new string[] {
-                "application/json", 
-                "text/json", 
-                "application/xml", 
-                "text/xml", 
-                "application/x-www-form-urlencoded"
-            };
-            var localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            var localVarHttpHeaderAccepts = new string[] {
-                "application/json",
-                "text/json",
-                "application/xml",
-                "text/xml"
-            };
-            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            object localVarPostBody;
+            
+            var localVarHttpContentType = ApiClient.SelectHeaderContentType(LocalVarHttpContentTypes);
+            
+            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -444,7 +430,7 @@ namespace CherwellConnector.Api
             if (includeLinks != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "includeLinks", includeLinks)); // query parameter
             if (lang != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "lang", lang)); // query parameter
             if (locale != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "locale", locale)); // query parameter
-            if (dataRequest != null && dataRequest.GetType() != typeof(byte[]))
+            if (dataRequest.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(dataRequest); // http body (model) parameter
             }
@@ -461,24 +447,23 @@ namespace CherwellConnector.Api
             }
 
             // make the HTTP request
-            var localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            var localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(varPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             var localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            if (ExceptionFactory != null)
-            {
-                var exception = ExceptionFactory("SearchesGetQuickSearchSpecificResultsV2", localVarResponse);
-                if (exception != null) throw exception;
-            }
+            var exception = ExceptionFactory?.Invoke("SearchesGetQuickSearchSpecificResultsV2", localVarResponse);
+            if (exception != null) throw exception;
 
             return new ApiResponse<QuickSearchResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value?.ToString()),
                 (QuickSearchResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(QuickSearchResponse)));
         }
 
-        
+        #endregion
+
+        #region SearchesGetSearchItemsByAssociationScopeScopeOwnerFolderV1
 
         /// <summary>
         /// Get all saved searches by Folder ID Operation that returns a tree of saved queries, including scope, search name, IDs, and location within the tree.
@@ -494,8 +479,7 @@ namespace CherwellConnector.Api
         /// <returns>SearchItemResponse</returns>
         public SearchItemResponse SearchesGetSearchItemsByAssociationScopeScopeOwnerFolderV1 (string association, string scope, string scopeowner, string folder, bool? links = null, string lang = null, string locale = null)
         {
-             var localVarResponse = SearchesGetSearchItemsByAssociationScopeScopeOwnerFolderV1WithHttpInfo(association, scope, scopeowner, folder, links, lang, locale);
-             return localVarResponse.Data;
+             return SearchesGetSearchItemsByAssociationScopeScopeOwnerFolderV1WithHttpInfo(association, scope, scopeowner, folder, links, lang, locale).Data;
         }
 
         /// <summary>
@@ -525,34 +509,25 @@ namespace CherwellConnector.Api
             if (folder == null)
                 throw new ApiException(400, "Missing required parameter 'folder' when calling SearchesApi->SearchesGetSearchItemsByAssociationScopeScopeOwnerFolderV1");
 
-            var localVarPath = "/api/V1/getsearchitems/association/{association}/scope/{scope}/scopeowner/{scopeowner}/folder/{folder}";
+            var localVarPath = $"/api/V1/getsearchitems/association/{association}/scope/{scope}/scopeowner/{scopeowner}/folder/{folder}";
             var localVarPathParams = new Dictionary<string, string>();
             var localVarQueryParams = new List<KeyValuePair<string, string>>();
             var localVarHeaderParams = new Dictionary<string, string>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<string, string>();
             var localVarFileParams = new Dictionary<string, FileParameter>();
-            object localVarPostBody = null;
 
             // to determine the Content-Type header
-            var localVarHttpContentTypes = new string[] {
-            };
+            var localVarHttpContentTypes = System.Array.Empty<string>();
             var localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            var localVarHttpHeaderAccepts = new string[] {
-                "application/json",
-                "text/json",
-                "application/xml",
-                "text/xml"
-            };
-            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            
+            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (association != null) localVarPathParams.Add("association", Configuration.ApiClient.ParameterToString(association)); // path parameter
-            if (scope != null) localVarPathParams.Add("scope", Configuration.ApiClient.ParameterToString(scope)); // path parameter
-            if (scopeowner != null) localVarPathParams.Add("scopeowner", Configuration.ApiClient.ParameterToString(scopeowner)); // path parameter
-            if (folder != null) localVarPathParams.Add("folder", Configuration.ApiClient.ParameterToString(folder)); // path parameter
+            localVarPathParams.Add("association", Configuration.ApiClient.ParameterToString(association)); // path parameter
+            localVarPathParams.Add("scope", Configuration.ApiClient.ParameterToString(scope)); // path parameter
+            localVarPathParams.Add("scopeowner", Configuration.ApiClient.ParameterToString(scopeowner)); // path parameter
+            localVarPathParams.Add("folder", Configuration.ApiClient.ParameterToString(folder)); // path parameter
             if (links != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "links", links)); // query parameter
             if (lang != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "lang", lang)); // query parameter
             if (locale != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "locale", locale)); // query parameter
@@ -566,23 +541,22 @@ namespace CherwellConnector.Api
 
             // make the HTTP request
             var localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.GET, localVarQueryParams, null, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             var localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            if (ExceptionFactory != null)
-            {
-                var exception = ExceptionFactory("SearchesGetSearchItemsByAssociationScopeScopeOwnerFolderV1", localVarResponse);
-                if (exception != null) throw exception;
-            }
+            var exception = ExceptionFactory?.Invoke("SearchesGetSearchItemsByAssociationScopeScopeOwnerFolderV1", localVarResponse);
+            if (exception != null) throw exception;
 
             return new ApiResponse<SearchItemResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value?.ToString()),
                 (SearchItemResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SearchItemResponse)));
         }
 
-        
+        #endregion
+
+        #region SearchesGetSearchItemsByAssociationScopeScopeOwnerFolderV2
 
         /// <summary>
         /// Get all saved searches by Folder ID Operation that returns a tree of saved queries, including scope, search name, IDs, and location within the tree.
@@ -598,8 +572,7 @@ namespace CherwellConnector.Api
         /// <returns>ManagerData</returns>
         public ManagerData SearchesGetSearchItemsByAssociationScopeScopeOwnerFolderV2 (string association, string scope, string scopeowner, string folder, bool? links = null, string lang = null, string locale = null)
         {
-             var localVarResponse = SearchesGetSearchItemsByAssociationScopeScopeOwnerFolderV2WithHttpInfo(association, scope, scopeowner, folder, links, lang, locale);
-             return localVarResponse.Data;
+             return SearchesGetSearchItemsByAssociationScopeScopeOwnerFolderV2WithHttpInfo(association, scope, scopeowner, folder, links, lang, locale).Data;
         }
 
         /// <summary>
@@ -629,34 +602,25 @@ namespace CherwellConnector.Api
             if (folder == null)
                 throw new ApiException(400, "Missing required parameter 'folder' when calling SearchesApi->SearchesGetSearchItemsByAssociationScopeScopeOwnerFolderV2");
 
-            var localVarPath = "/api/V2/getsearchitems/association/{association}/scope/{scope}/scopeowner/{scopeowner}/folder/{folder}";
+            var localVarPath = $"/api/V2/getsearchitems/association/{association}/scope/{scope}/scopeowner/{scopeowner}/folder/{folder}";
             var localVarPathParams = new Dictionary<string, string>();
             var localVarQueryParams = new List<KeyValuePair<string, string>>();
             var localVarHeaderParams = new Dictionary<string, string>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<string, string>();
             var localVarFileParams = new Dictionary<string, FileParameter>();
-            object localVarPostBody = null;
 
             // to determine the Content-Type header
-            var localVarHttpContentTypes = new string[] {
-            };
+            var localVarHttpContentTypes = System.Array.Empty<string>();
             var localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            var localVarHttpHeaderAccepts = new string[] {
-                "application/json",
-                "text/json",
-                "application/xml",
-                "text/xml"
-            };
-            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            
+            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (association != null) localVarPathParams.Add("association", Configuration.ApiClient.ParameterToString(association)); // path parameter
-            if (scope != null) localVarPathParams.Add("scope", Configuration.ApiClient.ParameterToString(scope)); // path parameter
-            if (scopeowner != null) localVarPathParams.Add("scopeowner", Configuration.ApiClient.ParameterToString(scopeowner)); // path parameter
-            if (folder != null) localVarPathParams.Add("folder", Configuration.ApiClient.ParameterToString(folder)); // path parameter
+            localVarPathParams.Add("association", Configuration.ApiClient.ParameterToString(association)); // path parameter
+            localVarPathParams.Add("scope", Configuration.ApiClient.ParameterToString(scope)); // path parameter
+            localVarPathParams.Add("scopeowner", Configuration.ApiClient.ParameterToString(scopeowner)); // path parameter
+            localVarPathParams.Add("folder", Configuration.ApiClient.ParameterToString(folder)); // path parameter
             if (links != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "links", links)); // query parameter
             if (lang != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "lang", lang)); // query parameter
             if (locale != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "locale", locale)); // query parameter
@@ -670,24 +634,24 @@ namespace CherwellConnector.Api
 
             // make the HTTP request
             var localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.GET, localVarQueryParams, null, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             var localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            if (ExceptionFactory != null)
-            {
-                var exception = ExceptionFactory("SearchesGetSearchItemsByAssociationScopeScopeOwnerFolderV2", localVarResponse);
-                if (exception != null) throw exception;
-            }
+            var exception = ExceptionFactory?.Invoke("SearchesGetSearchItemsByAssociationScopeScopeOwnerFolderV2", localVarResponse);
+            if (exception != null) throw exception;
 
             return new ApiResponse<ManagerData>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value?.ToString()),
                 (ManagerData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ManagerData)));
         }
 
-        
-        /// <summary>
+        #endregion
+
+        #region SearchesGetSearchItemsByAssociationScopeScopeOwnerV1
+
+         /// <summary>
         /// Get all saved searches by scope owner (sub scope) Operation that returns a tree of saved queries, including scope, search name, IDs, and location within the tree.
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
@@ -700,8 +664,7 @@ namespace CherwellConnector.Api
         /// <returns>SearchItemResponse</returns>
         public SearchItemResponse SearchesGetSearchItemsByAssociationScopeScopeOwnerV1 (string association, string scope, string scopeowner, bool? links = null, string lang = null, string locale = null)
         {
-             var localVarResponse = SearchesGetSearchItemsByAssociationScopeScopeOwnerV1WithHttpInfo(association, scope, scopeowner, links, lang, locale);
-             return localVarResponse.Data;
+             return SearchesGetSearchItemsByAssociationScopeScopeOwnerV1WithHttpInfo(association, scope, scopeowner, links, lang, locale).Data;
         }
 
         /// <summary>
@@ -727,33 +690,25 @@ namespace CherwellConnector.Api
             if (scopeowner == null)
                 throw new ApiException(400, "Missing required parameter 'scopeowner' when calling SearchesApi->SearchesGetSearchItemsByAssociationScopeScopeOwnerV1");
 
-            var localVarPath = "/api/V1/getsearchitems/association/{association}/scope/{scope}/scopeowner/{scopeowner}";
+            var localVarPath = $"/api/V1/getsearchitems/association/{association}/scope/{scope}/scopeowner/{scopeowner}";
             var localVarPathParams = new Dictionary<string, string>();
             var localVarQueryParams = new List<KeyValuePair<string, string>>();
             var localVarHeaderParams = new Dictionary<string, string>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<string, string>();
             var localVarFileParams = new Dictionary<string, FileParameter>();
-            object localVarPostBody = null;
 
             // to determine the Content-Type header
-            var localVarHttpContentTypes = new string[] {
-            };
+            var localVarHttpContentTypes = System.Array.Empty<string>();
             var localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
-            // to determine the Accept header
-            var localVarHttpHeaderAccepts = new string[] {
-                "application/json",
-                "text/json",
-                "application/xml",
-                "text/xml"
-            };
-            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            
+            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (association != null) localVarPathParams.Add("association", Configuration.ApiClient.ParameterToString(association)); // path parameter
-            if (scope != null) localVarPathParams.Add("scope", Configuration.ApiClient.ParameterToString(scope)); // path parameter
-            if (scopeowner != null) localVarPathParams.Add("scopeowner", Configuration.ApiClient.ParameterToString(scopeowner)); // path parameter
+            localVarPathParams.Add("association", Configuration.ApiClient.ParameterToString(association)); // path parameter
+            localVarPathParams.Add("scope", Configuration.ApiClient.ParameterToString(scope)); // path parameter
+            localVarPathParams.Add("scopeowner", Configuration.ApiClient.ParameterToString(scopeowner)); // path parameter
             if (links != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "links", links)); // query parameter
             if (lang != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "lang", lang)); // query parameter
             if (locale != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "locale", locale)); // query parameter
@@ -767,23 +722,23 @@ namespace CherwellConnector.Api
 
             // make the HTTP request
             var localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.GET, localVarQueryParams, null, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             var localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            if (ExceptionFactory != null)
-            {
-                var exception = ExceptionFactory("SearchesGetSearchItemsByAssociationScopeScopeOwnerV1", localVarResponse);
-                if (exception != null) throw exception;
-            }
+            var exception = ExceptionFactory?.Invoke("SearchesGetSearchItemsByAssociationScopeScopeOwnerV1", localVarResponse);
+            if (exception != null) throw exception;
 
             return new ApiResponse<SearchItemResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value?.ToString()),
                 (SearchItemResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SearchItemResponse)));
         }
 
-        
+
+        #endregion
+
+        #region SearchesGetSearchItemsByAssociationScopeScopeOwnerV2
 
         /// <summary>
         /// Get all saved searches by scope owner (sub scope) Operation that returns a tree of saved queries, including scope, search name, IDs, and location within the tree.
@@ -798,8 +753,7 @@ namespace CherwellConnector.Api
         /// <returns>ManagerData</returns>
         public ManagerData SearchesGetSearchItemsByAssociationScopeScopeOwnerV2 (string association, string scope, string scopeowner, bool? links = null, string lang = null, string locale = null)
         {
-             var localVarResponse = SearchesGetSearchItemsByAssociationScopeScopeOwnerV2WithHttpInfo(association, scope, scopeowner, links, lang, locale);
-             return localVarResponse.Data;
+             return SearchesGetSearchItemsByAssociationScopeScopeOwnerV2WithHttpInfo(association, scope, scopeowner, links, lang, locale).Data;
         }
 
         /// <summary>
@@ -825,33 +779,25 @@ namespace CherwellConnector.Api
             if (scopeowner == null)
                 throw new ApiException(400, "Missing required parameter 'scopeowner' when calling SearchesApi->SearchesGetSearchItemsByAssociationScopeScopeOwnerV2");
 
-            var localVarPath = "/api/V2/getsearchitems/association/{association}/scope/{scope}/scopeowner/{scopeowner}";
+            var localVarPath = $"/api/V2/getsearchitems/association/{association}/scope/{scope}/scopeowner/{scopeowner}";
             var localVarPathParams = new Dictionary<string, string>();
             var localVarQueryParams = new List<KeyValuePair<string, string>>();
             var localVarHeaderParams = new Dictionary<string, string>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<string, string>();
             var localVarFileParams = new Dictionary<string, FileParameter>();
-            object localVarPostBody = null;
 
             // to determine the Content-Type header
-            var localVarHttpContentTypes = new string[] {
-            };
+            var localVarHttpContentTypes = System.Array.Empty<string>();
             var localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
-            // to determine the Accept header
-            var localVarHttpHeaderAccepts = new string[] {
-                "application/json",
-                "text/json",
-                "application/xml",
-                "text/xml"
-            };
-            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+           
+            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (association != null) localVarPathParams.Add("association", Configuration.ApiClient.ParameterToString(association)); // path parameter
-            if (scope != null) localVarPathParams.Add("scope", Configuration.ApiClient.ParameterToString(scope)); // path parameter
-            if (scopeowner != null) localVarPathParams.Add("scopeowner", Configuration.ApiClient.ParameterToString(scopeowner)); // path parameter
+            localVarPathParams.Add("association", Configuration.ApiClient.ParameterToString(association)); // path parameter
+            localVarPathParams.Add("scope", Configuration.ApiClient.ParameterToString(scope)); // path parameter
+            localVarPathParams.Add("scopeowner", Configuration.ApiClient.ParameterToString(scopeowner)); // path parameter
             if (links != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "links", links)); // query parameter
             if (lang != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "lang", lang)); // query parameter
             if (locale != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "locale", locale)); // query parameter
@@ -865,23 +811,23 @@ namespace CherwellConnector.Api
 
             // make the HTTP request
             var localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.GET, localVarQueryParams, null, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             var localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            if (ExceptionFactory != null)
-            {
-                var exception = ExceptionFactory("SearchesGetSearchItemsByAssociationScopeScopeOwnerV2", localVarResponse);
-                if (exception != null) throw exception;
-            }
+            var exception = ExceptionFactory?.Invoke("SearchesGetSearchItemsByAssociationScopeScopeOwnerV2", localVarResponse);
+            if (exception != null) throw exception;
 
             return new ApiResponse<ManagerData>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value?.ToString()),
                 (ManagerData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ManagerData)));
         }
 
-        
+
+        #endregion
+
+        #region SearchesGetSearchItemsByAssociationScopeV1
 
         /// <summary>
         /// Get all saved searches by scope Operation that returns a tree of saved queries, including scope, search name, IDs, and location within the tree.
@@ -895,8 +841,7 @@ namespace CherwellConnector.Api
         /// <returns>SearchItemResponse</returns>
         public SearchItemResponse SearchesGetSearchItemsByAssociationScopeV1 (string association, string scope, bool? links = null, string lang = null, string locale = null)
         {
-             var localVarResponse = SearchesGetSearchItemsByAssociationScopeV1WithHttpInfo(association, scope, links, lang, locale);
-             return localVarResponse.Data;
+             return SearchesGetSearchItemsByAssociationScopeV1WithHttpInfo(association, scope, links, lang, locale).Data;
         }
 
         /// <summary>
@@ -918,32 +863,23 @@ namespace CherwellConnector.Api
             if (scope == null)
                 throw new ApiException(400, "Missing required parameter 'scope' when calling SearchesApi->SearchesGetSearchItemsByAssociationScopeV1");
 
-            var localVarPath = "/api/V1/getsearchitems/association/{association}/scope/{scope}";
+            var localVarPath = $"/api/V1/getsearchitems/association/{association}/scope/{scope}";
             var localVarPathParams = new Dictionary<string, string>();
             var localVarQueryParams = new List<KeyValuePair<string, string>>();
             var localVarHeaderParams = new Dictionary<string, string>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<string, string>();
             var localVarFileParams = new Dictionary<string, FileParameter>();
-            object localVarPostBody = null;
 
             // to determine the Content-Type header
-            var localVarHttpContentTypes = new string[] {
-            };
+            var localVarHttpContentTypes = System.Array.Empty<string>();
             var localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            var localVarHttpHeaderAccepts = new string[] {
-                "application/json",
-                "text/json",
-                "application/xml",
-                "text/xml"
-            };
-            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            
+            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (association != null) localVarPathParams.Add("association", Configuration.ApiClient.ParameterToString(association)); // path parameter
-            if (scope != null) localVarPathParams.Add("scope", Configuration.ApiClient.ParameterToString(scope)); // path parameter
+            localVarPathParams.Add("association", Configuration.ApiClient.ParameterToString(association)); // path parameter
+            localVarPathParams.Add("scope", Configuration.ApiClient.ParameterToString(scope)); // path parameter
             if (links != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "links", links)); // query parameter
             if (lang != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "lang", lang)); // query parameter
             if (locale != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "locale", locale)); // query parameter
@@ -957,23 +893,23 @@ namespace CherwellConnector.Api
 
             // make the HTTP request
             var localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.GET, localVarQueryParams, null, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             var localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            if (ExceptionFactory != null)
-            {
-                var exception = ExceptionFactory("SearchesGetSearchItemsByAssociationScopeV1", localVarResponse);
-                if (exception != null) throw exception;
-            }
+            var exception = ExceptionFactory?.Invoke("SearchesGetSearchItemsByAssociationScopeV1", localVarResponse);
+            if (exception != null) throw exception;
 
             return new ApiResponse<SearchItemResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value?.ToString()),
                 (SearchItemResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SearchItemResponse)));
         }
 
-        
+        #endregion
+
+        #region SearchesGetSearchItemsByAssociationScopeV2
+
         /// <summary>
         /// Get all saved searches by scope Operation that returns a tree of saved queries, including scope, search name, IDs, and location within the tree.
         /// </summary>
@@ -986,8 +922,7 @@ namespace CherwellConnector.Api
         /// <returns>ManagerData</returns>
         public ManagerData SearchesGetSearchItemsByAssociationScopeV2 (string association, string scope, bool? links = null, string lang = null, string locale = null)
         {
-             var localVarResponse = SearchesGetSearchItemsByAssociationScopeV2WithHttpInfo(association, scope, links, lang, locale);
-             return localVarResponse.Data;
+             return SearchesGetSearchItemsByAssociationScopeV2WithHttpInfo(association, scope, links, lang, locale).Data;
         }
 
         /// <summary>
@@ -1009,32 +944,24 @@ namespace CherwellConnector.Api
             if (scope == null)
                 throw new ApiException(400, "Missing required parameter 'scope' when calling SearchesApi->SearchesGetSearchItemsByAssociationScopeV2");
 
-            var localVarPath = "/api/V2/getsearchitems/association/{association}/scope/{scope}";
+            var localVarPath = $"/api/V2/getsearchitems/association/{association}/scope/{scope}";
             var localVarPathParams = new Dictionary<string, string>();
             var localVarQueryParams = new List<KeyValuePair<string, string>>();
             var localVarHeaderParams = new Dictionary<string, string>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<string, string>();
             var localVarFileParams = new Dictionary<string, FileParameter>();
-            object localVarPostBody = null;
 
             // to determine the Content-Type header
-            var localVarHttpContentTypes = new string[] {
-            };
+            var localVarHttpContentTypes = System.Array.Empty<string>();
             var localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
-            // to determine the Accept header
-            var localVarHttpHeaderAccepts = new string[] {
-                "application/json",
-                "text/json",
-                "application/xml",
-                "text/xml"
-            };
-            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            
+            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (association != null) localVarPathParams.Add("association", Configuration.ApiClient.ParameterToString(association)); // path parameter
-            if (scope != null) localVarPathParams.Add("scope", Configuration.ApiClient.ParameterToString(scope)); // path parameter
+            localVarPathParams.Add("association", Configuration.ApiClient.ParameterToString(association)); // path parameter
+            localVarPathParams.Add("scope", Configuration.ApiClient.ParameterToString(scope)); // path parameter
             if (links != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "links", links)); // query parameter
             if (lang != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "lang", lang)); // query parameter
             if (locale != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "locale", locale)); // query parameter
@@ -1048,23 +975,23 @@ namespace CherwellConnector.Api
 
             // make the HTTP request
             var localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.GET, localVarQueryParams, null, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             var localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            if (ExceptionFactory != null)
-            {
-                var exception = ExceptionFactory("SearchesGetSearchItemsByAssociationScopeV2", localVarResponse);
-                if (exception != null) throw exception;
-            }
+            var exception = ExceptionFactory?.Invoke("SearchesGetSearchItemsByAssociationScopeV2", localVarResponse);
+            if (exception != null) throw exception;
 
             return new ApiResponse<ManagerData>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value?.ToString()),
                 (ManagerData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ManagerData)));
         }
 
-        
+        #endregion
+
+        #region SearchesGetSearchItemsByAssociationV1
+
         /// <summary>
         /// Get all saved searches by Business Object association Operation that returns a tree of saved queries, including scope, search name, IDs, and location within the tree.
         /// </summary>
@@ -1076,8 +1003,7 @@ namespace CherwellConnector.Api
         /// <returns>SearchItemResponse</returns>
         public SearchItemResponse SearchesGetSearchItemsByAssociationV1 (string association, bool? links = null, string lang = null, string locale = null)
         {
-             var localVarResponse = SearchesGetSearchItemsByAssociationV1WithHttpInfo(association, links, lang, locale);
-             return localVarResponse.Data;
+             return SearchesGetSearchItemsByAssociationV1WithHttpInfo(association, links, lang, locale).Data;
         }
 
         /// <summary>
@@ -1095,31 +1021,22 @@ namespace CherwellConnector.Api
             if (association == null)
                 throw new ApiException(400, "Missing required parameter 'association' when calling SearchesApi->SearchesGetSearchItemsByAssociationV1");
 
-            var localVarPath = "/api/V1/getsearchitems/association/{association}";
+            var localVarPath = $"/api/V1/getsearchitems/association/{association}";
             var localVarPathParams = new Dictionary<string, string>();
             var localVarQueryParams = new List<KeyValuePair<string, string>>();
             var localVarHeaderParams = new Dictionary<string, string>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<string, string>();
             var localVarFileParams = new Dictionary<string, FileParameter>();
-            object localVarPostBody = null;
 
             // to determine the Content-Type header
-            var localVarHttpContentTypes = new string[] {
-            };
+            var localVarHttpContentTypes = System.Array.Empty<string>();
             var localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            var localVarHttpHeaderAccepts = new string[] {
-                "application/json",
-                "text/json",
-                "application/xml",
-                "text/xml"
-            };
-            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            
+            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (association != null) localVarPathParams.Add("association", Configuration.ApiClient.ParameterToString(association)); // path parameter
+            localVarPathParams.Add("association", Configuration.ApiClient.ParameterToString(association)); // path parameter
             if (links != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "links", links)); // query parameter
             if (lang != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "lang", lang)); // query parameter
             if (locale != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "locale", locale)); // query parameter
@@ -1133,23 +1050,22 @@ namespace CherwellConnector.Api
 
             // make the HTTP request
             var localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.GET, localVarQueryParams, null, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             var localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            if (ExceptionFactory != null)
-            {
-                var exception = ExceptionFactory("SearchesGetSearchItemsByAssociationV1", localVarResponse);
-                if (exception != null) throw exception;
-            }
+            var exception = ExceptionFactory?.Invoke("SearchesGetSearchItemsByAssociationV1", localVarResponse);
+            if (exception != null) throw exception;
 
             return new ApiResponse<SearchItemResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value?.ToString()),
                 (SearchItemResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SearchItemResponse)));
         }
 
-        
+        #endregion
+
+        #region SearchesGetSearchItemsByAssociationV2
 
         /// <summary>
         /// Get all saved searches by Business Object association Operation that returns a tree of saved queries, including scope, search name, IDs, and location within the tree.
@@ -1162,8 +1078,7 @@ namespace CherwellConnector.Api
         /// <returns>ManagerData</returns>
         public ManagerData SearchesGetSearchItemsByAssociationV2 (string association, bool? links = null, string lang = null, string locale = null)
         {
-             var localVarResponse = SearchesGetSearchItemsByAssociationV2WithHttpInfo(association, links, lang, locale);
-             return localVarResponse.Data;
+             return SearchesGetSearchItemsByAssociationV2WithHttpInfo(association, links, lang, locale).Data;
         }
 
         /// <summary>
@@ -1181,31 +1096,22 @@ namespace CherwellConnector.Api
             if (association == null)
                 throw new ApiException(400, "Missing required parameter 'association' when calling SearchesApi->SearchesGetSearchItemsByAssociationV2");
 
-            var localVarPath = "/api/V2/getsearchitems/association/{association}";
+            var localVarPath = $"/api/V2/getsearchitems/association/{association}";
             var localVarPathParams = new Dictionary<string, string>();
             var localVarQueryParams = new List<KeyValuePair<string, string>>();
             var localVarHeaderParams = new Dictionary<string, string>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<string, string>();
             var localVarFileParams = new Dictionary<string, FileParameter>();
-            object localVarPostBody = null;
 
             // to determine the Content-Type header
-            var localVarHttpContentTypes = new string[] {
-            };
+            var localVarHttpContentTypes = System.Array.Empty<string>();
             var localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
-            // to determine the Accept header
-            var localVarHttpHeaderAccepts = new string[] {
-                "application/json",
-                "text/json",
-                "application/xml",
-                "text/xml"
-            };
-            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (association != null) localVarPathParams.Add("association", Configuration.ApiClient.ParameterToString(association)); // path parameter
+            localVarPathParams.Add("association", Configuration.ApiClient.ParameterToString(association)); // path parameter
             if (links != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "links", links)); // query parameter
             if (lang != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "lang", lang)); // query parameter
             if (locale != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "locale", locale)); // query parameter
@@ -1219,23 +1125,23 @@ namespace CherwellConnector.Api
 
             // make the HTTP request
             var localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.GET, localVarQueryParams, null, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             var localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            if (ExceptionFactory != null)
-            {
-                var exception = ExceptionFactory("SearchesGetSearchItemsByAssociationV2", localVarResponse);
-                if (exception != null) throw exception;
-            }
+            var exception = ExceptionFactory?.Invoke("SearchesGetSearchItemsByAssociationV2", localVarResponse);
+            if (exception != null) throw exception;
 
             return new ApiResponse<ManagerData>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value?.ToString()),
                 (ManagerData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ManagerData)));
         }
 
-        
+
+        #endregion
+
+        #region SearchesGetSearchItemsV1
 
         /// <summary>
         /// Get all saved searches by default Business Object association Operation that returns a tree of saved queries, including scope, search name, IDs, and location within the tree.
@@ -1247,8 +1153,7 @@ namespace CherwellConnector.Api
         /// <returns>SearchItemResponse</returns>
         public SearchItemResponse SearchesGetSearchItemsV1 (bool? links = null, string lang = null, string locale = null)
         {
-             var localVarResponse = SearchesGetSearchItemsV1WithHttpInfo(links, lang, locale);
-             return localVarResponse.Data;
+             return SearchesGetSearchItemsV1WithHttpInfo(links, lang, locale).Data;
         }
 
         /// <summary>
@@ -1262,27 +1167,19 @@ namespace CherwellConnector.Api
         private ApiResponse< SearchItemResponse > SearchesGetSearchItemsV1WithHttpInfo (bool? links = null, string lang = null, string locale = null)
         {
 
-            var localVarPath = "/api/V1/getsearchitems";
+            const string varPath = "/api/V1/getsearchitems";
             var localVarPathParams = new Dictionary<string, string>();
             var localVarQueryParams = new List<KeyValuePair<string, string>>();
             var localVarHeaderParams = new Dictionary<string, string>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<string, string>();
             var localVarFileParams = new Dictionary<string, FileParameter>();
-            object localVarPostBody = null;
 
             // to determine the Content-Type header
-            var localVarHttpContentTypes = new string[] {
-            };
+            var localVarHttpContentTypes = System.Array.Empty<string>();
             var localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
-            // to determine the Accept header
-            var localVarHttpHeaderAccepts = new string[] {
-                "application/json",
-                "text/json",
-                "application/xml",
-                "text/xml"
-            };
-            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+           
+            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -1298,24 +1195,24 @@ namespace CherwellConnector.Api
             }
 
             // make the HTTP request
-            var localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            var localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(varPath,
+                Method.GET, localVarQueryParams, null, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             var localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            if (ExceptionFactory != null)
-            {
-                var exception = ExceptionFactory("SearchesGetSearchItemsV1", localVarResponse);
-                if (exception != null) throw exception;
-            }
+            var exception = ExceptionFactory?.Invoke("SearchesGetSearchItemsV1", localVarResponse);
+            if (exception != null) throw exception;
 
             return new ApiResponse<SearchItemResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value?.ToString()),
                 (SearchItemResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SearchItemResponse)));
         }
 
-        
+        #endregion
+
+        #region SearchesGetSearchItemsV2
+
         /// <summary>
         /// Get all saved searches by default Business Object association Operation that returns a tree of saved queries, including scope, search name, IDs, and location within the tree.
         /// </summary>
@@ -1326,8 +1223,7 @@ namespace CherwellConnector.Api
         /// <returns>ManagerData</returns>
         public ManagerData SearchesGetSearchItemsV2 (bool? links = null, string lang = null, string locale = null)
         {
-             var localVarResponse = SearchesGetSearchItemsV2WithHttpInfo(links, lang, locale);
-             return localVarResponse.Data;
+             return SearchesGetSearchItemsV2WithHttpInfo(links, lang, locale).Data;
         }
 
         /// <summary>
@@ -1341,27 +1237,18 @@ namespace CherwellConnector.Api
         private ApiResponse< ManagerData > SearchesGetSearchItemsV2WithHttpInfo (bool? links = null, string lang = null, string locale = null)
         {
 
-            var localVarPath = "/api/V2/getsearchitems";
+            const string varPath = "/api/V2/getsearchitems";
             var localVarPathParams = new Dictionary<string, string>();
             var localVarQueryParams = new List<KeyValuePair<string, string>>();
             var localVarHeaderParams = new Dictionary<string, string>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<string, string>();
             var localVarFileParams = new Dictionary<string, FileParameter>();
-            object localVarPostBody = null;
 
             // to determine the Content-Type header
-            var localVarHttpContentTypes = new string[] {
-            };
+            var localVarHttpContentTypes = System.Array.Empty<string>();
             var localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            var localVarHttpHeaderAccepts = new string[] {
-                "application/json",
-                "text/json",
-                "application/xml",
-                "text/xml"
-            };
-            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            
+            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -1377,24 +1264,24 @@ namespace CherwellConnector.Api
             }
 
             // make the HTTP request
-            var localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+            var localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(varPath,
+                Method.GET, localVarQueryParams, null, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             var localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            if (ExceptionFactory != null)
-            {
-                var exception = ExceptionFactory("SearchesGetSearchItemsV2", localVarResponse);
-                if (exception != null) throw exception;
-            }
+            var exception = ExceptionFactory?.Invoke("SearchesGetSearchItemsV2", localVarResponse);
+            if (exception != null) throw exception;
 
             return new ApiResponse<ManagerData>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value?.ToString()),
                 (ManagerData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ManagerData)));
         }
 
-        
+        #endregion
+
+        #region SearchesGetSearchResultsAdHocV1
+
         /// <summary>
         /// Run an ad-hoc search Operation that runs an ad-hoc Business Object search. To execute a search with Prompts, the PromptId and Value are required in the Prompt request object.&lt;/br&gt;&lt;/br&gt;PromptType is a FieldSubType enum as described below:&lt;/br&gt;FieldSubType&lt;/br&gt;None &#x3D; 0&lt;/br&gt;Text &#x3D; 1&lt;/br&gt;Number &#x3D; 2&lt;/br&gt;DateTime &#x3D; 3&lt;/br&gt;Logical &#x3D; 4&lt;/br&gt;Binary &#x3D; 5&lt;/br&gt;DateOnly &#x3D; 6&lt;/br&gt;TimeOnly &#x3D; 7&lt;/br&gt;Json &#x3D; 8&lt;/br&gt;JsonArray &#x3D; 9&lt;/br&gt;Xml &#x3D; 10&lt;/br&gt;XmlCollection &#x3D; 11&lt;/br&gt;TimeValue &#x3D; 12&lt;/br&gt;
         /// </summary>
@@ -1405,8 +1292,7 @@ namespace CherwellConnector.Api
         /// <returns>SearchResultsResponse</returns>
         public SearchResultsResponse SearchesGetSearchResultsAdHocV1 (SearchResultsRequest dataRequest, string lang = null, string locale = null)
         {
-             var localVarResponse = SearchesGetSearchResultsAdHocV1WithHttpInfo(dataRequest, lang, locale);
-             return localVarResponse.Data;
+             return SearchesGetSearchResultsAdHocV1WithHttpInfo(dataRequest, lang, locale).Data;
         }
 
         /// <summary>
@@ -1423,38 +1309,23 @@ namespace CherwellConnector.Api
             if (dataRequest == null)
                 throw new ApiException(400, "Missing required parameter 'dataRequest' when calling SearchesApi->SearchesGetSearchResultsAdHocV1");
 
-            var localVarPath = "/api/V1/getsearchresults";
+            const string varPath = "/api/V1/getsearchresults";
             var localVarPathParams = new Dictionary<string, string>();
             var localVarQueryParams = new List<KeyValuePair<string, string>>();
             var localVarHeaderParams = new Dictionary<string, string>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<string, string>();
             var localVarFileParams = new Dictionary<string, FileParameter>();
-            object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            var localVarHttpContentTypes = new string[] {
-                "application/json", 
-                "text/json", 
-                "application/xml", 
-                "text/xml", 
-                "application/x-www-form-urlencoded"
-            };
-            var localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            var localVarHttpHeaderAccepts = new string[] {
-                "application/json",
-                "text/json",
-                "application/xml",
-                "text/xml"
-            };
-            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            object localVarPostBody;
+            
+            var localVarHttpContentType = ApiClient.SelectHeaderContentType(LocalVarHttpContentTypes);
+            
+            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (lang != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "lang", lang)); // query parameter
             if (locale != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "locale", locale)); // query parameter
-            if (dataRequest != null && dataRequest.GetType() != typeof(byte[]))
+            if (dataRequest.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(dataRequest); // http body (model) parameter
             }
@@ -1471,24 +1342,23 @@ namespace CherwellConnector.Api
             }
 
             // make the HTTP request
-            var localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            var localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(varPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             var localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            if (ExceptionFactory != null)
-            {
-                var exception = ExceptionFactory("SearchesGetSearchResultsAdHocV1", localVarResponse);
-                if (exception != null) throw exception;
-            }
+            var exception = ExceptionFactory?.Invoke("SearchesGetSearchResultsAdHocV1", localVarResponse);
+            if (exception != null) throw exception;
 
             return new ApiResponse<SearchResultsResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value?.ToString()),
                 (SearchResultsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SearchResultsResponse)));
         }
 
-        
+        #endregion
+
+        #region SearchesGetSearchResultsAsStringByIdV2
 
         /// <summary>
         /// Get results of a saved search Operation that returns the results of a saved search in JSON format.&lt;/br&gt;&lt;/br&gt;This API is protected by a rate limiter and will reject any requests sent from an IP Address when a certain threshold of active concurrent requests has been hit.&lt;/br&gt;&lt;/br&gt;This value can be configured by the Max Concurrent Requests configuration value in the Web API config.&lt;/br&gt;&lt;/br&gt;Once this limit has been reached, all subsequent requests will receive a status code of 429 (Too Many Requests).&lt;/br&gt;&lt;/br&gt;This version is not subject to row limits and will return the entire result set of the stored search.&lt;/br&gt;
@@ -1500,8 +1370,7 @@ namespace CherwellConnector.Api
         /// <returns>StoredSearchResults</returns>
         public StoredSearchResults SearchesGetSearchResultsAsStringByIdV2 (StoredSearchRequest searchRequest, string lang = null, string locale = null)
         {
-             var localVarResponse = SearchesGetSearchResultsAsStringByIdV2WithHttpInfo(searchRequest, lang, locale);
-             return localVarResponse.Data;
+             return SearchesGetSearchResultsAsStringByIdV2WithHttpInfo(searchRequest, lang, locale).Data;
         }
 
         /// <summary>
@@ -1518,38 +1387,23 @@ namespace CherwellConnector.Api
             if (searchRequest == null)
                 throw new ApiException(400, "Missing required parameter 'searchRequest' when calling SearchesApi->SearchesGetSearchResultsAsStringByIdV2");
 
-            var localVarPath = "/api/V2/storedsearches";
+            const string varPath = "/api/V2/storedsearches";
             var localVarPathParams = new Dictionary<string, string>();
             var localVarQueryParams = new List<KeyValuePair<string, string>>();
             var localVarHeaderParams = new Dictionary<string, string>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<string, string>();
             var localVarFileParams = new Dictionary<string, FileParameter>();
-            object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            var localVarHttpContentTypes = new string[] {
-                "application/json", 
-                "text/json", 
-                "application/xml", 
-                "text/xml", 
-                "application/x-www-form-urlencoded"
-            };
-            var localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            var localVarHttpHeaderAccepts = new string[] {
-                "application/json",
-                "text/json",
-                "application/xml",
-                "text/xml"
-            };
-            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            object localVarPostBody;
+            
+            var localVarHttpContentType = ApiClient.SelectHeaderContentType(LocalVarHttpContentTypes);
+            
+            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (lang != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "lang", lang)); // query parameter
             if (locale != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "locale", locale)); // query parameter
-            if (searchRequest != null && searchRequest.GetType() != typeof(byte[]))
+            if (searchRequest.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(searchRequest); // http body (model) parameter
             }
@@ -1566,24 +1420,23 @@ namespace CherwellConnector.Api
             }
 
             // make the HTTP request
-            var localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            var localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(varPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             var localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            if (ExceptionFactory != null)
-            {
-                var exception = ExceptionFactory("SearchesGetSearchResultsAsStringByIdV2", localVarResponse);
-                if (exception != null) throw exception;
-            }
+            var exception = ExceptionFactory?.Invoke("SearchesGetSearchResultsAsStringByIdV2", localVarResponse);
+            if (exception != null) throw exception;
 
             return new ApiResponse<StoredSearchResults>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value?.ToString()),
                 (StoredSearchResults) Configuration.ApiClient.Deserialize(localVarResponse, typeof(StoredSearchResults)));
         }
-
         
+        #endregion
+
+        #region SearchesGetSearchResultsAsStringByNameV1
 
         /// <summary>
         /// Get results of a saved search Operation that returns the results of a saved search in JSON format.&lt;/br&gt; &lt;/br&gt;  This API is protected by a rate limiter and will reject any requests sent from an IP Address when a certain threshold of active concurrent requests has been hit.&lt;/br&gt; &lt;/br&gt;  This value can be configured by the Max Concurrent Requests configuration value in the Web API config.&lt;/br&gt; &lt;/br&gt;  Once this limit has been reached, all subsequent requests will receive a status code of 429 (Too Many Requests).&lt;/br&gt; 
@@ -1598,8 +1451,7 @@ namespace CherwellConnector.Api
         /// <returns>List&lt;Dictionary&lt;string, string&gt;&gt;</returns>
         public List<Dictionary<string, string>> SearchesGetSearchResultsAsStringByNameV1 (string scope, string associationName, string searchName, string scopeOwner = null, string lang = null, string locale = null)
         {
-             var localVarResponse = SearchesGetSearchResultsAsStringByNameV1WithHttpInfo(scope, associationName, searchName, scopeOwner, lang, locale);
-             return localVarResponse.Data;
+             return SearchesGetSearchResultsAsStringByNameV1WithHttpInfo(scope, associationName, searchName, scopeOwner, lang, locale).Data;
         }
 
         /// <summary>
@@ -1625,33 +1477,24 @@ namespace CherwellConnector.Api
             if (searchName == null)
                 throw new ApiException(400, "Missing required parameter 'searchName' when calling SearchesApi->SearchesGetSearchResultsAsStringByNameV1");
 
-            var localVarPath = "/api/V1/storedsearches/{scope}/{associationName}/{searchName}";
+            var localVarPath = $"/api/V1/storedsearches/{scope}/{associationName}/{searchName}";
             var localVarPathParams = new Dictionary<string, string>();
             var localVarQueryParams = new List<KeyValuePair<string, string>>();
             var localVarHeaderParams = new Dictionary<string, string>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<string, string>();
             var localVarFileParams = new Dictionary<string, FileParameter>();
-            object localVarPostBody = null;
 
             // to determine the Content-Type header
-            var localVarHttpContentTypes = new string[] {
-            };
+            var localVarHttpContentTypes = System.Array.Empty<string>();
             var localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            var localVarHttpHeaderAccepts = new string[] {
-                "application/json",
-                "text/json",
-                "application/xml",
-                "text/xml"
-            };
-            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            
+            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (scope != null) localVarPathParams.Add("scope", Configuration.ApiClient.ParameterToString(scope)); // path parameter
-            if (associationName != null) localVarPathParams.Add("associationName", Configuration.ApiClient.ParameterToString(associationName)); // path parameter
-            if (searchName != null) localVarPathParams.Add("searchName", Configuration.ApiClient.ParameterToString(searchName)); // path parameter
+            localVarPathParams.Add("scope", Configuration.ApiClient.ParameterToString(scope)); // path parameter
+            localVarPathParams.Add("associationName", Configuration.ApiClient.ParameterToString(associationName)); // path parameter
+            localVarPathParams.Add("searchName", Configuration.ApiClient.ParameterToString(searchName)); // path parameter
             if (scopeOwner != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "scopeOwner", scopeOwner)); // query parameter
             if (lang != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "lang", lang)); // query parameter
             if (locale != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "locale", locale)); // query parameter
@@ -1665,25 +1508,24 @@ namespace CherwellConnector.Api
 
             // make the HTTP request
             var localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.GET, localVarQueryParams, null, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             var localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            if (ExceptionFactory != null)
-            {
-                var exception = ExceptionFactory("SearchesGetSearchResultsAsStringByNameV1", localVarResponse);
-                if (exception != null) throw exception;
-            }
+            var exception = ExceptionFactory?.Invoke("SearchesGetSearchResultsAsStringByNameV1", localVarResponse);
+            if (exception != null) throw exception;
 
             return new ApiResponse<List<Dictionary<string, string>>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value?.ToString()),
                 (List<Dictionary<string, string>>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<Dictionary<string, string>>)));
         }
 
-        
+        #endregion
 
-        /// <summary>
+        #region SearchesGetSearchResultsAsStringByNameV2
+
+         /// <summary>
         /// Get results of a saved search Operation that returns the results of a saved search in JSON format.&lt;/br&gt;&lt;/br&gt;This API is protected by a rate limiter and will reject any requests sent from an IP Address when a certain threshold of active concurrent requests has been hit.&lt;/br&gt;&lt;/br&gt;This value can be configured by the Max Concurrent Requests configuration value in the Web API config.&lt;/br&gt;&lt;/br&gt;Once this limit has been reached, all subsequent requests will receive a status code of 429 (Too Many Requests).&lt;/br&gt;&lt;/br&gt;This version is not subject to row limits and will return the entire result set of the stored search.&lt;/br&gt;
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
@@ -1696,8 +1538,7 @@ namespace CherwellConnector.Api
         /// <returns>List&lt;Dictionary&lt;string, string&gt;&gt;</returns>
         public List<Dictionary<string, string>> SearchesGetSearchResultsAsStringByNameV2 (string scope, string associationName, string searchName, string scopeOwner = null, string lang = null, string locale = null)
         {
-             var localVarResponse = SearchesGetSearchResultsAsStringByNameV2WithHttpInfo(scope, associationName, searchName, scopeOwner, lang, locale);
-             return localVarResponse.Data;
+             return SearchesGetSearchResultsAsStringByNameV2WithHttpInfo(scope, associationName, searchName, scopeOwner, lang, locale).Data;
         }
 
         /// <summary>
@@ -1723,33 +1564,24 @@ namespace CherwellConnector.Api
             if (searchName == null)
                 throw new ApiException(400, "Missing required parameter 'searchName' when calling SearchesApi->SearchesGetSearchResultsAsStringByNameV2");
 
-            var localVarPath = "/api/V2/storedsearches/{scope}/{associationName}/{searchName}";
+            var localVarPath = $"/api/V2/storedsearches/{scope}/{associationName}/{searchName}";
             var localVarPathParams = new Dictionary<string, string>();
             var localVarQueryParams = new List<KeyValuePair<string, string>>();
             var localVarHeaderParams = new Dictionary<string, string>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<string, string>();
             var localVarFileParams = new Dictionary<string, FileParameter>();
-            object localVarPostBody = null;
 
             // to determine the Content-Type header
-            var localVarHttpContentTypes = new string[] {
-            };
+            var localVarHttpContentTypes = System.Array.Empty<string>();
             var localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            var localVarHttpHeaderAccepts = new string[] {
-                "application/json",
-                "text/json",
-                "application/xml",
-                "text/xml"
-            };
-            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            
+            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (scope != null) localVarPathParams.Add("scope", Configuration.ApiClient.ParameterToString(scope)); // path parameter
-            if (associationName != null) localVarPathParams.Add("associationName", Configuration.ApiClient.ParameterToString(associationName)); // path parameter
-            if (searchName != null) localVarPathParams.Add("searchName", Configuration.ApiClient.ParameterToString(searchName)); // path parameter
+            localVarPathParams.Add("scope", Configuration.ApiClient.ParameterToString(scope)); // path parameter
+            localVarPathParams.Add("associationName", Configuration.ApiClient.ParameterToString(associationName)); // path parameter
+            localVarPathParams.Add("searchName", Configuration.ApiClient.ParameterToString(searchName)); // path parameter
             if (scopeOwner != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "scopeOwner", scopeOwner)); // query parameter
             if (lang != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "lang", lang)); // query parameter
             if (locale != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "locale", locale)); // query parameter
@@ -1763,23 +1595,23 @@ namespace CherwellConnector.Api
 
             // make the HTTP request
             var localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.GET, localVarQueryParams, null, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             var localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            if (ExceptionFactory != null)
-            {
-                var exception = ExceptionFactory("SearchesGetSearchResultsAsStringByNameV2", localVarResponse);
-                if (exception != null) throw exception;
-            }
+            var exception = ExceptionFactory?.Invoke("SearchesGetSearchResultsAsStringByNameV2", localVarResponse);
+            if (exception != null) throw exception;
 
             return new ApiResponse<List<Dictionary<string, string>>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value?.ToString()),
                 (List<Dictionary<string, string>>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<Dictionary<string, string>>)));
         }
 
-        
+
+        #endregion
+
+        #region SearchesGetSearchResultsByIdV1
 
         /// <summary>
         /// Run a saved search by internal ID Operation that returns the paged results of a saved search. When the search contains Prompts, the response contains the Prompt. Send the Prompt and the original operation parameters to  SearchResultsRequest to the getsearchresults ad-hoc http post operation.&lt;/br&gt;&lt;/br&gt;PromptType is a FieldSubType enum as described below:&lt;/br&gt;FieldSubType&lt;/br&gt;None &#x3D; 0&lt;/br&gt;Text &#x3D; 1&lt;/br&gt;Number &#x3D; 2&lt;/br&gt;DateTime &#x3D; 3&lt;/br&gt;Logical &#x3D; 4&lt;/br&gt;Binary &#x3D; 5&lt;/br&gt;DateOnly &#x3D; 6&lt;/br&gt;TimeOnly &#x3D; 7&lt;/br&gt;Json &#x3D; 8&lt;/br&gt;JsonArray &#x3D; 9&lt;/br&gt;Xml &#x3D; 10&lt;/br&gt;XmlCollection &#x3D; 11&lt;/br&gt;TimeValue &#x3D; 12&lt;/br&gt;
@@ -1799,8 +1631,7 @@ namespace CherwellConnector.Api
         /// <returns>SearchResultsResponse</returns>
         public SearchResultsResponse SearchesGetSearchResultsByIdV1 (string association, string scope, string scopeowner, string searchid, string searchTerm = null, int? pagenumber = null, int? pagesize = null, bool? includeschema = null, bool? resultsAsSimpleResultsList = null, string lang = null, string locale = null)
         {
-             var localVarResponse = SearchesGetSearchResultsByIdV1WithHttpInfo(association, scope, scopeowner, searchid, searchTerm, pagenumber, pagesize, includeschema, resultsAsSimpleResultsList, lang, locale);
-             return localVarResponse.Data;
+             return SearchesGetSearchResultsByIdV1WithHttpInfo(association, scope, scopeowner, searchid, searchTerm, pagenumber, pagesize, includeschema, resultsAsSimpleResultsList, lang, locale).Data;
         }
 
         /// <summary>
@@ -1834,34 +1665,26 @@ namespace CherwellConnector.Api
             if (searchid == null)
                 throw new ApiException(400, "Missing required parameter 'searchid' when calling SearchesApi->SearchesGetSearchResultsByIdV1");
 
-            var localVarPath = "/api/V1/getsearchresults/association/{association}/scope/{scope}/scopeowner/{scopeowner}/searchid/{searchid}";
+            var localVarPath = $"/api/V1/getsearchresults/association/{association}/scope/{scope}/scopeowner/{scopeowner}/searchid/{searchid}";
             var localVarPathParams = new Dictionary<string, string>();
             var localVarQueryParams = new List<KeyValuePair<string, string>>();
             var localVarHeaderParams = new Dictionary<string, string>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<string, string>();
             var localVarFileParams = new Dictionary<string, FileParameter>();
-            object localVarPostBody = null;
 
             // to determine the Content-Type header
-            var localVarHttpContentTypes = new string[] {
-            };
+            var localVarHttpContentTypes = System.Array.Empty<string>();
             var localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
-            // to determine the Accept header
-            var localVarHttpHeaderAccepts = new string[] {
-                "application/json",
-                "text/json",
-                "application/xml",
-                "text/xml"
-            };
-            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+           
+            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (association != null) localVarPathParams.Add("association", Configuration.ApiClient.ParameterToString(association)); // path parameter
-            if (scope != null) localVarPathParams.Add("scope", Configuration.ApiClient.ParameterToString(scope)); // path parameter
-            if (scopeowner != null) localVarPathParams.Add("scopeowner", Configuration.ApiClient.ParameterToString(scopeowner)); // path parameter
-            if (searchid != null) localVarPathParams.Add("searchid", Configuration.ApiClient.ParameterToString(searchid)); // path parameter
+            localVarPathParams.Add("association", Configuration.ApiClient.ParameterToString(association)); // path parameter
+            localVarPathParams.Add("scope", Configuration.ApiClient.ParameterToString(scope)); // path parameter
+            localVarPathParams.Add("scopeowner", Configuration.ApiClient.ParameterToString(scopeowner)); // path parameter
+            localVarPathParams.Add("searchid", Configuration.ApiClient.ParameterToString(searchid)); // path parameter
             if (searchTerm != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "searchTerm", searchTerm)); // query parameter
             if (pagenumber != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "pagenumber", pagenumber)); // query parameter
             if (pagesize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "pagesize", pagesize)); // query parameter
@@ -1879,25 +1702,24 @@ namespace CherwellConnector.Api
 
             // make the HTTP request
             var localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.GET, localVarQueryParams, null, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             var localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            if (ExceptionFactory != null)
-            {
-                var exception = ExceptionFactory("SearchesGetSearchResultsByIdV1", localVarResponse);
-                if (exception != null) throw exception;
-            }
+            var exception = ExceptionFactory?.Invoke("SearchesGetSearchResultsByIdV1", localVarResponse);
+            if (exception != null) throw exception;
 
             return new ApiResponse<SearchResultsResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value?.ToString()),
                 (SearchResultsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SearchResultsResponse)));
         }
 
-        
+        #endregion
 
-        /// <summary>
+        #region SearchesGetSearchResultsByNameV1
+
+         /// <summary>
         /// Run a saved search by name Operation that returns the paged results of a saved search. When the search contains Prompts, the response contains the Prompt. Send the Prompt and the original operation parameters to  SearchResultsRequest to the getsearchresults ad-hoc http post operation.&lt;/br&gt;&lt;/br&gt;PromptType is a FieldSubType enum as described below:&lt;/br&gt;FieldSubType&lt;/br&gt;None &#x3D; 0&lt;/br&gt;Text &#x3D; 1&lt;/br&gt;Number &#x3D; 2&lt;/br&gt;DateTime &#x3D; 3&lt;/br&gt;Logical &#x3D; 4&lt;/br&gt;Binary &#x3D; 5&lt;/br&gt;DateOnly &#x3D; 6&lt;/br&gt;TimeOnly &#x3D; 7&lt;/br&gt;Json &#x3D; 8&lt;/br&gt;JsonArray &#x3D; 9&lt;/br&gt;Xml &#x3D; 10&lt;/br&gt;XmlCollection &#x3D; 11&lt;/br&gt;TimeValue &#x3D; 12&lt;/br&gt;
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
@@ -1915,8 +1737,7 @@ namespace CherwellConnector.Api
         /// <returns>SearchResultsResponse</returns>
         public SearchResultsResponse SearchesGetSearchResultsByNameV1 (string association, string scope, string scopeowner, string searchname, string searchTerm = null, int? pagenumber = null, int? pagesize = null, bool? includeschema = null, bool? resultsAsSimpleResultsList = null, string lang = null, string locale = null)
         {
-             var localVarResponse = SearchesGetSearchResultsByNameV1WithHttpInfo(association, scope, scopeowner, searchname, searchTerm, pagenumber, pagesize, includeschema, resultsAsSimpleResultsList, lang, locale);
-             return localVarResponse.Data;
+             return SearchesGetSearchResultsByNameV1WithHttpInfo(association, scope, scopeowner, searchname, searchTerm, pagenumber, pagesize, includeschema, resultsAsSimpleResultsList, lang, locale).Data;
         }
 
         /// <summary>
@@ -1950,34 +1771,25 @@ namespace CherwellConnector.Api
             if (searchname == null)
                 throw new ApiException(400, "Missing required parameter 'searchname' when calling SearchesApi->SearchesGetSearchResultsByNameV1");
 
-            var localVarPath = "/api/V1/getsearchresults/association/{association}/scope/{scope}/scopeowner/{scopeowner}/searchname/{searchname}";
+            var localVarPath = $"/api/V1/getsearchresults/association/{association}/scope/{scope}/scopeowner/{scopeowner}/searchname/{searchname}";
             var localVarPathParams = new Dictionary<string, string>();
             var localVarQueryParams = new List<KeyValuePair<string, string>>();
             var localVarHeaderParams = new Dictionary<string, string>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<string, string>();
             var localVarFileParams = new Dictionary<string, FileParameter>();
-            object localVarPostBody = null;
 
             // to determine the Content-Type header
-            var localVarHttpContentTypes = new string[] {
-            };
+            var localVarHttpContentTypes = System.Array.Empty<string>();
             var localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            var localVarHttpHeaderAccepts = new string[] {
-                "application/json",
-                "text/json",
-                "application/xml",
-                "text/xml"
-            };
-            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            
+            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (association != null) localVarPathParams.Add("association", Configuration.ApiClient.ParameterToString(association)); // path parameter
-            if (scope != null) localVarPathParams.Add("scope", Configuration.ApiClient.ParameterToString(scope)); // path parameter
-            if (scopeowner != null) localVarPathParams.Add("scopeowner", Configuration.ApiClient.ParameterToString(scopeowner)); // path parameter
-            if (searchname != null) localVarPathParams.Add("searchname", Configuration.ApiClient.ParameterToString(searchname)); // path parameter
+            localVarPathParams.Add("association", Configuration.ApiClient.ParameterToString(association)); // path parameter
+            localVarPathParams.Add("scope", Configuration.ApiClient.ParameterToString(scope)); // path parameter
+            localVarPathParams.Add("scopeowner", Configuration.ApiClient.ParameterToString(scopeowner)); // path parameter
+            localVarPathParams.Add("searchname", Configuration.ApiClient.ParameterToString(searchname)); // path parameter
             if (searchTerm != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "searchTerm", searchTerm)); // query parameter
             if (pagenumber != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "pagenumber", pagenumber)); // query parameter
             if (pagesize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "pagesize", pagesize)); // query parameter
@@ -1995,25 +1807,24 @@ namespace CherwellConnector.Api
 
             // make the HTTP request
             var localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.GET, localVarQueryParams, null, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             var localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            if (ExceptionFactory != null)
-            {
-                var exception = ExceptionFactory("SearchesGetSearchResultsByNameV1", localVarResponse);
-                if (exception != null) throw exception;
-            }
+            var exception = ExceptionFactory?.Invoke("SearchesGetSearchResultsByNameV1", localVarResponse);
+            if (exception != null) throw exception;
 
             return new ApiResponse<SearchResultsResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value?.ToString()),
                 (SearchResultsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SearchResultsResponse)));
         }
 
-        
+        #endregion
 
-        /// <summary>
+        #region SearchesGetSearchResultsExportAdHocV1
+
+         /// <summary>
         /// Export an ad-hoc search Operation that returns an ad-hoc search in a specified export format: 0&#x3D;CSV, 1&#x3D;Excel, 2&#x3D;Tab, 3&#x3D;Word, 4&#x3D;Custom Separator, 5&#x3D;Simple JSON. To execute a search with Prompts, the PromptId and Value are required in the Prompt request object.&lt;/br&gt;&lt;/br&gt;PromptType is a FieldSubType enum as described below:&lt;/br&gt;FieldSubType&lt;/br&gt;None &#x3D; 0&lt;/br&gt;Text &#x3D; 1&lt;/br&gt;Number &#x3D; 2&lt;/br&gt;DateTime &#x3D; 3&lt;/br&gt;Logical &#x3D; 4&lt;/br&gt;Binary &#x3D; 5&lt;/br&gt;DateOnly &#x3D; 6&lt;/br&gt;TimeOnly &#x3D; 7&lt;/br&gt;Json &#x3D; 8&lt;/br&gt;JsonArray &#x3D; 9&lt;/br&gt;Xml &#x3D; 10&lt;/br&gt;XmlCollection &#x3D; 11&lt;/br&gt;TimeValue &#x3D; 12&lt;/br&gt;
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
@@ -2023,8 +1834,7 @@ namespace CherwellConnector.Api
         /// <returns>string</returns>
         public string SearchesGetSearchResultsExportAdHocV1 (ExportSearchResultsRequest dataRequest, string lang = null, string locale = null)
         {
-             var localVarResponse = SearchesGetSearchResultsExportAdHocV1WithHttpInfo(dataRequest, lang, locale);
-             return localVarResponse.Data;
+             return SearchesGetSearchResultsExportAdHocV1WithHttpInfo(dataRequest, lang, locale).Data;
         }
 
         /// <summary>
@@ -2041,38 +1851,24 @@ namespace CherwellConnector.Api
             if (dataRequest == null)
                 throw new ApiException(400, "Missing required parameter 'dataRequest' when calling SearchesApi->SearchesGetSearchResultsExportAdHocV1");
 
-            var localVarPath = "/api/V1/getsearchresultsexport";
+            const string varPath = "/api/V1/getsearchresultsexport";
             var localVarPathParams = new Dictionary<string, string>();
             var localVarQueryParams = new List<KeyValuePair<string, string>>();
             var localVarHeaderParams = new Dictionary<string, string>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<string, string>();
             var localVarFileParams = new Dictionary<string, FileParameter>();
-            object localVarPostBody = null;
+            object localVarPostBody;
+            
+            var localVarHttpContentType = ApiClient.SelectHeaderContentType(LocalVarHttpContentTypes);
 
-            // to determine the Content-Type header
-            var localVarHttpContentTypes = new string[] {
-                "application/json", 
-                "text/json", 
-                "application/xml", 
-                "text/xml", 
-                "application/x-www-form-urlencoded"
-            };
-            var localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            var localVarHttpHeaderAccepts = new string[] {
-                "application/json",
-                "text/json",
-                "application/xml",
-                "text/xml"
-            };
-            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+           
+            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (lang != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "lang", lang)); // query parameter
             if (locale != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "locale", locale)); // query parameter
-            if (dataRequest != null && dataRequest.GetType() != typeof(byte[]))
+            if (dataRequest.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(dataRequest); // http body (model) parameter
             }
@@ -2089,24 +1885,24 @@ namespace CherwellConnector.Api
             }
 
             // make the HTTP request
-            var localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            var localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(varPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             var localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            if (ExceptionFactory != null)
-            {
-                var exception = ExceptionFactory("SearchesGetSearchResultsExportAdHocV1", localVarResponse);
-                if (exception != null) throw exception;
-            }
+            var exception = ExceptionFactory?.Invoke("SearchesGetSearchResultsExportAdHocV1", localVarResponse);
+            if (exception != null) throw exception;
 
             return new ApiResponse<string>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value?.ToString()),
                 (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
         }
 
-        
+
+        #endregion
+
+        #region SearchesGetSearchResultsExportByIdV1
 
         /// <summary>
         /// Export a saved search by ID Operation that returns the paged results of a saved search in a specified format. When the search contains Prompts, the response contains the Prompt. Send the Prompt and the original operation parameters to  SearchResultsRequest to the getsearchresultsexport ad-hoc http post operation.&lt;/br&gt;&lt;/br&gt;PromptType is a FieldSubType enum as described below:&lt;/br&gt;FieldSubType&lt;/br&gt;None &#x3D; 0&lt;/br&gt;Text &#x3D; 1&lt;/br&gt;Number &#x3D; 2&lt;/br&gt;DateTime &#x3D; 3&lt;/br&gt;Logical &#x3D; 4&lt;/br&gt;Binary &#x3D; 5&lt;/br&gt;DateOnly &#x3D; 6&lt;/br&gt;TimeOnly &#x3D; 7&lt;/br&gt;Json &#x3D; 8&lt;/br&gt;JsonArray &#x3D; 9&lt;/br&gt;Xml &#x3D; 10&lt;/br&gt;XmlCollection &#x3D; 11&lt;/br&gt;TimeValue &#x3D; 12&lt;/br&gt;
@@ -2125,8 +1921,7 @@ namespace CherwellConnector.Api
         /// <returns>string</returns>
         public string SearchesGetSearchResultsExportByIdV1 (string association, string scope, string scopeowner, string searchid, string exportformat, string searchTerm = null, int? pagenumber = null, int? pagesize = null, string lang = null, string locale = null)
         {
-             var localVarResponse = SearchesGetSearchResultsExportByIdV1WithHttpInfo(association, scope, scopeowner, searchid, exportformat, searchTerm, pagenumber, pagesize, lang, locale);
-             return localVarResponse.Data;
+             return SearchesGetSearchResultsExportByIdV1WithHttpInfo(association, scope, scopeowner, searchid, exportformat, searchTerm, pagenumber, pagesize, lang, locale).Data;
         }
 
         /// <summary>
@@ -2162,35 +1957,27 @@ namespace CherwellConnector.Api
             if (exportformat == null)
                 throw new ApiException(400, "Missing required parameter 'exportformat' when calling SearchesApi->SearchesGetSearchResultsExportByIdV1");
 
-            var localVarPath = "/api/V1/getsearchresultsexport/association/{association}/scope/{scope}/scopeowner/{scopeowner}/searchid/{searchid}/exportformat/{exportformat}";
+            var localVarPath = $"/api/V1/getsearchresultsexport/association/{association}/scope/{scope}/scopeowner/{scopeowner}/searchid/{searchid}/exportformat/{exportformat}";
             var localVarPathParams = new Dictionary<string, string>();
             var localVarQueryParams = new List<KeyValuePair<string, string>>();
             var localVarHeaderParams = new Dictionary<string, string>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<string, string>();
             var localVarFileParams = new Dictionary<string, FileParameter>();
-            object localVarPostBody = null;
 
             // to determine the Content-Type header
-            var localVarHttpContentTypes = new string[] {
-            };
+            var localVarHttpContentTypes = System.Array.Empty<string>();
             var localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
-            // to determine the Accept header
-            var localVarHttpHeaderAccepts = new string[] {
-                "application/json",
-                "text/json",
-                "application/xml",
-                "text/xml"
-            };
-            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+           
+            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (association != null) localVarPathParams.Add("association", Configuration.ApiClient.ParameterToString(association)); // path parameter
-            if (scope != null) localVarPathParams.Add("scope", Configuration.ApiClient.ParameterToString(scope)); // path parameter
-            if (scopeowner != null) localVarPathParams.Add("scopeowner", Configuration.ApiClient.ParameterToString(scopeowner)); // path parameter
-            if (searchid != null) localVarPathParams.Add("searchid", Configuration.ApiClient.ParameterToString(searchid)); // path parameter
-            if (exportformat != null) localVarPathParams.Add("exportformat", Configuration.ApiClient.ParameterToString(exportformat)); // path parameter
+            localVarPathParams.Add("association", Configuration.ApiClient.ParameterToString(association)); // path parameter
+            localVarPathParams.Add("scope", Configuration.ApiClient.ParameterToString(scope)); // path parameter
+            localVarPathParams.Add("scopeowner", Configuration.ApiClient.ParameterToString(scopeowner)); // path parameter
+            localVarPathParams.Add("searchid", Configuration.ApiClient.ParameterToString(searchid)); // path parameter
+            localVarPathParams.Add("exportformat", Configuration.ApiClient.ParameterToString(exportformat)); // path parameter
             if (searchTerm != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "searchTerm", searchTerm)); // query parameter
             if (pagenumber != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "pagenumber", pagenumber)); // query parameter
             if (pagesize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "pagesize", pagesize)); // query parameter
@@ -2206,25 +1993,25 @@ namespace CherwellConnector.Api
 
             // make the HTTP request
             var localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.GET, localVarQueryParams, null, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             var localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            if (ExceptionFactory != null)
-            {
-                var exception = ExceptionFactory("SearchesGetSearchResultsExportByIdV1", localVarResponse);
-                if (exception != null) throw exception;
-            }
+            var exception = ExceptionFactory?.Invoke("SearchesGetSearchResultsExportByIdV1", localVarResponse);
+            if (exception != null) throw exception;
 
             return new ApiResponse<string>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value?.ToString()),
                 (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
         }
 
-        
 
-        /// <summary>
+        #endregion
+
+        #region SearchesGetSearchResultsExportByNameV1
+
+         /// <summary>
         /// Export a saved search by name Operation that returns the paged results of a saved search in a specified format. When the search contains Prompts, the response contains the Prompt. Send the Prompt and the original operation parameters to  SearchResultsRequest to the getsearchresultsexport ad-hoc http post operation.&lt;/br&gt;&lt;/br&gt;PromptType is a FieldSubType enum as described below:&lt;/br&gt;FieldSubType&lt;/br&gt;None &#x3D; 0&lt;/br&gt;Text &#x3D; 1&lt;/br&gt;Number &#x3D; 2&lt;/br&gt;DateTime &#x3D; 3&lt;/br&gt;Logical &#x3D; 4&lt;/br&gt;Binary &#x3D; 5&lt;/br&gt;DateOnly &#x3D; 6&lt;/br&gt;TimeOnly &#x3D; 7&lt;/br&gt;Json &#x3D; 8&lt;/br&gt;JsonArray &#x3D; 9&lt;/br&gt;Xml &#x3D; 10&lt;/br&gt;XmlCollection &#x3D; 11&lt;/br&gt;TimeValue &#x3D; 12&lt;/br&gt;
         /// </summary>
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
@@ -2241,8 +2028,7 @@ namespace CherwellConnector.Api
         /// <returns>string</returns>
         public string SearchesGetSearchResultsExportByNameV1 (string association, string scope, string scopeowner, string searchname, string exportformat, string searchTerm = null, int? pagenumber = null, int? pagesize = null, string lang = null, string locale = null)
         {
-             var localVarResponse = SearchesGetSearchResultsExportByNameV1WithHttpInfo(association, scope, scopeowner, searchname, exportformat, searchTerm, pagenumber, pagesize, lang, locale);
-             return localVarResponse.Data;
+             return SearchesGetSearchResultsExportByNameV1WithHttpInfo(association, scope, scopeowner, searchname, exportformat, searchTerm, pagenumber, pagesize, lang, locale).Data;
         }
 
         /// <summary>
@@ -2278,35 +2064,26 @@ namespace CherwellConnector.Api
             if (exportformat == null)
                 throw new ApiException(400, "Missing required parameter 'exportformat' when calling SearchesApi->SearchesGetSearchResultsExportByNameV1");
 
-            var localVarPath = "/api/V1/getsearchresultsexport/association/{association}/scope/{scope}/scopeowner/{scopeowner}/searchname/{searchname}/exportformat/{exportformat}";
+            var localVarPath = $"/api/V1/getsearchresultsexport/association/{association}/scope/{scope}/scopeowner/{scopeowner}/searchname/{searchname}/exportformat/{exportformat}";
             var localVarPathParams = new Dictionary<string, string>();
             var localVarQueryParams = new List<KeyValuePair<string, string>>();
             var localVarHeaderParams = new Dictionary<string, string>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<string, string>();
             var localVarFileParams = new Dictionary<string, FileParameter>();
-            object localVarPostBody = null;
 
             // to determine the Content-Type header
-            var localVarHttpContentTypes = new string[] {
-            };
+            var localVarHttpContentTypes = System.Array.Empty<string>();
             var localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            var localVarHttpHeaderAccepts = new string[] {
-                "application/json",
-                "text/json",
-                "application/xml",
-                "text/xml"
-            };
-            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            
+            var localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(LocalVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (association != null) localVarPathParams.Add("association", Configuration.ApiClient.ParameterToString(association)); // path parameter
-            if (scope != null) localVarPathParams.Add("scope", Configuration.ApiClient.ParameterToString(scope)); // path parameter
-            if (scopeowner != null) localVarPathParams.Add("scopeowner", Configuration.ApiClient.ParameterToString(scopeowner)); // path parameter
-            if (searchname != null) localVarPathParams.Add("searchname", Configuration.ApiClient.ParameterToString(searchname)); // path parameter
-            if (exportformat != null) localVarPathParams.Add("exportformat", Configuration.ApiClient.ParameterToString(exportformat)); // path parameter
+            localVarPathParams.Add("association", Configuration.ApiClient.ParameterToString(association)); // path parameter
+            localVarPathParams.Add("scope", Configuration.ApiClient.ParameterToString(scope)); // path parameter
+            localVarPathParams.Add("scopeowner", Configuration.ApiClient.ParameterToString(scopeowner)); // path parameter
+            localVarPathParams.Add("searchname", Configuration.ApiClient.ParameterToString(searchname)); // path parameter
+            localVarPathParams.Add("exportformat", Configuration.ApiClient.ParameterToString(exportformat)); // path parameter
             if (searchTerm != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "searchTerm", searchTerm)); // query parameter
             if (pagenumber != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "pagenumber", pagenumber)); // query parameter
             if (pagesize != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "pagesize", pagesize)); // query parameter
@@ -2322,21 +2099,20 @@ namespace CherwellConnector.Api
 
             // make the HTTP request
             var localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.GET, localVarQueryParams, null, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             var localVarStatusCode = (int) localVarResponse.StatusCode;
 
-            if (ExceptionFactory != null)
-            {
-                var exception = ExceptionFactory("SearchesGetSearchResultsExportByNameV1", localVarResponse);
-                if (exception != null) throw exception;
-            }
+            var exception = ExceptionFactory?.Invoke("SearchesGetSearchResultsExportByNameV1", localVarResponse);
+            if (exception != null) throw exception;
 
             return new ApiResponse<string>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value?.ToString()),
                 (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
         }
+        
+        #endregion
 
     }
 }
