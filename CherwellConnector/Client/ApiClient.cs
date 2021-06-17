@@ -352,10 +352,7 @@ namespace CherwellConnector.Client
             if (accepts.Length == 0)
                 return null;
 
-            if (accepts.Contains("application/json", StringComparer.OrdinalIgnoreCase))
-                return "application/json";
-
-            return string.Join(",", accepts);
+            return accepts.Contains("application/json", StringComparer.OrdinalIgnoreCase) ? "application/json" : string.Join(",", accepts);
         }
 
         /// <summary>
