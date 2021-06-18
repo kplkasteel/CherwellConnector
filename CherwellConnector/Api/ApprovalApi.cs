@@ -25,7 +25,10 @@ namespace CherwellConnector.Api
             {
                 lock (Padlock)
                 {
-                    return _instance ??= new ApprovalApi();
+                    _instance ??= new ApprovalApi(ServiceApi.Instance.Configuration);
+
+                    _instance = (ApprovalApi) ServiceApi.Instance.CheckApiHeader(_instance);
+                    return _instance;
                 }
             }
             set => _instance = value;
@@ -34,10 +37,6 @@ namespace CherwellConnector.Api
         #endregion
 
         #region Constructors
-
-        private ApprovalApi()
-        {
-        }
 
         /// <summary>
         ///     Initializes a new instance of the <see cref="ApprovalApi" /> class.

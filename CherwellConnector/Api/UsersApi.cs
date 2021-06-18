@@ -23,10 +23,10 @@ namespace CherwellConnector.Api
         {
             get
             {
-                lock (Padlock)
-                {
-                    return _instance ??= new UsersApi();
-                }
+                _instance ??= new UsersApi(ServiceApi.Instance.Configuration);
+
+                _instance = (UsersApi) ServiceApi.Instance.CheckApiHeader(_instance);
+                return _instance;
             }
             set => _instance = value;
         }

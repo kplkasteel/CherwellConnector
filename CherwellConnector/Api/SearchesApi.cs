@@ -25,7 +25,10 @@ namespace CherwellConnector.Api
             {
                 lock (Padlock)
                 {
-                    return _instance ??= new SearchesApi();
+                    _instance ??= new SearchesApi(ServiceApi.Instance.Configuration);
+
+                    _instance = (SearchesApi) ServiceApi.Instance.CheckApiHeader(_instance);
+                    return _instance;
                 }
             }
             set => _instance = value;

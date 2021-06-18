@@ -1,7 +1,9 @@
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using CherwellConnector.Client;
+using CherwellConnector.Enum;
 using CherwellConnector.Interface;
 using CherwellConnector.Model;
 using RestSharp;
@@ -13,7 +15,103 @@ namespace CherwellConnector.Api
     /// </summary>
     public class ServiceApi : BaseApi, IServiceApi
     {
+        /// <summary>
+        ///     Initializes a new instance of the <see cref="ServiceApi" /> class.
+        /// </summary>
+        /// <returns></returns>
+        private ServiceApi()
+        {
+        }
+
+        /// <summary>
+        ///     Initializes a new instance of the <see cref="ServiceApi" /> class.
+        /// </summary>
+        /// <param name="basePath">CherwellApi Endpoint</param>
+        /// <param name="grantType">CherwellApi GrantType</param>
+        /// <param name="clientId">CherwellAPI ClientID</param>
+        /// <param name="clientSecret">CherwellAPI SharedSecret</param>
+        /// <param name="username">Username</param>
+        /// <param name="password">Password</param>
+        /// <param name="authMode">AuthMode</param>
+        /// <param name="siteName">SiteName</param>
+        /// <returns></returns>
+        public ServiceApi(string basePath, GrantTypes grantType, string clientId, string clientSecret,
+            string username, string password, AuthModes authMode,
+            string siteName = null)
+        {
+            BasePath = basePath;
+            GrantType = grantType;
+            ClientId = clientId;
+            ClientSecret = clientSecret;
+            UserName = username;
+            Password = password;
+            AuthMode = authMode;
+            SiteName = siteName;
+            ClientSecret = clientSecret;
+            Configuration = new Configuration {BasePath = BasePath};
+
+            ExceptionFactory = Configuration.DefaultExceptionFactory;
+        }
+
+        private ServiceTokenStatus CheckTokenResponse()
+        {
+            if (_tokenResponse == null ||
+                string.IsNullOrEmpty(_tokenResponse?.AccessToken))
+            {
+                _tokenResponse = Instance.ServiceToken(nameof(GrantType), ClientId, ClientSecret, UserName, Password,
+                    string.Empty, nameof(AuthMode), SiteName);
+                return _tokenResponse == null ? ServiceTokenStatus.Failed : ServiceTokenStatus.Renewed;
+            }
+
+            try
+            {
+                var issued = DateTime.Parse(_tokenResponse.Issued,
+                    CultureInfo.GetCultureInfo(Instance.ServiceGetServiceInfoV1().CsmCulture));
+                if (issued.AddMinutes(5) >= DateTime.Now) return ServiceTokenStatus.Success;
+
+                _tokenResponse = Instance.ServiceToken(nameof(GrantType), ClientId, ClientSecret, UserName, Password,
+                    string.Empty, nameof(AuthMode), SiteName);
+                return _tokenResponse == null ? ServiceTokenStatus.Failed : ServiceTokenStatus.Renewed;
+            }
+
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                return ServiceTokenStatus.Failed;
+            }
+        }
+
+        public IApiAccessor CheckApiHeader(IApiAccessor apiAccessor)
+        {
+            var tokenStatus = CheckTokenResponse();
+            if (tokenStatus == ServiceTokenStatus.Failed) return null;
+            if (!apiAccessor.Configuration.DefaultHeader.Any() ||
+                tokenStatus == ServiceTokenStatus.Renewed) // Add header if needed
+                apiAccessor.Configuration.AddDefaultHeader("Authorization",
+                    "Bearer " + _tokenResponse.AccessToken);
+
+            return apiAccessor;
+        }
+
         #region Variables & Properties
+
+        private TokenResponse _tokenResponse;
+
+        public string Password { get; set; }
+
+        public string UserName { get; set; }
+
+        public string ClientId { get; set; }
+
+        public string ClientSecret { get; set; }
+
+        public string BasePath { get; set; }
+
+        public AuthModes AuthMode { get; set; }
+
+        public GrantTypes GrantType { get; set; }
+
+        private string SiteName { get; }
 
         private static ServiceApi _instance;
 
@@ -29,34 +127,6 @@ namespace CherwellConnector.Api
                 }
             }
             set => _instance = value;
-        }
-
-        #endregion
-
-        #region Contructors
-
-        /// <summary>
-        ///     Initializes a new instance of the <see cref="ServiceApi" /> class.
-        /// </summary>
-        /// <returns></returns>
-        public ServiceApi(string basePath)
-        {
-            Configuration = new Configuration {BasePath = basePath};
-
-            ExceptionFactory = Configuration.DefaultExceptionFactory;
-        }
-
-        /// <summary>
-        ///     Initializes a new instance of the <see cref="ServiceApi" /> class
-        ///     using Configuration object
-        /// </summary>
-        /// <param name="configuration">An instance of Configuration</param>
-        /// <returns></returns>
-        public ServiceApi(Configuration configuration = null)
-        {
-            Configuration = configuration ?? Configuration.Default;
-
-            ExceptionFactory = Configuration.DefaultExceptionFactory;
         }
 
         #endregion
@@ -175,7 +245,7 @@ namespace CherwellConnector.Api
         /// <returns>ApiResponse of Object(void)</returns>
         private ApiResponse<object> ServiceLogoutUserV1WithHttpInfo(string lang = null, string locale = null)
         {
-            var localVarPath = "/api/V1/logout";
+            const string varPath = "/api/V1/logout";
             var localVarPathParams = new Dictionary<string, string>();
             var localVarQueryParams = new List<KeyValuePair<string, string>>();
             var localVarHeaderParams = new Dictionary<string, string>(Configuration.DefaultHeader);
@@ -206,7 +276,7 @@ namespace CherwellConnector.Api
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
 
             // make the HTTP request
-            var localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            var localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(varPath,
                 Method.DELETE, localVarQueryParams, null, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -222,7 +292,7 @@ namespace CherwellConnector.Api
 
         #endregion
 
-        #region MyRegion
+        #region ServiceToken
 
         /// <summary>
         ///     Get an access token Operation to request an access token for one of the following authentication modes. Or, you can

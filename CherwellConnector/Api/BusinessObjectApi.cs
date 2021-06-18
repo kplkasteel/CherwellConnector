@@ -26,7 +26,10 @@ namespace CherwellConnector.Api
             {
                 lock (Padlock)
                 {
-                    return _instance ??= new BusinessObjectApi();
+                    _instance ??= new BusinessObjectApi(ServiceApi.Instance.Configuration);
+
+                    _instance = (BusinessObjectApi) ServiceApi.Instance.CheckApiHeader(_instance);
+                    return _instance;
                 }
             }
             set => _instance = value;
@@ -36,13 +39,7 @@ namespace CherwellConnector.Api
 
         #region Constructors
 
-        /// <summary>
-        ///     Initializes a new instance of the <see cref="BusinessObjectApi" /> class.
-        /// </summary>
-        /// <returns></returns>
-        private BusinessObjectApi()
-        {
-        }
+       
 
         /// <summary>
         ///     Initializes a new instance of the <see cref="BusinessObjectApi" /> class.

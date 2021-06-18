@@ -23,10 +23,10 @@ namespace CherwellConnector.Api
         {
             get
             {
-                lock (Padlock)
-                {
-                    return _instance ??= new TeamsApi();
-                }
+                _instance ??= new TeamsApi(ServiceApi.Instance.Configuration);
+
+                _instance = (TeamsApi) ServiceApi.Instance.CheckApiHeader(_instance);
+                return _instance;
             }
             set => _instance = value;
         }
