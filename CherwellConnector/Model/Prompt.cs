@@ -1,121 +1,95 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Runtime.Serialization;
+using System.Text;
 using CherwellConnector.Enum;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace CherwellConnector.Model
 {
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.Linq;
-    using System.Runtime.Serialization;
-    using System.Text;
-
-    using Newtonsoft.Json;
-    using Newtonsoft.Json.Converters;
-
     /// <summary>
-    /// Prompt
+    ///     Prompt
     /// </summary>
     [DataContract]
-    public sealed class Prompt :  IEquatable<Prompt>, IValidatableObject
+    public sealed class Prompt : IEquatable<Prompt>, IValidatableObject
     {
         /// <summary>
-        /// Gets or Sets ListDisplayOption
-        /// </summary>
-        [DataMember(Name="listDisplayOption", EmitDefaultValue=false)]
-        public ListDisplayOptionEnum? ListDisplayOption { get; set; }
-        /// <summary>
-        /// Defines PromptType
+        ///     Defines PromptType
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum PromptTypeEnum
         {
-            
             /// <summary>
-            /// Enum None for value: None
+            ///     Enum None for value: None
             /// </summary>
-            [EnumMember(Value = "None")]
-            None = 1,
-            
+            [EnumMember(Value = "None")] None = 1,
+
             /// <summary>
-            /// Enum Text for value: Text
+            ///     Enum Text for value: Text
             /// </summary>
-            [EnumMember(Value = "Text")]
-            Text = 2,
-            
+            [EnumMember(Value = "Text")] Text = 2,
+
             /// <summary>
-            /// Enum Number for value: Number
+            ///     Enum Number for value: Number
             /// </summary>
-            [EnumMember(Value = "Number")]
-            Number = 3,
-            
+            [EnumMember(Value = "Number")] Number = 3,
+
             /// <summary>
-            /// Enum DateTime for value: DateTime
+            ///     Enum DateTime for value: DateTime
             /// </summary>
-            [EnumMember(Value = "DateTime")]
-            DateTime = 4,
-            
+            [EnumMember(Value = "DateTime")] DateTime = 4,
+
             /// <summary>
-            /// Enum Logical for value: Logical
+            ///     Enum Logical for value: Logical
             /// </summary>
-            [EnumMember(Value = "Logical")]
-            Logical = 5,
-            
+            [EnumMember(Value = "Logical")] Logical = 5,
+
             /// <summary>
-            /// Enum Binary for value: Binary
+            ///     Enum Binary for value: Binary
             /// </summary>
-            [EnumMember(Value = "Binary")]
-            Binary = 6,
-            
+            [EnumMember(Value = "Binary")] Binary = 6,
+
             /// <summary>
-            /// Enum DateOnly for value: DateOnly
+            ///     Enum DateOnly for value: DateOnly
             /// </summary>
-            [EnumMember(Value = "DateOnly")]
-            DateOnly = 7,
-            
+            [EnumMember(Value = "DateOnly")] DateOnly = 7,
+
             /// <summary>
-            /// Enum TimeOnly for value: TimeOnly
+            ///     Enum TimeOnly for value: TimeOnly
             /// </summary>
-            [EnumMember(Value = "TimeOnly")]
-            TimeOnly = 8,
-            
+            [EnumMember(Value = "TimeOnly")] TimeOnly = 8,
+
             /// <summary>
-            /// Enum Json for value: Json
+            ///     Enum Json for value: Json
             /// </summary>
-            [EnumMember(Value = "Json")]
-            Json = 9,
-            
+            [EnumMember(Value = "Json")] Json = 9,
+
             /// <summary>
-            /// Enum JsonArray for value: JsonArray
+            ///     Enum JsonArray for value: JsonArray
             /// </summary>
-            [EnumMember(Value = "JsonArray")]
-            JsonArray = 10,
-            
+            [EnumMember(Value = "JsonArray")] JsonArray = 10,
+
             /// <summary>
-            /// Enum Xml for value: Xml
+            ///     Enum Xml for value: Xml
             /// </summary>
-            [EnumMember(Value = "Xml")]
-            Xml = 11,
-            
+            [EnumMember(Value = "Xml")] Xml = 11,
+
             /// <summary>
-            /// Enum XmlCollection for value: XmlCollection
+            ///     Enum XmlCollection for value: XmlCollection
             /// </summary>
-            [EnumMember(Value = "XmlCollection")]
-            XmlCollection = 12,
-            
+            [EnumMember(Value = "XmlCollection")] XmlCollection = 12,
+
             /// <summary>
-            /// Enum TimeValue for value: TimeValue
+            ///     Enum TimeValue for value: TimeValue
             /// </summary>
-            [EnumMember(Value = "TimeValue")]
-            TimeValue = 13
+            [EnumMember(Value = "TimeValue")] TimeValue = 13
         }
 
         /// <summary>
-        /// Gets or Sets PromptType
-        /// </summary>
-        [DataMember(Name="promptType", EmitDefaultValue=false)]
-        public PromptTypeEnum? PromptType { get; set; }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Prompt" /> class.
+        ///     Initializes a new instance of the <see cref="Prompt" /> class.
         /// </summary>
         /// <param name="allowValuesOnly">allowValuesOnly.</param>
         /// <param name="busObId">busObId.</param>
@@ -136,7 +110,13 @@ namespace CherwellConnector.Model
         /// <param name="text">text.</param>
         /// <param name="value">value.</param>
         /// <param name="values">values.</param>
-        public Prompt(bool? allowValuesOnly = default, string busObId = default, string collectionStoreEntireRow = default, string collectionValueField = default, string constraintXml = default, string contents = default, string _default = default, string fieldId = default, bool? isDateRange = default, ListDisplayOptionEnum? listDisplayOption = default, string listReturnFieldId = default, bool? multiLine = default, string promptId = default, PromptTypeEnum? promptType = default, string promptTypeName = default, bool? required = default, string text = default, Object value = default, List<string> values = default)
+        public Prompt(bool? allowValuesOnly = default, string busObId = default,
+            string collectionStoreEntireRow = default, string collectionValueField = default,
+            string constraintXml = default, string contents = default, string _default = default,
+            string fieldId = default, bool? isDateRange = default, ListDisplayOptionEnum? listDisplayOption = default,
+            string listReturnFieldId = default, bool? multiLine = default, string promptId = default,
+            PromptTypeEnum? promptType = default, string promptTypeName = default, bool? required = default,
+            string text = default, Object value = default, List<string> values = default)
         {
             AllowValuesOnly = allowValuesOnly;
             BusObId = busObId;
@@ -158,113 +138,243 @@ namespace CherwellConnector.Model
             Value = value;
             Values = values;
         }
-        
+
         /// <summary>
-        /// Gets or Sets AllowValuesOnly
+        ///     Gets or Sets ListDisplayOption
         /// </summary>
-        [DataMember(Name="allowValuesOnly", EmitDefaultValue=false)]
+        [DataMember(Name = "listDisplayOption", EmitDefaultValue = false)]
+        public ListDisplayOptionEnum? ListDisplayOption { get; set; }
+
+        /// <summary>
+        ///     Gets or Sets PromptType
+        /// </summary>
+        [DataMember(Name = "promptType", EmitDefaultValue = false)]
+        public PromptTypeEnum? PromptType { get; set; }
+
+        /// <summary>
+        ///     Gets or Sets AllowValuesOnly
+        /// </summary>
+        [DataMember(Name = "allowValuesOnly", EmitDefaultValue = false)]
         public bool? AllowValuesOnly { get; set; }
 
         /// <summary>
-        /// Gets or Sets BusObId
+        ///     Gets or Sets BusObId
         /// </summary>
-        [DataMember(Name="busObId", EmitDefaultValue=false)]
+        [DataMember(Name = "busObId", EmitDefaultValue = false)]
         public string BusObId { get; set; }
 
         /// <summary>
-        /// Gets or Sets CollectionStoreEntireRow
+        ///     Gets or Sets CollectionStoreEntireRow
         /// </summary>
-        [DataMember(Name="collectionStoreEntireRow", EmitDefaultValue=false)]
+        [DataMember(Name = "collectionStoreEntireRow", EmitDefaultValue = false)]
         public string CollectionStoreEntireRow { get; set; }
 
         /// <summary>
-        /// Gets or Sets CollectionValueField
+        ///     Gets or Sets CollectionValueField
         /// </summary>
-        [DataMember(Name="collectionValueField", EmitDefaultValue=false)]
+        [DataMember(Name = "collectionValueField", EmitDefaultValue = false)]
         public string CollectionValueField { get; set; }
 
         /// <summary>
-        /// Gets or Sets ConstraintXml
+        ///     Gets or Sets ConstraintXml
         /// </summary>
-        [DataMember(Name="constraintXml", EmitDefaultValue=false)]
+        [DataMember(Name = "constraintXml", EmitDefaultValue = false)]
         public string ConstraintXml { get; set; }
 
         /// <summary>
-        /// Gets or Sets Contents
+        ///     Gets or Sets Contents
         /// </summary>
-        [DataMember(Name="contents", EmitDefaultValue=false)]
+        [DataMember(Name = "contents", EmitDefaultValue = false)]
         public string Contents { get; set; }
 
         /// <summary>
-        /// Gets or Sets Default
+        ///     Gets or Sets Default
         /// </summary>
-        [DataMember(Name="default", EmitDefaultValue=false)]
+        [DataMember(Name = "default", EmitDefaultValue = false)]
         public string Default { get; set; }
 
         /// <summary>
-        /// Gets or Sets FieldId
+        ///     Gets or Sets FieldId
         /// </summary>
-        [DataMember(Name="fieldId", EmitDefaultValue=false)]
+        [DataMember(Name = "fieldId", EmitDefaultValue = false)]
         public string FieldId { get; set; }
 
         /// <summary>
-        /// Gets or Sets IsDateRange
+        ///     Gets or Sets IsDateRange
         /// </summary>
-        [DataMember(Name="isDateRange", EmitDefaultValue=false)]
+        [DataMember(Name = "isDateRange", EmitDefaultValue = false)]
         public bool? IsDateRange { get; set; }
 
 
         /// <summary>
-        /// Gets or Sets ListReturnFieldId
+        ///     Gets or Sets ListReturnFieldId
         /// </summary>
-        [DataMember(Name="listReturnFieldId", EmitDefaultValue=false)]
+        [DataMember(Name = "listReturnFieldId", EmitDefaultValue = false)]
         public string ListReturnFieldId { get; set; }
 
         /// <summary>
-        /// Gets or Sets MultiLine
+        ///     Gets or Sets MultiLine
         /// </summary>
-        [DataMember(Name="multiLine", EmitDefaultValue=false)]
+        [DataMember(Name = "multiLine", EmitDefaultValue = false)]
         public bool? MultiLine { get; set; }
 
         /// <summary>
-        /// Gets or Sets PromptId
+        ///     Gets or Sets PromptId
         /// </summary>
-        [DataMember(Name="promptId", EmitDefaultValue=false)]
+        [DataMember(Name = "promptId", EmitDefaultValue = false)]
         public string PromptId { get; set; }
 
 
         /// <summary>
-        /// Gets or Sets PromptTypeName
+        ///     Gets or Sets PromptTypeName
         /// </summary>
-        [DataMember(Name="promptTypeName", EmitDefaultValue=false)]
+        [DataMember(Name = "promptTypeName", EmitDefaultValue = false)]
         public string PromptTypeName { get; set; }
 
         /// <summary>
-        /// Gets or Sets Required
+        ///     Gets or Sets Required
         /// </summary>
-        [DataMember(Name="required", EmitDefaultValue=false)]
+        [DataMember(Name = "required", EmitDefaultValue = false)]
         public bool? Required { get; set; }
 
         /// <summary>
-        /// Gets or Sets Text
+        ///     Gets or Sets Text
         /// </summary>
-        [DataMember(Name="text", EmitDefaultValue=false)]
+        [DataMember(Name = "text", EmitDefaultValue = false)]
         public string Text { get; set; }
 
         /// <summary>
-        /// Gets or Sets Value
+        ///     Gets or Sets Value
         /// </summary>
-        [DataMember(Name="value", EmitDefaultValue=false)]
+        [DataMember(Name = "value", EmitDefaultValue = false)]
         public Object Value { get; set; }
 
         /// <summary>
-        /// Gets or Sets Values
+        ///     Gets or Sets Values
         /// </summary>
-        [DataMember(Name="values", EmitDefaultValue=false)]
+        [DataMember(Name = "values", EmitDefaultValue = false)]
         public List<string> Values { get; set; }
 
         /// <summary>
-        /// Returns the string presentation of the object
+        ///     Returns true if Prompt instances are equal
+        /// </summary>
+        /// <param name="input">Instance of Prompt to be compared</param>
+        /// <returns>Boolean</returns>
+        public bool Equals(Prompt input)
+        {
+            if (input == null)
+                return false;
+
+            return
+                (
+                    AllowValuesOnly == input.AllowValuesOnly ||
+                    AllowValuesOnly != null &&
+                    AllowValuesOnly.Equals(input.AllowValuesOnly)
+                ) &&
+                (
+                    BusObId == input.BusObId ||
+                    BusObId != null &&
+                    BusObId.Equals(input.BusObId)
+                ) &&
+                (
+                    CollectionStoreEntireRow == input.CollectionStoreEntireRow ||
+                    CollectionStoreEntireRow != null &&
+                    CollectionStoreEntireRow.Equals(input.CollectionStoreEntireRow)
+                ) &&
+                (
+                    CollectionValueField == input.CollectionValueField ||
+                    CollectionValueField != null &&
+                    CollectionValueField.Equals(input.CollectionValueField)
+                ) &&
+                (
+                    ConstraintXml == input.ConstraintXml ||
+                    ConstraintXml != null &&
+                    ConstraintXml.Equals(input.ConstraintXml)
+                ) &&
+                (
+                    Contents == input.Contents ||
+                    Contents != null &&
+                    Contents.Equals(input.Contents)
+                ) &&
+                (
+                    Default == input.Default ||
+                    Default != null &&
+                    Default.Equals(input.Default)
+                ) &&
+                (
+                    FieldId == input.FieldId ||
+                    FieldId != null &&
+                    FieldId.Equals(input.FieldId)
+                ) &&
+                (
+                    IsDateRange == input.IsDateRange ||
+                    IsDateRange != null &&
+                    IsDateRange.Equals(input.IsDateRange)
+                ) &&
+                (
+                    ListDisplayOption == input.ListDisplayOption ||
+                    ListDisplayOption != null &&
+                    ListDisplayOption.Equals(input.ListDisplayOption)
+                ) &&
+                (
+                    ListReturnFieldId == input.ListReturnFieldId ||
+                    ListReturnFieldId != null &&
+                    ListReturnFieldId.Equals(input.ListReturnFieldId)
+                ) &&
+                (
+                    MultiLine == input.MultiLine ||
+                    MultiLine != null &&
+                    MultiLine.Equals(input.MultiLine)
+                ) &&
+                (
+                    PromptId == input.PromptId ||
+                    PromptId != null &&
+                    PromptId.Equals(input.PromptId)
+                ) &&
+                (
+                    PromptType == input.PromptType ||
+                    PromptType != null &&
+                    PromptType.Equals(input.PromptType)
+                ) &&
+                (
+                    PromptTypeName == input.PromptTypeName ||
+                    PromptTypeName != null &&
+                    PromptTypeName.Equals(input.PromptTypeName)
+                ) &&
+                (
+                    Required == input.Required ||
+                    Required != null &&
+                    Required.Equals(input.Required)
+                ) &&
+                (
+                    Text == input.Text ||
+                    Text != null &&
+                    Text.Equals(input.Text)
+                ) &&
+                (
+                    Value == input.Value ||
+                    Value != null &&
+                    Value.Equals(input.Value)
+                ) &&
+                (
+                    Values == input.Values ||
+                    Values != null &&
+                    Values.SequenceEqual(input.Values)
+                );
+        }
+
+        /// <summary>
+        ///     To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+            yield break;
+        }
+
+        /// <summary>
+        ///     Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
         public override string ToString()
@@ -293,9 +403,9 @@ namespace CherwellConnector.Model
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
-        /// Returns the JSON string presentation of the object
+        ///     Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
         public string ToJson()
@@ -304,7 +414,7 @@ namespace CherwellConnector.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
+        ///     Returns true if objects are equal
         /// </summary>
         /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
@@ -314,115 +424,7 @@ namespace CherwellConnector.Model
         }
 
         /// <summary>
-        /// Returns true if Prompt instances are equal
-        /// </summary>
-        /// <param name="input">Instance of Prompt to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(Prompt input)
-        {
-            if (input == null)
-                return false;
-
-            return 
-                (
-                    AllowValuesOnly == input.AllowValuesOnly ||
-                    (AllowValuesOnly != null &&
-                    AllowValuesOnly.Equals(input.AllowValuesOnly))
-                ) && 
-                (
-                    BusObId == input.BusObId ||
-                    (BusObId != null &&
-                    BusObId.Equals(input.BusObId))
-                ) && 
-                (
-                    CollectionStoreEntireRow == input.CollectionStoreEntireRow ||
-                    (CollectionStoreEntireRow != null &&
-                    CollectionStoreEntireRow.Equals(input.CollectionStoreEntireRow))
-                ) && 
-                (
-                    CollectionValueField == input.CollectionValueField ||
-                    (CollectionValueField != null &&
-                    CollectionValueField.Equals(input.CollectionValueField))
-                ) && 
-                (
-                    ConstraintXml == input.ConstraintXml ||
-                    (ConstraintXml != null &&
-                    ConstraintXml.Equals(input.ConstraintXml))
-                ) && 
-                (
-                    Contents == input.Contents ||
-                    (Contents != null &&
-                    Contents.Equals(input.Contents))
-                ) && 
-                (
-                    Default == input.Default ||
-                    (Default != null &&
-                    Default.Equals(input.Default))
-                ) && 
-                (
-                    FieldId == input.FieldId ||
-                    (FieldId != null &&
-                    FieldId.Equals(input.FieldId))
-                ) && 
-                (
-                    IsDateRange == input.IsDateRange ||
-                    (IsDateRange != null &&
-                    IsDateRange.Equals(input.IsDateRange))
-                ) && 
-                (
-                    ListDisplayOption == input.ListDisplayOption ||
-                    (ListDisplayOption != null &&
-                    ListDisplayOption.Equals(input.ListDisplayOption))
-                ) && 
-                (
-                    ListReturnFieldId == input.ListReturnFieldId ||
-                    (ListReturnFieldId != null &&
-                    ListReturnFieldId.Equals(input.ListReturnFieldId))
-                ) && 
-                (
-                    MultiLine == input.MultiLine ||
-                    (MultiLine != null &&
-                    MultiLine.Equals(input.MultiLine))
-                ) && 
-                (
-                    PromptId == input.PromptId ||
-                    (PromptId != null &&
-                    PromptId.Equals(input.PromptId))
-                ) && 
-                (
-                    PromptType == input.PromptType ||
-                    (PromptType != null &&
-                    PromptType.Equals(input.PromptType))
-                ) && 
-                (
-                    PromptTypeName == input.PromptTypeName ||
-                    (PromptTypeName != null &&
-                    PromptTypeName.Equals(input.PromptTypeName))
-                ) && 
-                (
-                    Required == input.Required ||
-                    (Required != null &&
-                    Required.Equals(input.Required))
-                ) && 
-                (
-                    Text == input.Text ||
-                    (Text != null &&
-                    Text.Equals(input.Text))
-                ) && 
-                (
-                    Value == input.Value ||
-                    (Value != null &&
-                    Value.Equals(input.Value))
-                ) && 
-                (
-                    Values == input.Values ||
-                    Values != null &&
-                    Values.SequenceEqual(input.Values)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
+        ///     Gets the hash code
         /// </summary>
         /// <returns>Hash code</returns>
         public override int GetHashCode()
@@ -470,16 +472,6 @@ namespace CherwellConnector.Model
                     hashCode = hashCode * 59 + Values.GetHashCode();
                 return hashCode;
             }
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-            yield break;
         }
     }
 }

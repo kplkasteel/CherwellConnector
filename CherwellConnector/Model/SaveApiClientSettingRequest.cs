@@ -1,22 +1,20 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Runtime.Serialization;
+using System.Text;
+using Newtonsoft.Json;
 
 namespace CherwellConnector.Model
 {
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.Runtime.Serialization;
-    using System.Text;
-
-    using Newtonsoft.Json;
-
     /// <summary>
-    /// SaveApiClientSettingRequest
+    ///     SaveApiClientSettingRequest
     /// </summary>
     [DataContract]
-    public sealed class SaveApiClientSettingRequest :  IEquatable<SaveApiClientSettingRequest>, IValidatableObject
+    public sealed class SaveApiClientSettingRequest : IEquatable<SaveApiClientSettingRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="SaveApiClientSettingRequest" /> class.
+        ///     Initializes a new instance of the <see cref="SaveApiClientSettingRequest" /> class.
         /// </summary>
         /// <param name="allowAnonymousAccess">allowAnonymousAccess.</param>
         /// <param name="apiAccessIsEnabled">apiAccessIsEnabled.</param>
@@ -27,7 +25,10 @@ namespace CherwellConnector.Model
         /// <param name="refreshTokenLifespanMinutes">refreshTokenLifespanMinutes.</param>
         /// <param name="standInKey">standInKey.</param>
         /// <param name="tokenLifespanMinutes">tokenLifespanMinutes.</param>
-        public SaveApiClientSettingRequest(bool? allowAnonymousAccess = default, bool? apiAccessIsEnabled = default, bool? createNewClientKey = default, string culture = default, string description = default, string name = default, int? refreshTokenLifespanMinutes = default, string standInKey = default, int? tokenLifespanMinutes = default)
+        public SaveApiClientSettingRequest(bool? allowAnonymousAccess = default, bool? apiAccessIsEnabled = default,
+            bool? createNewClientKey = default, string culture = default, string description = default,
+            string name = default, int? refreshTokenLifespanMinutes = default, string standInKey = default,
+            int? tokenLifespanMinutes = default)
         {
             AllowAnonymousAccess = allowAnonymousAccess;
             ApiAccessIsEnabled = apiAccessIsEnabled;
@@ -39,63 +40,131 @@ namespace CherwellConnector.Model
             StandInKey = standInKey;
             TokenLifespanMinutes = tokenLifespanMinutes;
         }
-        
+
         /// <summary>
-        /// Gets or Sets AllowAnonymousAccess
+        ///     Gets or Sets AllowAnonymousAccess
         /// </summary>
-        [DataMember(Name="allowAnonymousAccess", EmitDefaultValue=false)]
+        [DataMember(Name = "allowAnonymousAccess", EmitDefaultValue = false)]
         public bool? AllowAnonymousAccess { get; set; }
 
         /// <summary>
-        /// Gets or Sets ApiAccessIsEnabled
+        ///     Gets or Sets ApiAccessIsEnabled
         /// </summary>
-        [DataMember(Name="apiAccessIsEnabled", EmitDefaultValue=false)]
+        [DataMember(Name = "apiAccessIsEnabled", EmitDefaultValue = false)]
         public bool? ApiAccessIsEnabled { get; set; }
 
         /// <summary>
-        /// Gets or Sets CreateNewClientKey
+        ///     Gets or Sets CreateNewClientKey
         /// </summary>
-        [DataMember(Name="createNewClientKey", EmitDefaultValue=false)]
+        [DataMember(Name = "createNewClientKey", EmitDefaultValue = false)]
         public bool? CreateNewClientKey { get; set; }
 
         /// <summary>
-        /// Gets or Sets Culture
+        ///     Gets or Sets Culture
         /// </summary>
-        [DataMember(Name="culture", EmitDefaultValue=false)]
+        [DataMember(Name = "culture", EmitDefaultValue = false)]
         public string Culture { get; set; }
 
         /// <summary>
-        /// Gets or Sets Description
+        ///     Gets or Sets Description
         /// </summary>
-        [DataMember(Name="description", EmitDefaultValue=false)]
+        [DataMember(Name = "description", EmitDefaultValue = false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// Gets or Sets Name
+        ///     Gets or Sets Name
         /// </summary>
-        [DataMember(Name="name", EmitDefaultValue=false)]
+        [DataMember(Name = "name", EmitDefaultValue = false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or Sets RefreshTokenLifespanMinutes
+        ///     Gets or Sets RefreshTokenLifespanMinutes
         /// </summary>
-        [DataMember(Name="refreshTokenLifespanMinutes", EmitDefaultValue=false)]
+        [DataMember(Name = "refreshTokenLifespanMinutes", EmitDefaultValue = false)]
         public int? RefreshTokenLifespanMinutes { get; set; }
 
         /// <summary>
-        /// Gets or Sets StandInKey
+        ///     Gets or Sets StandInKey
         /// </summary>
-        [DataMember(Name="standInKey", EmitDefaultValue=false)]
+        [DataMember(Name = "standInKey", EmitDefaultValue = false)]
         public string StandInKey { get; set; }
 
         /// <summary>
-        /// Gets or Sets TokenLifespanMinutes
+        ///     Gets or Sets TokenLifespanMinutes
         /// </summary>
-        [DataMember(Name="tokenLifespanMinutes", EmitDefaultValue=false)]
+        [DataMember(Name = "tokenLifespanMinutes", EmitDefaultValue = false)]
         public int? TokenLifespanMinutes { get; set; }
 
         /// <summary>
-        /// Returns the string presentation of the object
+        ///     Returns true if SaveApiClientSettingRequest instances are equal
+        /// </summary>
+        /// <param name="input">Instance of SaveApiClientSettingRequest to be compared</param>
+        /// <returns>Boolean</returns>
+        public bool Equals(SaveApiClientSettingRequest input)
+        {
+            if (input == null)
+                return false;
+
+            return
+                (
+                    AllowAnonymousAccess == input.AllowAnonymousAccess ||
+                    AllowAnonymousAccess != null &&
+                    AllowAnonymousAccess.Equals(input.AllowAnonymousAccess)
+                ) &&
+                (
+                    ApiAccessIsEnabled == input.ApiAccessIsEnabled ||
+                    ApiAccessIsEnabled != null &&
+                    ApiAccessIsEnabled.Equals(input.ApiAccessIsEnabled)
+                ) &&
+                (
+                    CreateNewClientKey == input.CreateNewClientKey ||
+                    CreateNewClientKey != null &&
+                    CreateNewClientKey.Equals(input.CreateNewClientKey)
+                ) &&
+                (
+                    Culture == input.Culture ||
+                    Culture != null &&
+                    Culture.Equals(input.Culture)
+                ) &&
+                (
+                    Description == input.Description ||
+                    Description != null &&
+                    Description.Equals(input.Description)
+                ) &&
+                (
+                    Name == input.Name ||
+                    Name != null &&
+                    Name.Equals(input.Name)
+                ) &&
+                (
+                    RefreshTokenLifespanMinutes == input.RefreshTokenLifespanMinutes ||
+                    RefreshTokenLifespanMinutes != null &&
+                    RefreshTokenLifespanMinutes.Equals(input.RefreshTokenLifespanMinutes)
+                ) &&
+                (
+                    StandInKey == input.StandInKey ||
+                    StandInKey != null &&
+                    StandInKey.Equals(input.StandInKey)
+                ) &&
+                (
+                    TokenLifespanMinutes == input.TokenLifespanMinutes ||
+                    TokenLifespanMinutes != null &&
+                    TokenLifespanMinutes.Equals(input.TokenLifespanMinutes)
+                );
+        }
+
+        /// <summary>
+        ///     To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+            yield break;
+        }
+
+        /// <summary>
+        ///     Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
         public override string ToString()
@@ -114,18 +183,18 @@ namespace CherwellConnector.Model
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
-        /// Returns the JSON string presentation of the object
+        ///     Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public  string ToJson()
+        public string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }
 
         /// <summary>
-        /// Returns true if objects are equal
+        ///     Returns true if objects are equal
         /// </summary>
         /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
@@ -135,65 +204,7 @@ namespace CherwellConnector.Model
         }
 
         /// <summary>
-        /// Returns true if SaveApiClientSettingRequest instances are equal
-        /// </summary>
-        /// <param name="input">Instance of SaveApiClientSettingRequest to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(SaveApiClientSettingRequest input)
-        {
-            if (input == null)
-                return false;
-
-            return 
-                (
-                    AllowAnonymousAccess == input.AllowAnonymousAccess ||
-                    (AllowAnonymousAccess != null &&
-                    AllowAnonymousAccess.Equals(input.AllowAnonymousAccess))
-                ) && 
-                (
-                    ApiAccessIsEnabled == input.ApiAccessIsEnabled ||
-                    (ApiAccessIsEnabled != null &&
-                    ApiAccessIsEnabled.Equals(input.ApiAccessIsEnabled))
-                ) && 
-                (
-                    CreateNewClientKey == input.CreateNewClientKey ||
-                    (CreateNewClientKey != null &&
-                    CreateNewClientKey.Equals(input.CreateNewClientKey))
-                ) && 
-                (
-                    Culture == input.Culture ||
-                    (Culture != null &&
-                    Culture.Equals(input.Culture))
-                ) && 
-                (
-                    Description == input.Description ||
-                    (Description != null &&
-                    Description.Equals(input.Description))
-                ) && 
-                (
-                    Name == input.Name ||
-                    (Name != null &&
-                    Name.Equals(input.Name))
-                ) && 
-                (
-                    RefreshTokenLifespanMinutes == input.RefreshTokenLifespanMinutes ||
-                    (RefreshTokenLifespanMinutes != null &&
-                    RefreshTokenLifespanMinutes.Equals(input.RefreshTokenLifespanMinutes))
-                ) && 
-                (
-                    StandInKey == input.StandInKey ||
-                    (StandInKey != null &&
-                    StandInKey.Equals(input.StandInKey))
-                ) && 
-                (
-                    TokenLifespanMinutes == input.TokenLifespanMinutes ||
-                    (TokenLifespanMinutes != null &&
-                    TokenLifespanMinutes.Equals(input.TokenLifespanMinutes))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
+        ///     Gets the hash code
         /// </summary>
         /// <returns>Hash code</returns>
         public override int GetHashCode()
@@ -222,16 +233,5 @@ namespace CherwellConnector.Model
                 return hashCode;
             }
         }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-            yield break;
-        }
     }
-
 }

@@ -1,23 +1,21 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Runtime.Serialization;
+using System.Text;
+using Newtonsoft.Json;
 
 namespace CherwellConnector.Model
 {
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.Linq;
-    using System.Runtime.Serialization;
-    using System.Text;
-
-    using Newtonsoft.Json;
-
     /// <summary>
-    /// Relationship
+    ///     Relationship
     /// </summary>
     [DataContract]
-    public sealed class Relationship :  IEquatable<Relationship>, IValidatableObject
+    public sealed class Relationship : IEquatable<Relationship>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="Relationship" /> class.
+        ///     Initializes a new instance of the <see cref="Relationship" /> class.
         /// </summary>
         /// <param name="cardinality">cardinality.</param>
         /// <param name="description">description.</param>
@@ -25,7 +23,8 @@ namespace CherwellConnector.Model
         /// <param name="fieldDefinitions">fieldDefinitions.</param>
         /// <param name="relationshipId">relationshipId.</param>
         /// <param name="target">target.</param>
-        public Relationship(string cardinality = default, string description = default, string displayName = default, List<FieldDefinition> fieldDefinitions = default, string relationshipId = default, string target = default)
+        public Relationship(string cardinality = default, string description = default, string displayName = default,
+            List<FieldDefinition> fieldDefinitions = default, string relationshipId = default, string target = default)
         {
             Cardinality = cardinality;
             Description = description;
@@ -34,45 +33,98 @@ namespace CherwellConnector.Model
             RelationshipId = relationshipId;
             Target = target;
         }
-        
+
         /// <summary>
-        /// Gets or Sets Cardinality
+        ///     Gets or Sets Cardinality
         /// </summary>
-        [DataMember(Name="cardinality", EmitDefaultValue=false)]
+        [DataMember(Name = "cardinality", EmitDefaultValue = false)]
         public string Cardinality { get; set; }
 
         /// <summary>
-        /// Gets or Sets Description
+        ///     Gets or Sets Description
         /// </summary>
-        [DataMember(Name="description", EmitDefaultValue=false)]
+        [DataMember(Name = "description", EmitDefaultValue = false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// Gets or Sets DisplayName
+        ///     Gets or Sets DisplayName
         /// </summary>
-        [DataMember(Name="displayName", EmitDefaultValue=false)]
+        [DataMember(Name = "displayName", EmitDefaultValue = false)]
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// Gets or Sets FieldDefinitions
+        ///     Gets or Sets FieldDefinitions
         /// </summary>
-        [DataMember(Name="fieldDefinitions", EmitDefaultValue=false)]
+        [DataMember(Name = "fieldDefinitions", EmitDefaultValue = false)]
         public List<FieldDefinition> FieldDefinitions { get; set; }
 
         /// <summary>
-        /// Gets or Sets RelationshipId
+        ///     Gets or Sets RelationshipId
         /// </summary>
-        [DataMember(Name="relationshipId", EmitDefaultValue=false)]
+        [DataMember(Name = "relationshipId", EmitDefaultValue = false)]
         public string RelationshipId { get; set; }
 
         /// <summary>
-        /// Gets or Sets Target
+        ///     Gets or Sets Target
         /// </summary>
-        [DataMember(Name="target", EmitDefaultValue=false)]
+        [DataMember(Name = "target", EmitDefaultValue = false)]
         public string Target { get; set; }
 
         /// <summary>
-        /// Returns the string presentation of the object
+        ///     Returns true if Relationship instances are equal
+        /// </summary>
+        /// <param name="input">Instance of Relationship to be compared</param>
+        /// <returns>Boolean</returns>
+        public bool Equals(Relationship input)
+        {
+            if (input == null)
+                return false;
+
+            return
+                (
+                    Cardinality == input.Cardinality ||
+                    Cardinality != null &&
+                    Cardinality.Equals(input.Cardinality)
+                ) &&
+                (
+                    Description == input.Description ||
+                    Description != null &&
+                    Description.Equals(input.Description)
+                ) &&
+                (
+                    DisplayName == input.DisplayName ||
+                    DisplayName != null &&
+                    DisplayName.Equals(input.DisplayName)
+                ) &&
+                (
+                    FieldDefinitions == input.FieldDefinitions ||
+                    FieldDefinitions != null &&
+                    FieldDefinitions.SequenceEqual(input.FieldDefinitions)
+                ) &&
+                (
+                    RelationshipId == input.RelationshipId ||
+                    RelationshipId != null &&
+                    RelationshipId.Equals(input.RelationshipId)
+                ) &&
+                (
+                    Target == input.Target ||
+                    Target != null &&
+                    Target.Equals(input.Target)
+                );
+        }
+
+        /// <summary>
+        ///     To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+            yield break;
+        }
+
+        /// <summary>
+        ///     Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
         public override string ToString()
@@ -88,9 +140,9 @@ namespace CherwellConnector.Model
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
-        /// Returns the JSON string presentation of the object
+        ///     Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
         public string ToJson()
@@ -99,7 +151,7 @@ namespace CherwellConnector.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
+        ///     Returns true if objects are equal
         /// </summary>
         /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
@@ -109,53 +161,9 @@ namespace CherwellConnector.Model
         }
 
         /// <summary>
-        /// Returns true if Relationship instances are equal
-        /// </summary>
-        /// <param name="input">Instance of Relationship to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(Relationship input)
-        {
-            if (input == null)
-                return false;
-
-            return 
-                (
-                    Cardinality == input.Cardinality ||
-                    (Cardinality != null &&
-                    Cardinality.Equals(input.Cardinality))
-                ) && 
-                (
-                    Description == input.Description ||
-                    (Description != null &&
-                    Description.Equals(input.Description))
-                ) && 
-                (
-                    DisplayName == input.DisplayName ||
-                    (DisplayName != null &&
-                    DisplayName.Equals(input.DisplayName))
-                ) && 
-                (
-                    FieldDefinitions == input.FieldDefinitions ||
-                    FieldDefinitions != null &&
-                    FieldDefinitions.SequenceEqual(input.FieldDefinitions)
-                ) && 
-                (
-                    RelationshipId == input.RelationshipId ||
-                    (RelationshipId != null &&
-                    RelationshipId.Equals(input.RelationshipId))
-                ) && 
-                (
-                    Target == input.Target ||
-                    (Target != null &&
-                    Target.Equals(input.Target))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
+        ///     Gets the hash code
         /// </summary>
         /// <returns>Hash code</returns>
-        
         public override int GetHashCode()
         {
             unchecked // Overflow is fine, just wrap
@@ -176,16 +184,5 @@ namespace CherwellConnector.Model
                 return hashCode;
             }
         }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-            yield break;
-        }
     }
-
 }

@@ -1,36 +1,21 @@
-
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Runtime.Serialization;
+using System.Text;
 using CherwellConnector.Enum;
+using Newtonsoft.Json;
 
 namespace CherwellConnector.Model
 {
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.Runtime.Serialization;
-    using System.Text;
-
-    using Newtonsoft.Json;
-
     /// <summary>
-    /// StoredValueResponse
+    ///     StoredValueResponse
     /// </summary>
     [DataContract]
-    public sealed class StoredValueResponse :  IEquatable<StoredValueResponse>, IValidatableObject
+    public sealed class StoredValueResponse : IEquatable<StoredValueResponse>, IValidatableObject
     {
-        
         /// <summary>
-        /// Gets or Sets StoredValueType
-        /// </summary>
-        [DataMember(Name="storedValueType", EmitDefaultValue=false)]
-        public StoredValueTypeEnum? StoredValueType { get; set; }
-        
-        /// <summary>
-        /// Gets or Sets HttpStatusCode
-        /// </summary>
-        [DataMember(Name="httpStatusCode", EmitDefaultValue=false)]
-        public HttpStatusCodeEnum? HttpStatusCode { get; set; }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="StoredValueResponse" /> class.
+        ///     Initializes a new instance of the <see cref="StoredValueResponse" /> class.
         /// </summary>
         /// <param name="description">description.</param>
         /// <param name="folder">folder.</param>
@@ -45,7 +30,10 @@ namespace CherwellConnector.Model
         /// <param name="errorMessage">errorMessage.</param>
         /// <param name="hasError">hasError.</param>
         /// <param name="httpStatusCode">httpStatusCode.</param>
-        public StoredValueResponse(string description = default, string folder = default, string id = default, string name = default, string scope = default, string scopeOwner = default, string standInKey = default, StoredValueTypeEnum? storedValueType = default, string value = default, string errorCode = default, string errorMessage = default, bool? hasError = default, HttpStatusCodeEnum? httpStatusCode = default)
+        public StoredValueResponse(string description = default, string folder = default, string id = default,
+            string name = default, string scope = default, string scopeOwner = default, string standInKey = default,
+            StoredValueTypeEnum? storedValueType = default, string value = default, string errorCode = default,
+            string errorMessage = default, bool? hasError = default, HttpStatusCodeEnum? httpStatusCode = default)
         {
             Description = description;
             Folder = folder;
@@ -61,77 +49,177 @@ namespace CherwellConnector.Model
             HasError = hasError;
             HttpStatusCode = httpStatusCode;
         }
-        
+
         /// <summary>
-        /// Gets or Sets Description
+        ///     Gets or Sets StoredValueType
         /// </summary>
-        [DataMember(Name="description", EmitDefaultValue=false)]
+        [DataMember(Name = "storedValueType", EmitDefaultValue = false)]
+        public StoredValueTypeEnum? StoredValueType { get; set; }
+
+        /// <summary>
+        ///     Gets or Sets HttpStatusCode
+        /// </summary>
+        [DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
+        public HttpStatusCodeEnum? HttpStatusCode { get; set; }
+
+        /// <summary>
+        ///     Gets or Sets Description
+        /// </summary>
+        [DataMember(Name = "description", EmitDefaultValue = false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// Gets or Sets Folder
+        ///     Gets or Sets Folder
         /// </summary>
-        [DataMember(Name="folder", EmitDefaultValue=false)]
+        [DataMember(Name = "folder", EmitDefaultValue = false)]
         public string Folder { get; set; }
 
         /// <summary>
-        /// Gets or Sets Id
+        ///     Gets or Sets Id
         /// </summary>
-        [DataMember(Name="id", EmitDefaultValue=false)]
+        [DataMember(Name = "id", EmitDefaultValue = false)]
         public string Id { get; set; }
 
         /// <summary>
-        /// Gets or Sets Name
+        ///     Gets or Sets Name
         /// </summary>
-        [DataMember(Name="name", EmitDefaultValue=false)]
+        [DataMember(Name = "name", EmitDefaultValue = false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or Sets Scope
+        ///     Gets or Sets Scope
         /// </summary>
-        [DataMember(Name="scope", EmitDefaultValue=false)]
+        [DataMember(Name = "scope", EmitDefaultValue = false)]
         public string Scope { get; set; }
 
         /// <summary>
-        /// Gets or Sets ScopeOwner
+        ///     Gets or Sets ScopeOwner
         /// </summary>
-        [DataMember(Name="scopeOwner", EmitDefaultValue=false)]
+        [DataMember(Name = "scopeOwner", EmitDefaultValue = false)]
         public string ScopeOwner { get; set; }
 
         /// <summary>
-        /// Gets or Sets StandInKey
+        ///     Gets or Sets StandInKey
         /// </summary>
-        [DataMember(Name="standInKey", EmitDefaultValue=false)]
+        [DataMember(Name = "standInKey", EmitDefaultValue = false)]
         public string StandInKey { get; set; }
 
 
         /// <summary>
-        /// Gets or Sets Value
+        ///     Gets or Sets Value
         /// </summary>
-        [DataMember(Name="value", EmitDefaultValue=false)]
+        [DataMember(Name = "value", EmitDefaultValue = false)]
         public string Value { get; set; }
 
         /// <summary>
-        /// Gets or Sets ErrorCode
+        ///     Gets or Sets ErrorCode
         /// </summary>
-        [DataMember(Name="errorCode", EmitDefaultValue=false)]
+        [DataMember(Name = "errorCode", EmitDefaultValue = false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// Gets or Sets ErrorMessage
+        ///     Gets or Sets ErrorMessage
         /// </summary>
-        [DataMember(Name="errorMessage", EmitDefaultValue=false)]
+        [DataMember(Name = "errorMessage", EmitDefaultValue = false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// Gets or Sets HasError
+        ///     Gets or Sets HasError
         /// </summary>
-        [DataMember(Name="hasError", EmitDefaultValue=false)]
+        [DataMember(Name = "hasError", EmitDefaultValue = false)]
         public bool? HasError { get; set; }
+
+        /// <summary>
+        ///     Returns true if StoredValueResponse instances are equal
+        /// </summary>
+        /// <param name="input">Instance of StoredValueResponse to be compared</param>
+        /// <returns>Boolean</returns>
+        public bool Equals(StoredValueResponse input)
+        {
+            if (input == null)
+                return false;
+
+            return
+                (
+                    Description == input.Description ||
+                    Description != null &&
+                    Description.Equals(input.Description)
+                ) &&
+                (
+                    Folder == input.Folder ||
+                    Folder != null &&
+                    Folder.Equals(input.Folder)
+                ) &&
+                (
+                    Id == input.Id ||
+                    Id != null &&
+                    Id.Equals(input.Id)
+                ) &&
+                (
+                    Name == input.Name ||
+                    Name != null &&
+                    Name.Equals(input.Name)
+                ) &&
+                (
+                    Scope == input.Scope ||
+                    Scope != null &&
+                    Scope.Equals(input.Scope)
+                ) &&
+                (
+                    ScopeOwner == input.ScopeOwner ||
+                    ScopeOwner != null &&
+                    ScopeOwner.Equals(input.ScopeOwner)
+                ) &&
+                (
+                    StandInKey == input.StandInKey ||
+                    StandInKey != null &&
+                    StandInKey.Equals(input.StandInKey)
+                ) &&
+                (
+                    StoredValueType == input.StoredValueType ||
+                    StoredValueType != null &&
+                    StoredValueType.Equals(input.StoredValueType)
+                ) &&
+                (
+                    Value == input.Value ||
+                    Value != null &&
+                    Value.Equals(input.Value)
+                ) &&
+                (
+                    ErrorCode == input.ErrorCode ||
+                    ErrorCode != null &&
+                    ErrorCode.Equals(input.ErrorCode)
+                ) &&
+                (
+                    ErrorMessage == input.ErrorMessage ||
+                    ErrorMessage != null &&
+                    ErrorMessage.Equals(input.ErrorMessage)
+                ) &&
+                (
+                    HasError == input.HasError ||
+                    HasError != null &&
+                    HasError.Equals(input.HasError)
+                ) &&
+                (
+                    HttpStatusCode == input.HttpStatusCode ||
+                    HttpStatusCode != null &&
+                    HttpStatusCode.Equals(input.HttpStatusCode)
+                );
+        }
+
+        /// <summary>
+        ///     To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+            yield break;
+        }
 
 
         /// <summary>
-        /// Returns the string presentation of the object
+        ///     Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
         public override string ToString()
@@ -154,18 +242,18 @@ namespace CherwellConnector.Model
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
-        /// Returns the JSON string presentation of the object
+        ///     Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public  string ToJson()
+        public string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }
 
         /// <summary>
-        /// Returns true if objects are equal
+        ///     Returns true if objects are equal
         /// </summary>
         /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
@@ -175,85 +263,7 @@ namespace CherwellConnector.Model
         }
 
         /// <summary>
-        /// Returns true if StoredValueResponse instances are equal
-        /// </summary>
-        /// <param name="input">Instance of StoredValueResponse to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(StoredValueResponse input)
-        {
-            if (input == null)
-                return false;
-
-            return 
-                (
-                    Description == input.Description ||
-                    (Description != null &&
-                    Description.Equals(input.Description))
-                ) && 
-                (
-                    Folder == input.Folder ||
-                    (Folder != null &&
-                    Folder.Equals(input.Folder))
-                ) && 
-                (
-                    Id == input.Id ||
-                    (Id != null &&
-                    Id.Equals(input.Id))
-                ) && 
-                (
-                    Name == input.Name ||
-                    (Name != null &&
-                    Name.Equals(input.Name))
-                ) && 
-                (
-                    Scope == input.Scope ||
-                    (Scope != null &&
-                    Scope.Equals(input.Scope))
-                ) && 
-                (
-                    ScopeOwner == input.ScopeOwner ||
-                    (ScopeOwner != null &&
-                    ScopeOwner.Equals(input.ScopeOwner))
-                ) && 
-                (
-                    StandInKey == input.StandInKey ||
-                    (StandInKey != null &&
-                    StandInKey.Equals(input.StandInKey))
-                ) && 
-                (
-                    StoredValueType == input.StoredValueType ||
-                    (StoredValueType != null &&
-                    StoredValueType.Equals(input.StoredValueType))
-                ) && 
-                (
-                    Value == input.Value ||
-                    (Value != null &&
-                    Value.Equals(input.Value))
-                ) && 
-                (
-                    ErrorCode == input.ErrorCode ||
-                    (ErrorCode != null &&
-                    ErrorCode.Equals(input.ErrorCode))
-                ) && 
-                (
-                    ErrorMessage == input.ErrorMessage ||
-                    (ErrorMessage != null &&
-                    ErrorMessage.Equals(input.ErrorMessage))
-                ) && 
-                (
-                    HasError == input.HasError ||
-                    (HasError != null &&
-                    HasError.Equals(input.HasError))
-                ) && 
-                (
-                    HttpStatusCode == input.HttpStatusCode ||
-                    (HttpStatusCode != null &&
-                    HttpStatusCode.Equals(input.HttpStatusCode))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
+        ///     Gets the hash code
         /// </summary>
         /// <returns>Hash code</returns>
         public override int GetHashCode()
@@ -290,16 +300,5 @@ namespace CherwellConnector.Model
                 return hashCode;
             }
         }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-            yield break;
-        }
     }
-
 }

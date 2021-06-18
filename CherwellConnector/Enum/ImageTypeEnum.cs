@@ -5,28 +5,24 @@ using Newtonsoft.Json.Converters;
 namespace CherwellConnector.Enum
 {
     /// <summary>
-    /// Defines ImageType
+    ///     Defines ImageType
     /// </summary>
     [JsonConverter(typeof(StringEnumConverter))]
     public enum ImageTypeEnum
     {
-            
         /// <summary>
-        /// Enum Imported for value: Imported
+        ///     Enum Imported for value: Imported
         /// </summary>
-        [EnumMember(Value = "Imported")]
-        Imported = 1,
-            
+        [EnumMember(Value = "Imported")] Imported = 1,
+
         /// <summary>
-        /// Enum File for value: File
+        ///     Enum File for value: File
         /// </summary>
-        [EnumMember(Value = "File")]
-        File = 2,
-            
+        [EnumMember(Value = "File")] File = 2,
+
         /// <summary>
-        /// Enum Url for value: Url
+        ///     Enum Url for value: Url
         /// </summary>
-        [EnumMember(Value = "Url")]
-        Url = 3
+        [EnumMember(Value = "Url")] Url = 3
     }
 }

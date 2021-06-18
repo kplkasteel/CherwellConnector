@@ -1,45 +1,77 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Runtime.Serialization;
+using System.Text;
+using Newtonsoft.Json;
 
 namespace CherwellConnector.Model
 {
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.Runtime.Serialization;
-    using System.Text;
-
-    using Newtonsoft.Json;
-
     /// <summary>
-    /// CloneSecurityGroupRequest
+    ///     CloneSecurityGroupRequest
     /// </summary>
     [DataContract]
-    public sealed class CloneSecurityGroupRequest :  IEquatable<CloneSecurityGroupRequest>, IValidatableObject
+    public sealed class CloneSecurityGroupRequest : IEquatable<CloneSecurityGroupRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="CloneSecurityGroupRequest" /> class.
+        ///     Initializes a new instance of the <see cref="CloneSecurityGroupRequest" /> class.
         /// </summary>
         /// <param name="securityGroupName">securityGroupName.</param>
         /// <param name="sourceSecurityGroupNameOrId">sourceSecurityGroupNameOrId.</param>
-        public CloneSecurityGroupRequest(string securityGroupName = default, string sourceSecurityGroupNameOrId = default)
+        public CloneSecurityGroupRequest(string securityGroupName = default,
+            string sourceSecurityGroupNameOrId = default)
         {
             SecurityGroupName = securityGroupName;
             SourceSecurityGroupNameOrId = sourceSecurityGroupNameOrId;
         }
-        
+
         /// <summary>
-        /// Gets or Sets SecurityGroupName
+        ///     Gets or Sets SecurityGroupName
         /// </summary>
-        [DataMember(Name="securityGroupName", EmitDefaultValue=false)]
+        [DataMember(Name = "securityGroupName", EmitDefaultValue = false)]
         public string SecurityGroupName { get; set; }
 
         /// <summary>
-        /// Gets or Sets SourceSecurityGroupNameOrId
+        ///     Gets or Sets SourceSecurityGroupNameOrId
         /// </summary>
-        [DataMember(Name="sourceSecurityGroupNameOrId", EmitDefaultValue=false)]
+        [DataMember(Name = "sourceSecurityGroupNameOrId", EmitDefaultValue = false)]
         public string SourceSecurityGroupNameOrId { get; set; }
 
         /// <summary>
-        /// Returns the string presentation of the object
+        ///     Returns true if CloneSecurityGroupRequest instances are equal
+        /// </summary>
+        /// <param name="input">Instance of CloneSecurityGroupRequest to be compared</param>
+        /// <returns>Boolean</returns>
+        public bool Equals(CloneSecurityGroupRequest input)
+        {
+            if (input == null)
+                return false;
+
+            return
+                (
+                    SecurityGroupName == input.SecurityGroupName ||
+                    SecurityGroupName != null &&
+                    SecurityGroupName.Equals(input.SecurityGroupName)
+                ) &&
+                (
+                    SourceSecurityGroupNameOrId == input.SourceSecurityGroupNameOrId ||
+                    SourceSecurityGroupNameOrId != null &&
+                    SourceSecurityGroupNameOrId.Equals(input.SourceSecurityGroupNameOrId)
+                );
+        }
+
+        /// <summary>
+        ///     To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+            yield break;
+        }
+
+        /// <summary>
+        ///     Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
         public override string ToString()
@@ -51,18 +83,18 @@ namespace CherwellConnector.Model
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
-        /// Returns the JSON string presentation of the object
+        ///     Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public  string ToJson()
+        public string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }
 
         /// <summary>
-        /// Returns true if objects are equal
+        ///     Returns true if objects are equal
         /// </summary>
         /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
@@ -72,30 +104,7 @@ namespace CherwellConnector.Model
         }
 
         /// <summary>
-        /// Returns true if CloneSecurityGroupRequest instances are equal
-        /// </summary>
-        /// <param name="input">Instance of CloneSecurityGroupRequest to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(CloneSecurityGroupRequest input)
-        {
-            if (input == null)
-                return false;
-
-            return 
-                (
-                    SecurityGroupName == input.SecurityGroupName ||
-                    (SecurityGroupName != null &&
-                    SecurityGroupName.Equals(input.SecurityGroupName))
-                ) && 
-                (
-                    SourceSecurityGroupNameOrId == input.SourceSecurityGroupNameOrId ||
-                    (SourceSecurityGroupNameOrId != null &&
-                    SourceSecurityGroupNameOrId.Equals(input.SourceSecurityGroupNameOrId))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
+        ///     Gets the hash code
         /// </summary>
         /// <returns>Hash code</returns>
         public override int GetHashCode()
@@ -110,16 +119,5 @@ namespace CherwellConnector.Model
                 return hashCode;
             }
         }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-            yield break;
-        }
     }
-
 }

@@ -1,22 +1,20 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Runtime.Serialization;
+using System.Text;
+using Newtonsoft.Json;
 
 namespace CherwellConnector.Model
 {
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.Runtime.Serialization;
-    using System.Text;
-
-    using Newtonsoft.Json;
-
     /// <summary>
-    /// SearchesField
+    ///     SearchesField
     /// </summary>
     [DataContract]
-    public sealed class SearchesField :  IEquatable<SearchesField>, IValidatableObject
+    public sealed class SearchesField : IEquatable<SearchesField>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="SearchesField" /> class.
+        ///     Initializes a new instance of the <see cref="SearchesField" /> class.
         /// </summary>
         /// <param name="caption">caption.</param>
         /// <param name="currencyCulture">currencyCulture.</param>
@@ -41,7 +39,14 @@ namespace CherwellConnector.Model
         /// <param name="sortOrder">sortOrder.</param>
         /// <param name="storageName">storageName.</param>
         /// <param name="wholeDigits">wholeDigits.</param>
-        public SearchesField(string caption = default, string currencyCulture = default, string currencySymbol = default, int? decimalDigits = default, bool? defaultSortOrderAscending = default, string displayName = default, string fieldName = default, string fullFieldId = default, bool? hasDefaultSortField = default, string fieldId = default, bool? isBinary = default, bool? isCurrency = default, bool? isDateTime = default, bool? isFilterAllowed = default, bool? isLogical = default, bool? isNumber = default, bool? isShortDate = default, bool? isShortTime = default, bool? isVisible = default, bool? sortable = default, string sortOrder = default, string storageName = default, int? wholeDigits = default)
+        public SearchesField(string caption = default, string currencyCulture = default,
+            string currencySymbol = default, int? decimalDigits = default, bool? defaultSortOrderAscending = default,
+            string displayName = default, string fieldName = default, string fullFieldId = default,
+            bool? hasDefaultSortField = default, string fieldId = default, bool? isBinary = default,
+            bool? isCurrency = default, bool? isDateTime = default, bool? isFilterAllowed = default,
+            bool? isLogical = default, bool? isNumber = default, bool? isShortDate = default,
+            bool? isShortTime = default, bool? isVisible = default, bool? sortable = default,
+            string sortOrder = default, string storageName = default, int? wholeDigits = default)
         {
             Caption = caption;
             CurrencyCulture = currencyCulture;
@@ -67,147 +72,285 @@ namespace CherwellConnector.Model
             StorageName = storageName;
             WholeDigits = wholeDigits;
         }
-        
+
         /// <summary>
-        /// Gets or Sets Caption
+        ///     Gets or Sets Caption
         /// </summary>
-        [DataMember(Name="caption", EmitDefaultValue=false)]
+        [DataMember(Name = "caption", EmitDefaultValue = false)]
         public string Caption { get; set; }
 
         /// <summary>
-        /// Gets or Sets CurrencyCulture
+        ///     Gets or Sets CurrencyCulture
         /// </summary>
-        [DataMember(Name="currencyCulture", EmitDefaultValue=false)]
+        [DataMember(Name = "currencyCulture", EmitDefaultValue = false)]
         public string CurrencyCulture { get; set; }
 
         /// <summary>
-        /// Gets or Sets CurrencySymbol
+        ///     Gets or Sets CurrencySymbol
         /// </summary>
-        [DataMember(Name="currencySymbol", EmitDefaultValue=false)]
+        [DataMember(Name = "currencySymbol", EmitDefaultValue = false)]
         public string CurrencySymbol { get; set; }
 
         /// <summary>
-        /// Gets or Sets DecimalDigits
+        ///     Gets or Sets DecimalDigits
         /// </summary>
-        [DataMember(Name="decimalDigits", EmitDefaultValue=false)]
+        [DataMember(Name = "decimalDigits", EmitDefaultValue = false)]
         public int? DecimalDigits { get; set; }
 
         /// <summary>
-        /// Gets or Sets DefaultSortOrderAscending
+        ///     Gets or Sets DefaultSortOrderAscending
         /// </summary>
-        [DataMember(Name="defaultSortOrderAscending", EmitDefaultValue=false)]
+        [DataMember(Name = "defaultSortOrderAscending", EmitDefaultValue = false)]
         public bool? DefaultSortOrderAscending { get; set; }
 
         /// <summary>
-        /// Gets or Sets DisplayName
+        ///     Gets or Sets DisplayName
         /// </summary>
-        [DataMember(Name="displayName", EmitDefaultValue=false)]
+        [DataMember(Name = "displayName", EmitDefaultValue = false)]
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// Gets or Sets FieldName
+        ///     Gets or Sets FieldName
         /// </summary>
-        [DataMember(Name="fieldName", EmitDefaultValue=false)]
+        [DataMember(Name = "fieldName", EmitDefaultValue = false)]
         public string FieldName { get; set; }
 
         /// <summary>
-        /// Gets or Sets FullFieldId
+        ///     Gets or Sets FullFieldId
         /// </summary>
-        [DataMember(Name="fullFieldId", EmitDefaultValue=false)]
+        [DataMember(Name = "fullFieldId", EmitDefaultValue = false)]
         public string FullFieldId { get; set; }
 
         /// <summary>
-        /// Gets or Sets HasDefaultSortField
+        ///     Gets or Sets HasDefaultSortField
         /// </summary>
-        [DataMember(Name="hasDefaultSortField", EmitDefaultValue=false)]
+        [DataMember(Name = "hasDefaultSortField", EmitDefaultValue = false)]
         public bool? HasDefaultSortField { get; set; }
 
         /// <summary>
-        /// Gets or Sets FieldId
+        ///     Gets or Sets FieldId
         /// </summary>
-        [DataMember(Name="fieldId", EmitDefaultValue=false)]
+        [DataMember(Name = "fieldId", EmitDefaultValue = false)]
         public string FieldId { get; set; }
 
         /// <summary>
-        /// Gets or Sets IsBinary
+        ///     Gets or Sets IsBinary
         /// </summary>
-        [DataMember(Name="isBinary", EmitDefaultValue=false)]
+        [DataMember(Name = "isBinary", EmitDefaultValue = false)]
         public bool? IsBinary { get; set; }
 
         /// <summary>
-        /// Gets or Sets IsCurrency
+        ///     Gets or Sets IsCurrency
         /// </summary>
-        [DataMember(Name="isCurrency", EmitDefaultValue=false)]
+        [DataMember(Name = "isCurrency", EmitDefaultValue = false)]
         public bool? IsCurrency { get; set; }
 
         /// <summary>
-        /// Gets or Sets IsDateTime
+        ///     Gets or Sets IsDateTime
         /// </summary>
-        [DataMember(Name="isDateTime", EmitDefaultValue=false)]
+        [DataMember(Name = "isDateTime", EmitDefaultValue = false)]
         public bool? IsDateTime { get; set; }
 
         /// <summary>
-        /// Gets or Sets IsFilterAllowed
+        ///     Gets or Sets IsFilterAllowed
         /// </summary>
-        [DataMember(Name="isFilterAllowed", EmitDefaultValue=false)]
+        [DataMember(Name = "isFilterAllowed", EmitDefaultValue = false)]
         public bool? IsFilterAllowed { get; set; }
 
         /// <summary>
-        /// Gets or Sets IsLogical
+        ///     Gets or Sets IsLogical
         /// </summary>
-        [DataMember(Name="isLogical", EmitDefaultValue=false)]
+        [DataMember(Name = "isLogical", EmitDefaultValue = false)]
         public bool? IsLogical { get; set; }
 
         /// <summary>
-        /// Gets or Sets IsNumber
+        ///     Gets or Sets IsNumber
         /// </summary>
-        [DataMember(Name="isNumber", EmitDefaultValue=false)]
+        [DataMember(Name = "isNumber", EmitDefaultValue = false)]
         public bool? IsNumber { get; set; }
 
         /// <summary>
-        /// Gets or Sets IsShortDate
+        ///     Gets or Sets IsShortDate
         /// </summary>
-        [DataMember(Name="isShortDate", EmitDefaultValue=false)]
+        [DataMember(Name = "isShortDate", EmitDefaultValue = false)]
         public bool? IsShortDate { get; set; }
 
         /// <summary>
-        /// Gets or Sets IsShortTime
+        ///     Gets or Sets IsShortTime
         /// </summary>
-        [DataMember(Name="isShortTime", EmitDefaultValue=false)]
+        [DataMember(Name = "isShortTime", EmitDefaultValue = false)]
         public bool? IsShortTime { get; set; }
 
         /// <summary>
-        /// Gets or Sets IsVisible
+        ///     Gets or Sets IsVisible
         /// </summary>
-        [DataMember(Name="isVisible", EmitDefaultValue=false)]
+        [DataMember(Name = "isVisible", EmitDefaultValue = false)]
         public bool? IsVisible { get; set; }
 
         /// <summary>
-        /// Gets or Sets Sortable
+        ///     Gets or Sets Sortable
         /// </summary>
-        [DataMember(Name="sortable", EmitDefaultValue=false)]
+        [DataMember(Name = "sortable", EmitDefaultValue = false)]
         public bool? Sortable { get; set; }
 
         /// <summary>
-        /// Gets or Sets SortOrder
+        ///     Gets or Sets SortOrder
         /// </summary>
-        [DataMember(Name="sortOrder", EmitDefaultValue=false)]
+        [DataMember(Name = "sortOrder", EmitDefaultValue = false)]
         public string SortOrder { get; set; }
 
         /// <summary>
-        /// Gets or Sets StorageName
+        ///     Gets or Sets StorageName
         /// </summary>
-        [DataMember(Name="storageName", EmitDefaultValue=false)]
+        [DataMember(Name = "storageName", EmitDefaultValue = false)]
         public string StorageName { get; set; }
 
         /// <summary>
-        /// Gets or Sets WholeDigits
+        ///     Gets or Sets WholeDigits
         /// </summary>
-        [DataMember(Name="wholeDigits", EmitDefaultValue=false)]
+        [DataMember(Name = "wholeDigits", EmitDefaultValue = false)]
         public int? WholeDigits { get; set; }
 
         /// <summary>
-        /// Returns the string presentation of the object
+        ///     Returns true if SearchesField instances are equal
+        /// </summary>
+        /// <param name="input">Instance of SearchesField to be compared</param>
+        /// <returns>Boolean</returns>
+        public bool Equals(SearchesField input)
+        {
+            if (input == null)
+                return false;
+
+            return
+                (
+                    Caption == input.Caption ||
+                    Caption != null &&
+                    Caption.Equals(input.Caption)
+                ) &&
+                (
+                    CurrencyCulture == input.CurrencyCulture ||
+                    CurrencyCulture != null &&
+                    CurrencyCulture.Equals(input.CurrencyCulture)
+                ) &&
+                (
+                    CurrencySymbol == input.CurrencySymbol ||
+                    CurrencySymbol != null &&
+                    CurrencySymbol.Equals(input.CurrencySymbol)
+                ) &&
+                (
+                    DecimalDigits == input.DecimalDigits ||
+                    DecimalDigits != null &&
+                    DecimalDigits.Equals(input.DecimalDigits)
+                ) &&
+                (
+                    DefaultSortOrderAscending == input.DefaultSortOrderAscending ||
+                    DefaultSortOrderAscending != null &&
+                    DefaultSortOrderAscending.Equals(input.DefaultSortOrderAscending)
+                ) &&
+                (
+                    DisplayName == input.DisplayName ||
+                    DisplayName != null &&
+                    DisplayName.Equals(input.DisplayName)
+                ) &&
+                (
+                    FieldName == input.FieldName ||
+                    FieldName != null &&
+                    FieldName.Equals(input.FieldName)
+                ) &&
+                (
+                    FullFieldId == input.FullFieldId ||
+                    FullFieldId != null &&
+                    FullFieldId.Equals(input.FullFieldId)
+                ) &&
+                (
+                    HasDefaultSortField == input.HasDefaultSortField ||
+                    HasDefaultSortField != null &&
+                    HasDefaultSortField.Equals(input.HasDefaultSortField)
+                ) &&
+                (
+                    FieldId == input.FieldId ||
+                    FieldId != null &&
+                    FieldId.Equals(input.FieldId)
+                ) &&
+                (
+                    IsBinary == input.IsBinary ||
+                    IsBinary != null &&
+                    IsBinary.Equals(input.IsBinary)
+                ) &&
+                (
+                    IsCurrency == input.IsCurrency ||
+                    IsCurrency != null &&
+                    IsCurrency.Equals(input.IsCurrency)
+                ) &&
+                (
+                    IsDateTime == input.IsDateTime ||
+                    IsDateTime != null &&
+                    IsDateTime.Equals(input.IsDateTime)
+                ) &&
+                (
+                    IsFilterAllowed == input.IsFilterAllowed ||
+                    IsFilterAllowed != null &&
+                    IsFilterAllowed.Equals(input.IsFilterAllowed)
+                ) &&
+                (
+                    IsLogical == input.IsLogical ||
+                    IsLogical != null &&
+                    IsLogical.Equals(input.IsLogical)
+                ) &&
+                (
+                    IsNumber == input.IsNumber ||
+                    IsNumber != null &&
+                    IsNumber.Equals(input.IsNumber)
+                ) &&
+                (
+                    IsShortDate == input.IsShortDate ||
+                    IsShortDate != null &&
+                    IsShortDate.Equals(input.IsShortDate)
+                ) &&
+                (
+                    IsShortTime == input.IsShortTime ||
+                    IsShortTime != null &&
+                    IsShortTime.Equals(input.IsShortTime)
+                ) &&
+                (
+                    IsVisible == input.IsVisible ||
+                    IsVisible != null &&
+                    IsVisible.Equals(input.IsVisible)
+                ) &&
+                (
+                    Sortable == input.Sortable ||
+                    Sortable != null &&
+                    Sortable.Equals(input.Sortable)
+                ) &&
+                (
+                    SortOrder == input.SortOrder ||
+                    SortOrder != null &&
+                    SortOrder.Equals(input.SortOrder)
+                ) &&
+                (
+                    StorageName == input.StorageName ||
+                    StorageName != null &&
+                    StorageName.Equals(input.StorageName)
+                ) &&
+                (
+                    WholeDigits == input.WholeDigits ||
+                    WholeDigits != null &&
+                    WholeDigits.Equals(input.WholeDigits)
+                );
+        }
+
+        /// <summary>
+        ///     To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+            yield break;
+        }
+
+        /// <summary>
+        ///     Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
         public override string ToString()
@@ -240,18 +383,18 @@ namespace CherwellConnector.Model
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
-        /// Returns the JSON string presentation of the object
+        ///     Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public  string ToJson()
+        public string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }
 
         /// <summary>
-        /// Returns true if objects are equal
+        ///     Returns true if objects are equal
         /// </summary>
         /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
@@ -261,135 +404,7 @@ namespace CherwellConnector.Model
         }
 
         /// <summary>
-        /// Returns true if SearchesField instances are equal
-        /// </summary>
-        /// <param name="input">Instance of SearchesField to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(SearchesField input)
-        {
-            if (input == null)
-                return false;
-
-            return 
-                (
-                    Caption == input.Caption ||
-                    (Caption != null &&
-                    Caption.Equals(input.Caption))
-                ) && 
-                (
-                    CurrencyCulture == input.CurrencyCulture ||
-                    (CurrencyCulture != null &&
-                    CurrencyCulture.Equals(input.CurrencyCulture))
-                ) && 
-                (
-                    CurrencySymbol == input.CurrencySymbol ||
-                    (CurrencySymbol != null &&
-                    CurrencySymbol.Equals(input.CurrencySymbol))
-                ) && 
-                (
-                    DecimalDigits == input.DecimalDigits ||
-                    (DecimalDigits != null &&
-                    DecimalDigits.Equals(input.DecimalDigits))
-                ) && 
-                (
-                    DefaultSortOrderAscending == input.DefaultSortOrderAscending ||
-                    (DefaultSortOrderAscending != null &&
-                    DefaultSortOrderAscending.Equals(input.DefaultSortOrderAscending))
-                ) && 
-                (
-                    DisplayName == input.DisplayName ||
-                    (DisplayName != null &&
-                    DisplayName.Equals(input.DisplayName))
-                ) && 
-                (
-                    FieldName == input.FieldName ||
-                    (FieldName != null &&
-                    FieldName.Equals(input.FieldName))
-                ) && 
-                (
-                    FullFieldId == input.FullFieldId ||
-                    (FullFieldId != null &&
-                    FullFieldId.Equals(input.FullFieldId))
-                ) && 
-                (
-                    HasDefaultSortField == input.HasDefaultSortField ||
-                    (HasDefaultSortField != null &&
-                    HasDefaultSortField.Equals(input.HasDefaultSortField))
-                ) && 
-                (
-                    FieldId == input.FieldId ||
-                    (FieldId != null &&
-                    FieldId.Equals(input.FieldId))
-                ) && 
-                (
-                    IsBinary == input.IsBinary ||
-                    (IsBinary != null &&
-                    IsBinary.Equals(input.IsBinary))
-                ) && 
-                (
-                    IsCurrency == input.IsCurrency ||
-                    (IsCurrency != null &&
-                    IsCurrency.Equals(input.IsCurrency))
-                ) && 
-                (
-                    IsDateTime == input.IsDateTime ||
-                    (IsDateTime != null &&
-                    IsDateTime.Equals(input.IsDateTime))
-                ) && 
-                (
-                    IsFilterAllowed == input.IsFilterAllowed ||
-                    (IsFilterAllowed != null &&
-                    IsFilterAllowed.Equals(input.IsFilterAllowed))
-                ) && 
-                (
-                    IsLogical == input.IsLogical ||
-                    (IsLogical != null &&
-                    IsLogical.Equals(input.IsLogical))
-                ) && 
-                (
-                    IsNumber == input.IsNumber ||
-                    (IsNumber != null &&
-                    IsNumber.Equals(input.IsNumber))
-                ) && 
-                (
-                    IsShortDate == input.IsShortDate ||
-                    (IsShortDate != null &&
-                    IsShortDate.Equals(input.IsShortDate))
-                ) && 
-                (
-                    IsShortTime == input.IsShortTime ||
-                    (IsShortTime != null &&
-                    IsShortTime.Equals(input.IsShortTime))
-                ) && 
-                (
-                    IsVisible == input.IsVisible ||
-                    (IsVisible != null &&
-                    IsVisible.Equals(input.IsVisible))
-                ) && 
-                (
-                    Sortable == input.Sortable ||
-                    (Sortable != null &&
-                    Sortable.Equals(input.Sortable))
-                ) && 
-                (
-                    SortOrder == input.SortOrder ||
-                    (SortOrder != null &&
-                    SortOrder.Equals(input.SortOrder))
-                ) && 
-                (
-                    StorageName == input.StorageName ||
-                    (StorageName != null &&
-                    StorageName.Equals(input.StorageName))
-                ) && 
-                (
-                    WholeDigits == input.WholeDigits ||
-                    (WholeDigits != null &&
-                    WholeDigits.Equals(input.WholeDigits))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
+        ///     Gets the hash code
         /// </summary>
         /// <returns>Hash code</returns>
         public override int GetHashCode()
@@ -446,16 +461,5 @@ namespace CherwellConnector.Model
                 return hashCode;
             }
         }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-            yield break;
-        }
     }
-
 }

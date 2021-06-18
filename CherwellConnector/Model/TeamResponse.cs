@@ -1,37 +1,22 @@
-
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Runtime.Serialization;
+using System.Text;
 using CherwellConnector.Enum;
+using Newtonsoft.Json;
 
 namespace CherwellConnector.Model
 {
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.Linq;
-    using System.Runtime.Serialization;
-    using System.Text;
-
-    using Newtonsoft.Json;
-    using Newtonsoft.Json.Converters;
-
     /// <summary>
-    /// TeamResponse
+    ///     TeamResponse
     /// </summary>
     [DataContract]
-    public sealed class TeamResponse :  IEquatable<TeamResponse>, IValidatableObject
+    public sealed class TeamResponse : IEquatable<TeamResponse>, IValidatableObject
     {
         /// <summary>
-        /// Gets or Sets TeamType
-        /// </summary>
-        [DataMember(Name="teamType", EmitDefaultValue=false)]
-        public TeamTypeEnum? TeamType { get; set; }
-        
-        /// <summary>
-        /// Gets or Sets HttpStatusCode
-        /// </summary>
-        [DataMember(Name="httpStatusCode", EmitDefaultValue=false)]
-        public HttpStatusCodeEnum? HttpStatusCode { get; set; }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="TeamResponse" /> class.
+        ///     Initializes a new instance of the <see cref="TeamResponse" /> class.
         /// </summary>
         /// <param name="description">description.</param>
         /// <param name="emailAlias">emailAlias.</param>
@@ -44,7 +29,10 @@ namespace CherwellConnector.Model
         /// <param name="errorMessage">errorMessage.</param>
         /// <param name="hasError">hasError.</param>
         /// <param name="httpStatusCode">httpStatusCode.</param>
-        public TeamResponse(string description = default, string emailAlias = default, List<FieldTemplateItem> fields = default, string image = default, string name = default, string teamId = default, TeamTypeEnum? teamType = default, string errorCode = default, string errorMessage = default, bool? hasError = default, HttpStatusCodeEnum? httpStatusCode = default)
+        public TeamResponse(string description = default, string emailAlias = default,
+            List<FieldTemplateItem> fields = default, string image = default, string name = default,
+            string teamId = default, TeamTypeEnum? teamType = default, string errorCode = default,
+            string errorMessage = default, bool? hasError = default, HttpStatusCodeEnum? httpStatusCode = default)
         {
             Description = description;
             EmailAlias = emailAlias;
@@ -58,65 +46,155 @@ namespace CherwellConnector.Model
             HasError = hasError;
             HttpStatusCode = httpStatusCode;
         }
-        
+
         /// <summary>
-        /// Gets or Sets Description
+        ///     Gets or Sets TeamType
         /// </summary>
-        [DataMember(Name="description", EmitDefaultValue=false)]
+        [DataMember(Name = "teamType", EmitDefaultValue = false)]
+        public TeamTypeEnum? TeamType { get; set; }
+
+        /// <summary>
+        ///     Gets or Sets HttpStatusCode
+        /// </summary>
+        [DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
+        public HttpStatusCodeEnum? HttpStatusCode { get; set; }
+
+        /// <summary>
+        ///     Gets or Sets Description
+        /// </summary>
+        [DataMember(Name = "description", EmitDefaultValue = false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// Gets or Sets EmailAlias
+        ///     Gets or Sets EmailAlias
         /// </summary>
-        [DataMember(Name="emailAlias", EmitDefaultValue=false)]
+        [DataMember(Name = "emailAlias", EmitDefaultValue = false)]
         public string EmailAlias { get; set; }
 
         /// <summary>
-        /// Gets or Sets Fields
+        ///     Gets or Sets Fields
         /// </summary>
-        [DataMember(Name="fields", EmitDefaultValue=false)]
+        [DataMember(Name = "fields", EmitDefaultValue = false)]
         public List<FieldTemplateItem> Fields { get; set; }
 
         /// <summary>
-        /// Gets or Sets Image
+        ///     Gets or Sets Image
         /// </summary>
-        [DataMember(Name="image", EmitDefaultValue=false)]
+        [DataMember(Name = "image", EmitDefaultValue = false)]
         public string Image { get; set; }
 
         /// <summary>
-        /// Gets or Sets Name
+        ///     Gets or Sets Name
         /// </summary>
-        [DataMember(Name="name", EmitDefaultValue=false)]
+        [DataMember(Name = "name", EmitDefaultValue = false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or Sets TeamId
+        ///     Gets or Sets TeamId
         /// </summary>
-        [DataMember(Name="teamId", EmitDefaultValue=false)]
+        [DataMember(Name = "teamId", EmitDefaultValue = false)]
         public string TeamId { get; set; }
 
 
         /// <summary>
-        /// Gets or Sets ErrorCode
+        ///     Gets or Sets ErrorCode
         /// </summary>
-        [DataMember(Name="errorCode", EmitDefaultValue=false)]
+        [DataMember(Name = "errorCode", EmitDefaultValue = false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// Gets or Sets ErrorMessage
+        ///     Gets or Sets ErrorMessage
         /// </summary>
-        [DataMember(Name="errorMessage", EmitDefaultValue=false)]
+        [DataMember(Name = "errorMessage", EmitDefaultValue = false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// Gets or Sets HasError
+        ///     Gets or Sets HasError
         /// </summary>
-        [DataMember(Name="hasError", EmitDefaultValue=false)]
+        [DataMember(Name = "hasError", EmitDefaultValue = false)]
         public bool? HasError { get; set; }
+
+        /// <summary>
+        ///     Returns true if TeamResponse instances are equal
+        /// </summary>
+        /// <param name="input">Instance of TeamResponse to be compared</param>
+        /// <returns>Boolean</returns>
+        public bool Equals(TeamResponse input)
+        {
+            if (input == null)
+                return false;
+
+            return
+                (
+                    Description == input.Description ||
+                    Description != null &&
+                    Description.Equals(input.Description)
+                ) &&
+                (
+                    EmailAlias == input.EmailAlias ||
+                    EmailAlias != null &&
+                    EmailAlias.Equals(input.EmailAlias)
+                ) &&
+                (
+                    Fields == input.Fields ||
+                    Fields != null &&
+                    Fields.SequenceEqual(input.Fields)
+                ) &&
+                (
+                    Image == input.Image ||
+                    Image != null &&
+                    Image.Equals(input.Image)
+                ) &&
+                (
+                    Name == input.Name ||
+                    Name != null &&
+                    Name.Equals(input.Name)
+                ) &&
+                (
+                    TeamId == input.TeamId ||
+                    TeamId != null &&
+                    TeamId.Equals(input.TeamId)
+                ) &&
+                (
+                    TeamType == input.TeamType ||
+                    TeamType != null &&
+                    TeamType.Equals(input.TeamType)
+                ) &&
+                (
+                    ErrorCode == input.ErrorCode ||
+                    ErrorCode != null &&
+                    ErrorCode.Equals(input.ErrorCode)
+                ) &&
+                (
+                    ErrorMessage == input.ErrorMessage ||
+                    ErrorMessage != null &&
+                    ErrorMessage.Equals(input.ErrorMessage)
+                ) &&
+                (
+                    HasError == input.HasError ||
+                    HasError != null &&
+                    HasError.Equals(input.HasError)
+                ) &&
+                (
+                    HttpStatusCode == input.HttpStatusCode ||
+                    HttpStatusCode != null &&
+                    HttpStatusCode.Equals(input.HttpStatusCode)
+                );
+        }
+
+        /// <summary>
+        ///     To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+            yield break;
+        }
 
 
         /// <summary>
-        /// Returns the string presentation of the object
+        ///     Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
         public override string ToString()
@@ -137,18 +215,18 @@ namespace CherwellConnector.Model
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
-        /// Returns the JSON string presentation of the object
+        ///     Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public  string ToJson()
+        public string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }
 
         /// <summary>
-        /// Returns true if objects are equal
+        ///     Returns true if objects are equal
         /// </summary>
         /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
@@ -158,75 +236,7 @@ namespace CherwellConnector.Model
         }
 
         /// <summary>
-        /// Returns true if TeamResponse instances are equal
-        /// </summary>
-        /// <param name="input">Instance of TeamResponse to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(TeamResponse input)
-        {
-            if (input == null)
-                return false;
-
-            return 
-                (
-                    Description == input.Description ||
-                    (Description != null &&
-                    Description.Equals(input.Description))
-                ) && 
-                (
-                    EmailAlias == input.EmailAlias ||
-                    (EmailAlias != null &&
-                    EmailAlias.Equals(input.EmailAlias))
-                ) && 
-                (
-                    Fields == input.Fields ||
-                    Fields != null &&
-                    Fields.SequenceEqual(input.Fields)
-                ) && 
-                (
-                    Image == input.Image ||
-                    (Image != null &&
-                    Image.Equals(input.Image))
-                ) && 
-                (
-                    Name == input.Name ||
-                    (Name != null &&
-                    Name.Equals(input.Name))
-                ) && 
-                (
-                    TeamId == input.TeamId ||
-                    (TeamId != null &&
-                    TeamId.Equals(input.TeamId))
-                ) && 
-                (
-                    TeamType == input.TeamType ||
-                    (TeamType != null &&
-                    TeamType.Equals(input.TeamType))
-                ) && 
-                (
-                    ErrorCode == input.ErrorCode ||
-                    (ErrorCode != null &&
-                    ErrorCode.Equals(input.ErrorCode))
-                ) && 
-                (
-                    ErrorMessage == input.ErrorMessage ||
-                    (ErrorMessage != null &&
-                    ErrorMessage.Equals(input.ErrorMessage))
-                ) && 
-                (
-                    HasError == input.HasError ||
-                    (HasError != null &&
-                    HasError.Equals(input.HasError))
-                ) && 
-                (
-                    HttpStatusCode == input.HttpStatusCode ||
-                    (HttpStatusCode != null &&
-                    HttpStatusCode.Equals(input.HttpStatusCode))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
+        ///     Gets the hash code
         /// </summary>
         /// <returns>Hash code</returns>
         public override int GetHashCode()
@@ -258,16 +268,6 @@ namespace CherwellConnector.Model
                     hashCode = hashCode * 59 + HttpStatusCode.GetHashCode();
                 return hashCode;
             }
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-            yield break;
         }
     }
 }

@@ -1,61 +1,103 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Runtime.Serialization;
+using System.Text;
+using Newtonsoft.Json;
 
 namespace CherwellConnector.Model
 {
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.Runtime.Serialization;
-    using System.Text;
-
-    using Newtonsoft.Json;
-
     /// <summary>
-    /// SaveTeamMemberRequest
+    ///     SaveTeamMemberRequest
     /// </summary>
     [DataContract]
-    public sealed class SaveTeamMemberRequest :  IEquatable<SaveTeamMemberRequest>, IValidatableObject
+    public sealed class SaveTeamMemberRequest : IEquatable<SaveTeamMemberRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="SaveTeamMemberRequest" /> class.
+        ///     Initializes a new instance of the <see cref="SaveTeamMemberRequest" /> class.
         /// </summary>
         /// <param name="isTeamManager">isTeamManager.</param>
         /// <param name="setAsDefaultTeam">setAsDefaultTeam.</param>
         /// <param name="teamId">teamId.</param>
         /// <param name="userRecId">userRecId.</param>
-        public SaveTeamMemberRequest(bool? isTeamManager = default, bool? setAsDefaultTeam = default, string teamId = default, string userRecId = default)
+        public SaveTeamMemberRequest(bool? isTeamManager = default, bool? setAsDefaultTeam = default,
+            string teamId = default, string userRecId = default)
         {
             IsTeamManager = isTeamManager;
             SetAsDefaultTeam = setAsDefaultTeam;
             TeamId = teamId;
             UserRecId = userRecId;
         }
-        
+
         /// <summary>
-        /// Gets or Sets IsTeamManager
+        ///     Gets or Sets IsTeamManager
         /// </summary>
-        [DataMember(Name="isTeamManager", EmitDefaultValue=false)]
+        [DataMember(Name = "isTeamManager", EmitDefaultValue = false)]
         public bool? IsTeamManager { get; set; }
 
         /// <summary>
-        /// Gets or Sets SetAsDefaultTeam
+        ///     Gets or Sets SetAsDefaultTeam
         /// </summary>
-        [DataMember(Name="setAsDefaultTeam", EmitDefaultValue=false)]
+        [DataMember(Name = "setAsDefaultTeam", EmitDefaultValue = false)]
         public bool? SetAsDefaultTeam { get; set; }
 
         /// <summary>
-        /// Gets or Sets TeamId
+        ///     Gets or Sets TeamId
         /// </summary>
-        [DataMember(Name="teamId", EmitDefaultValue=false)]
+        [DataMember(Name = "teamId", EmitDefaultValue = false)]
         public string TeamId { get; set; }
 
         /// <summary>
-        /// Gets or Sets UserRecId
+        ///     Gets or Sets UserRecId
         /// </summary>
-        [DataMember(Name="userRecId", EmitDefaultValue=false)]
+        [DataMember(Name = "userRecId", EmitDefaultValue = false)]
         public string UserRecId { get; set; }
 
         /// <summary>
-        /// Returns the string presentation of the object
+        ///     Returns true if SaveTeamMemberRequest instances are equal
+        /// </summary>
+        /// <param name="input">Instance of SaveTeamMemberRequest to be compared</param>
+        /// <returns>Boolean</returns>
+        public bool Equals(SaveTeamMemberRequest input)
+        {
+            if (input == null)
+                return false;
+
+            return
+                (
+                    IsTeamManager == input.IsTeamManager ||
+                    IsTeamManager != null &&
+                    IsTeamManager.Equals(input.IsTeamManager)
+                ) &&
+                (
+                    SetAsDefaultTeam == input.SetAsDefaultTeam ||
+                    SetAsDefaultTeam != null &&
+                    SetAsDefaultTeam.Equals(input.SetAsDefaultTeam)
+                ) &&
+                (
+                    TeamId == input.TeamId ||
+                    TeamId != null &&
+                    TeamId.Equals(input.TeamId)
+                ) &&
+                (
+                    UserRecId == input.UserRecId ||
+                    UserRecId != null &&
+                    UserRecId.Equals(input.UserRecId)
+                );
+        }
+
+        /// <summary>
+        ///     To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+            yield break;
+        }
+
+        /// <summary>
+        ///     Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
         public override string ToString()
@@ -69,18 +111,18 @@ namespace CherwellConnector.Model
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
-        /// Returns the JSON string presentation of the object
+        ///     Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public  string ToJson()
+        public string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }
 
         /// <summary>
-        /// Returns true if objects are equal
+        ///     Returns true if objects are equal
         /// </summary>
         /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
@@ -90,40 +132,7 @@ namespace CherwellConnector.Model
         }
 
         /// <summary>
-        /// Returns true if SaveTeamMemberRequest instances are equal
-        /// </summary>
-        /// <param name="input">Instance of SaveTeamMemberRequest to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(SaveTeamMemberRequest input)
-        {
-            if (input == null)
-                return false;
-
-            return 
-                (
-                    IsTeamManager == input.IsTeamManager ||
-                    (IsTeamManager != null &&
-                    IsTeamManager.Equals(input.IsTeamManager))
-                ) && 
-                (
-                    SetAsDefaultTeam == input.SetAsDefaultTeam ||
-                    (SetAsDefaultTeam != null &&
-                    SetAsDefaultTeam.Equals(input.SetAsDefaultTeam))
-                ) && 
-                (
-                    TeamId == input.TeamId ||
-                    (TeamId != null &&
-                    TeamId.Equals(input.TeamId))
-                ) && 
-                (
-                    UserRecId == input.UserRecId ||
-                    (UserRecId != null &&
-                    UserRecId.Equals(input.UserRecId))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
+        ///     Gets the hash code
         /// </summary>
         /// <returns>Hash code</returns>
         public override int GetHashCode()
@@ -142,16 +151,5 @@ namespace CherwellConnector.Model
                 return hashCode;
             }
         }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-            yield break;
-        }
     }
-
 }

@@ -1,22 +1,21 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Runtime.Serialization;
+using System.Text;
+using Newtonsoft.Json;
+
 namespace CherwellConnector.Model
 {
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.Linq;
-    using System.Runtime.Serialization;
-    using System.Text;
-
-    using Newtonsoft.Json;
-
     /// <summary>
-    /// FormsSection
+    ///     FormsSection
     /// </summary>
     [DataContract]
-    public sealed class Section :  IEquatable<Section>, IValidatableObject
+    public sealed class Section : IEquatable<Section>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="Section" /> class.
+        ///     Initializes a new instance of the <see cref="Section" /> class.
         /// </summary>
         /// <param name="sectionFields">sectionFields.</param>
         /// <param name="galleryImage">galleryImage.</param>
@@ -24,7 +23,9 @@ namespace CherwellConnector.Model
         /// <param name="relationshipId">relationshipId.</param>
         /// <param name="targetBusObId">targetBusObId.</param>
         /// <param name="targetBusObRecId">targetBusObRecId.</param>
-        public Section(List<SectionField> sectionFields = default, string galleryImage = default, string title = default, string relationshipId = default, string targetBusObId = default, string targetBusObRecId = default)
+        public Section(List<SectionField> sectionFields = default, string galleryImage = default,
+            string title = default, string relationshipId = default, string targetBusObId = default,
+            string targetBusObRecId = default)
         {
             SectionFields = sectionFields;
             GalleryImage = galleryImage;
@@ -33,45 +34,98 @@ namespace CherwellConnector.Model
             TargetBusObId = targetBusObId;
             TargetBusObRecId = targetBusObRecId;
         }
-        
+
         /// <summary>
-        /// Gets or Sets SectionFields
+        ///     Gets or Sets SectionFields
         /// </summary>
-        [DataMember(Name="sectionFields", EmitDefaultValue=false)]
+        [DataMember(Name = "sectionFields", EmitDefaultValue = false)]
         public List<SectionField> SectionFields { get; set; }
 
         /// <summary>
-        /// Gets or Sets GalleryImage
+        ///     Gets or Sets GalleryImage
         /// </summary>
-        [DataMember(Name="galleryImage", EmitDefaultValue=false)]
+        [DataMember(Name = "galleryImage", EmitDefaultValue = false)]
         public string GalleryImage { get; set; }
 
         /// <summary>
-        /// Gets or Sets Title
+        ///     Gets or Sets Title
         /// </summary>
-        [DataMember(Name="title", EmitDefaultValue=false)]
+        [DataMember(Name = "title", EmitDefaultValue = false)]
         public string Title { get; set; }
 
         /// <summary>
-        /// Gets or Sets RelationshipId
+        ///     Gets or Sets RelationshipId
         /// </summary>
-        [DataMember(Name="relationshipId", EmitDefaultValue=false)]
+        [DataMember(Name = "relationshipId", EmitDefaultValue = false)]
         public string RelationshipId { get; set; }
 
         /// <summary>
-        /// Gets or Sets TargetBusObId
+        ///     Gets or Sets TargetBusObId
         /// </summary>
-        [DataMember(Name="targetBusObId", EmitDefaultValue=false)]
+        [DataMember(Name = "targetBusObId", EmitDefaultValue = false)]
         public string TargetBusObId { get; set; }
 
         /// <summary>
-        /// Gets or Sets TargetBusObRecId
+        ///     Gets or Sets TargetBusObRecId
         /// </summary>
-        [DataMember(Name="targetBusObRecId", EmitDefaultValue=false)]
+        [DataMember(Name = "targetBusObRecId", EmitDefaultValue = false)]
         public string TargetBusObRecId { get; set; }
 
         /// <summary>
-        /// Returns the string presentation of the object
+        ///     Returns true if Section instances are equal
+        /// </summary>
+        /// <param name="input">Instance of Section to be compared</param>
+        /// <returns>Boolean</returns>
+        public bool Equals(Section input)
+        {
+            if (input == null)
+                return false;
+
+            return
+                (
+                    SectionFields == input.SectionFields ||
+                    SectionFields != null &&
+                    SectionFields.SequenceEqual(input.SectionFields)
+                ) &&
+                (
+                    GalleryImage == input.GalleryImage ||
+                    GalleryImage != null &&
+                    GalleryImage.Equals(input.GalleryImage)
+                ) &&
+                (
+                    Title == input.Title ||
+                    Title != null &&
+                    Title.Equals(input.Title)
+                ) &&
+                (
+                    RelationshipId == input.RelationshipId ||
+                    RelationshipId != null &&
+                    RelationshipId.Equals(input.RelationshipId)
+                ) &&
+                (
+                    TargetBusObId == input.TargetBusObId ||
+                    TargetBusObId != null &&
+                    TargetBusObId.Equals(input.TargetBusObId)
+                ) &&
+                (
+                    TargetBusObRecId == input.TargetBusObRecId ||
+                    TargetBusObRecId != null &&
+                    TargetBusObRecId.Equals(input.TargetBusObRecId)
+                );
+        }
+
+        /// <summary>
+        ///     To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+            yield break;
+        }
+
+        /// <summary>
+        ///     Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
         public override string ToString()
@@ -87,9 +141,9 @@ namespace CherwellConnector.Model
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
-        /// Returns the JSON string presentation of the object
+        ///     Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
         public string ToJson()
@@ -98,7 +152,7 @@ namespace CherwellConnector.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
+        ///     Returns true if objects are equal
         /// </summary>
         /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
@@ -108,50 +162,7 @@ namespace CherwellConnector.Model
         }
 
         /// <summary>
-        /// Returns true if Section instances are equal
-        /// </summary>
-        /// <param name="input">Instance of Section to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(Section input)
-        {
-            if (input == null)
-                return false;
-
-            return 
-                (
-                    SectionFields == input.SectionFields ||
-                    SectionFields != null &&
-                    SectionFields.SequenceEqual(input.SectionFields)
-                ) && 
-                (
-                    GalleryImage == input.GalleryImage ||
-                    (GalleryImage != null &&
-                    GalleryImage.Equals(input.GalleryImage))
-                ) && 
-                (
-                    Title == input.Title ||
-                    (Title != null &&
-                    Title.Equals(input.Title))
-                ) && 
-                (
-                    RelationshipId == input.RelationshipId ||
-                    (RelationshipId != null &&
-                    RelationshipId.Equals(input.RelationshipId))
-                ) && 
-                (
-                    TargetBusObId == input.TargetBusObId ||
-                    (TargetBusObId != null &&
-                    TargetBusObId.Equals(input.TargetBusObId))
-                ) && 
-                (
-                    TargetBusObRecId == input.TargetBusObRecId ||
-                    (TargetBusObRecId != null &&
-                    TargetBusObRecId.Equals(input.TargetBusObRecId))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
+        ///     Gets the hash code
         /// </summary>
         /// <returns>Hash code</returns>
         public override int GetHashCode()
@@ -174,16 +185,5 @@ namespace CherwellConnector.Model
                 return hashCode;
             }
         }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-            yield break;
-        }
     }
-
 }

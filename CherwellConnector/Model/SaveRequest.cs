@@ -1,31 +1,22 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Runtime.Serialization;
+using System.Text;
 using CherwellConnector.Enum;
+using Newtonsoft.Json;
 
 namespace CherwellConnector.Model
 {
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.Linq;
-    using System.Runtime.Serialization;
-    using System.Text;
-
-    using Newtonsoft.Json;
-
     /// <summary>
-    /// SaveRequest
+    ///     SaveRequest
     /// </summary>
     [DataContract]
-    public sealed class SaveRequest :  IEquatable<SaveRequest>, IValidatableObject
+    public sealed class SaveRequest : IEquatable<SaveRequest>, IValidatableObject
     {
-       
-
         /// <summary>
-        /// Gets or Sets CacheScope
-        /// </summary>
-        [DataMember(Name="cacheScope", EmitDefaultValue=false)]
-        public CacheScopeEnum? CacheScope { get; set; }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="SaveRequest" /> class.
+        ///     Initializes a new instance of the <see cref="SaveRequest" /> class.
         /// </summary>
         /// <param name="busObId">busObId.</param>
         /// <param name="busObPublicId">busObPublicId.</param>
@@ -34,7 +25,9 @@ namespace CherwellConnector.Model
         /// <param name="cacheScope">cacheScope.</param>
         /// <param name="fields">fields.</param>
         /// <param name="persist">persist.</param>
-        public SaveRequest(string busObId = default, string busObPublicId = default, string busObRecId = default, string cacheKey = default, CacheScopeEnum? cacheScope = default, List<FieldTemplateItem> fields = default, bool? persist = default)
+        public SaveRequest(string busObId = default, string busObPublicId = default, string busObRecId = default,
+            string cacheKey = default, CacheScopeEnum? cacheScope = default, List<FieldTemplateItem> fields = default,
+            bool? persist = default)
         {
             BusObId = busObId;
             BusObPublicId = busObPublicId;
@@ -44,46 +37,111 @@ namespace CherwellConnector.Model
             Fields = fields;
             Persist = persist;
         }
-        
+
+
         /// <summary>
-        /// Gets or Sets BusObId
+        ///     Gets or Sets CacheScope
         /// </summary>
-        [DataMember(Name="busObId", EmitDefaultValue=false)]
+        [DataMember(Name = "cacheScope", EmitDefaultValue = false)]
+        public CacheScopeEnum? CacheScope { get; set; }
+
+        /// <summary>
+        ///     Gets or Sets BusObId
+        /// </summary>
+        [DataMember(Name = "busObId", EmitDefaultValue = false)]
         public string BusObId { get; set; }
 
         /// <summary>
-        /// Gets or Sets BusObPublicId
+        ///     Gets or Sets BusObPublicId
         /// </summary>
-        [DataMember(Name="busObPublicId", EmitDefaultValue=false)]
+        [DataMember(Name = "busObPublicId", EmitDefaultValue = false)]
         public string BusObPublicId { get; set; }
 
         /// <summary>
-        /// Gets or Sets BusObRecId
+        ///     Gets or Sets BusObRecId
         /// </summary>
-        [DataMember(Name="busObRecId", EmitDefaultValue=false)]
+        [DataMember(Name = "busObRecId", EmitDefaultValue = false)]
         public string BusObRecId { get; set; }
 
         /// <summary>
-        /// Gets or Sets CacheKey
+        ///     Gets or Sets CacheKey
         /// </summary>
-        [DataMember(Name="cacheKey", EmitDefaultValue=false)]
+        [DataMember(Name = "cacheKey", EmitDefaultValue = false)]
         public string CacheKey { get; set; }
 
 
         /// <summary>
-        /// Gets or Sets Fields
+        ///     Gets or Sets Fields
         /// </summary>
-        [DataMember(Name="fields", EmitDefaultValue=false)]
+        [DataMember(Name = "fields", EmitDefaultValue = false)]
         public List<FieldTemplateItem> Fields { get; set; }
 
         /// <summary>
-        /// Gets or Sets Persist
+        ///     Gets or Sets Persist
         /// </summary>
-        [DataMember(Name="persist", EmitDefaultValue=false)]
+        [DataMember(Name = "persist", EmitDefaultValue = false)]
         public bool? Persist { get; set; }
 
         /// <summary>
-        /// Returns the string presentation of the object
+        ///     Returns true if SaveRequest instances are equal
+        /// </summary>
+        /// <param name="input">Instance of SaveRequest to be compared</param>
+        /// <returns>Boolean</returns>
+        public bool Equals(SaveRequest input)
+        {
+            if (input == null)
+                return false;
+
+            return
+                (
+                    BusObId == input.BusObId ||
+                    BusObId != null &&
+                    BusObId.Equals(input.BusObId)
+                ) &&
+                (
+                    BusObPublicId == input.BusObPublicId ||
+                    BusObPublicId != null &&
+                    BusObPublicId.Equals(input.BusObPublicId)
+                ) &&
+                (
+                    BusObRecId == input.BusObRecId ||
+                    BusObRecId != null &&
+                    BusObRecId.Equals(input.BusObRecId)
+                ) &&
+                (
+                    CacheKey == input.CacheKey ||
+                    CacheKey != null &&
+                    CacheKey.Equals(input.CacheKey)
+                ) &&
+                (
+                    CacheScope == input.CacheScope ||
+                    CacheScope != null &&
+                    CacheScope.Equals(input.CacheScope)
+                ) &&
+                (
+                    Fields == input.Fields ||
+                    Fields != null &&
+                    Fields.SequenceEqual(input.Fields)
+                ) &&
+                (
+                    Persist == input.Persist ||
+                    Persist != null &&
+                    Persist.Equals(input.Persist)
+                );
+        }
+
+        /// <summary>
+        ///     To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+            yield break;
+        }
+
+        /// <summary>
+        ///     Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
         public override string ToString()
@@ -100,9 +158,9 @@ namespace CherwellConnector.Model
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
-        /// Returns the JSON string presentation of the object
+        ///     Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
         public string ToJson()
@@ -111,7 +169,7 @@ namespace CherwellConnector.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
+        ///     Returns true if objects are equal
         /// </summary>
         /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
@@ -121,58 +179,9 @@ namespace CherwellConnector.Model
         }
 
         /// <summary>
-        /// Returns true if SaveRequest instances are equal
-        /// </summary>
-        /// <param name="input">Instance of SaveRequest to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(SaveRequest input)
-        {
-            if (input == null)
-                return false;
-
-            return 
-                (
-                    BusObId == input.BusObId ||
-                    (BusObId != null &&
-                    BusObId.Equals(input.BusObId))
-                ) && 
-                (
-                    BusObPublicId == input.BusObPublicId ||
-                    (BusObPublicId != null &&
-                    BusObPublicId.Equals(input.BusObPublicId))
-                ) && 
-                (
-                    BusObRecId == input.BusObRecId ||
-                    (BusObRecId != null &&
-                    BusObRecId.Equals(input.BusObRecId))
-                ) && 
-                (
-                    CacheKey == input.CacheKey ||
-                    (CacheKey != null &&
-                    CacheKey.Equals(input.CacheKey))
-                ) && 
-                (
-                    CacheScope == input.CacheScope ||
-                    (CacheScope != null &&
-                    CacheScope.Equals(input.CacheScope))
-                ) && 
-                (
-                    Fields == input.Fields ||
-                    Fields != null &&
-                    Fields.SequenceEqual(input.Fields)
-                ) && 
-                (
-                    Persist == input.Persist ||
-                    (Persist != null &&
-                    Persist.Equals(input.Persist))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
+        ///     Gets the hash code
         /// </summary>
         /// <returns>Hash code</returns>
-        
         public override int GetHashCode()
         {
             unchecked // Overflow is fine, just wrap
@@ -195,16 +204,5 @@ namespace CherwellConnector.Model
                 return hashCode;
             }
         }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-            yield break;
-        }
     }
-
 }

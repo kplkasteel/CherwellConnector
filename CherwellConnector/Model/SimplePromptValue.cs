@@ -1,21 +1,20 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Runtime.Serialization;
+using System.Text;
+using Newtonsoft.Json;
+
 namespace CherwellConnector.Model
 {
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.Runtime.Serialization;
-    using System.Text;
-
-    using Newtonsoft.Json;
-
     /// <summary>
-    /// SimplePromptValue
+    ///     SimplePromptValue
     /// </summary>
     [DataContract]
-    public sealed class SimplePromptValue :  IEquatable<SimplePromptValue>, IValidatableObject
+    public sealed class SimplePromptValue : IEquatable<SimplePromptValue>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="SimplePromptValue" /> class.
+        ///     Initializes a new instance of the <see cref="SimplePromptValue" /> class.
         /// </summary>
         /// <param name="promptDefId">promptDefId.</param>
         /// <param name="promptName">promptName.</param>
@@ -26,27 +25,65 @@ namespace CherwellConnector.Model
             PromptName = promptName;
             Value = value;
         }
-        
+
         /// <summary>
-        /// Gets or Sets PromptDefId
+        ///     Gets or Sets PromptDefId
         /// </summary>
-        [DataMember(Name="promptDefId", EmitDefaultValue=false)]
+        [DataMember(Name = "promptDefId", EmitDefaultValue = false)]
         public string PromptDefId { get; set; }
 
         /// <summary>
-        /// Gets or Sets PromptName
+        ///     Gets or Sets PromptName
         /// </summary>
-        [DataMember(Name="promptName", EmitDefaultValue=false)]
+        [DataMember(Name = "promptName", EmitDefaultValue = false)]
         public string PromptName { get; set; }
 
         /// <summary>
-        /// Gets or Sets Value
+        ///     Gets or Sets Value
         /// </summary>
-        [DataMember(Name="value", EmitDefaultValue=false)]
+        [DataMember(Name = "value", EmitDefaultValue = false)]
         public string Value { get; set; }
 
         /// <summary>
-        /// Returns the string presentation of the object
+        ///     Returns true if SimplePromptValue instances are equal
+        /// </summary>
+        /// <param name="input">Instance of SimplePromptValue to be compared</param>
+        /// <returns>Boolean</returns>
+        public bool Equals(SimplePromptValue input)
+        {
+            if (input == null)
+                return false;
+
+            return
+                (
+                    PromptDefId == input.PromptDefId ||
+                    PromptDefId != null &&
+                    PromptDefId.Equals(input.PromptDefId)
+                ) &&
+                (
+                    PromptName == input.PromptName ||
+                    PromptName != null &&
+                    PromptName.Equals(input.PromptName)
+                ) &&
+                (
+                    Value == input.Value ||
+                    Value != null &&
+                    Value.Equals(input.Value)
+                );
+        }
+
+        /// <summary>
+        ///     To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+            yield break;
+        }
+
+        /// <summary>
+        ///     Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
         public override string ToString()
@@ -59,18 +96,18 @@ namespace CherwellConnector.Model
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
-        /// Returns the JSON string presentation of the object
+        ///     Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public  string ToJson()
+        public string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }
 
         /// <summary>
-        /// Returns true if objects are equal
+        ///     Returns true if objects are equal
         /// </summary>
         /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
@@ -80,35 +117,7 @@ namespace CherwellConnector.Model
         }
 
         /// <summary>
-        /// Returns true if SimplePromptValue instances are equal
-        /// </summary>
-        /// <param name="input">Instance of SimplePromptValue to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(SimplePromptValue input)
-        {
-            if (input == null)
-                return false;
-
-            return 
-                (
-                    PromptDefId == input.PromptDefId ||
-                    (PromptDefId != null &&
-                    PromptDefId.Equals(input.PromptDefId))
-                ) && 
-                (
-                    PromptName == input.PromptName ||
-                    (PromptName != null &&
-                    PromptName.Equals(input.PromptName))
-                ) && 
-                (
-                    Value == input.Value ||
-                    (Value != null &&
-                    Value.Equals(input.Value))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
+        ///     Gets the hash code
         /// </summary>
         /// <returns>Hash code</returns>
         public override int GetHashCode()
@@ -125,16 +134,5 @@ namespace CherwellConnector.Model
                 return hashCode;
             }
         }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-            yield break;
-        }
     }
-
 }

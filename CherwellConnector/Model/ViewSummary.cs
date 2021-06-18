@@ -1,23 +1,21 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Runtime.Serialization;
+using System.Text;
+using Newtonsoft.Json;
 
 namespace CherwellConnector.Model
 {
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.Linq;
-    using System.Runtime.Serialization;
-    using System.Text;
-
-    using Newtonsoft.Json;
-
     /// <summary>
-    /// ViewSummary
+    ///     ViewSummary
     /// </summary>
     [DataContract]
-    public sealed class ViewSummary :  IEquatable<ViewSummary>, IValidatableObject
+    public sealed class ViewSummary : IEquatable<ViewSummary>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="ViewSummary" /> class.
+        ///     Initializes a new instance of the <see cref="ViewSummary" /> class.
         /// </summary>
         /// <param name="groupSummaries">groupSummaries.</param>
         /// <param name="image">image.</param>
@@ -29,7 +27,9 @@ namespace CherwellConnector.Model
         /// <param name="major">major.</param>
         /// <param name="name">name.</param>
         /// <param name="supporting">supporting.</param>
-        public ViewSummary(List<ViewSummary> groupSummaries = default, string image = default, bool? isPartOfView = default, string busObId = default, string displayName = default, bool? group = default, bool? lookup = default, bool? major = default, string name = default, bool? supporting = default)
+        public ViewSummary(List<ViewSummary> groupSummaries = default, string image = default,
+            bool? isPartOfView = default, string busObId = default, string displayName = default, bool? group = default,
+            bool? lookup = default, bool? major = default, string name = default, bool? supporting = default)
         {
             GroupSummaries = groupSummaries;
             Image = image;
@@ -42,69 +42,142 @@ namespace CherwellConnector.Model
             Name = name;
             Supporting = supporting;
         }
-        
+
         /// <summary>
-        /// Gets or Sets GroupSummaries
+        ///     Gets or Sets GroupSummaries
         /// </summary>
-        [DataMember(Name="groupSummaries", EmitDefaultValue=false)]
+        [DataMember(Name = "groupSummaries", EmitDefaultValue = false)]
         public List<ViewSummary> GroupSummaries { get; set; }
 
         /// <summary>
-        /// Gets or Sets Image
+        ///     Gets or Sets Image
         /// </summary>
-        [DataMember(Name="image", EmitDefaultValue=false)]
+        [DataMember(Name = "image", EmitDefaultValue = false)]
         public string Image { get; set; }
 
         /// <summary>
-        /// Gets or Sets IsPartOfView
+        ///     Gets or Sets IsPartOfView
         /// </summary>
-        [DataMember(Name="isPartOfView", EmitDefaultValue=false)]
+        [DataMember(Name = "isPartOfView", EmitDefaultValue = false)]
         public bool? IsPartOfView { get; set; }
 
         /// <summary>
-        /// Gets or Sets BusObId
+        ///     Gets or Sets BusObId
         /// </summary>
-        [DataMember(Name="busObId", EmitDefaultValue=false)]
+        [DataMember(Name = "busObId", EmitDefaultValue = false)]
         public string BusObId { get; set; }
 
         /// <summary>
-        /// Gets or Sets DisplayName
+        ///     Gets or Sets DisplayName
         /// </summary>
-        [DataMember(Name="displayName", EmitDefaultValue=false)]
+        [DataMember(Name = "displayName", EmitDefaultValue = false)]
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// Gets or Sets Group
+        ///     Gets or Sets Group
         /// </summary>
-        [DataMember(Name="group", EmitDefaultValue=false)]
+        [DataMember(Name = "group", EmitDefaultValue = false)]
         public bool? Group { get; set; }
 
         /// <summary>
-        /// Gets or Sets Lookup
+        ///     Gets or Sets Lookup
         /// </summary>
-        [DataMember(Name="lookup", EmitDefaultValue=false)]
+        [DataMember(Name = "lookup", EmitDefaultValue = false)]
         public bool? Lookup { get; set; }
 
         /// <summary>
-        /// Gets or Sets Major
+        ///     Gets or Sets Major
         /// </summary>
-        [DataMember(Name="major", EmitDefaultValue=false)]
+        [DataMember(Name = "major", EmitDefaultValue = false)]
         public bool? Major { get; set; }
 
         /// <summary>
-        /// Gets or Sets Name
+        ///     Gets or Sets Name
         /// </summary>
-        [DataMember(Name="name", EmitDefaultValue=false)]
+        [DataMember(Name = "name", EmitDefaultValue = false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or Sets Supporting
+        ///     Gets or Sets Supporting
         /// </summary>
-        [DataMember(Name="supporting", EmitDefaultValue=false)]
+        [DataMember(Name = "supporting", EmitDefaultValue = false)]
         public bool? Supporting { get; set; }
 
         /// <summary>
-        /// Returns the string presentation of the object
+        ///     Returns true if ViewSummary instances are equal
+        /// </summary>
+        /// <param name="input">Instance of ViewSummary to be compared</param>
+        /// <returns>Boolean</returns>
+        public bool Equals(ViewSummary input)
+        {
+            if (input == null)
+                return false;
+
+            return
+                (
+                    GroupSummaries == input.GroupSummaries ||
+                    GroupSummaries != null &&
+                    GroupSummaries.SequenceEqual(input.GroupSummaries)
+                ) &&
+                (
+                    Image == input.Image ||
+                    Image != null &&
+                    Image.Equals(input.Image)
+                ) &&
+                (
+                    IsPartOfView == input.IsPartOfView ||
+                    IsPartOfView != null &&
+                    IsPartOfView.Equals(input.IsPartOfView)
+                ) &&
+                (
+                    BusObId == input.BusObId ||
+                    BusObId != null &&
+                    BusObId.Equals(input.BusObId)
+                ) &&
+                (
+                    DisplayName == input.DisplayName ||
+                    DisplayName != null &&
+                    DisplayName.Equals(input.DisplayName)
+                ) &&
+                (
+                    Group == input.Group ||
+                    Group != null &&
+                    Group.Equals(input.Group)
+                ) &&
+                (
+                    Lookup == input.Lookup ||
+                    Lookup != null &&
+                    Lookup.Equals(input.Lookup)
+                ) &&
+                (
+                    Major == input.Major ||
+                    Major != null &&
+                    Major.Equals(input.Major)
+                ) &&
+                (
+                    Name == input.Name ||
+                    Name != null &&
+                    Name.Equals(input.Name)
+                ) &&
+                (
+                    Supporting == input.Supporting ||
+                    Supporting != null &&
+                    Supporting.Equals(input.Supporting)
+                );
+        }
+
+        /// <summary>
+        ///     To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+            yield break;
+        }
+
+        /// <summary>
+        ///     Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
         public override string ToString()
@@ -124,9 +197,9 @@ namespace CherwellConnector.Model
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
-        /// Returns the JSON string presentation of the object
+        ///     Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
         public string ToJson()
@@ -135,7 +208,7 @@ namespace CherwellConnector.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
+        ///     Returns true if objects are equal
         /// </summary>
         /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
@@ -145,70 +218,7 @@ namespace CherwellConnector.Model
         }
 
         /// <summary>
-        /// Returns true if ViewSummary instances are equal
-        /// </summary>
-        /// <param name="input">Instance of ViewSummary to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(ViewSummary input)
-        {
-            if (input == null)
-                return false;
-
-            return 
-                (
-                    GroupSummaries == input.GroupSummaries ||
-                    GroupSummaries != null &&
-                    GroupSummaries.SequenceEqual(input.GroupSummaries)
-                ) && 
-                (
-                    Image == input.Image ||
-                    (Image != null &&
-                    Image.Equals(input.Image))
-                ) && 
-                (
-                    IsPartOfView == input.IsPartOfView ||
-                    (IsPartOfView != null &&
-                    IsPartOfView.Equals(input.IsPartOfView))
-                ) && 
-                (
-                    BusObId == input.BusObId ||
-                    (BusObId != null &&
-                    BusObId.Equals(input.BusObId))
-                ) && 
-                (
-                    DisplayName == input.DisplayName ||
-                    (DisplayName != null &&
-                    DisplayName.Equals(input.DisplayName))
-                ) && 
-                (
-                    Group == input.Group ||
-                    (Group != null &&
-                    Group.Equals(input.Group))
-                ) && 
-                (
-                    Lookup == input.Lookup ||
-                    (Lookup != null &&
-                    Lookup.Equals(input.Lookup))
-                ) && 
-                (
-                    Major == input.Major ||
-                    (Major != null &&
-                    Major.Equals(input.Major))
-                ) && 
-                (
-                    Name == input.Name ||
-                    (Name != null &&
-                    Name.Equals(input.Name))
-                ) && 
-                (
-                    Supporting == input.Supporting ||
-                    (Supporting != null &&
-                    Supporting.Equals(input.Supporting))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
+        ///     Gets the hash code
         /// </summary>
         /// <returns>Hash code</returns>
         public override int GetHashCode()
@@ -239,16 +249,5 @@ namespace CherwellConnector.Model
                 return hashCode;
             }
         }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-            yield break;
-        }
     }
-
 }

@@ -1,21 +1,20 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Runtime.Serialization;
+using System.Text;
+using Newtonsoft.Json;
+
 namespace CherwellConnector.Model
 {
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.Runtime.Serialization;
-    using System.Text;
-
-    using Newtonsoft.Json;
-
     /// <summary>
-    /// TrebuchetNameValuePair
+    ///     NameValuePair
     /// </summary>
     [DataContract]
-    public sealed class NameValuePair :  IEquatable<NameValuePair>, IValidatableObject
+    public sealed class NameValuePair : IEquatable<NameValuePair>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="NameValuePair" /> class.
+        ///     Initializes a new instance of the <see cref="NameValuePair" /> class.
         /// </summary>
         /// <param name="name">name.</param>
         /// <param name="valueObject">valueObject.</param>
@@ -25,7 +24,9 @@ namespace CherwellConnector.Model
         /// <param name="displayShowsValue">displayShowsValue.</param>
         /// <param name="specialUseFlag">specialUseFlag.</param>
         /// <param name="displayString">displayString.</param>
-        public NameValuePair(string name = default, Object valueObject = default, string valueString = default, string category = default, string description = default, bool? displayShowsValue = default, bool? specialUseFlag = default, string displayString = default)
+        public NameValuePair(string name = default, Object valueObject = default, string valueString = default,
+            string category = default, string description = default, bool? displayShowsValue = default,
+            bool? specialUseFlag = default, string displayString = default)
         {
             Name = name;
             ValueObject = valueObject;
@@ -36,63 +37,126 @@ namespace CherwellConnector.Model
             SpecialUseFlag = specialUseFlag;
             DisplayString = displayString;
         }
-        
+
         /// <summary>
-        /// Gets or Sets Name
+        ///     Gets or Sets Name
         /// </summary>
-        [DataMember(Name="name", EmitDefaultValue=false)]
+        [DataMember(Name = "name", EmitDefaultValue = false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or Sets ValueObject
+        ///     Gets or Sets ValueObject
         /// </summary>
-        [DataMember(Name="valueObject", EmitDefaultValue=false)]
+        [DataMember(Name = "valueObject", EmitDefaultValue = false)]
         public Object ValueObject { get; set; }
 
         /// <summary>
-        /// Gets or Sets ValueString
+        ///     Gets or Sets ValueString
         /// </summary>
-        [DataMember(Name="valueString", EmitDefaultValue=false)]
+        [DataMember(Name = "valueString", EmitDefaultValue = false)]
         public string ValueString { get; set; }
 
         /// <summary>
-        /// Gets or Sets Category
+        ///     Gets or Sets Category
         /// </summary>
-        [DataMember(Name="category", EmitDefaultValue=false)]
+        [DataMember(Name = "category", EmitDefaultValue = false)]
         public string Category { get; set; }
 
         /// <summary>
-        /// Gets or Sets Description
+        ///     Gets or Sets Description
         /// </summary>
-        [DataMember(Name="description", EmitDefaultValue=false)]
+        [DataMember(Name = "description", EmitDefaultValue = false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// Gets or Sets DisplayShowsValue
+        ///     Gets or Sets DisplayShowsValue
         /// </summary>
-        [DataMember(Name="displayShowsValue", EmitDefaultValue=false)]
+        [DataMember(Name = "displayShowsValue", EmitDefaultValue = false)]
         public bool? DisplayShowsValue { get; set; }
 
         /// <summary>
-        /// Gets or Sets SpecialUseFlag
+        ///     Gets or Sets SpecialUseFlag
         /// </summary>
-        [DataMember(Name="specialUseFlag", EmitDefaultValue=false)]
+        [DataMember(Name = "specialUseFlag", EmitDefaultValue = false)]
         public bool? SpecialUseFlag { get; set; }
 
         /// <summary>
-        /// Gets or Sets DisplayString
+        ///     Gets or Sets DisplayString
         /// </summary>
-        [DataMember(Name="displayString", EmitDefaultValue=false)]
+        [DataMember(Name = "displayString", EmitDefaultValue = false)]
         public string DisplayString { get; set; }
 
         /// <summary>
-        /// Returns the string presentation of the object
+        ///     Returns true if NameValuePair instances are equal
+        /// </summary>
+        /// <param name="input">Instance of NameValuePair to be compared</param>
+        /// <returns>Boolean</returns>
+        public bool Equals(NameValuePair input)
+        {
+            if (input == null)
+                return false;
+
+            return
+                (
+                    Name == input.Name ||
+                    Name != null &&
+                    Name.Equals(input.Name)
+                ) &&
+                (
+                    ValueObject.Equals(input.ValueObject) ||
+                    ValueObject != null &&
+                    ValueObject.Equals(input.ValueObject)
+                ) &&
+                (
+                    ValueString == input.ValueString ||
+                    ValueString != null &&
+                    ValueString.Equals(input.ValueString)
+                ) &&
+                (
+                    Category == input.Category ||
+                    Category != null &&
+                    Category.Equals(input.Category)
+                ) &&
+                (
+                    Description == input.Description ||
+                    Description != null &&
+                    Description.Equals(input.Description)
+                ) &&
+                (
+                    DisplayShowsValue == input.DisplayShowsValue ||
+                    DisplayShowsValue != null &&
+                    DisplayShowsValue.Equals(input.DisplayShowsValue)
+                ) &&
+                (
+                    SpecialUseFlag == input.SpecialUseFlag ||
+                    SpecialUseFlag != null &&
+                    SpecialUseFlag.Equals(input.SpecialUseFlag)
+                ) &&
+                (
+                    DisplayString == input.DisplayString ||
+                    DisplayString != null &&
+                    DisplayString.Equals(input.DisplayString)
+                );
+        }
+
+        /// <summary>
+        ///     To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+            yield break;
+        }
+
+        /// <summary>
+        ///     Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetNameValuePair {\n");
+            sb.Append("class NameValuePair {\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  ValueObject: ").Append(ValueObject).Append("\n");
             sb.Append("  ValueString: ").Append(ValueString).Append("\n");
@@ -104,9 +168,9 @@ namespace CherwellConnector.Model
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
-        /// Returns the JSON string presentation of the object
+        ///     Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
         public string ToJson()
@@ -115,7 +179,7 @@ namespace CherwellConnector.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
+        ///     Returns true if objects are equal
         /// </summary>
         /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
@@ -125,63 +189,9 @@ namespace CherwellConnector.Model
         }
 
         /// <summary>
-        /// Returns true if TrebuchetNameValuePair instances are equal
-        /// </summary>
-        /// <param name="input">Instance of TrebuchetNameValuePair to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(NameValuePair input)
-        {
-            if (input == null)
-                return false;
-
-            return 
-                (
-                    Name == input.Name ||
-                    (Name != null &&
-                    Name.Equals(input.Name))
-                ) && 
-                (
-                    ValueObject.Equals(input.ValueObject) ||
-                    (ValueObject != null &&
-                    ValueObject.Equals(input.ValueObject))
-                ) && 
-                (
-                    ValueString == input.ValueString ||
-                    (ValueString != null &&
-                    ValueString.Equals(input.ValueString))
-                ) && 
-                (
-                    Category == input.Category ||
-                    (Category != null &&
-                    Category.Equals(input.Category))
-                ) && 
-                (
-                    Description == input.Description ||
-                    (Description != null &&
-                    Description.Equals(input.Description))
-                ) && 
-                (
-                    DisplayShowsValue == input.DisplayShowsValue ||
-                    (DisplayShowsValue != null &&
-                    DisplayShowsValue.Equals(input.DisplayShowsValue))
-                ) && 
-                (
-                    SpecialUseFlag == input.SpecialUseFlag ||
-                    (SpecialUseFlag != null &&
-                    SpecialUseFlag.Equals(input.SpecialUseFlag))
-                ) && 
-                (
-                    DisplayString == input.DisplayString ||
-                    (DisplayString != null &&
-                    DisplayString.Equals(input.DisplayString))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
+        ///     Gets the hash code
         /// </summary>
         /// <returns>Hash code</returns>
-        
         public override int GetHashCode()
         {
             var hashCode = 41;
@@ -206,16 +216,5 @@ namespace CherwellConnector.Model
                 return hashCode;
             }
         }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-            yield break;
-        }
     }
-
 }

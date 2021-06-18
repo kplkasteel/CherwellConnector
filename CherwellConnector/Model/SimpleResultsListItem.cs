@@ -1,23 +1,21 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Runtime.Serialization;
+using System.Text;
+using Newtonsoft.Json;
 
 namespace CherwellConnector.Model
 {
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.Linq;
-    using System.Runtime.Serialization;
-    using System.Text;
-
-    using Newtonsoft.Json;
-
     /// <summary>
-    /// SimpleResultsListItem
+    ///     SimpleResultsListItem
     /// </summary>
     [DataContract]
-    public sealed class SimpleResultsListItem :  IEquatable<SimpleResultsListItem>, IValidatableObject
+    public sealed class SimpleResultsListItem : IEquatable<SimpleResultsListItem>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="SimpleResultsListItem" /> class.
+        ///     Initializes a new instance of the <see cref="SimpleResultsListItem" /> class.
         /// </summary>
         /// <param name="busObId">busObId.</param>
         /// <param name="busObRecId">busObRecId.</param>
@@ -30,7 +28,10 @@ namespace CherwellConnector.Model
         /// <param name="subTitle">subTitle.</param>
         /// <param name="text">text.</param>
         /// <param name="title">title.</param>
-        public SimpleResultsListItem(string busObId = default, string busObRecId = default, string docRepositoryItemId = default, string galleryImage = default, List<Link> links = default, string publicId = default, string scope = default, string scopeOwner = default, string subTitle = default, string text = default, string title = default)
+        public SimpleResultsListItem(string busObId = default, string busObRecId = default,
+            string docRepositoryItemId = default, string galleryImage = default, List<Link> links = default,
+            string publicId = default, string scope = default, string scopeOwner = default, string subTitle = default,
+            string text = default, string title = default)
         {
             BusObId = busObId;
             BusObRecId = busObRecId;
@@ -44,75 +45,153 @@ namespace CherwellConnector.Model
             Text = text;
             Title = title;
         }
-        
+
         /// <summary>
-        /// Gets or Sets BusObId
+        ///     Gets or Sets BusObId
         /// </summary>
-        [DataMember(Name="busObId", EmitDefaultValue=false)]
+        [DataMember(Name = "busObId", EmitDefaultValue = false)]
         public string BusObId { get; set; }
 
         /// <summary>
-        /// Gets or Sets BusObRecId
+        ///     Gets or Sets BusObRecId
         /// </summary>
-        [DataMember(Name="busObRecId", EmitDefaultValue=false)]
+        [DataMember(Name = "busObRecId", EmitDefaultValue = false)]
         public string BusObRecId { get; set; }
 
         /// <summary>
-        /// Gets or Sets DocRepositoryItemId
+        ///     Gets or Sets DocRepositoryItemId
         /// </summary>
-        [DataMember(Name="docRepositoryItemId", EmitDefaultValue=false)]
+        [DataMember(Name = "docRepositoryItemId", EmitDefaultValue = false)]
         public string DocRepositoryItemId { get; set; }
 
         /// <summary>
-        /// Gets or Sets GalleryImage
+        ///     Gets or Sets GalleryImage
         /// </summary>
-        [DataMember(Name="galleryImage", EmitDefaultValue=false)]
+        [DataMember(Name = "galleryImage", EmitDefaultValue = false)]
         public string GalleryImage { get; set; }
 
         /// <summary>
-        /// Gets or Sets Links
+        ///     Gets or Sets Links
         /// </summary>
-        [DataMember(Name="links", EmitDefaultValue=false)]
+        [DataMember(Name = "links", EmitDefaultValue = false)]
         public List<Link> Links { get; set; }
 
         /// <summary>
-        /// Gets or Sets PublicId
+        ///     Gets or Sets PublicId
         /// </summary>
-        [DataMember(Name="publicId", EmitDefaultValue=false)]
+        [DataMember(Name = "publicId", EmitDefaultValue = false)]
         public string PublicId { get; set; }
 
         /// <summary>
-        /// Gets or Sets Scope
+        ///     Gets or Sets Scope
         /// </summary>
-        [DataMember(Name="scope", EmitDefaultValue=false)]
+        [DataMember(Name = "scope", EmitDefaultValue = false)]
         public string Scope { get; set; }
 
         /// <summary>
-        /// Gets or Sets ScopeOwner
+        ///     Gets or Sets ScopeOwner
         /// </summary>
-        [DataMember(Name="scopeOwner", EmitDefaultValue=false)]
+        [DataMember(Name = "scopeOwner", EmitDefaultValue = false)]
         public string ScopeOwner { get; set; }
 
         /// <summary>
-        /// Gets or Sets SubTitle
+        ///     Gets or Sets SubTitle
         /// </summary>
-        [DataMember(Name="subTitle", EmitDefaultValue=false)]
+        [DataMember(Name = "subTitle", EmitDefaultValue = false)]
         public string SubTitle { get; set; }
 
         /// <summary>
-        /// Gets or Sets Text
+        ///     Gets or Sets Text
         /// </summary>
-        [DataMember(Name="text", EmitDefaultValue=false)]
+        [DataMember(Name = "text", EmitDefaultValue = false)]
         public string Text { get; set; }
 
         /// <summary>
-        /// Gets or Sets Title
+        ///     Gets or Sets Title
         /// </summary>
-        [DataMember(Name="title", EmitDefaultValue=false)]
+        [DataMember(Name = "title", EmitDefaultValue = false)]
         public string Title { get; set; }
 
         /// <summary>
-        /// Returns the string presentation of the object
+        ///     Returns true if SimpleResultsListItem instances are equal
+        /// </summary>
+        /// <param name="input">Instance of SimpleResultsListItem to be compared</param>
+        /// <returns>Boolean</returns>
+        public bool Equals(SimpleResultsListItem input)
+        {
+            if (input == null)
+                return false;
+
+            return
+                (
+                    BusObId == input.BusObId ||
+                    BusObId != null &&
+                    BusObId.Equals(input.BusObId)
+                ) &&
+                (
+                    BusObRecId == input.BusObRecId ||
+                    BusObRecId != null &&
+                    BusObRecId.Equals(input.BusObRecId)
+                ) &&
+                (
+                    DocRepositoryItemId == input.DocRepositoryItemId ||
+                    DocRepositoryItemId != null &&
+                    DocRepositoryItemId.Equals(input.DocRepositoryItemId)
+                ) &&
+                (
+                    GalleryImage == input.GalleryImage ||
+                    GalleryImage != null &&
+                    GalleryImage.Equals(input.GalleryImage)
+                ) &&
+                (
+                    Links == input.Links ||
+                    Links != null &&
+                    Links.SequenceEqual(input.Links)
+                ) &&
+                (
+                    PublicId == input.PublicId ||
+                    PublicId != null &&
+                    PublicId.Equals(input.PublicId)
+                ) &&
+                (
+                    Scope == input.Scope ||
+                    Scope != null &&
+                    Scope.Equals(input.Scope)
+                ) &&
+                (
+                    ScopeOwner == input.ScopeOwner ||
+                    ScopeOwner != null &&
+                    ScopeOwner.Equals(input.ScopeOwner)
+                ) &&
+                (
+                    SubTitle == input.SubTitle ||
+                    SubTitle != null &&
+                    SubTitle.Equals(input.SubTitle)
+                ) &&
+                (
+                    Text == input.Text ||
+                    Text != null &&
+                    Text.Equals(input.Text)
+                ) &&
+                (
+                    Title == input.Title ||
+                    Title != null &&
+                    Title.Equals(input.Title)
+                );
+        }
+
+        /// <summary>
+        ///     To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+            yield break;
+        }
+
+        /// <summary>
+        ///     Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
         public override string ToString()
@@ -133,18 +212,18 @@ namespace CherwellConnector.Model
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
-        /// Returns the JSON string presentation of the object
+        ///     Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public  string ToJson()
+        public string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }
 
         /// <summary>
-        /// Returns true if objects are equal
+        ///     Returns true if objects are equal
         /// </summary>
         /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
@@ -154,75 +233,7 @@ namespace CherwellConnector.Model
         }
 
         /// <summary>
-        /// Returns true if SimpleResultsListItem instances are equal
-        /// </summary>
-        /// <param name="input">Instance of SimpleResultsListItem to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(SimpleResultsListItem input)
-        {
-            if (input == null)
-                return false;
-
-            return 
-                (
-                    BusObId == input.BusObId ||
-                    (BusObId != null &&
-                    BusObId.Equals(input.BusObId))
-                ) && 
-                (
-                    BusObRecId == input.BusObRecId ||
-                    (BusObRecId != null &&
-                    BusObRecId.Equals(input.BusObRecId))
-                ) && 
-                (
-                    DocRepositoryItemId == input.DocRepositoryItemId ||
-                    (DocRepositoryItemId != null &&
-                    DocRepositoryItemId.Equals(input.DocRepositoryItemId))
-                ) && 
-                (
-                    GalleryImage == input.GalleryImage ||
-                    (GalleryImage != null &&
-                    GalleryImage.Equals(input.GalleryImage))
-                ) && 
-                (
-                    Links == input.Links ||
-                    Links != null &&
-                    Links.SequenceEqual(input.Links)
-                ) && 
-                (
-                    PublicId == input.PublicId ||
-                    (PublicId != null &&
-                    PublicId.Equals(input.PublicId))
-                ) && 
-                (
-                    Scope == input.Scope ||
-                    (Scope != null &&
-                    Scope.Equals(input.Scope))
-                ) && 
-                (
-                    ScopeOwner == input.ScopeOwner ||
-                    (ScopeOwner != null &&
-                    ScopeOwner.Equals(input.ScopeOwner))
-                ) && 
-                (
-                    SubTitle == input.SubTitle ||
-                    (SubTitle != null &&
-                    SubTitle.Equals(input.SubTitle))
-                ) && 
-                (
-                    Text == input.Text ||
-                    (Text != null &&
-                    Text.Equals(input.Text))
-                ) && 
-                (
-                    Title == input.Title ||
-                    (Title != null &&
-                    Title.Equals(input.Title))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
+        ///     Gets the hash code
         /// </summary>
         /// <returns>Hash code</returns>
         public override int GetHashCode()
@@ -255,16 +266,5 @@ namespace CherwellConnector.Model
                 return hashCode;
             }
         }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-            yield break;
-        }
     }
-
 }

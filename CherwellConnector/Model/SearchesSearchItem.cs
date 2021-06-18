@@ -1,23 +1,21 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Runtime.Serialization;
+using System.Text;
+using Newtonsoft.Json;
 
 namespace CherwellConnector.Model
 {
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.Linq;
-    using System.Runtime.Serialization;
-    using System.Text;
-
-    using Newtonsoft.Json;
-
     /// <summary>
-    /// SearchesSearchItem
+    ///     SearchesSearchItem
     /// </summary>
     [DataContract]
-    public sealed class SearchesSearchItem :  IEquatable<SearchesSearchItem>, IValidatableObject
+    public sealed class SearchesSearchItem : IEquatable<SearchesSearchItem>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="SearchesSearchItem" /> class.
+        ///     Initializes a new instance of the <see cref="SearchesSearchItem" /> class.
         /// </summary>
         /// <param name="association">association.</param>
         /// <param name="links">links.</param>
@@ -27,7 +25,9 @@ namespace CherwellConnector.Model
         /// <param name="scopeOwner">scopeOwner.</param>
         /// <param name="searchId">searchId.</param>
         /// <param name="searchName">searchName.</param>
-        public SearchesSearchItem(string association = default, List<Link> links = default, string localizedScopeName = default, string parentFolderId = default, string scope = default, string scopeOwner = default, string searchId = default, string searchName = default)
+        public SearchesSearchItem(string association = default, List<Link> links = default,
+            string localizedScopeName = default, string parentFolderId = default, string scope = default,
+            string scopeOwner = default, string searchId = default, string searchName = default)
         {
             Association = association;
             Links = links;
@@ -38,57 +38,120 @@ namespace CherwellConnector.Model
             SearchId = searchId;
             SearchName = searchName;
         }
-        
+
         /// <summary>
-        /// Gets or Sets Association
+        ///     Gets or Sets Association
         /// </summary>
-        [DataMember(Name="association", EmitDefaultValue=false)]
+        [DataMember(Name = "association", EmitDefaultValue = false)]
         public string Association { get; set; }
 
         /// <summary>
-        /// Gets or Sets Links
+        ///     Gets or Sets Links
         /// </summary>
-        [DataMember(Name="links", EmitDefaultValue=false)]
+        [DataMember(Name = "links", EmitDefaultValue = false)]
         public List<Link> Links { get; set; }
 
         /// <summary>
-        /// Gets or Sets LocalizedScopeName
+        ///     Gets or Sets LocalizedScopeName
         /// </summary>
-        [DataMember(Name="localizedScopeName", EmitDefaultValue=false)]
+        [DataMember(Name = "localizedScopeName", EmitDefaultValue = false)]
         public string LocalizedScopeName { get; set; }
 
         /// <summary>
-        /// Gets or Sets ParentFolderId
+        ///     Gets or Sets ParentFolderId
         /// </summary>
-        [DataMember(Name="parentFolderId", EmitDefaultValue=false)]
+        [DataMember(Name = "parentFolderId", EmitDefaultValue = false)]
         public string ParentFolderId { get; set; }
 
         /// <summary>
-        /// Gets or Sets Scope
+        ///     Gets or Sets Scope
         /// </summary>
-        [DataMember(Name="scope", EmitDefaultValue=false)]
+        [DataMember(Name = "scope", EmitDefaultValue = false)]
         public string Scope { get; set; }
 
         /// <summary>
-        /// Gets or Sets ScopeOwner
+        ///     Gets or Sets ScopeOwner
         /// </summary>
-        [DataMember(Name="scopeOwner", EmitDefaultValue=false)]
+        [DataMember(Name = "scopeOwner", EmitDefaultValue = false)]
         public string ScopeOwner { get; set; }
 
         /// <summary>
-        /// Gets or Sets SearchId
+        ///     Gets or Sets SearchId
         /// </summary>
-        [DataMember(Name="searchId", EmitDefaultValue=false)]
+        [DataMember(Name = "searchId", EmitDefaultValue = false)]
         public string SearchId { get; set; }
 
         /// <summary>
-        /// Gets or Sets SearchName
+        ///     Gets or Sets SearchName
         /// </summary>
-        [DataMember(Name="searchName", EmitDefaultValue=false)]
+        [DataMember(Name = "searchName", EmitDefaultValue = false)]
         public string SearchName { get; set; }
 
         /// <summary>
-        /// Returns the string presentation of the object
+        ///     Returns true if SearchesSearchItem instances are equal
+        /// </summary>
+        /// <param name="input">Instance of SearchesSearchItem to be compared</param>
+        /// <returns>Boolean</returns>
+        public bool Equals(SearchesSearchItem input)
+        {
+            if (input == null)
+                return false;
+
+            return
+                (
+                    Association == input.Association ||
+                    Association != null &&
+                    Association.Equals(input.Association)
+                ) &&
+                (
+                    Links == input.Links ||
+                    Links != null &&
+                    Links.SequenceEqual(input.Links)
+                ) &&
+                (
+                    LocalizedScopeName == input.LocalizedScopeName ||
+                    LocalizedScopeName != null &&
+                    LocalizedScopeName.Equals(input.LocalizedScopeName)
+                ) &&
+                (
+                    ParentFolderId == input.ParentFolderId ||
+                    ParentFolderId != null &&
+                    ParentFolderId.Equals(input.ParentFolderId)
+                ) &&
+                (
+                    Scope == input.Scope ||
+                    Scope != null &&
+                    Scope.Equals(input.Scope)
+                ) &&
+                (
+                    ScopeOwner == input.ScopeOwner ||
+                    ScopeOwner != null &&
+                    ScopeOwner.Equals(input.ScopeOwner)
+                ) &&
+                (
+                    SearchId == input.SearchId ||
+                    SearchId != null &&
+                    SearchId.Equals(input.SearchId)
+                ) &&
+                (
+                    SearchName == input.SearchName ||
+                    SearchName != null &&
+                    SearchName.Equals(input.SearchName)
+                );
+        }
+
+        /// <summary>
+        ///     To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+            yield break;
+        }
+
+        /// <summary>
+        ///     Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
         public override string ToString()
@@ -106,18 +169,18 @@ namespace CherwellConnector.Model
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
-        /// Returns the JSON string presentation of the object
+        ///     Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public  string ToJson()
+        public string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }
 
         /// <summary>
-        /// Returns true if objects are equal
+        ///     Returns true if objects are equal
         /// </summary>
         /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
@@ -127,60 +190,7 @@ namespace CherwellConnector.Model
         }
 
         /// <summary>
-        /// Returns true if SearchesSearchItem instances are equal
-        /// </summary>
-        /// <param name="input">Instance of SearchesSearchItem to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(SearchesSearchItem input)
-        {
-            if (input == null)
-                return false;
-
-            return 
-                (
-                    Association == input.Association ||
-                    (Association != null &&
-                    Association.Equals(input.Association))
-                ) && 
-                (
-                    Links == input.Links ||
-                    Links != null &&
-                    Links.SequenceEqual(input.Links)
-                ) && 
-                (
-                    LocalizedScopeName == input.LocalizedScopeName ||
-                    (LocalizedScopeName != null &&
-                    LocalizedScopeName.Equals(input.LocalizedScopeName))
-                ) && 
-                (
-                    ParentFolderId == input.ParentFolderId ||
-                    (ParentFolderId != null &&
-                    ParentFolderId.Equals(input.ParentFolderId))
-                ) && 
-                (
-                    Scope == input.Scope ||
-                    (Scope != null &&
-                    Scope.Equals(input.Scope))
-                ) && 
-                (
-                    ScopeOwner == input.ScopeOwner ||
-                    (ScopeOwner != null &&
-                    ScopeOwner.Equals(input.ScopeOwner))
-                ) && 
-                (
-                    SearchId == input.SearchId ||
-                    (SearchId != null &&
-                    SearchId.Equals(input.SearchId))
-                ) && 
-                (
-                    SearchName == input.SearchName ||
-                    (SearchName != null &&
-                    SearchName.Equals(input.SearchName))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
+        ///     Gets the hash code
         /// </summary>
         /// <returns>Hash code</returns>
         public override int GetHashCode()
@@ -207,16 +217,5 @@ namespace CherwellConnector.Model
                 return hashCode;
             }
         }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-            yield break;
-        }
     }
-
 }

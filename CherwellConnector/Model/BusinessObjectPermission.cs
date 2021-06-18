@@ -1,23 +1,21 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Runtime.Serialization;
+using System.Text;
+using Newtonsoft.Json;
 
 namespace CherwellConnector.Model
 {
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.Linq;
-    using System.Runtime.Serialization;
-    using System.Text;
-
-    using Newtonsoft.Json;
-
     /// <summary>
-    /// BusinessObjectPermission
+    ///     BusinessObjectPermission
     /// </summary>
     [DataContract]
-    public sealed class BusinessObjectPermission :  IEquatable<BusinessObjectPermission>, IValidatableObject
+    public sealed class BusinessObjectPermission : IEquatable<BusinessObjectPermission>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="BusinessObjectPermission" /> class.
+        ///     Initializes a new instance of the <see cref="BusinessObjectPermission" /> class.
         /// </summary>
         /// <param name="busObId">busObId.</param>
         /// <param name="busObName">busObName.</param>
@@ -34,7 +32,12 @@ namespace CherwellConnector.Model
         /// <param name="teamManagerOfOwnerView">teamManagerOfOwnerView.</param>
         /// <param name="teamView">teamView.</param>
         /// <param name="view">view.</param>
-        public BusinessObjectPermission(string busObId = default, string busObName = default, bool? departmentMemberEdit = default, bool? departmentMemberView = default, bool? edit = default, List<FieldPermission> fieldPermissions = default, bool? managerOfOwnerEdit = default, bool? managerOfOwnerView = default, bool? ownerEdit = default, bool? ownerView = default, bool? teamEdit = default, bool? teamManagerOfOwnerEdit = default, bool? teamManagerOfOwnerView = default, bool? teamView = default, bool? view = default)
+        public BusinessObjectPermission(string busObId = default, string busObName = default,
+            bool? departmentMemberEdit = default, bool? departmentMemberView = default, bool? edit = default,
+            List<FieldPermission> fieldPermissions = default, bool? managerOfOwnerEdit = default,
+            bool? managerOfOwnerView = default, bool? ownerEdit = default, bool? ownerView = default,
+            bool? teamEdit = default, bool? teamManagerOfOwnerEdit = default, bool? teamManagerOfOwnerView = default,
+            bool? teamView = default, bool? view = default)
         {
             BusObId = busObId;
             BusObName = busObName;
@@ -52,99 +55,197 @@ namespace CherwellConnector.Model
             TeamView = teamView;
             View = view;
         }
-        
+
         /// <summary>
-        /// Gets or Sets BusObId
+        ///     Gets or Sets BusObId
         /// </summary>
-        [DataMember(Name="busObId", EmitDefaultValue=false)]
+        [DataMember(Name = "busObId", EmitDefaultValue = false)]
         public string BusObId { get; set; }
 
         /// <summary>
-        /// Gets or Sets BusObName
+        ///     Gets or Sets BusObName
         /// </summary>
-        [DataMember(Name="busObName", EmitDefaultValue=false)]
+        [DataMember(Name = "busObName", EmitDefaultValue = false)]
         public string BusObName { get; set; }
 
         /// <summary>
-        /// Gets or Sets DepartmentMemberEdit
+        ///     Gets or Sets DepartmentMemberEdit
         /// </summary>
-        [DataMember(Name="departmentMemberEdit", EmitDefaultValue=false)]
+        [DataMember(Name = "departmentMemberEdit", EmitDefaultValue = false)]
         public bool? DepartmentMemberEdit { get; set; }
 
         /// <summary>
-        /// Gets or Sets DepartmentMemberView
+        ///     Gets or Sets DepartmentMemberView
         /// </summary>
-        [DataMember(Name="departmentMemberView", EmitDefaultValue=false)]
+        [DataMember(Name = "departmentMemberView", EmitDefaultValue = false)]
         public bool? DepartmentMemberView { get; set; }
 
         /// <summary>
-        /// Gets or Sets Edit
+        ///     Gets or Sets Edit
         /// </summary>
-        [DataMember(Name="edit", EmitDefaultValue=false)]
+        [DataMember(Name = "edit", EmitDefaultValue = false)]
         public bool? Edit { get; set; }
 
         /// <summary>
-        /// Gets or Sets FieldPermissions
+        ///     Gets or Sets FieldPermissions
         /// </summary>
-        [DataMember(Name="fieldPermissions", EmitDefaultValue=false)]
+        [DataMember(Name = "fieldPermissions", EmitDefaultValue = false)]
         public List<FieldPermission> FieldPermissions { get; set; }
 
         /// <summary>
-        /// Gets or Sets ManagerOfOwnerEdit
+        ///     Gets or Sets ManagerOfOwnerEdit
         /// </summary>
-        [DataMember(Name="managerOfOwnerEdit", EmitDefaultValue=false)]
+        [DataMember(Name = "managerOfOwnerEdit", EmitDefaultValue = false)]
         public bool? ManagerOfOwnerEdit { get; set; }
 
         /// <summary>
-        /// Gets or Sets ManagerOfOwnerView
+        ///     Gets or Sets ManagerOfOwnerView
         /// </summary>
-        [DataMember(Name="managerOfOwnerView", EmitDefaultValue=false)]
+        [DataMember(Name = "managerOfOwnerView", EmitDefaultValue = false)]
         public bool? ManagerOfOwnerView { get; set; }
 
         /// <summary>
-        /// Gets or Sets OwnerEdit
+        ///     Gets or Sets OwnerEdit
         /// </summary>
-        [DataMember(Name="ownerEdit", EmitDefaultValue=false)]
+        [DataMember(Name = "ownerEdit", EmitDefaultValue = false)]
         public bool? OwnerEdit { get; set; }
 
         /// <summary>
-        /// Gets or Sets OwnerView
+        ///     Gets or Sets OwnerView
         /// </summary>
-        [DataMember(Name="ownerView", EmitDefaultValue=false)]
+        [DataMember(Name = "ownerView", EmitDefaultValue = false)]
         public bool? OwnerView { get; set; }
 
         /// <summary>
-        /// Gets or Sets TeamEdit
+        ///     Gets or Sets TeamEdit
         /// </summary>
-        [DataMember(Name="teamEdit", EmitDefaultValue=false)]
+        [DataMember(Name = "teamEdit", EmitDefaultValue = false)]
         public bool? TeamEdit { get; set; }
 
         /// <summary>
-        /// Gets or Sets TeamManagerOfOwnerEdit
+        ///     Gets or Sets TeamManagerOfOwnerEdit
         /// </summary>
-        [DataMember(Name="teamManagerOfOwnerEdit", EmitDefaultValue=false)]
+        [DataMember(Name = "teamManagerOfOwnerEdit", EmitDefaultValue = false)]
         public bool? TeamManagerOfOwnerEdit { get; set; }
 
         /// <summary>
-        /// Gets or Sets TeamManagerOfOwnerView
+        ///     Gets or Sets TeamManagerOfOwnerView
         /// </summary>
-        [DataMember(Name="teamManagerOfOwnerView", EmitDefaultValue=false)]
+        [DataMember(Name = "teamManagerOfOwnerView", EmitDefaultValue = false)]
         public bool? TeamManagerOfOwnerView { get; set; }
 
         /// <summary>
-        /// Gets or Sets TeamView
+        ///     Gets or Sets TeamView
         /// </summary>
-        [DataMember(Name="teamView", EmitDefaultValue=false)]
+        [DataMember(Name = "teamView", EmitDefaultValue = false)]
         public bool? TeamView { get; set; }
 
         /// <summary>
-        /// Gets or Sets View
+        ///     Gets or Sets View
         /// </summary>
-        [DataMember(Name="view", EmitDefaultValue=false)]
+        [DataMember(Name = "view", EmitDefaultValue = false)]
         public bool? View { get; set; }
 
         /// <summary>
-        /// Returns the string presentation of the object
+        ///     Returns true if BusinessObjectPermission instances are equal
+        /// </summary>
+        /// <param name="input">Instance of BusinessObjectPermission to be compared</param>
+        /// <returns>Boolean</returns>
+        public bool Equals(BusinessObjectPermission input)
+        {
+            if (input == null)
+                return false;
+
+            return
+                (
+                    BusObId == input.BusObId ||
+                    BusObId != null &&
+                    BusObId.Equals(input.BusObId)
+                ) &&
+                (
+                    BusObName == input.BusObName ||
+                    BusObName != null &&
+                    BusObName.Equals(input.BusObName)
+                ) &&
+                (
+                    DepartmentMemberEdit == input.DepartmentMemberEdit ||
+                    DepartmentMemberEdit != null &&
+                    DepartmentMemberEdit.Equals(input.DepartmentMemberEdit)
+                ) &&
+                (
+                    DepartmentMemberView == input.DepartmentMemberView ||
+                    DepartmentMemberView != null &&
+                    DepartmentMemberView.Equals(input.DepartmentMemberView)
+                ) &&
+                (
+                    Edit == input.Edit ||
+                    Edit != null &&
+                    Edit.Equals(input.Edit)
+                ) &&
+                (
+                    FieldPermissions == input.FieldPermissions ||
+                    FieldPermissions != null &&
+                    FieldPermissions.SequenceEqual(input.FieldPermissions)
+                ) &&
+                (
+                    ManagerOfOwnerEdit == input.ManagerOfOwnerEdit ||
+                    ManagerOfOwnerEdit != null &&
+                    ManagerOfOwnerEdit.Equals(input.ManagerOfOwnerEdit)
+                ) &&
+                (
+                    ManagerOfOwnerView == input.ManagerOfOwnerView ||
+                    ManagerOfOwnerView != null &&
+                    ManagerOfOwnerView.Equals(input.ManagerOfOwnerView)
+                ) &&
+                (
+                    OwnerEdit == input.OwnerEdit ||
+                    OwnerEdit != null &&
+                    OwnerEdit.Equals(input.OwnerEdit)
+                ) &&
+                (
+                    OwnerView == input.OwnerView ||
+                    OwnerView != null &&
+                    OwnerView.Equals(input.OwnerView)
+                ) &&
+                (
+                    TeamEdit == input.TeamEdit ||
+                    TeamEdit != null &&
+                    TeamEdit.Equals(input.TeamEdit)
+                ) &&
+                (
+                    TeamManagerOfOwnerEdit == input.TeamManagerOfOwnerEdit ||
+                    TeamManagerOfOwnerEdit != null &&
+                    TeamManagerOfOwnerEdit.Equals(input.TeamManagerOfOwnerEdit)
+                ) &&
+                (
+                    TeamManagerOfOwnerView == input.TeamManagerOfOwnerView ||
+                    TeamManagerOfOwnerView != null &&
+                    TeamManagerOfOwnerView.Equals(input.TeamManagerOfOwnerView)
+                ) &&
+                (
+                    TeamView == input.TeamView ||
+                    TeamView != null &&
+                    TeamView.Equals(input.TeamView)
+                ) &&
+                (
+                    View == input.View ||
+                    View != null &&
+                    View.Equals(input.View)
+                );
+        }
+
+        /// <summary>
+        ///     To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+            yield break;
+        }
+
+        /// <summary>
+        ///     Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
         public override string ToString()
@@ -169,18 +270,18 @@ namespace CherwellConnector.Model
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
-        /// Returns the JSON string presentation of the object
+        ///     Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public  string ToJson()
+        public string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }
 
         /// <summary>
-        /// Returns true if objects are equal
+        ///     Returns true if objects are equal
         /// </summary>
         /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
@@ -190,95 +291,7 @@ namespace CherwellConnector.Model
         }
 
         /// <summary>
-        /// Returns true if BusinessObjectPermission instances are equal
-        /// </summary>
-        /// <param name="input">Instance of BusinessObjectPermission to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(BusinessObjectPermission input)
-        {
-            if (input == null)
-                return false;
-
-            return 
-                (
-                    BusObId == input.BusObId ||
-                    (BusObId != null &&
-                    BusObId.Equals(input.BusObId))
-                ) && 
-                (
-                    BusObName == input.BusObName ||
-                    (BusObName != null &&
-                    BusObName.Equals(input.BusObName))
-                ) && 
-                (
-                    DepartmentMemberEdit == input.DepartmentMemberEdit ||
-                    (DepartmentMemberEdit != null &&
-                    DepartmentMemberEdit.Equals(input.DepartmentMemberEdit))
-                ) && 
-                (
-                    DepartmentMemberView == input.DepartmentMemberView ||
-                    (DepartmentMemberView != null &&
-                    DepartmentMemberView.Equals(input.DepartmentMemberView))
-                ) && 
-                (
-                    Edit == input.Edit ||
-                    (Edit != null &&
-                    Edit.Equals(input.Edit))
-                ) && 
-                (
-                    FieldPermissions == input.FieldPermissions ||
-                    FieldPermissions != null &&
-                    FieldPermissions.SequenceEqual(input.FieldPermissions)
-                ) && 
-                (
-                    ManagerOfOwnerEdit == input.ManagerOfOwnerEdit ||
-                    (ManagerOfOwnerEdit != null &&
-                    ManagerOfOwnerEdit.Equals(input.ManagerOfOwnerEdit))
-                ) && 
-                (
-                    ManagerOfOwnerView == input.ManagerOfOwnerView ||
-                    (ManagerOfOwnerView != null &&
-                    ManagerOfOwnerView.Equals(input.ManagerOfOwnerView))
-                ) && 
-                (
-                    OwnerEdit == input.OwnerEdit ||
-                    (OwnerEdit != null &&
-                    OwnerEdit.Equals(input.OwnerEdit))
-                ) && 
-                (
-                    OwnerView == input.OwnerView ||
-                    (OwnerView != null &&
-                    OwnerView.Equals(input.OwnerView))
-                ) && 
-                (
-                    TeamEdit == input.TeamEdit ||
-                    (TeamEdit != null &&
-                    TeamEdit.Equals(input.TeamEdit))
-                ) && 
-                (
-                    TeamManagerOfOwnerEdit == input.TeamManagerOfOwnerEdit ||
-                    (TeamManagerOfOwnerEdit != null &&
-                    TeamManagerOfOwnerEdit.Equals(input.TeamManagerOfOwnerEdit))
-                ) && 
-                (
-                    TeamManagerOfOwnerView == input.TeamManagerOfOwnerView ||
-                    (TeamManagerOfOwnerView != null &&
-                    TeamManagerOfOwnerView.Equals(input.TeamManagerOfOwnerView))
-                ) && 
-                (
-                    TeamView == input.TeamView ||
-                    (TeamView != null &&
-                    TeamView.Equals(input.TeamView))
-                ) && 
-                (
-                    View == input.View ||
-                    (View != null &&
-                    View.Equals(input.View))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
+        ///     Gets the hash code
         /// </summary>
         /// <returns>Hash code</returns>
         public override int GetHashCode()
@@ -319,16 +332,5 @@ namespace CherwellConnector.Model
                 return hashCode;
             }
         }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-            yield break;
-        }
     }
-
 }

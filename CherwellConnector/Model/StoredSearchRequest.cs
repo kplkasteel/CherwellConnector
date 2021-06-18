@@ -1,22 +1,20 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Runtime.Serialization;
+using System.Text;
+using Newtonsoft.Json;
 
 namespace CherwellConnector.Model
 {
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.Runtime.Serialization;
-    using System.Text;
-
-    using Newtonsoft.Json;
-
     /// <summary>
-    /// StoredSearchRequest
+    ///     StoredSearchRequest
     /// </summary>
     [DataContract]
-    public sealed class StoredSearchRequest :  IEquatable<StoredSearchRequest>, IValidatableObject
+    public sealed class StoredSearchRequest : IEquatable<StoredSearchRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="StoredSearchRequest" /> class.
+        ///     Initializes a new instance of the <see cref="StoredSearchRequest" /> class.
         /// </summary>
         /// <param name="associationId">associationId.</param>
         /// <param name="associationName">associationName.</param>
@@ -26,7 +24,9 @@ namespace CherwellConnector.Model
         /// <param name="scopeOwnerId">scopeOwnerId.</param>
         /// <param name="searchId">searchId.</param>
         /// <param name="searchName">searchName.</param>
-        public StoredSearchRequest(string associationId = default, string associationName = default, string gridId = default, bool? includeSchema = default, string scope = default, string scopeOwnerId = default, string searchId = default, string searchName = default)
+        public StoredSearchRequest(string associationId = default, string associationName = default,
+            string gridId = default, bool? includeSchema = default, string scope = default,
+            string scopeOwnerId = default, string searchId = default, string searchName = default)
         {
             AssociationId = associationId;
             AssociationName = associationName;
@@ -37,57 +37,120 @@ namespace CherwellConnector.Model
             SearchId = searchId;
             SearchName = searchName;
         }
-        
+
         /// <summary>
-        /// Gets or Sets AssociationId
+        ///     Gets or Sets AssociationId
         /// </summary>
-        [DataMember(Name="associationId", EmitDefaultValue=false)]
+        [DataMember(Name = "associationId", EmitDefaultValue = false)]
         public string AssociationId { get; set; }
 
         /// <summary>
-        /// Gets or Sets AssociationName
+        ///     Gets or Sets AssociationName
         /// </summary>
-        [DataMember(Name="associationName", EmitDefaultValue=false)]
+        [DataMember(Name = "associationName", EmitDefaultValue = false)]
         public string AssociationName { get; set; }
 
         /// <summary>
-        /// Gets or Sets GridId
+        ///     Gets or Sets GridId
         /// </summary>
-        [DataMember(Name="gridId", EmitDefaultValue=false)]
+        [DataMember(Name = "gridId", EmitDefaultValue = false)]
         public string GridId { get; set; }
 
         /// <summary>
-        /// Gets or Sets IncludeSchema
+        ///     Gets or Sets IncludeSchema
         /// </summary>
-        [DataMember(Name="includeSchema", EmitDefaultValue=false)]
+        [DataMember(Name = "includeSchema", EmitDefaultValue = false)]
         public bool? IncludeSchema { get; set; }
 
         /// <summary>
-        /// Gets or Sets Scope
+        ///     Gets or Sets Scope
         /// </summary>
-        [DataMember(Name="scope", EmitDefaultValue=false)]
+        [DataMember(Name = "scope", EmitDefaultValue = false)]
         public string Scope { get; set; }
 
         /// <summary>
-        /// Gets or Sets ScopeOwnerId
+        ///     Gets or Sets ScopeOwnerId
         /// </summary>
-        [DataMember(Name="scopeOwnerId", EmitDefaultValue=false)]
+        [DataMember(Name = "scopeOwnerId", EmitDefaultValue = false)]
         public string ScopeOwnerId { get; set; }
 
         /// <summary>
-        /// Gets or Sets SearchId
+        ///     Gets or Sets SearchId
         /// </summary>
-        [DataMember(Name="searchId", EmitDefaultValue=false)]
+        [DataMember(Name = "searchId", EmitDefaultValue = false)]
         public string SearchId { get; set; }
 
         /// <summary>
-        /// Gets or Sets SearchName
+        ///     Gets or Sets SearchName
         /// </summary>
-        [DataMember(Name="searchName", EmitDefaultValue=false)]
+        [DataMember(Name = "searchName", EmitDefaultValue = false)]
         public string SearchName { get; set; }
 
         /// <summary>
-        /// Returns the string presentation of the object
+        ///     Returns true if StoredSearchRequest instances are equal
+        /// </summary>
+        /// <param name="input">Instance of StoredSearchRequest to be compared</param>
+        /// <returns>Boolean</returns>
+        public bool Equals(StoredSearchRequest input)
+        {
+            if (input == null)
+                return false;
+
+            return
+                (
+                    AssociationId == input.AssociationId ||
+                    AssociationId != null &&
+                    AssociationId.Equals(input.AssociationId)
+                ) &&
+                (
+                    AssociationName == input.AssociationName ||
+                    AssociationName != null &&
+                    AssociationName.Equals(input.AssociationName)
+                ) &&
+                (
+                    GridId == input.GridId ||
+                    GridId != null &&
+                    GridId.Equals(input.GridId)
+                ) &&
+                (
+                    IncludeSchema == input.IncludeSchema ||
+                    IncludeSchema != null &&
+                    IncludeSchema.Equals(input.IncludeSchema)
+                ) &&
+                (
+                    Scope == input.Scope ||
+                    Scope != null &&
+                    Scope.Equals(input.Scope)
+                ) &&
+                (
+                    ScopeOwnerId == input.ScopeOwnerId ||
+                    ScopeOwnerId != null &&
+                    ScopeOwnerId.Equals(input.ScopeOwnerId)
+                ) &&
+                (
+                    SearchId == input.SearchId ||
+                    SearchId != null &&
+                    SearchId.Equals(input.SearchId)
+                ) &&
+                (
+                    SearchName == input.SearchName ||
+                    SearchName != null &&
+                    SearchName.Equals(input.SearchName)
+                );
+        }
+
+        /// <summary>
+        ///     To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+            yield break;
+        }
+
+        /// <summary>
+        ///     Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
         public override string ToString()
@@ -105,18 +168,18 @@ namespace CherwellConnector.Model
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
-        /// Returns the JSON string presentation of the object
+        ///     Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public  string ToJson()
+        public string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }
 
         /// <summary>
-        /// Returns true if objects are equal
+        ///     Returns true if objects are equal
         /// </summary>
         /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
@@ -126,60 +189,7 @@ namespace CherwellConnector.Model
         }
 
         /// <summary>
-        /// Returns true if StoredSearchRequest instances are equal
-        /// </summary>
-        /// <param name="input">Instance of StoredSearchRequest to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(StoredSearchRequest input)
-        {
-            if (input == null)
-                return false;
-
-            return 
-                (
-                    AssociationId == input.AssociationId ||
-                    (AssociationId != null &&
-                    AssociationId.Equals(input.AssociationId))
-                ) && 
-                (
-                    AssociationName == input.AssociationName ||
-                    (AssociationName != null &&
-                    AssociationName.Equals(input.AssociationName))
-                ) && 
-                (
-                    GridId == input.GridId ||
-                    (GridId != null &&
-                    GridId.Equals(input.GridId))
-                ) && 
-                (
-                    IncludeSchema == input.IncludeSchema ||
-                    (IncludeSchema != null &&
-                    IncludeSchema.Equals(input.IncludeSchema))
-                ) && 
-                (
-                    Scope == input.Scope ||
-                    (Scope != null &&
-                    Scope.Equals(input.Scope))
-                ) && 
-                (
-                    ScopeOwnerId == input.ScopeOwnerId ||
-                    (ScopeOwnerId != null &&
-                    ScopeOwnerId.Equals(input.ScopeOwnerId))
-                ) && 
-                (
-                    SearchId == input.SearchId ||
-                    (SearchId != null &&
-                    SearchId.Equals(input.SearchId))
-                ) && 
-                (
-                    SearchName == input.SearchName ||
-                    (SearchName != null &&
-                    SearchName.Equals(input.SearchName))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
+        ///     Gets the hash code
         /// </summary>
         /// <returns>Hash code</returns>
         public override int GetHashCode()
@@ -206,16 +216,5 @@ namespace CherwellConnector.Model
                 return hashCode;
             }
         }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-            yield break;
-        }
     }
-
 }

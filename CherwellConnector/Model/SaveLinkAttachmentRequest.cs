@@ -1,22 +1,20 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Runtime.Serialization;
+using System.Text;
+using Newtonsoft.Json;
 
 namespace CherwellConnector.Model
 {
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.Runtime.Serialization;
-    using System.Text;
-
-    using Newtonsoft.Json;
-
     /// <summary>
-    /// SaveLinkAttachmentRequest
+    ///     SaveLinkAttachmentRequest
     /// </summary>
     [DataContract]
-    public sealed class SaveLinkAttachmentRequest :  IEquatable<SaveLinkAttachmentRequest>, IValidatableObject
+    public sealed class SaveLinkAttachmentRequest : IEquatable<SaveLinkAttachmentRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="SaveLinkAttachmentRequest" /> class.
+        ///     Initializes a new instance of the <see cref="SaveLinkAttachmentRequest" /> class.
         /// </summary>
         /// <param name="busObId">busObId.</param>
         /// <param name="busObName">busObName.</param>
@@ -26,7 +24,9 @@ namespace CherwellConnector.Model
         /// <param name="displayText">displayText.</param>
         /// <param name="includeLinks">includeLinks.</param>
         /// <param name="uncFilePath">uncFilePath.</param>
-        public SaveLinkAttachmentRequest(string busObId = default, string busObName = default, string busObPublicId = default, string busObRecId = default, string comment = default, string displayText = default, bool? includeLinks = default, string uncFilePath = default)
+        public SaveLinkAttachmentRequest(string busObId = default, string busObName = default,
+            string busObPublicId = default, string busObRecId = default, string comment = default,
+            string displayText = default, bool? includeLinks = default, string uncFilePath = default)
         {
             BusObId = busObId;
             BusObName = busObName;
@@ -37,57 +37,120 @@ namespace CherwellConnector.Model
             IncludeLinks = includeLinks;
             UncFilePath = uncFilePath;
         }
-        
+
         /// <summary>
-        /// Gets or Sets BusObId
+        ///     Gets or Sets BusObId
         /// </summary>
-        [DataMember(Name="busObId", EmitDefaultValue=false)]
+        [DataMember(Name = "busObId", EmitDefaultValue = false)]
         public string BusObId { get; set; }
 
         /// <summary>
-        /// Gets or Sets BusObName
+        ///     Gets or Sets BusObName
         /// </summary>
-        [DataMember(Name="busObName", EmitDefaultValue=false)]
+        [DataMember(Name = "busObName", EmitDefaultValue = false)]
         public string BusObName { get; set; }
 
         /// <summary>
-        /// Gets or Sets BusObPublicId
+        ///     Gets or Sets BusObPublicId
         /// </summary>
-        [DataMember(Name="busObPublicId", EmitDefaultValue=false)]
+        [DataMember(Name = "busObPublicId", EmitDefaultValue = false)]
         public string BusObPublicId { get; set; }
 
         /// <summary>
-        /// Gets or Sets BusObRecId
+        ///     Gets or Sets BusObRecId
         /// </summary>
-        [DataMember(Name="busObRecId", EmitDefaultValue=false)]
+        [DataMember(Name = "busObRecId", EmitDefaultValue = false)]
         public string BusObRecId { get; set; }
 
         /// <summary>
-        /// Gets or Sets Comment
+        ///     Gets or Sets Comment
         /// </summary>
-        [DataMember(Name="comment", EmitDefaultValue=false)]
+        [DataMember(Name = "comment", EmitDefaultValue = false)]
         public string Comment { get; set; }
 
         /// <summary>
-        /// Gets or Sets DisplayText
+        ///     Gets or Sets DisplayText
         /// </summary>
-        [DataMember(Name="displayText", EmitDefaultValue=false)]
+        [DataMember(Name = "displayText", EmitDefaultValue = false)]
         public string DisplayText { get; set; }
 
         /// <summary>
-        /// Gets or Sets IncludeLinks
+        ///     Gets or Sets IncludeLinks
         /// </summary>
-        [DataMember(Name="includeLinks", EmitDefaultValue=false)]
+        [DataMember(Name = "includeLinks", EmitDefaultValue = false)]
         public bool? IncludeLinks { get; set; }
 
         /// <summary>
-        /// Gets or Sets UncFilePath
+        ///     Gets or Sets UncFilePath
         /// </summary>
-        [DataMember(Name="uncFilePath", EmitDefaultValue=false)]
+        [DataMember(Name = "uncFilePath", EmitDefaultValue = false)]
         public string UncFilePath { get; set; }
 
         /// <summary>
-        /// Returns the string presentation of the object
+        ///     Returns true if SaveLinkAttachmentRequest instances are equal
+        /// </summary>
+        /// <param name="input">Instance of SaveLinkAttachmentRequest to be compared</param>
+        /// <returns>Boolean</returns>
+        public bool Equals(SaveLinkAttachmentRequest input)
+        {
+            if (input == null)
+                return false;
+
+            return
+                (
+                    BusObId == input.BusObId ||
+                    BusObId != null &&
+                    BusObId.Equals(input.BusObId)
+                ) &&
+                (
+                    BusObName == input.BusObName ||
+                    BusObName != null &&
+                    BusObName.Equals(input.BusObName)
+                ) &&
+                (
+                    BusObPublicId == input.BusObPublicId ||
+                    BusObPublicId != null &&
+                    BusObPublicId.Equals(input.BusObPublicId)
+                ) &&
+                (
+                    BusObRecId == input.BusObRecId ||
+                    BusObRecId != null &&
+                    BusObRecId.Equals(input.BusObRecId)
+                ) &&
+                (
+                    Comment == input.Comment ||
+                    Comment != null &&
+                    Comment.Equals(input.Comment)
+                ) &&
+                (
+                    DisplayText == input.DisplayText ||
+                    DisplayText != null &&
+                    DisplayText.Equals(input.DisplayText)
+                ) &&
+                (
+                    IncludeLinks == input.IncludeLinks ||
+                    IncludeLinks != null &&
+                    IncludeLinks.Equals(input.IncludeLinks)
+                ) &&
+                (
+                    UncFilePath == input.UncFilePath ||
+                    UncFilePath != null &&
+                    UncFilePath.Equals(input.UncFilePath)
+                );
+        }
+
+        /// <summary>
+        ///     To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+            yield break;
+        }
+
+        /// <summary>
+        ///     Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
         public override string ToString()
@@ -105,9 +168,9 @@ namespace CherwellConnector.Model
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
-        /// Returns the JSON string presentation of the object
+        ///     Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
         public string ToJson()
@@ -116,7 +179,7 @@ namespace CherwellConnector.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
+        ///     Returns true if objects are equal
         /// </summary>
         /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
@@ -126,63 +189,9 @@ namespace CherwellConnector.Model
         }
 
         /// <summary>
-        /// Returns true if SaveLinkAttachmentRequest instances are equal
-        /// </summary>
-        /// <param name="input">Instance of SaveLinkAttachmentRequest to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(SaveLinkAttachmentRequest input)
-        {
-            if (input == null)
-                return false;
-
-            return 
-                (
-                    BusObId == input.BusObId ||
-                    (BusObId != null &&
-                    BusObId.Equals(input.BusObId))
-                ) && 
-                (
-                    BusObName == input.BusObName ||
-                    (BusObName != null &&
-                    BusObName.Equals(input.BusObName))
-                ) && 
-                (
-                    BusObPublicId == input.BusObPublicId ||
-                    (BusObPublicId != null &&
-                    BusObPublicId.Equals(input.BusObPublicId))
-                ) && 
-                (
-                    BusObRecId == input.BusObRecId ||
-                    (BusObRecId != null &&
-                    BusObRecId.Equals(input.BusObRecId))
-                ) && 
-                (
-                    Comment == input.Comment ||
-                    (Comment != null &&
-                    Comment.Equals(input.Comment))
-                ) && 
-                (
-                    DisplayText == input.DisplayText ||
-                    (DisplayText != null &&
-                    DisplayText.Equals(input.DisplayText))
-                ) && 
-                (
-                    IncludeLinks == input.IncludeLinks ||
-                    (IncludeLinks != null &&
-                    IncludeLinks.Equals(input.IncludeLinks))
-                ) && 
-                (
-                    UncFilePath == input.UncFilePath ||
-                    (UncFilePath != null &&
-                    UncFilePath.Equals(input.UncFilePath))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
+        ///     Gets the hash code
         /// </summary>
         /// <returns>Hash code</returns>
-        
         public override int GetHashCode()
         {
             unchecked // Overflow is fine, just wrap
@@ -207,16 +216,5 @@ namespace CherwellConnector.Model
                 return hashCode;
             }
         }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-            yield break;
-        }
     }
-
 }

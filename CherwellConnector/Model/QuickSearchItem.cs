@@ -1,66 +1,22 @@
-
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Runtime.Serialization;
+using System.Text;
 using CherwellConnector.Enum;
+using Newtonsoft.Json;
 
 namespace CherwellConnector.Model
 {
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.Linq;
-    using System.Runtime.Serialization;
-    using System.Text;
-
-    using Newtonsoft.Json;
-
     /// <summary>
-    /// QuickSearchItem
+    ///     QuickSearchItem
     /// </summary>
     [DataContract]
-    public sealed class QuickSearchItem :  IEquatable<QuickSearchItem>, IValidatableObject
+    public sealed class QuickSearchItem : IEquatable<QuickSearchItem>, IValidatableObject
     {
         /// <summary>
-        /// Gets or Sets ChangedOption
-        /// </summary>
-        [DataMember(Name="changedOption", EmitDefaultValue=false)]
-        public ChangedOptionEnum? ChangedOption { get; set; }
-
-        /// <summary>
-        /// Gets or Sets NonFinalStateOption
-        /// </summary>
-        [DataMember(Name="nonFinalStateOption", EmitDefaultValue=false)]
-        public NonFinalStateOptionEnum? NonFinalStateOption { get; set; }
-
-        /// <summary>
-        /// Gets or Sets SearchAnyWordsOption
-        /// </summary>
-        [DataMember(Name="searchAnyWordsOption", EmitDefaultValue=false)]
-        public SearchAnyWordsOptionEnum? SearchAnyWordsOption { get; set; }
-
-        /// <summary>
-        /// Gets or Sets SearchAttachmentsOption
-        /// </summary>
-        [DataMember(Name="searchAttachmentsOption", EmitDefaultValue=false)]
-        public SearchAttachmentsOptionEnum? SearchAttachmentsOption { get; set; }
-
-        /// <summary>
-        /// Gets or Sets SearchRelatedOption
-        /// </summary>
-        [DataMember(Name="searchRelatedOption", EmitDefaultValue=false)]
-        public SearchRelatedOptionEnum? SearchRelatedOption { get; set; }
-
-        /// <summary>
-        /// Gets or Sets SearchTargetType
-        /// </summary>
-        [DataMember(Name="searchTargetType", EmitDefaultValue=false)]
-        public SearchTargetTypeEnum? SearchTargetType { get; set; }
-
-        /// <summary>
-        /// Gets or Sets SortByOption
-        /// </summary>
-        [DataMember(Name="sortByOption", EmitDefaultValue=false)]
-        public SortByOptionEnum? SortByOption { get; set; }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="QuickSearchItem" /> class.
+        ///     Initializes a new instance of the <see cref="QuickSearchItem" /> class.
         /// </summary>
         /// <param name="ascending">ascending.</param>
         /// <param name="changedLimits">changedLimits.</param>
@@ -79,7 +35,15 @@ namespace CherwellConnector.Model
         /// <param name="sortByFields">sortByFields.</param>
         /// <param name="sortByOption">sortByOption.</param>
         /// <param name="watermarkText">watermarkText.</param>
-        public QuickSearchItem(bool? ascending = default, List<SearchesChangedLimit> changedLimits = default, ChangedOptionEnum? changedOption = default, string displayName = default, string galleryImage = default, bool? hasAnyOptions = default, NonFinalStateOptionEnum? nonFinalStateOption = default, SearchAnyWordsOptionEnum? searchAnyWordsOption = default, SearchAttachmentsOptionEnum? searchAttachmentsOption = default, SearchRelatedOptionEnum? searchRelatedOption = default, string searchTargetId = default, SearchTargetTypeEnum? searchTargetType = default, SearchesChangedLimit selectedChangedLimit = default, string selectedSortByFieldId = default, Dictionary<string, string> sortByFields = default, SortByOptionEnum? sortByOption = default, string watermarkText = default)
+        public QuickSearchItem(bool? ascending = default, List<SearchesChangedLimit> changedLimits = default,
+            ChangedOptionEnum? changedOption = default, string displayName = default, string galleryImage = default,
+            bool? hasAnyOptions = default, NonFinalStateOptionEnum? nonFinalStateOption = default,
+            SearchAnyWordsOptionEnum? searchAnyWordsOption = default,
+            SearchAttachmentsOptionEnum? searchAttachmentsOption = default,
+            SearchRelatedOptionEnum? searchRelatedOption = default, string searchTargetId = default,
+            SearchTargetTypeEnum? searchTargetType = default, SearchesChangedLimit selectedChangedLimit = default,
+            string selectedSortByFieldId = default, Dictionary<string, string> sortByFields = default,
+            SortByOptionEnum? sortByOption = default, string watermarkText = default)
         {
             Ascending = ascending;
             ChangedLimits = changedLimits;
@@ -99,72 +63,222 @@ namespace CherwellConnector.Model
             SortByOption = sortByOption;
             WatermarkText = watermarkText;
         }
-        
+
         /// <summary>
-        /// Gets or Sets Ascending
+        ///     Gets or Sets ChangedOption
         /// </summary>
-        [DataMember(Name="ascending", EmitDefaultValue=false)]
+        [DataMember(Name = "changedOption", EmitDefaultValue = false)]
+        public ChangedOptionEnum? ChangedOption { get; set; }
+
+        /// <summary>
+        ///     Gets or Sets NonFinalStateOption
+        /// </summary>
+        [DataMember(Name = "nonFinalStateOption", EmitDefaultValue = false)]
+        public NonFinalStateOptionEnum? NonFinalStateOption { get; set; }
+
+        /// <summary>
+        ///     Gets or Sets SearchAnyWordsOption
+        /// </summary>
+        [DataMember(Name = "searchAnyWordsOption", EmitDefaultValue = false)]
+        public SearchAnyWordsOptionEnum? SearchAnyWordsOption { get; set; }
+
+        /// <summary>
+        ///     Gets or Sets SearchAttachmentsOption
+        /// </summary>
+        [DataMember(Name = "searchAttachmentsOption", EmitDefaultValue = false)]
+        public SearchAttachmentsOptionEnum? SearchAttachmentsOption { get; set; }
+
+        /// <summary>
+        ///     Gets or Sets SearchRelatedOption
+        /// </summary>
+        [DataMember(Name = "searchRelatedOption", EmitDefaultValue = false)]
+        public SearchRelatedOptionEnum? SearchRelatedOption { get; set; }
+
+        /// <summary>
+        ///     Gets or Sets SearchTargetType
+        /// </summary>
+        [DataMember(Name = "searchTargetType", EmitDefaultValue = false)]
+        public SearchTargetTypeEnum? SearchTargetType { get; set; }
+
+        /// <summary>
+        ///     Gets or Sets SortByOption
+        /// </summary>
+        [DataMember(Name = "sortByOption", EmitDefaultValue = false)]
+        public SortByOptionEnum? SortByOption { get; set; }
+
+        /// <summary>
+        ///     Gets or Sets Ascending
+        /// </summary>
+        [DataMember(Name = "ascending", EmitDefaultValue = false)]
         public bool? Ascending { get; set; }
 
         /// <summary>
-        /// Gets or Sets ChangedLimits
+        ///     Gets or Sets ChangedLimits
         /// </summary>
-        [DataMember(Name="changedLimits", EmitDefaultValue=false)]
+        [DataMember(Name = "changedLimits", EmitDefaultValue = false)]
         public List<SearchesChangedLimit> ChangedLimits { get; set; }
 
 
         /// <summary>
-        /// Gets or Sets DisplayName
+        ///     Gets or Sets DisplayName
         /// </summary>
-        [DataMember(Name="displayName", EmitDefaultValue=false)]
+        [DataMember(Name = "displayName", EmitDefaultValue = false)]
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// Gets or Sets GalleryImage
+        ///     Gets or Sets GalleryImage
         /// </summary>
-        [DataMember(Name="galleryImage", EmitDefaultValue=false)]
+        [DataMember(Name = "galleryImage", EmitDefaultValue = false)]
         public string GalleryImage { get; set; }
 
         /// <summary>
-        /// Gets or Sets HasAnyOptions
+        ///     Gets or Sets HasAnyOptions
         /// </summary>
-        [DataMember(Name="hasAnyOptions", EmitDefaultValue=false)]
+        [DataMember(Name = "hasAnyOptions", EmitDefaultValue = false)]
         public bool? HasAnyOptions { get; set; }
-        
+
         /// <summary>
-        /// Gets or Sets SearchTargetId
+        ///     Gets or Sets SearchTargetId
         /// </summary>
-        [DataMember(Name="searchTargetId", EmitDefaultValue=false)]
+        [DataMember(Name = "searchTargetId", EmitDefaultValue = false)]
         public string SearchTargetId { get; set; }
 
 
         /// <summary>
-        /// Gets or Sets SelectedChangedLimit
+        ///     Gets or Sets SelectedChangedLimit
         /// </summary>
-        [DataMember(Name="selectedChangedLimit", EmitDefaultValue=false)]
+        [DataMember(Name = "selectedChangedLimit", EmitDefaultValue = false)]
         public SearchesChangedLimit SelectedChangedLimit { get; set; }
 
         /// <summary>
-        /// Gets or Sets SelectedSortByFieldId
+        ///     Gets or Sets SelectedSortByFieldId
         /// </summary>
-        [DataMember(Name="selectedSortByFieldId", EmitDefaultValue=false)]
+        [DataMember(Name = "selectedSortByFieldId", EmitDefaultValue = false)]
         public string SelectedSortByFieldId { get; set; }
 
         /// <summary>
-        /// Gets or Sets SortByFields
+        ///     Gets or Sets SortByFields
         /// </summary>
-        [DataMember(Name="sortByFields", EmitDefaultValue=false)]
+        [DataMember(Name = "sortByFields", EmitDefaultValue = false)]
         public Dictionary<string, string> SortByFields { get; set; }
 
 
         /// <summary>
-        /// Gets or Sets WatermarkText
+        ///     Gets or Sets WatermarkText
         /// </summary>
-        [DataMember(Name="watermarkText", EmitDefaultValue=false)]
+        [DataMember(Name = "watermarkText", EmitDefaultValue = false)]
         public string WatermarkText { get; set; }
 
         /// <summary>
-        /// Returns the string presentation of the object
+        ///     Returns true if QuickSearchItem instances are equal
+        /// </summary>
+        /// <param name="input">Instance of QuickSearchItem to be compared</param>
+        /// <returns>Boolean</returns>
+        public bool Equals(QuickSearchItem input)
+        {
+            if (input == null)
+                return false;
+
+            return
+                (
+                    Ascending == input.Ascending ||
+                    Ascending != null &&
+                    Ascending.Equals(input.Ascending)
+                ) &&
+                (
+                    ChangedLimits == input.ChangedLimits ||
+                    ChangedLimits != null &&
+                    ChangedLimits.SequenceEqual(input.ChangedLimits)
+                ) &&
+                (
+                    ChangedOption == input.ChangedOption ||
+                    ChangedOption != null &&
+                    ChangedOption.Equals(input.ChangedOption)
+                ) &&
+                (
+                    DisplayName == input.DisplayName ||
+                    DisplayName != null &&
+                    DisplayName.Equals(input.DisplayName)
+                ) &&
+                (
+                    GalleryImage == input.GalleryImage ||
+                    GalleryImage != null &&
+                    GalleryImage.Equals(input.GalleryImage)
+                ) &&
+                (
+                    HasAnyOptions == input.HasAnyOptions ||
+                    HasAnyOptions != null &&
+                    HasAnyOptions.Equals(input.HasAnyOptions)
+                ) &&
+                (
+                    NonFinalStateOption == input.NonFinalStateOption ||
+                    NonFinalStateOption != null &&
+                    NonFinalStateOption.Equals(input.NonFinalStateOption)
+                ) &&
+                (
+                    SearchAnyWordsOption == input.SearchAnyWordsOption ||
+                    SearchAnyWordsOption != null &&
+                    SearchAnyWordsOption.Equals(input.SearchAnyWordsOption)
+                ) &&
+                (
+                    SearchAttachmentsOption == input.SearchAttachmentsOption ||
+                    SearchAttachmentsOption != null &&
+                    SearchAttachmentsOption.Equals(input.SearchAttachmentsOption)
+                ) &&
+                (
+                    SearchRelatedOption == input.SearchRelatedOption ||
+                    SearchRelatedOption != null &&
+                    SearchRelatedOption.Equals(input.SearchRelatedOption)
+                ) &&
+                (
+                    SearchTargetId == input.SearchTargetId ||
+                    SearchTargetId != null &&
+                    SearchTargetId.Equals(input.SearchTargetId)
+                ) &&
+                (
+                    SearchTargetType == input.SearchTargetType ||
+                    SearchTargetType != null &&
+                    SearchTargetType.Equals(input.SearchTargetType)
+                ) &&
+                (
+                    SelectedChangedLimit == input.SelectedChangedLimit ||
+                    SelectedChangedLimit != null &&
+                    SelectedChangedLimit.Equals(input.SelectedChangedLimit)
+                ) &&
+                (
+                    SelectedSortByFieldId == input.SelectedSortByFieldId ||
+                    SelectedSortByFieldId != null &&
+                    SelectedSortByFieldId.Equals(input.SelectedSortByFieldId)
+                ) &&
+                (
+                    SortByFields == input.SortByFields ||
+                    SortByFields != null &&
+                    SortByFields.SequenceEqual(input.SortByFields)
+                ) &&
+                (
+                    SortByOption == input.SortByOption ||
+                    SortByOption != null &&
+                    SortByOption.Equals(input.SortByOption)
+                ) &&
+                (
+                    WatermarkText == input.WatermarkText ||
+                    WatermarkText != null &&
+                    WatermarkText.Equals(input.WatermarkText)
+                );
+        }
+
+        /// <summary>
+        ///     To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+            yield break;
+        }
+
+        /// <summary>
+        ///     Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
         public override string ToString()
@@ -191,18 +305,18 @@ namespace CherwellConnector.Model
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
-        /// Returns the JSON string presentation of the object
+        ///     Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public  string ToJson()
+        public string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }
 
         /// <summary>
-        /// Returns true if objects are equal
+        ///     Returns true if objects are equal
         /// </summary>
         /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
@@ -212,105 +326,7 @@ namespace CherwellConnector.Model
         }
 
         /// <summary>
-        /// Returns true if QuickSearchItem instances are equal
-        /// </summary>
-        /// <param name="input">Instance of QuickSearchItem to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(QuickSearchItem input)
-        {
-            if (input == null)
-                return false;
-
-            return 
-                (
-                    Ascending == input.Ascending ||
-                    (Ascending != null &&
-                    Ascending.Equals(input.Ascending))
-                ) && 
-                (
-                    ChangedLimits == input.ChangedLimits ||
-                    ChangedLimits != null &&
-                    ChangedLimits.SequenceEqual(input.ChangedLimits)
-                ) && 
-                (
-                    ChangedOption == input.ChangedOption ||
-                    (ChangedOption != null &&
-                    ChangedOption.Equals(input.ChangedOption))
-                ) && 
-                (
-                    DisplayName == input.DisplayName ||
-                    (DisplayName != null &&
-                    DisplayName.Equals(input.DisplayName))
-                ) && 
-                (
-                    GalleryImage == input.GalleryImage ||
-                    (GalleryImage != null &&
-                    GalleryImage.Equals(input.GalleryImage))
-                ) && 
-                (
-                    HasAnyOptions == input.HasAnyOptions ||
-                    (HasAnyOptions != null &&
-                    HasAnyOptions.Equals(input.HasAnyOptions))
-                ) && 
-                (
-                    NonFinalStateOption == input.NonFinalStateOption ||
-                    (NonFinalStateOption != null &&
-                    NonFinalStateOption.Equals(input.NonFinalStateOption))
-                ) && 
-                (
-                    SearchAnyWordsOption == input.SearchAnyWordsOption ||
-                    (SearchAnyWordsOption != null &&
-                    SearchAnyWordsOption.Equals(input.SearchAnyWordsOption))
-                ) && 
-                (
-                    SearchAttachmentsOption == input.SearchAttachmentsOption ||
-                    (SearchAttachmentsOption != null &&
-                    SearchAttachmentsOption.Equals(input.SearchAttachmentsOption))
-                ) && 
-                (
-                    SearchRelatedOption == input.SearchRelatedOption ||
-                    (SearchRelatedOption != null &&
-                    SearchRelatedOption.Equals(input.SearchRelatedOption))
-                ) && 
-                (
-                    SearchTargetId == input.SearchTargetId ||
-                    (SearchTargetId != null &&
-                    SearchTargetId.Equals(input.SearchTargetId))
-                ) && 
-                (
-                    SearchTargetType == input.SearchTargetType ||
-                    (SearchTargetType != null &&
-                    SearchTargetType.Equals(input.SearchTargetType))
-                ) && 
-                (
-                    SelectedChangedLimit == input.SelectedChangedLimit ||
-                    (SelectedChangedLimit != null &&
-                    SelectedChangedLimit.Equals(input.SelectedChangedLimit))
-                ) && 
-                (
-                    SelectedSortByFieldId == input.SelectedSortByFieldId ||
-                    (SelectedSortByFieldId != null &&
-                    SelectedSortByFieldId.Equals(input.SelectedSortByFieldId))
-                ) && 
-                (
-                    SortByFields == input.SortByFields ||
-                    SortByFields != null &&
-                    SortByFields.SequenceEqual(input.SortByFields)
-                ) && 
-                (
-                    SortByOption == input.SortByOption ||
-                    (SortByOption != null &&
-                    SortByOption.Equals(input.SortByOption))
-                ) && 
-                (
-                    WatermarkText == input.WatermarkText ||
-                    (WatermarkText != null &&
-                    WatermarkText.Equals(input.WatermarkText))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
+        ///     Gets the hash code
         /// </summary>
         /// <returns>Hash code</returns>
         public override int GetHashCode()
@@ -354,16 +370,6 @@ namespace CherwellConnector.Model
                     hashCode = hashCode * 59 + WatermarkText.GetHashCode();
                 return hashCode;
             }
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-            yield break;
         }
     }
 }

@@ -1,29 +1,22 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Runtime.Serialization;
+using System.Text;
 using CherwellConnector.Enum;
+using Newtonsoft.Json;
 
 namespace CherwellConnector.Model
 {
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.Linq;
-    using System.Runtime.Serialization;
-    using System.Text;
-
-    using Newtonsoft.Json;
-
     /// <summary>
-    /// ApprovalReadResponse
+    ///     ApprovalReadResponse
     /// </summary>
     [DataContract]
-    public sealed class ApprovalReadResponse :  IEquatable<ApprovalReadResponse>, IValidatableObject
+    public sealed class ApprovalReadResponse : IEquatable<ApprovalReadResponse>, IValidatableObject
     {
         /// <summary>
-        /// Gets or Sets HttpStatusCode
-        /// </summary>
-        [DataMember(Name="httpStatusCode", EmitDefaultValue=false)]
-        public HttpStatusCodeEnum? HttpStatusCode { get; set; }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ApprovalReadResponse" /> class.
+        ///     Initializes a new instance of the <see cref="ApprovalReadResponse" /> class.
         /// </summary>
         /// <param name="properties">properties.</param>
         /// <param name="links">links.</param>
@@ -31,7 +24,9 @@ namespace CherwellConnector.Model
         /// <param name="errorMessage">errorMessage.</param>
         /// <param name="hasError">hasError.</param>
         /// <param name="httpStatusCode">httpStatusCode.</param>
-        public ApprovalReadResponse(Dictionary<string, Object> properties = default, List<Link> links = default, string errorCode = default, string errorMessage = default, bool? hasError = default, HttpStatusCodeEnum? httpStatusCode = default)
+        public ApprovalReadResponse(Dictionary<string, Object> properties = default, List<Link> links = default,
+            string errorCode = default, string errorMessage = default, bool? hasError = default,
+            HttpStatusCodeEnum? httpStatusCode = default)
         {
             Properties = properties;
             Links = links;
@@ -40,40 +35,99 @@ namespace CherwellConnector.Model
             HasError = hasError;
             HttpStatusCode = httpStatusCode;
         }
-        
+
         /// <summary>
-        /// Gets or Sets Properties
+        ///     Gets or Sets HttpStatusCode
         /// </summary>
-        [DataMember(Name="properties", EmitDefaultValue=false)]
+        [DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
+        public HttpStatusCodeEnum? HttpStatusCode { get; set; }
+
+        /// <summary>
+        ///     Gets or Sets Properties
+        /// </summary>
+        [DataMember(Name = "properties", EmitDefaultValue = false)]
         public Dictionary<string, Object> Properties { get; set; }
 
         /// <summary>
-        /// Gets or Sets Links
+        ///     Gets or Sets Links
         /// </summary>
-        [DataMember(Name="links", EmitDefaultValue=false)]
+        [DataMember(Name = "links", EmitDefaultValue = false)]
         public List<Link> Links { get; set; }
 
         /// <summary>
-        /// Gets or Sets ErrorCode
+        ///     Gets or Sets ErrorCode
         /// </summary>
-        [DataMember(Name="errorCode", EmitDefaultValue=false)]
+        [DataMember(Name = "errorCode", EmitDefaultValue = false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// Gets or Sets ErrorMessage
+        ///     Gets or Sets ErrorMessage
         /// </summary>
-        [DataMember(Name="errorMessage", EmitDefaultValue=false)]
+        [DataMember(Name = "errorMessage", EmitDefaultValue = false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// Gets or Sets HasError
+        ///     Gets or Sets HasError
         /// </summary>
-        [DataMember(Name="hasError", EmitDefaultValue=false)]
+        [DataMember(Name = "hasError", EmitDefaultValue = false)]
         public bool? HasError { get; set; }
+
+        /// <summary>
+        ///     Returns true if ApprovalReadResponse instances are equal
+        /// </summary>
+        /// <param name="input">Instance of ApprovalReadResponse to be compared</param>
+        /// <returns>Boolean</returns>
+        public bool Equals(ApprovalReadResponse input)
+        {
+            if (input == null)
+                return false;
+
+            return
+                (
+                    Properties == input.Properties ||
+                    Properties != null &&
+                    Properties.SequenceEqual(input.Properties)
+                ) &&
+                (
+                    Links == input.Links ||
+                    Links != null &&
+                    Links.SequenceEqual(input.Links)
+                ) &&
+                (
+                    ErrorCode == input.ErrorCode ||
+                    ErrorCode != null &&
+                    ErrorCode.Equals(input.ErrorCode)
+                ) &&
+                (
+                    ErrorMessage == input.ErrorMessage ||
+                    ErrorMessage != null &&
+                    ErrorMessage.Equals(input.ErrorMessage)
+                ) &&
+                (
+                    HasError == input.HasError ||
+                    HasError != null &&
+                    HasError.Equals(input.HasError)
+                ) &&
+                (
+                    HttpStatusCode == input.HttpStatusCode ||
+                    HttpStatusCode != null &&
+                    HttpStatusCode.Equals(input.HttpStatusCode)
+                );
+        }
+
+        /// <summary>
+        ///     To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+            yield break;
+        }
 
 
         /// <summary>
-        /// Returns the string presentation of the object
+        ///     Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
         public override string ToString()
@@ -89,9 +143,9 @@ namespace CherwellConnector.Model
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
-        /// Returns the JSON string presentation of the object
+        ///     Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
         public string ToJson()
@@ -100,7 +154,7 @@ namespace CherwellConnector.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
+        ///     Returns true if objects are equal
         /// </summary>
         /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
@@ -110,53 +164,9 @@ namespace CherwellConnector.Model
         }
 
         /// <summary>
-        /// Returns true if ApprovalReadResponse instances are equal
-        /// </summary>
-        /// <param name="input">Instance of ApprovalReadResponse to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(ApprovalReadResponse input)
-        {
-            if (input == null)
-                return false;
-
-            return 
-                (
-                    Properties == input.Properties ||
-                    Properties != null &&
-                    Properties.SequenceEqual(input.Properties)
-                ) && 
-                (
-                    Links == input.Links ||
-                    Links != null &&
-                    Links.SequenceEqual(input.Links)
-                ) && 
-                (
-                    ErrorCode == input.ErrorCode ||
-                    (ErrorCode != null &&
-                    ErrorCode.Equals(input.ErrorCode))
-                ) && 
-                (
-                    ErrorMessage == input.ErrorMessage ||
-                    (ErrorMessage != null &&
-                    ErrorMessage.Equals(input.ErrorMessage))
-                ) && 
-                (
-                    HasError == input.HasError ||
-                    (HasError != null &&
-                    HasError.Equals(input.HasError))
-                ) && 
-                (
-                    HttpStatusCode == input.HttpStatusCode ||
-                    (HttpStatusCode != null &&
-                    HttpStatusCode.Equals(input.HttpStatusCode))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
+        ///     Gets the hash code
         /// </summary>
         /// <returns>Hash code</returns>
-        
         public override int GetHashCode()
         {
             var hashCode = 41;
@@ -176,16 +186,6 @@ namespace CherwellConnector.Model
                     hashCode = hashCode * 59 + HttpStatusCode.GetHashCode();
                 return hashCode;
             }
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-            yield break;
         }
     }
 }

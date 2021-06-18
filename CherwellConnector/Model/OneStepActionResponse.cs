@@ -1,31 +1,21 @@
-
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Runtime.Serialization;
+using System.Text;
 using CherwellConnector.Enum;
+using Newtonsoft.Json;
 
 namespace CherwellConnector.Model
 {
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.Runtime.Serialization;
-    using System.Text;
-
-    using Newtonsoft.Json;
-
     /// <summary>
-    /// OneStepActionResponse
+    ///     OneStepActionResponse
     /// </summary>
     [DataContract]
-    public sealed class OneStepActionResponse :  IEquatable<OneStepActionResponse>, IValidatableObject
+    public sealed class OneStepActionResponse : IEquatable<OneStepActionResponse>, IValidatableObject
     {
-        
-
         /// <summary>
-        /// Gets or Sets HttpStatusCode
-        /// </summary>
-        [DataMember(Name="httpStatusCode", EmitDefaultValue=false)]
-        public HttpStatusCodeEnum? HttpStatusCode { get; set; }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="OneStepActionResponse" /> class.
+        ///     Initializes a new instance of the <see cref="OneStepActionResponse" /> class.
         /// </summary>
         /// <param name="completed">completed.</param>
         /// <param name="currentPrimaryBusObId">currentPrimaryBusObId.</param>
@@ -36,7 +26,10 @@ namespace CherwellConnector.Model
         /// <param name="errorMessage">errorMessage.</param>
         /// <param name="hasError">hasError.</param>
         /// <param name="httpStatusCode">httpStatusCode.</param>
-        public OneStepActionResponse(bool? completed = default, string currentPrimaryBusObId = default, string currentPrimaryBusObRecId = default, bool? hasNewAccessToken = default, string newAccessToken = default, string errorCode = default, string errorMessage = default, bool? hasError = default, HttpStatusCodeEnum? httpStatusCode = default)
+        public OneStepActionResponse(bool? completed = default, string currentPrimaryBusObId = default,
+            string currentPrimaryBusObRecId = default, bool? hasNewAccessToken = default,
+            string newAccessToken = default, string errorCode = default, string errorMessage = default,
+            bool? hasError = default, HttpStatusCodeEnum? httpStatusCode = default)
         {
             Completed = completed;
             CurrentPrimaryBusObId = currentPrimaryBusObId;
@@ -48,58 +41,133 @@ namespace CherwellConnector.Model
             HasError = hasError;
             HttpStatusCode = httpStatusCode;
         }
-        
+
+
         /// <summary>
-        /// Gets or Sets Completed
+        ///     Gets or Sets HttpStatusCode
         /// </summary>
-        [DataMember(Name="completed", EmitDefaultValue=false)]
+        [DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
+        public HttpStatusCodeEnum? HttpStatusCode { get; set; }
+
+        /// <summary>
+        ///     Gets or Sets Completed
+        /// </summary>
+        [DataMember(Name = "completed", EmitDefaultValue = false)]
         public bool? Completed { get; set; }
 
         /// <summary>
-        /// Gets or Sets CurrentPrimaryBusObId
+        ///     Gets or Sets CurrentPrimaryBusObId
         /// </summary>
-        [DataMember(Name="currentPrimaryBusObId", EmitDefaultValue=false)]
+        [DataMember(Name = "currentPrimaryBusObId", EmitDefaultValue = false)]
         public string CurrentPrimaryBusObId { get; set; }
 
         /// <summary>
-        /// Gets or Sets CurrentPrimaryBusObRecId
+        ///     Gets or Sets CurrentPrimaryBusObRecId
         /// </summary>
-        [DataMember(Name="currentPrimaryBusObRecId", EmitDefaultValue=false)]
+        [DataMember(Name = "currentPrimaryBusObRecId", EmitDefaultValue = false)]
         public string CurrentPrimaryBusObRecId { get; set; }
 
         /// <summary>
-        /// Gets or Sets HasNewAccessToken
+        ///     Gets or Sets HasNewAccessToken
         /// </summary>
-        [DataMember(Name="hasNewAccessToken", EmitDefaultValue=false)]
+        [DataMember(Name = "hasNewAccessToken", EmitDefaultValue = false)]
         public bool? HasNewAccessToken { get; set; }
 
         /// <summary>
-        /// Gets or Sets NewAccessToken
+        ///     Gets or Sets NewAccessToken
         /// </summary>
-        [DataMember(Name="newAccessToken", EmitDefaultValue=false)]
+        [DataMember(Name = "newAccessToken", EmitDefaultValue = false)]
         public string NewAccessToken { get; set; }
 
         /// <summary>
-        /// Gets or Sets ErrorCode
+        ///     Gets or Sets ErrorCode
         /// </summary>
-        [DataMember(Name="errorCode", EmitDefaultValue=false)]
+        [DataMember(Name = "errorCode", EmitDefaultValue = false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// Gets or Sets ErrorMessage
+        ///     Gets or Sets ErrorMessage
         /// </summary>
-        [DataMember(Name="errorMessage", EmitDefaultValue=false)]
+        [DataMember(Name = "errorMessage", EmitDefaultValue = false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// Gets or Sets HasError
+        ///     Gets or Sets HasError
         /// </summary>
-        [DataMember(Name="hasError", EmitDefaultValue=false)]
+        [DataMember(Name = "hasError", EmitDefaultValue = false)]
         public bool? HasError { get; set; }
+
+        /// <summary>
+        ///     Returns true if OneStepActionResponse instances are equal
+        /// </summary>
+        /// <param name="input">Instance of OneStepActionResponse to be compared</param>
+        /// <returns>Boolean</returns>
+        public bool Equals(OneStepActionResponse input)
+        {
+            if (input == null)
+                return false;
+
+            return
+                (
+                    Completed == input.Completed ||
+                    Completed != null &&
+                    Completed.Equals(input.Completed)
+                ) &&
+                (
+                    CurrentPrimaryBusObId == input.CurrentPrimaryBusObId ||
+                    CurrentPrimaryBusObId != null &&
+                    CurrentPrimaryBusObId.Equals(input.CurrentPrimaryBusObId)
+                ) &&
+                (
+                    CurrentPrimaryBusObRecId == input.CurrentPrimaryBusObRecId ||
+                    CurrentPrimaryBusObRecId != null &&
+                    CurrentPrimaryBusObRecId.Equals(input.CurrentPrimaryBusObRecId)
+                ) &&
+                (
+                    HasNewAccessToken == input.HasNewAccessToken ||
+                    HasNewAccessToken != null &&
+                    HasNewAccessToken.Equals(input.HasNewAccessToken)
+                ) &&
+                (
+                    NewAccessToken == input.NewAccessToken ||
+                    NewAccessToken != null &&
+                    NewAccessToken.Equals(input.NewAccessToken)
+                ) &&
+                (
+                    ErrorCode == input.ErrorCode ||
+                    ErrorCode != null &&
+                    ErrorCode.Equals(input.ErrorCode)
+                ) &&
+                (
+                    ErrorMessage == input.ErrorMessage ||
+                    ErrorMessage != null &&
+                    ErrorMessage.Equals(input.ErrorMessage)
+                ) &&
+                (
+                    HasError == input.HasError ||
+                    HasError != null &&
+                    HasError.Equals(input.HasError)
+                ) &&
+                (
+                    HttpStatusCode == input.HttpStatusCode ||
+                    HttpStatusCode != null &&
+                    HttpStatusCode.Equals(input.HttpStatusCode)
+                );
+        }
+
+        /// <summary>
+        ///     To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+            yield break;
+        }
 
 
         /// <summary>
-        /// Returns the string presentation of the object
+        ///     Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
         public override string ToString()
@@ -118,18 +186,18 @@ namespace CherwellConnector.Model
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
-        /// Returns the JSON string presentation of the object
+        ///     Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public  string ToJson()
+        public string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }
 
         /// <summary>
-        /// Returns true if objects are equal
+        ///     Returns true if objects are equal
         /// </summary>
         /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
@@ -139,65 +207,7 @@ namespace CherwellConnector.Model
         }
 
         /// <summary>
-        /// Returns true if OneStepActionResponse instances are equal
-        /// </summary>
-        /// <param name="input">Instance of OneStepActionResponse to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(OneStepActionResponse input)
-        {
-            if (input == null)
-                return false;
-
-            return 
-                (
-                    Completed == input.Completed ||
-                    (Completed != null &&
-                    Completed.Equals(input.Completed))
-                ) && 
-                (
-                    CurrentPrimaryBusObId == input.CurrentPrimaryBusObId ||
-                    (CurrentPrimaryBusObId != null &&
-                    CurrentPrimaryBusObId.Equals(input.CurrentPrimaryBusObId))
-                ) && 
-                (
-                    CurrentPrimaryBusObRecId == input.CurrentPrimaryBusObRecId ||
-                    (CurrentPrimaryBusObRecId != null &&
-                    CurrentPrimaryBusObRecId.Equals(input.CurrentPrimaryBusObRecId))
-                ) && 
-                (
-                    HasNewAccessToken == input.HasNewAccessToken ||
-                    (HasNewAccessToken != null &&
-                    HasNewAccessToken.Equals(input.HasNewAccessToken))
-                ) && 
-                (
-                    NewAccessToken == input.NewAccessToken ||
-                    (NewAccessToken != null &&
-                    NewAccessToken.Equals(input.NewAccessToken))
-                ) && 
-                (
-                    ErrorCode == input.ErrorCode ||
-                    (ErrorCode != null &&
-                    ErrorCode.Equals(input.ErrorCode))
-                ) && 
-                (
-                    ErrorMessage == input.ErrorMessage ||
-                    (ErrorMessage != null &&
-                    ErrorMessage.Equals(input.ErrorMessage))
-                ) && 
-                (
-                    HasError == input.HasError ||
-                    (HasError != null &&
-                    HasError.Equals(input.HasError))
-                ) && 
-                (
-                    HttpStatusCode == input.HttpStatusCode ||
-                    (HttpStatusCode != null &&
-                    HttpStatusCode.Equals(input.HttpStatusCode))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
+        ///     Gets the hash code
         /// </summary>
         /// <returns>Hash code</returns>
         public override int GetHashCode()
@@ -226,16 +236,5 @@ namespace CherwellConnector.Model
                 return hashCode;
             }
         }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-            yield break;
-        }
     }
-
 }

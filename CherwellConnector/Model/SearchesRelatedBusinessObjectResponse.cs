@@ -1,23 +1,22 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Runtime.Serialization;
+using System.Text;
+using Newtonsoft.Json;
 
 namespace CherwellConnector.Model
 {
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.Linq;
-    using System.Runtime.Serialization;
-    using System.Text;
-
-    using Newtonsoft.Json;
-
     /// <summary>
-    /// SearchesRelatedBusinessObjectResponse
+    ///     SearchesRelatedBusinessObjectResponse
     /// </summary>
     [DataContract]
-    public sealed class SearchesRelatedBusinessObjectResponse :  IEquatable<SearchesRelatedBusinessObjectResponse>, IValidatableObject
+    public sealed class SearchesRelatedBusinessObjectResponse : IEquatable<SearchesRelatedBusinessObjectResponse>,
+        IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="SearchesRelatedBusinessObjectResponse" /> class.
+        ///     Initializes a new instance of the <see cref="SearchesRelatedBusinessObjectResponse" /> class.
         /// </summary>
         /// <param name="errorCode">errorCode.</param>
         /// <param name="errorMessage">errorMessage.</param>
@@ -31,7 +30,11 @@ namespace CherwellConnector.Model
         /// <param name="relatedBusinessObjects">relatedBusinessObjects.</param>
         /// <param name="relationshipId">relationshipId.</param>
         /// <param name="totalRecords">totalRecords.</param>
-        public SearchesRelatedBusinessObjectResponse(string errorCode = default, string errorMessage = default, bool? hasError = default, List<Link> links = default, int? pageNumber = default, int? pageSize = default, string parentBusObId = default, string parentBusObPublicId = default, string parentBusObRecId = default, List<ReadResponse> relatedBusinessObjects = default, string relationshipId = default, int? totalRecords = default)
+        public SearchesRelatedBusinessObjectResponse(string errorCode = default, string errorMessage = default,
+            bool? hasError = default, List<Link> links = default, int? pageNumber = default, int? pageSize = default,
+            string parentBusObId = default, string parentBusObPublicId = default, string parentBusObRecId = default,
+            List<ReadResponse> relatedBusinessObjects = default, string relationshipId = default,
+            int? totalRecords = default)
         {
             ErrorCode = errorCode;
             ErrorMessage = errorMessage;
@@ -46,81 +49,164 @@ namespace CherwellConnector.Model
             RelationshipId = relationshipId;
             TotalRecords = totalRecords;
         }
-        
+
         /// <summary>
-        /// Gets or Sets ErrorCode
+        ///     Gets or Sets ErrorCode
         /// </summary>
-        [DataMember(Name="errorCode", EmitDefaultValue=false)]
+        [DataMember(Name = "errorCode", EmitDefaultValue = false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// Gets or Sets ErrorMessage
+        ///     Gets or Sets ErrorMessage
         /// </summary>
-        [DataMember(Name="errorMessage", EmitDefaultValue=false)]
+        [DataMember(Name = "errorMessage", EmitDefaultValue = false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// Gets or Sets HasError
+        ///     Gets or Sets HasError
         /// </summary>
-        [DataMember(Name="hasError", EmitDefaultValue=false)]
+        [DataMember(Name = "hasError", EmitDefaultValue = false)]
         public bool? HasError { get; set; }
 
         /// <summary>
-        /// Gets or Sets Links
+        ///     Gets or Sets Links
         /// </summary>
-        [DataMember(Name="links", EmitDefaultValue=false)]
+        [DataMember(Name = "links", EmitDefaultValue = false)]
         public List<Link> Links { get; set; }
 
         /// <summary>
-        /// Gets or Sets PageNumber
+        ///     Gets or Sets PageNumber
         /// </summary>
-        [DataMember(Name="pageNumber", EmitDefaultValue=false)]
+        [DataMember(Name = "pageNumber", EmitDefaultValue = false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// Gets or Sets PageSize
+        ///     Gets or Sets PageSize
         /// </summary>
-        [DataMember(Name="pageSize", EmitDefaultValue=false)]
+        [DataMember(Name = "pageSize", EmitDefaultValue = false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// Gets or Sets ParentBusObId
+        ///     Gets or Sets ParentBusObId
         /// </summary>
-        [DataMember(Name="parentBusObId", EmitDefaultValue=false)]
+        [DataMember(Name = "parentBusObId", EmitDefaultValue = false)]
         public string ParentBusObId { get; set; }
 
         /// <summary>
-        /// Gets or Sets ParentBusObPublicId
+        ///     Gets or Sets ParentBusObPublicId
         /// </summary>
-        [DataMember(Name="parentBusObPublicId", EmitDefaultValue=false)]
+        [DataMember(Name = "parentBusObPublicId", EmitDefaultValue = false)]
         public string ParentBusObPublicId { get; set; }
 
         /// <summary>
-        /// Gets or Sets ParentBusObRecId
+        ///     Gets or Sets ParentBusObRecId
         /// </summary>
-        [DataMember(Name="parentBusObRecId", EmitDefaultValue=false)]
+        [DataMember(Name = "parentBusObRecId", EmitDefaultValue = false)]
         public string ParentBusObRecId { get; set; }
 
         /// <summary>
-        /// Gets or Sets RelatedBusinessObjects
+        ///     Gets or Sets RelatedBusinessObjects
         /// </summary>
-        [DataMember(Name="relatedBusinessObjects", EmitDefaultValue=false)]
+        [DataMember(Name = "relatedBusinessObjects", EmitDefaultValue = false)]
         public List<ReadResponse> RelatedBusinessObjects { get; set; }
 
         /// <summary>
-        /// Gets or Sets RelationshipId
+        ///     Gets or Sets RelationshipId
         /// </summary>
-        [DataMember(Name="relationshipId", EmitDefaultValue=false)]
+        [DataMember(Name = "relationshipId", EmitDefaultValue = false)]
         public string RelationshipId { get; set; }
 
         /// <summary>
-        /// Gets or Sets TotalRecords
+        ///     Gets or Sets TotalRecords
         /// </summary>
-        [DataMember(Name="totalRecords", EmitDefaultValue=false)]
+        [DataMember(Name = "totalRecords", EmitDefaultValue = false)]
         public int? TotalRecords { get; set; }
 
         /// <summary>
-        /// Returns the string presentation of the object
+        ///     Returns true if SearchesRelatedBusinessObjectResponse instances are equal
+        /// </summary>
+        /// <param name="input">Instance of SearchesRelatedBusinessObjectResponse to be compared</param>
+        /// <returns>Boolean</returns>
+        public bool Equals(SearchesRelatedBusinessObjectResponse input)
+        {
+            if (input == null)
+                return false;
+
+            return
+                (
+                    ErrorCode == input.ErrorCode ||
+                    ErrorCode != null &&
+                    ErrorCode.Equals(input.ErrorCode)
+                ) &&
+                (
+                    ErrorMessage == input.ErrorMessage ||
+                    ErrorMessage != null &&
+                    ErrorMessage.Equals(input.ErrorMessage)
+                ) &&
+                (
+                    HasError == input.HasError ||
+                    HasError != null &&
+                    HasError.Equals(input.HasError)
+                ) &&
+                (
+                    Links == input.Links ||
+                    Links != null &&
+                    Links.SequenceEqual(input.Links)
+                ) &&
+                (
+                    PageNumber == input.PageNumber ||
+                    PageNumber != null &&
+                    PageNumber.Equals(input.PageNumber)
+                ) &&
+                (
+                    PageSize == input.PageSize ||
+                    PageSize != null &&
+                    PageSize.Equals(input.PageSize)
+                ) &&
+                (
+                    ParentBusObId == input.ParentBusObId ||
+                    ParentBusObId != null &&
+                    ParentBusObId.Equals(input.ParentBusObId)
+                ) &&
+                (
+                    ParentBusObPublicId == input.ParentBusObPublicId ||
+                    ParentBusObPublicId != null &&
+                    ParentBusObPublicId.Equals(input.ParentBusObPublicId)
+                ) &&
+                (
+                    ParentBusObRecId == input.ParentBusObRecId ||
+                    ParentBusObRecId != null &&
+                    ParentBusObRecId.Equals(input.ParentBusObRecId)
+                ) &&
+                (
+                    RelatedBusinessObjects == input.RelatedBusinessObjects ||
+                    RelatedBusinessObjects != null &&
+                    RelatedBusinessObjects.SequenceEqual(input.RelatedBusinessObjects)
+                ) &&
+                (
+                    RelationshipId == input.RelationshipId ||
+                    RelationshipId != null &&
+                    RelationshipId.Equals(input.RelationshipId)
+                ) &&
+                (
+                    TotalRecords == input.TotalRecords ||
+                    TotalRecords != null &&
+                    TotalRecords.Equals(input.TotalRecords)
+                );
+        }
+
+        /// <summary>
+        ///     To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+            yield break;
+        }
+
+        /// <summary>
+        ///     Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
         public override string ToString()
@@ -142,18 +228,18 @@ namespace CherwellConnector.Model
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
-        /// Returns the JSON string presentation of the object
+        ///     Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public  string ToJson()
+        public string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }
 
         /// <summary>
-        /// Returns true if objects are equal
+        ///     Returns true if objects are equal
         /// </summary>
         /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
@@ -163,80 +249,7 @@ namespace CherwellConnector.Model
         }
 
         /// <summary>
-        /// Returns true if SearchesRelatedBusinessObjectResponse instances are equal
-        /// </summary>
-        /// <param name="input">Instance of SearchesRelatedBusinessObjectResponse to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(SearchesRelatedBusinessObjectResponse input)
-        {
-            if (input == null)
-                return false;
-
-            return 
-                (
-                    ErrorCode == input.ErrorCode ||
-                    (ErrorCode != null &&
-                    ErrorCode.Equals(input.ErrorCode))
-                ) && 
-                (
-                    ErrorMessage == input.ErrorMessage ||
-                    (ErrorMessage != null &&
-                    ErrorMessage.Equals(input.ErrorMessage))
-                ) && 
-                (
-                    HasError == input.HasError ||
-                    (HasError != null &&
-                    HasError.Equals(input.HasError))
-                ) && 
-                (
-                    Links == input.Links ||
-                    Links != null &&
-                    Links.SequenceEqual(input.Links)
-                ) && 
-                (
-                    PageNumber == input.PageNumber ||
-                    (PageNumber != null &&
-                    PageNumber.Equals(input.PageNumber))
-                ) && 
-                (
-                    PageSize == input.PageSize ||
-                    (PageSize != null &&
-                    PageSize.Equals(input.PageSize))
-                ) && 
-                (
-                    ParentBusObId == input.ParentBusObId ||
-                    (ParentBusObId != null &&
-                    ParentBusObId.Equals(input.ParentBusObId))
-                ) && 
-                (
-                    ParentBusObPublicId == input.ParentBusObPublicId ||
-                    (ParentBusObPublicId != null &&
-                    ParentBusObPublicId.Equals(input.ParentBusObPublicId))
-                ) && 
-                (
-                    ParentBusObRecId == input.ParentBusObRecId ||
-                    (ParentBusObRecId != null &&
-                    ParentBusObRecId.Equals(input.ParentBusObRecId))
-                ) && 
-                (
-                    RelatedBusinessObjects == input.RelatedBusinessObjects ||
-                    RelatedBusinessObjects != null &&
-                    RelatedBusinessObjects.SequenceEqual(input.RelatedBusinessObjects)
-                ) && 
-                (
-                    RelationshipId == input.RelationshipId ||
-                    (RelationshipId != null &&
-                    RelationshipId.Equals(input.RelationshipId))
-                ) && 
-                (
-                    TotalRecords == input.TotalRecords ||
-                    (TotalRecords != null &&
-                    TotalRecords.Equals(input.TotalRecords))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
+        ///     Gets the hash code
         /// </summary>
         /// <returns>Hash code</returns>
         public override int GetHashCode()
@@ -271,16 +284,5 @@ namespace CherwellConnector.Model
                 return hashCode;
             }
         }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-            yield break;
-        }
     }
-
 }

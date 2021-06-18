@@ -1,23 +1,21 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Runtime.Serialization;
+using System.Text;
+using Newtonsoft.Json;
 
 namespace CherwellConnector.Model
 {
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.Linq;
-    using System.Runtime.Serialization;
-    using System.Text;
-
-    using Newtonsoft.Json;
-
     /// <summary>
-    /// User
+    ///     User
     /// </summary>
     [DataContract]
-    public sealed class User :  IEquatable<User>, IValidatableObject
+    public sealed class User : IEquatable<User>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="User" /> class.
+        ///     Initializes a new instance of the <see cref="User" /> class.
         /// </summary>
         /// <param name="accountLocked">accountLocked.</param>
         /// <param name="createDateTime">createDateTime.</param>
@@ -36,7 +34,12 @@ namespace CherwellConnector.Model
         /// <param name="shortDisplayName">shortDisplayName.</param>
         /// <param name="userCannotChangePassword">userCannotChangePassword.</param>
         /// <param name="userMustResetPasswordAtNextLogin">userMustResetPasswordAtNextLogin.</param>
-        public User(bool? accountLocked = default, DateTime? createDateTime = default, string displayName = default, string error = default, string errorCode = default, List<FieldTemplateItem> fields = default, bool? hasError = default, DateTime? lastPasswordResetDate = default, DateTime? lastResetDateTime = default, bool? ldapRequired = default, bool? passwordNeverExpires = default, string publicId = default, string recordId = default, string securityGroupId = default, string shortDisplayName = default, bool? userCannotChangePassword = default, bool? userMustResetPasswordAtNextLogin = default)
+        public User(bool? accountLocked = default, DateTime? createDateTime = default, string displayName = default,
+            string error = default, string errorCode = default, List<FieldTemplateItem> fields = default,
+            bool? hasError = default, DateTime? lastPasswordResetDate = default, DateTime? lastResetDateTime = default,
+            bool? ldapRequired = default, bool? passwordNeverExpires = default, string publicId = default,
+            string recordId = default, string securityGroupId = default, string shortDisplayName = default,
+            bool? userCannotChangePassword = default, bool? userMustResetPasswordAtNextLogin = default)
         {
             AccountLocked = accountLocked;
             CreateDateTime = createDateTime;
@@ -56,111 +59,219 @@ namespace CherwellConnector.Model
             UserCannotChangePassword = userCannotChangePassword;
             UserMustResetPasswordAtNextLogin = userMustResetPasswordAtNextLogin;
         }
-        
+
         /// <summary>
-        /// Gets or Sets AccountLocked
+        ///     Gets or Sets AccountLocked
         /// </summary>
-        [DataMember(Name="accountLocked", EmitDefaultValue=false)]
+        [DataMember(Name = "accountLocked", EmitDefaultValue = false)]
         public bool? AccountLocked { get; set; }
 
         /// <summary>
-        /// Gets or Sets CreateDateTime
+        ///     Gets or Sets CreateDateTime
         /// </summary>
-        [DataMember(Name="createDateTime", EmitDefaultValue=false)]
+        [DataMember(Name = "createDateTime", EmitDefaultValue = false)]
         public DateTime? CreateDateTime { get; set; }
 
         /// <summary>
-        /// Gets or Sets DisplayName
+        ///     Gets or Sets DisplayName
         /// </summary>
-        [DataMember(Name="displayName", EmitDefaultValue=false)]
+        [DataMember(Name = "displayName", EmitDefaultValue = false)]
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// Gets or Sets Error
+        ///     Gets or Sets Error
         /// </summary>
-        [DataMember(Name="error", EmitDefaultValue=false)]
+        [DataMember(Name = "error", EmitDefaultValue = false)]
         public string Error { get; set; }
 
         /// <summary>
-        /// Gets or Sets ErrorCode
+        ///     Gets or Sets ErrorCode
         /// </summary>
-        [DataMember(Name="errorCode", EmitDefaultValue=false)]
+        [DataMember(Name = "errorCode", EmitDefaultValue = false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// Gets or Sets Fields
+        ///     Gets or Sets Fields
         /// </summary>
-        [DataMember(Name="fields", EmitDefaultValue=false)]
+        [DataMember(Name = "fields", EmitDefaultValue = false)]
         public List<FieldTemplateItem> Fields { get; set; }
 
         /// <summary>
-        /// Gets or Sets HasError
+        ///     Gets or Sets HasError
         /// </summary>
-        [DataMember(Name="hasError", EmitDefaultValue=false)]
+        [DataMember(Name = "hasError", EmitDefaultValue = false)]
         public bool? HasError { get; set; }
 
         /// <summary>
-        /// Gets or Sets LastPasswordResetDate
+        ///     Gets or Sets LastPasswordResetDate
         /// </summary>
-        [DataMember(Name="lastPasswordResetDate", EmitDefaultValue=false)]
+        [DataMember(Name = "lastPasswordResetDate", EmitDefaultValue = false)]
         public DateTime? LastPasswordResetDate { get; set; }
 
         /// <summary>
-        /// Gets or Sets LastResetDateTime
+        ///     Gets or Sets LastResetDateTime
         /// </summary>
-        [DataMember(Name="lastResetDateTime", EmitDefaultValue=false)]
+        [DataMember(Name = "lastResetDateTime", EmitDefaultValue = false)]
         public DateTime? LastResetDateTime { get; set; }
 
         /// <summary>
-        /// Gets or Sets LdapRequired
+        ///     Gets or Sets LdapRequired
         /// </summary>
-        [DataMember(Name="ldapRequired", EmitDefaultValue=false)]
+        [DataMember(Name = "ldapRequired", EmitDefaultValue = false)]
         public bool? LdapRequired { get; set; }
 
         /// <summary>
-        /// Gets or Sets PasswordNeverExpires
+        ///     Gets or Sets PasswordNeverExpires
         /// </summary>
-        [DataMember(Name="passwordNeverExpires", EmitDefaultValue=false)]
+        [DataMember(Name = "passwordNeverExpires", EmitDefaultValue = false)]
         public bool? PasswordNeverExpires { get; set; }
 
         /// <summary>
-        /// Gets or Sets PublicId
+        ///     Gets or Sets PublicId
         /// </summary>
-        [DataMember(Name="publicId", EmitDefaultValue=false)]
+        [DataMember(Name = "publicId", EmitDefaultValue = false)]
         public string PublicId { get; set; }
 
         /// <summary>
-        /// Gets or Sets RecordId
+        ///     Gets or Sets RecordId
         /// </summary>
-        [DataMember(Name="recordId", EmitDefaultValue=false)]
+        [DataMember(Name = "recordId", EmitDefaultValue = false)]
         public string RecordId { get; set; }
 
         /// <summary>
-        /// Gets or Sets SecurityGroupId
+        ///     Gets or Sets SecurityGroupId
         /// </summary>
-        [DataMember(Name="securityGroupId", EmitDefaultValue=false)]
+        [DataMember(Name = "securityGroupId", EmitDefaultValue = false)]
         public string SecurityGroupId { get; set; }
 
         /// <summary>
-        /// Gets or Sets ShortDisplayName
+        ///     Gets or Sets ShortDisplayName
         /// </summary>
-        [DataMember(Name="shortDisplayName", EmitDefaultValue=false)]
+        [DataMember(Name = "shortDisplayName", EmitDefaultValue = false)]
         public string ShortDisplayName { get; set; }
 
         /// <summary>
-        /// Gets or Sets UserCannotChangePassword
+        ///     Gets or Sets UserCannotChangePassword
         /// </summary>
-        [DataMember(Name="userCannotChangePassword", EmitDefaultValue=false)]
+        [DataMember(Name = "userCannotChangePassword", EmitDefaultValue = false)]
         public bool? UserCannotChangePassword { get; set; }
 
         /// <summary>
-        /// Gets or Sets UserMustResetPasswordAtNextLogin
+        ///     Gets or Sets UserMustResetPasswordAtNextLogin
         /// </summary>
-        [DataMember(Name="userMustResetPasswordAtNextLogin", EmitDefaultValue=false)]
+        [DataMember(Name = "userMustResetPasswordAtNextLogin", EmitDefaultValue = false)]
         public bool? UserMustResetPasswordAtNextLogin { get; set; }
 
         /// <summary>
-        /// Returns the string presentation of the object
+        ///     Returns true if User instances are equal
+        /// </summary>
+        /// <param name="input">Instance of User to be compared</param>
+        /// <returns>Boolean</returns>
+        public bool Equals(User input)
+        {
+            if (input == null)
+                return false;
+
+            return
+                (
+                    AccountLocked == input.AccountLocked ||
+                    AccountLocked != null &&
+                    AccountLocked.Equals(input.AccountLocked)
+                ) &&
+                (
+                    CreateDateTime == input.CreateDateTime ||
+                    CreateDateTime != null &&
+                    CreateDateTime.Equals(input.CreateDateTime)
+                ) &&
+                (
+                    DisplayName == input.DisplayName ||
+                    DisplayName != null &&
+                    DisplayName.Equals(input.DisplayName)
+                ) &&
+                (
+                    Error == input.Error ||
+                    Error != null &&
+                    Error.Equals(input.Error)
+                ) &&
+                (
+                    ErrorCode == input.ErrorCode ||
+                    ErrorCode != null &&
+                    ErrorCode.Equals(input.ErrorCode)
+                ) &&
+                (
+                    Fields == input.Fields ||
+                    Fields != null &&
+                    Fields.SequenceEqual(input.Fields)
+                ) &&
+                (
+                    HasError == input.HasError ||
+                    HasError != null &&
+                    HasError.Equals(input.HasError)
+                ) &&
+                (
+                    LastPasswordResetDate == input.LastPasswordResetDate ||
+                    LastPasswordResetDate != null &&
+                    LastPasswordResetDate.Equals(input.LastPasswordResetDate)
+                ) &&
+                (
+                    LastResetDateTime == input.LastResetDateTime ||
+                    LastResetDateTime != null &&
+                    LastResetDateTime.Equals(input.LastResetDateTime)
+                ) &&
+                (
+                    LdapRequired == input.LdapRequired ||
+                    LdapRequired != null &&
+                    LdapRequired.Equals(input.LdapRequired)
+                ) &&
+                (
+                    PasswordNeverExpires == input.PasswordNeverExpires ||
+                    PasswordNeverExpires != null &&
+                    PasswordNeverExpires.Equals(input.PasswordNeverExpires)
+                ) &&
+                (
+                    PublicId == input.PublicId ||
+                    PublicId != null &&
+                    PublicId.Equals(input.PublicId)
+                ) &&
+                (
+                    RecordId == input.RecordId ||
+                    RecordId != null &&
+                    RecordId.Equals(input.RecordId)
+                ) &&
+                (
+                    SecurityGroupId == input.SecurityGroupId ||
+                    SecurityGroupId != null &&
+                    SecurityGroupId.Equals(input.SecurityGroupId)
+                ) &&
+                (
+                    ShortDisplayName == input.ShortDisplayName ||
+                    ShortDisplayName != null &&
+                    ShortDisplayName.Equals(input.ShortDisplayName)
+                ) &&
+                (
+                    UserCannotChangePassword == input.UserCannotChangePassword ||
+                    UserCannotChangePassword != null &&
+                    UserCannotChangePassword.Equals(input.UserCannotChangePassword)
+                ) &&
+                (
+                    UserMustResetPasswordAtNextLogin == input.UserMustResetPasswordAtNextLogin ||
+                    UserMustResetPasswordAtNextLogin != null &&
+                    UserMustResetPasswordAtNextLogin.Equals(input.UserMustResetPasswordAtNextLogin)
+                );
+        }
+
+        /// <summary>
+        ///     To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+            yield break;
+        }
+
+        /// <summary>
+        ///     Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
         public override string ToString()
@@ -187,18 +298,18 @@ namespace CherwellConnector.Model
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
-        /// Returns the JSON string presentation of the object
+        ///     Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public  string ToJson()
+        public string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }
 
         /// <summary>
-        /// Returns true if objects are equal
+        ///     Returns true if objects are equal
         /// </summary>
         /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
@@ -208,105 +319,7 @@ namespace CherwellConnector.Model
         }
 
         /// <summary>
-        /// Returns true if User instances are equal
-        /// </summary>
-        /// <param name="input">Instance of User to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(User input)
-        {
-            if (input == null)
-                return false;
-
-            return 
-                (
-                    AccountLocked == input.AccountLocked ||
-                    (AccountLocked != null &&
-                    AccountLocked.Equals(input.AccountLocked))
-                ) && 
-                (
-                    CreateDateTime == input.CreateDateTime ||
-                    (CreateDateTime != null &&
-                    CreateDateTime.Equals(input.CreateDateTime))
-                ) && 
-                (
-                    DisplayName == input.DisplayName ||
-                    (DisplayName != null &&
-                    DisplayName.Equals(input.DisplayName))
-                ) && 
-                (
-                    Error == input.Error ||
-                    (Error != null &&
-                    Error.Equals(input.Error))
-                ) && 
-                (
-                    ErrorCode == input.ErrorCode ||
-                    (ErrorCode != null &&
-                    ErrorCode.Equals(input.ErrorCode))
-                ) && 
-                (
-                    Fields == input.Fields ||
-                    Fields != null &&
-                    Fields.SequenceEqual(input.Fields)
-                ) && 
-                (
-                    HasError == input.HasError ||
-                    (HasError != null &&
-                    HasError.Equals(input.HasError))
-                ) && 
-                (
-                    LastPasswordResetDate == input.LastPasswordResetDate ||
-                    (LastPasswordResetDate != null &&
-                    LastPasswordResetDate.Equals(input.LastPasswordResetDate))
-                ) && 
-                (
-                    LastResetDateTime == input.LastResetDateTime ||
-                    (LastResetDateTime != null &&
-                    LastResetDateTime.Equals(input.LastResetDateTime))
-                ) && 
-                (
-                    LdapRequired == input.LdapRequired ||
-                    (LdapRequired != null &&
-                    LdapRequired.Equals(input.LdapRequired))
-                ) && 
-                (
-                    PasswordNeverExpires == input.PasswordNeverExpires ||
-                    (PasswordNeverExpires != null &&
-                    PasswordNeverExpires.Equals(input.PasswordNeverExpires))
-                ) && 
-                (
-                    PublicId == input.PublicId ||
-                    (PublicId != null &&
-                    PublicId.Equals(input.PublicId))
-                ) && 
-                (
-                    RecordId == input.RecordId ||
-                    (RecordId != null &&
-                    RecordId.Equals(input.RecordId))
-                ) && 
-                (
-                    SecurityGroupId == input.SecurityGroupId ||
-                    (SecurityGroupId != null &&
-                    SecurityGroupId.Equals(input.SecurityGroupId))
-                ) && 
-                (
-                    ShortDisplayName == input.ShortDisplayName ||
-                    (ShortDisplayName != null &&
-                    ShortDisplayName.Equals(input.ShortDisplayName))
-                ) && 
-                (
-                    UserCannotChangePassword == input.UserCannotChangePassword ||
-                    (UserCannotChangePassword != null &&
-                    UserCannotChangePassword.Equals(input.UserCannotChangePassword))
-                ) && 
-                (
-                    UserMustResetPasswordAtNextLogin == input.UserMustResetPasswordAtNextLogin ||
-                    (UserMustResetPasswordAtNextLogin != null &&
-                    UserMustResetPasswordAtNextLogin.Equals(input.UserMustResetPasswordAtNextLogin))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
+        ///     Gets the hash code
         /// </summary>
         /// <returns>Hash code</returns>
         public override int GetHashCode()
@@ -351,16 +364,5 @@ namespace CherwellConnector.Model
                 return hashCode;
             }
         }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-            yield break;
-        }
     }
-
 }

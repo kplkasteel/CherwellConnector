@@ -1,21 +1,20 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Runtime.Serialization;
+using System.Text;
+using Newtonsoft.Json;
+
 namespace CherwellConnector.Model
 {
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.Runtime.Serialization;
-    using System.Text;
-
-    using Newtonsoft.Json;
-
     /// <summary>
-    /// SaveBusObAttachmentRequest
+    ///     SaveBusObAttachmentRequest
     /// </summary>
     [DataContract]
-    public sealed class SaveBusObAttachmentRequest :  IEquatable<SaveBusObAttachmentRequest>, IValidatableObject
+    public sealed class SaveBusObAttachmentRequest : IEquatable<SaveBusObAttachmentRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="SaveBusObAttachmentRequest" /> class.
+        ///     Initializes a new instance of the <see cref="SaveBusObAttachmentRequest" /> class.
         /// </summary>
         /// <param name="attachBusObId">attachBusObId.</param>
         /// <param name="attachBusObName">attachBusObName.</param>
@@ -27,7 +26,10 @@ namespace CherwellConnector.Model
         /// <param name="busObRecId">busObRecId.</param>
         /// <param name="comment">comment.</param>
         /// <param name="includeLinks">includeLinks.</param>
-        public SaveBusObAttachmentRequest(string attachBusObId = default, string attachBusObName = default, string attachBusObPublicId = default, string attachBusObRecId = default, string busObId = default, string busObName = default, string busObPublicId = default, string busObRecId = default, string comment = default, bool? includeLinks = default)
+        public SaveBusObAttachmentRequest(string attachBusObId = default, string attachBusObName = default,
+            string attachBusObPublicId = default, string attachBusObRecId = default, string busObId = default,
+            string busObName = default, string busObPublicId = default, string busObRecId = default,
+            string comment = default, bool? includeLinks = default)
         {
             AttachBusObId = attachBusObId;
             AttachBusObName = attachBusObName;
@@ -40,69 +42,142 @@ namespace CherwellConnector.Model
             Comment = comment;
             IncludeLinks = includeLinks;
         }
-        
+
         /// <summary>
-        /// Gets or Sets AttachBusObId
+        ///     Gets or Sets AttachBusObId
         /// </summary>
-        [DataMember(Name="attachBusObId", EmitDefaultValue=false)]
+        [DataMember(Name = "attachBusObId", EmitDefaultValue = false)]
         public string AttachBusObId { get; set; }
 
         /// <summary>
-        /// Gets or Sets AttachBusObName
+        ///     Gets or Sets AttachBusObName
         /// </summary>
-        [DataMember(Name="attachBusObName", EmitDefaultValue=false)]
+        [DataMember(Name = "attachBusObName", EmitDefaultValue = false)]
         public string AttachBusObName { get; set; }
 
         /// <summary>
-        /// Gets or Sets AttachBusObPublicId
+        ///     Gets or Sets AttachBusObPublicId
         /// </summary>
-        [DataMember(Name="attachBusObPublicId", EmitDefaultValue=false)]
+        [DataMember(Name = "attachBusObPublicId", EmitDefaultValue = false)]
         public string AttachBusObPublicId { get; set; }
 
         /// <summary>
-        /// Gets or Sets AttachBusObRecId
+        ///     Gets or Sets AttachBusObRecId
         /// </summary>
-        [DataMember(Name="attachBusObRecId", EmitDefaultValue=false)]
+        [DataMember(Name = "attachBusObRecId", EmitDefaultValue = false)]
         public string AttachBusObRecId { get; set; }
 
         /// <summary>
-        /// Gets or Sets BusObId
+        ///     Gets or Sets BusObId
         /// </summary>
-        [DataMember(Name="busObId", EmitDefaultValue=false)]
+        [DataMember(Name = "busObId", EmitDefaultValue = false)]
         public string BusObId { get; set; }
 
         /// <summary>
-        /// Gets or Sets BusObName
+        ///     Gets or Sets BusObName
         /// </summary>
-        [DataMember(Name="busObName", EmitDefaultValue=false)]
+        [DataMember(Name = "busObName", EmitDefaultValue = false)]
         public string BusObName { get; set; }
 
         /// <summary>
-        /// Gets or Sets BusObPublicId
+        ///     Gets or Sets BusObPublicId
         /// </summary>
-        [DataMember(Name="busObPublicId", EmitDefaultValue=false)]
+        [DataMember(Name = "busObPublicId", EmitDefaultValue = false)]
         public string BusObPublicId { get; set; }
 
         /// <summary>
-        /// Gets or Sets BusObRecId
+        ///     Gets or Sets BusObRecId
         /// </summary>
-        [DataMember(Name="busObRecId", EmitDefaultValue=false)]
+        [DataMember(Name = "busObRecId", EmitDefaultValue = false)]
         public string BusObRecId { get; set; }
 
         /// <summary>
-        /// Gets or Sets Comment
+        ///     Gets or Sets Comment
         /// </summary>
-        [DataMember(Name="comment", EmitDefaultValue=false)]
+        [DataMember(Name = "comment", EmitDefaultValue = false)]
         public string Comment { get; set; }
 
         /// <summary>
-        /// Gets or Sets IncludeLinks
+        ///     Gets or Sets IncludeLinks
         /// </summary>
-        [DataMember(Name="includeLinks", EmitDefaultValue=false)]
+        [DataMember(Name = "includeLinks", EmitDefaultValue = false)]
         public bool? IncludeLinks { get; set; }
 
         /// <summary>
-        /// Returns the string presentation of the object
+        ///     Returns true if SaveBusObAttachmentRequest instances are equal
+        /// </summary>
+        /// <param name="input">Instance of SaveBusObAttachmentRequest to be compared</param>
+        /// <returns>Boolean</returns>
+        public bool Equals(SaveBusObAttachmentRequest input)
+        {
+            if (input == null)
+                return false;
+
+            return
+                (
+                    AttachBusObId == input.AttachBusObId ||
+                    AttachBusObId != null &&
+                    AttachBusObId.Equals(input.AttachBusObId)
+                ) &&
+                (
+                    AttachBusObName == input.AttachBusObName ||
+                    AttachBusObName != null &&
+                    AttachBusObName.Equals(input.AttachBusObName)
+                ) &&
+                (
+                    AttachBusObPublicId == input.AttachBusObPublicId ||
+                    AttachBusObPublicId != null &&
+                    AttachBusObPublicId.Equals(input.AttachBusObPublicId)
+                ) &&
+                (
+                    AttachBusObRecId == input.AttachBusObRecId ||
+                    AttachBusObRecId != null &&
+                    AttachBusObRecId.Equals(input.AttachBusObRecId)
+                ) &&
+                (
+                    BusObId == input.BusObId ||
+                    BusObId != null &&
+                    BusObId.Equals(input.BusObId)
+                ) &&
+                (
+                    BusObName == input.BusObName ||
+                    BusObName != null &&
+                    BusObName.Equals(input.BusObName)
+                ) &&
+                (
+                    BusObPublicId == input.BusObPublicId ||
+                    BusObPublicId != null &&
+                    BusObPublicId.Equals(input.BusObPublicId)
+                ) &&
+                (
+                    BusObRecId == input.BusObRecId ||
+                    BusObRecId != null &&
+                    BusObRecId.Equals(input.BusObRecId)
+                ) &&
+                (
+                    Comment == input.Comment ||
+                    Comment != null &&
+                    Comment.Equals(input.Comment)
+                ) &&
+                (
+                    IncludeLinks == input.IncludeLinks ||
+                    IncludeLinks != null &&
+                    IncludeLinks.Equals(input.IncludeLinks)
+                );
+        }
+
+        /// <summary>
+        ///     To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+            yield break;
+        }
+
+        /// <summary>
+        ///     Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
         public override string ToString()
@@ -122,9 +197,9 @@ namespace CherwellConnector.Model
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
-        /// Returns the JSON string presentation of the object
+        ///     Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
         public string ToJson()
@@ -133,7 +208,7 @@ namespace CherwellConnector.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
+        ///     Returns true if objects are equal
         /// </summary>
         /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
@@ -143,73 +218,9 @@ namespace CherwellConnector.Model
         }
 
         /// <summary>
-        /// Returns true if SaveBusObAttachmentRequest instances are equal
-        /// </summary>
-        /// <param name="input">Instance of SaveBusObAttachmentRequest to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(SaveBusObAttachmentRequest input)
-        {
-            if (input == null)
-                return false;
-
-            return 
-                (
-                    AttachBusObId == input.AttachBusObId ||
-                    (AttachBusObId != null &&
-                    AttachBusObId.Equals(input.AttachBusObId))
-                ) && 
-                (
-                    AttachBusObName == input.AttachBusObName ||
-                    (AttachBusObName != null &&
-                    AttachBusObName.Equals(input.AttachBusObName))
-                ) && 
-                (
-                    AttachBusObPublicId == input.AttachBusObPublicId ||
-                    (AttachBusObPublicId != null &&
-                    AttachBusObPublicId.Equals(input.AttachBusObPublicId))
-                ) && 
-                (
-                    AttachBusObRecId == input.AttachBusObRecId ||
-                    (AttachBusObRecId != null &&
-                    AttachBusObRecId.Equals(input.AttachBusObRecId))
-                ) && 
-                (
-                    BusObId == input.BusObId ||
-                    (BusObId != null &&
-                    BusObId.Equals(input.BusObId))
-                ) && 
-                (
-                    BusObName == input.BusObName ||
-                    (BusObName != null &&
-                    BusObName.Equals(input.BusObName))
-                ) && 
-                (
-                    BusObPublicId == input.BusObPublicId ||
-                    (BusObPublicId != null &&
-                    BusObPublicId.Equals(input.BusObPublicId))
-                ) && 
-                (
-                    BusObRecId == input.BusObRecId ||
-                    (BusObRecId != null &&
-                    BusObRecId.Equals(input.BusObRecId))
-                ) && 
-                (
-                    Comment == input.Comment ||
-                    (Comment != null &&
-                    Comment.Equals(input.Comment))
-                ) && 
-                (
-                    IncludeLinks == input.IncludeLinks ||
-                    (IncludeLinks != null &&
-                    IncludeLinks.Equals(input.IncludeLinks))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
+        ///     Gets the hash code
         /// </summary>
         /// <returns>Hash code</returns>
-        
         public override int GetHashCode()
         {
             unchecked // Overflow is fine, just wrap
@@ -238,16 +249,5 @@ namespace CherwellConnector.Model
                 return hashCode;
             }
         }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-            yield break;
-        }
     }
-
 }

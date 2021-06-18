@@ -5,94 +5,79 @@ using Newtonsoft.Json.Converters;
 namespace CherwellConnector.Enum
 {
     /// <summary>
-    /// Defines Scope
+    ///     Defines Scope
     /// </summary>
     [JsonConverter(typeof(StringEnumConverter))]
     public enum ScopeEnum
     {
-            
         /// <summary>
-        /// Enum None for value: None
+        ///     Enum None for value: None
         /// </summary>
-        [EnumMember(Value = "None")]
-        None = 1,
-            
+        [EnumMember(Value = "None")] None = 1,
+
         /// <summary>
-        /// Enum Global for value: Global
+        ///     Enum Global for value: Global
         /// </summary>
-        [EnumMember(Value = "Global")]
-        Global = 2,
-            
+        [EnumMember(Value = "Global")] Global = 2,
+
         /// <summary>
-        /// Enum Team for value: Team
+        ///     Enum Team for value: Team
         /// </summary>
-        [EnumMember(Value = "Team")]
-        Team = 3,
-            
+        [EnumMember(Value = "Team")] Team = 3,
+
         /// <summary>
-        /// Enum Persona for value: Persona
+        ///     Enum Persona for value: Persona
         /// </summary>
-        [EnumMember(Value = "Persona")]
-        Persona = 4,
-            
+        [EnumMember(Value = "Persona")] Persona = 4,
+
         /// <summary>
-        /// Enum SecurityGroup for value: SecurityGroup
+        ///     Enum SecurityGroup for value: SecurityGroup
         /// </summary>
-        [EnumMember(Value = "SecurityGroup")]
-        SecurityGroup = 5,
-            
+        [EnumMember(Value = "SecurityGroup")] SecurityGroup = 5,
+
         /// <summary>
-        /// Enum User for value: User
+        ///     Enum User for value: User
         /// </summary>
-        [EnumMember(Value = "User")]
-        User = 6,
-            
+        [EnumMember(Value = "User")] User = 6,
+
         /// <summary>
-        /// Enum UserInPersona for value: UserInPersona
+        ///     Enum UserInPersona for value: UserInPersona
         /// </summary>
-        [EnumMember(Value = "UserInPersona")]
-        UserInPersona = 7,
-            
+        [EnumMember(Value = "UserInPersona")] UserInPersona = 7,
+
         /// <summary>
-        /// Enum OtherUsers for value: OtherUsers
+        ///     Enum OtherUsers for value: OtherUsers
         /// </summary>
-        [EnumMember(Value = "OtherUsers")]
-        OtherUsers = 8,
-            
+        [EnumMember(Value = "OtherUsers")] OtherUsers = 8,
+
         /// <summary>
-        /// Enum Core for value: Core
+        ///     Enum Core for value: Core
         /// </summary>
-        [EnumMember(Value = "Core")]
-        Core = 9,
-            
+        [EnumMember(Value = "Core")] Core = 9,
+
         /// <summary>
-        /// Enum BusIntel for value: BusIntel
+        ///     Enum BusIntel for value: BusIntel
         /// </summary>
-        [EnumMember(Value = "BusIntel")]
-        BusIntel = 10,
-            
+        [EnumMember(Value = "BusIntel")] BusIntel = 10,
+
         /// <summary>
-        /// Enum FromResource for value: FromResource
+        ///     Enum FromResource for value: FromResource
         /// </summary>
-        [EnumMember(Value = "FromResource")]
-        FromResource = 11,
-            
+        [EnumMember(Value = "FromResource")] FromResource = 11,
+
         /// <summary>
-        /// Enum Site for value: Site
+        ///     Enum Site for value: Site
         /// </summary>
-        [EnumMember(Value = "Site")]
-        Site = 12,
-            
+        [EnumMember(Value = "Site")] Site = 12,
+
         /// <summary>
-        /// Enum Custom for value: Custom
+        ///     Enum Custom for value: Custom
         /// </summary>
-        [EnumMember(Value = "Custom")]
-        Custom = 13,
-            
+        [EnumMember(Value = "Custom")] Custom = 13,
+
         /// <summary>
-        /// Enum BusObRecord for value: BusObRecord
+        ///     Enum BusObRecord for value: BusObRecord
         /// </summary>
-        [EnumMember(Value = "BusObRecord")]
-        BusObRecord = 14
+        [EnumMember(Value = "BusObRecord")] BusObRecord = 14
     }
 }

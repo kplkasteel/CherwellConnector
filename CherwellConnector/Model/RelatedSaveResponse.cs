@@ -1,31 +1,22 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Runtime.Serialization;
+using System.Text;
 using CherwellConnector.Enum;
+using Newtonsoft.Json;
 
 namespace CherwellConnector.Model
 {
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.Linq;
-    using System.Runtime.Serialization;
-    using System.Text;
-
-    using Newtonsoft.Json;
-
     /// <summary>
-    /// RelatedSaveResponse
+    ///     RelatedSaveResponse
     /// </summary>
     [DataContract]
-    public sealed class RelatedSaveResponse :  IEquatable<RelatedSaveResponse>, IValidatableObject
+    public sealed class RelatedSaveResponse : IEquatable<RelatedSaveResponse>, IValidatableObject
     {
-        
-
         /// <summary>
-        /// Gets or Sets HttpStatusCode
-        /// </summary>
-        [DataMember(Name="httpStatusCode", EmitDefaultValue=false)]
-        public HttpStatusCodeEnum? HttpStatusCode { get; set; }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="RelatedSaveResponse" /> class.
+        ///     Initializes a new instance of the <see cref="RelatedSaveResponse" /> class.
         /// </summary>
         /// <param name="parentBusObId">parentBusObId.</param>
         /// <param name="parentBusObPublicId">parentBusObPublicId.</param>
@@ -40,7 +31,12 @@ namespace CherwellConnector.Model
         /// <param name="errorMessage">errorMessage.</param>
         /// <param name="hasError">hasError.</param>
         /// <param name="httpStatusCode">httpStatusCode.</param>
-        public RelatedSaveResponse(string parentBusObId = default, string parentBusObPublicId = default, string parentBusObRecId = default, string relationshipId = default, string busObPublicId = default, string busObRecId = default, string cacheKey = default, List<FieldValidationError> fieldValidationErrors = default, List<NotificationTrigger> notificationTriggers = default, string errorCode = default, string errorMessage = default, bool? hasError = default, HttpStatusCodeEnum? httpStatusCode = default)
+        public RelatedSaveResponse(string parentBusObId = default, string parentBusObPublicId = default,
+            string parentBusObRecId = default, string relationshipId = default, string busObPublicId = default,
+            string busObRecId = default, string cacheKey = default,
+            List<FieldValidationError> fieldValidationErrors = default,
+            List<NotificationTrigger> notificationTriggers = default, string errorCode = default,
+            string errorMessage = default, bool? hasError = default, HttpStatusCodeEnum? httpStatusCode = default)
         {
             ParentBusObId = parentBusObId;
             ParentBusObPublicId = parentBusObPublicId;
@@ -56,82 +52,177 @@ namespace CherwellConnector.Model
             HasError = hasError;
             HttpStatusCode = httpStatusCode;
         }
-        
+
+
         /// <summary>
-        /// Gets or Sets ParentBusObId
+        ///     Gets or Sets HttpStatusCode
         /// </summary>
-        [DataMember(Name="parentBusObId", EmitDefaultValue=false)]
+        [DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
+        public HttpStatusCodeEnum? HttpStatusCode { get; set; }
+
+        /// <summary>
+        ///     Gets or Sets ParentBusObId
+        /// </summary>
+        [DataMember(Name = "parentBusObId", EmitDefaultValue = false)]
         public string ParentBusObId { get; set; }
 
         /// <summary>
-        /// Gets or Sets ParentBusObPublicId
+        ///     Gets or Sets ParentBusObPublicId
         /// </summary>
-        [DataMember(Name="parentBusObPublicId", EmitDefaultValue=false)]
+        [DataMember(Name = "parentBusObPublicId", EmitDefaultValue = false)]
         public string ParentBusObPublicId { get; set; }
 
         /// <summary>
-        /// Gets or Sets ParentBusObRecId
+        ///     Gets or Sets ParentBusObRecId
         /// </summary>
-        [DataMember(Name="parentBusObRecId", EmitDefaultValue=false)]
+        [DataMember(Name = "parentBusObRecId", EmitDefaultValue = false)]
         public string ParentBusObRecId { get; set; }
 
         /// <summary>
-        /// Gets or Sets RelationshipId
+        ///     Gets or Sets RelationshipId
         /// </summary>
-        [DataMember(Name="relationshipId", EmitDefaultValue=false)]
+        [DataMember(Name = "relationshipId", EmitDefaultValue = false)]
         public string RelationshipId { get; set; }
 
         /// <summary>
-        /// Gets or Sets BusObPublicId
+        ///     Gets or Sets BusObPublicId
         /// </summary>
-        [DataMember(Name="busObPublicId", EmitDefaultValue=false)]
+        [DataMember(Name = "busObPublicId", EmitDefaultValue = false)]
         public string BusObPublicId { get; set; }
 
         /// <summary>
-        /// Gets or Sets BusObRecId
+        ///     Gets or Sets BusObRecId
         /// </summary>
-        [DataMember(Name="busObRecId", EmitDefaultValue=false)]
+        [DataMember(Name = "busObRecId", EmitDefaultValue = false)]
         public string BusObRecId { get; set; }
 
         /// <summary>
-        /// Gets or Sets CacheKey
+        ///     Gets or Sets CacheKey
         /// </summary>
-        [DataMember(Name="cacheKey", EmitDefaultValue=false)]
+        [DataMember(Name = "cacheKey", EmitDefaultValue = false)]
         public string CacheKey { get; set; }
 
         /// <summary>
-        /// Gets or Sets FieldValidationErrors
+        ///     Gets or Sets FieldValidationErrors
         /// </summary>
-        [DataMember(Name="fieldValidationErrors", EmitDefaultValue=false)]
+        [DataMember(Name = "fieldValidationErrors", EmitDefaultValue = false)]
         public List<FieldValidationError> FieldValidationErrors { get; set; }
 
         /// <summary>
-        /// Gets or Sets NotificationTriggers
+        ///     Gets or Sets NotificationTriggers
         /// </summary>
-        [DataMember(Name="notificationTriggers", EmitDefaultValue=false)]
+        [DataMember(Name = "notificationTriggers", EmitDefaultValue = false)]
         public List<NotificationTrigger> NotificationTriggers { get; set; }
 
         /// <summary>
-        /// Gets or Sets ErrorCode
+        ///     Gets or Sets ErrorCode
         /// </summary>
-        [DataMember(Name="errorCode", EmitDefaultValue=false)]
+        [DataMember(Name = "errorCode", EmitDefaultValue = false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// Gets or Sets ErrorMessage
+        ///     Gets or Sets ErrorMessage
         /// </summary>
-        [DataMember(Name="errorMessage", EmitDefaultValue=false)]
+        [DataMember(Name = "errorMessage", EmitDefaultValue = false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// Gets or Sets HasError
+        ///     Gets or Sets HasError
         /// </summary>
-        [DataMember(Name="hasError", EmitDefaultValue=false)]
+        [DataMember(Name = "hasError", EmitDefaultValue = false)]
         public bool? HasError { get; set; }
+
+        /// <summary>
+        ///     Returns true if RelatedSaveResponse instances are equal
+        /// </summary>
+        /// <param name="input">Instance of RelatedSaveResponse to be compared</param>
+        /// <returns>Boolean</returns>
+        public bool Equals(RelatedSaveResponse input)
+        {
+            if (input == null)
+                return false;
+
+            return
+                (
+                    ParentBusObId == input.ParentBusObId ||
+                    ParentBusObId != null &&
+                    ParentBusObId.Equals(input.ParentBusObId)
+                ) &&
+                (
+                    ParentBusObPublicId == input.ParentBusObPublicId ||
+                    ParentBusObPublicId != null &&
+                    ParentBusObPublicId.Equals(input.ParentBusObPublicId)
+                ) &&
+                (
+                    ParentBusObRecId == input.ParentBusObRecId ||
+                    ParentBusObRecId != null &&
+                    ParentBusObRecId.Equals(input.ParentBusObRecId)
+                ) &&
+                (
+                    RelationshipId == input.RelationshipId ||
+                    RelationshipId != null &&
+                    RelationshipId.Equals(input.RelationshipId)
+                ) &&
+                (
+                    BusObPublicId == input.BusObPublicId ||
+                    BusObPublicId != null &&
+                    BusObPublicId.Equals(input.BusObPublicId)
+                ) &&
+                (
+                    BusObRecId == input.BusObRecId ||
+                    BusObRecId != null &&
+                    BusObRecId.Equals(input.BusObRecId)
+                ) &&
+                (
+                    CacheKey == input.CacheKey ||
+                    CacheKey != null &&
+                    CacheKey.Equals(input.CacheKey)
+                ) &&
+                (
+                    FieldValidationErrors == input.FieldValidationErrors ||
+                    FieldValidationErrors != null &&
+                    FieldValidationErrors.SequenceEqual(input.FieldValidationErrors)
+                ) &&
+                (
+                    NotificationTriggers == input.NotificationTriggers ||
+                    NotificationTriggers != null &&
+                    NotificationTriggers.SequenceEqual(input.NotificationTriggers)
+                ) &&
+                (
+                    ErrorCode == input.ErrorCode ||
+                    ErrorCode != null &&
+                    ErrorCode.Equals(input.ErrorCode)
+                ) &&
+                (
+                    ErrorMessage == input.ErrorMessage ||
+                    ErrorMessage != null &&
+                    ErrorMessage.Equals(input.ErrorMessage)
+                ) &&
+                (
+                    HasError == input.HasError ||
+                    HasError != null &&
+                    HasError.Equals(input.HasError)
+                ) &&
+                (
+                    HttpStatusCode == input.HttpStatusCode ||
+                    HttpStatusCode != null &&
+                    HttpStatusCode.Equals(input.HttpStatusCode)
+                );
+        }
+
+        /// <summary>
+        ///     To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+            yield break;
+        }
 
 
         /// <summary>
-        /// Returns the string presentation of the object
+        ///     Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
         public override string ToString()
@@ -154,9 +245,9 @@ namespace CherwellConnector.Model
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
-        /// Returns the JSON string presentation of the object
+        ///     Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
         public string ToJson()
@@ -165,7 +256,7 @@ namespace CherwellConnector.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
+        ///     Returns true if objects are equal
         /// </summary>
         /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
@@ -175,88 +266,9 @@ namespace CherwellConnector.Model
         }
 
         /// <summary>
-        /// Returns true if RelatedSaveResponse instances are equal
-        /// </summary>
-        /// <param name="input">Instance of RelatedSaveResponse to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(RelatedSaveResponse input)
-        {
-            if (input == null)
-                return false;
-
-            return 
-                (
-                    ParentBusObId == input.ParentBusObId ||
-                    (ParentBusObId != null &&
-                    ParentBusObId.Equals(input.ParentBusObId))
-                ) && 
-                (
-                    ParentBusObPublicId == input.ParentBusObPublicId ||
-                    (ParentBusObPublicId != null &&
-                    ParentBusObPublicId.Equals(input.ParentBusObPublicId))
-                ) && 
-                (
-                    ParentBusObRecId == input.ParentBusObRecId ||
-                    (ParentBusObRecId != null &&
-                    ParentBusObRecId.Equals(input.ParentBusObRecId))
-                ) && 
-                (
-                    RelationshipId == input.RelationshipId ||
-                    (RelationshipId != null &&
-                    RelationshipId.Equals(input.RelationshipId))
-                ) && 
-                (
-                    BusObPublicId == input.BusObPublicId ||
-                    (BusObPublicId != null &&
-                    BusObPublicId.Equals(input.BusObPublicId))
-                ) && 
-                (
-                    BusObRecId == input.BusObRecId ||
-                    (BusObRecId != null &&
-                    BusObRecId.Equals(input.BusObRecId))
-                ) && 
-                (
-                    CacheKey == input.CacheKey ||
-                    (CacheKey != null &&
-                    CacheKey.Equals(input.CacheKey))
-                ) && 
-                (
-                    FieldValidationErrors == input.FieldValidationErrors ||
-                    FieldValidationErrors != null &&
-                    FieldValidationErrors.SequenceEqual(input.FieldValidationErrors)
-                ) && 
-                (
-                    NotificationTriggers == input.NotificationTriggers ||
-                    NotificationTriggers != null &&
-                    NotificationTriggers.SequenceEqual(input.NotificationTriggers)
-                ) && 
-                (
-                    ErrorCode == input.ErrorCode ||
-                    (ErrorCode != null &&
-                    ErrorCode.Equals(input.ErrorCode))
-                ) && 
-                (
-                    ErrorMessage == input.ErrorMessage ||
-                    (ErrorMessage != null &&
-                    ErrorMessage.Equals(input.ErrorMessage))
-                ) && 
-                (
-                    HasError == input.HasError ||
-                    (HasError != null &&
-                    HasError.Equals(input.HasError))
-                ) && 
-                (
-                    HttpStatusCode == input.HttpStatusCode ||
-                    (HttpStatusCode != null &&
-                    HttpStatusCode.Equals(input.HttpStatusCode))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
+        ///     Gets the hash code
         /// </summary>
         /// <returns>Hash code</returns>
-        
         public override int GetHashCode()
         {
             unchecked // Overflow is fine, just wrap
@@ -291,16 +303,5 @@ namespace CherwellConnector.Model
                 return hashCode;
             }
         }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-            yield break;
-        }
     }
-
 }

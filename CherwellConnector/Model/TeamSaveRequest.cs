@@ -1,48 +1,39 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Runtime.Serialization;
+using System.Text;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace CherwellConnector.Model
 {
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.Runtime.Serialization;
-    using System.Text;
-
-    using Newtonsoft.Json;
-    using Newtonsoft.Json.Converters;
-
     /// <summary>
-    /// TeamSaveRequest
+    ///     TeamSaveRequest
     /// </summary>
     [DataContract]
-    public sealed class TeamSaveRequest :  IEquatable<TeamSaveRequest>, IValidatableObject
+    public sealed class TeamSaveRequest : IEquatable<TeamSaveRequest>, IValidatableObject
     {
         /// <summary>
-        /// Defines TeamType
+        ///     Defines TeamType
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum TeamTypeEnum
         {
-            
             /// <summary>
-            /// Enum User for value: User
+            ///     Enum User for value: User
             /// </summary>
-            [EnumMember(Value = "User")]
-            User = 1,
-            
+            [EnumMember(Value = "User")] User = 1,
+
             /// <summary>
-            /// Enum CustomerWorkgroup for value: CustomerWorkgroup
+            ///     Enum CustomerWorkgroup for value: CustomerWorkgroup
             /// </summary>
             [EnumMember(Value = "CustomerWorkgroup")]
             CustomerWorkgroup = 2
         }
 
         /// <summary>
-        /// Gets or Sets TeamType
-        /// </summary>
-        [DataMember(Name="teamType", EmitDefaultValue=false)]
-        public TeamTypeEnum? TeamType { get; set; }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="TeamSaveRequest" /> class.
+        ///     Initializes a new instance of the <see cref="TeamSaveRequest" /> class.
         /// </summary>
         /// <param name="description">description.</param>
         /// <param name="emailAlias">emailAlias.</param>
@@ -50,7 +41,8 @@ namespace CherwellConnector.Model
         /// <param name="teamId">teamId.</param>
         /// <param name="teamName">teamName.</param>
         /// <param name="teamType">teamType.</param>
-        public TeamSaveRequest(string description = default, string emailAlias = default, string image = default, string teamId = default, string teamName = default, TeamTypeEnum? teamType = default)
+        public TeamSaveRequest(string description = default, string emailAlias = default, string image = default,
+            string teamId = default, string teamName = default, TeamTypeEnum? teamType = default)
         {
             Description = description;
             EmailAlias = emailAlias;
@@ -59,40 +51,99 @@ namespace CherwellConnector.Model
             TeamName = teamName;
             TeamType = teamType;
         }
-        
+
         /// <summary>
-        /// Gets or Sets Description
+        ///     Gets or Sets TeamType
         /// </summary>
-        [DataMember(Name="description", EmitDefaultValue=false)]
+        [DataMember(Name = "teamType", EmitDefaultValue = false)]
+        public TeamTypeEnum? TeamType { get; set; }
+
+        /// <summary>
+        ///     Gets or Sets Description
+        /// </summary>
+        [DataMember(Name = "description", EmitDefaultValue = false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// Gets or Sets EmailAlias
+        ///     Gets or Sets EmailAlias
         /// </summary>
-        [DataMember(Name="emailAlias", EmitDefaultValue=false)]
+        [DataMember(Name = "emailAlias", EmitDefaultValue = false)]
         public string EmailAlias { get; set; }
 
         /// <summary>
-        /// Gets or Sets Image
+        ///     Gets or Sets Image
         /// </summary>
-        [DataMember(Name="image", EmitDefaultValue=false)]
+        [DataMember(Name = "image", EmitDefaultValue = false)]
         public string Image { get; set; }
 
         /// <summary>
-        /// Gets or Sets TeamId
+        ///     Gets or Sets TeamId
         /// </summary>
-        [DataMember(Name="teamId", EmitDefaultValue=false)]
+        [DataMember(Name = "teamId", EmitDefaultValue = false)]
         public string TeamId { get; set; }
 
         /// <summary>
-        /// Gets or Sets TeamName
+        ///     Gets or Sets TeamName
         /// </summary>
-        [DataMember(Name="teamName", EmitDefaultValue=false)]
+        [DataMember(Name = "teamName", EmitDefaultValue = false)]
         public string TeamName { get; set; }
+
+        /// <summary>
+        ///     Returns true if TeamSaveRequest instances are equal
+        /// </summary>
+        /// <param name="input">Instance of TeamSaveRequest to be compared</param>
+        /// <returns>Boolean</returns>
+        public bool Equals(TeamSaveRequest input)
+        {
+            if (input == null)
+                return false;
+
+            return
+                (
+                    Description == input.Description ||
+                    Description != null &&
+                    Description.Equals(input.Description)
+                ) &&
+                (
+                    EmailAlias == input.EmailAlias ||
+                    EmailAlias != null &&
+                    EmailAlias.Equals(input.EmailAlias)
+                ) &&
+                (
+                    Image == input.Image ||
+                    Image != null &&
+                    Image.Equals(input.Image)
+                ) &&
+                (
+                    TeamId == input.TeamId ||
+                    TeamId != null &&
+                    TeamId.Equals(input.TeamId)
+                ) &&
+                (
+                    TeamName == input.TeamName ||
+                    TeamName != null &&
+                    TeamName.Equals(input.TeamName)
+                ) &&
+                (
+                    TeamType == input.TeamType ||
+                    TeamType != null &&
+                    TeamType.Equals(input.TeamType)
+                );
+        }
+
+        /// <summary>
+        ///     To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+            yield break;
+        }
 
 
         /// <summary>
-        /// Returns the string presentation of the object
+        ///     Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
         public override string ToString()
@@ -108,18 +159,18 @@ namespace CherwellConnector.Model
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
-        /// Returns the JSON string presentation of the object
+        ///     Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public  string ToJson()
+        public string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }
 
         /// <summary>
-        /// Returns true if objects are equal
+        ///     Returns true if objects are equal
         /// </summary>
         /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
@@ -129,50 +180,7 @@ namespace CherwellConnector.Model
         }
 
         /// <summary>
-        /// Returns true if TeamSaveRequest instances are equal
-        /// </summary>
-        /// <param name="input">Instance of TeamSaveRequest to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(TeamSaveRequest input)
-        {
-            if (input == null)
-                return false;
-
-            return 
-                (
-                    Description == input.Description ||
-                    (Description != null &&
-                    Description.Equals(input.Description))
-                ) && 
-                (
-                    EmailAlias == input.EmailAlias ||
-                    (EmailAlias != null &&
-                    EmailAlias.Equals(input.EmailAlias))
-                ) && 
-                (
-                    Image == input.Image ||
-                    (Image != null &&
-                    Image.Equals(input.Image))
-                ) && 
-                (
-                    TeamId == input.TeamId ||
-                    (TeamId != null &&
-                    TeamId.Equals(input.TeamId))
-                ) && 
-                (
-                    TeamName == input.TeamName ||
-                    (TeamName != null &&
-                    TeamName.Equals(input.TeamName))
-                ) && 
-                (
-                    TeamType == input.TeamType ||
-                    (TeamType != null &&
-                    TeamType.Equals(input.TeamType))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
+        ///     Gets the hash code
         /// </summary>
         /// <returns>Hash code</returns>
         public override int GetHashCode()
@@ -195,16 +203,5 @@ namespace CherwellConnector.Model
                 return hashCode;
             }
         }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-            yield break;
-        }
     }
-
 }

@@ -1,33 +1,23 @@
-
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Runtime.Serialization;
+using System.Text;
 using CherwellConnector.Enum;
+using Newtonsoft.Json;
 
 namespace CherwellConnector.Model
 {
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.Linq;
-    using System.Runtime.Serialization;
-    using System.Text;
-
-    using Newtonsoft.Json;
-    using Newtonsoft.Json.Converters;
-
     /// <summary>
-    /// QuickSearchConfigurationResponse
+    ///     QuickSearchConfigurationResponse
     /// </summary>
     [DataContract]
-    public sealed class QuickSearchConfigurationResponse :  IEquatable<QuickSearchConfigurationResponse>, IValidatableObject
+    public sealed class QuickSearchConfigurationResponse : IEquatable<QuickSearchConfigurationResponse>,
+        IValidatableObject
     {
-        
-
         /// <summary>
-        /// Gets or Sets HttpStatusCode
-        /// </summary>
-        [DataMember(Name="httpStatusCode", EmitDefaultValue=false)]
-        public HttpStatusCodeEnum? HttpStatusCode { get; set; }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="QuickSearchConfigurationResponse" /> class.
+        ///     Initializes a new instance of the <see cref="QuickSearchConfigurationResponse" /> class.
         /// </summary>
         /// <param name="allowQuickSearch">allowQuickSearch.</param>
         /// <param name="allowSpecificSearch">allowSpecificSearch.</param>
@@ -49,7 +39,15 @@ namespace CherwellConnector.Model
         /// <param name="errorMessage">errorMessage.</param>
         /// <param name="hasError">hasError.</param>
         /// <param name="httpStatusCode">httpStatusCode.</param>
-        public QuickSearchConfigurationResponse(bool? allowQuickSearch = default, bool? allowSpecificSearch = default, bool? defaultToQuickSearch = default, string displayName = default, string galleryImage = default, List<string> history = default, bool? includeAvailableInSpecific = default, bool? includeQuickSearchInSpecific = default, string quickSearchId = default, List<QuickSearchItem> quickSearchItems = default, string quickSearchWatermark = default, bool? sortByRelevance = default, string resolvedQuickSearchWatermark = default, string scope = default, string scopeOwner = default, List<QuickSearchItem> specificSearchItems = default, string errorCode = default, string errorMessage = default, bool? hasError = default, HttpStatusCodeEnum? httpStatusCode = default)
+        public QuickSearchConfigurationResponse(bool? allowQuickSearch = default, bool? allowSpecificSearch = default,
+            bool? defaultToQuickSearch = default, string displayName = default, string galleryImage = default,
+            List<string> history = default, bool? includeAvailableInSpecific = default,
+            bool? includeQuickSearchInSpecific = default, string quickSearchId = default,
+            List<QuickSearchItem> quickSearchItems = default, string quickSearchWatermark = default,
+            bool? sortByRelevance = default, string resolvedQuickSearchWatermark = default, string scope = default,
+            string scopeOwner = default, List<QuickSearchItem> specificSearchItems = default,
+            string errorCode = default, string errorMessage = default, bool? hasError = default,
+            HttpStatusCodeEnum? httpStatusCode = default)
         {
             AllowQuickSearch = allowQuickSearch;
             AllowSpecificSearch = allowSpecificSearch;
@@ -72,124 +70,254 @@ namespace CherwellConnector.Model
             HasError = hasError;
             HttpStatusCode = httpStatusCode;
         }
-        
+
+
         /// <summary>
-        /// Gets or Sets AllowQuickSearch
+        ///     Gets or Sets HttpStatusCode
         /// </summary>
-        [DataMember(Name="allowQuickSearch", EmitDefaultValue=false)]
+        [DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
+        public HttpStatusCodeEnum? HttpStatusCode { get; set; }
+
+        /// <summary>
+        ///     Gets or Sets AllowQuickSearch
+        /// </summary>
+        [DataMember(Name = "allowQuickSearch", EmitDefaultValue = false)]
         public bool? AllowQuickSearch { get; set; }
 
         /// <summary>
-        /// Gets or Sets AllowSpecificSearch
+        ///     Gets or Sets AllowSpecificSearch
         /// </summary>
-        [DataMember(Name="allowSpecificSearch", EmitDefaultValue=false)]
+        [DataMember(Name = "allowSpecificSearch", EmitDefaultValue = false)]
         public bool? AllowSpecificSearch { get; set; }
 
         /// <summary>
-        /// Gets or Sets DefaultToQuickSearch
+        ///     Gets or Sets DefaultToQuickSearch
         /// </summary>
-        [DataMember(Name="defaultToQuickSearch", EmitDefaultValue=false)]
+        [DataMember(Name = "defaultToQuickSearch", EmitDefaultValue = false)]
         public bool? DefaultToQuickSearch { get; set; }
 
         /// <summary>
-        /// Gets or Sets DisplayName
+        ///     Gets or Sets DisplayName
         /// </summary>
-        [DataMember(Name="displayName", EmitDefaultValue=false)]
+        [DataMember(Name = "displayName", EmitDefaultValue = false)]
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// Gets or Sets GalleryImage
+        ///     Gets or Sets GalleryImage
         /// </summary>
-        [DataMember(Name="galleryImage", EmitDefaultValue=false)]
+        [DataMember(Name = "galleryImage", EmitDefaultValue = false)]
         public string GalleryImage { get; set; }
 
         /// <summary>
-        /// Gets or Sets History
+        ///     Gets or Sets History
         /// </summary>
-        [DataMember(Name="history", EmitDefaultValue=false)]
+        [DataMember(Name = "history", EmitDefaultValue = false)]
         public List<string> History { get; set; }
 
         /// <summary>
-        /// Gets or Sets IncludeAvailableInSpecific
+        ///     Gets or Sets IncludeAvailableInSpecific
         /// </summary>
-        [DataMember(Name="includeAvailableInSpecific", EmitDefaultValue=false)]
+        [DataMember(Name = "includeAvailableInSpecific", EmitDefaultValue = false)]
         public bool? IncludeAvailableInSpecific { get; set; }
 
         /// <summary>
-        /// Gets or Sets IncludeQuickSearchInSpecific
+        ///     Gets or Sets IncludeQuickSearchInSpecific
         /// </summary>
-        [DataMember(Name="includeQuickSearchInSpecific", EmitDefaultValue=false)]
+        [DataMember(Name = "includeQuickSearchInSpecific", EmitDefaultValue = false)]
         public bool? IncludeQuickSearchInSpecific { get; set; }
 
         /// <summary>
-        /// Gets or Sets QuickSearchId
+        ///     Gets or Sets QuickSearchId
         /// </summary>
-        [DataMember(Name="quickSearchId", EmitDefaultValue=false)]
+        [DataMember(Name = "quickSearchId", EmitDefaultValue = false)]
         public string QuickSearchId { get; set; }
 
         /// <summary>
-        /// Gets or Sets QuickSearchItems
+        ///     Gets or Sets QuickSearchItems
         /// </summary>
-        [DataMember(Name="quickSearchItems", EmitDefaultValue=false)]
+        [DataMember(Name = "quickSearchItems", EmitDefaultValue = false)]
         public List<QuickSearchItem> QuickSearchItems { get; set; }
 
         /// <summary>
-        /// Gets or Sets QuickSearchWatermark
+        ///     Gets or Sets QuickSearchWatermark
         /// </summary>
-        [DataMember(Name="quickSearchWatermark", EmitDefaultValue=false)]
+        [DataMember(Name = "quickSearchWatermark", EmitDefaultValue = false)]
         public string QuickSearchWatermark { get; set; }
 
         /// <summary>
-        /// Gets or Sets SortByRelevance
+        ///     Gets or Sets SortByRelevance
         /// </summary>
-        [DataMember(Name="sortByRelevance", EmitDefaultValue=false)]
+        [DataMember(Name = "sortByRelevance", EmitDefaultValue = false)]
         public bool? SortByRelevance { get; set; }
 
         /// <summary>
-        /// Gets or Sets ResolvedQuickSearchWatermark
+        ///     Gets or Sets ResolvedQuickSearchWatermark
         /// </summary>
-        [DataMember(Name="resolvedQuickSearchWatermark", EmitDefaultValue=false)]
+        [DataMember(Name = "resolvedQuickSearchWatermark", EmitDefaultValue = false)]
         public string ResolvedQuickSearchWatermark { get; set; }
 
         /// <summary>
-        /// Gets or Sets Scope
+        ///     Gets or Sets Scope
         /// </summary>
-        [DataMember(Name="scope", EmitDefaultValue=false)]
+        [DataMember(Name = "scope", EmitDefaultValue = false)]
         public string Scope { get; set; }
 
         /// <summary>
-        /// Gets or Sets ScopeOwner
+        ///     Gets or Sets ScopeOwner
         /// </summary>
-        [DataMember(Name="scopeOwner", EmitDefaultValue=false)]
+        [DataMember(Name = "scopeOwner", EmitDefaultValue = false)]
         public string ScopeOwner { get; set; }
 
         /// <summary>
-        /// Gets or Sets SpecificSearchItems
+        ///     Gets or Sets SpecificSearchItems
         /// </summary>
-        [DataMember(Name="specificSearchItems", EmitDefaultValue=false)]
+        [DataMember(Name = "specificSearchItems", EmitDefaultValue = false)]
         public List<QuickSearchItem> SpecificSearchItems { get; set; }
 
         /// <summary>
-        /// Gets or Sets ErrorCode
+        ///     Gets or Sets ErrorCode
         /// </summary>
-        [DataMember(Name="errorCode", EmitDefaultValue=false)]
+        [DataMember(Name = "errorCode", EmitDefaultValue = false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// Gets or Sets ErrorMessage
+        ///     Gets or Sets ErrorMessage
         /// </summary>
-        [DataMember(Name="errorMessage", EmitDefaultValue=false)]
+        [DataMember(Name = "errorMessage", EmitDefaultValue = false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// Gets or Sets HasError
+        ///     Gets or Sets HasError
         /// </summary>
-        [DataMember(Name="hasError", EmitDefaultValue=false)]
+        [DataMember(Name = "hasError", EmitDefaultValue = false)]
         public bool? HasError { get; set; }
+
+        /// <summary>
+        ///     Returns true if QuickSearchConfigurationResponse instances are equal
+        /// </summary>
+        /// <param name="input">Instance of QuickSearchConfigurationResponse to be compared</param>
+        /// <returns>Boolean</returns>
+        public bool Equals(QuickSearchConfigurationResponse input)
+        {
+            if (input == null)
+                return false;
+
+            return
+                (
+                    AllowQuickSearch == input.AllowQuickSearch ||
+                    AllowQuickSearch != null &&
+                    AllowQuickSearch.Equals(input.AllowQuickSearch)
+                ) &&
+                (
+                    AllowSpecificSearch == input.AllowSpecificSearch ||
+                    AllowSpecificSearch != null &&
+                    AllowSpecificSearch.Equals(input.AllowSpecificSearch)
+                ) &&
+                (
+                    DefaultToQuickSearch == input.DefaultToQuickSearch ||
+                    DefaultToQuickSearch != null &&
+                    DefaultToQuickSearch.Equals(input.DefaultToQuickSearch)
+                ) &&
+                (
+                    DisplayName == input.DisplayName ||
+                    DisplayName != null &&
+                    DisplayName.Equals(input.DisplayName)
+                ) &&
+                (
+                    GalleryImage == input.GalleryImage ||
+                    GalleryImage != null &&
+                    GalleryImage.Equals(input.GalleryImage)
+                ) &&
+                (
+                    History == input.History ||
+                    History != null &&
+                    History.SequenceEqual(input.History)
+                ) &&
+                (
+                    IncludeAvailableInSpecific == input.IncludeAvailableInSpecific ||
+                    IncludeAvailableInSpecific != null &&
+                    IncludeAvailableInSpecific.Equals(input.IncludeAvailableInSpecific)
+                ) &&
+                (
+                    IncludeQuickSearchInSpecific == input.IncludeQuickSearchInSpecific ||
+                    IncludeQuickSearchInSpecific != null &&
+                    IncludeQuickSearchInSpecific.Equals(input.IncludeQuickSearchInSpecific)
+                ) &&
+                (
+                    QuickSearchId == input.QuickSearchId ||
+                    QuickSearchId != null &&
+                    QuickSearchId.Equals(input.QuickSearchId)
+                ) &&
+                (
+                    QuickSearchItems == input.QuickSearchItems ||
+                    QuickSearchItems != null &&
+                    QuickSearchItems.SequenceEqual(input.QuickSearchItems)
+                ) &&
+                (
+                    QuickSearchWatermark == input.QuickSearchWatermark ||
+                    QuickSearchWatermark != null &&
+                    QuickSearchWatermark.Equals(input.QuickSearchWatermark)
+                ) &&
+                (
+                    SortByRelevance == input.SortByRelevance ||
+                    SortByRelevance != null &&
+                    SortByRelevance.Equals(input.SortByRelevance)
+                ) &&
+                (
+                    ResolvedQuickSearchWatermark == input.ResolvedQuickSearchWatermark ||
+                    ResolvedQuickSearchWatermark != null &&
+                    ResolvedQuickSearchWatermark.Equals(input.ResolvedQuickSearchWatermark)
+                ) &&
+                (
+                    Scope == input.Scope ||
+                    Scope != null &&
+                    Scope.Equals(input.Scope)
+                ) &&
+                (
+                    ScopeOwner == input.ScopeOwner ||
+                    ScopeOwner != null &&
+                    ScopeOwner.Equals(input.ScopeOwner)
+                ) &&
+                (
+                    SpecificSearchItems == input.SpecificSearchItems ||
+                    SpecificSearchItems != null &&
+                    SpecificSearchItems.SequenceEqual(input.SpecificSearchItems)
+                ) &&
+                (
+                    ErrorCode == input.ErrorCode ||
+                    ErrorCode != null &&
+                    ErrorCode.Equals(input.ErrorCode)
+                ) &&
+                (
+                    ErrorMessage == input.ErrorMessage ||
+                    ErrorMessage != null &&
+                    ErrorMessage.Equals(input.ErrorMessage)
+                ) &&
+                (
+                    HasError == input.HasError ||
+                    HasError != null &&
+                    HasError.Equals(input.HasError)
+                ) &&
+                (
+                    HttpStatusCode == input.HttpStatusCode ||
+                    HttpStatusCode != null &&
+                    HttpStatusCode.Equals(input.HttpStatusCode)
+                );
+        }
+
+        /// <summary>
+        ///     To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+            yield break;
+        }
 
 
         /// <summary>
-        /// Returns the string presentation of the object
+        ///     Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
         public override string ToString()
@@ -219,18 +347,18 @@ namespace CherwellConnector.Model
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
-        /// Returns the JSON string presentation of the object
+        ///     Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public  string ToJson()
+        public string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }
 
         /// <summary>
-        /// Returns true if objects are equal
+        ///     Returns true if objects are equal
         /// </summary>
         /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
@@ -240,120 +368,7 @@ namespace CherwellConnector.Model
         }
 
         /// <summary>
-        /// Returns true if QuickSearchConfigurationResponse instances are equal
-        /// </summary>
-        /// <param name="input">Instance of QuickSearchConfigurationResponse to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(QuickSearchConfigurationResponse input)
-        {
-            if (input == null)
-                return false;
-
-            return 
-                (
-                    AllowQuickSearch == input.AllowQuickSearch ||
-                    (AllowQuickSearch != null &&
-                    AllowQuickSearch.Equals(input.AllowQuickSearch))
-                ) && 
-                (
-                    AllowSpecificSearch == input.AllowSpecificSearch ||
-                    (AllowSpecificSearch != null &&
-                    AllowSpecificSearch.Equals(input.AllowSpecificSearch))
-                ) && 
-                (
-                    DefaultToQuickSearch == input.DefaultToQuickSearch ||
-                    (DefaultToQuickSearch != null &&
-                    DefaultToQuickSearch.Equals(input.DefaultToQuickSearch))
-                ) && 
-                (
-                    DisplayName == input.DisplayName ||
-                    (DisplayName != null &&
-                    DisplayName.Equals(input.DisplayName))
-                ) && 
-                (
-                    GalleryImage == input.GalleryImage ||
-                    (GalleryImage != null &&
-                    GalleryImage.Equals(input.GalleryImage))
-                ) && 
-                (
-                    History == input.History ||
-                    History != null &&
-                    History.SequenceEqual(input.History)
-                ) && 
-                (
-                    IncludeAvailableInSpecific == input.IncludeAvailableInSpecific ||
-                    (IncludeAvailableInSpecific != null &&
-                    IncludeAvailableInSpecific.Equals(input.IncludeAvailableInSpecific))
-                ) && 
-                (
-                    IncludeQuickSearchInSpecific == input.IncludeQuickSearchInSpecific ||
-                    (IncludeQuickSearchInSpecific != null &&
-                    IncludeQuickSearchInSpecific.Equals(input.IncludeQuickSearchInSpecific))
-                ) && 
-                (
-                    QuickSearchId == input.QuickSearchId ||
-                    (QuickSearchId != null &&
-                    QuickSearchId.Equals(input.QuickSearchId))
-                ) && 
-                (
-                    QuickSearchItems == input.QuickSearchItems ||
-                    QuickSearchItems != null &&
-                    QuickSearchItems.SequenceEqual(input.QuickSearchItems)
-                ) && 
-                (
-                    QuickSearchWatermark == input.QuickSearchWatermark ||
-                    (QuickSearchWatermark != null &&
-                    QuickSearchWatermark.Equals(input.QuickSearchWatermark))
-                ) && 
-                (
-                    SortByRelevance == input.SortByRelevance ||
-                    (SortByRelevance != null &&
-                    SortByRelevance.Equals(input.SortByRelevance))
-                ) && 
-                (
-                    ResolvedQuickSearchWatermark == input.ResolvedQuickSearchWatermark ||
-                    (ResolvedQuickSearchWatermark != null &&
-                    ResolvedQuickSearchWatermark.Equals(input.ResolvedQuickSearchWatermark))
-                ) && 
-                (
-                    Scope == input.Scope ||
-                    (Scope != null &&
-                    Scope.Equals(input.Scope))
-                ) && 
-                (
-                    ScopeOwner == input.ScopeOwner ||
-                    (ScopeOwner != null &&
-                    ScopeOwner.Equals(input.ScopeOwner))
-                ) && 
-                (
-                    SpecificSearchItems == input.SpecificSearchItems ||
-                    SpecificSearchItems != null &&
-                    SpecificSearchItems.SequenceEqual(input.SpecificSearchItems)
-                ) && 
-                (
-                    ErrorCode == input.ErrorCode ||
-                    (ErrorCode != null &&
-                    ErrorCode.Equals(input.ErrorCode))
-                ) && 
-                (
-                    ErrorMessage == input.ErrorMessage ||
-                    (ErrorMessage != null &&
-                    ErrorMessage.Equals(input.ErrorMessage))
-                ) && 
-                (
-                    HasError == input.HasError ||
-                    (HasError != null &&
-                    HasError.Equals(input.HasError))
-                ) && 
-                (
-                    HttpStatusCode == input.HttpStatusCode ||
-                    (HttpStatusCode != null &&
-                    HttpStatusCode.Equals(input.HttpStatusCode))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
+        ///     Gets the hash code
         /// </summary>
         /// <returns>Hash code</returns>
         public override int GetHashCode()
@@ -404,16 +419,5 @@ namespace CherwellConnector.Model
                 return hashCode;
             }
         }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-            yield break;
-        }
     }
-
 }

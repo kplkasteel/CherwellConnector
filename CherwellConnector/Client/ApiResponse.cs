@@ -1,44 +1,41 @@
+using System.Collections.Generic;
 
 namespace CherwellConnector.Client
 {
-    using System.Collections.Generic;
-
     /// <summary>
-    /// API Response
+    ///     API Response
     /// </summary>
     public class ApiResponse<T>
     {
         /// <summary>
-        /// Gets or sets the status code (HTTP status code)
-        /// </summary>
-        /// <value>The status code.</value>
-        private int StatusCode { get; set; }
-
-        /// <summary>
-        /// Gets or sets the HTTP headers
-        /// </summary>
-        /// <value>HTTP headers</value>
-        private IDictionary<string, string> Headers { get; set; }
-
-        /// <summary>
-        /// Gets or sets the data (parsed HTTP body)
-        /// </summary>
-        /// <value>The data.</value>
-        public T Data { get; }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ApiResponse&lt;T&gt;" /> class.
+        ///     Initializes a new instance of the <see cref="ApiResponse&lt;T&gt;" /> class.
         /// </summary>
         /// <param name="statusCode">HTTP status code.</param>
         /// <param name="headers">HTTP headers.</param>
         /// <param name="data">Data (parsed HTTP body)</param>
         public ApiResponse(int statusCode, IDictionary<string, string> headers, T data)
         {
-            StatusCode= statusCode;
+            StatusCode = statusCode;
             Headers = headers;
             Data = data;
         }
 
-    }
+        /// <summary>
+        ///     Gets or sets the status code (HTTP status code)
+        /// </summary>
+        /// <value>The status code.</value>
+        private int StatusCode { get; }
 
+        /// <summary>
+        ///     Gets or sets the HTTP headers
+        /// </summary>
+        /// <value>HTTP headers</value>
+        private IDictionary<string, string> Headers { get; }
+
+        /// <summary>
+        ///     Gets or sets the data (parsed HTTP body)
+        /// </summary>
+        /// <value>The data.</value>
+        public T Data { get; }
+    }
 }

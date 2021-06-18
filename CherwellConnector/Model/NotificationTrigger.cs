@@ -1,61 +1,103 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Runtime.Serialization;
+using System.Text;
+using Newtonsoft.Json;
 
 namespace CherwellConnector.Model
 {
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.Runtime.Serialization;
-    using System.Text;
-
-    using Newtonsoft.Json;
-
     /// <summary>
-    /// NotificationTrigger
+    ///     NotificationTrigger
     /// </summary>
     [DataContract]
-    public sealed class NotificationTrigger :  IEquatable<NotificationTrigger>, IValidatableObject
+    public sealed class NotificationTrigger : IEquatable<NotificationTrigger>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="NotificationTrigger" /> class.
+        ///     Initializes a new instance of the <see cref="NotificationTrigger" /> class.
         /// </summary>
         /// <param name="sourceType">sourceType.</param>
         /// <param name="sourceId">sourceId.</param>
         /// <param name="sourceChange">sourceChange.</param>
         /// <param name="key">key.</param>
-        public NotificationTrigger(string sourceType = default, string sourceId = default, string sourceChange = default, string key = default)
+        public NotificationTrigger(string sourceType = default, string sourceId = default,
+            string sourceChange = default, string key = default)
         {
             SourceType = sourceType;
             SourceId = sourceId;
             SourceChange = sourceChange;
             Key = key;
         }
-        
+
         /// <summary>
-        /// Gets or Sets SourceType
+        ///     Gets or Sets SourceType
         /// </summary>
-        [DataMember(Name="sourceType", EmitDefaultValue=false)]
+        [DataMember(Name = "sourceType", EmitDefaultValue = false)]
         public string SourceType { get; set; }
 
         /// <summary>
-        /// Gets or Sets SourceId
+        ///     Gets or Sets SourceId
         /// </summary>
-        [DataMember(Name="sourceId", EmitDefaultValue=false)]
+        [DataMember(Name = "sourceId", EmitDefaultValue = false)]
         public string SourceId { get; set; }
 
         /// <summary>
-        /// Gets or Sets SourceChange
+        ///     Gets or Sets SourceChange
         /// </summary>
-        [DataMember(Name="sourceChange", EmitDefaultValue=false)]
+        [DataMember(Name = "sourceChange", EmitDefaultValue = false)]
         public string SourceChange { get; set; }
 
         /// <summary>
-        /// Gets or Sets Key
+        ///     Gets or Sets Key
         /// </summary>
-        [DataMember(Name="key", EmitDefaultValue=false)]
+        [DataMember(Name = "key", EmitDefaultValue = false)]
         public string Key { get; set; }
 
         /// <summary>
-        /// Returns the string presentation of the object
+        ///     Returns true if NotificationTrigger instances are equal
+        /// </summary>
+        /// <param name="input">Instance of NotificationTrigger to be compared</param>
+        /// <returns>Boolean</returns>
+        public bool Equals(NotificationTrigger input)
+        {
+            if (input == null)
+                return false;
+
+            return
+                (
+                    SourceType == input.SourceType ||
+                    SourceType != null &&
+                    SourceType.Equals(input.SourceType)
+                ) &&
+                (
+                    SourceId == input.SourceId ||
+                    SourceId != null &&
+                    SourceId.Equals(input.SourceId)
+                ) &&
+                (
+                    SourceChange == input.SourceChange ||
+                    SourceChange != null &&
+                    SourceChange.Equals(input.SourceChange)
+                ) &&
+                (
+                    Key == input.Key ||
+                    Key != null &&
+                    Key.Equals(input.Key)
+                );
+        }
+
+        /// <summary>
+        ///     To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+            yield break;
+        }
+
+        /// <summary>
+        ///     Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
         public override string ToString()
@@ -69,9 +111,9 @@ namespace CherwellConnector.Model
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
-        /// Returns the JSON string presentation of the object
+        ///     Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
         public string ToJson()
@@ -80,7 +122,7 @@ namespace CherwellConnector.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
+        ///     Returns true if objects are equal
         /// </summary>
         /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
@@ -90,43 +132,9 @@ namespace CherwellConnector.Model
         }
 
         /// <summary>
-        /// Returns true if NotificationTrigger instances are equal
-        /// </summary>
-        /// <param name="input">Instance of NotificationTrigger to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(NotificationTrigger input)
-        {
-            if (input == null)
-                return false;
-
-            return 
-                (
-                    SourceType == input.SourceType ||
-                    (SourceType != null &&
-                    SourceType.Equals(input.SourceType))
-                ) && 
-                (
-                    SourceId == input.SourceId ||
-                    (SourceId != null &&
-                    SourceId.Equals(input.SourceId))
-                ) && 
-                (
-                    SourceChange == input.SourceChange ||
-                    (SourceChange != null &&
-                    SourceChange.Equals(input.SourceChange))
-                ) && 
-                (
-                    Key == input.Key ||
-                    (Key != null &&
-                    Key.Equals(input.Key))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
+        ///     Gets the hash code
         /// </summary>
         /// <returns>Hash code</returns>
-        
         public override int GetHashCode()
         {
             unchecked // Overflow is fine, just wrap
@@ -143,16 +151,5 @@ namespace CherwellConnector.Model
                 return hashCode;
             }
         }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-            yield break;
-        }
     }
-
 }

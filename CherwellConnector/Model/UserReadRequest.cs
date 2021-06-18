@@ -1,21 +1,20 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Runtime.Serialization;
+using System.Text;
+using Newtonsoft.Json;
+
 namespace CherwellConnector.Model
 {
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.Runtime.Serialization;
-    using System.Text;
-
-    using Newtonsoft.Json;
-
     /// <summary>
-    /// UserReadRequest
+    ///     UserReadRequest
     /// </summary>
     [DataContract]
-    public sealed class UserReadRequest :  IEquatable<UserReadRequest>, IValidatableObject
+    public sealed class UserReadRequest : IEquatable<UserReadRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="UserReadRequest" /> class.
+        ///     Initializes a new instance of the <see cref="UserReadRequest" /> class.
         /// </summary>
         /// <param name="loginId">loginId.</param>
         /// <param name="publicId">publicId.</param>
@@ -24,21 +23,54 @@ namespace CherwellConnector.Model
             LoginId = loginId;
             PublicId = publicId;
         }
-        
+
         /// <summary>
-        /// Gets or Sets LoginId
+        ///     Gets or Sets LoginId
         /// </summary>
-        [DataMember(Name="loginId", EmitDefaultValue=false)]
+        [DataMember(Name = "loginId", EmitDefaultValue = false)]
         public string LoginId { get; set; }
 
         /// <summary>
-        /// Gets or Sets PublicId
+        ///     Gets or Sets PublicId
         /// </summary>
-        [DataMember(Name="publicId", EmitDefaultValue=false)]
+        [DataMember(Name = "publicId", EmitDefaultValue = false)]
         public string PublicId { get; set; }
 
         /// <summary>
-        /// Returns the string presentation of the object
+        ///     Returns true if UserReadRequest instances are equal
+        /// </summary>
+        /// <param name="input">Instance of UserReadRequest to be compared</param>
+        /// <returns>Boolean</returns>
+        public bool Equals(UserReadRequest input)
+        {
+            if (input == null)
+                return false;
+
+            return
+                (
+                    LoginId == input.LoginId ||
+                    LoginId != null &&
+                    LoginId.Equals(input.LoginId)
+                ) &&
+                (
+                    PublicId == input.PublicId ||
+                    PublicId != null &&
+                    PublicId.Equals(input.PublicId)
+                );
+        }
+
+        /// <summary>
+        ///     To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+            yield break;
+        }
+
+        /// <summary>
+        ///     Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
         public override string ToString()
@@ -50,9 +82,9 @@ namespace CherwellConnector.Model
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
-        /// Returns the JSON string presentation of the object
+        ///     Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
         public string ToJson()
@@ -61,7 +93,7 @@ namespace CherwellConnector.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
+        ///     Returns true if objects are equal
         /// </summary>
         /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
@@ -71,30 +103,7 @@ namespace CherwellConnector.Model
         }
 
         /// <summary>
-        /// Returns true if UserReadRequest instances are equal
-        /// </summary>
-        /// <param name="input">Instance of UserReadRequest to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(UserReadRequest input)
-        {
-            if (input == null)
-                return false;
-
-            return 
-                (
-                    LoginId == input.LoginId ||
-                    (LoginId != null &&
-                    LoginId.Equals(input.LoginId))
-                ) && 
-                (
-                    PublicId == input.PublicId ||
-                    (PublicId != null &&
-                    PublicId.Equals(input.PublicId))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
+        ///     Gets the hash code
         /// </summary>
         /// <returns>Hash code</returns>
         public override int GetHashCode()
@@ -109,16 +118,5 @@ namespace CherwellConnector.Model
                 return hashCode;
             }
         }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-            yield break;
-        }
     }
-
 }

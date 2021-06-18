@@ -5,28 +5,24 @@ using Newtonsoft.Json.Converters;
 namespace CherwellConnector.Enum
 {
     /// <summary>
-    /// Defines LoginVisibilityMode
+    ///     Defines LoginVisibilityMode
     /// </summary>
     [JsonConverter(typeof(StringEnumConverter))]
     public enum LoginVisibilityModeEnum
     {
-            
         /// <summary>
-        /// Enum Anonymous for value: Anonymous
+        ///     Enum Anonymous for value: Anonymous
         /// </summary>
-        [EnumMember(Value = "Anonymous")]
-        Anonymous = 1,
-            
+        [EnumMember(Value = "Anonymous")] Anonymous = 1,
+
         /// <summary>
-        /// Enum LoggedIn for value: LoggedIn
+        ///     Enum LoggedIn for value: LoggedIn
         /// </summary>
-        [EnumMember(Value = "LoggedIn")]
-        LoggedIn = 2,
-            
+        [EnumMember(Value = "LoggedIn")] LoggedIn = 2,
+
         /// <summary>
-        /// Enum Both for value: Both
+        ///     Enum Both for value: Both
         /// </summary>
-        [EnumMember(Value = "Both")]
-        Both = 3
+        [EnumMember(Value = "Both")] Both = 3
     }
 }

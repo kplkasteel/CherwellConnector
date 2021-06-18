@@ -1,22 +1,20 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Runtime.Serialization;
+using System.Text;
+using Newtonsoft.Json;
 
 namespace CherwellConnector.Model
 {
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.Runtime.Serialization;
-    using System.Text;
-
-    using Newtonsoft.Json;
-
     /// <summary>
-    /// SearchesAssociation
+    ///     SearchesAssociation
     /// </summary>
     [DataContract]
-    public sealed class SearchesAssociation :  IEquatable<SearchesAssociation>, IValidatableObject
+    public sealed class SearchesAssociation : IEquatable<SearchesAssociation>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="SearchesAssociation" /> class.
+        ///     Initializes a new instance of the <see cref="SearchesAssociation" /> class.
         /// </summary>
         /// <param name="busObId">busObId.</param>
         /// <param name="busObName">busObName.</param>
@@ -25,21 +23,54 @@ namespace CherwellConnector.Model
             BusObId = busObId;
             BusObName = busObName;
         }
-        
+
         /// <summary>
-        /// Gets or Sets BusObId
+        ///     Gets or Sets BusObId
         /// </summary>
-        [DataMember(Name="busObId", EmitDefaultValue=false)]
+        [DataMember(Name = "busObId", EmitDefaultValue = false)]
         public string BusObId { get; set; }
 
         /// <summary>
-        /// Gets or Sets BusObName
+        ///     Gets or Sets BusObName
         /// </summary>
-        [DataMember(Name="busObName", EmitDefaultValue=false)]
+        [DataMember(Name = "busObName", EmitDefaultValue = false)]
         public string BusObName { get; set; }
 
         /// <summary>
-        /// Returns the string presentation of the object
+        ///     Returns true if SearchesAssociation instances are equal
+        /// </summary>
+        /// <param name="input">Instance of SearchesAssociation to be compared</param>
+        /// <returns>Boolean</returns>
+        public bool Equals(SearchesAssociation input)
+        {
+            if (input == null)
+                return false;
+
+            return
+                (
+                    BusObId == input.BusObId ||
+                    BusObId != null &&
+                    BusObId.Equals(input.BusObId)
+                ) &&
+                (
+                    BusObName == input.BusObName ||
+                    BusObName != null &&
+                    BusObName.Equals(input.BusObName)
+                );
+        }
+
+        /// <summary>
+        ///     To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+            yield break;
+        }
+
+        /// <summary>
+        ///     Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
         public override string ToString()
@@ -51,18 +82,18 @@ namespace CherwellConnector.Model
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
-        /// Returns the JSON string presentation of the object
+        ///     Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public  string ToJson()
+        public string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }
 
         /// <summary>
-        /// Returns true if objects are equal
+        ///     Returns true if objects are equal
         /// </summary>
         /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
@@ -72,30 +103,7 @@ namespace CherwellConnector.Model
         }
 
         /// <summary>
-        /// Returns true if SearchesAssociation instances are equal
-        /// </summary>
-        /// <param name="input">Instance of SearchesAssociation to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(SearchesAssociation input)
-        {
-            if (input == null)
-                return false;
-
-            return 
-                (
-                    BusObId == input.BusObId ||
-                    (BusObId != null &&
-                    BusObId.Equals(input.BusObId))
-                ) && 
-                (
-                    BusObName == input.BusObName ||
-                    (BusObName != null &&
-                    BusObName.Equals(input.BusObName))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
+        ///     Gets the hash code
         /// </summary>
         /// <returns>Hash code</returns>
         public override int GetHashCode()
@@ -110,16 +118,5 @@ namespace CherwellConnector.Model
                 return hashCode;
             }
         }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-            yield break;
-        }
     }
-
 }

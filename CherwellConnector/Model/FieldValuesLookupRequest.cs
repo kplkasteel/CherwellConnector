@@ -1,23 +1,21 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Runtime.Serialization;
+using System.Text;
+using Newtonsoft.Json;
 
 namespace CherwellConnector.Model
 {
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.Linq;
-    using System.Runtime.Serialization;
-    using System.Text;
-
-    using Newtonsoft.Json;
-
     /// <summary>
-    /// FieldValuesLookupRequest
+    ///     FieldValuesLookupRequest
     /// </summary>
     [DataContract]
-    public sealed class FieldValuesLookupRequest :  IEquatable<FieldValuesLookupRequest>, IValidatableObject
+    public sealed class FieldValuesLookupRequest : IEquatable<FieldValuesLookupRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="FieldValuesLookupRequest" /> class.
+        ///     Initializes a new instance of the <see cref="FieldValuesLookupRequest" /> class.
         /// </summary>
         /// <param name="busbPublicId">busbPublicId.</param>
         /// <param name="busObId">busObId.</param>
@@ -25,7 +23,9 @@ namespace CherwellConnector.Model
         /// <param name="fieldId">fieldId.</param>
         /// <param name="fieldName">fieldName.</param>
         /// <param name="fields">fields.</param>
-        public FieldValuesLookupRequest(string busbPublicId = default, string busObId = default, string busObRecId = default, string fieldId = default, string fieldName = default, List<FieldTemplateItem> fields = default)
+        public FieldValuesLookupRequest(string busbPublicId = default, string busObId = default,
+            string busObRecId = default, string fieldId = default, string fieldName = default,
+            List<FieldTemplateItem> fields = default)
         {
             BusbPublicId = busbPublicId;
             BusObId = busObId;
@@ -34,45 +34,98 @@ namespace CherwellConnector.Model
             FieldName = fieldName;
             Fields = fields;
         }
-        
+
         /// <summary>
-        /// Gets or Sets BusbPublicId
+        ///     Gets or Sets BusbPublicId
         /// </summary>
-        [DataMember(Name="busbPublicId", EmitDefaultValue=false)]
+        [DataMember(Name = "busbPublicId", EmitDefaultValue = false)]
         public string BusbPublicId { get; set; }
 
         /// <summary>
-        /// Gets or Sets BusObId
+        ///     Gets or Sets BusObId
         /// </summary>
-        [DataMember(Name="busObId", EmitDefaultValue=false)]
+        [DataMember(Name = "busObId", EmitDefaultValue = false)]
         public string BusObId { get; set; }
 
         /// <summary>
-        /// Gets or Sets BusObRecId
+        ///     Gets or Sets BusObRecId
         /// </summary>
-        [DataMember(Name="busObRecId", EmitDefaultValue=false)]
+        [DataMember(Name = "busObRecId", EmitDefaultValue = false)]
         public string BusObRecId { get; set; }
 
         /// <summary>
-        /// Gets or Sets FieldId
+        ///     Gets or Sets FieldId
         /// </summary>
-        [DataMember(Name="fieldId", EmitDefaultValue=false)]
+        [DataMember(Name = "fieldId", EmitDefaultValue = false)]
         public string FieldId { get; set; }
 
         /// <summary>
-        /// Gets or Sets FieldName
+        ///     Gets or Sets FieldName
         /// </summary>
-        [DataMember(Name="fieldName", EmitDefaultValue=false)]
+        [DataMember(Name = "fieldName", EmitDefaultValue = false)]
         public string FieldName { get; set; }
 
         /// <summary>
-        /// Gets or Sets Fields
+        ///     Gets or Sets Fields
         /// </summary>
-        [DataMember(Name="fields", EmitDefaultValue=false)]
+        [DataMember(Name = "fields", EmitDefaultValue = false)]
         public List<FieldTemplateItem> Fields { get; set; }
 
         /// <summary>
-        /// Returns the string presentation of the object
+        ///     Returns true if FieldValuesLookupRequest instances are equal
+        /// </summary>
+        /// <param name="input">Instance of FieldValuesLookupRequest to be compared</param>
+        /// <returns>Boolean</returns>
+        public bool Equals(FieldValuesLookupRequest input)
+        {
+            if (input == null)
+                return false;
+
+            return
+                (
+                    BusbPublicId == input.BusbPublicId ||
+                    BusbPublicId != null &&
+                    BusbPublicId.Equals(input.BusbPublicId)
+                ) &&
+                (
+                    BusObId == input.BusObId ||
+                    BusObId != null &&
+                    BusObId.Equals(input.BusObId)
+                ) &&
+                (
+                    BusObRecId == input.BusObRecId ||
+                    BusObRecId != null &&
+                    BusObRecId.Equals(input.BusObRecId)
+                ) &&
+                (
+                    FieldId == input.FieldId ||
+                    FieldId != null &&
+                    FieldId.Equals(input.FieldId)
+                ) &&
+                (
+                    FieldName == input.FieldName ||
+                    FieldName != null &&
+                    FieldName.Equals(input.FieldName)
+                ) &&
+                (
+                    Fields == input.Fields ||
+                    Fields != null &&
+                    Fields.SequenceEqual(input.Fields)
+                );
+        }
+
+        /// <summary>
+        ///     To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+            yield break;
+        }
+
+        /// <summary>
+        ///     Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
         public override string ToString()
@@ -88,9 +141,9 @@ namespace CherwellConnector.Model
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
-        /// Returns the JSON string presentation of the object
+        ///     Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
         public string ToJson()
@@ -99,7 +152,7 @@ namespace CherwellConnector.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
+        ///     Returns true if objects are equal
         /// </summary>
         /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
@@ -109,53 +162,9 @@ namespace CherwellConnector.Model
         }
 
         /// <summary>
-        /// Returns true if FieldValuesLookupRequest instances are equal
-        /// </summary>
-        /// <param name="input">Instance of FieldValuesLookupRequest to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(FieldValuesLookupRequest input)
-        {
-            if (input == null)
-                return false;
-
-            return 
-                (
-                    BusbPublicId == input.BusbPublicId ||
-                    (BusbPublicId != null &&
-                    BusbPublicId.Equals(input.BusbPublicId))
-                ) && 
-                (
-                    BusObId == input.BusObId ||
-                    (BusObId != null &&
-                    BusObId.Equals(input.BusObId))
-                ) && 
-                (
-                    BusObRecId == input.BusObRecId ||
-                    (BusObRecId != null &&
-                    BusObRecId.Equals(input.BusObRecId))
-                ) && 
-                (
-                    FieldId == input.FieldId ||
-                    (FieldId != null &&
-                    FieldId.Equals(input.FieldId))
-                ) && 
-                (
-                    FieldName == input.FieldName ||
-                    (FieldName != null &&
-                    FieldName.Equals(input.FieldName))
-                ) && 
-                (
-                    Fields == input.Fields ||
-                    Fields != null &&
-                    Fields.SequenceEqual(input.Fields)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
+        ///     Gets the hash code
         /// </summary>
         /// <returns>Hash code</returns>
-        
         public override int GetHashCode()
         {
             unchecked // Overflow is fine, just wrap
@@ -176,16 +185,5 @@ namespace CherwellConnector.Model
                 return hashCode;
             }
         }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-            yield break;
-        }
     }
-
 }

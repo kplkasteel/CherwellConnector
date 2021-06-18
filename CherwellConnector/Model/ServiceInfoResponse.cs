@@ -1,21 +1,20 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Runtime.Serialization;
+using System.Text;
+using Newtonsoft.Json;
+
 namespace CherwellConnector.Model
 {
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.Runtime.Serialization;
-    using System.Text;
-
-    using Newtonsoft.Json;
-
     /// <summary>
-    /// ServiceInfoResponse
+    ///     ServiceInfoResponse
     /// </summary>
     [DataContract]
-    public sealed class ServiceInfoResponse :  IEquatable<ServiceInfoResponse>, IValidatableObject
+    public sealed class ServiceInfoResponse : IEquatable<ServiceInfoResponse>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="ServiceInfoResponse" /> class.
+        ///     Initializes a new instance of the <see cref="ServiceInfoResponse" /> class.
         /// </summary>
         /// <param name="apiVersion">apiVersion.</param>
         /// <param name="csmCulture">csmCulture.</param>
@@ -23,7 +22,9 @@ namespace CherwellConnector.Model
         /// <param name="systemDateTime">systemDateTime.</param>
         /// <param name="timeZone">timeZone.</param>
         /// <param name="systemUtcOffset">systemUtcOffset.</param>
-        public ServiceInfoResponse(string apiVersion = default, string csmCulture = default, string csmVersion = default, DateTime? systemDateTime = default, Object timeZone = default, string systemUtcOffset = default)
+        public ServiceInfoResponse(string apiVersion = default, string csmCulture = default,
+            string csmVersion = default, DateTime? systemDateTime = default, Object timeZone = default,
+            string systemUtcOffset = default)
         {
             ApiVersion = apiVersion;
             CsmCulture = csmCulture;
@@ -32,45 +33,98 @@ namespace CherwellConnector.Model
             TimeZone = timeZone;
             SystemUtcOffset = systemUtcOffset;
         }
-        
+
         /// <summary>
-        /// Gets or Sets ApiVersion
+        ///     Gets or Sets ApiVersion
         /// </summary>
-        [DataMember(Name="apiVersion", EmitDefaultValue=false)]
+        [DataMember(Name = "apiVersion", EmitDefaultValue = false)]
         public string ApiVersion { get; set; }
 
         /// <summary>
-        /// Gets or Sets CsmCulture
+        ///     Gets or Sets CsmCulture
         /// </summary>
-        [DataMember(Name="csmCulture", EmitDefaultValue=false)]
+        [DataMember(Name = "csmCulture", EmitDefaultValue = false)]
         public string CsmCulture { get; set; }
 
         /// <summary>
-        /// Gets or Sets CsmVersion
+        ///     Gets or Sets CsmVersion
         /// </summary>
-        [DataMember(Name="csmVersion", EmitDefaultValue=false)]
+        [DataMember(Name = "csmVersion", EmitDefaultValue = false)]
         public string CsmVersion { get; set; }
 
         /// <summary>
-        /// Gets or Sets SystemDateTime
+        ///     Gets or Sets SystemDateTime
         /// </summary>
-        [DataMember(Name="systemDateTime", EmitDefaultValue=false)]
+        [DataMember(Name = "systemDateTime", EmitDefaultValue = false)]
         public DateTime? SystemDateTime { get; set; }
 
         /// <summary>
-        /// Gets or Sets TimeZone
+        ///     Gets or Sets TimeZone
         /// </summary>
-        [DataMember(Name="timeZone", EmitDefaultValue=false)]
+        [DataMember(Name = "timeZone", EmitDefaultValue = false)]
         public Object TimeZone { get; set; }
 
         /// <summary>
-        /// Gets or Sets SystemUtcOffset
+        ///     Gets or Sets SystemUtcOffset
         /// </summary>
-        [DataMember(Name="systemUtcOffset", EmitDefaultValue=false)]
+        [DataMember(Name = "systemUtcOffset", EmitDefaultValue = false)]
         public string SystemUtcOffset { get; set; }
 
         /// <summary>
-        /// Returns the string presentation of the object
+        ///     Returns true if ServiceInfoResponse instances are equal
+        /// </summary>
+        /// <param name="input">Instance of ServiceInfoResponse to be compared</param>
+        /// <returns>Boolean</returns>
+        public bool Equals(ServiceInfoResponse input)
+        {
+            if (input == null)
+                return false;
+
+            return
+                (
+                    ApiVersion == input.ApiVersion ||
+                    ApiVersion != null &&
+                    ApiVersion.Equals(input.ApiVersion)
+                ) &&
+                (
+                    CsmCulture == input.CsmCulture ||
+                    CsmCulture != null &&
+                    CsmCulture.Equals(input.CsmCulture)
+                ) &&
+                (
+                    CsmVersion == input.CsmVersion ||
+                    CsmVersion != null &&
+                    CsmVersion.Equals(input.CsmVersion)
+                ) &&
+                (
+                    SystemDateTime == input.SystemDateTime ||
+                    SystemDateTime != null &&
+                    SystemDateTime.Equals(input.SystemDateTime)
+                ) &&
+                (
+                    TimeZone == input.TimeZone ||
+                    TimeZone != null &&
+                    TimeZone.Equals(input.TimeZone)
+                ) &&
+                (
+                    SystemUtcOffset == input.SystemUtcOffset ||
+                    SystemUtcOffset != null &&
+                    SystemUtcOffset.Equals(input.SystemUtcOffset)
+                );
+        }
+
+        /// <summary>
+        ///     To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+            yield break;
+        }
+
+        /// <summary>
+        ///     Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
         public override string ToString()
@@ -86,9 +140,9 @@ namespace CherwellConnector.Model
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
-        /// Returns the JSON string presentation of the object
+        ///     Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
         public string ToJson()
@@ -97,7 +151,7 @@ namespace CherwellConnector.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
+        ///     Returns true if objects are equal
         /// </summary>
         /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
@@ -107,50 +161,7 @@ namespace CherwellConnector.Model
         }
 
         /// <summary>
-        /// Returns true if ServiceInfoResponse instances are equal
-        /// </summary>
-        /// <param name="input">Instance of ServiceInfoResponse to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(ServiceInfoResponse input)
-        {
-            if (input == null)
-                return false;
-
-            return 
-                (
-                    ApiVersion == input.ApiVersion ||
-                    (ApiVersion != null &&
-                    ApiVersion.Equals(input.ApiVersion))
-                ) && 
-                (
-                    CsmCulture == input.CsmCulture ||
-                    (CsmCulture != null &&
-                    CsmCulture.Equals(input.CsmCulture))
-                ) && 
-                (
-                    CsmVersion == input.CsmVersion ||
-                    (CsmVersion != null &&
-                    CsmVersion.Equals(input.CsmVersion))
-                ) && 
-                (
-                    SystemDateTime == input.SystemDateTime ||
-                    (SystemDateTime != null &&
-                    SystemDateTime.Equals(input.SystemDateTime))
-                ) && 
-                (
-                    TimeZone == input.TimeZone ||
-                    (TimeZone != null &&
-                    TimeZone.Equals(input.TimeZone))
-                ) && 
-                (
-                    SystemUtcOffset == input.SystemUtcOffset ||
-                    (SystemUtcOffset != null &&
-                    SystemUtcOffset.Equals(input.SystemUtcOffset))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
+        ///     Gets the hash code
         /// </summary>
         /// <returns>Hash code</returns>
         public override int GetHashCode()
@@ -173,16 +184,5 @@ namespace CherwellConnector.Model
                 return hashCode;
             }
         }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-            yield break;
-        }
     }
-
 }

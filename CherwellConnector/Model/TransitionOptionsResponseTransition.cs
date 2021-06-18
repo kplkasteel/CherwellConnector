@@ -1,4 +1,3 @@
-
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -10,52 +9,97 @@ using Newtonsoft.Json;
 namespace CherwellConnector.Model
 {
     /// <summary>
-    /// TransitionOptionsResponseTransition
+    ///     TransitionOptionsResponseTransition
     /// </summary>
     [DataContract]
-    public sealed class TransitionOptionsResponseTransition :  IEquatable<TransitionOptionsResponseTransition>, IValidatableObject
+    public sealed class TransitionOptionsResponseTransition : IEquatable<TransitionOptionsResponseTransition>,
+        IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TransitionOptionsResponseTransition" /> class.
+        ///     Initializes a new instance of the <see cref="TransitionOptionsResponseTransition" /> class.
         /// </summary>
         /// <param name="name">name.</param>
         /// <param name="id">id.</param>
         /// <param name="isAvailable">isAvailable.</param>
         /// <param name="criteria">criteria.</param>
-        public TransitionOptionsResponseTransition(string name = default(string), string id = default(string), bool? isAvailable = default(bool?), List<string> criteria = default(List<string>))
+        public TransitionOptionsResponseTransition(string name = default, string id = default,
+            bool? isAvailable = default, List<string> criteria = default)
         {
             Name = name;
             Id = id;
             IsAvailable = isAvailable;
             Criteria = criteria;
         }
-        
+
         /// <summary>
-        /// Gets or Sets Name
+        ///     Gets or Sets Name
         /// </summary>
-        [DataMember(Name="name", EmitDefaultValue=false)]
+        [DataMember(Name = "name", EmitDefaultValue = false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or Sets Id
+        ///     Gets or Sets Id
         /// </summary>
-        [DataMember(Name="id", EmitDefaultValue=false)]
+        [DataMember(Name = "id", EmitDefaultValue = false)]
         public string Id { get; set; }
 
         /// <summary>
-        /// Gets or Sets IsAvailable
+        ///     Gets or Sets IsAvailable
         /// </summary>
-        [DataMember(Name="isAvailable", EmitDefaultValue=false)]
+        [DataMember(Name = "isAvailable", EmitDefaultValue = false)]
         public bool? IsAvailable { get; set; }
 
         /// <summary>
-        /// Gets or Sets Criteria
+        ///     Gets or Sets Criteria
         /// </summary>
-        [DataMember(Name="criteria", EmitDefaultValue=false)]
+        [DataMember(Name = "criteria", EmitDefaultValue = false)]
         public List<string> Criteria { get; set; }
 
         /// <summary>
-        /// Returns the string presentation of the object
+        ///     Returns true if TransitionOptionsResponseTransition instances are equal
+        /// </summary>
+        /// <param name="input">Instance of TransitionOptionsResponseTransition to be compared</param>
+        /// <returns>Boolean</returns>
+        public bool Equals(TransitionOptionsResponseTransition input)
+        {
+            if (input == null)
+                return false;
+
+            return
+                (
+                    Name == input.Name ||
+                    Name != null &&
+                    Name.Equals(input.Name)
+                ) &&
+                (
+                    Id == input.Id ||
+                    Id != null &&
+                    Id.Equals(input.Id)
+                ) &&
+                (
+                    IsAvailable == input.IsAvailable ||
+                    IsAvailable != null &&
+                    IsAvailable.Equals(input.IsAvailable)
+                ) &&
+                (
+                    Criteria == input.Criteria ||
+                    Criteria != null &&
+                    Criteria.SequenceEqual(input.Criteria)
+                );
+        }
+
+        /// <summary>
+        ///     To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+            yield break;
+        }
+
+        /// <summary>
+        ///     Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
         public override string ToString()
@@ -69,9 +113,9 @@ namespace CherwellConnector.Model
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
-        /// Returns the JSON string presentation of the object
+        ///     Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
         public string ToJson()
@@ -80,7 +124,7 @@ namespace CherwellConnector.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
+        ///     Returns true if objects are equal
         /// </summary>
         /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
@@ -90,40 +134,7 @@ namespace CherwellConnector.Model
         }
 
         /// <summary>
-        /// Returns true if TransitionOptionsResponseTransition instances are equal
-        /// </summary>
-        /// <param name="input">Instance of TransitionOptionsResponseTransition to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(TransitionOptionsResponseTransition input)
-        {
-            if (input == null)
-                return false;
-
-            return 
-                (
-                    Name == input.Name ||
-                    (Name != null &&
-                    Name.Equals(input.Name))
-                ) && 
-                (
-                    Id == input.Id ||
-                    (Id != null &&
-                    Id.Equals(input.Id))
-                ) && 
-                (
-                    IsAvailable == input.IsAvailable ||
-                    (IsAvailable != null &&
-                    IsAvailable.Equals(input.IsAvailable))
-                ) && 
-                (
-                    Criteria == input.Criteria ||
-                    Criteria != null &&
-                    Criteria.SequenceEqual(input.Criteria)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
+        ///     Gets the hash code
         /// </summary>
         /// <returns>Hash code</returns>
         public override int GetHashCode()
@@ -142,16 +153,5 @@ namespace CherwellConnector.Model
                 return hashCode;
             }
         }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-            yield break;
-        }
     }
-
 }

@@ -1,32 +1,21 @@
-
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Runtime.Serialization;
+using System.Text;
 using CherwellConnector.Enum;
+using Newtonsoft.Json;
 
 namespace CherwellConnector.Model
 {
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.Runtime.Serialization;
-    using System.Text;
-
-    using Newtonsoft.Json;
-    using Newtonsoft.Json.Converters;
-
     /// <summary>
-    /// TrebuchetWebApiDataContractsSecurityApiClientSettingResponse
+    ///     ApiClientSettingResponse
     /// </summary>
     [DataContract]
-    public sealed class ApiClientSettingResponse :  IEquatable<ApiClientSettingResponse>, IValidatableObject
+    public sealed class ApiClientSettingResponse : IEquatable<ApiClientSettingResponse>, IValidatableObject
     {
-        
-
         /// <summary>
-        /// Gets or Sets HttpStatusCode
-        /// </summary>
-        [DataMember(Name="httpStatusCode", EmitDefaultValue=false)]
-        public HttpStatusCodeEnum? HttpStatusCode { get; set; }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ApiClientSettingResponse" /> class.
+        ///     Initializes a new instance of the <see cref="ApiClientSettingResponse" /> class.
         /// </summary>
         /// <param name="name">name.</param>
         /// <param name="description">description.</param>
@@ -41,7 +30,11 @@ namespace CherwellConnector.Model
         /// <param name="errorMessage">errorMessage.</param>
         /// <param name="hasError">hasError.</param>
         /// <param name="httpStatusCode">httpStatusCode.</param>
-        public ApiClientSettingResponse(string name = default, string description = default, string culture = default, string clientKey = default, int? tokenLifespanMinutes = default, int? refreshTokenLifespanMinutes = default, bool? apiAccessIsEnabled = default, bool? allowAnonymousAccess = default, string standInKey = default, string errorCode = default, string errorMessage = default, bool? hasError = default, HttpStatusCodeEnum? httpStatusCode = default)
+        public ApiClientSettingResponse(string name = default, string description = default, string culture = default,
+            string clientKey = default, int? tokenLifespanMinutes = default, int? refreshTokenLifespanMinutes = default,
+            bool? apiAccessIsEnabled = default, bool? allowAnonymousAccess = default, string standInKey = default,
+            string errorCode = default, string errorMessage = default, bool? hasError = default,
+            HttpStatusCodeEnum? httpStatusCode = default)
         {
             Name = name;
             Description = description;
@@ -57,82 +50,177 @@ namespace CherwellConnector.Model
             HasError = hasError;
             HttpStatusCode = httpStatusCode;
         }
-        
+
+
         /// <summary>
-        /// Gets or Sets Name
+        ///     Gets or Sets HttpStatusCode
         /// </summary>
-        [DataMember(Name="name", EmitDefaultValue=false)]
+        [DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
+        public HttpStatusCodeEnum? HttpStatusCode { get; set; }
+
+        /// <summary>
+        ///     Gets or Sets Name
+        /// </summary>
+        [DataMember(Name = "name", EmitDefaultValue = false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or Sets Description
+        ///     Gets or Sets Description
         /// </summary>
-        [DataMember(Name="description", EmitDefaultValue=false)]
+        [DataMember(Name = "description", EmitDefaultValue = false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// Gets or Sets Culture
+        ///     Gets or Sets Culture
         /// </summary>
-        [DataMember(Name="culture", EmitDefaultValue=false)]
+        [DataMember(Name = "culture", EmitDefaultValue = false)]
         public string Culture { get; set; }
 
         /// <summary>
-        /// Gets or Sets ClientKey
+        ///     Gets or Sets ClientKey
         /// </summary>
-        [DataMember(Name="clientKey", EmitDefaultValue=false)]
+        [DataMember(Name = "clientKey", EmitDefaultValue = false)]
         public string ClientKey { get; set; }
 
         /// <summary>
-        /// Gets or Sets TokenLifespanMinutes
+        ///     Gets or Sets TokenLifespanMinutes
         /// </summary>
-        [DataMember(Name="tokenLifespanMinutes", EmitDefaultValue=false)]
+        [DataMember(Name = "tokenLifespanMinutes", EmitDefaultValue = false)]
         public int? TokenLifespanMinutes { get; set; }
 
         /// <summary>
-        /// Gets or Sets RefreshTokenLifespanMinutes
+        ///     Gets or Sets RefreshTokenLifespanMinutes
         /// </summary>
-        [DataMember(Name="refreshTokenLifespanMinutes", EmitDefaultValue=false)]
+        [DataMember(Name = "refreshTokenLifespanMinutes", EmitDefaultValue = false)]
         public int? RefreshTokenLifespanMinutes { get; set; }
 
         /// <summary>
-        /// Gets or Sets ApiAccessIsEnabled
+        ///     Gets or Sets ApiAccessIsEnabled
         /// </summary>
-        [DataMember(Name="apiAccessIsEnabled", EmitDefaultValue=false)]
+        [DataMember(Name = "apiAccessIsEnabled", EmitDefaultValue = false)]
         public bool? ApiAccessIsEnabled { get; set; }
 
         /// <summary>
-        /// Gets or Sets AllowAnonymousAccess
+        ///     Gets or Sets AllowAnonymousAccess
         /// </summary>
-        [DataMember(Name="allowAnonymousAccess", EmitDefaultValue=false)]
+        [DataMember(Name = "allowAnonymousAccess", EmitDefaultValue = false)]
         public bool? AllowAnonymousAccess { get; set; }
 
         /// <summary>
-        /// Gets or Sets StandInKey
+        ///     Gets or Sets StandInKey
         /// </summary>
-        [DataMember(Name="standInKey", EmitDefaultValue=false)]
+        [DataMember(Name = "standInKey", EmitDefaultValue = false)]
         public string StandInKey { get; set; }
 
         /// <summary>
-        /// Gets or Sets ErrorCode
+        ///     Gets or Sets ErrorCode
         /// </summary>
-        [DataMember(Name="errorCode", EmitDefaultValue=false)]
+        [DataMember(Name = "errorCode", EmitDefaultValue = false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// Gets or Sets ErrorMessage
+        ///     Gets or Sets ErrorMessage
         /// </summary>
-        [DataMember(Name="errorMessage", EmitDefaultValue=false)]
+        [DataMember(Name = "errorMessage", EmitDefaultValue = false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// Gets or Sets HasError
+        ///     Gets or Sets HasError
         /// </summary>
-        [DataMember(Name="hasError", EmitDefaultValue=false)]
+        [DataMember(Name = "hasError", EmitDefaultValue = false)]
         public bool? HasError { get; set; }
+
+        /// <summary>
+        ///     Returns true if ApiClientSettingResponse instances are equal
+        /// </summary>
+        /// <param name="input">Instance of ApiClientSettingResponse to be compared</param>
+        /// <returns>Boolean</returns>
+        public bool Equals(ApiClientSettingResponse input)
+        {
+            if (input == null)
+                return false;
+
+            return
+                (
+                    Name == input.Name ||
+                    Name != null &&
+                    Name.Equals(input.Name)
+                ) &&
+                (
+                    Description == input.Description ||
+                    Description != null &&
+                    Description.Equals(input.Description)
+                ) &&
+                (
+                    Culture == input.Culture ||
+                    Culture != null &&
+                    Culture.Equals(input.Culture)
+                ) &&
+                (
+                    ClientKey == input.ClientKey ||
+                    ClientKey != null &&
+                    ClientKey.Equals(input.ClientKey)
+                ) &&
+                (
+                    TokenLifespanMinutes == input.TokenLifespanMinutes ||
+                    TokenLifespanMinutes != null &&
+                    TokenLifespanMinutes.Equals(input.TokenLifespanMinutes)
+                ) &&
+                (
+                    RefreshTokenLifespanMinutes == input.RefreshTokenLifespanMinutes ||
+                    RefreshTokenLifespanMinutes != null &&
+                    RefreshTokenLifespanMinutes.Equals(input.RefreshTokenLifespanMinutes)
+                ) &&
+                (
+                    ApiAccessIsEnabled == input.ApiAccessIsEnabled ||
+                    ApiAccessIsEnabled != null &&
+                    ApiAccessIsEnabled.Equals(input.ApiAccessIsEnabled)
+                ) &&
+                (
+                    AllowAnonymousAccess == input.AllowAnonymousAccess ||
+                    AllowAnonymousAccess != null &&
+                    AllowAnonymousAccess.Equals(input.AllowAnonymousAccess)
+                ) &&
+                (
+                    StandInKey == input.StandInKey ||
+                    StandInKey != null &&
+                    StandInKey.Equals(input.StandInKey)
+                ) &&
+                (
+                    ErrorCode == input.ErrorCode ||
+                    ErrorCode != null &&
+                    ErrorCode.Equals(input.ErrorCode)
+                ) &&
+                (
+                    ErrorMessage == input.ErrorMessage ||
+                    ErrorMessage != null &&
+                    ErrorMessage.Equals(input.ErrorMessage)
+                ) &&
+                (
+                    HasError == input.HasError ||
+                    HasError != null &&
+                    HasError.Equals(input.HasError)
+                ) &&
+                (
+                    HttpStatusCode == input.HttpStatusCode ||
+                    HttpStatusCode != null &&
+                    HttpStatusCode.Equals(input.HttpStatusCode)
+                );
+        }
+
+        /// <summary>
+        ///     To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+            yield break;
+        }
 
 
         /// <summary>
-        /// Returns the string presentation of the object
+        ///     Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
         public override string ToString()
@@ -155,18 +243,18 @@ namespace CherwellConnector.Model
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
-        /// Returns the JSON string presentation of the object
+        ///     Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public  string ToJson()
+        public string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }
 
         /// <summary>
-        /// Returns true if objects are equal
+        ///     Returns true if objects are equal
         /// </summary>
         /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
@@ -176,85 +264,7 @@ namespace CherwellConnector.Model
         }
 
         /// <summary>
-        /// Returns true if ApiClientSettingResponse instances are equal
-        /// </summary>
-        /// <param name="input">Instance of ApiClientSettingResponse to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(ApiClientSettingResponse input)
-        {
-            if (input == null)
-                return false;
-
-            return 
-                (
-                    Name == input.Name ||
-                    (Name != null &&
-                    Name.Equals(input.Name))
-                ) && 
-                (
-                    Description == input.Description ||
-                    (Description != null &&
-                    Description.Equals(input.Description))
-                ) && 
-                (
-                    Culture == input.Culture ||
-                    (Culture != null &&
-                    Culture.Equals(input.Culture))
-                ) && 
-                (
-                    ClientKey == input.ClientKey ||
-                    (ClientKey != null &&
-                    ClientKey.Equals(input.ClientKey))
-                ) && 
-                (
-                    TokenLifespanMinutes == input.TokenLifespanMinutes ||
-                    (TokenLifespanMinutes != null &&
-                    TokenLifespanMinutes.Equals(input.TokenLifespanMinutes))
-                ) && 
-                (
-                    RefreshTokenLifespanMinutes == input.RefreshTokenLifespanMinutes ||
-                    (RefreshTokenLifespanMinutes != null &&
-                    RefreshTokenLifespanMinutes.Equals(input.RefreshTokenLifespanMinutes))
-                ) && 
-                (
-                    ApiAccessIsEnabled == input.ApiAccessIsEnabled ||
-                    (ApiAccessIsEnabled != null &&
-                    ApiAccessIsEnabled.Equals(input.ApiAccessIsEnabled))
-                ) && 
-                (
-                    AllowAnonymousAccess == input.AllowAnonymousAccess ||
-                    (AllowAnonymousAccess != null &&
-                    AllowAnonymousAccess.Equals(input.AllowAnonymousAccess))
-                ) && 
-                (
-                    StandInKey == input.StandInKey ||
-                    (StandInKey != null &&
-                    StandInKey.Equals(input.StandInKey))
-                ) && 
-                (
-                    ErrorCode == input.ErrorCode ||
-                    (ErrorCode != null &&
-                    ErrorCode.Equals(input.ErrorCode))
-                ) && 
-                (
-                    ErrorMessage == input.ErrorMessage ||
-                    (ErrorMessage != null &&
-                    ErrorMessage.Equals(input.ErrorMessage))
-                ) && 
-                (
-                    HasError == input.HasError ||
-                    (HasError != null &&
-                    HasError.Equals(input.HasError))
-                ) && 
-                (
-                    HttpStatusCode == input.HttpStatusCode ||
-                    (HttpStatusCode != null &&
-                    HttpStatusCode.Equals(input.HttpStatusCode))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
+        ///     Gets the hash code
         /// </summary>
         /// <returns>Hash code</returns>
         public override int GetHashCode()
@@ -291,16 +301,5 @@ namespace CherwellConnector.Model
                 return hashCode;
             }
         }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-            yield break;
-        }
     }
-
 }

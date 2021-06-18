@@ -1,31 +1,21 @@
-
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Runtime.Serialization;
+using System.Text;
 using CherwellConnector.Enum;
+using Newtonsoft.Json;
 
 namespace CherwellConnector.Model
 {
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.Runtime.Serialization;
-    using System.Text;
-
-    using Newtonsoft.Json;
-
     /// <summary>
-    /// CheckInQueueItemResponse
+    ///     CheckInQueueItemResponse
     /// </summary>
     [DataContract]
-    public sealed class CheckInQueueItemResponse :  IEquatable<CheckInQueueItemResponse>, IValidatableObject
+    public sealed class CheckInQueueItemResponse : IEquatable<CheckInQueueItemResponse>, IValidatableObject
     {
-        
-
         /// <summary>
-        /// Gets or Sets HttpStatusCode
-        /// </summary>
-        [DataMember(Name="httpStatusCode", EmitDefaultValue=false)]
-        public HttpStatusCodeEnum? HttpStatusCode { get; set; }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CheckInQueueItemResponse" /> class.
+        ///     Initializes a new instance of the <see cref="CheckInQueueItemResponse" /> class.
         /// </summary>
         /// <param name="historyRecId">historyRecId.</param>
         /// <param name="historyText">historyText.</param>
@@ -34,7 +24,9 @@ namespace CherwellConnector.Model
         /// <param name="errorMessage">errorMessage.</param>
         /// <param name="hasError">hasError.</param>
         /// <param name="httpStatusCode">httpStatusCode.</param>
-        public CheckInQueueItemResponse(string historyRecId = default, string historyText = default, string historyTypeId = default, string errorCode = default, string errorMessage = default, bool? hasError = default, HttpStatusCodeEnum? httpStatusCode = default)
+        public CheckInQueueItemResponse(string historyRecId = default, string historyText = default,
+            string historyTypeId = default, string errorCode = default, string errorMessage = default,
+            bool? hasError = default, HttpStatusCodeEnum? httpStatusCode = default)
         {
             HistoryRecId = historyRecId;
             HistoryText = historyText;
@@ -44,46 +36,111 @@ namespace CherwellConnector.Model
             HasError = hasError;
             HttpStatusCode = httpStatusCode;
         }
-        
+
+
         /// <summary>
-        /// Gets or Sets HistoryRecId
+        ///     Gets or Sets HttpStatusCode
         /// </summary>
-        [DataMember(Name="historyRecId", EmitDefaultValue=false)]
+        [DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
+        public HttpStatusCodeEnum? HttpStatusCode { get; set; }
+
+        /// <summary>
+        ///     Gets or Sets HistoryRecId
+        /// </summary>
+        [DataMember(Name = "historyRecId", EmitDefaultValue = false)]
         public string HistoryRecId { get; set; }
 
         /// <summary>
-        /// Gets or Sets HistoryText
+        ///     Gets or Sets HistoryText
         /// </summary>
-        [DataMember(Name="historyText", EmitDefaultValue=false)]
+        [DataMember(Name = "historyText", EmitDefaultValue = false)]
         public string HistoryText { get; set; }
 
         /// <summary>
-        /// Gets or Sets HistoryTypeId
+        ///     Gets or Sets HistoryTypeId
         /// </summary>
-        [DataMember(Name="historyTypeId", EmitDefaultValue=false)]
+        [DataMember(Name = "historyTypeId", EmitDefaultValue = false)]
         public string HistoryTypeId { get; set; }
 
         /// <summary>
-        /// Gets or Sets ErrorCode
+        ///     Gets or Sets ErrorCode
         /// </summary>
-        [DataMember(Name="errorCode", EmitDefaultValue=false)]
+        [DataMember(Name = "errorCode", EmitDefaultValue = false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// Gets or Sets ErrorMessage
+        ///     Gets or Sets ErrorMessage
         /// </summary>
-        [DataMember(Name="errorMessage", EmitDefaultValue=false)]
+        [DataMember(Name = "errorMessage", EmitDefaultValue = false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// Gets or Sets HasError
+        ///     Gets or Sets HasError
         /// </summary>
-        [DataMember(Name="hasError", EmitDefaultValue=false)]
+        [DataMember(Name = "hasError", EmitDefaultValue = false)]
         public bool? HasError { get; set; }
+
+        /// <summary>
+        ///     Returns true if CheckInQueueItemResponse instances are equal
+        /// </summary>
+        /// <param name="input">Instance of CheckInQueueItemResponse to be compared</param>
+        /// <returns>Boolean</returns>
+        public bool Equals(CheckInQueueItemResponse input)
+        {
+            if (input == null)
+                return false;
+
+            return
+                (
+                    HistoryRecId == input.HistoryRecId ||
+                    HistoryRecId != null &&
+                    HistoryRecId.Equals(input.HistoryRecId)
+                ) &&
+                (
+                    HistoryText == input.HistoryText ||
+                    HistoryText != null &&
+                    HistoryText.Equals(input.HistoryText)
+                ) &&
+                (
+                    HistoryTypeId == input.HistoryTypeId ||
+                    HistoryTypeId != null &&
+                    HistoryTypeId.Equals(input.HistoryTypeId)
+                ) &&
+                (
+                    ErrorCode == input.ErrorCode ||
+                    ErrorCode != null &&
+                    ErrorCode.Equals(input.ErrorCode)
+                ) &&
+                (
+                    ErrorMessage == input.ErrorMessage ||
+                    ErrorMessage != null &&
+                    ErrorMessage.Equals(input.ErrorMessage)
+                ) &&
+                (
+                    HasError == input.HasError ||
+                    HasError != null &&
+                    HasError.Equals(input.HasError)
+                ) &&
+                (
+                    HttpStatusCode == input.HttpStatusCode ||
+                    HttpStatusCode != null &&
+                    HttpStatusCode.Equals(input.HttpStatusCode)
+                );
+        }
+
+        /// <summary>
+        ///     To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+            yield break;
+        }
 
 
         /// <summary>
-        /// Returns the string presentation of the object
+        ///     Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
         public override string ToString()
@@ -100,18 +157,18 @@ namespace CherwellConnector.Model
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
-        /// Returns the JSON string presentation of the object
+        ///     Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public  string ToJson()
+        public string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }
 
         /// <summary>
-        /// Returns true if objects are equal
+        ///     Returns true if objects are equal
         /// </summary>
         /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
@@ -121,55 +178,7 @@ namespace CherwellConnector.Model
         }
 
         /// <summary>
-        /// Returns true if CheckInQueueItemResponse instances are equal
-        /// </summary>
-        /// <param name="input">Instance of CheckInQueueItemResponse to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(CheckInQueueItemResponse input)
-        {
-            if (input == null)
-                return false;
-
-            return 
-                (
-                    HistoryRecId == input.HistoryRecId ||
-                    (HistoryRecId != null &&
-                    HistoryRecId.Equals(input.HistoryRecId))
-                ) && 
-                (
-                    HistoryText == input.HistoryText ||
-                    (HistoryText != null &&
-                    HistoryText.Equals(input.HistoryText))
-                ) && 
-                (
-                    HistoryTypeId == input.HistoryTypeId ||
-                    (HistoryTypeId != null &&
-                    HistoryTypeId.Equals(input.HistoryTypeId))
-                ) && 
-                (
-                    ErrorCode == input.ErrorCode ||
-                    (ErrorCode != null &&
-                    ErrorCode.Equals(input.ErrorCode))
-                ) && 
-                (
-                    ErrorMessage == input.ErrorMessage ||
-                    (ErrorMessage != null &&
-                    ErrorMessage.Equals(input.ErrorMessage))
-                ) && 
-                (
-                    HasError == input.HasError ||
-                    (HasError != null &&
-                    HasError.Equals(input.HasError))
-                ) && 
-                (
-                    HttpStatusCode == input.HttpStatusCode ||
-                    (HttpStatusCode != null &&
-                    HttpStatusCode.Equals(input.HttpStatusCode))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
+        ///     Gets the hash code
         /// </summary>
         /// <returns>Hash code</returns>
         public override int GetHashCode()
@@ -194,16 +203,5 @@ namespace CherwellConnector.Model
                 return hashCode;
             }
         }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-            yield break;
-        }
     }
-
 }

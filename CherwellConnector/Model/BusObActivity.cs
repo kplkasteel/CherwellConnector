@@ -1,22 +1,20 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Runtime.Serialization;
+using System.Text;
+using Newtonsoft.Json;
 
 namespace CherwellConnector.Model
 {
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.Runtime.Serialization;
-    using System.Text;
-
-    using Newtonsoft.Json;
-
     /// <summary>
-    /// BusObActivity
+    ///     BusObActivity
     /// </summary>
     [DataContract]
-    public sealed class BusObActivity :  IEquatable<BusObActivity>, IValidatableObject
+    public sealed class BusObActivity : IEquatable<BusObActivity>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="BusObActivity" /> class.
+        ///     Initializes a new instance of the <see cref="BusObActivity" /> class.
         /// </summary>
         /// <param name="id">id.</param>
         /// <param name="parentBusObDefId">parentBusObDefId.</param>
@@ -30,7 +28,10 @@ namespace CherwellConnector.Model
         /// <param name="created">created.</param>
         /// <param name="modified">modified.</param>
         /// <param name="modifiedBy">modifiedBy.</param>
-        public BusObActivity(string id = default, string parentBusObDefId = default, string parentBusObRecId = default, string historyBusObDefId = default, string historyBusObRecId = default, string type = default, string title = default, string body = default, string createdBy = default, DateTime? created = default, DateTime? modified = default, string modifiedBy = default)
+        public BusObActivity(string id = default, string parentBusObDefId = default, string parentBusObRecId = default,
+            string historyBusObDefId = default, string historyBusObRecId = default, string type = default,
+            string title = default, string body = default, string createdBy = default, DateTime? created = default,
+            DateTime? modified = default, string modifiedBy = default)
         {
             Id = id;
             ParentBusObDefId = parentBusObDefId;
@@ -45,81 +46,164 @@ namespace CherwellConnector.Model
             Modified = modified;
             ModifiedBy = modifiedBy;
         }
-        
+
         /// <summary>
-        /// Gets or Sets Id
+        ///     Gets or Sets Id
         /// </summary>
-        [DataMember(Name="id", EmitDefaultValue=false)]
+        [DataMember(Name = "id", EmitDefaultValue = false)]
         public string Id { get; set; }
 
         /// <summary>
-        /// Gets or Sets ParentBusObDefId
+        ///     Gets or Sets ParentBusObDefId
         /// </summary>
-        [DataMember(Name="parentBusObDefId", EmitDefaultValue=false)]
+        [DataMember(Name = "parentBusObDefId", EmitDefaultValue = false)]
         public string ParentBusObDefId { get; set; }
 
         /// <summary>
-        /// Gets or Sets ParentBusObRecId
+        ///     Gets or Sets ParentBusObRecId
         /// </summary>
-        [DataMember(Name="parentBusObRecId", EmitDefaultValue=false)]
+        [DataMember(Name = "parentBusObRecId", EmitDefaultValue = false)]
         public string ParentBusObRecId { get; set; }
 
         /// <summary>
-        /// Gets or Sets HistoryBusObDefId
+        ///     Gets or Sets HistoryBusObDefId
         /// </summary>
-        [DataMember(Name="historyBusObDefId", EmitDefaultValue=false)]
+        [DataMember(Name = "historyBusObDefId", EmitDefaultValue = false)]
         public string HistoryBusObDefId { get; set; }
 
         /// <summary>
-        /// Gets or Sets HistoryBusObRecId
+        ///     Gets or Sets HistoryBusObRecId
         /// </summary>
-        [DataMember(Name="historyBusObRecId", EmitDefaultValue=false)]
+        [DataMember(Name = "historyBusObRecId", EmitDefaultValue = false)]
         public string HistoryBusObRecId { get; set; }
 
         /// <summary>
-        /// Gets or Sets Type
+        ///     Gets or Sets Type
         /// </summary>
-        [DataMember(Name="type", EmitDefaultValue=false)]
+        [DataMember(Name = "type", EmitDefaultValue = false)]
         public string Type { get; set; }
 
         /// <summary>
-        /// Gets or Sets Title
+        ///     Gets or Sets Title
         /// </summary>
-        [DataMember(Name="title", EmitDefaultValue=false)]
+        [DataMember(Name = "title", EmitDefaultValue = false)]
         public string Title { get; set; }
 
         /// <summary>
-        /// Gets or Sets Body
+        ///     Gets or Sets Body
         /// </summary>
-        [DataMember(Name="body", EmitDefaultValue=false)]
+        [DataMember(Name = "body", EmitDefaultValue = false)]
         public string Body { get; set; }
 
         /// <summary>
-        /// Gets or Sets CreatedBy
+        ///     Gets or Sets CreatedBy
         /// </summary>
-        [DataMember(Name="createdBy", EmitDefaultValue=false)]
+        [DataMember(Name = "createdBy", EmitDefaultValue = false)]
         public string CreatedBy { get; set; }
 
         /// <summary>
-        /// Gets or Sets Created
+        ///     Gets or Sets Created
         /// </summary>
-        [DataMember(Name="created", EmitDefaultValue=false)]
+        [DataMember(Name = "created", EmitDefaultValue = false)]
         public DateTime? Created { get; set; }
 
         /// <summary>
-        /// Gets or Sets Modified
+        ///     Gets or Sets Modified
         /// </summary>
-        [DataMember(Name="modified", EmitDefaultValue=false)]
+        [DataMember(Name = "modified", EmitDefaultValue = false)]
         public DateTime? Modified { get; set; }
 
         /// <summary>
-        /// Gets or Sets ModifiedBy
+        ///     Gets or Sets ModifiedBy
         /// </summary>
-        [DataMember(Name="modifiedBy", EmitDefaultValue=false)]
+        [DataMember(Name = "modifiedBy", EmitDefaultValue = false)]
         public string ModifiedBy { get; set; }
 
         /// <summary>
-        /// Returns the string presentation of the object
+        ///     Returns true if BusObActivity instances are equal
+        /// </summary>
+        /// <param name="input">Instance of BusObActivity to be compared</param>
+        /// <returns>Boolean</returns>
+        public bool Equals(BusObActivity input)
+        {
+            if (input == null)
+                return false;
+
+            return
+                (
+                    Id == input.Id ||
+                    Id != null &&
+                    Id.Equals(input.Id)
+                ) &&
+                (
+                    ParentBusObDefId == input.ParentBusObDefId ||
+                    ParentBusObDefId != null &&
+                    ParentBusObDefId.Equals(input.ParentBusObDefId)
+                ) &&
+                (
+                    ParentBusObRecId == input.ParentBusObRecId ||
+                    ParentBusObRecId != null &&
+                    ParentBusObRecId.Equals(input.ParentBusObRecId)
+                ) &&
+                (
+                    HistoryBusObDefId == input.HistoryBusObDefId ||
+                    HistoryBusObDefId != null &&
+                    HistoryBusObDefId.Equals(input.HistoryBusObDefId)
+                ) &&
+                (
+                    HistoryBusObRecId == input.HistoryBusObRecId ||
+                    HistoryBusObRecId != null &&
+                    HistoryBusObRecId.Equals(input.HistoryBusObRecId)
+                ) &&
+                (
+                    Type == input.Type ||
+                    Type != null &&
+                    Type.Equals(input.Type)
+                ) &&
+                (
+                    Title == input.Title ||
+                    Title != null &&
+                    Title.Equals(input.Title)
+                ) &&
+                (
+                    Body == input.Body ||
+                    Body != null &&
+                    Body.Equals(input.Body)
+                ) &&
+                (
+                    CreatedBy == input.CreatedBy ||
+                    CreatedBy != null &&
+                    CreatedBy.Equals(input.CreatedBy)
+                ) &&
+                (
+                    Created == input.Created ||
+                    Created != null &&
+                    Created.Equals(input.Created)
+                ) &&
+                (
+                    Modified == input.Modified ||
+                    Modified != null &&
+                    Modified.Equals(input.Modified)
+                ) &&
+                (
+                    ModifiedBy == input.ModifiedBy ||
+                    ModifiedBy != null &&
+                    ModifiedBy.Equals(input.ModifiedBy)
+                );
+        }
+
+        /// <summary>
+        ///     To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+            yield break;
+        }
+
+        /// <summary>
+        ///     Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
         public override string ToString()
@@ -141,9 +225,9 @@ namespace CherwellConnector.Model
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
-        /// Returns the JSON string presentation of the object
+        ///     Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
         public string ToJson()
@@ -152,7 +236,7 @@ namespace CherwellConnector.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
+        ///     Returns true if objects are equal
         /// </summary>
         /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
@@ -162,83 +246,9 @@ namespace CherwellConnector.Model
         }
 
         /// <summary>
-        /// Returns true if BusObActivity instances are equal
-        /// </summary>
-        /// <param name="input">Instance of BusObActivity to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(BusObActivity input)
-        {
-            if (input == null)
-                return false;
-
-            return 
-                (
-                    Id == input.Id ||
-                    (Id != null &&
-                    Id.Equals(input.Id))
-                ) && 
-                (
-                    ParentBusObDefId == input.ParentBusObDefId ||
-                    (ParentBusObDefId != null &&
-                    ParentBusObDefId.Equals(input.ParentBusObDefId))
-                ) && 
-                (
-                    ParentBusObRecId == input.ParentBusObRecId ||
-                    (ParentBusObRecId != null &&
-                    ParentBusObRecId.Equals(input.ParentBusObRecId))
-                ) && 
-                (
-                    HistoryBusObDefId == input.HistoryBusObDefId ||
-                    (HistoryBusObDefId != null &&
-                    HistoryBusObDefId.Equals(input.HistoryBusObDefId))
-                ) && 
-                (
-                    HistoryBusObRecId == input.HistoryBusObRecId ||
-                    (HistoryBusObRecId != null &&
-                    HistoryBusObRecId.Equals(input.HistoryBusObRecId))
-                ) && 
-                (
-                    Type == input.Type ||
-                    (Type != null &&
-                    Type.Equals(input.Type))
-                ) && 
-                (
-                    Title == input.Title ||
-                    (Title != null &&
-                    Title.Equals(input.Title))
-                ) && 
-                (
-                    Body == input.Body ||
-                    (Body != null &&
-                    Body.Equals(input.Body))
-                ) && 
-                (
-                    CreatedBy == input.CreatedBy ||
-                    (CreatedBy != null &&
-                    CreatedBy.Equals(input.CreatedBy))
-                ) && 
-                (
-                    Created == input.Created ||
-                    (Created != null &&
-                    Created.Equals(input.Created))
-                ) && 
-                (
-                    Modified == input.Modified ||
-                    (Modified != null &&
-                    Modified.Equals(input.Modified))
-                ) && 
-                (
-                    ModifiedBy == input.ModifiedBy ||
-                    (ModifiedBy != null &&
-                    ModifiedBy.Equals(input.ModifiedBy))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
+        ///     Gets the hash code
         /// </summary>
         /// <returns>Hash code</returns>
-        
         public override int GetHashCode()
         {
             unchecked // Overflow is fine, just wrap
@@ -271,16 +281,5 @@ namespace CherwellConnector.Model
                 return hashCode;
             }
         }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-            yield break;
-        }
     }
-
 }

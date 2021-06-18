@@ -1,37 +1,22 @@
-
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Runtime.Serialization;
+using System.Text;
 using CherwellConnector.Enum;
+using Newtonsoft.Json;
 
 namespace CherwellConnector.Model
 {
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.Linq;
-    using System.Runtime.Serialization;
-    using System.Text;
-
-    using Newtonsoft.Json;
-
     /// <summary>
-    /// TrebuchetWebApiDataContractsBusinessObjectAttachmentsRequest
+    ///     AttachmentsRequest
     /// </summary>
     [DataContract]
-    public sealed class AttachmentsRequest :  IEquatable<AttachmentsRequest>, IValidatableObject
+    public sealed class AttachmentsRequest : IEquatable<AttachmentsRequest>, IValidatableObject
     {
-        
         /// <summary>
-        /// Gets or Sets AttachmentTypes
-        /// </summary>
-        [DataMember(Name="attachmentTypes", EmitDefaultValue=false)]
-        public List<AttachmentTypeEnum> AttachmentTypes { get; set; }
-        
-        /// <summary>
-        /// Gets or Sets Types
-        /// </summary>
-        [DataMember(Name="types", EmitDefaultValue=false)]
-        public List<TypeEnum> Types { get; set; }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="AttachmentsRequest" /> class.
+        ///     Initializes a new instance of the <see cref="AttachmentsRequest" /> class.
         /// </summary>
         /// <param name="attachmentId">attachmentId.</param>
         /// <param name="attachmentTypes">attachmentTypes.</param>
@@ -41,7 +26,9 @@ namespace CherwellConnector.Model
         /// <param name="busObRecId">busObRecId.</param>
         /// <param name="includeLinks">includeLinks.</param>
         /// <param name="types">types.</param>
-        public AttachmentsRequest(string attachmentId = default, List<AttachmentTypeEnum> attachmentTypes = default, string busObId = default, string busObName = default, string busObPublicId = default, string busObRecId = default, bool? includeLinks = default, List<TypeEnum> types = default)
+        public AttachmentsRequest(string attachmentId = default, List<AttachmentTypeEnum> attachmentTypes = default,
+            string busObId = default, string busObName = default, string busObPublicId = default,
+            string busObRecId = default, bool? includeLinks = default, List<TypeEnum> types = default)
         {
             AttachmentId = attachmentId;
             AttachmentTypes = attachmentTypes;
@@ -52,47 +39,122 @@ namespace CherwellConnector.Model
             IncludeLinks = includeLinks;
             Types = types;
         }
-        
+
         /// <summary>
-        /// Gets or Sets AttachmentId
+        ///     Gets or Sets AttachmentTypes
         /// </summary>
-        [DataMember(Name="attachmentId", EmitDefaultValue=false)]
+        [DataMember(Name = "attachmentTypes", EmitDefaultValue = false)]
+        public List<AttachmentTypeEnum> AttachmentTypes { get; set; }
+
+        /// <summary>
+        ///     Gets or Sets Types
+        /// </summary>
+        [DataMember(Name = "types", EmitDefaultValue = false)]
+        public List<TypeEnum> Types { get; set; }
+
+        /// <summary>
+        ///     Gets or Sets AttachmentId
+        /// </summary>
+        [DataMember(Name = "attachmentId", EmitDefaultValue = false)]
         public string AttachmentId { get; set; }
 
 
         /// <summary>
-        /// Gets or Sets BusObId
+        ///     Gets or Sets BusObId
         /// </summary>
-        [DataMember(Name="busObId", EmitDefaultValue=false)]
+        [DataMember(Name = "busObId", EmitDefaultValue = false)]
         public string BusObId { get; set; }
 
         /// <summary>
-        /// Gets or Sets BusObName
+        ///     Gets or Sets BusObName
         /// </summary>
-        [DataMember(Name="busObName", EmitDefaultValue=false)]
+        [DataMember(Name = "busObName", EmitDefaultValue = false)]
         public string BusObName { get; set; }
 
         /// <summary>
-        /// Gets or Sets BusObPublicId
+        ///     Gets or Sets BusObPublicId
         /// </summary>
-        [DataMember(Name="busObPublicId", EmitDefaultValue=false)]
+        [DataMember(Name = "busObPublicId", EmitDefaultValue = false)]
         public string BusObPublicId { get; set; }
 
         /// <summary>
-        /// Gets or Sets BusObRecId
+        ///     Gets or Sets BusObRecId
         /// </summary>
-        [DataMember(Name="busObRecId", EmitDefaultValue=false)]
+        [DataMember(Name = "busObRecId", EmitDefaultValue = false)]
         public string BusObRecId { get; set; }
 
         /// <summary>
-        /// Gets or Sets IncludeLinks
+        ///     Gets or Sets IncludeLinks
         /// </summary>
-        [DataMember(Name="includeLinks", EmitDefaultValue=false)]
+        [DataMember(Name = "includeLinks", EmitDefaultValue = false)]
         public bool? IncludeLinks { get; set; }
+
+        /// <summary>
+        ///     Returns true if AttachmentsRequest instances are equal
+        /// </summary>
+        /// <param name="input">Instance of AttachmentsRequest to be compared</param>
+        /// <returns>Boolean</returns>
+        public bool Equals(AttachmentsRequest input)
+        {
+            if (input == null)
+                return false;
+
+            return
+                (
+                    AttachmentId == input.AttachmentId ||
+                    AttachmentId != null &&
+                    AttachmentId.Equals(input.AttachmentId)
+                ) &&
+                (
+                    AttachmentTypes == input.AttachmentTypes ||
+                    AttachmentTypes != null &&
+                    AttachmentTypes.SequenceEqual(input.AttachmentTypes)
+                ) &&
+                (
+                    BusObId == input.BusObId ||
+                    BusObId != null &&
+                    BusObId.Equals(input.BusObId)
+                ) &&
+                (
+                    BusObName == input.BusObName ||
+                    BusObName != null &&
+                    BusObName.Equals(input.BusObName)
+                ) &&
+                (
+                    BusObPublicId == input.BusObPublicId ||
+                    BusObPublicId != null &&
+                    BusObPublicId.Equals(input.BusObPublicId)
+                ) &&
+                (
+                    BusObRecId == input.BusObRecId ||
+                    BusObRecId != null &&
+                    BusObRecId.Equals(input.BusObRecId)
+                ) &&
+                (
+                    IncludeLinks == input.IncludeLinks ||
+                    IncludeLinks != null &&
+                    IncludeLinks.Equals(input.IncludeLinks)
+                ) &&
+                (
+                    Types == input.Types ||
+                    Types != null &&
+                    Types.SequenceEqual(input.Types)
+                );
+        }
+
+        /// <summary>
+        ///     To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+            yield break;
+        }
 
 
         /// <summary>
-        /// Returns the string presentation of the object
+        ///     Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
         public override string ToString()
@@ -110,9 +172,9 @@ namespace CherwellConnector.Model
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
-        /// Returns the JSON string presentation of the object
+        ///     Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
         public string ToJson()
@@ -121,7 +183,7 @@ namespace CherwellConnector.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
+        ///     Returns true if objects are equal
         /// </summary>
         /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
@@ -131,63 +193,9 @@ namespace CherwellConnector.Model
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsBusinessObjectAttachmentsRequest instances are equal
-        /// </summary>
-        /// <param name="input">Instance of TrebuchetWebApiDataContractsBusinessObjectAttachmentsRequest to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(AttachmentsRequest input)
-        {
-            if (input == null)
-                return false;
-
-            return 
-                (
-                    AttachmentId == input.AttachmentId ||
-                    (AttachmentId != null &&
-                    AttachmentId.Equals(input.AttachmentId))
-                ) && 
-                (
-                    AttachmentTypes == input.AttachmentTypes ||
-                    AttachmentTypes != null &&
-                    AttachmentTypes.SequenceEqual(input.AttachmentTypes)
-                ) && 
-                (
-                    BusObId == input.BusObId ||
-                    (BusObId != null &&
-                    BusObId.Equals(input.BusObId))
-                ) && 
-                (
-                    BusObName == input.BusObName ||
-                    (BusObName != null &&
-                    BusObName.Equals(input.BusObName))
-                ) && 
-                (
-                    BusObPublicId == input.BusObPublicId ||
-                    (BusObPublicId != null &&
-                    BusObPublicId.Equals(input.BusObPublicId))
-                ) && 
-                (
-                    BusObRecId == input.BusObRecId ||
-                    (BusObRecId != null &&
-                    BusObRecId.Equals(input.BusObRecId))
-                ) && 
-                (
-                    IncludeLinks == input.IncludeLinks ||
-                    (IncludeLinks != null &&
-                    IncludeLinks.Equals(input.IncludeLinks))
-                ) && 
-                (
-                    Types == input.Types ||
-                    Types != null &&
-                    Types.SequenceEqual(input.Types)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
+        ///     Gets the hash code
         /// </summary>
         /// <returns>Hash code</returns>
-        
         public override int GetHashCode()
         {
             unchecked // Overflow is fine, just wrap
@@ -212,16 +220,5 @@ namespace CherwellConnector.Model
                 return hashCode;
             }
         }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-            yield break;
-        }
     }
-
 }

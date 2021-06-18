@@ -5,290 +5,261 @@ using Newtonsoft.Json.Converters;
 namespace CherwellConnector.Enum
 {
     /// <summary>
-    /// Defines HttpStatusCode
+    ///     Defines HttpStatusCode
     /// </summary>
     [JsonConverter(typeof(StringEnumConverter))]
     public enum HttpStatusCodeEnum
     {
-            
         /// <summary>
-        /// Enum Continue for value: Continue
+        ///     Enum Continue for value: Continue
         /// </summary>
-        [EnumMember(Value = "Continue")]
-        Continue = 1,
-            
+        [EnumMember(Value = "Continue")] Continue = 1,
+
         /// <summary>
-        /// Enum SwitchingProtocols for value: SwitchingProtocols
+        ///     Enum SwitchingProtocols for value: SwitchingProtocols
         /// </summary>
         [EnumMember(Value = "SwitchingProtocols")]
         SwitchingProtocols = 2,
-            
+
         /// <summary>
-        /// Enum OK for value: OK
+        ///     Enum OK for value: OK
         /// </summary>
-        [EnumMember(Value = "OK")]
-        OK = 3,
-            
+        [EnumMember(Value = "OK")] OK = 3,
+
         /// <summary>
-        /// Enum Created for value: Created
+        ///     Enum Created for value: Created
         /// </summary>
-        [EnumMember(Value = "Created")]
-        Created = 4,
-            
+        [EnumMember(Value = "Created")] Created = 4,
+
         /// <summary>
-        /// Enum Accepted for value: Accepted
+        ///     Enum Accepted for value: Accepted
         /// </summary>
-        [EnumMember(Value = "Accepted")]
-        Accepted = 5,
-            
+        [EnumMember(Value = "Accepted")] Accepted = 5,
+
         /// <summary>
-        /// Enum NonAuthoritativeInformation for value: NonAuthoritativeInformation
+        ///     Enum NonAuthoritativeInformation for value: NonAuthoritativeInformation
         /// </summary>
         [EnumMember(Value = "NonAuthoritativeInformation")]
         NonAuthoritativeInformation = 6,
-            
+
         /// <summary>
-        /// Enum NoContent for value: NoContent
+        ///     Enum NoContent for value: NoContent
         /// </summary>
-        [EnumMember(Value = "NoContent")]
-        NoContent = 7,
-            
+        [EnumMember(Value = "NoContent")] NoContent = 7,
+
         /// <summary>
-        /// Enum ResetContent for value: ResetContent
+        ///     Enum ResetContent for value: ResetContent
         /// </summary>
-        [EnumMember(Value = "ResetContent")]
-        ResetContent = 8,
-            
+        [EnumMember(Value = "ResetContent")] ResetContent = 8,
+
         /// <summary>
-        /// Enum PartialContent for value: PartialContent
+        ///     Enum PartialContent for value: PartialContent
         /// </summary>
-        [EnumMember(Value = "PartialContent")]
-        PartialContent = 9,
-            
+        [EnumMember(Value = "PartialContent")] PartialContent = 9,
+
         /// <summary>
-        /// Enum MultipleChoices for value: MultipleChoices
+        ///     Enum MultipleChoices for value: MultipleChoices
         /// </summary>
         [EnumMember(Value = "MultipleChoices")]
         MultipleChoices = 10,
-            
+
         /// <summary>
-        /// Enum Ambiguous for value: Ambiguous
+        ///     Enum Ambiguous for value: Ambiguous
         /// </summary>
-        [EnumMember(Value = "Ambiguous")]
-        Ambiguous = 11,
-            
+        [EnumMember(Value = "Ambiguous")] Ambiguous = 11,
+
         /// <summary>
-        /// Enum MovedPermanently for value: MovedPermanently
+        ///     Enum MovedPermanently for value: MovedPermanently
         /// </summary>
         [EnumMember(Value = "MovedPermanently")]
         MovedPermanently = 12,
-            
+
         /// <summary>
-        /// Enum Moved for value: Moved
+        ///     Enum Moved for value: Moved
         /// </summary>
-        [EnumMember(Value = "Moved")]
-        Moved = 13,
-            
+        [EnumMember(Value = "Moved")] Moved = 13,
+
         /// <summary>
-        /// Enum Found for value: Found
+        ///     Enum Found for value: Found
         /// </summary>
-        [EnumMember(Value = "Found")]
-        Found = 14,
-            
+        [EnumMember(Value = "Found")] Found = 14,
+
         /// <summary>
-        /// Enum Redirect for value: Redirect
+        ///     Enum Redirect for value: Redirect
         /// </summary>
-        [EnumMember(Value = "Redirect")]
-        Redirect = 15,
-            
+        [EnumMember(Value = "Redirect")] Redirect = 15,
+
         /// <summary>
-        /// Enum SeeOther for value: SeeOther
+        ///     Enum SeeOther for value: SeeOther
         /// </summary>
-        [EnumMember(Value = "SeeOther")]
-        SeeOther = 16,
-            
+        [EnumMember(Value = "SeeOther")] SeeOther = 16,
+
         /// <summary>
-        /// Enum RedirectMethod for value: RedirectMethod
+        ///     Enum RedirectMethod for value: RedirectMethod
         /// </summary>
-        [EnumMember(Value = "RedirectMethod")]
-        RedirectMethod = 17,
-            
+        [EnumMember(Value = "RedirectMethod")] RedirectMethod = 17,
+
         /// <summary>
-        /// Enum NotModified for value: NotModified
+        ///     Enum NotModified for value: NotModified
         /// </summary>
-        [EnumMember(Value = "NotModified")]
-        NotModified = 18,
-            
+        [EnumMember(Value = "NotModified")] NotModified = 18,
+
         /// <summary>
-        /// Enum UseProxy for value: UseProxy
+        ///     Enum UseProxy for value: UseProxy
         /// </summary>
-        [EnumMember(Value = "UseProxy")]
-        UseProxy = 19,
-            
+        [EnumMember(Value = "UseProxy")] UseProxy = 19,
+
         /// <summary>
-        /// Enum Unused for value: Unused
+        ///     Enum Unused for value: Unused
         /// </summary>
-        [EnumMember(Value = "Unused")]
-        Unused = 20,
-            
+        [EnumMember(Value = "Unused")] Unused = 20,
+
         /// <summary>
-        /// Enum TemporaryRedirect for value: TemporaryRedirect
+        ///     Enum TemporaryRedirect for value: TemporaryRedirect
         /// </summary>
         [EnumMember(Value = "TemporaryRedirect")]
         TemporaryRedirect = 21,
-            
+
         /// <summary>
-        /// Enum RedirectKeepVerb for value: RedirectKeepVerb
+        ///     Enum RedirectKeepVerb for value: RedirectKeepVerb
         /// </summary>
         [EnumMember(Value = "RedirectKeepVerb")]
         RedirectKeepVerb = 22,
-            
+
         /// <summary>
-        /// Enum BadRequest for value: BadRequest
+        ///     Enum BadRequest for value: BadRequest
         /// </summary>
-        [EnumMember(Value = "BadRequest")]
-        BadRequest = 23,
-            
+        [EnumMember(Value = "BadRequest")] BadRequest = 23,
+
         /// <summary>
-        /// Enum Unauthorized for value: Unauthorized
+        ///     Enum Unauthorized for value: Unauthorized
         /// </summary>
-        [EnumMember(Value = "Unauthorized")]
-        Unauthorized = 24,
-            
+        [EnumMember(Value = "Unauthorized")] Unauthorized = 24,
+
         /// <summary>
-        /// Enum PaymentRequired for value: PaymentRequired
+        ///     Enum PaymentRequired for value: PaymentRequired
         /// </summary>
         [EnumMember(Value = "PaymentRequired")]
         PaymentRequired = 25,
-            
+
         /// <summary>
-        /// Enum Forbidden for value: Forbidden
+        ///     Enum Forbidden for value: Forbidden
         /// </summary>
-        [EnumMember(Value = "Forbidden")]
-        Forbidden = 26,
-            
+        [EnumMember(Value = "Forbidden")] Forbidden = 26,
+
         /// <summary>
-        /// Enum NotFound for value: NotFound
+        ///     Enum NotFound for value: NotFound
         /// </summary>
-        [EnumMember(Value = "NotFound")]
-        NotFound = 27,
-            
+        [EnumMember(Value = "NotFound")] NotFound = 27,
+
         /// <summary>
-        /// Enum MethodNotAllowed for value: MethodNotAllowed
+        ///     Enum MethodNotAllowed for value: MethodNotAllowed
         /// </summary>
         [EnumMember(Value = "MethodNotAllowed")]
         MethodNotAllowed = 28,
-            
+
         /// <summary>
-        /// Enum NotAcceptable for value: NotAcceptable
+        ///     Enum NotAcceptable for value: NotAcceptable
         /// </summary>
-        [EnumMember(Value = "NotAcceptable")]
-        NotAcceptable = 29,
-            
+        [EnumMember(Value = "NotAcceptable")] NotAcceptable = 29,
+
         /// <summary>
-        /// Enum ProxyAuthenticationRequired for value: ProxyAuthenticationRequired
+        ///     Enum ProxyAuthenticationRequired for value: ProxyAuthenticationRequired
         /// </summary>
         [EnumMember(Value = "ProxyAuthenticationRequired")]
         ProxyAuthenticationRequired = 30,
-            
+
         /// <summary>
-        /// Enum RequestTimeout for value: RequestTimeout
+        ///     Enum RequestTimeout for value: RequestTimeout
         /// </summary>
-        [EnumMember(Value = "RequestTimeout")]
-        RequestTimeout = 31,
-            
+        [EnumMember(Value = "RequestTimeout")] RequestTimeout = 31,
+
         /// <summary>
-        /// Enum Conflict for value: Conflict
+        ///     Enum Conflict for value: Conflict
         /// </summary>
-        [EnumMember(Value = "Conflict")]
-        Conflict = 32,
-            
+        [EnumMember(Value = "Conflict")] Conflict = 32,
+
         /// <summary>
-        /// Enum Gone for value: Gone
+        ///     Enum Gone for value: Gone
         /// </summary>
-        [EnumMember(Value = "Gone")]
-        Gone = 33,
-            
+        [EnumMember(Value = "Gone")] Gone = 33,
+
         /// <summary>
-        /// Enum LengthRequired for value: LengthRequired
+        ///     Enum LengthRequired for value: LengthRequired
         /// </summary>
-        [EnumMember(Value = "LengthRequired")]
-        LengthRequired = 34,
-            
+        [EnumMember(Value = "LengthRequired")] LengthRequired = 34,
+
         /// <summary>
-        /// Enum PreconditionFailed for value: PreconditionFailed
+        ///     Enum PreconditionFailed for value: PreconditionFailed
         /// </summary>
         [EnumMember(Value = "PreconditionFailed")]
         PreconditionFailed = 35,
-            
+
         /// <summary>
-        /// Enum RequestEntityTooLarge for value: RequestEntityTooLarge
+        ///     Enum RequestEntityTooLarge for value: RequestEntityTooLarge
         /// </summary>
         [EnumMember(Value = "RequestEntityTooLarge")]
         RequestEntityTooLarge = 36,
-            
+
         /// <summary>
-        /// Enum RequestUriTooLong for value: RequestUriTooLong
+        ///     Enum RequestUriTooLong for value: RequestUriTooLong
         /// </summary>
         [EnumMember(Value = "RequestUriTooLong")]
         RequestUriTooLong = 37,
-            
+
         /// <summary>
-        /// Enum UnsupportedMediaType for value: UnsupportedMediaType
+        ///     Enum UnsupportedMediaType for value: UnsupportedMediaType
         /// </summary>
         [EnumMember(Value = "UnsupportedMediaType")]
         UnsupportedMediaType = 38,
-            
+
         /// <summary>
-        /// Enum RequestedRangeNotSatisfiable for value: RequestedRangeNotSatisfiable
+        ///     Enum RequestedRangeNotSatisfiable for value: RequestedRangeNotSatisfiable
         /// </summary>
         [EnumMember(Value = "RequestedRangeNotSatisfiable")]
         RequestedRangeNotSatisfiable = 39,
-            
+
         /// <summary>
-        /// Enum ExpectationFailed for value: ExpectationFailed
+        ///     Enum ExpectationFailed for value: ExpectationFailed
         /// </summary>
         [EnumMember(Value = "ExpectationFailed")]
         ExpectationFailed = 40,
-            
+
         /// <summary>
-        /// Enum UpgradeRequired for value: UpgradeRequired
+        ///     Enum UpgradeRequired for value: UpgradeRequired
         /// </summary>
         [EnumMember(Value = "UpgradeRequired")]
         UpgradeRequired = 41,
-            
+
         /// <summary>
-        /// Enum InternalServerError for value: InternalServerError
+        ///     Enum InternalServerError for value: InternalServerError
         /// </summary>
         [EnumMember(Value = "InternalServerError")]
         InternalServerError = 42,
-            
+
         /// <summary>
-        /// Enum NotImplemented for value: NotImplemented
+        ///     Enum NotImplemented for value: NotImplemented
         /// </summary>
-        [EnumMember(Value = "NotImplemented")]
-        NotImplemented = 43,
-            
+        [EnumMember(Value = "NotImplemented")] NotImplemented = 43,
+
         /// <summary>
-        /// Enum BadGateway for value: BadGateway
+        ///     Enum BadGateway for value: BadGateway
         /// </summary>
-        [EnumMember(Value = "BadGateway")]
-        BadGateway = 44,
-            
+        [EnumMember(Value = "BadGateway")] BadGateway = 44,
+
         /// <summary>
-        /// Enum ServiceUnavailable for value: ServiceUnavailable
+        ///     Enum ServiceUnavailable for value: ServiceUnavailable
         /// </summary>
         [EnumMember(Value = "ServiceUnavailable")]
         ServiceUnavailable = 45,
-            
+
         /// <summary>
-        /// Enum GatewayTimeout for value: GatewayTimeout
+        ///     Enum GatewayTimeout for value: GatewayTimeout
         /// </summary>
-        [EnumMember(Value = "GatewayTimeout")]
-        GatewayTimeout = 46,
-            
+        [EnumMember(Value = "GatewayTimeout")] GatewayTimeout = 46,
+
         /// <summary>
-        /// Enum HttpVersionNotSupported for value: HttpVersionNotSupported
+        ///     Enum HttpVersionNotSupported for value: HttpVersionNotSupported
         /// </summary>
         [EnumMember(Value = "HttpVersionNotSupported")]
         HttpVersionNotSupported = 47

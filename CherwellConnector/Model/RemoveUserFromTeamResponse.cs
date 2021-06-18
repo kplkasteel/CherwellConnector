@@ -1,32 +1,21 @@
-
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Runtime.Serialization;
+using System.Text;
 using CherwellConnector.Enum;
+using Newtonsoft.Json;
 
 namespace CherwellConnector.Model
 {
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.Runtime.Serialization;
-    using System.Text;
-
-    using Newtonsoft.Json;
-    using Newtonsoft.Json.Converters;
-
     /// <summary>
-    /// RemoveUserFromTeamResponse
+    ///     RemoveUserFromTeamResponse
     /// </summary>
     [DataContract]
-    public sealed class RemoveUserFromTeamResponse :  IEquatable<RemoveUserFromTeamResponse>, IValidatableObject
+    public sealed class RemoveUserFromTeamResponse : IEquatable<RemoveUserFromTeamResponse>, IValidatableObject
     {
-        
-
         /// <summary>
-        /// Gets or Sets HttpStatusCode
-        /// </summary>
-        [DataMember(Name="httpStatusCode", EmitDefaultValue=false)]
-        public HttpStatusCodeEnum? HttpStatusCode { get; set; }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="RemoveUserFromTeamResponse" /> class.
+        ///     Initializes a new instance of the <see cref="RemoveUserFromTeamResponse" /> class.
         /// </summary>
         /// <param name="teamId">teamId.</param>
         /// <param name="userRecordId">userRecordId.</param>
@@ -34,7 +23,9 @@ namespace CherwellConnector.Model
         /// <param name="errorMessage">errorMessage.</param>
         /// <param name="hasError">hasError.</param>
         /// <param name="httpStatusCode">httpStatusCode.</param>
-        public RemoveUserFromTeamResponse(string teamId = default, string userRecordId = default, string errorCode = default, string errorMessage = default, bool? hasError = default, HttpStatusCodeEnum? httpStatusCode = default)
+        public RemoveUserFromTeamResponse(string teamId = default, string userRecordId = default,
+            string errorCode = default, string errorMessage = default, bool? hasError = default,
+            HttpStatusCodeEnum? httpStatusCode = default)
         {
             TeamId = teamId;
             UserRecordId = userRecordId;
@@ -43,46 +34,106 @@ namespace CherwellConnector.Model
             HasError = hasError;
             HttpStatusCode = httpStatusCode;
         }
-        
+
+
         /// <summary>
-        /// Gets or Sets TeamId
+        ///     Gets or Sets HttpStatusCode
         /// </summary>
-        [DataMember(Name="teamId", EmitDefaultValue=false)]
+        [DataMember(Name = "httpStatusCode", EmitDefaultValue = false)]
+        public HttpStatusCodeEnum? HttpStatusCode { get; set; }
+
+        /// <summary>
+        ///     Gets or Sets TeamId
+        /// </summary>
+        [DataMember(Name = "teamId", EmitDefaultValue = false)]
         public string TeamId { get; set; }
 
         /// <summary>
-        /// Gets or Sets UserRecordId
+        ///     Gets or Sets UserRecordId
         /// </summary>
-        [DataMember(Name="userRecordId", EmitDefaultValue=false)]
+        [DataMember(Name = "userRecordId", EmitDefaultValue = false)]
         public string UserRecordId { get; set; }
 
         /// <summary>
-        /// Gets or Sets ErrorCode
+        ///     Gets or Sets ErrorCode
         /// </summary>
-        [DataMember(Name="errorCode", EmitDefaultValue=false)]
+        [DataMember(Name = "errorCode", EmitDefaultValue = false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// Gets or Sets ErrorMessage
+        ///     Gets or Sets ErrorMessage
         /// </summary>
-        [DataMember(Name="errorMessage", EmitDefaultValue=false)]
+        [DataMember(Name = "errorMessage", EmitDefaultValue = false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// Gets or Sets HasError
+        ///     Gets or Sets HasError
         /// </summary>
-        [DataMember(Name="hasError", EmitDefaultValue=false)]
+        [DataMember(Name = "hasError", EmitDefaultValue = false)]
         public bool? HasError { get; set; }
+
+        /// <summary>
+        ///     Returns true if RemoveUserFromTeamResponse instances are equal
+        /// </summary>
+        /// <param name="input">Instance of RemoveUserFromTeamResponse to be compared</param>
+        /// <returns>Boolean</returns>
+        public bool Equals(RemoveUserFromTeamResponse input)
+        {
+            if (input == null)
+                return false;
+
+            return
+                (
+                    TeamId == input.TeamId ||
+                    TeamId != null &&
+                    TeamId.Equals(input.TeamId)
+                ) &&
+                (
+                    UserRecordId == input.UserRecordId ||
+                    UserRecordId != null &&
+                    UserRecordId.Equals(input.UserRecordId)
+                ) &&
+                (
+                    ErrorCode == input.ErrorCode ||
+                    ErrorCode != null &&
+                    ErrorCode.Equals(input.ErrorCode)
+                ) &&
+                (
+                    ErrorMessage == input.ErrorMessage ||
+                    ErrorMessage != null &&
+                    ErrorMessage.Equals(input.ErrorMessage)
+                ) &&
+                (
+                    HasError == input.HasError ||
+                    HasError != null &&
+                    HasError.Equals(input.HasError)
+                ) &&
+                (
+                    HttpStatusCode == input.HttpStatusCode ||
+                    HttpStatusCode != null &&
+                    HttpStatusCode.Equals(input.HttpStatusCode)
+                );
+        }
+
+        /// <summary>
+        ///     To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+            yield break;
+        }
 
 
         /// <summary>
-        /// Returns the string presentation of the object
+        ///     Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrebuchetWebApiDataContractsTeamsRemoveUserFromTeamResponse {\n");
+            sb.Append("class RemoveUserFromTeamResponse {\n");
             sb.Append("  TeamId: ").Append(TeamId).Append("\n");
             sb.Append("  UserRecordId: ").Append(UserRecordId).Append("\n");
             sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
@@ -92,18 +143,18 @@ namespace CherwellConnector.Model
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
-        /// Returns the JSON string presentation of the object
+        ///     Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public  string ToJson()
+        public string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }
 
         /// <summary>
-        /// Returns true if objects are equal
+        ///     Returns true if objects are equal
         /// </summary>
         /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
@@ -113,50 +164,7 @@ namespace CherwellConnector.Model
         }
 
         /// <summary>
-        /// Returns true if TrebuchetWebApiDataContractsTeamsRemoveUserFromTeamResponse instances are equal
-        /// </summary>
-        /// <param name="input">Instance of TrebuchetWebApiDataContractsTeamsRemoveUserFromTeamResponse to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(RemoveUserFromTeamResponse input)
-        {
-            if (input == null)
-                return false;
-
-            return 
-                (
-                    TeamId == input.TeamId ||
-                    (TeamId != null &&
-                    TeamId.Equals(input.TeamId))
-                ) && 
-                (
-                    UserRecordId == input.UserRecordId ||
-                    (UserRecordId != null &&
-                    UserRecordId.Equals(input.UserRecordId))
-                ) && 
-                (
-                    ErrorCode == input.ErrorCode ||
-                    (ErrorCode != null &&
-                    ErrorCode.Equals(input.ErrorCode))
-                ) && 
-                (
-                    ErrorMessage == input.ErrorMessage ||
-                    (ErrorMessage != null &&
-                    ErrorMessage.Equals(input.ErrorMessage))
-                ) && 
-                (
-                    HasError == input.HasError ||
-                    (HasError != null &&
-                    HasError.Equals(input.HasError))
-                ) && 
-                (
-                    HttpStatusCode == input.HttpStatusCode ||
-                    (HttpStatusCode != null &&
-                    HttpStatusCode.Equals(input.HttpStatusCode))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
+        ///     Gets the hash code
         /// </summary>
         /// <returns>Hash code</returns>
         public override int GetHashCode()
@@ -179,16 +187,5 @@ namespace CherwellConnector.Model
                 return hashCode;
             }
         }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-            yield break;
-        }
     }
-
 }

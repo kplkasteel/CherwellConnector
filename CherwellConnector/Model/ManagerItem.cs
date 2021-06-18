@@ -1,22 +1,21 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Runtime.Serialization;
+using System.Text;
+using Newtonsoft.Json;
+
 namespace CherwellConnector.Model
 {
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.Linq;
-    using System.Runtime.Serialization;
-    using System.Text;
-
-    using Newtonsoft.Json;
-
     /// <summary>
-    /// ManagerItem
+    ///     ManagerItem
     /// </summary>
     [DataContract]
-    public sealed class ManagerItem :  IEquatable<ManagerItem>, IValidatableObject
+    public sealed class ManagerItem : IEquatable<ManagerItem>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="ManagerItem" /> class.
+        ///     Initializes a new instance of the <see cref="ManagerItem" /> class.
         /// </summary>
         /// <param name="association">association.</param>
         /// <param name="description">description.</param>
@@ -31,7 +30,11 @@ namespace CherwellConnector.Model
         /// <param name="scope">scope.</param>
         /// <param name="scopeOwner">scopeOwner.</param>
         /// <param name="standInKey">standInKey.</param>
-        public ManagerItem(string association = default, string description = default, string displayName = default, string galleryImage = default, string id = default, List<Link> links = default, string localizedScopeName = default, string name = default, string parentFolder = default, bool? parentIsScopeFolder = default, string scope = default, string scopeOwner = default, string standInKey = default)
+        public ManagerItem(string association = default, string description = default, string displayName = default,
+            string galleryImage = default, string id = default, List<Link> links = default,
+            string localizedScopeName = default, string name = default, string parentFolder = default,
+            bool? parentIsScopeFolder = default, string scope = default, string scopeOwner = default,
+            string standInKey = default)
         {
             Association = association;
             Description = description;
@@ -47,87 +50,175 @@ namespace CherwellConnector.Model
             ScopeOwner = scopeOwner;
             StandInKey = standInKey;
         }
-        
+
         /// <summary>
-        /// Gets or Sets Association
+        ///     Gets or Sets Association
         /// </summary>
-        [DataMember(Name="association", EmitDefaultValue=false)]
+        [DataMember(Name = "association", EmitDefaultValue = false)]
         public string Association { get; set; }
 
         /// <summary>
-        /// Gets or Sets Description
+        ///     Gets or Sets Description
         /// </summary>
-        [DataMember(Name="description", EmitDefaultValue=false)]
+        [DataMember(Name = "description", EmitDefaultValue = false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// Gets or Sets DisplayName
+        ///     Gets or Sets DisplayName
         /// </summary>
-        [DataMember(Name="displayName", EmitDefaultValue=false)]
+        [DataMember(Name = "displayName", EmitDefaultValue = false)]
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// Gets or Sets GalleryImage
+        ///     Gets or Sets GalleryImage
         /// </summary>
-        [DataMember(Name="galleryImage", EmitDefaultValue=false)]
+        [DataMember(Name = "galleryImage", EmitDefaultValue = false)]
         public string GalleryImage { get; set; }
 
         /// <summary>
-        /// Gets or Sets Id
+        ///     Gets or Sets Id
         /// </summary>
-        [DataMember(Name="id", EmitDefaultValue=false)]
+        [DataMember(Name = "id", EmitDefaultValue = false)]
         public string Id { get; set; }
 
         /// <summary>
-        /// Gets or Sets Links
+        ///     Gets or Sets Links
         /// </summary>
-        [DataMember(Name="links", EmitDefaultValue=false)]
+        [DataMember(Name = "links", EmitDefaultValue = false)]
         public List<Link> Links { get; set; }
 
         /// <summary>
-        /// Gets or Sets LocalizedScopeName
+        ///     Gets or Sets LocalizedScopeName
         /// </summary>
-        [DataMember(Name="localizedScopeName", EmitDefaultValue=false)]
+        [DataMember(Name = "localizedScopeName", EmitDefaultValue = false)]
         public string LocalizedScopeName { get; set; }
 
         /// <summary>
-        /// Gets or Sets Name
+        ///     Gets or Sets Name
         /// </summary>
-        [DataMember(Name="name", EmitDefaultValue=false)]
+        [DataMember(Name = "name", EmitDefaultValue = false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or Sets ParentFolder
+        ///     Gets or Sets ParentFolder
         /// </summary>
-        [DataMember(Name="parentFolder", EmitDefaultValue=false)]
+        [DataMember(Name = "parentFolder", EmitDefaultValue = false)]
         public string ParentFolder { get; set; }
 
         /// <summary>
-        /// Gets or Sets ParentIsScopeFolder
+        ///     Gets or Sets ParentIsScopeFolder
         /// </summary>
-        [DataMember(Name="parentIsScopeFolder", EmitDefaultValue=false)]
+        [DataMember(Name = "parentIsScopeFolder", EmitDefaultValue = false)]
         public bool? ParentIsScopeFolder { get; set; }
 
         /// <summary>
-        /// Gets or Sets Scope
+        ///     Gets or Sets Scope
         /// </summary>
-        [DataMember(Name="scope", EmitDefaultValue=false)]
+        [DataMember(Name = "scope", EmitDefaultValue = false)]
         public string Scope { get; set; }
 
         /// <summary>
-        /// Gets or Sets ScopeOwner
+        ///     Gets or Sets ScopeOwner
         /// </summary>
-        [DataMember(Name="scopeOwner", EmitDefaultValue=false)]
+        [DataMember(Name = "scopeOwner", EmitDefaultValue = false)]
         public string ScopeOwner { get; set; }
 
         /// <summary>
-        /// Gets or Sets StandInKey
+        ///     Gets or Sets StandInKey
         /// </summary>
-        [DataMember(Name="standInKey", EmitDefaultValue=false)]
+        [DataMember(Name = "standInKey", EmitDefaultValue = false)]
         public string StandInKey { get; set; }
 
         /// <summary>
-        /// Returns the string presentation of the object
+        ///     Returns true if ManagerItem instances are equal
+        /// </summary>
+        /// <param name="input">Instance of ManagerItem to be compared</param>
+        /// <returns>Boolean</returns>
+        public bool Equals(ManagerItem input)
+        {
+            if (input == null)
+                return false;
+
+            return
+                (
+                    Association == input.Association ||
+                    Association != null &&
+                    Association.Equals(input.Association)
+                ) &&
+                (
+                    Description == input.Description ||
+                    Description != null &&
+                    Description.Equals(input.Description)
+                ) &&
+                (
+                    DisplayName == input.DisplayName ||
+                    DisplayName != null &&
+                    DisplayName.Equals(input.DisplayName)
+                ) &&
+                (
+                    GalleryImage == input.GalleryImage ||
+                    GalleryImage != null &&
+                    GalleryImage.Equals(input.GalleryImage)
+                ) &&
+                (
+                    Id == input.Id ||
+                    Id != null &&
+                    Id.Equals(input.Id)
+                ) &&
+                (
+                    Links == input.Links ||
+                    Links != null &&
+                    Links.SequenceEqual(input.Links)
+                ) &&
+                (
+                    LocalizedScopeName == input.LocalizedScopeName ||
+                    LocalizedScopeName != null &&
+                    LocalizedScopeName.Equals(input.LocalizedScopeName)
+                ) &&
+                (
+                    Name == input.Name ||
+                    Name != null &&
+                    Name.Equals(input.Name)
+                ) &&
+                (
+                    ParentFolder == input.ParentFolder ||
+                    ParentFolder != null &&
+                    ParentFolder.Equals(input.ParentFolder)
+                ) &&
+                (
+                    ParentIsScopeFolder == input.ParentIsScopeFolder ||
+                    ParentIsScopeFolder != null &&
+                    ParentIsScopeFolder.Equals(input.ParentIsScopeFolder)
+                ) &&
+                (
+                    Scope == input.Scope ||
+                    Scope != null &&
+                    Scope.Equals(input.Scope)
+                ) &&
+                (
+                    ScopeOwner == input.ScopeOwner ||
+                    ScopeOwner != null &&
+                    ScopeOwner.Equals(input.ScopeOwner)
+                ) &&
+                (
+                    StandInKey == input.StandInKey ||
+                    StandInKey != null &&
+                    StandInKey.Equals(input.StandInKey)
+                );
+        }
+
+        /// <summary>
+        ///     To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+            yield break;
+        }
+
+        /// <summary>
+        ///     Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
         public override string ToString()
@@ -150,9 +241,9 @@ namespace CherwellConnector.Model
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
-        /// Returns the JSON string presentation of the object
+        ///     Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
         public string ToJson()
@@ -161,7 +252,7 @@ namespace CherwellConnector.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
+        ///     Returns true if objects are equal
         /// </summary>
         /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
@@ -171,85 +262,7 @@ namespace CherwellConnector.Model
         }
 
         /// <summary>
-        /// Returns true if ManagerItem instances are equal
-        /// </summary>
-        /// <param name="input">Instance of ManagerItem to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(ManagerItem input)
-        {
-            if (input == null)
-                return false;
-
-            return 
-                (
-                    Association == input.Association ||
-                    (Association != null &&
-                    Association.Equals(input.Association))
-                ) && 
-                (
-                    Description == input.Description ||
-                    (Description != null &&
-                    Description.Equals(input.Description))
-                ) && 
-                (
-                    DisplayName == input.DisplayName ||
-                    (DisplayName != null &&
-                    DisplayName.Equals(input.DisplayName))
-                ) && 
-                (
-                    GalleryImage == input.GalleryImage ||
-                    (GalleryImage != null &&
-                    GalleryImage.Equals(input.GalleryImage))
-                ) && 
-                (
-                    Id == input.Id ||
-                    (Id != null &&
-                    Id.Equals(input.Id))
-                ) && 
-                (
-                    Links == input.Links ||
-                    Links != null &&
-                    Links.SequenceEqual(input.Links)
-                ) && 
-                (
-                    LocalizedScopeName == input.LocalizedScopeName ||
-                    (LocalizedScopeName != null &&
-                    LocalizedScopeName.Equals(input.LocalizedScopeName))
-                ) && 
-                (
-                    Name == input.Name ||
-                    (Name != null &&
-                    Name.Equals(input.Name))
-                ) && 
-                (
-                    ParentFolder == input.ParentFolder ||
-                    (ParentFolder != null &&
-                    ParentFolder.Equals(input.ParentFolder))
-                ) && 
-                (
-                    ParentIsScopeFolder == input.ParentIsScopeFolder ||
-                    (ParentIsScopeFolder != null &&
-                    ParentIsScopeFolder.Equals(input.ParentIsScopeFolder))
-                ) && 
-                (
-                    Scope == input.Scope ||
-                    (Scope != null &&
-                    Scope.Equals(input.Scope))
-                ) && 
-                (
-                    ScopeOwner == input.ScopeOwner ||
-                    (ScopeOwner != null &&
-                    ScopeOwner.Equals(input.ScopeOwner))
-                ) && 
-                (
-                    StandInKey == input.StandInKey ||
-                    (StandInKey != null &&
-                    StandInKey.Equals(input.StandInKey))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
+        ///     Gets the hash code
         /// </summary>
         /// <returns>Hash code</returns>
         public override int GetHashCode()
@@ -286,16 +299,5 @@ namespace CherwellConnector.Model
                 return hashCode;
             }
         }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-            yield break;
-        }
     }
-
 }

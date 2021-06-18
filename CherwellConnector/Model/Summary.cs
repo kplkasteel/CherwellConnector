@@ -1,23 +1,21 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Runtime.Serialization;
+using System.Text;
+using Newtonsoft.Json;
 
 namespace CherwellConnector.Model
 {
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.Linq;
-    using System.Runtime.Serialization;
-    using System.Text;
-
-    using Newtonsoft.Json;
-
     /// <summary>
-    /// Summary
+    ///     Summary
     /// </summary>
     [DataContract]
-    public sealed class Summary :  IEquatable<Summary>, IValidatableObject
+    public sealed class Summary : IEquatable<Summary>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="Summary" /> class.
+        ///     Initializes a new instance of the <see cref="Summary" /> class.
         /// </summary>
         /// <param name="firstRecIdField">firstRecIdField.</param>
         /// <param name="groupSummaries">groupSummaries.</param>
@@ -31,7 +29,10 @@ namespace CherwellConnector.Model
         /// <param name="major">major.</param>
         /// <param name="name">name.</param>
         /// <param name="supporting">supporting.</param>
-        public Summary(string firstRecIdField = default, List<Summary> groupSummaries = default, string recIdFields = default, string stateFieldId = default, string states = default, string busObId = default, string displayName = default, bool? group = default, bool? lookup = default, bool? major = default, string name = default, bool? supporting = default)
+        public Summary(string firstRecIdField = default, List<Summary> groupSummaries = default,
+            string recIdFields = default, string stateFieldId = default, string states = default,
+            string busObId = default, string displayName = default, bool? group = default, bool? lookup = default,
+            bool? major = default, string name = default, bool? supporting = default)
         {
             FirstRecIdField = firstRecIdField;
             GroupSummaries = groupSummaries;
@@ -46,81 +47,164 @@ namespace CherwellConnector.Model
             Name = name;
             Supporting = supporting;
         }
-        
+
         /// <summary>
-        /// Gets or Sets FirstRecIdField
+        ///     Gets or Sets FirstRecIdField
         /// </summary>
-        [DataMember(Name="firstRecIdField", EmitDefaultValue=false)]
+        [DataMember(Name = "firstRecIdField", EmitDefaultValue = false)]
         public string FirstRecIdField { get; set; }
 
         /// <summary>
-        /// Gets or Sets GroupSummaries
+        ///     Gets or Sets GroupSummaries
         /// </summary>
-        [DataMember(Name="groupSummaries", EmitDefaultValue=false)]
+        [DataMember(Name = "groupSummaries", EmitDefaultValue = false)]
         public List<Summary> GroupSummaries { get; set; }
 
         /// <summary>
-        /// Gets or Sets RecIdFields
+        ///     Gets or Sets RecIdFields
         /// </summary>
-        [DataMember(Name="recIdFields", EmitDefaultValue=false)]
+        [DataMember(Name = "recIdFields", EmitDefaultValue = false)]
         public string RecIdFields { get; set; }
 
         /// <summary>
-        /// Gets or Sets StateFieldId
+        ///     Gets or Sets StateFieldId
         /// </summary>
-        [DataMember(Name="stateFieldId", EmitDefaultValue=false)]
+        [DataMember(Name = "stateFieldId", EmitDefaultValue = false)]
         public string StateFieldId { get; set; }
 
         /// <summary>
-        /// Gets or Sets States
+        ///     Gets or Sets States
         /// </summary>
-        [DataMember(Name="states", EmitDefaultValue=false)]
+        [DataMember(Name = "states", EmitDefaultValue = false)]
         public string States { get; set; }
 
         /// <summary>
-        /// Gets or Sets BusObId
+        ///     Gets or Sets BusObId
         /// </summary>
-        [DataMember(Name="busObId", EmitDefaultValue=false)]
+        [DataMember(Name = "busObId", EmitDefaultValue = false)]
         public string BusObId { get; set; }
 
         /// <summary>
-        /// Gets or Sets DisplayName
+        ///     Gets or Sets DisplayName
         /// </summary>
-        [DataMember(Name="displayName", EmitDefaultValue=false)]
+        [DataMember(Name = "displayName", EmitDefaultValue = false)]
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// Gets or Sets Group
+        ///     Gets or Sets Group
         /// </summary>
-        [DataMember(Name="group", EmitDefaultValue=false)]
+        [DataMember(Name = "group", EmitDefaultValue = false)]
         public bool? Group { get; set; }
 
         /// <summary>
-        /// Gets or Sets Lookup
+        ///     Gets or Sets Lookup
         /// </summary>
-        [DataMember(Name="lookup", EmitDefaultValue=false)]
+        [DataMember(Name = "lookup", EmitDefaultValue = false)]
         public bool? Lookup { get; set; }
 
         /// <summary>
-        /// Gets or Sets Major
+        ///     Gets or Sets Major
         /// </summary>
-        [DataMember(Name="major", EmitDefaultValue=false)]
+        [DataMember(Name = "major", EmitDefaultValue = false)]
         public bool? Major { get; set; }
 
         /// <summary>
-        /// Gets or Sets Name
+        ///     Gets or Sets Name
         /// </summary>
-        [DataMember(Name="name", EmitDefaultValue=false)]
+        [DataMember(Name = "name", EmitDefaultValue = false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or Sets Supporting
+        ///     Gets or Sets Supporting
         /// </summary>
-        [DataMember(Name="supporting", EmitDefaultValue=false)]
+        [DataMember(Name = "supporting", EmitDefaultValue = false)]
         public bool? Supporting { get; set; }
 
         /// <summary>
-        /// Returns the string presentation of the object
+        ///     Returns true if Summary instances are equal
+        /// </summary>
+        /// <param name="input">Instance of Summary to be compared</param>
+        /// <returns>Boolean</returns>
+        public bool Equals(Summary input)
+        {
+            if (input == null)
+                return false;
+
+            return
+                (
+                    FirstRecIdField == input.FirstRecIdField ||
+                    FirstRecIdField != null &&
+                    FirstRecIdField.Equals(input.FirstRecIdField)
+                ) &&
+                (
+                    GroupSummaries == input.GroupSummaries ||
+                    GroupSummaries != null &&
+                    GroupSummaries.SequenceEqual(input.GroupSummaries)
+                ) &&
+                (
+                    RecIdFields == input.RecIdFields ||
+                    RecIdFields != null &&
+                    RecIdFields.Equals(input.RecIdFields)
+                ) &&
+                (
+                    StateFieldId == input.StateFieldId ||
+                    StateFieldId != null &&
+                    StateFieldId.Equals(input.StateFieldId)
+                ) &&
+                (
+                    States == input.States ||
+                    States != null &&
+                    States.Equals(input.States)
+                ) &&
+                (
+                    BusObId == input.BusObId ||
+                    BusObId != null &&
+                    BusObId.Equals(input.BusObId)
+                ) &&
+                (
+                    DisplayName == input.DisplayName ||
+                    DisplayName != null &&
+                    DisplayName.Equals(input.DisplayName)
+                ) &&
+                (
+                    Group == input.Group ||
+                    Group != null &&
+                    Group.Equals(input.Group)
+                ) &&
+                (
+                    Lookup == input.Lookup ||
+                    Lookup != null &&
+                    Lookup.Equals(input.Lookup)
+                ) &&
+                (
+                    Major == input.Major ||
+                    Major != null &&
+                    Major.Equals(input.Major)
+                ) &&
+                (
+                    Name == input.Name ||
+                    Name != null &&
+                    Name.Equals(input.Name)
+                ) &&
+                (
+                    Supporting == input.Supporting ||
+                    Supporting != null &&
+                    Supporting.Equals(input.Supporting)
+                );
+        }
+
+        /// <summary>
+        ///     To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+            yield break;
+        }
+
+        /// <summary>
+        ///     Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
         public override string ToString()
@@ -142,9 +226,9 @@ namespace CherwellConnector.Model
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
-        /// Returns the JSON string presentation of the object
+        ///     Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
         public string ToJson()
@@ -153,7 +237,7 @@ namespace CherwellConnector.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
+        ///     Returns true if objects are equal
         /// </summary>
         /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
@@ -163,83 +247,9 @@ namespace CherwellConnector.Model
         }
 
         /// <summary>
-        /// Returns true if Summary instances are equal
-        /// </summary>
-        /// <param name="input">Instance of Summary to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(Summary input)
-        {
-            if (input == null)
-                return false;
-
-            return 
-                (
-                    FirstRecIdField == input.FirstRecIdField ||
-                    (FirstRecIdField != null &&
-                    FirstRecIdField.Equals(input.FirstRecIdField))
-                ) && 
-                (
-                    GroupSummaries == input.GroupSummaries ||
-                    GroupSummaries != null &&
-                    GroupSummaries.SequenceEqual(input.GroupSummaries)
-                ) && 
-                (
-                    RecIdFields == input.RecIdFields ||
-                    (RecIdFields != null &&
-                    RecIdFields.Equals(input.RecIdFields))
-                ) && 
-                (
-                    StateFieldId == input.StateFieldId ||
-                    (StateFieldId != null &&
-                    StateFieldId.Equals(input.StateFieldId))
-                ) && 
-                (
-                    States == input.States ||
-                    (States != null &&
-                    States.Equals(input.States))
-                ) && 
-                (
-                    BusObId == input.BusObId ||
-                    (BusObId != null &&
-                    BusObId.Equals(input.BusObId))
-                ) && 
-                (
-                    DisplayName == input.DisplayName ||
-                    (DisplayName != null &&
-                    DisplayName.Equals(input.DisplayName))
-                ) && 
-                (
-                    Group == input.Group ||
-                    (Group != null &&
-                    Group.Equals(input.Group))
-                ) && 
-                (
-                    Lookup == input.Lookup ||
-                    (Lookup != null &&
-                    Lookup.Equals(input.Lookup))
-                ) && 
-                (
-                    Major == input.Major ||
-                    (Major != null &&
-                    Major.Equals(input.Major))
-                ) && 
-                (
-                    Name == input.Name ||
-                    (Name != null &&
-                    Name.Equals(input.Name))
-                ) && 
-                (
-                    Supporting == input.Supporting ||
-                    (Supporting != null &&
-                    Supporting.Equals(input.Supporting))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
+        ///     Gets the hash code
         /// </summary>
         /// <returns>Hash code</returns>
-        
         public override int GetHashCode()
         {
             unchecked // Overflow is fine, just wrap
@@ -272,16 +282,5 @@ namespace CherwellConnector.Model
                 return hashCode;
             }
         }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-            yield break;
-        }
     }
-
 }

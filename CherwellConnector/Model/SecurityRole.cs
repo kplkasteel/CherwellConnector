@@ -1,23 +1,21 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Runtime.Serialization;
+using System.Text;
+using Newtonsoft.Json;
 
 namespace CherwellConnector.Model
 {
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.Linq;
-    using System.Runtime.Serialization;
-    using System.Text;
-
-    using Newtonsoft.Json;
-
     /// <summary>
-    /// TrebuchetWebApiDataContractsSecurityRole
+    ///     SecurityRole
     /// </summary>
     [DataContract]
-    public sealed class SecurityRole :  IEquatable<SecurityRole>, IValidatableObject
+    public sealed class SecurityRole : IEquatable<SecurityRole>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="SecurityRole" /> class.
+        ///     Initializes a new instance of the <see cref="SecurityRole" /> class.
         /// </summary>
         /// <param name="browserClientCustomViewId">browserClientCustomViewId.</param>
         /// <param name="businessObjectExcludeList">businessObjectExcludeList.</param>
@@ -28,7 +26,10 @@ namespace CherwellConnector.Model
         /// <param name="roleId">roleId.</param>
         /// <param name="roleName">roleName.</param>
         /// <param name="smartClientCustomViewId">smartClientCustomViewId.</param>
-        public SecurityRole(string browserClientCustomViewId = default, List<string> businessObjectExcludeList = default, string culture = default, string description = default, string mobileClientCustomViewId = default, string primaryBusObId = default, string roleId = default, string roleName = default, string smartClientCustomViewId = default)
+        public SecurityRole(string browserClientCustomViewId = default,
+            List<string> businessObjectExcludeList = default, string culture = default, string description = default,
+            string mobileClientCustomViewId = default, string primaryBusObId = default, string roleId = default,
+            string roleName = default, string smartClientCustomViewId = default)
         {
             BrowserClientCustomViewId = browserClientCustomViewId;
             BusinessObjectExcludeList = businessObjectExcludeList;
@@ -40,63 +41,131 @@ namespace CherwellConnector.Model
             RoleName = roleName;
             SmartClientCustomViewId = smartClientCustomViewId;
         }
-        
+
         /// <summary>
-        /// Gets or Sets BrowserClientCustomViewId
+        ///     Gets or Sets BrowserClientCustomViewId
         /// </summary>
-        [DataMember(Name="browserClientCustomViewId", EmitDefaultValue=false)]
+        [DataMember(Name = "browserClientCustomViewId", EmitDefaultValue = false)]
         public string BrowserClientCustomViewId { get; set; }
 
         /// <summary>
-        /// Gets or Sets BusinessObjectExcludeList
+        ///     Gets or Sets BusinessObjectExcludeList
         /// </summary>
-        [DataMember(Name="businessObjectExcludeList", EmitDefaultValue=false)]
+        [DataMember(Name = "businessObjectExcludeList", EmitDefaultValue = false)]
         public List<string> BusinessObjectExcludeList { get; set; }
 
         /// <summary>
-        /// Gets or Sets Culture
+        ///     Gets or Sets Culture
         /// </summary>
-        [DataMember(Name="culture", EmitDefaultValue=false)]
+        [DataMember(Name = "culture", EmitDefaultValue = false)]
         public string Culture { get; set; }
 
         /// <summary>
-        /// Gets or Sets Description
+        ///     Gets or Sets Description
         /// </summary>
-        [DataMember(Name="description", EmitDefaultValue=false)]
+        [DataMember(Name = "description", EmitDefaultValue = false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// Gets or Sets MobileClientCustomViewId
+        ///     Gets or Sets MobileClientCustomViewId
         /// </summary>
-        [DataMember(Name="mobileClientCustomViewId", EmitDefaultValue=false)]
+        [DataMember(Name = "mobileClientCustomViewId", EmitDefaultValue = false)]
         public string MobileClientCustomViewId { get; set; }
 
         /// <summary>
-        /// Gets or Sets PrimaryBusObId
+        ///     Gets or Sets PrimaryBusObId
         /// </summary>
-        [DataMember(Name="primaryBusObId", EmitDefaultValue=false)]
+        [DataMember(Name = "primaryBusObId", EmitDefaultValue = false)]
         public string PrimaryBusObId { get; set; }
 
         /// <summary>
-        /// Gets or Sets RoleId
+        ///     Gets or Sets RoleId
         /// </summary>
-        [DataMember(Name="roleId", EmitDefaultValue=false)]
+        [DataMember(Name = "roleId", EmitDefaultValue = false)]
         public string RoleId { get; set; }
 
         /// <summary>
-        /// Gets or Sets RoleName
+        ///     Gets or Sets RoleName
         /// </summary>
-        [DataMember(Name="roleName", EmitDefaultValue=false)]
+        [DataMember(Name = "roleName", EmitDefaultValue = false)]
         public string RoleName { get; set; }
 
         /// <summary>
-        /// Gets or Sets SmartClientCustomViewId
+        ///     Gets or Sets SmartClientCustomViewId
         /// </summary>
-        [DataMember(Name="smartClientCustomViewId", EmitDefaultValue=false)]
+        [DataMember(Name = "smartClientCustomViewId", EmitDefaultValue = false)]
         public string SmartClientCustomViewId { get; set; }
 
         /// <summary>
-        /// Returns the string presentation of the object
+        ///     Returns true if SecurityRole instances are equal
+        /// </summary>
+        /// <param name="input">Instance of SecurityRole to be compared</param>
+        /// <returns>Boolean</returns>
+        public bool Equals(SecurityRole input)
+        {
+            if (input == null)
+                return false;
+
+            return
+                (
+                    BrowserClientCustomViewId == input.BrowserClientCustomViewId ||
+                    BrowserClientCustomViewId != null &&
+                    BrowserClientCustomViewId.Equals(input.BrowserClientCustomViewId)
+                ) &&
+                (
+                    BusinessObjectExcludeList == input.BusinessObjectExcludeList ||
+                    BusinessObjectExcludeList != null &&
+                    BusinessObjectExcludeList.SequenceEqual(input.BusinessObjectExcludeList)
+                ) &&
+                (
+                    Culture == input.Culture ||
+                    Culture != null &&
+                    Culture.Equals(input.Culture)
+                ) &&
+                (
+                    Description == input.Description ||
+                    Description != null &&
+                    Description.Equals(input.Description)
+                ) &&
+                (
+                    MobileClientCustomViewId == input.MobileClientCustomViewId ||
+                    MobileClientCustomViewId != null &&
+                    MobileClientCustomViewId.Equals(input.MobileClientCustomViewId)
+                ) &&
+                (
+                    PrimaryBusObId == input.PrimaryBusObId ||
+                    PrimaryBusObId != null &&
+                    PrimaryBusObId.Equals(input.PrimaryBusObId)
+                ) &&
+                (
+                    RoleId == input.RoleId ||
+                    RoleId != null &&
+                    RoleId.Equals(input.RoleId)
+                ) &&
+                (
+                    RoleName == input.RoleName ||
+                    RoleName != null &&
+                    RoleName.Equals(input.RoleName)
+                ) &&
+                (
+                    SmartClientCustomViewId == input.SmartClientCustomViewId ||
+                    SmartClientCustomViewId != null &&
+                    SmartClientCustomViewId.Equals(input.SmartClientCustomViewId)
+                );
+        }
+
+        /// <summary>
+        ///     To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+            yield break;
+        }
+
+        /// <summary>
+        ///     Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
         public override string ToString()
@@ -115,18 +184,18 @@ namespace CherwellConnector.Model
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
-        /// Returns the JSON string presentation of the object
+        ///     Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public  string ToJson()
+        public string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }
 
         /// <summary>
-        /// Returns true if objects are equal
+        ///     Returns true if objects are equal
         /// </summary>
         /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
@@ -136,65 +205,7 @@ namespace CherwellConnector.Model
         }
 
         /// <summary>
-        /// Returns true if SecurityRole instances are equal
-        /// </summary>
-        /// <param name="input">Instance of SecurityRole to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(SecurityRole input)
-        {
-            if (input == null)
-                return false;
-
-            return 
-                (
-                    BrowserClientCustomViewId == input.BrowserClientCustomViewId ||
-                    (BrowserClientCustomViewId != null &&
-                    BrowserClientCustomViewId.Equals(input.BrowserClientCustomViewId))
-                ) && 
-                (
-                    BusinessObjectExcludeList == input.BusinessObjectExcludeList ||
-                    BusinessObjectExcludeList != null &&
-                    BusinessObjectExcludeList.SequenceEqual(input.BusinessObjectExcludeList)
-                ) && 
-                (
-                    Culture == input.Culture ||
-                    (Culture != null &&
-                    Culture.Equals(input.Culture))
-                ) && 
-                (
-                    Description == input.Description ||
-                    (Description != null &&
-                    Description.Equals(input.Description))
-                ) && 
-                (
-                    MobileClientCustomViewId == input.MobileClientCustomViewId ||
-                    (MobileClientCustomViewId != null &&
-                    MobileClientCustomViewId.Equals(input.MobileClientCustomViewId))
-                ) && 
-                (
-                    PrimaryBusObId == input.PrimaryBusObId ||
-                    (PrimaryBusObId != null &&
-                    PrimaryBusObId.Equals(input.PrimaryBusObId))
-                ) && 
-                (
-                    RoleId == input.RoleId ||
-                    (RoleId != null &&
-                    RoleId.Equals(input.RoleId))
-                ) && 
-                (
-                    RoleName == input.RoleName ||
-                    (RoleName != null &&
-                    RoleName.Equals(input.RoleName))
-                ) && 
-                (
-                    SmartClientCustomViewId == input.SmartClientCustomViewId ||
-                    (SmartClientCustomViewId != null &&
-                    SmartClientCustomViewId.Equals(input.SmartClientCustomViewId))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
+        ///     Gets the hash code
         /// </summary>
         /// <returns>Hash code</returns>
         public override int GetHashCode()
@@ -223,16 +234,5 @@ namespace CherwellConnector.Model
                 return hashCode;
             }
         }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-            yield break;
-        }
     }
-
 }

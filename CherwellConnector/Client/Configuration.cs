@@ -1,28 +1,26 @@
-
+using System;
+using System.Collections.Concurrent;
+using System.Collections.Generic;
+using System.IO;
 using CherwellConnector.Interface;
 
 namespace CherwellConnector.Client
 {
-    using System;
-    using System.Collections.Concurrent;
-    using System.Collections.Generic;
-    using System.IO;
-
     /// <summary>
-    /// Represents a set of configuration settings
+    ///     Represents a set of configuration settings
     /// </summary>
     public class Configuration : IReadableConfiguration
     {
         #region Constants
 
         /// <summary>
-        /// Version of the package.
+        ///     Version of the package.
         /// </summary>
         /// <value>Version of the package.</value>
         public const string Version = "1.0.0";
 
         /// <summary>
-        /// Identifier for ISO 8601 DateTime Format
+        ///     Identifier for ISO 8601 DateTime Format
         /// </summary>
         /// <remarks>See https://msdn.microsoft.com/en-us/library/az4se3k1(v=vs.110).aspx#Anchor_8 for more information.</remarks>
         // ReSharper disable once InconsistentNaming
@@ -36,11 +34,11 @@ namespace CherwellConnector.Client
         private static Configuration _globalConfiguration;
 
         /// <summary>
-        /// Default creation of exceptions for a given method name and response object
+        ///     Default creation of exceptions for a given method name and response object
         /// </summary>
         public static readonly ExceptionFactory DefaultExceptionFactory = (methodName, response) =>
         {
-            var status = (int)response.StatusCode;
+            var status = (int) response.StatusCode;
             return status switch
             {
                 >= 400 => new ApiException(status,
@@ -52,7 +50,7 @@ namespace CherwellConnector.Client
         };
 
         /// <summary>
-        /// Gets or sets the default Configuration.
+        ///     Gets or sets the default Configuration.
         /// </summary>
         /// <value>Configuration.</value>
         public static Configuration Default
@@ -72,13 +70,13 @@ namespace CherwellConnector.Client
         #region Private Members
 
         /// <summary>
-        /// Gets or sets the API key based on the authentication name.
+        ///     Gets or sets the API key based on the authentication name.
         /// </summary>
         /// <value>The API key.</value>
         private readonly IDictionary<string, string> _apiKey;
 
         /// <summary>
-        /// Gets or sets the prefix (e.g. Token) of the API key based on the authentication name.
+        ///     Gets or sets the prefix (e.g. Token) of the API key based on the authentication name.
         /// </summary>
         /// <value>The prefix of the API key.</value>
         private readonly IDictionary<string, string> _apiKeyPrefix;
@@ -96,7 +94,7 @@ namespace CherwellConnector.Client
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="Configuration" /> class
+        ///     Initializes a new instance of the <see cref="Configuration" /> class
         /// </summary>
         public Configuration()
         {
@@ -111,7 +109,7 @@ namespace CherwellConnector.Client
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="Configuration" /> class
+        ///     Initializes a new instance of the <see cref="Configuration" /> class
         /// </summary>
         public Configuration(
             IDictionary<string, string> defaultHeader,
@@ -130,24 +128,15 @@ namespace CherwellConnector.Client
 
             BasePath = basePath;
 
-            foreach (var keyValuePair in defaultHeader)
-            {
-                DefaultHeader.Add(keyValuePair);
-            }
+            foreach (var keyValuePair in defaultHeader) DefaultHeader.Add(keyValuePair);
 
-            foreach (var keyValuePair in apiKey)
-            {
-                ApiKey.Add(keyValuePair);
-            }
+            foreach (var keyValuePair in apiKey) ApiKey.Add(keyValuePair);
 
-            foreach (var keyValuePair in apiKeyPrefix)
-            {
-                ApiKeyPrefix.Add(keyValuePair);
-            }
+            foreach (var keyValuePair in apiKeyPrefix) ApiKeyPrefix.Add(keyValuePair);
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="Configuration" /> class with different settings
+        ///     Initializes a new instance of the <see cref="Configuration" /> class with different settings
         /// </summary>
         /// <param name="apiClient">Api client</param>
         /// <param name="defaultHeader">Dictionary of default HTTP header</param>
@@ -175,20 +164,18 @@ namespace CherwellConnector.Client
             int timeout = 100000,
             string userAgent = "Swagger-Codegen/1.0.0/csharp"
             // ReSharper restore UnusedParameter.Local
-            )
+        )
         {
-
         }
 
         /// <summary>
-        /// Initializes a new instance of the Configuration class.
+        ///     Initializes a new instance of the Configuration class.
         /// </summary>
         /// <param name="apiClient">Api client.</param>
         [Obsolete("This constructor caused unexpected sharing of static data. It is no longer supported.", true)]
         // ReSharper disable once UnusedParameter.Local
         public Configuration(ApiClient apiClient)
         {
-
         }
 
         #endregion Constructors
@@ -197,81 +184,81 @@ namespace CherwellConnector.Client
         #region Properties
 
         private ApiClient _apiClient;
+
         /// <summary>
-        /// Gets an instance of an ApiClient for this configuration
+        ///     Gets an instance of an ApiClient for this configuration
         /// </summary>
         public ApiClient ApiClient => _apiClient ??= CreateApiClient();
 
         private readonly string _basePath;
+
         /// <summary>
-        /// Gets or sets the base path for API access.
+        ///     Gets or sets the base path for API access.
         /// </summary>
-        public string BasePath {
+        public string BasePath
+        {
             get => _basePath;
-            init {
+            init
+            {
                 _basePath = value;
                 // pass-through to ApiClient if it's set.
-                if(_apiClient != null) {
-                    _apiClient.RestClient.BaseUrl = new Uri(_basePath);
-                }
+                if (_apiClient != null) _apiClient.RestClient.BaseUrl = new Uri(_basePath);
             }
         }
 
         /// <summary>
-        /// Gets or sets the default header.
+        ///     Gets or sets the default header.
         /// </summary>
         public IDictionary<string, string> DefaultHeader { get; }
 
         /// <summary>
-        /// Gets or sets the HTTP timeout (milliseconds) of ApiClient. Default to 100000 milliseconds.
+        ///     Gets or sets the HTTP timeout (milliseconds) of ApiClient. Default to 100000 milliseconds.
         /// </summary>
         public int Timeout
         {
-            
             get => ApiClient.RestClient.Timeout;
             private init => ApiClient.RestClient.Timeout = value;
         }
 
         /// <summary>
-        /// Gets or sets the HTTP user agent.
+        ///     Gets or sets the HTTP user agent.
         /// </summary>
         /// <value>Http user agent.</value>
         public string UserAgent { get; }
 
         /// <summary>
-        /// Gets or sets the username (HTTP basic authentication).
+        ///     Gets or sets the username (HTTP basic authentication).
         /// </summary>
         /// <value>The username.</value>
         public string Username => null;
 
         /// <summary>
-        /// Gets or sets the password (HTTP basic authentication).
+        ///     Gets or sets the password (HTTP basic authentication).
         /// </summary>
         /// <value>The password.</value>
         public string Password => null;
 
         /// <summary>
-        /// Gets the API key with prefix.
+        ///     Gets the API key with prefix.
         /// </summary>
         /// <param name="apiKeyIdentifier">API key identifier (authentication scheme).</param>
         /// <returns>API key with prefix.</returns>
         public string GetApiKeyWithPrefix(string apiKeyIdentifier)
         {
-            ApiKey.TryGetValue (apiKeyIdentifier, out var apiKeyValue);
-            if (ApiKeyPrefix.TryGetValue (apiKeyIdentifier, out var apiKeyPrefix))
+            ApiKey.TryGetValue(apiKeyIdentifier, out var apiKeyValue);
+            if (ApiKeyPrefix.TryGetValue(apiKeyIdentifier, out var apiKeyPrefix))
                 return apiKeyPrefix + " " + apiKeyValue;
-            else
-                return apiKeyValue;
+            return apiKeyValue;
         }
 
         /// <summary>
-        /// Gets or sets the access token for OAuth2 authentication.
+        ///     Gets or sets the access token for OAuth2 authentication.
         /// </summary>
         /// <value>The access token.</value>
         public string AccessToken => null;
 
         /// <summary>
-        /// Gets or sets the temporary folder path to store the files downloaded from the server.
+        ///     Gets or sets the temporary folder path to store the files downloaded from the server.
         /// </summary>
         /// <value>Folder path.</value>
         public string TempFolderPath
@@ -288,29 +275,22 @@ namespace CherwellConnector.Client
                 }
 
                 // create the directory if it does not exist
-                if (!Directory.Exists(value))
-                {
-                    Directory.CreateDirectory(value);
-                }
+                if (!Directory.Exists(value)) Directory.CreateDirectory(value);
 
                 // check if the path contains directory separator at the end
                 if (value[^1] == Path.DirectorySeparatorChar)
-                {
                     _tempFolderPath = value;
-                }
                 else
-                {
                     _tempFolderPath = value + Path.DirectorySeparatorChar;
-                }
             }
         }
 
         /// <summary>
-        /// Gets or sets the date time format used when serializing in the ApiClient
-        /// By default, it's set to ISO 8601 - "o", for others see:
-        /// https://msdn.microsoft.com/en-us/library/az4se3k1(v=vs.110).aspx
-        /// and https://msdn.microsoft.com/en-us/library/8kb3ddd4(v=vs.110).aspx
-        /// No validation is done to ensure that the string you're providing is valid
+        ///     Gets or sets the date time format used when serializing in the ApiClient
+        ///     By default, it's set to ISO 8601 - "o", for others see:
+        ///     https://msdn.microsoft.com/en-us/library/az4se3k1(v=vs.110).aspx
+        ///     and https://msdn.microsoft.com/en-us/library/8kb3ddd4(v=vs.110).aspx
+        ///     No validation is done to ensure that the string you're providing is valid
         /// </summary>
         /// <value>The DateTimeFormat string</value>
         public string DateTimeFormat
@@ -332,23 +312,25 @@ namespace CherwellConnector.Client
         }
 
         /// <summary>
-        /// Gets or sets the prefix (e.g. Token) of the API key based on the authentication name.
+        ///     Gets or sets the prefix (e.g. Token) of the API key based on the authentication name.
         /// </summary>
         /// <value>The prefix of the API key.</value>
         public IDictionary<string, string> ApiKeyPrefix
         {
             get => _apiKeyPrefix;
-            private init => _apiKeyPrefix = value ?? throw new InvalidOperationException("ApiKeyPrefix collection may not be null.");
+            private init => _apiKeyPrefix =
+                value ?? throw new InvalidOperationException("ApiKeyPrefix collection may not be null.");
         }
 
         /// <summary>
-        /// Gets or sets the API key based on the authentication name.
+        ///     Gets or sets the API key based on the authentication name.
         /// </summary>
         /// <value>The API key.</value>
         public IDictionary<string, string> ApiKey
         {
             get => _apiKey;
-            private init => _apiKey = value ?? throw new InvalidOperationException("ApiKey collection may not be null.");
+            private init =>
+                _apiKey = value ?? throw new InvalidOperationException("ApiKey collection may not be null.");
         }
 
         #endregion Properties
@@ -356,7 +338,7 @@ namespace CherwellConnector.Client
         #region Methods
 
         /// <summary>
-        /// Add default header.
+        ///     Add default header.
         /// </summary>
         /// <param name="key">Header field name.</param>
         /// <param name="value">Header field value.</param>
@@ -367,23 +349,23 @@ namespace CherwellConnector.Client
         }
 
         /// <summary>
-        /// Creates a new <see cref="ApiClient" /> based on this <see cref="Configuration" /> instance.
+        ///     Creates a new <see cref="ApiClient" /> based on this <see cref="Configuration" /> instance.
         /// </summary>
         /// <returns></returns>
         private ApiClient CreateApiClient()
         {
-            return new ApiClient(BasePath) { Configuration = this };
+            return new(BasePath) {Configuration = this};
         }
 
 
         /// <summary>
-        /// Returns a string with essential information for debugging.
+        ///     Returns a string with essential information for debugging.
         /// </summary>
         public static string ToDebugReport()
         {
             var report = "C# SDK (IO.Swagger) Debug Report:\n";
             report += "    OS: " + Environment.OSVersion + "\n";
-            report += "    .NET Framework Version: " + Environment.Version  + "\n";
+            report += "    .NET Framework Version: " + Environment.Version + "\n";
             report += "    Version of the API: \n";
             report += "    SDK Package Version: 1.0.0\n";
 
@@ -391,7 +373,7 @@ namespace CherwellConnector.Client
         }
 
         /// <summary>
-        /// Add Api Key Header.
+        ///     Add Api Key Header.
         /// </summary>
         /// <param name="key">Api Key name.</param>
         /// <param name="value">Api Key value.</param>
@@ -402,7 +384,7 @@ namespace CherwellConnector.Client
         }
 
         /// <summary>
-        /// Sets the API key prefix.
+        ///     Sets the API key prefix.
         /// </summary>
         /// <param name="key">Api Key name.</param>
         /// <param name="value">Api Key value.</param>

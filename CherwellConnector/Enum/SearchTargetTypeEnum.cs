@@ -5,22 +5,19 @@ using Newtonsoft.Json.Converters;
 namespace CherwellConnector.Enum
 {
     /// <summary>
-    /// Defines SearchTargetType
+    ///     Defines SearchTargetType
     /// </summary>
     [JsonConverter(typeof(StringEnumConverter))]
     public enum SearchTargetTypeEnum
     {
-            
         /// <summary>
-        /// Enum BusOb for value: BusOb
+        ///     Enum BusOb for value: BusOb
         /// </summary>
-        [EnumMember(Value = "BusOb")]
-        BusOb = 1,
-            
+        [EnumMember(Value = "BusOb")] BusOb = 1,
+
         /// <summary>
-        /// Enum DocRepository for value: DocRepository
+        ///     Enum DocRepository for value: DocRepository
         /// </summary>
-        [EnumMember(Value = "DocRepository")]
-        DocRepository = 2
+        [EnumMember(Value = "DocRepository")] DocRepository = 2
     }
 }

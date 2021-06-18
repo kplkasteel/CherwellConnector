@@ -1,21 +1,20 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Runtime.Serialization;
+using System.Text;
+using Newtonsoft.Json;
+
 namespace CherwellConnector.Model
 {
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.Runtime.Serialization;
-    using System.Text;
-
-    using Newtonsoft.Json;
-
     /// <summary>
-    /// PromptValue
+    ///     PromptValue
     /// </summary>
     [DataContract]
-    public sealed class PromptValue :  IEquatable<PromptValue>, IValidatableObject
+    public sealed class PromptValue : IEquatable<PromptValue>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="PromptValue" /> class.
+        ///     Initializes a new instance of the <see cref="PromptValue" /> class.
         /// </summary>
         /// <param name="busObId">busObId.</param>
         /// <param name="collectionStoreEntireRow">collectionStoreEntireRow.</param>
@@ -25,7 +24,9 @@ namespace CherwellConnector.Model
         /// <param name="promptId">promptId.</param>
         /// <param name="value">value.</param>
         /// <param name="valueIsRecId">valueIsRecId.</param>
-        public PromptValue(string busObId = default, string collectionStoreEntireRow = default, string collectionValueField = default, string fieldId = default, string listReturnFieldId = default, string promptId = default, Object value = default, bool? valueIsRecId = default)
+        public PromptValue(string busObId = default, string collectionStoreEntireRow = default,
+            string collectionValueField = default, string fieldId = default, string listReturnFieldId = default,
+            string promptId = default, Object value = default, bool? valueIsRecId = default)
         {
             BusObId = busObId;
             CollectionStoreEntireRow = collectionStoreEntireRow;
@@ -36,57 +37,120 @@ namespace CherwellConnector.Model
             Value = value;
             ValueIsRecId = valueIsRecId;
         }
-        
+
         /// <summary>
-        /// Gets or Sets BusObId
+        ///     Gets or Sets BusObId
         /// </summary>
-        [DataMember(Name="busObId", EmitDefaultValue=false)]
+        [DataMember(Name = "busObId", EmitDefaultValue = false)]
         public string BusObId { get; set; }
 
         /// <summary>
-        /// Gets or Sets CollectionStoreEntireRow
+        ///     Gets or Sets CollectionStoreEntireRow
         /// </summary>
-        [DataMember(Name="collectionStoreEntireRow", EmitDefaultValue=false)]
+        [DataMember(Name = "collectionStoreEntireRow", EmitDefaultValue = false)]
         public string CollectionStoreEntireRow { get; set; }
 
         /// <summary>
-        /// Gets or Sets CollectionValueField
+        ///     Gets or Sets CollectionValueField
         /// </summary>
-        [DataMember(Name="collectionValueField", EmitDefaultValue=false)]
+        [DataMember(Name = "collectionValueField", EmitDefaultValue = false)]
         public string CollectionValueField { get; set; }
 
         /// <summary>
-        /// Gets or Sets FieldId
+        ///     Gets or Sets FieldId
         /// </summary>
-        [DataMember(Name="fieldId", EmitDefaultValue=false)]
+        [DataMember(Name = "fieldId", EmitDefaultValue = false)]
         public string FieldId { get; set; }
 
         /// <summary>
-        /// Gets or Sets ListReturnFieldId
+        ///     Gets or Sets ListReturnFieldId
         /// </summary>
-        [DataMember(Name="listReturnFieldId", EmitDefaultValue=false)]
+        [DataMember(Name = "listReturnFieldId", EmitDefaultValue = false)]
         public string ListReturnFieldId { get; set; }
 
         /// <summary>
-        /// Gets or Sets PromptId
+        ///     Gets or Sets PromptId
         /// </summary>
-        [DataMember(Name="promptId", EmitDefaultValue=false)]
+        [DataMember(Name = "promptId", EmitDefaultValue = false)]
         public string PromptId { get; set; }
 
         /// <summary>
-        /// Gets or Sets Value
+        ///     Gets or Sets Value
         /// </summary>
-        [DataMember(Name="value", EmitDefaultValue=false)]
+        [DataMember(Name = "value", EmitDefaultValue = false)]
         public Object Value { get; set; }
 
         /// <summary>
-        /// Gets or Sets ValueIsRecId
+        ///     Gets or Sets ValueIsRecId
         /// </summary>
-        [DataMember(Name="valueIsRecId", EmitDefaultValue=false)]
+        [DataMember(Name = "valueIsRecId", EmitDefaultValue = false)]
         public bool? ValueIsRecId { get; set; }
 
         /// <summary>
-        /// Returns the string presentation of the object
+        ///     Returns true if PromptValue instances are equal
+        /// </summary>
+        /// <param name="input">Instance of PromptValue to be compared</param>
+        /// <returns>Boolean</returns>
+        public bool Equals(PromptValue input)
+        {
+            if (input == null)
+                return false;
+
+            return
+                (
+                    BusObId == input.BusObId ||
+                    BusObId != null &&
+                    BusObId.Equals(input.BusObId)
+                ) &&
+                (
+                    CollectionStoreEntireRow == input.CollectionStoreEntireRow ||
+                    CollectionStoreEntireRow != null &&
+                    CollectionStoreEntireRow.Equals(input.CollectionStoreEntireRow)
+                ) &&
+                (
+                    CollectionValueField == input.CollectionValueField ||
+                    CollectionValueField != null &&
+                    CollectionValueField.Equals(input.CollectionValueField)
+                ) &&
+                (
+                    FieldId == input.FieldId ||
+                    FieldId != null &&
+                    FieldId.Equals(input.FieldId)
+                ) &&
+                (
+                    ListReturnFieldId == input.ListReturnFieldId ||
+                    ListReturnFieldId != null &&
+                    ListReturnFieldId.Equals(input.ListReturnFieldId)
+                ) &&
+                (
+                    PromptId == input.PromptId ||
+                    PromptId != null &&
+                    PromptId.Equals(input.PromptId)
+                ) &&
+                (
+                    Value == input.Value ||
+                    Value != null &&
+                    Value.Equals(input.Value)
+                ) &&
+                (
+                    ValueIsRecId == input.ValueIsRecId ||
+                    ValueIsRecId != null &&
+                    ValueIsRecId.Equals(input.ValueIsRecId)
+                );
+        }
+
+        /// <summary>
+        ///     To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+            yield break;
+        }
+
+        /// <summary>
+        ///     Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
         public override string ToString()
@@ -104,9 +168,9 @@ namespace CherwellConnector.Model
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
-        /// Returns the JSON string presentation of the object
+        ///     Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
         public string ToJson()
@@ -115,7 +179,7 @@ namespace CherwellConnector.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
+        ///     Returns true if objects are equal
         /// </summary>
         /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
@@ -125,60 +189,7 @@ namespace CherwellConnector.Model
         }
 
         /// <summary>
-        /// Returns true if PromptValue instances are equal
-        /// </summary>
-        /// <param name="input">Instance of PromptValue to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(PromptValue input)
-        {
-            if (input == null)
-                return false;
-
-            return 
-                (
-                    BusObId == input.BusObId ||
-                    (BusObId != null &&
-                    BusObId.Equals(input.BusObId))
-                ) && 
-                (
-                    CollectionStoreEntireRow == input.CollectionStoreEntireRow ||
-                    (CollectionStoreEntireRow != null &&
-                    CollectionStoreEntireRow.Equals(input.CollectionStoreEntireRow))
-                ) && 
-                (
-                    CollectionValueField == input.CollectionValueField ||
-                    (CollectionValueField != null &&
-                    CollectionValueField.Equals(input.CollectionValueField))
-                ) && 
-                (
-                    FieldId == input.FieldId ||
-                    (FieldId != null &&
-                    FieldId.Equals(input.FieldId))
-                ) && 
-                (
-                    ListReturnFieldId == input.ListReturnFieldId ||
-                    (ListReturnFieldId != null &&
-                    ListReturnFieldId.Equals(input.ListReturnFieldId))
-                ) && 
-                (
-                    PromptId == input.PromptId ||
-                    (PromptId != null &&
-                    PromptId.Equals(input.PromptId))
-                ) && 
-                (
-                    Value == input.Value ||
-                    (Value != null &&
-                    Value.Equals(input.Value))
-                ) && 
-                (
-                    ValueIsRecId == input.ValueIsRecId ||
-                    (ValueIsRecId != null &&
-                    ValueIsRecId.Equals(input.ValueIsRecId))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
+        ///     Gets the hash code
         /// </summary>
         /// <returns>Hash code</returns>
         public override int GetHashCode()
@@ -205,16 +216,5 @@ namespace CherwellConnector.Model
                 return hashCode;
             }
         }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-            yield break;
-        }
     }
-
 }

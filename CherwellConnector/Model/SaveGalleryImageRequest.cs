@@ -1,28 +1,21 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Runtime.Serialization;
+using System.Text;
 using CherwellConnector.Enum;
+using Newtonsoft.Json;
 
 namespace CherwellConnector.Model
 {
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.Runtime.Serialization;
-    using System.Text;
-
-    using Newtonsoft.Json;
-
     /// <summary>
-    /// TrebuchetWebApiDataContractsCoreSaveGalleryImageRequest
+    ///     SaveGalleryImageRequest
     /// </summary>
     [DataContract]
-    public sealed class SaveGalleryImageRequest :  IEquatable<SaveGalleryImageRequest>, IValidatableObject
+    public sealed class SaveGalleryImageRequest : IEquatable<SaveGalleryImageRequest>, IValidatableObject
     {
         /// <summary>
-        /// Gets or Sets ImageType
-        /// </summary>
-        [DataMember(Name="imageType", EmitDefaultValue=false)]
-        public ImageTypeEnum? ImageType { get; set; }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="SaveGalleryImageRequest" /> class.
+        ///     Initializes a new instance of the <see cref="SaveGalleryImageRequest" /> class.
         /// </summary>
         /// <param name="base64EncodedImageData">base64EncodedImageData.</param>
         /// <param name="description">description.</param>
@@ -32,7 +25,9 @@ namespace CherwellConnector.Model
         /// <param name="scope">scope.</param>
         /// <param name="scopeOwner">scopeOwner.</param>
         /// <param name="standInKey">standInKey.</param>
-        public SaveGalleryImageRequest(string base64EncodedImageData = default, string description = default, string folder = default, ImageTypeEnum? imageType = default, string name = default, string scope = default, string scopeOwner = default, string standInKey = default)
+        public SaveGalleryImageRequest(string base64EncodedImageData = default, string description = default,
+            string folder = default, ImageTypeEnum? imageType = default, string name = default, string scope = default,
+            string scopeOwner = default, string standInKey = default)
         {
             Base64EncodedImageData = base64EncodedImageData;
             Description = description;
@@ -43,52 +38,121 @@ namespace CherwellConnector.Model
             ScopeOwner = scopeOwner;
             StandInKey = standInKey;
         }
-        
+
         /// <summary>
-        /// Gets or Sets Base64EncodedImageData
+        ///     Gets or Sets ImageType
         /// </summary>
-        [DataMember(Name="base64EncodedImageData", EmitDefaultValue=false)]
+        [DataMember(Name = "imageType", EmitDefaultValue = false)]
+        public ImageTypeEnum? ImageType { get; set; }
+
+        /// <summary>
+        ///     Gets or Sets Base64EncodedImageData
+        /// </summary>
+        [DataMember(Name = "base64EncodedImageData", EmitDefaultValue = false)]
         public string Base64EncodedImageData { get; set; }
 
         /// <summary>
-        /// Gets or Sets Description
+        ///     Gets or Sets Description
         /// </summary>
-        [DataMember(Name="description", EmitDefaultValue=false)]
+        [DataMember(Name = "description", EmitDefaultValue = false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// Gets or Sets Folder
+        ///     Gets or Sets Folder
         /// </summary>
-        [DataMember(Name="folder", EmitDefaultValue=false)]
+        [DataMember(Name = "folder", EmitDefaultValue = false)]
         public string Folder { get; set; }
 
 
         /// <summary>
-        /// Gets or Sets Name
+        ///     Gets or Sets Name
         /// </summary>
-        [DataMember(Name="name", EmitDefaultValue=false)]
+        [DataMember(Name = "name", EmitDefaultValue = false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or Sets Scope
+        ///     Gets or Sets Scope
         /// </summary>
-        [DataMember(Name="scope", EmitDefaultValue=false)]
+        [DataMember(Name = "scope", EmitDefaultValue = false)]
         public string Scope { get; set; }
 
         /// <summary>
-        /// Gets or Sets ScopeOwner
+        ///     Gets or Sets ScopeOwner
         /// </summary>
-        [DataMember(Name="scopeOwner", EmitDefaultValue=false)]
+        [DataMember(Name = "scopeOwner", EmitDefaultValue = false)]
         public string ScopeOwner { get; set; }
 
         /// <summary>
-        /// Gets or Sets StandInKey
+        ///     Gets or Sets StandInKey
         /// </summary>
-        [DataMember(Name="standInKey", EmitDefaultValue=false)]
+        [DataMember(Name = "standInKey", EmitDefaultValue = false)]
         public string StandInKey { get; set; }
 
         /// <summary>
-        /// Returns the string presentation of the object
+        ///     Returns true if SaveGalleryImageRequest instances are equal
+        /// </summary>
+        /// <param name="input">Instance of SaveGalleryImageRequest to be compared</param>
+        /// <returns>Boolean</returns>
+        public bool Equals(SaveGalleryImageRequest input)
+        {
+            if (input == null)
+                return false;
+
+            return
+                (
+                    Base64EncodedImageData == input.Base64EncodedImageData ||
+                    Base64EncodedImageData != null &&
+                    Base64EncodedImageData.Equals(input.Base64EncodedImageData)
+                ) &&
+                (
+                    Description == input.Description ||
+                    Description != null &&
+                    Description.Equals(input.Description)
+                ) &&
+                (
+                    Folder == input.Folder ||
+                    Folder != null &&
+                    Folder.Equals(input.Folder)
+                ) &&
+                (
+                    ImageType == input.ImageType ||
+                    ImageType != null &&
+                    ImageType.Equals(input.ImageType)
+                ) &&
+                (
+                    Name == input.Name ||
+                    Name != null &&
+                    Name.Equals(input.Name)
+                ) &&
+                (
+                    Scope == input.Scope ||
+                    Scope != null &&
+                    Scope.Equals(input.Scope)
+                ) &&
+                (
+                    ScopeOwner == input.ScopeOwner ||
+                    ScopeOwner != null &&
+                    ScopeOwner.Equals(input.ScopeOwner)
+                ) &&
+                (
+                    StandInKey == input.StandInKey ||
+                    StandInKey != null &&
+                    StandInKey.Equals(input.StandInKey)
+                );
+        }
+
+        /// <summary>
+        ///     To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+            yield break;
+        }
+
+        /// <summary>
+        ///     Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
         public override string ToString()
@@ -106,9 +170,9 @@ namespace CherwellConnector.Model
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
-        /// Returns the JSON string presentation of the object
+        ///     Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
         public string ToJson()
@@ -117,7 +181,7 @@ namespace CherwellConnector.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
+        ///     Returns true if objects are equal
         /// </summary>
         /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
@@ -127,60 +191,7 @@ namespace CherwellConnector.Model
         }
 
         /// <summary>
-        /// Returns true if SaveGalleryImageRequest instances are equal
-        /// </summary>
-        /// <param name="input">Instance of SaveGalleryImageRequest to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(SaveGalleryImageRequest input)
-        {
-            if (input == null)
-                return false;
-
-            return 
-                (
-                    Base64EncodedImageData == input.Base64EncodedImageData ||
-                    (Base64EncodedImageData != null &&
-                    Base64EncodedImageData.Equals(input.Base64EncodedImageData))
-                ) && 
-                (
-                    Description == input.Description ||
-                    (Description != null &&
-                    Description.Equals(input.Description))
-                ) && 
-                (
-                    Folder == input.Folder ||
-                    (Folder != null &&
-                    Folder.Equals(input.Folder))
-                ) && 
-                (
-                    ImageType == input.ImageType ||
-                    (ImageType != null &&
-                    ImageType.Equals(input.ImageType))
-                ) && 
-                (
-                    Name == input.Name ||
-                    (Name != null &&
-                    Name.Equals(input.Name))
-                ) && 
-                (
-                    Scope == input.Scope ||
-                    (Scope != null &&
-                    Scope.Equals(input.Scope))
-                ) && 
-                (
-                    ScopeOwner == input.ScopeOwner ||
-                    (ScopeOwner != null &&
-                    ScopeOwner.Equals(input.ScopeOwner))
-                ) && 
-                (
-                    StandInKey == input.StandInKey ||
-                    (StandInKey != null &&
-                    StandInKey.Equals(input.StandInKey))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
+        ///     Gets the hash code
         /// </summary>
         /// <returns>Hash code</returns>
         public override int GetHashCode()
@@ -206,16 +217,6 @@ namespace CherwellConnector.Model
                     hashCode = hashCode * 59 + StandInKey.GetHashCode();
                 return hashCode;
             }
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-            yield break;
         }
     }
 }

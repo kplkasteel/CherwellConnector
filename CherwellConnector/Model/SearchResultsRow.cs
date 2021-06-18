@@ -1,23 +1,21 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Runtime.Serialization;
+using System.Text;
+using Newtonsoft.Json;
 
 namespace CherwellConnector.Model
 {
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.Linq;
-    using System.Runtime.Serialization;
-    using System.Text;
-
-    using Newtonsoft.Json;
-
     /// <summary>
-    /// SearchResultsRow
+    ///     SearchResultsRow
     /// </summary>
     [DataContract]
-    public sealed class SearchResultsRow :  IEquatable<SearchResultsRow>, IValidatableObject
+    public sealed class SearchResultsRow : IEquatable<SearchResultsRow>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="SearchResultsRow" /> class.
+        ///     Initializes a new instance of the <see cref="SearchResultsRow" /> class.
         /// </summary>
         /// <param name="busObId">busObId.</param>
         /// <param name="busObRecId">busObRecId.</param>
@@ -25,7 +23,9 @@ namespace CherwellConnector.Model
         /// <param name="publicId">publicId.</param>
         /// <param name="rowColor">rowColor.</param>
         /// <param name="searchResultsFieldValues">searchResultsFieldValues.</param>
-        public SearchResultsRow(string busObId = default, string busObRecId = default, List<Link> links = default, string publicId = default, string rowColor = default, List<FieldTemplateItem> searchResultsFieldValues = default)
+        public SearchResultsRow(string busObId = default, string busObRecId = default, List<Link> links = default,
+            string publicId = default, string rowColor = default,
+            List<FieldTemplateItem> searchResultsFieldValues = default)
         {
             BusObId = busObId;
             BusObRecId = busObRecId;
@@ -34,45 +34,98 @@ namespace CherwellConnector.Model
             RowColor = rowColor;
             SearchResultsFieldValues = searchResultsFieldValues;
         }
-        
+
         /// <summary>
-        /// Gets or Sets BusObId
+        ///     Gets or Sets BusObId
         /// </summary>
-        [DataMember(Name="busObId", EmitDefaultValue=false)]
+        [DataMember(Name = "busObId", EmitDefaultValue = false)]
         public string BusObId { get; set; }
 
         /// <summary>
-        /// Gets or Sets BusObRecId
+        ///     Gets or Sets BusObRecId
         /// </summary>
-        [DataMember(Name="busObRecId", EmitDefaultValue=false)]
+        [DataMember(Name = "busObRecId", EmitDefaultValue = false)]
         public string BusObRecId { get; set; }
 
         /// <summary>
-        /// Gets or Sets Links
+        ///     Gets or Sets Links
         /// </summary>
-        [DataMember(Name="links", EmitDefaultValue=false)]
+        [DataMember(Name = "links", EmitDefaultValue = false)]
         public List<Link> Links { get; set; }
 
         /// <summary>
-        /// Gets or Sets PublicId
+        ///     Gets or Sets PublicId
         /// </summary>
-        [DataMember(Name="publicId", EmitDefaultValue=false)]
+        [DataMember(Name = "publicId", EmitDefaultValue = false)]
         public string PublicId { get; set; }
 
         /// <summary>
-        /// Gets or Sets RowColor
+        ///     Gets or Sets RowColor
         /// </summary>
-        [DataMember(Name="rowColor", EmitDefaultValue=false)]
+        [DataMember(Name = "rowColor", EmitDefaultValue = false)]
         public string RowColor { get; set; }
 
         /// <summary>
-        /// Gets or Sets SearchResultsFieldValues
+        ///     Gets or Sets SearchResultsFieldValues
         /// </summary>
-        [DataMember(Name="searchResultsFieldValues", EmitDefaultValue=false)]
+        [DataMember(Name = "searchResultsFieldValues", EmitDefaultValue = false)]
         public List<FieldTemplateItem> SearchResultsFieldValues { get; set; }
 
         /// <summary>
-        /// Returns the string presentation of the object
+        ///     Returns true if SearchResultsRow instances are equal
+        /// </summary>
+        /// <param name="input">Instance of SearchResultsRow to be compared</param>
+        /// <returns>Boolean</returns>
+        public bool Equals(SearchResultsRow input)
+        {
+            if (input == null)
+                return false;
+
+            return
+                (
+                    BusObId == input.BusObId ||
+                    BusObId != null &&
+                    BusObId.Equals(input.BusObId)
+                ) &&
+                (
+                    BusObRecId == input.BusObRecId ||
+                    BusObRecId != null &&
+                    BusObRecId.Equals(input.BusObRecId)
+                ) &&
+                (
+                    Links == input.Links ||
+                    Links != null &&
+                    Links.SequenceEqual(input.Links)
+                ) &&
+                (
+                    PublicId == input.PublicId ||
+                    PublicId != null &&
+                    PublicId.Equals(input.PublicId)
+                ) &&
+                (
+                    RowColor == input.RowColor ||
+                    RowColor != null &&
+                    RowColor.Equals(input.RowColor)
+                ) &&
+                (
+                    SearchResultsFieldValues == input.SearchResultsFieldValues ||
+                    SearchResultsFieldValues != null &&
+                    SearchResultsFieldValues.SequenceEqual(input.SearchResultsFieldValues)
+                );
+        }
+
+        /// <summary>
+        ///     To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+            yield break;
+        }
+
+        /// <summary>
+        ///     Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
         public override string ToString()
@@ -88,18 +141,18 @@ namespace CherwellConnector.Model
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
-        /// Returns the JSON string presentation of the object
+        ///     Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public  string ToJson()
+        public string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }
 
         /// <summary>
-        /// Returns true if objects are equal
+        ///     Returns true if objects are equal
         /// </summary>
         /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
@@ -109,50 +162,7 @@ namespace CherwellConnector.Model
         }
 
         /// <summary>
-        /// Returns true if SearchResultsRow instances are equal
-        /// </summary>
-        /// <param name="input">Instance of SearchResultsRow to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(SearchResultsRow input)
-        {
-            if (input == null)
-                return false;
-
-            return 
-                (
-                    BusObId == input.BusObId ||
-                    (BusObId != null &&
-                    BusObId.Equals(input.BusObId))
-                ) && 
-                (
-                    BusObRecId == input.BusObRecId ||
-                    (BusObRecId != null &&
-                    BusObRecId.Equals(input.BusObRecId))
-                ) && 
-                (
-                    Links == input.Links ||
-                    Links != null &&
-                    Links.SequenceEqual(input.Links)
-                ) && 
-                (
-                    PublicId == input.PublicId ||
-                    (PublicId != null &&
-                    PublicId.Equals(input.PublicId))
-                ) && 
-                (
-                    RowColor == input.RowColor ||
-                    (RowColor != null &&
-                    RowColor.Equals(input.RowColor))
-                ) && 
-                (
-                    SearchResultsFieldValues == input.SearchResultsFieldValues ||
-                    SearchResultsFieldValues != null &&
-                    SearchResultsFieldValues.SequenceEqual(input.SearchResultsFieldValues)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
+        ///     Gets the hash code
         /// </summary>
         /// <returns>Hash code</returns>
         public override int GetHashCode()
@@ -175,16 +185,5 @@ namespace CherwellConnector.Model
                 return hashCode;
             }
         }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-            yield break;
-        }
     }
-
 }

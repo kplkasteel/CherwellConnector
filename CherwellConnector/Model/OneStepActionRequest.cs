@@ -1,30 +1,30 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Runtime.Serialization;
+using System.Text;
+using Newtonsoft.Json;
 
 namespace CherwellConnector.Model
 {
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.Linq;
-    using System.Runtime.Serialization;
-    using System.Text;
-
-    using Newtonsoft.Json;
-
     /// <summary>
-    /// OneStepActionRequest
+    ///     OneStepActionRequest
     /// </summary>
     [DataContract]
-    public sealed class OneStepActionRequest :  IEquatable<OneStepActionRequest>, IValidatableObject
+    public sealed class OneStepActionRequest : IEquatable<OneStepActionRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="OneStepActionRequest" /> class.
+        ///     Initializes a new instance of the <see cref="OneStepActionRequest" /> class.
         /// </summary>
         /// <param name="acquireLicense">acquireLicense.</param>
         /// <param name="busObId">busObId.</param>
         /// <param name="busObRecId">busObRecId.</param>
         /// <param name="oneStepActionStandInKey">oneStepActionStandInKey.</param>
         /// <param name="promptValues">promptValues.</param>
-        public OneStepActionRequest(bool? acquireLicense = default, string busObId = default, string busObRecId = default, string oneStepActionStandInKey = default, List<SimplePromptValue> promptValues = default)
+        public OneStepActionRequest(bool? acquireLicense = default, string busObId = default,
+            string busObRecId = default, string oneStepActionStandInKey = default,
+            List<SimplePromptValue> promptValues = default)
         {
             AcquireLicense = acquireLicense;
             BusObId = busObId;
@@ -32,39 +32,87 @@ namespace CherwellConnector.Model
             OneStepActionStandInKey = oneStepActionStandInKey;
             PromptValues = promptValues;
         }
-        
+
         /// <summary>
-        /// Gets or Sets AcquireLicense
+        ///     Gets or Sets AcquireLicense
         /// </summary>
-        [DataMember(Name="acquireLicense", EmitDefaultValue=false)]
+        [DataMember(Name = "acquireLicense", EmitDefaultValue = false)]
         public bool? AcquireLicense { get; set; }
 
         /// <summary>
-        /// Gets or Sets BusObId
+        ///     Gets or Sets BusObId
         /// </summary>
-        [DataMember(Name="busObId", EmitDefaultValue=false)]
+        [DataMember(Name = "busObId", EmitDefaultValue = false)]
         public string BusObId { get; set; }
 
         /// <summary>
-        /// Gets or Sets BusObRecId
+        ///     Gets or Sets BusObRecId
         /// </summary>
-        [DataMember(Name="busObRecId", EmitDefaultValue=false)]
+        [DataMember(Name = "busObRecId", EmitDefaultValue = false)]
         public string BusObRecId { get; set; }
 
         /// <summary>
-        /// Gets or Sets OneStepActionStandInKey
+        ///     Gets or Sets OneStepActionStandInKey
         /// </summary>
-        [DataMember(Name="oneStepActionStandInKey", EmitDefaultValue=false)]
+        [DataMember(Name = "oneStepActionStandInKey", EmitDefaultValue = false)]
         public string OneStepActionStandInKey { get; set; }
 
         /// <summary>
-        /// Gets or Sets PromptValues
+        ///     Gets or Sets PromptValues
         /// </summary>
-        [DataMember(Name="promptValues", EmitDefaultValue=false)]
+        [DataMember(Name = "promptValues", EmitDefaultValue = false)]
         public List<SimplePromptValue> PromptValues { get; set; }
 
         /// <summary>
-        /// Returns the string presentation of the object
+        ///     Returns true if OneStepActionRequest instances are equal
+        /// </summary>
+        /// <param name="input">Instance of OneStepActionRequest to be compared</param>
+        /// <returns>Boolean</returns>
+        public bool Equals(OneStepActionRequest input)
+        {
+            if (input == null)
+                return false;
+
+            return
+                (
+                    AcquireLicense == input.AcquireLicense ||
+                    AcquireLicense != null &&
+                    AcquireLicense.Equals(input.AcquireLicense)
+                ) &&
+                (
+                    BusObId == input.BusObId ||
+                    BusObId != null &&
+                    BusObId.Equals(input.BusObId)
+                ) &&
+                (
+                    BusObRecId == input.BusObRecId ||
+                    BusObRecId != null &&
+                    BusObRecId.Equals(input.BusObRecId)
+                ) &&
+                (
+                    OneStepActionStandInKey == input.OneStepActionStandInKey ||
+                    OneStepActionStandInKey != null &&
+                    OneStepActionStandInKey.Equals(input.OneStepActionStandInKey)
+                ) &&
+                (
+                    PromptValues == input.PromptValues ||
+                    PromptValues != null &&
+                    PromptValues.SequenceEqual(input.PromptValues)
+                );
+        }
+
+        /// <summary>
+        ///     To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+            yield break;
+        }
+
+        /// <summary>
+        ///     Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
         public override string ToString()
@@ -79,18 +127,18 @@ namespace CherwellConnector.Model
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
-        /// Returns the JSON string presentation of the object
+        ///     Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public  string ToJson()
+        public string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }
 
         /// <summary>
-        /// Returns true if objects are equal
+        ///     Returns true if objects are equal
         /// </summary>
         /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
@@ -100,45 +148,7 @@ namespace CherwellConnector.Model
         }
 
         /// <summary>
-        /// Returns true if OneStepActionRequest instances are equal
-        /// </summary>
-        /// <param name="input">Instance of OneStepActionRequest to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(OneStepActionRequest input)
-        {
-            if (input == null)
-                return false;
-
-            return 
-                (
-                    AcquireLicense == input.AcquireLicense ||
-                    (AcquireLicense != null &&
-                    AcquireLicense.Equals(input.AcquireLicense))
-                ) && 
-                (
-                    BusObId == input.BusObId ||
-                    (BusObId != null &&
-                    BusObId.Equals(input.BusObId))
-                ) && 
-                (
-                    BusObRecId == input.BusObRecId ||
-                    (BusObRecId != null &&
-                    BusObRecId.Equals(input.BusObRecId))
-                ) && 
-                (
-                    OneStepActionStandInKey == input.OneStepActionStandInKey ||
-                    (OneStepActionStandInKey != null &&
-                    OneStepActionStandInKey.Equals(input.OneStepActionStandInKey))
-                ) && 
-                (
-                    PromptValues == input.PromptValues ||
-                    PromptValues != null &&
-                    PromptValues.SequenceEqual(input.PromptValues)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
+        ///     Gets the hash code
         /// </summary>
         /// <returns>Hash code</returns>
         public override int GetHashCode()
@@ -159,16 +169,5 @@ namespace CherwellConnector.Model
                 return hashCode;
             }
         }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-            yield break;
-        }
     }
-
 }

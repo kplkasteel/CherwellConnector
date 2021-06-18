@@ -1,31 +1,21 @@
+using System;
+
 namespace CherwellConnector.Client
 {
-    using System;
-
     /// <summary>
-    /// API Exception
+    ///     API Exception
     /// </summary>
     public class ApiException : Exception
     {
         /// <summary>
-        /// Gets or sets the error code (HTTP status code)
+        ///     Initializes a new instance of the <see cref="ApiException" /> class.
         /// </summary>
-        /// <value>The error code (HTTP status code).</value>
-        public int ErrorCode { get; set; }
+        public ApiException()
+        {
+        }
 
         /// <summary>
-        /// Gets or sets the error content (body json object)
-        /// </summary>
-        /// <value>The error content (Http response body).</value>
-        public dynamic ErrorContent { get; private set; }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ApiException"/> class.
-        /// </summary>
-        public ApiException() {}
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ApiException"/> class.
+        ///     Initializes a new instance of the <see cref="ApiException" /> class.
         /// </summary>
         /// <param name="errorCode">HTTP status code.</param>
         /// <param name="message">Error message.</param>
@@ -35,7 +25,7 @@ namespace CherwellConnector.Client
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="ApiException"/> class.
+        ///     Initializes a new instance of the <see cref="ApiException" /> class.
         /// </summary>
         /// <param name="errorCode">HTTP status code.</param>
         /// <param name="message">Error message.</param>
@@ -45,6 +35,17 @@ namespace CherwellConnector.Client
             ErrorCode = errorCode;
             ErrorContent = errorContent;
         }
-    }
 
+        /// <summary>
+        ///     Gets or sets the error code (HTTP status code)
+        /// </summary>
+        /// <value>The error code (HTTP status code).</value>
+        public int ErrorCode { get; set; }
+
+        /// <summary>
+        ///     Gets or sets the error content (body json object)
+        /// </summary>
+        /// <value>The error content (Http response body).</value>
+        public dynamic ErrorContent { get; }
+    }
 }
