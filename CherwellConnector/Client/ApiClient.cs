@@ -34,7 +34,7 @@ namespace CherwellConnector.Client
 
         /// <summary>
         ///     Initializes a new instance of the <see cref="ApiClient" /> class
-        ///     with default base path (https://mobileone.westeurope.cloudapp.azure.com/CherwellAPI).
+        ///     with default base path ("https://localhost/CherwellApi").
         /// </summary>
         /// <param name="config">An instance of Configuration.</param>
         public ApiClient(Configuration config)
@@ -76,25 +76,9 @@ namespace CherwellConnector.Client
         /// <value>An instance of the RestClient</value>
         public RestClient RestClient { get; }
 
-        /// <summary>
-        ///     Allows for extending request processing for <see cref="ApiClient" /> generated code.
-        /// </summary>
-        /// <param name="request">The RestSharp request object</param>
-        private void InterceptRequest(IRestRequest request)
-        {
-            throw new NotImplementedException();
-        }
+       
 
-        /// <summary>
-        ///     Allows for extending response processing for <see cref="ApiClient" /> generated code.
-        /// </summary>
-        /// <param name="request">The RestSharp request object</param>
-        /// <param name="response">The RestSharp response object</param>
-        private void InterceptResponse(IRestRequest request, IRestResponse response)
-        {
-            throw new NotImplementedException();
-        }
-
+       
         // Creates and sets up a RestRequest prior to a call.
         private static RestRequest PrepareRequest(
             string path, Method method, IEnumerable<KeyValuePair<string, string>> queryParams, object postBody,
@@ -160,9 +144,9 @@ namespace CherwellConnector.Client
             // set user agent
             RestClient.UserAgent = Configuration.UserAgent;
 
-            InterceptRequest(request);
+           
             var response = RestClient.Execute(request);
-            InterceptResponse(request, response);
+           
 
             return response;
         }

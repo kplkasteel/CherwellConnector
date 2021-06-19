@@ -58,8 +58,8 @@ namespace CherwellConnector.Api
             if (_tokenResponse == null ||
                 string.IsNullOrEmpty(_tokenResponse?.AccessToken))
             {
-                _tokenResponse = Instance.ServiceToken(nameof(GrantType), ClientId, ClientSecret, UserName, Password,
-                    string.Empty, nameof(AuthMode), SiteName);
+                _tokenResponse = Instance.ServiceToken(GrantType.ToString(), ClientId, ClientSecret, UserName, Password,
+                    string.Empty, AuthMode.ToString(), SiteName);
                 return _tokenResponse == null ? ServiceTokenStatus.Failed : ServiceTokenStatus.Renewed;
             }
 
