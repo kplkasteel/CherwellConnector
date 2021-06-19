@@ -53,7 +53,7 @@ namespace CherwellConnector.Api
             ExceptionFactory = Configuration.DefaultExceptionFactory;
         }
 
-        private ServiceTokenStatus CheckTokenResponse()
+        public ServiceTokenStatus CheckTokenResponse()
         {
             if (_tokenResponse == null ||
                 string.IsNullOrEmpty(_tokenResponse?.AccessToken))
@@ -81,7 +81,7 @@ namespace CherwellConnector.Api
             }
         }
 
-        public IApiAccessor CheckApiHeader(IApiAccessor apiAccessor)
+        internal IApiAccessor CheckApiHeader(IApiAccessor apiAccessor)
         {
             var tokenStatus = CheckTokenResponse();
             if (tokenStatus == ServiceTokenStatus.Failed) return null;
